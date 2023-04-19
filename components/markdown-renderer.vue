@@ -1,29 +1,6 @@
 <script type="ts" setup>
-import MarkdownIt from 'markdown-it';
-
 const { t } = useI18n();
 const localePath = useLocalePath();
-const md = new MarkdownIt({breaks: true});
-
-// Renderer rule for opening links
-md.renderer.rules.link_open = (tokens, idx, options, _env, self) => {
-  const token = tokens[idx];
-  const hrefIndex = token.attrIndex('href');
-  const href = token.attrs[hrefIndex][1];
-
-  if (href.startsWith('#')) {
-    return self.renderToken(tokens, idx, options);
-  }
-
-  if (href.startsWith('/')) {
-    token.attrs[hrefIndex][1] = localePath(href);
-  } else if (!href.startsWith('mailto:')) {
-    token.attrSet('target', '_blank');
-    token.attrSet('rel', 'noreferrer noopener');
-  }
-
-  return self.renderToken(tokens, idx, options);
-};
 
 const props = defineProps({
   tKey: {
@@ -58,12 +35,39 @@ onMounted(() => {
   });
 });
 
-const renderedMarkdown = computed(() => md.renderInline(t(props.tKey, props.tInterpolation)));
+async function renderMarkdown(text) {
+  const MarkdownIt = (await import('markdown-it')).default;
+  const md = new MarkdownIt({breaks: true});
+
+  // Renderer rule for opening links
+  md.renderer.rules.link_open = (tokens, idx, options, _env, self) => {
+    const token = tokens[idx];
+    const hrefIndex = token.attrIndex('href');
+    const href = token.attrs[hrefIndex][1];
+
+    if (href.startsWith('#')) {
+      return self.renderToken(tokens, idx, options);
+    }
+
+    if (href.startsWith('/')) {
+      token.attrs[hrefIndex][1] = localePath(href);
+    } else if (!href.startsWith('mailto:')) {
+      token.attrSet('target', '_blank');
+      token.attrSet('rel', 'noreferrer noopener');
+    }
+
+    return self.renderToken(tokens, idx, options);
+  }
+
+  return { content: md.renderInline(text) }
+}
+
+const { data, pending } = await useAsyncData(`${props.tKey}${JSON.stringify(props.tInterpolation)}`, async () => renderMarkdown(t(props.tKey, props.tInterpolation)));
 </script>
 
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <span ref="divRef" v-html="renderedMarkdown"></span>
+  <span ref="divRef" v-if="!pending" v-html="data.content"></span>
 </template>
 
 <style lang="postcss" scoped>
