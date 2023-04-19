@@ -1,0 +1,235 @@
+{
+  "head": {
+    "title": {
+      "main": "BEAM: DeFi & Crypto confidentiels",
+      "index": "Accueil",
+      "downloads": "Téléchargements"
+    },
+    "description": "Beam offre confidentialité, actifs confidentiels, DeFi, NFTs, DEX et une expérience utilisateur fluide dans un environnement sécurisé et décentralisé.",
+    "keywords": "Beam, crypto-monnaie, confidentialité, anonymat, actifs confidentiels, DeFi, NFTs, blockchain, décentralisé, DEX, contrats intelligents, expérience utilisateur, portefeuille, sécurisé, liberté financière, AMM, swaps atomiques, machine virtuelle, WASM, shaders de contrats, shaders d'applications, portefeuille mobile, portefeuille de bureau, types de transactions, stablecoins privées, actifs encapsulés, sidechains, oracles, prêts, Uniswap-like, nœuds Beam, Beam Virtual Machine, confidentialité, actifs pontés, blockchain Beam, trading fluide, portefeuille interactif, transactions similaires à Bitcoin, trading Beam, confidentialité financière"
+  },
+  "header": {
+    "announcement": "Hard Fork activé à la hauteur 1,920,000. Mettez à jour les portefeuilles pour accéder aux fonds.",
+    "nav": {
+      "home": "Accueil",
+      "downloads": "Téléchargements",
+      "resources": "Ressources"
+    }
+  },
+  "hero": {
+    "title": "Confidentialité sans compromis",
+    "subtitle": "Beam est la première blockchain de confidentialité Mimblewimble L1, dissimulant complètement les transactions. Téléchargez le portefeuille Beam pour l'expérience DeFi confidentielle ultime.",
+    "downloadWallet": "Télécharger le portefeuille"
+  },
+  "feature": {
+    "title": "Fonctionnalités",
+    "learnmore": "En savoir plus",
+    "1": {
+      "title": "Confidentialité ultime",
+      "text": "Choisissez des transactions de confidentialité standard pour un anonymat robuste ou des transactions de confidentialité maximale avec un ensemble d'anonymat de 64k – la confidentialité est par défaut pour tous."
+    },
+    "2": {
+      "title": "Actifs confidentiels",
+      "text": "Pontez, créez, effectuez des transactions et échangez des actifs sur la blockchain Beam en utilisant votre portefeuille. Les transactions d'actifs sont indiscernables des transactions Beam régulières."
+    },
+    "3": {
+      "title": "DeFi & NFTs confidentiels",
+      "text": "La blockchain Beam prend en charge les stablecoins privées, les NFTs, les AMMs et les développements futurs tels que les prêts, les oracles, les sidechains, les actifs encapsulés et plus encore."
+    },
+    "4": {
+      "title": "DEX confidentiel",
+      "text": "Un AMM puissant, similaire à Uniswap, pour Beam et ses actifs confidentiels et pontés. Échanges confidentiels et swaps atomiques pour des actifs tels que BTC, LTC, QTUM, DASH et DOGE."
+    },
+    "5": {
+      "title": "Contrats intelligents confidentiels",
+      "text": "La Beam Virtual Machine permet l'exécution de dApps confidentiels en utilisant WASM. Les shaders de contrats gèrent la logique métier, tandis que les shaders d'application gèrent les couches de présentation pour une intégration facile dans le portefeuille."
+    },
+    "6": {
+      "title": "Expérience utilisateur exceptionnelle",
+      "text": "Portefeuilles Beam conviviaux pour mobile et bureau au design épuré. Deux types de transactions: communication de portefeuille interactive et transactions simples d'envoi et d'oubli similaires à Bitcoin."
+    }
+  },
+  "faq": {
+    "title": "Questions\nFréquentes",
+    "description": "Réponses aux questions courantes.",
+    "1": {
+      "question": "Quand Beam a-t-il été lancé ?",
+      "answer": "Le mainnet de Beam a été lancé le **3 janvier 2019**. Consultez l'état actuel sur [Beam Blockchain Explorer](https://duckduckgo.com)."
+    },
+    "2": {
+      "question": "Beam est-il open-source ?",
+      "answer": "Oui ! Beam est entièrement open-source et accessible sur [GitHub](https://github.com/BeamMW/)."
+    },
+    "3": {
+      "question": "Comment Beam assure-t-il la confidentialité ?",
+      "answer": "Beam utilise les protocoles **Lelantus** et **Mimblewimble** pour une confidentialité de premier ordre par défaut — toutes les transactions sur le réseau sont **entièrement confidentielles**."
+    },
+    "4": {
+      "question": "Comment est structurée l'émission de BEAM ?",
+      "answer": "Beam a été lancé de manière équitable, sans préminage ni ICO. Il suit un calendrier d'émission déflationniste, commençant à 100 BEAM par bloc et se divisant par deux périodiquement. L'offre totale est plafonnée à **262 800 000 BEAM**. 20% des émissions de blocs vont à la Trésorerie Beam pendant les cinq premières années (se terminant le 3 janvier 2024)."
+    },
+    "5": {
+      "question": "Comment fonctionne la gouvernance de Beam ?",
+      "answer": "Beam est en train de passer à la gouvernance **BeamX DAO**, utilisant des votes sur la chaîne. Pour participer, vous aurez besoin de jetons BEAMX. En savoir plus [ici](https://beamx.gitbook.io/beam-mining/)."
+    },
+    "6": {
+      "question": "Existe-t-il des portefeuilles Beam dédiés ?",
+      "answer": "Oui, Beam propose des portefeuilles personnalisés pour les ordinateurs de bureau, les mobiles et le Web (extension de navigateur). Téléchargez-les [ici](/telechargements)."
+    },
+    "7": {
+      "question": "Puis-je miner du BEAM ?",
+      "answer": "Oui. Beam est un réseau Proof-of-Work utilisant l'algorithme de consensus BeamHash III, permettant un minage efficace avec des GPU. Consultez le guide de minage [ici](https://beamx.gitbook.io/beam-mining/)."
+    }
+  },
+  "getstarted": {
+    "title": "Lancez-vous",
+    "nextsteps": "Étapes suivantes",
+    "steps": {
+      "1": {
+        "title": "Installer Beam Wallet",
+        "description": "Créez un portefeuille pour des transactions faciles avec BEAM et des actifs confidentiels.",
+        "link": "Instructions pour le portefeuille (Anglais)",
+        "button": "Télécharger Beam Wallet"
+      },
+      "2": {
+        "title": "Obtenir des BEAM",
+        "description": "Miner ou acheter des BEAM sur des plateformes d'échange avec des crypto-monnaies ou des monnaies fiduciaires.",
+        "button": "Où acheter"
+      },
+      "3": {
+        "title": "Découvrir Beam",
+        "description": "Utilisez BEAM pour des transactions et des paiements DeFi privés.",
+        "button": "DApps confidentielles"
+      }
+    }
+  },
+  "buyWhere": {
+    "title": "Où acheter Beam",
+    "exchanges": "Plateformes d'échange",
+    "instantexchanges": "Échanges instantanés",
+    "disclaimer": "**AVERTISSEMENT** : Les services tiers listés ne sont pas approuvés par Beam. Faites preuve de prudence, car les garanties de sécurité et de confidentialité de Beam ne s'appliquent pas."
+  },
+  "press": {
+    "title": "Ils parlent de nous"
+  },
+  "downloads": {
+    "downloadWallet": "Téléchargez le portefeuille Beam",
+    "downloadButton": "Télécharger pour {platform}",
+    "detailslink": "Détails",
+    "detailswindow": {
+      "titles": {
+        "macos": "Détails pour macOS",
+        "windows": "Détails pour Windows",
+        "linux": "Détails pour Linux",
+        "android": "Détails pour Android"
+      },
+      "latestversion": "Version la plus récente",
+      "checksums": {
+        "wallet": "Vérification du fichier portefeuille (SHA256)",
+        "cli": "Vérification du fichier portefeuille CLI (SHA256)",
+        "node": "Vérification du fichier de nœud (SHA256)",
+        "apk": "Vérification du fichier APK (SHA256)"
+      }
+    },
+    "type": {
+      "wallet": "Portefeuille",
+      "cli": "CLI",
+      "node": "Nœud",
+      "apk": "APK"
+    },
+    "supportedversions": {
+      "android": "Android 6 ou ultérieure",
+      "ios": "iOS 12.0 ou ultérieure",
+      "macos": "macOS 11 ou ultérieure",
+      "windows": "Windows 7 ou ultérieure",
+      "linux": "AppImage"
+    },
+    "resources": {
+      "title": "Ressources",
+      "wallet": "Application Portefeuille pour Ordinateur",
+      "commandlinewallet": "Portefeuille en Ligne de Commande",
+      "commandlinenode": "Nœud en Ligne de Commande",
+      "changelog": "Historique des Modifications",
+      "documentation": "Documentation"
+    }
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "1": {
+      "title": "Introduction",
+      "content": "Cette politique de confidentialité (la «Politique») s'applique au portefeuille numérique de cryptomonnaie Beam («Beam Wallet», «Logiciel») développé par Beam Foundation Limited («Beam», «nous», «notre»). La politique décrit comment nous recueillons, utilisons et protégeons vos données personnelles conformément au Règlement général sur la protection des données (RGPD) lorsque vous utilisez le Beam Wallet. En utilisant le Beam Wallet, vous consentez à la collecte et à l'utilisation de vos informations conformément à cette politique."
+    },
+    "2": {
+      "title": "Données personnelles que nous collectons",
+      "content": "Beam s'engage à garantir votre confidentialité. Nous ne collectons aucune donnée personnelle lorsque vous utilisez le Beam Wallet. Les seules données qui peuvent être collectées sont des données d'utilisation anonymisées dans le seul but d'améliorer le logiciel. Ces données ne comprennent aucune information personnellement identifiable et ne peuvent pas être retracées jusqu'à vous."
+    },
+    "3": {
+      "title": "Utilisation des données collectées",
+      "content": "Comme nous ne collectons aucune donnée personnelle, nous n'utilisons, ne partageons ou ne divulguons aucune donnée personnelle à des tiers. Les données d'utilisation anonymisées que nous collectons sont utilisées uniquement pour améliorer la fonctionnalité et l'expérience utilisateur du Beam Wallet."
+    },
+    "4": {
+      "title": "Sécurité des données",
+      "content": "Nous prenons la sécurité de vos données très au sérieux. Nous avons mis en place diverses mesures de sécurité, y compris le cryptage et les contrôles d'accès, pour protéger la confidentialité et l'intégrité des données qui peuvent être collectées."
+    },
+    "5": {
+      "title": "Services tiers",
+      "content": "Beam Wallet utilise CloudFlare pour la diffusion et la protection du contenu. La politique de confidentialité de CloudFlare peut être trouvée à l'adresse https://www.cloudflare.com/privacypolicy/. En dehors de CloudFlare, nous n'utilisons aucun service tiers qui collecte ou traite des données personnelles en notre nom."
+    },
+    "6": {
+      "title": "Conservation des données",
+      "content": "Comme nous ne collectons aucune donnée personnelle, il n'y a pas de données à conserver ou à supprimer. Les données d'utilisation anonymisées sont conservées uniquement aussi longtemps que nécessaire pour améliorer le logiciel, puis sont supprimées en toute sécurité."
+    },
+    "7": {
+      "title": "Vos droits en vertu du RGPD",
+      "content": "Puisque nous ne collectons pas de données personnelles, les droits du RGPD concernant l'accès, la rectification, l'effacement et la portabilité des données ne s'appliquent pas. Cependant, si vous avez des questions ou des préoccupations concernant nos pratiques en matière de confidentialité, n'hésitez pas à nous contacter."
+    },
+    "8": {
+      "title": "Modifications de la politique de confidentialité",
+      "content": "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification de la politique sera publiée sur notre site Web et deviendra effective dix (10) jours après la publication de la politique mise à jour. Votre utilisation continue du Beam Wallet après la mise en vigueur de la politique mise à jour signifie que vous acceptez la politique mise à jour."
+    },
+    "9": {
+      "title": "Coordonnées",
+      "content": "Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité ou nos pratiques en matière de confidentialité, n'hésitez pas à nous contacter à:\n\n**Beam Foundation Limited**\nE-mail : {support}"
+    }
+  },
+  "errors": {
+    "title": "Erreur {code}",
+    "back": "Ramenez-moi",
+    "404": {
+      "title": "Vous avez pénétré dans la salle des miroirs de Beam !",
+      "message": "La page que vous cherchez se reflète dans toutes les directions et Beam Girl ne parvient pas à trouver la bonne.\nRevenez en arrière et retracez vos pas pour trouver le bon chemin."
+    }
+  },
+  "footer": {
+    "join": {
+      "title": "Rejoindre",
+      "downloadWallet": "Télécharger le portefeuille",
+      "beamOutreachClub": "Club Beam Outreach",
+      "beamForum": "Forum Beam",
+      "beamBlog": "Blog Beam"
+    },
+    "community": {
+      "title": "Communauté",
+      "telegram": "Telegram",
+      "discord": "Discord",
+      "reddit": "Reddit",
+      "qq": "Groupe QQ"
+    },
+    "developers": {
+      "title": "Développeurs",
+      "documentation": "Documentation",
+      "sourceCode": "Code source",
+      "dAppnetWallet": "Portefeuille DAppnet",
+      "blockchainExplorer": "Explorateur de blockchain",
+      "support": "Support"
+    },
+    "miners": {
+      "title": "Mineurs",
+      "startMining": "Commencer à miner",
+      "support": "Support"
+    },
+    "contact": "Contactez-nous",
+    "mediakit": "Kit média (Zip)",
+    "copyright": "© 2023 Beam Foundation Limited. Tous droits réservés."
+  }
+}

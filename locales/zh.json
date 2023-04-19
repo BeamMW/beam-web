@@ -1,0 +1,235 @@
+{
+  "head": {
+    "title": {
+      "main": "BEAM：保密 DeFi 和加密货币",
+      "index": "首页",
+      "downloads": "下载"
+    },
+    "description": "Beam 提供隐私、保密资产、DeFi、NFT、DEX 以及在安全、去中心化环境中的无缝用户体验。",
+    "keywords": "Beam, 加密货币, 隐私, 匿名, 保密资产, DeFi, NFT, 区块链, 去中心化, DEX, 智能合约, 用户体验, 钱包, 安全, 财务自由, AMM, 原子交换, 虚拟机, WASM, 合约着色器, 应用着色器, 移动钱包, 桌面钱包, 交易类型, 私密稳定币, 封装资产, 侧链, 预言机, 借贷, Uniswap-like, Beam 节点, Beam 虚拟机, 保密性, 桥接资产, Beam 区块链, 无缝交易, 交互式钱包, 比特币式交易, Beam 交易, 财务隐私"
+  },
+  "header": {
+    "announcement": "Hard Fork 已在高度 1,920,000 处激活。升级钱包以访问资金。",
+    "nav": {
+      "home": "首页",
+      "downloads": "下载",
+      "resources": "资源"
+    }
+  },
+  "hero": {
+    "title": "毫不妥协的隐私",
+    "subtitle": "Beam 是顶级 Mimblewimble L1 隐私区块链，完全隐藏交易。下载 Beam 钱包以获得终极保密 DeFi 体验。",
+    "downloadWallet": "下载钱包"
+  },
+  "feature": {
+    "title": "特点",
+    "learnmore": "了解更多",
+    "1": {
+      "title": "毫不妥协的隐私",
+      "text": "选择标准隐私交易以获得强大的匿名性，或选择具有 64k 匿名集的最大匿名性交易 - 所有交易的隐私都是默认的。"
+    },
+    "2": {
+      "title": "保密资产",
+      "text": "使用您的钱包在 Beam 区块链上桥接、创建、交易和交易资产。资产交易与常规 Beam 交易无法区分。"
+    },
+    "3": {
+      "title": "保密 DeFi 和 NFT",
+      "text": "Beam 的区块链支持私密稳定币、NFT、AMM 以及诸如借贷、预言机、侧链、封装资产等未来发展。"
+    },
+    "4": {
+      "title": "保密 DEX",
+      "text": "一个强大的、类似 Uniswap 的 AMM，用于 Beam 及其保密和桥接资产。保密交易和针对资产（如 BTC、LTC、QTUM、DASH 和 DOGE）的原子交换。"
+    },
+    "5": {
+      "title": "保密智能合约",
+      "text": "Beam 虚拟机使用 WASM 执行支持保密 dApp。合约着色器处理业务逻辑，而应用着色器管理用于轻松钱包集成的表示层。"
+    },
+    "6": {
+      "title": "卓越的用户体验",
+      "text": "用户友好的 Beam 移动和桌面钱包，设计时尚。两种交易类型：交互式钱包通信和简单的发送和忘记交易，如比特币。"
+    }
+  },
+  "faq": {
+    "title": "常见问题解答",
+    "description": "解答常见问题。",
+    "1": {
+      "question": "Beam何时启动？",
+      "answer": "Beam 的主网于 **2019 年 1 月 3 日** 正式上线。您可以通过 [Beam 区块链浏览器](https://duckduckgo.com) 查看实时状态。"
+    },
+    "2": {
+      "question": "Beam 是开源的吗？",
+      "answer": "是的！Beam 是完全开源的，您可以在 [GitHub](https://github.com/BeamMW/) 上访问。"
+    },
+    "3": {
+      "question": "Beam 如何确保隐私？",
+      "answer": "Beam 采用 **Lelantus** 和 **Mimblewimble** 协议，确保所有网络交易**完全保密**，实现顶级隐私。"
+    },
+    "4": {
+      "question": "BEAM 的发行结构是怎样的？",
+      "answer": "Beam 采用公平发行，没有预挖或 ICO。它遵循通缩发行计划，从每个区块 100 BEAM 开始，定期减半。总供应量为 **262,800,000 BEAM**。前五年（截止到 2024 年 1 月 3 日），20% 的区块发行收入将进入 Beam Treasury。"
+    },
+    "5": {
+      "question": "Beam 的治理机制是什么？",
+      "answer": "Beam 正在向 **BeamX DAO** 治理过渡，采用链上投票。要参与，您需要 BEAMX 代币。详细了解请点击 [此处](https://beamx.gitbook.io/beam-mining/)。"
+    },
+    "6": {
+      "question": "有专门的 Beam 钱包吗？",
+      "answer": "是的，Beam 提供了桌面、移动和 Web（浏览器扩展）的定制钱包。请点击 [此处](/%E4%B8%8B%E8%BD%BD) 下载。"
+    },
+    "7": {
+      "question": "我可以挖矿 BEAM 吗？",
+      "answer": "是的。Beam 是一个使用 BeamHash III 共识算法的工作量证明网络，可以高效地进行 GPU 挖矿。请查看挖矿指南 [此处](https://beamx.gitbook.io/beam-mining/)。"
+    }
+  },
+  "getstarted": {
+    "title": "开始吧",
+    "nextsteps": "下一步",
+    "steps": {
+      "1": {
+        "title": "安装 Beam 钱包",
+        "description": "创建一个钱包，方便进行 BEAM 和保密资产交易。",
+        "link": "钱包指南",
+        "button": "下载 Beam 钱包"
+      },
+      "2": {
+        "title": "购买 BEAM",
+        "description": "通过加密货币或法币在交易所挖矿或购买 BEAM。",
+        "button": "在哪里购买"
+      },
+      "3": {
+        "title": "了解 Beam",
+        "description": "使用 BEAM 进行私密的 DeFi 交易和支付。",
+        "button": "保密 dApps"
+      }
+    }
+  },
+  "buyWhere": {
+    "title": "在哪里购买 Beam",
+    "exchanges": "交易所",
+    "instantexchanges": "即时交易所",
+    "disclaimer": "**免责声明**：列出的第三方服务不受 Beam 的支持。请谨慎使用，因为 Beam 的安全和隐私保证不适用。"
+  },
+  "press": {
+    "title": "他们在谈论我们"
+  },
+  "downloads": {
+    "downloadWallet": "下载 Beam 钱包",
+    "downloadButton": "下载适用于 {platform}",
+    "detailslink": "查看详情",
+    "detailswindow": {
+      "titles": {
+        "macos": "macOS 版本详情",
+        "windows": "Windows 版本详情",
+        "linux": "Linux 版本详情",
+        "android": "Android 版本详情"
+      },
+      "latestversion": "最新版",
+      "checksums": {
+        "wallet": "钱包文件校验和 (SHA256)",
+        "cli": "CLI 钱包文件校验和 (SHA256)",
+        "node": "节点文件校验和 (SHA256)",
+        "apk": "APK 钱包文件校验和 (SHA256)"
+      }
+    },
+    "type": {
+      "wallet": "钱包",
+      "cli": "命令行界面",
+      "node": "节点",
+      "apk": "APK"
+    },
+    "supportedversions": {
+      "android": "Android 6 及更高版本",
+      "ios": "iOS 12.0 及更高版本",
+      "macos": "macOS 11 及更高版本",
+      "windows": "Windows 7 及更高版本",
+      "linux": "AppImage"
+    },
+    "resources": {
+      "title": "资源",
+      "wallet": "桌面钱包应用程序",
+      "commandlinewallet": "命令行钱包",
+      "commandlinenode": "命令行节点",
+      "changelog": "更新日志",
+      "documentation": "文档资料"
+    }
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "1": {
+      "title": "简介",
+      "content": "本隐私政策（以下简称“政策”）适用于Beam Foundation Limited（以下简称“Beam”、“我们”、“我们的”）开发的Beam加密货币数字钱包（以下简称“Beam Wallet”、“软件”）。本政策概述了我们在您使用Beam Wallet时，如何根据《一般数据保护条例》（GDPR）收集、使用和保护您的个人数据。通过使用Beam Wallet，您同意根据本政策收集和使用您的信息。"
+    },
+    "2": {
+      "title": "我们收集的个人数据",
+      "content": "Beam承诺确保您的隐私。在您使用Beam Wallet时，我们不会收集您的任何个人数据。唯一可能收集的数据是匿名的使用数据，仅用于改进软件。这些数据不包含任何可识别个人身份的信息，也无法追溯到您。"
+    },
+    "3": {
+      "title": "收集数据的使用",
+      "content": "由于我们不收集任何个人数据，我们不会向第三方使用、共享或披露任何个人数据。我们收集的匿名使用数据仅用于改进Beam Wallet的功能和用户体验。"
+    },
+    "4": {
+      "title": "数据安全",
+      "content": "我们非常重视您的数据安全。我们已实施各种安全措施，包括加密和访问控制，以保护可能收集的数据的机密性和完整性。"
+    },
+    "5": {
+      "title": "第三方服务",
+      "content": "Beam Wallet使用CloudFlare进行内容分发和保护。CloudFlare的隐私政策可在https://www.cloudflare.com/privacypolicy/ 找到。除了CloudFlare，我们没有使用任何代表我们收集或处理个人数据的第三方服务。"
+    },
+    "6": {
+      "title": "数据保留",
+      "content": "由于我们不收集任何个人数据，因此没有数据需要保留或删除。匿名使用数据仅在改进软件所需的时间内保留，然后安全删除。"
+    },
+    "7": {
+      "title": "GDPR下的权利",
+      "content": "由于我们不收集个人数据，因此GDPR关于访问、更正、删除和数据可携带性的权利不适用。然而，如果您对我们的隐私做法有任何疑问或担忧，请随时与我们联系。"
+    },
+    "8": {
+      "title": "隐私政策的更改",
+      "content": "我们保留随时修改本隐私政策的权利。政策的任何更改都将发布在我们的网站上，并在更新后的政策发布十（10）天后生效。您在更新后的政策生效后继续使用Beam Wallet表示您接受更新后的政策。"
+    },
+    "9": {
+      "title": "联系方式",
+      "content": "如果您对我们的隐私政策或隐私做法有任何疑问或担忧，请随时与我们联系：\n\n**Beam Foundation Limited**\n电子邮件：{support}"
+    }
+  },
+  "errors": {
+    "title": "错误 {code}",
+    "back": "将我带回",
+    "404": {
+      "title": "您已进入Beam镜子之厅！",
+      "message": "您正在寻找的页面在各个方向上都有反射，Beam Girl无法找到正确的页面。退后一步，\n重新追踪您的步伐，找到真正的路径。"
+    }
+  },
+  "footer": {
+    "join": {
+      "title": "加入",
+      "downloadWallet": "下载钱包",
+      "beamOutreachClub": "Beam推广俱乐部",
+      "beamForum": "Beam论坛",
+      "beamBlog": "Beam博客"
+    },
+    "community": {
+      "title": "社区",
+      "telegram": "Telegram",
+      "discord": "Discord",
+      "reddit": "Reddit",
+      "qq": "QQ群"
+    },
+    "developers": {
+      "title": "开发者",
+      "documentation": "文档",
+      "sourceCode": "源代码",
+      "dAppnetWallet": "DAppnet钱包",
+      "blockchainExplorer": "区块链浏览器",
+      "support": "支持"
+    },
+    "miners": {
+      "title": "矿工",
+      "startMining": "开始挖矿",
+      "support": "支持"
+    },
+    "contact": "联系我们",
+    "mediakit": "媒体资源包（Zip）",
+    "copyright": "© 2023 Beam Foundation Limited. 保留所有权利。"
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "head": {
+    "title": {
+      "main": "BEAM: Confidential DeFi & Crypto",
+      "index": "Home",
+      "downloads": "Downloads"
+    },
+    "description": "Beam offers privacy, confidential assets, DeFi, NFTs, DEX, and a seamless user experience in a secure, decentralized environment.",
+    "keywords": "Beam, cryptocurrency, privacy, anonymity, confidential assets, DeFi, NFTs, blockchain, decentralized, DEX, smart contracts, user experience, wallet, secure, financial freedom, AMM, atomic swaps, virtual machine, WASM, contract shaders, app shaders, mobile wallet, desktop wallet, transaction types, private stablecoins, wrapped assets, sidechains, oracles, lending, Uniswap-like, Beam nodes, Beam Virtual Machine, confidentiality, bridged assets, Beam blockchain, seamless trading, interactive wallet, Bitcoin-like transactions, Beam trading, financial privacy"
+  },
+  "header": {
+    "announcement": "Hard Fork activated at height 1,920,000. Upgrade wallets to access funds. [Learn more...](https://medium.com/beam-mw/beam-hard-fork-announcement-12d2ded4968a)",
+    "nav": {
+      "home": "Home",
+      "downloads": "Downloads",
+      "resources": "Resources"
+    }
+  },
+  "hero": {
+    "title": "Uncompromising Privacy",
+    "subtitle": "Beam is the top Mimblewimble L1 privacy blockchain, completely concealing transactions. Download Beam Wallet for the ultimate confidential DeFi experience.",
+    "downloadWallet": "Download Wallet"
+  },
+  "feature": {
+    "title": "Features",
+    "learnmore": "Learn more",
+    "1": {
+      "title": "Uncompromising Privacy",
+      "text": "Choose standard privacy transactions for robust anonymity or maximum anonymity set transactions with a 64k anonymity set – privacy is default for all."
+    },
+    "2": {
+      "title": "Confidential Assets",
+      "text": "Bridge, create, transact, and trade assets on Beam's blockchain using your wallet. Asset transactions are indistinguishable from regular Beam transactions."
+    },
+    "3": {
+      "title": "Confidential DeFi & NFTs",
+      "text": "Beam's blockchain supports private stablecoins, NFTs, AMMs, and future developments like lending, oracles, sidechains, wrapped assets, and more."
+    },
+    "4": {
+      "title": "Confidential DEX",
+      "text": "A powerful, Uniswap-like AMM for Beam and its Confidential and Bridged Assets. Confidential trades and Atomic Swaps for assets like BTC, LTC, QTUM, DASH, and DOGE."
+    },
+    "5": {
+      "title": "Confidential Smart Contracts",
+      "text": "Beam's Virtual Machine enables confidential dApps using WASM execution. Contract Shaders handle business logic, while App Shaders manage presentation layers for easy wallet integration."
+    },
+    "6": {
+      "title": "Exceptional User Experience",
+      "text": "User-friendly Beam Wallets for mobile and desktop with sleek design. Two transaction types: interactive wallet communication and simple send-and-forget transactions like Bitcoin."
+    }
+  },
+  "faq": {
+    "title": "Frequently\nAsked Questions",
+    "description": "Common queries answered.",
+    "1": {
+      "question": "When was Beam launched?",
+      "answer": "Beam's mainnet went live on **January 3rd, 2019**. Check the current status at the [Beam Blockchain Explorer](https://duckduckgo.com)."
+    },
+    "2": {
+      "question": "Is Beam open-source?",
+      "answer": "Yes! Beam is fully open-source and accessible on [GitHub](https://github.com/BeamMW/)."
+    },
+    "3": {
+      "question": "How does Beam ensure privacy?",
+      "answer": "Beam employs **Lelantus** and **Mimblewimble** protocols for top-notch privacy by default — all transactions on the network are **fully confidential**."
+    },
+    "4": {
+      "question": "How is BEAM emission structured?",
+      "answer": "Beam launched fairly, with no premine or ICO. It follows a deflationary emission schedule, starting at 100 BEAM per block and halving periodically. The total supply is capped at **262,800,000 BEAM**. 20% of block emissions go to Beam Treasury during the first five years (ending Jan 3rd, 2024)."
+    },
+    "5": {
+      "question": "How does Beam governance work?",
+      "answer": "Beam is transitioning to **BeamX DAO** governance, utilizing on-chain voting. To participate, you'll need BEAMX tokens. Learn more [here](https://beamx.gitbook.io/beam-mining/)."
+    },
+    "6": {
+      "question": "Are there dedicated Beam wallets?",
+      "answer": "Yes, Beam offers custom wallets for Desktop, Mobile, and Web (browser extension). Download them [here](/downloads)."
+    },
+    "7": {
+      "question": "Can I mine BEAM?",
+      "answer": "Yes. Beam is a Proof-of-Work network using the BeamHash III consensus algorithm, enabling efficient GPU mining. Check out the mining guide [here](https://beamx.gitbook.io/beam-mining/)."
+    }
+  },
+  "getstarted": {
+    "title": "Get started",
+    "nextsteps": "Next steps",
+    "steps": {
+      "1": {
+        "title": "Install Beam Wallet",
+        "description": "Create a wallet for easy BEAM and Confidential Asset transactions.",
+        "link": "Wallet instructions",
+        "button": "Download Beam Wallet"
+      },
+      "2": {
+        "title": "Get BEAM",
+        "description": "Mine or buy BEAM on exchanges using crypto or fiat currencies.",
+        "button": "Where to buy"
+      },
+      "3": {
+        "title": "Discover Beam",
+        "description": "Utilize BEAM for private DeFi transactions and payments.",
+        "button": "Confidential dApps"
+      }
+    }
+  },
+  "buyWhere": {
+    "title": "Where to buy Beam",
+    "exchanges": "Exchanges",
+    "instantexchanges": "Instant Exchanges",
+    "disclaimer": "**DISCLAIMER**: Third-party services listed are not endorsed by Beam. Use caution, as Beam's security and privacy guarantees don't apply."
+  },
+  "press": {
+    "title": "They talk about us"
+  },
+  "downloads": {
+    "downloadWallet": "Download Beam Wallet",
+    "downloadButton": "Download for {platform}",
+    "detailslink": "Details",
+    "detailswindow": {
+      "titles": {
+        "macos": "Details for macOS",
+        "windows": "Details for Windows",
+        "linux": "Details for Linux",
+        "android": "Details for Android"
+      },
+      "latestversion": "Latest Version",
+      "checksums": {
+        "wallet": "Wallet File Checksum (SHA256)",
+        "cli": "CLI Wallet File Checksum (SHA256)",
+        "node": "Node File Checksum (SHA256)",
+        "apk": "APK File Checksum (SHA256)"
+      }
+    },
+    "type": {
+      "wallet": "Wallet",
+      "cli": "Command Line Interface",
+      "node": "Node",
+      "apk": "APK",
+      "playstore": "Play Store",
+      "appstore": "App Store"
+    },
+    "supportedversions": {
+      "android": "Android 6 or later",
+      "ios": "iOS 12.0 or later",
+      "macos": "macOS 11 or later",
+      "windows": "Windows 7 or later",
+      "linux": "AppImage"
+    },
+    "resources": {
+      "title": "Resources",
+      "wallet": "Desktop Wallet Application",
+      "commandlinewallet": "Command Line Wallet",
+      "commandlinenode": "Command Line Node",
+      "changelog": "Changelog",
+      "documentation": "Documentation"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "1": {
+      "title": "Introduction",
+      "content": "This Privacy Policy (the \"Policy\") applies to the Beam cryptocurrency digital wallet (\"Beam Wallet\", \"Software\") developed by Beam Foundation Limited (\"Beam\", \"we\", \"us\", or \"our\"). The Policy outlines how we collect, use, and protect your personal data in compliance with the General Data Protection Regulation (GDPR) when you use the Beam Wallet. By using the Beam Wallet, you consent to the collection and use of your information in accordance with this Policy."
+    },
+    "2": {
+      "title": "Personal Data We Collect",
+      "content": "Beam is committed to ensuring your privacy. We do not collect any personal data from you when you use the Beam Wallet. The only data that may be collected is anonymized usage data for the sole purpose of improving the Software. This data does not include any personally identifiable information and cannot be traced back to you."
+    },
+    "3": {
+      "title": "Use of Collected Data",
+      "content": "As we do not collect any personal data, we do not use, share, or disclose any personal data to third parties. The anonymized usage data we collect is used solely to improve the functionality and user experience of the Beam Wallet."
+    },
+    "4": {
+      "title": "Data Security",
+      "content": "We take the security of your data very seriously. We have implemented various security measures, including encryption and access controls, to protect the confidentiality and integrity of any data that may be collected."
+    },
+    "5": {
+      "title": "Third-Party Services",
+      "content": "Beam Wallet uses CloudFlare for content delivery and protection. CloudFlare's privacy policy can be found at https://www.cloudflare.com/privacypolicy/. Other than CloudFlare, we do not use any third-party services that collect or process personal data on our behalf."
+    },
+    "6": {
+      "title": "Data Retention",
+      "content": "As we do not collect any personal data, there is no data to retain or delete. Anonymized usage data is retained only for as long as necessary to improve the Software and is then securely deleted."
+    },
+    "7": {
+      "title": "Your Rights under the GDPR",
+      "content": "Since we do not collect personal data, GDPR rights concerning access, rectification, erasure, and data portability do not apply. However, if you have any questions or concerns about our privacy practices, please feel free to contact us."
+    },
+    "8": {
+      "title": "Changes to the Privacy Policy",
+      "content": "We reserve the right to modify this Privacy Policy at any time. Any changes to the Policy will be posted on our website and will become effective ten (10) days after the updated Policy is published. Your continued use of the Beam Wallet after the updated Policy becomes effective signifies your acceptance of the updated Policy."
+    },
+    "9": {
+      "title": "Contact Information",
+      "content": "If you have any questions or concerns about our Privacy Policy or our privacy practices, please feel free to contact us at:\n\n**Beam Foundation Limited**\nEmail: {support}"
+    }
+  },
+  "errors": {
+    "title": "Error {code}",
+    "back": "Beam Me Back",
+    "404": {
+      "title": "You've entered the Beam hall of mirrors!",
+      "message": "The page you're looking for is reflecting in all directions, and Beam Girl can't find the right one.\nStep back and retrace your steps to find the real path."
+    }
+  },
+  "footer": {
+    "join": {
+      "title": "Join",
+      "downloadWallet": "Download Wallet",
+      "beamOutreachClub": "Beam Outreach Club",
+      "beamForum": "Beam Forum",
+      "beamBlog": "Beam Blog"
+    },
+    "community": {
+      "title": "Community",
+      "telegram": "Telegram",
+      "discord": "Discord",
+      "reddit": "Reddit",
+      "qq": "QQ Group"
+    },
+    "developers": {
+      "title": "Developers",
+      "documentation": "Documentation",
+      "sourceCode": "Source Code",
+      "dAppnetWallet": "DAppnet Wallet",
+      "blockchainExplorer": "Blockchain Explorer",
+      "support": "Support"
+    },
+    "miners": {
+      "title": "Miners",
+      "startMining": "Start Mining",
+      "support": "Support"
+    },
+    "contact": "Contact us",
+    "mediakit": "Media Kit (Zip)",
+    "copyright": "© 2023 Beam Foundation Limited. All Rights Reserved."
+  }
+}

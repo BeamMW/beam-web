@@ -1,0 +1,4 @@
+Contact: mailto:support\@beam.mw
+Expires: 2029-12-31T23:00:00.000Z
+Preferred-Languages: en
+Encryption: https://keybase.io/beammw/pgp_keys.asc

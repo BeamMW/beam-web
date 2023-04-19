@@ -1,0 +1,39 @@
+{
+  "name": "beam-web",
+  "packageManager": "yarn@3.5.0",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "yarn lintfix && nuxi generate",
+    "preview": "yarn lintfix && nuxi preview",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+  },
+  "devDependencies": {
+    "@nuxt/kit": "^3.4.1",
+    "@nuxtjs/device": "^3.1.0",
+    "@nuxtjs/eslint-config-typescript": "12.0.0",
+    "@nuxtjs/i18n": "^8.0.0-beta.11",
+    "@nuxtjs/tailwindcss": "^6.6.6",
+    "@pinia/nuxt": "^0.4.8",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nuxt": "^3.4.1",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@nuxt/types": "^2.16.3",
+    "@popperjs/core": "^2.11.7",
+    "consola": "^3.0.2",
+    "gsap": "^3.11.5",
+    "ipx": "^1.0.1",
+    "markdown-it": "^13.0.1",
+    "swiper": "^9.2.2",
+    "tailwindcss": "^3.3.1"
+  }
+}
