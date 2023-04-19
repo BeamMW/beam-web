@@ -117,7 +117,6 @@
 import { VNodeRef, nextTick } from "vue";
 import { PlatformDetails, SupportedPlatforms } from "@/app.config";
 
-import LazyPicture from "~/components/lazy-picture.vue";
 import { UserInteractionEvents } from "~/utils/emitter";
 
 const localePath = useLocalePath();
