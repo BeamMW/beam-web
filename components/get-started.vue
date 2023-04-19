@@ -46,6 +46,7 @@ onUnmounted(() =>
           :button-link="localePath('downloads')"
           accent-color="beam-blue"
           :wide-icon="true"
+          :as-image="false"
         >
           <LayoutButton
             accent-color="beam-blue"
@@ -92,6 +93,7 @@ onUnmounted(() =>
           button-name="Explore Beam"
           accent-color="beam-pink"
           :wide-icon="true"
+          :as-image="false"
         >
           <LayoutButton
             accent-color="beam-pink"

@@ -51,6 +51,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  asImage: {
+    type: Boolean,
+    default: true,
+  },
 });
 
 const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
@@ -64,11 +68,11 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
   >
     <Icon
       v-if="image"
-      :class="`select-none pointer-events-none h-fit text-${
+      :class="`select-none pointer-events-none h-auto text-${
         accentColor ? accentColor : 'current'
       } ${wideIcon ? 'w-12' : 'w-9'}`"
       :name="image"
-      :as-image="true"
+      :as-image="asImage"
       :lazy="lazy"
     />
     <p
