@@ -62,12 +62,12 @@ async function renderMarkdown(text) {
   return { content: md.renderInline(text) }
 }
 
-const { data, pending } = await useAsyncData(`${props.tKey}${JSON.stringify(props.tInterpolation)}`, async () => renderMarkdown(t(props.tKey, props.tInterpolation)));
+const { data, pending } = await useAsyncData(`${props.tKey}${JSON.stringify(props.tInterpolation)}`, async () => await renderMarkdown(t(props.tKey, props.tInterpolation)));
 </script>
 
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <span ref="divRef" v-if="!pending" v-html="data.content"></span>
+  <span v-if="!pending" ref="divRef" v-html="data.content"></span>
 </template>
 
 <style lang="postcss" scoped>
