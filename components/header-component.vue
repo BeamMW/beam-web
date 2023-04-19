@@ -13,7 +13,7 @@ const localePath = useLocalePath()
         :to="localePath('index')"
         class="flex items-center hover:opacity-70 transition-opacity"
       >
-        <Icon name="logo" class="h-auto w-10 select-none flex items-center" />
+        <Icon name="logo" class="h-auto w-10 select-none" />
       </NuxtLink>
 
       <div class="flex md:order-2">
