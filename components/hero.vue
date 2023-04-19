@@ -49,7 +49,7 @@
         </div>
 
         <div
-          class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+          class="flex flex-row justify-center space-x-4"
         >
           <NuxtLink
             :to="PlatformDetails[SupportedPlatforms.IOS].links.store"
@@ -77,7 +77,7 @@
           </NuxtLink>
           <NuxtLink
             :to="PlatformDetails[SupportedPlatforms.CHROME].links.store"
-            class="hidden lg:block select-none hover:opacity-80 transition"
+            class="hidden md:block select-none hover:opacity-80 transition"
           >
             <Icon
               name="download/googlechrome"
@@ -95,14 +95,15 @@
           <div
             class="relative hidden lg:block w-[937px] h-[1025px] min-w-[937px]"
           >
-            <LazyPicture
+            <LayoutPicture
               src="/hero/desktop.png"
               :alt="'Beam for Desktop'"
               class="absolute select-none pointer-events-none"
             />
           </div>
-          <div class="relative w-[389px] h-[966px] min-w-[389px]">
-            <LazyPicture
+
+          <div class="relative w-[389px] h-[966px] min-w-[389px] -right-[30px]">
+            <LayoutPicture
               src="/hero/mobile.png"
               alt="Beam for iOS"
               class="absolute select-none pointer-events-none"

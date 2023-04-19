@@ -55,13 +55,15 @@
               <NuxtLink
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
                 :to="localePath('privacy-policy')"
-                >{{ $t("privacy.title") }}</NuxtLink
-              >
+                >
+                {{ $t("privacy.title") }}
+              </NuxtLink>
               <a
                 class="capitalize inline-flex gap-x-2 transition-colors text-white/50 hover:text-white/90"
                 :href="`mailto:${CONTACT_EMAIL}`"
-                >{{ $t("footer.contact") }}</a
               >
+                {{ $t("footer.contact") }}
+              </a>
               <NuxtLink
                 target="_blank"
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
