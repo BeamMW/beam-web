@@ -55,7 +55,7 @@
               <NuxtLink
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
                 :to="localePath('privacy-policy')"
-                >
+              >
                 {{ $t("privacy.title") }}
               </NuxtLink>
               <a

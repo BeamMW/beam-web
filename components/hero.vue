@@ -48,9 +48,7 @@
           </LayoutButton>
         </div>
 
-        <div
-          class="flex flex-row justify-center space-x-4"
-        >
+        <div class="flex flex-row justify-center space-x-4">
           <NuxtLink
             :to="PlatformDetails[SupportedPlatforms.IOS].links.store"
             class="select-none hover:opacity-80 transition"

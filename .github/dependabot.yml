@@ -12,5 +12,4 @@ updates:
     commit-message:
       prefix: "chore"
       include: "scope"
-
 # Additional configuration options can be added, such as reviewers or assignees, if desired.
