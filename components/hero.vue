@@ -1,9 +1,6 @@
 <template>
-  <section
-    :ref="main"
-    class="heroContainer block bg-[length:100%_auto] bg-top bg-no-repeat bg-[#042548] w-full"
-  >
-    <div>
+  <section :ref="main" class="heroContainer">
+    <div class="heroContent">
       <div
         class="heroText py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16"
       >
@@ -111,11 +108,12 @@
         </ClientOnly>
       </div>
     </div>
+    <div class="heroBackground"></div>
   </section>
 </template>
 
 <script lang="ts" setup>
-import { VNodeRef, nextTick } from "vue";
+import { VNodeRef } from "vue";
 import { PlatformDetails, SupportedPlatforms } from "@/app.config";
 
 import { UserInteractionEvents } from "~/utils/emitter";
@@ -130,47 +128,53 @@ const ctx: VNodeRef = ref();
 const initAnimation = () => {
   ctx.value = gsap.context((self) => {
     if (self) {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".heroContainer",
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-          easing: "ease",
-          invalidateOnRefresh: true,
-        })
-        .fromTo(
-          ".heroContainer",
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".heroContainer",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+        easing: "ease",
+        invalidateOnRefresh: true,
+      });
+
+      // Apply the .heroImages animation for both mobile and desktop devices using yPercent
+      tl.fromTo(
+        ".heroImages",
+        {
+          yPercent: 0,
+        },
+        {
+          yPercent: -50,
+          duration: 1,
+        },
+        "<"
+      );
+
+      // Use ScrollTrigger.matchMedia to apply the .heroContainer animation only for desktop devices
+      const mm = gsap.matchMedia();
+
+      // add a media query. When it matches, the associated function will run
+      mm.add("(min-width: 768px)", () => {
+        tl.fromTo(
+          ".heroBackground",
           {
-            backgroundPositionY: "0px",
+            yPercent: 0,
           },
           {
-            backgroundPositionY: "200px",
-            duration: 1,
-          },
-          "<"
-        )
-        .fromTo(
-          ".heroImages",
-          {
-            y: 0,
-          },
-          {
-            y: -400,
+            yPercent: 25,
             duration: 1,
           },
           "<"
         );
+      });
     }
   }, main.value);
 };
 
 onMountedAndTransitionDone(() => {
-  nextTick(() => {
-    initAnimation();
-  });
+  initAnimation();
 });
 
 onBeforeUnmount(async () => {
@@ -179,30 +183,22 @@ onBeforeUnmount(async () => {
 </script>
 
 <style lang="postcss" scoped>
-section {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
-  @apply bg-gradient-to-b h-screen overflow-hidden from-[#041d3c] to-[#003D64] border-b border-black/40;
-}
-</style>
-
-<style lang="postcss" scoped>
 .heroContainer {
-  will-change: background-position-y;
-  background-image: url("/hero/bg.png");
+  @apply bg-gradient-to-b h-screen overflow-hidden from-[#041d3c] to-[#003D64] border-b border-black/40 relative grid grid-rows-1 grid-cols-1;
+  grid-template-areas: "content";
+}
+
+.heroBackground {
+  @apply h-screen w-full bg-no-repeat bg-cover bg-[url('/hero/bg.png')] will-change-transform;
+  grid-area: content;
+}
+
+.heroContent {
+  @apply z-10;
+  grid-area: content;
 }
 
 .heroImages {
   @apply will-change-transform;
-}
-
-.dropdown-menu {
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 </style>
