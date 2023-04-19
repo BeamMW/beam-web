@@ -135,7 +135,7 @@ const initAnimation = async () => {
           trigger: ".heroContainer",
           start: "top top",
           end: "bottom top",
-          scrub: true,
+          scrub: 0.5, // Soften the link between the animation and the scrollbar
         },
         easing: "ease",
         invalidateOnRefresh: true,
