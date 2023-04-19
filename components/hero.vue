@@ -1,7 +1,6 @@
 <template>
   <section
     :ref="main"
-    :style="{ 'background-image': `url(/hero/bg.png)` }"
     class="heroContainer block bg-[length:100%_auto] bg-top bg-no-repeat bg-[#042548] w-full"
   >
     <div>
@@ -97,6 +96,7 @@
               src="/hero/desktop.png"
               :alt="'Beam for Desktop'"
               class="absolute select-none pointer-events-none"
+              :webp="true"
             />
           </div>
 
@@ -105,6 +105,7 @@
               src="/hero/mobile.png"
               alt="Beam for iOS"
               class="absolute select-none pointer-events-none"
+              :webp="true"
             />
           </div>
         </ClientOnly>
@@ -189,6 +190,7 @@ section {
 <style lang="postcss" scoped>
 .heroContainer {
   will-change: background-position-y;
+  background-image: url("/hero/bg.png");
 }
 
 .heroImages {

@@ -5,14 +5,21 @@
       imageLoaded ? '!opacity-100' : ''
     }`"
   >
-    <img
-      v-if="clientSide"
-      :src="src"
-      :alt="alt"
-      :class="`${props.class} opacity-100 transition-opacity`"
-      v-bind="$attrs"
-      @load="onImageLoad"
-    />
+    <picture>
+      <source
+        v-if="webp"
+        :srcset="`${removeFileExtension(src)}.webp`"
+        type="image/webp"
+      />
+      <img
+        v-if="clientSide"
+        :src="src"
+        :alt="alt"
+        :class="`${props.class} opacity-100 transition-opacity`"
+        v-bind="$attrs"
+        @load="onImageLoad"
+      />
+    </picture>
   </div>
 </template>
 
@@ -32,7 +39,17 @@ const props = defineProps({
     required: false,
     default: "",
   },
+  webp: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
 });
+
+function removeFileExtension(filename) {
+  const lastDotIndex = filename.lastIndexOf(".");
+  return lastDotIndex === -1 ? filename : filename.slice(0, lastDotIndex);
+}
 
 const imageLoaded = ref(false);
 
