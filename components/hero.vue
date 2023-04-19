@@ -120,12 +120,14 @@ import { UserInteractionEvents } from "~/utils/emitter";
 
 const localePath = useLocalePath();
 
-const { $gsap: gsap } = useNuxtApp();
-
 const main: VNodeRef = ref();
 const ctx: VNodeRef = ref();
 
-const initAnimation = () => {
+const initAnimation = async () => {
+  const { gsap } = await import("gsap");
+  const { ScrollTrigger } = await import("gsap/ScrollTrigger");
+  gsap.registerPlugin(ScrollTrigger);
+
   ctx.value = gsap.context((self) => {
     if (self) {
       const tl = gsap.timeline({
@@ -173,8 +175,8 @@ const initAnimation = () => {
   }, main.value);
 };
 
-onMountedAndTransitionDone(() => {
-  initAnimation();
+onMountedAndTransitionDone(async () => {
+  await initAnimation();
 });
 
 onBeforeUnmount(async () => {
