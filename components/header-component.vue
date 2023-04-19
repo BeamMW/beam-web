@@ -71,8 +71,6 @@ const localePath = useLocalePath()
               name="layout/arrow-right"
             />
           </HeaderNavigationItem>
-
-          <HeaderNavigationItemDropdown />
         </ul>
       </div>
     </div>
