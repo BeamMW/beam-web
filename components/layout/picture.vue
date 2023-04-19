@@ -7,7 +7,6 @@
   >
     <img
       v-if="clientSide"
-      loading="lazy"
       :src="src"
       :alt="alt"
       :class="`${props.class} opacity-100 transition-opacity`"
