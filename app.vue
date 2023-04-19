@@ -30,8 +30,8 @@ const fileVersion = 1;
         content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
         name="viewport"
       />
-      <Meta name="msapplication-TileColor" content="#da532c" />
-      <Meta name="theme-color" content="#ffffff" />
+      <Meta name="msapplication-TileColor" content="#042548" />
+      <Meta name="theme-color" content="#042548" />
     </Head>
     <div>
       <NuxtLayout>
