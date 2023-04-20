@@ -1,10 +1,12 @@
 <script lang="ts" setup>
+const windowLocked = useState('windowLocked', () => false)
+
 useTitleTemplate();
 const fileVersion = 1;
 </script>
 
 <template>
-  <main>
+  <main :class="windowLocked ? 'locked' : ''">
     <Head>
       <Link
         rel="apple-touch-icon"
@@ -120,5 +122,14 @@ const fileVersion = 1;
   ::selection {
     @apply bg-[#39FFF2] text-[#042548];
   }
+}
+</style>
+
+<style lang="postcss" scoped>
+main {
+  transition: opacity 225ms ease-in-out, filter 225ms ease-in-out;
+}
+main.locked {
+  @apply pointer-events-none select-none overflow-hidden h-screen blur-sm opacity-50;
 }
 </style>

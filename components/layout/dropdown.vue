@@ -35,10 +35,15 @@ const visible = ref(false);
 const referenceElement = ref<HTMLElement | null>(null);
 const popperElement = ref<HTMLElement | null>(null);
 
+const windowLocked = useState('windowLocked', () => false);
+
 let popperInstance: Instance | null = null;
 
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value;
+  if (!showDropdown.value) {
+    windowLocked.value = false;
+  }
 };
 
 const closeDropdown = () => {
@@ -78,12 +83,14 @@ const updatePlacement = async () => {
         popperInstance.destroy();
         popperInstance = null;
       }
+      windowLocked.value = true;
       snapLeft.value = true;
     } else if (
       viewportWidth >= minWidthBreakpoint &&
       referenceElement.value &&
       !popperInstance
     ) {
+      windowLocked.value = false;
       snapLeft.value = false;
       await createPopperInstance(referenceElement.value, {
         placement: "bottom",
@@ -115,7 +122,10 @@ const handleClickOutside = (event: MouseEvent) => {
     !referenceElement.value.contains(event.target as Node) &&
     !popperElement.value.contains(event.target as Node)
   ) {
+    event.preventDefault();
+    event.stopPropagation();
     closeDropdown();
+    windowLocked.value = false;
   }
 };
 
@@ -192,7 +202,7 @@ provide("toggleDropdown", toggleDropdown);
 }
 .dropdown-enter-active,
 .dropdown-leave-active {
-  transition: opacity 200ms, transform 200ms;
+  transition: opacity 225ms ease-in-out, transform 225ms ease-in-out;
 }
 .dropdown-enter-from,
 .dropdown-leave-to {
@@ -204,10 +214,6 @@ provide("toggleDropdown", toggleDropdown);
 }
 
 @media (min-width: 768px) {
-  .dropdown-enter-active,
-  .dropdown-leave-active {
-    transition: opacity 200ms, transform 200ms;
-  }
   .dropdown-enter-from,
   .dropdown-leave-to {
     @apply opacity-0;
