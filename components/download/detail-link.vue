@@ -13,7 +13,7 @@ function openModal() {
 }
 </script>
 <template>
-  <div>
+  <div class="inline">
     <LayoutAnimatedModal ref="modal" :title="title">
       <div class="divide-solid divide-white/10 divide-y flex flex-col gap-3">
         <slot />

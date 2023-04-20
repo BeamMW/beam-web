@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="inherit">
     <transition
       v-show="visible"
       name="modal-bg"
@@ -74,3 +74,9 @@ function show() {
 // Expose both 'show' and 'close' methods to the parent component
 defineExpose({ show, close });
 </script>
+
+<style lang="postcss" scoped>
+.inherit {
+  display: inherit;
+}
+</style>
