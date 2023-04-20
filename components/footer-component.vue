@@ -137,7 +137,7 @@ const menus = computed(() => [
       },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
-      { text: "Newsletter", href: "https://beamprivacy.substack.com/" },
+      { text: "Newsletter", href: ExternalLinks.SUBSTACK },
     ],
   },
   {
@@ -179,7 +179,7 @@ const menus = computed(() => [
     title: t("footer.miners.title"),
     links: [
       { text: t("footer.miners.startMining"), href: "lol" },
-      { text: t("footer.miners.support"), href: "lol" },
+      { text: t("footer.miners.support"), href: "https://t.me/BeamMiners" },
     ],
   },
 ]);
