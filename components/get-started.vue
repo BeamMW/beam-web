@@ -86,30 +86,34 @@ onUnmounted(() =>
             {{ $t("getstarted.steps.2.button") }}
           </LayoutButton>
         </FeaturesCard>
-        <div :class="`lg:grid-cols-1 h-full w-full${!isNextStep ? ' sm-grid-col-full' : ''}`">
-        <FeaturesCard
-          image="hero/rocket"
-          :title="$t('getstarted.steps.3.title')"
-          :text="$t('getstarted.steps.3.description')"
-          button-name="Explore Beam"
-          accent-color="beam-pink"
-          :wide-icon="true"
-          :as-image="false"
-          class="bg-red"
+        <div
+          :class="`lg:grid-cols-1 h-full w-full${
+            !isNextStep ? ' sm-grid-col-full' : ''
+          }`"
         >
-          <LayoutButton
+          <FeaturesCard
+            image="hero/rocket"
+            :title="$t('getstarted.steps.3.title')"
+            :text="$t('getstarted.steps.3.description')"
+            button-name="Explore Beam"
             accent-color="beam-pink"
-            class="w-50"
-            :button-link="localePath('dapps')"
-            :big="true"
+            :wide-icon="true"
+            :as-image="false"
+            class="bg-red"
           >
-            <Icon
-              class="w-[18px] h-[18px] select-none pointer-events-none"
-              name="get-started/explore"
-            />
-            {{ $t("getstarted.steps.3.button") }}
-          </LayoutButton>
-        </FeaturesCard>
+            <LayoutButton
+              accent-color="beam-pink"
+              class="w-50"
+              :button-link="localePath('dapps')"
+              :big="true"
+            >
+              <Icon
+                class="w-[18px] h-[18px] select-none pointer-events-none"
+                name="get-started/explore"
+              />
+              {{ $t("getstarted.steps.3.button") }}
+            </LayoutButton>
+          </FeaturesCard>
         </div>
       </div>
       <FaqSection :is-next-step="isNextStep" />
@@ -118,7 +122,6 @@ onUnmounted(() =>
 </template>
 
 <style lang="postcss" scoped>
-
 @media (max-width: 1023px) {
   .sm-grid-col-full {
     grid-column: 1 / -1;
