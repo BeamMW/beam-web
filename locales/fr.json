@@ -14,7 +14,8 @@
       "home": "Accueil",
       "downloads": "Téléchargements",
       "resources": "Ressources"
-    }
+    },
+    "selectlanguage": "Sélectionnez une langue :"
   },
   "hero": {
     "title": "Confidentialité sans compromis",

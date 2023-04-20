@@ -14,7 +14,8 @@
       "home": "ホーム",
       "downloads": "ダウンロード",
       "resources": "リソース"
-    }
+    },
+    "selectlanguage": "言語を選択してください："
   },
   "hero": {
     "title": "妥協のないプライバシー",
