@@ -63,6 +63,7 @@ function isHTMLElement(value: unknown): value is HTMLElement {
 
 const createPopperInstance = (
   newReferenceElement: HTMLElement,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   options: Partial<OptionsGeneric<Partial<Modifier<any, any>>>>
 ) => {
   if (!newReferenceElement) {

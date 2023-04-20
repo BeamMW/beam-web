@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <span v-if="!asImage" :class="props.class" v-html="icon" />
+  <span v-if="!asImage" v-bind="$attrs" v-html="icon" />
   <div
     v-else-if="iconUrl"
     :class="`opacity-0 transition duration-500 ${
@@ -11,11 +11,11 @@
       v-if="clientSide"
       loading="lazy"
       :src="iconUrl"
-      :class="props.class"
       :alt="alt"
+      v-bind="$attrs"
       @load="onImageLoad"
     />
-    <img v-else loading="lazy" :src="iconUrl" :class="props.class" :alt="alt" />
+    <img v-else loading="lazy" :src="iconUrl" :alt="alt" v-bind="$attrs" />
   </div>
 </template>
 
@@ -26,11 +26,6 @@ const props = defineProps({
   name: {
     type: String,
     required: true,
-  },
-  class: {
-    type: String,
-    required: false,
-    default: "",
   },
   classParent: {
     type: String,

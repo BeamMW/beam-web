@@ -27,7 +27,6 @@
         :big="true"
         as="button"
         accent-color="white"
-        class=""
         @click.prevent="handleError"
       >
         {{ $t("errors.back") }}

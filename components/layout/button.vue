@@ -14,11 +14,6 @@ const props = defineProps({
     required: false,
     default: false,
   },
-  class: {
-    type: String,
-    required: false,
-    default: "",
-  },
   as: {
     type: String,
     required: false,
@@ -36,9 +31,7 @@ const classToSet = computed(
       props.accentColor
     } hover:text-black/70 font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-${
       props.accentColor
-    } focus:ring-offset-2 transition focus:ring-offset-[#042248] capitalize ${
-      props.class
-    }`
+    } focus:ring-offset-2 transition focus:ring-offset-[#042248] capitalize`
 );
 </script>
 
@@ -52,6 +45,7 @@ const classToSet = computed(
         ? '_self'
         : '_blank'
     "
+    v-bind="$attrs"
   >
     <slot></slot>
   </NuxtLink>

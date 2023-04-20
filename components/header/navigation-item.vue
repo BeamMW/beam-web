@@ -26,15 +26,10 @@ const props = defineProps({
     required: false,
     default: "",
   },
-  class: {
-    type: String,
-    required: false,
-    default: "",
-  },
 });
 
 const isButton = ref(props.as === "button");
-const defaultClasses = `block py-2 font-bold text-white/90 hover:text-white/70 transition-colors rounded ${props.class}`;
+const defaultClasses = `block py-2 font-bold text-white/90 hover:text-white/70 transition-colors rounded`;
 const classElement = ref(defaultClasses);
 
 const route = useRoute();

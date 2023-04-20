@@ -14,8 +14,7 @@
       <img
         v-if="clientSide"
         :src="src"
-        :alt="alt"
-        :class="`${props.class} opacity-100 transition-opacity`"
+        class="opacity-100 transition-opacity"
         v-bind="$attrs"
         @load="onImageLoad"
       />
@@ -24,20 +23,10 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   src: {
     type: String,
     required: true,
-  },
-  alt: {
-    type: String,
-    required: false,
-    default: "",
-  },
-  class: {
-    type: String,
-    required: false,
-    default: "",
   },
   webp: {
     type: Boolean,
@@ -46,7 +35,7 @@ const props = defineProps({
   },
 });
 
-function removeFileExtension(filename) {
+function removeFileExtension(filename: string) {
   const lastDotIndex = filename.lastIndexOf(".");
   return lastDotIndex === -1 ? filename : filename.slice(0, lastDotIndex);
 }

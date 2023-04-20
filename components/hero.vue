@@ -92,7 +92,7 @@
             <LayoutPicture
               src="/hero/desktop.png"
               :alt="'Beam for Desktop'"
-              class="absolute select-none pointer-events-none"
+              class="select-none pointer-events-none"
               :webp="true"
             />
           </div>
@@ -101,7 +101,7 @@
             <LayoutPicture
               src="/hero/mobile.png"
               alt="Beam for iOS"
-              class="absolute select-none pointer-events-none"
+              class="select-none pointer-events-none"
               :webp="true"
             />
           </div>

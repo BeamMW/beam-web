@@ -105,7 +105,7 @@ const leave = (el: HTMLElement) => {
               >
                 <span class="sr-only">Dismiss</span>
                 <Icon
-                  extend-class="w-4 h-4 block"
+                  class="w-4 h-4 block"
                   name="layout/close"
                   :lazy="false"
                   :as-image="false"
