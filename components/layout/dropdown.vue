@@ -10,7 +10,7 @@
     <div
       v-show="visible"
       ref="popperElement"
-      class="popper-container absolute h-screen md:!h-auto"
+      :class="`popper-container z-50 ${snapLeft ? 'popper-container-snap-left' : ''}`"
     >
       <transition name="dropdown" @before-enter="afterEnter" @after-leave="afterLeave">
         <div v-if="showDropdown" class="h-full">
@@ -24,7 +24,6 @@
 <script setup lang="ts">
 import {
   ref,
-  watchEffect,
   onMounted,
   onUnmounted,
   getCurrentInstance,
@@ -34,6 +33,7 @@ import { createPopper, Instance, Modifier, OptionsGeneric } from "@popperjs/core
 import { throttle } from "~/utils/throttle";
 
 const showDropdown = ref(false);
+const snapLeft = ref(false);
 const visible = ref(false);
 const referenceElement = ref<HTMLElement | null>(null);
 const popperElement = ref<HTMLElement | null>(null);
@@ -44,7 +44,7 @@ const toggleDropdown = async () => {
   showDropdown.value = !showDropdown.value;
 };
 
-const getWindowVirtualReferenceElement = (): HTMLElement => {
+/*const getWindowVirtualReferenceElement = (): HTMLElement => {
   const virtualReferenceElement = document.createElement("div");
 
   virtualReferenceElement.style.width = "100vw";
@@ -54,7 +54,7 @@ const getWindowVirtualReferenceElement = (): HTMLElement => {
   virtualReferenceElement.style.left = "0";
 
   return virtualReferenceElement;
-};
+};*/
 
 const closeDropdown = () => {
   showDropdown.value = false;
@@ -69,18 +69,9 @@ const createPopperInstance = async (newReferenceElement: HTMLElement, options: P
     return;
   }
 
-  // Destroy the existing Popper.js instance if it exists
-  if (popperInstance) {
-    popperInstance.destroy();
-  }
-
   // Create a new Popper.js instance with the new reference element
   if (isHTMLElement(popperElement.value)) {
-    //await nextTick();
-    document.body.appendChild(popperElement.value);
     popperInstance = createPopper(newReferenceElement, popperElement.value, options);
-    //await nextTick();
-    //await popperInstance.update();
   }
 };
 
@@ -88,24 +79,22 @@ const updatePlacement = throttle(async () => {
   const viewportWidth = window.innerWidth;
   const breakpoint = 768; // md
 
+  // Destroy the existing Popper.js instance if it exists
+  if (popperInstance) {
+    popperInstance.destroy();
+  }
+
   if (showDropdown.value) {
     if (viewportWidth <= breakpoint) {
-      await createPopperInstance(getWindowVirtualReferenceElement(), {
-        placement: "right-start",
-        strategy: "absolute",
-        modifiers: [
-          {
-            name: "offset",
-            options: {
-              offset: [0, 0],
-            },
-          },
-        ],
-      });
+      // Destroy the existing Popper.js instance if it exists
+      if (popperInstance) {
+        popperInstance.destroy();
+      }
+      snapLeft.value = true
     } else if (referenceElement.value) {
+      snapLeft.value = false
       await createPopperInstance(referenceElement.value, {
         placement: "bottom-start",
-        strategy: "absolute",
         modifiers: [
           {
             name: "offset",
@@ -137,6 +126,11 @@ const handleClickOutside = (event: MouseEvent) => {
 };
 
 onMounted(() => {
+  // Attach dropdown content to body
+  if (popperElement.value) {
+    document.body.appendChild(popperElement.value);
+  }
+
   const instance = getCurrentInstance();
   if (instance) {
     instance.emit("register-toggle", toggleDropdown);
@@ -152,11 +146,11 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
   window.removeEventListener("resize", updatePlacement);
+  if (popperElement.value) {
+    popperElement.value.remove();
+  }
   if (popperInstance) {
     popperInstance.destroy();
-    if (popperElement.value) {
-      popperElement.value.remove();
-    }
   }
 });
 
@@ -164,9 +158,7 @@ const afterLeave = () => {
   visible.value = false;
 };
 const afterEnter = async () => {
-  await nextTick();
   visible.value = true;
-  await nextTick();
 };
 
 provide("toggleDropdown", toggleDropdown);
@@ -176,7 +168,9 @@ provide("toggleDropdown", toggleDropdown);
 .popper-container:deep(.dropdown-container) {
   @apply h-full will-change-transform z-50 text-white relative list-none bg-[rgba(4,37,72,1)] border-black border rounded-lg divide-y divide-gray-100 border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
 }
-
+.popper-container-snap-left {
+  @apply h-screen fixed top-0 left-0;
+}
 .dropdown-enter-active,
 .dropdown-leave-active {
   transition: opacity 200ms, transform 200ms;
@@ -191,6 +185,7 @@ provide("toggleDropdown", toggleDropdown);
 }
 
 @media (min-width: 768px) {
+
 .dropdown-enter-active,
 .dropdown-leave-active {
   transition: opacity 200ms, transform 200ms;
