@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
 
 const props = defineProps({
@@ -62,8 +62,10 @@ async function renderMarkdown(text) {
   return { content: md.renderInline(text) };
 }
 
+const key =  `${locale.value}${props.tKey}${JSON.stringify(props.tInterpolation)}`
+
 const { data, pending } = await useAsyncData(
-  `${props.tKey}${JSON.stringify(props.tInterpolation)}`,
+  key,
   async () => await renderMarkdown(t(props.tKey, props.tInterpolation))
 );
 </script>
