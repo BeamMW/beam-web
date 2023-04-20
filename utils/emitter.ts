@@ -7,16 +7,16 @@ export enum UserInteractionEvents {
 }
 
 export interface CustomEvents {
-  [UserInteractionEvents.PAGE_TRANSITION_FINISHED]: {};
+  [UserInteractionEvents.PAGE_TRANSITION_FINISHED]: unknown;
   [UserInteractionEvents.LANGUAGE_CHANGE]: {
     lang: string;
   };
-  [UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY]: {};
-  [UserInteractionEvents.SCROLL_TO_GET_STARTED]: {};
-  [UserInteractionEvents.EXIT_LANGUAGE_DROPDOWN]: {};
+  [UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY]: unknown;
+  [UserInteractionEvents.SCROLL_TO_GET_STARTED]: unknown;
+  [UserInteractionEvents.EXIT_LANGUAGE_DROPDOWN]: unknown;
 }
 
-type Handler<T = any> = (event: T) => void;
+type Handler<T = unknown> = (event: T) => void;
 
 class CustomEmitter {
   private eventHandlers: {
@@ -39,7 +39,7 @@ class CustomEmitter {
   ): void {
     this.eventHandlers[type] = this.eventHandlers[type]?.filter(
       (h) => h !== handler
-    ) as unknown as any;
+    ) as unknown as any; // eslint-disable-line @typescript-eslint/no-explicit-any
   }
 
   emit<Key extends keyof CustomEvents>(
