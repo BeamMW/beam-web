@@ -1,10 +1,15 @@
 <script lang="ts" setup>
 import { useI18n } from "vue-i18n";
 import { nextTick } from "vue";
+import { throttle } from '~/utils/throttle'
 
 const { t } = useI18n();
 
+const announcementContainer = ref();
+const announcementRef = ref<HTMLElement | null>(null);
+
 const announcementMessage = computed(() => t("header.announcement"));
+
 const showMessage = ref(false);
 const storageKey = "announcementMessageHash";
 
@@ -17,10 +22,22 @@ const hashCode = (s: string) => {
   return h;
 };
 
+const updateHeight = throttle(() => {
+  if (showMessage.value && announcementRef.value) {
+    enter(announcementContainer.value);
+  }
+}, 150);
+
 onMounted(() => {
   const messageHash = localStorage.getItem(storageKey);
   showMessage.value =
     messageHash !== hashCode(announcementMessage.value).toString();
+
+  window.addEventListener("resize", updateHeight);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", updateHeight);
 });
 
 const dismissMessage = () => {
@@ -31,8 +48,6 @@ const dismissMessage = () => {
   );
 };
 
-const announcementRef = ref<HTMLElement | null>(null);
-
 const beforeEnter = (el: HTMLElement) => {
   el.style.height = "0";
 };
@@ -40,11 +55,11 @@ const beforeEnter = (el: HTMLElement) => {
 const enter = async (el: HTMLElement) => {
   await nextTick();
   el.style.transition = "height 0.3s ease-in-out, opacity 0.3s ease-in-out";
-  el.style.height = `${announcementRef.value!.scrollHeight}px`;
+  el.style.height = `${announcementRef.value!.offsetHeight}px`;
 };
 
 const beforeLeave = (el: HTMLElement) => {
-  el.style.height = `${announcementRef.value!.scrollHeight}px`;
+  el.style.height = `${announcementRef.value!.offsetHeight}px`;
 };
 
 const leave = (el: HTMLElement) => {
@@ -62,32 +77,37 @@ const leave = (el: HTMLElement) => {
   >
     <div
       v-show="announcementMessage && showMessage"
-      ref="announcementRef"
-      class="announcement bg-transparent"
+      ref="announcementContainer"
+      class="overflow-hidden will-change-auto"
     >
-      <div class="max-w-screen-xl mx-auto">
-        <div
-          class="flex items-center border-[rgba(255,255,255,.05)] border-b md:p-4 p-2"
-        >
-          <p
-            class="font-bold text-xs md:text-sm text-white/90 flex items-center gap-3"
+      <div ref="announcementRef" class="bg-transparent h-auto">
+        <div class="max-w-screen-xl mx-auto">
+          <div
+            class="flex items-center border-[rgba(255,255,255,.05)] border-b md:p-4 p-2"
           >
-            <MarkdownRenderer class="colorLinks" t-key="header.announcement" />
-          </p>
-          <div class="ml-auto">
-            <button
-              type="button"
-              class="inline-flex rounded-md p-1.5 text-white/80 transition-colors hover:text-white/60 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#042548] focus:ring-[#042548]"
-              @click="dismissMessage"
+            <p
+              class="font-bold text-xs md:text-sm text-white/90 flex items-center gap-3"
             >
-              <span class="sr-only">Dismiss</span>
-              <Icon
-                class="w-4 h-4 block"
-                name="layout/close"
-                :lazy="false"
-                :as-image="false"
+              <MarkdownRenderer
+                class="colorLinks"
+                t-key="header.announcement"
               />
-            </button>
+            </p>
+            <div class="ml-auto">
+              <button
+                type="button"
+                class="inline-flex rounded-md p-1.5 text-white/80 transition-colors hover:text-white/60 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#042548] focus:ring-[#042548]"
+                @click="dismissMessage"
+              >
+                <span class="sr-only">Dismiss</span>
+                <Icon
+                  class="w-4 h-4 block"
+                  name="layout/close"
+                  :lazy="false"
+                  :as-image="false"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
