@@ -181,7 +181,7 @@ onMountedAndTransitionDone(async () => {
 
 onBeforeUnmount(async () => {
   // Ensure the GSAP timeline is reverted and killed when the component unmounts
-  await ctx.value.revert();
+  // await ctx.value.revert();
   await ctx.value.kill();
 });
 </script>
