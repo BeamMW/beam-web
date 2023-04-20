@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const { t } = useI18n();
+
 defineProps({
   title: {
     type: String,
@@ -28,6 +30,7 @@ defineProps({
   <div class="text-center">
     <NuxtLink
       :to="link"
+      :title="t('downloads.downloadButton', { platform: title })"
       target="_blank"
       :class="`${
         highlight
