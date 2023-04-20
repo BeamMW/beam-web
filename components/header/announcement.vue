@@ -55,11 +55,15 @@ const beforeEnter = (el: HTMLElement) => {
 const enter = async (el: HTMLElement) => {
   await nextTick();
   el.style.transition = "height 0.3s ease-in-out, opacity 0.3s ease-in-out";
-  el.style.height = `${announcementRef.value!.offsetHeight}px`;
+  if (announcementRef.value) {
+    el.style.height = `${announcementRef.value.offsetHeight}px`;
+  }
 };
 
 const beforeLeave = (el: HTMLElement) => {
-  el.style.height = `${announcementRef.value!.offsetHeight}px`;
+  if (announcementRef.value) {
+    el.style.height = `${announcementRef.value.offsetHeight}px`;
+  }
 };
 
 const leave = (el: HTMLElement) => {
@@ -101,7 +105,7 @@ const leave = (el: HTMLElement) => {
               >
                 <span class="sr-only">Dismiss</span>
                 <Icon
-                  class="w-4 h-4 block"
+                  extend-class="w-4 h-4 block"
                   name="layout/close"
                   :lazy="false"
                   :as-image="false"
