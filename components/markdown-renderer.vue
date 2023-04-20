@@ -10,7 +10,7 @@ const props = defineProps({
   tInterpolation: {
     type: Object,
     required: false,
-    default: () => {},
+    default: () => undefined,
   },
 });
 
@@ -18,24 +18,24 @@ const divRef = ref(null);
 
 onMounted(() => {
   const el = divRef.value;
-  if (!el) return;
+  if (el) {
+    el.addEventListener("click", (event) => {
+      const target = event.target;
+      if (target.tagName === "A") {
+        const href = target.getAttribute("href");
+        const targetAttr = target.getAttribute("target");
+        const router = useRouter();
 
-  el.addEventListener("click", (event) => {
-    const target = event.target;
-    if (target.tagName === "A") {
-      const href = target.getAttribute("href");
-      const targetAttr = target.getAttribute("target");
-      const router = useRouter();
-
-      if (href && href[0] === "/" && targetAttr !== "_blank") {
-        event.preventDefault();
-        router.push(href);
+        if (href && href[0] === "/" && targetAttr !== "_blank") {
+          event.preventDefault();
+          router.push(href);
+        }
       }
-    }
-  });
+    });
+  }
 });
 
-async function renderMarkdown(text) {
+async function renderMarkdown(text: string) {
   const MarkdownIt = (await import("markdown-it")).default;
   const md = new MarkdownIt({ breaks: true });
 
