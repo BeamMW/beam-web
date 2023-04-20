@@ -62,7 +62,9 @@ async function renderMarkdown(text) {
   return { content: md.renderInline(text) };
 }
 
-const key =  `${locale.value}${props.tKey}${JSON.stringify(props.tInterpolation)}`
+const key = `${locale.value}${props.tKey}${JSON.stringify(
+  props.tInterpolation
+)}`;
 
 const { data, pending } = await useAsyncData(
   key,
