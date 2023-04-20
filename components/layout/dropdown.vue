@@ -50,6 +50,13 @@ const closeDropdown = () => {
   showDropdown.value = false;
 };
 
+function destroyPopper() {
+  // Destroy the existing Popper.js instance if it exists
+  if (popperInstance) {
+    popperInstance.destroy();
+    popperInstance = null;
+  }
+}
 function isHTMLElement(value: unknown): value is HTMLElement {
   return value instanceof HTMLElement;
 }
@@ -69,6 +76,7 @@ const createPopperInstance = (
       popperElement.value,
       options
     );
+    popperInstance.forceUpdate();
   }
 };
 
@@ -78,11 +86,7 @@ const updatePlacement = async () => {
 
   if (showDropdown.value) {
     if (viewportWidth < minWidthBreakpoint) {
-      // Destroy the existing Popper.js instance if it exists
-      if (popperInstance) {
-        popperInstance.destroy();
-        popperInstance = null;
-      }
+      destroyPopper();
       windowLocked.value = true;
       snapLeft.value = true;
     } else if (
@@ -150,16 +154,18 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
   window.removeEventListener("resize", updatePlacement);
+
+  // Detach dropdown content to body
   if (popperElement.value) {
     popperElement.value.remove();
   }
-  if (popperInstance) {
-    popperInstance.destroy();
-  }
+
+  destroyPopper();
 });
 
 const afterLeave = () => {
   visible.value = false;
+  destroyPopper();
 };
 const afterEnter = () => {
   visible.value = true;
