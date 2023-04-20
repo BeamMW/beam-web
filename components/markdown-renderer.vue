@@ -14,14 +14,14 @@ const props = defineProps({
   },
 });
 
-const divRef = ref(null);
+const divRef: Ref<HTMLElement | null> = ref(null);
 
 onMounted(() => {
   const el = divRef.value;
   if (el) {
     el.addEventListener("click", (event) => {
-      const target = event.target;
-      if (target.tagName === "A") {
+      const target: HTMLElement | undefined = event.target as HTMLElement;
+      if (target && target.tagName === "A") {
         const href = target.getAttribute("href");
         const targetAttr = target.getAttribute("target");
         const router = useRouter();
@@ -40,22 +40,25 @@ async function renderMarkdown(text: string) {
   const md = new MarkdownIt({ breaks: true });
 
   // Renderer rule for opening links
+
   md.renderer.rules.link_open = (tokens, idx, options, _env, self) => {
     const token = tokens[idx];
-    const hrefIndex = token.attrIndex("href");
-    const href = token.attrs[hrefIndex][1];
+    if (token.attrs) {
+      // Add null-check for token.attrs
+      const hrefIndex = token.attrIndex("href");
+      const href = token.attrs[hrefIndex][1];
 
-    if (href.startsWith("#")) {
-      return self.renderToken(tokens, idx, options);
+      if (href.startsWith("#")) {
+        return self.renderToken(tokens, idx, options);
+      }
+
+      if (href.startsWith("/")) {
+        token.attrs[hrefIndex][1] = localePath(href);
+      } else if (!href.startsWith("mailto:")) {
+        token.attrSet("target", "_blank");
+        token.attrSet("rel", "noreferrer noopener");
+      }
     }
-
-    if (href.startsWith("/")) {
-      token.attrs[hrefIndex][1] = localePath(href);
-    } else if (!href.startsWith("mailto:")) {
-      token.attrSet("target", "_blank");
-      token.attrSet("rel", "noreferrer noopener");
-    }
-
     return self.renderToken(tokens, idx, options);
   };
 
@@ -74,7 +77,7 @@ const { data, pending } = await useAsyncData(
 
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <span v-if="!pending" ref="divRef" v-html="data.content"></span>
+  <span v-if="!pending && data" ref="divRef" v-html="data.content"></span>
 </template>
 
 <style lang="postcss" scoped>

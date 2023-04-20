@@ -15,6 +15,7 @@ const currentLocale = computed(() => {
 
 <template>
   <LayoutButton
+    v-if="currentLocale"
     as="button"
     class="!text-sm !py-1.5 !px-2 md:!px-3"
     accent-color="beam-blue"
