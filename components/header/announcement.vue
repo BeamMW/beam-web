@@ -67,9 +67,11 @@ const leave = (el: HTMLElement) => {
     >
       <div class="max-w-screen-xl mx-auto">
         <div
-          class="flex items-center border-[rgba(255,255,255,.05)] border-b p-4"
+          class="flex items-center border-[rgba(255,255,255,.05)] border-b md:p-4 p-2"
         >
-          <p class="font-bold text-sm text-white/90 flex items-center gap-3">
+          <p
+            class="font-bold text-xs md:text-sm text-white/90 flex items-center gap-3"
+          >
             <MarkdownRenderer class="colorLinks" t-key="header.announcement" />
           </p>
           <div class="ml-auto">
