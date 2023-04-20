@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const windowLocked = useState('windowLocked', () => false)
+const windowLocked = useState("windowLocked", () => false);
 
 useTitleTemplate();
 const fileVersion = 1;

@@ -35,7 +35,7 @@ const visible = ref(false);
 const referenceElement = ref<HTMLElement | null>(null);
 const popperElement = ref<HTMLElement | null>(null);
 
-const windowLocked = useState('windowLocked', () => false);
+const windowLocked = useState("windowLocked", () => false);
 
 let popperInstance: Instance | null = null;
 
