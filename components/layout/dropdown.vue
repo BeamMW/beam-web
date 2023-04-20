@@ -161,10 +161,32 @@ provide("toggleDropdown", toggleDropdown);
 .popper-container:deep(.dropdown-container) {
   @apply h-full will-change-transform z-50 text-white relative list-none bg-[rgba(4,37,72,.6)] backdrop-blur-xl backdrop-brightness-125 border-black border rounded-lg border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
 }
+
+@keyframes animate {
+	0% {
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+	100% {
+		opacity:0;
+	}
+}
+
 .popper-container-snap-left {
   @apply h-screen fixed top-0 left-0;
   &:deep(.dropdown-container) {
-    @apply rounded-none !rounded-r-3xl shadow-beam-pink shadow-2xl !w-[45vw];
+    @apply rounded-none !rounded-r-3xl !w-[45vw] shadow-beam-pink shadow-2xl;
+  }
+  &:deep(.dropdown-container)::before {
+    @apply shadow-beam-green shadow-2xl h-full w-full;
+    animation: animate 15s linear infinite;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
   }
 }
 .dropdown-enter-active,
