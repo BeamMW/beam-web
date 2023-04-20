@@ -16,7 +16,7 @@ const currentLocale = computed(() => {
 <template>
   <LayoutButton
     as="button"
-    class="!text-sm !py-1.5 !px-3"
+    class="!text-xs md:!text-sm !py-1 md:!py-1.5 !px-1.5 md:!px-3"
     accent-color="beam-blue"
   >
     <IconFlag
