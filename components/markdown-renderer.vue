@@ -1,4 +1,4 @@
-<script type="ts" setup>
+<script lang="ts" setup>
 const { t } = useI18n();
 const localePath = useLocalePath();
 
@@ -10,8 +10,8 @@ const props = defineProps({
   tInterpolation: {
     type: Object,
     required: false,
-    default: () => {}
-  }
+    default: () => {},
+  },
 });
 
 const divRef = ref(null);
@@ -20,14 +20,14 @@ onMounted(() => {
   const el = divRef.value;
   if (!el) return;
 
-  el.addEventListener('click', (event) => {
+  el.addEventListener("click", (event) => {
     const target = event.target;
-    if (target.tagName === 'A') {
-      const href = target.getAttribute('href');
-      const targetAttr = target.getAttribute('target');
+    if (target.tagName === "A") {
+      const href = target.getAttribute("href");
+      const targetAttr = target.getAttribute("target");
       const router = useRouter();
 
-      if (href && href[0] === '/' && targetAttr !== '_blank') {
+      if (href && href[0] === "/" && targetAttr !== "_blank") {
         event.preventDefault();
         router.push(href);
       }
@@ -36,33 +36,36 @@ onMounted(() => {
 });
 
 async function renderMarkdown(text) {
-  const MarkdownIt = (await import('markdown-it')).default;
-  const md = new MarkdownIt({breaks: true});
+  const MarkdownIt = (await import("markdown-it")).default;
+  const md = new MarkdownIt({ breaks: true });
 
   // Renderer rule for opening links
   md.renderer.rules.link_open = (tokens, idx, options, _env, self) => {
     const token = tokens[idx];
-    const hrefIndex = token.attrIndex('href');
+    const hrefIndex = token.attrIndex("href");
     const href = token.attrs[hrefIndex][1];
 
-    if (href.startsWith('#')) {
+    if (href.startsWith("#")) {
       return self.renderToken(tokens, idx, options);
     }
 
-    if (href.startsWith('/')) {
+    if (href.startsWith("/")) {
       token.attrs[hrefIndex][1] = localePath(href);
-    } else if (!href.startsWith('mailto:')) {
-      token.attrSet('target', '_blank');
-      token.attrSet('rel', 'noreferrer noopener');
+    } else if (!href.startsWith("mailto:")) {
+      token.attrSet("target", "_blank");
+      token.attrSet("rel", "noreferrer noopener");
     }
 
     return self.renderToken(tokens, idx, options);
-  }
+  };
 
-  return { content: md.renderInline(text) }
+  return { content: md.renderInline(text) };
 }
 
-const { data, pending } = await useAsyncData(`${props.tKey}${JSON.stringify(props.tInterpolation)}`, async () => await renderMarkdown(t(props.tKey, props.tInterpolation)));
+const { data, pending } = await useAsyncData(
+  `${props.tKey}${JSON.stringify(props.tInterpolation)}`,
+  async () => await renderMarkdown(t(props.tKey, props.tInterpolation))
+);
 </script>
 
 <template>

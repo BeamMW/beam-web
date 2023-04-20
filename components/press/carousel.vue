@@ -46,12 +46,12 @@
   </div>
 </template>
 
-<script type="ts" setup>
+<script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { Navigation, Autoplay } from 'swiper/core';
+import SwiperCore, { Navigation, Autoplay } from "swiper/core";
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import { pressArticles } from '@/app.config'
-import { throttle } from '~/utils/throttle'
+import { pressArticles } from "@/app.config";
+import { throttle } from "~/utils/throttle";
 
 SwiperCore.use([Navigation, Autoplay]);
 

@@ -17,7 +17,7 @@
   </LayoutWrapper>
 </template>
 
-<script type="ts" setup>
+<script lang="ts" setup>
 const features = [
   {
     link: "https://documentation.beam.mw/#private-transactions",

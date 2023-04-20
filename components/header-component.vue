@@ -1,5 +1,5 @@
-<script type="ts" setup>
-const localePath = useLocalePath()
+<script lang="ts" setup>
+const localePath = useLocalePath();
 </script>
 <template>
   <nav

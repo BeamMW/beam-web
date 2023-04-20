@@ -1,4 +1,4 @@
-<script type="ts" setup>
+<script lang="ts" setup>
 import { UserInteractionEvents, eventBus } from "~/utils/emitter";
 import { scrollToComponent } from "~/utils/scrollToComponent";
 
@@ -6,7 +6,7 @@ const { t } = useI18n();
 
 const targetComponentBuy = ref(null);
 
-const whereToBuyScroll = () => scrollToComponent(targetComponentBuy)
+const whereToBuyScroll = () => scrollToComponent(targetComponentBuy);
 
 onMounted(() =>
   eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll)

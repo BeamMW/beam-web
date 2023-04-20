@@ -47,7 +47,7 @@
   </main>
 </template>
 
-<script type="ts" setup>
+<script lang="ts" setup>
 const { t } = useI18n();
 
 const props = defineProps({
@@ -55,19 +55,21 @@ const props = defineProps({
     type: Object,
     required: true,
   },
-})
-const handleError = () => clearError({ redirect: '/' })
+});
+const handleError = () => clearError({ redirect: "/" });
 
 useTitleTemplate();
 
-const title = computed(() => t("errors.title", {code: props.error.statusCode}));
+const title = computed(() =>
+  t("errors.title", { code: props.error.statusCode })
+);
 const description = computed(() => t("head.description"));
 
-function stripHTML(html) {
-  if (typeof DOMParser !== 'undefined') {
+function stripHTML(html: string) {
+  if (typeof DOMParser !== "undefined") {
     const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    return doc.body.textContent || '';
+    const doc = parser.parseFromString(html, "text/html");
+    return doc.body.textContent || "";
   } else {
     return html;
   }

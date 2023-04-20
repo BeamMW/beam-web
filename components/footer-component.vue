@@ -105,7 +105,7 @@ import {
   ExternalLinksIcon,
   ExternalLinksTitle,
   CONTACT_EMAIL,
-} from "../app.config";
+} from "@/app.config";
 
 // Make it async
 const Icon = defineAsyncComponent(() => import("./icon.vue"));
