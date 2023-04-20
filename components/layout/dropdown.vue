@@ -94,7 +94,7 @@ const updatePlacement = throttle(async () => {
     } else if (referenceElement.value) {
       snapLeft.value = false
       await createPopperInstance(referenceElement.value, {
-        placement: "bottom-start",
+        placement: "bottom",
         modifiers: [
           {
             name: "offset",
@@ -166,10 +166,13 @@ provide("toggleDropdown", toggleDropdown);
 <style lang="postcss" scoped>
 /** Custom default dropdown container */
 .popper-container:deep(.dropdown-container) {
-  @apply h-full will-change-transform z-50 text-white relative list-none bg-[rgba(4,37,72,1)] border-black border rounded-lg divide-y divide-gray-100 border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
+  @apply h-full will-change-transform z-50 text-white relative list-none bg-[rgba(4,37,72,1)] border-black border rounded-lg border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
 }
 .popper-container-snap-left {
   @apply h-screen fixed top-0 left-0;
+  &:deep(.dropdown-container) {
+    @apply rounded-none !rounded-r-lg;
+  }
 }
 .dropdown-enter-active,
 .dropdown-leave-active {
