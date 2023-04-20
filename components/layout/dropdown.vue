@@ -1,18 +1,20 @@
 <template>
   <div>
-    <div
-      ref="referenceElement"
-      class="w-auto h-auto inline-block"
-      @click="toggleDropdown"
-    >
+    <div ref="referenceElement" @click="toggleDropdown">
       <slot name="dropdown-button" />
     </div>
     <div
       v-show="visible"
       ref="popperElement"
-      :class="`popper-container z-50 ${snapLeft ? 'popper-container-snap-left' : ''}`"
+      :class="`popper-container z-50 ${
+        snapLeft ? 'popper-container-snap-left' : ''
+      }`"
     >
-      <transition name="dropdown" @before-enter="afterEnter" @after-leave="afterLeave">
+      <transition
+        name="dropdown"
+        @before-enter="afterEnter"
+        @after-leave="afterLeave"
+      >
         <div v-if="showDropdown" class="h-full">
           <slot name="dropdown-content" />
         </div>
@@ -22,17 +24,12 @@
 </template>
 
 <script setup lang="ts">
-import {
-  ref,
-  onMounted,
-  onUnmounted,
-  getCurrentInstance,
-} from "vue";
-// eslint-disable-next-line import/named
-import { createPopper, Instance, Modifier, OptionsGeneric } from "@popperjs/core";
-import { throttle } from "~/utils/throttle";
+import { ref, onMounted, onUnmounted, getCurrentInstance } from "vue";
 
-const showDropdown = ref(false);
+// prettier-ignore
+import { createPopper, Instance, Modifier, OptionsGeneric } from "@popperjs/core"; // eslint-disable-line import/named
+
+const showDropdown = ref<boolean>(false);
 const snapLeft = ref(false);
 const visible = ref(false);
 const referenceElement = ref<HTMLElement | null>(null);
@@ -40,21 +37,9 @@ const popperElement = ref<HTMLElement | null>(null);
 
 let popperInstance: Instance | null = null;
 
-const toggleDropdown = async () => {
+const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value;
 };
-
-/*const getWindowVirtualReferenceElement = (): HTMLElement => {
-  const virtualReferenceElement = document.createElement("div");
-
-  virtualReferenceElement.style.width = "100vw";
-  virtualReferenceElement.style.height = "100%";
-  virtualReferenceElement.style.position = "absolute";
-  virtualReferenceElement.style.top = "0";
-  virtualReferenceElement.style.left = "0";
-
-  return virtualReferenceElement;
-};*/
 
 const closeDropdown = () => {
   showDropdown.value = false;
@@ -64,49 +49,57 @@ function isHTMLElement(value: unknown): value is HTMLElement {
   return value instanceof HTMLElement;
 }
 
-const createPopperInstance = async (newReferenceElement: HTMLElement, options: Partial<OptionsGeneric<Partial<Modifier<any, any>>>>) => {
+const createPopperInstance = (
+  newReferenceElement: HTMLElement,
+  options: Partial<OptionsGeneric<Partial<Modifier<any, any>>>>
+) => {
   if (!newReferenceElement) {
     return;
   }
 
   // Create a new Popper.js instance with the new reference element
   if (isHTMLElement(popperElement.value)) {
-    popperInstance = createPopper(newReferenceElement, popperElement.value, options);
+    popperInstance = createPopper(
+      newReferenceElement,
+      popperElement.value,
+      options
+    );
   }
 };
 
-const updatePlacement = throttle(async () => {
+const updatePlacement = async () => {
   const viewportWidth = window.innerWidth;
-  const breakpoint = 768; // md
-
-  // Destroy the existing Popper.js instance if it exists
-  if (popperInstance) {
-    popperInstance.destroy();
-  }
+  const minWidthBreakpoint = 768; // md
 
   if (showDropdown.value) {
-    if (viewportWidth <= breakpoint) {
+    if (viewportWidth < minWidthBreakpoint) {
       // Destroy the existing Popper.js instance if it exists
       if (popperInstance) {
         popperInstance.destroy();
+        popperInstance = null;
       }
-      snapLeft.value = true
-    } else if (referenceElement.value) {
-      snapLeft.value = false
+      snapLeft.value = true;
+    } else if (
+      viewportWidth >= minWidthBreakpoint &&
+      referenceElement.value &&
+      !popperInstance
+    ) {
+      snapLeft.value = false;
       await createPopperInstance(referenceElement.value, {
         placement: "bottom",
+        strategy: "fixed",
         modifiers: [
           {
             name: "offset",
             options: {
-              offset: [0, 15],
+              offset: [0, 14],
             },
           },
         ],
       });
     }
   }
-}, 50);
+};
 
 watch([showDropdown, referenceElement], async () => {
   if (showDropdown.value && referenceElement.value) {
@@ -157,7 +150,7 @@ onUnmounted(() => {
 const afterLeave = () => {
   visible.value = false;
 };
-const afterEnter = async () => {
+const afterEnter = () => {
   visible.value = true;
 };
 
@@ -166,12 +159,12 @@ provide("toggleDropdown", toggleDropdown);
 <style lang="postcss" scoped>
 /** Custom default dropdown container */
 .popper-container:deep(.dropdown-container) {
-  @apply h-full will-change-transform z-50 text-white relative list-none bg-[rgba(4,37,72,1)] border-black border rounded-lg border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
+  @apply h-full will-change-transform z-50 text-white relative list-none bg-[rgba(4,37,72,.6)] backdrop-blur-xl backdrop-brightness-125 border-black border rounded-lg border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
 }
 .popper-container-snap-left {
   @apply h-screen fixed top-0 left-0;
   &:deep(.dropdown-container) {
-    @apply rounded-none !rounded-r-lg;
+    @apply rounded-none !rounded-r-3xl shadow-beam-pink shadow-2xl !w-[45vw];
   }
 }
 .dropdown-enter-active,
@@ -188,21 +181,19 @@ provide("toggleDropdown", toggleDropdown);
 }
 
 @media (min-width: 768px) {
-
-.dropdown-enter-active,
-.dropdown-leave-active {
-  transition: opacity 200ms, transform 200ms;
+  .dropdown-enter-active,
+  .dropdown-leave-active {
+    transition: opacity 200ms, transform 200ms;
+  }
+  .dropdown-enter-from,
+  .dropdown-leave-to {
+    @apply opacity-0;
+    transform: scale(0.95);
+  }
+  .dropdown-enter-to,
+  .dropdown-leave-from {
+    @apply opacity-100;
+    transform: scale(1);
+  }
 }
-.dropdown-enter-from,
-.dropdown-leave-to {
-  @apply opacity-0;
-  transform: scale(0.95);
-}
-.dropdown-enter-to,
-.dropdown-leave-from {
-  @apply opacity-100;
-  transform: scale(1);
-}}
-
-
 </style>

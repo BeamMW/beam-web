@@ -9,27 +9,6 @@ const localePath = useLocalePath();
     <div
       class="grid-layout max-w-screen-xl mx-auto items-center py-4 px-3 md:px-4"
     >
-      <div class="justify-self-start md:hidden order-1 flex items-center">
-        <button
-          type="button"
-          class="w-6 h-6 text-sm text-beam-green rounded-lg focus:outline-none focus:ring-2 hover:bg-beam-green/20 focus:ring-beam-pink/50"
-        >
-          <svg
-            class="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-      </div>
-
       <div class="order-2 md:order-1">
         <NuxtLink
           :to="localePath('index')"
@@ -39,40 +18,54 @@ const localePath = useLocalePath();
         </NuxtLink>
       </div>
 
-      <div class="hidden md:block order-2 text-base text-white font-bold">
+      <div
+        class="justify-self-start order-1 md:justify-self-auto md:order-2 text-base text-white font-bold"
+      >
         <ul
-          class="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+          class="md:flex md:p-0 font-medium md:rounded-lg md:flex-row md:space-x-8 md:mt-0"
         >
-          <li>
+          <li class="hidden md:block">
             <HeaderNavigationItem name="index" :to="localePath('index')">{{
               $t("header.nav.home")
             }}</HeaderNavigationItem>
           </li>
-          <li>
+          <li class="hidden md:block">
             <HeaderNavigationItem
               name="downloads"
               :to="localePath('downloads')"
               >{{ $t("header.nav.downloads") }}</HeaderNavigationItem
             >
           </li>
+          <li>
+            <LayoutDropdown>
+              <template #dropdown-button>
+                <HeaderNavigationItem
+                  as="button"
+                  class="hidden md:inline-flex items-center"
+                >
+                  {{ $t("header.nav.resources") }}
+                  <Icon
+                    class="rotate-90 block ml-2 w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+                    name="layout/arrow-right"
+                  />
+                </HeaderNavigationItem>
 
-          <LayoutDropdown>
-            <template #dropdown-button>
-              <HeaderNavigationItem
-                as="button"
-                class="!flex !items-center !justify-between"
-              >
-                {{ $t("header.nav.resources") }}
-                <Icon
-                  class="hs-accordion-active:-rotate-90 rotate-90 block ml-2 w-3 h-3 text-white hs-accordion-active:text-beam-blue hs-accordion-active:opacity-100 group-hover:opacity-100 opacity-60 transition-opacity"
-                  name="layout/arrow-right"
-                />
-              </HeaderNavigationItem>
-            </template>
-            <template #dropdown-content>
-              <HeaderResources />
-            </template>
-          </LayoutDropdown>
+                <button
+                  type="button"
+                  class="flex items-center md:hidden p-1 h-9 w-9 text-sm text-white rounded-lg focus:outline-none focus:ring-2 hover:opacity-80 transition-opacity focus:ring-white"
+                >
+                  <Icon
+                    name="layout/menus"
+                    class="w-7 h-7 select-none"
+                    :as-image="true"
+                  />
+                </button>
+              </template>
+              <template #dropdown-content>
+                <HeaderResourcesDropdown />
+              </template>
+            </LayoutDropdown>
+          </li>
         </ul>
       </div>
 

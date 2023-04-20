@@ -1,6 +1,11 @@
 <template>
   <div class="dropdown-container">
-    <ul class="py-2 font-bold text-white text-sm" role="none">
+    <h6
+      class="md:hidden px-6 pt-6 pb-3 font-bold text-xs sm:text-base uppercase text-gray-200"
+    >
+      Select a language:
+    </h6>
+    <ul class="md:py-2 font-bold text-white text-sm" role="none">
       <li
         v-for="availableLocale in availableLocales"
         :key="availableLocale.code"
@@ -11,7 +16,7 @@
             switchLocalePath(availableLocale.code) ||
             localePath('index', availableLocale.code)
           "
-          class="hover:text-beam-blue transition-colors px-4 py-2.5 hover:bg-black/20 w-full inline-block"
+          class="hover:text-beam-blue transition-colors w-full py-5 px-6 md:px-4 md:py-2.5 hover:bg-black/20 inline-block"
           @click.prevent.stop="onLanguageClicked(availableLocale.code)"
         >
           <span class="flex items-center">
