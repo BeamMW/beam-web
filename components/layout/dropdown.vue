@@ -188,7 +188,7 @@ provide("toggleDropdown", toggleDropdown);
 .popper-container-snap-left {
   @apply h-screen fixed top-0 left-0;
   &:deep(.dropdown-container) {
-    @apply rounded-none !rounded-r-3xl !w-[45vw] shadow-beam-pink shadow-2xl;
+    @apply rounded-none !rounded-r-3xl !w-[49vw] sm:!w-[45vw] shadow-beam-pink shadow-2xl;
   }
   &:deep(.dropdown-container)::before {
     @apply shadow-beam-green shadow-2xl h-full w-full;
