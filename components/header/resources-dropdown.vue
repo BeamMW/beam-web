@@ -1,6 +1,6 @@
 <template>
   <section class="dropdown-container">
-    <div class="grid-container p-4 h-full overflow-y-scroll pb-[25vh]">
+    <div class="grid-container p-4 h-full overflow-y-scroll pb-[25vh] md:!pb-4">
       <div v-for="(menu, index) in menus" :key="index" class="grid-item">
         <h6
           class="pt-3 pb-3 md:pb-0 md:pt-0 md:px-0 font-bold text-xs sm:text-base uppercase text-gray-200"
