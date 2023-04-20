@@ -86,6 +86,7 @@ onUnmounted(() =>
             {{ $t("getstarted.steps.2.button") }}
           </LayoutButton>
         </FeaturesCard>
+        <div :class="`lg:grid-cols-1 h-full w-full${!isNextStep ? ' sm-grid-col-full' : ''}`">
         <FeaturesCard
           image="hero/rocket"
           :title="$t('getstarted.steps.3.title')"
@@ -94,6 +95,7 @@ onUnmounted(() =>
           accent-color="beam-pink"
           :wide-icon="true"
           :as-image="false"
+          class="bg-red"
         >
           <LayoutButton
             accent-color="beam-pink"
@@ -108,8 +110,18 @@ onUnmounted(() =>
             {{ $t("getstarted.steps.3.button") }}
           </LayoutButton>
         </FeaturesCard>
+        </div>
       </div>
       <FaqSection :is-next-step="isNextStep" />
     </div>
   </LayoutWrapper>
 </template>
+
+<style lang="postcss" scoped>
+
+@media (max-width: 1023px) {
+  .sm-grid-col-full {
+    grid-column: 1 / -1;
+  }
+}
+</style>
