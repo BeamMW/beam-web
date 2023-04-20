@@ -111,6 +111,7 @@ const handleClickOutside = (event: MouseEvent) => {
   if (
     referenceElement.value &&
     popperElement.value &&
+    showDropdown.value &&
     !referenceElement.value.contains(event.target as Node) &&
     !popperElement.value.contains(event.target as Node)
   ) {
