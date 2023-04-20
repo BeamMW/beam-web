@@ -163,15 +163,15 @@ provide("toggleDropdown", toggleDropdown);
 }
 
 @keyframes animate {
-	0% {
-		opacity:0;
-	}
-	50% {
-		opacity:1;
-	}
-	100% {
-		opacity:0;
-	}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .popper-container-snap-left {
@@ -182,7 +182,7 @@ provide("toggleDropdown", toggleDropdown);
   &:deep(.dropdown-container)::before {
     @apply shadow-beam-green shadow-2xl h-full w-full;
     animation: animate 15s linear infinite;
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     width: 100%;

@@ -3,7 +3,7 @@
     <h6
       class="md:hidden px-6 pt-6 pb-3 font-bold text-xs sm:text-base uppercase text-gray-200"
     >
-    {{ $t('header.selectlanguage') }}
+      {{ $t("header.selectlanguage") }}
     </h6>
     <ul class="md:py-2 font-bold text-white text-sm" role="none">
       <li
