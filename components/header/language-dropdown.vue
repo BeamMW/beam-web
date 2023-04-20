@@ -1,34 +1,31 @@
 <template>
-  >
-    <div class="rounded-lg">
-      <ul class="py-2 font-bold text-white text-sm" role="none">
-        <li
-          v-for="availableLocale in availableLocales"
-          :key="availableLocale.code"
-          class="w-full"
   <div class="dropdown-container">
+    <ul class="py-2 font-bold text-white text-sm" role="none">
+      <li
+        v-for="availableLocale in availableLocales"
+        :key="availableLocale.code"
+        class="w-full"
+      >
+        <NuxtLink
+          :to="
+            switchLocalePath(availableLocale.code) ||
+            localePath('index', availableLocale.code)
+          "
+          class="hover:text-beam-blue transition-colors px-4 py-2.5 hover:bg-black/20 w-full inline-block"
+          @click.prevent.stop="onLanguageClicked(availableLocale.code)"
         >
-          <NuxtLink
-            :to="
-              switchLocalePath(availableLocale.code) ||
-              localePath('index', availableLocale.code)
-            "
-            class="hover:text-beam-blue transition-colors px-4 py-2.5 hover:bg-black/20 w-full inline-block"
-            @click.prevent.stop="onLanguageClicked(availableLocale.code)"
-          >
-            <span class="flex items-center">
-              <IconFlag
-                class="w-5 h-5 mr-2"
-                :flag="availableLocale.code"
-                :as-image="true"
-                :lazy="true"
-              />
-              {{ availableLocale.name }}
-            </span>
-          </NuxtLink>
-        </li>
-      </ul>
-    </div>
+          <span class="flex items-center">
+            <IconFlag
+              class="w-5 h-5 mr-2"
+              :flag="availableLocale.code"
+              :as-image="true"
+              :lazy="true"
+            />
+            {{ availableLocale.name }}
+          </span>
+        </NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
 
