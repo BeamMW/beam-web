@@ -69,6 +69,11 @@ const fileVersion = 1;
   @apply origin-center scale-[.98];
 }
 
+/** Custom default dropdown container */
+.dropdown-container {
+  @apply will-change-transform z-50 text-white relative list-none bg-[rgba(4,37,72,1)] border-black border rounded-lg divide-y divide-gray-100 border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
+}
+
 @font-face {
   font-family: "ProximaNova";
   src: url("/fonts/ProximaNova-Regular.woff2") format("woff2"),
