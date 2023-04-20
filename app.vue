@@ -130,6 +130,7 @@ main {
   transition: opacity 225ms ease-in-out, filter 225ms ease-in-out;
 }
 main.locked {
-  @apply pointer-events-none select-none overflow-hidden h-screen blur-sm opacity-50;
+  @apply pointer-events-none select-none overflow-hidden h-screen blur-sm opacity-50 touch-none overscroll-none;
+  -webkit-overflow-scrolling: none;
 }
 </style>
