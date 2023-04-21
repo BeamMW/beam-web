@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="border-t border-black border-opacity-30 shadow-[0px_1px_0px_0px_rgba(255,255,255,.05)_inset] bg-page-radial-gradient"
+    class="border-t border-black border-opacity-30 shadow-[0px_1px_0px_0px_rgba(255,255,255,.05)_inset] transition-colors"
     v-bind="$attrs"
   >
     <ClientOnly>

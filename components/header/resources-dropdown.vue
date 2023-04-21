@@ -65,7 +65,7 @@ const menus = computed(() => [
   {
     title: t("footer.miners.title"),
     links: [
-      { text: t("footer.miners.startMining"), href: "https://beam.mw/mining" },
+      { text: t("footer.miners.startMining"), href: localePath("mining") },
       { text: t("footer.miners.support"), href: "https://t.me/BeamMiners" },
     ],
   },

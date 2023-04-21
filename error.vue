@@ -82,4 +82,10 @@ useSeoMeta({
   // ogImage: "https://example.com/image.png",
   // twitterCard: "summary_large_image",
 });
+
+useHead({
+  bodyAttrs: {
+    class: "bg-[#1C002E]",
+  },
+});
 </script>

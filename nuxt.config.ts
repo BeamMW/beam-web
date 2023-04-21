@@ -23,6 +23,12 @@ export default defineNuxtConfig({
         zh: "/隐私政策",
         jp: "/プライバシーポリシー",
       },
+      mining: {
+        en: "/mining",
+        fr: "/minage",
+        zh: "/挖矿",
+        jp: "/マイニング",
+      },
     },
     locales: [
       {

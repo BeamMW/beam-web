@@ -51,7 +51,7 @@ onUnmounted(() =>
         >
           <LayoutButton
             accent-color="beam-blue"
-            class="w-50"
+            class="w-full mt-5"
             :button-link="localePath('downloads')"
             :big="true"
           >
@@ -75,7 +75,7 @@ onUnmounted(() =>
         >
           <LayoutButton
             accent-color="beam-green"
-            class="w-50"
+            class="w-full mt-5"
             as="button"
             :big="true"
             @click="
@@ -107,7 +107,7 @@ onUnmounted(() =>
           >
             <LayoutButton
               accent-color="beam-pink"
-              class="w-50"
+              class="w-full mt-5"
               :button-link="localePath('dapps')"
               :big="true"
             >

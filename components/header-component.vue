@@ -3,7 +3,7 @@ const localePath = useLocalePath();
 </script>
 <template>
   <nav
-    class="sticky backdrop-blur-xl top-0 left-0 w-full z-20 border-white border-b border-opacity-5 shadow-[0px_1px_0px_0px_rgba(0,0,0,.5)]"
+    class="sticky backdrop-blur-xl top-0 left-0 w-full z-20 border-white border-b border-opacity-5 shadow-[0px_1px_0px_0px_rgba(0,0,0,.5)] transition-colors"
     v-bind="$attrs"
   >
     <div

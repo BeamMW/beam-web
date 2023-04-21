@@ -1,8 +1,28 @@
 <script lang="ts" setup>
+import { RouteRecordName } from "vue-router";
+
 const windowLocked = useState("windowLocked", () => false);
+const currentRoute = useState("currentRoute", () => "");
 
 useTitleTemplate();
 const fileVersion = 1;
+
+const router = useRoute();
+const getRouteName = (routeName?: RouteRecordName | null) =>
+  typeof routeName === "string" ? routeName.split("___")[0] : "";
+watch(
+  router,
+  (route) => {
+    currentRoute.value = getRouteName(route.name);
+  },
+  { deep: true, immediate: true }
+);
+
+useHead({
+  bodyAttrs: {
+    class: "bg-[#041D3C]",
+  },
+});
 </script>
 
 <template>
@@ -39,12 +59,14 @@ const fileVersion = 1;
       <NuxtLayout>
         <NuxtLoadingIndicator />
         <LanguageHandler>
-          <template #default="{ onBeforeEnter, onAfterEnter, languageChanged }">
+          <template
+            #default="{ /*onBeforeEnter, */ onAfterEnter, languageChanged }"
+          >
             <NuxtPage
               :transition="{
                 name: languageChanged ? '' : 'page',
                 mode: 'out-in',
-                onBeforeEnter,
+                //onBeforeEnter,
                 onAfterEnter,
               }"
             />
@@ -106,14 +128,18 @@ const fileVersion = 1;
   --beam-pink: #fe52ff;
   --beam-green: #39fff2;
   --beam-green-dark: #00e2c2;
+}
 
+html,
+body {
+  @apply transition-colors;
   /*
   * Prevent zoom / pinch on iOS that does not respect user-scale=no
   */
   touch-action: pan-x pan-y;
+
   @apply min-h-screen
       min-w-full
-      bg-[#042548]
       font-medium
       not-italic
       text-[#fff]
