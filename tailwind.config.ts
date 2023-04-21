@@ -74,7 +74,11 @@ const config = {
       },
       fontFamily: {
         // https://github.com/nuxt-modules/fontaine/issues/145
-        sans: ["ProximaNova", 'ProximaNova override', ...defaultTheme.fontFamily.sans],
+        sans: [
+          "ProximaNova",
+          "ProximaNova override",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       colors: {
         "beam-blue": "var(--beam-blue)", // #25C1FF

@@ -86,22 +86,29 @@ export enum ExternalLinksIcon {
 }
 
 /**
-* Preload: Instructs the browser to download and process high-priority resources early, improving load times.
-* Preconnect: Establishes network connections to remote servers ahead of time, reducing connection setup latency.
-* Prerender: Loads and renders an entire web page in the background, making it instantly available when needed.
-* Prefetch: Downloads and stores low-priority resources in advance, speeding up the loading of subsequent pages.
-*/
+ * Preload: Instructs the browser to download and process high-priority resources early, improving load times.
+ * Preconnect: Establishes network connections to remote servers ahead of time, reducing connection setup latency.
+ * Prerender: Loads and renders an entire web page in the background, making it instantly available when needed.
+ * Prefetch: Downloads and stores low-priority resources in advance, speeding up the loading of subsequent pages.
+ */
 export const preHtml = {
   preload: [
-    { href: '/fonts/ProximaNova-Regular.woff2', as: 'font', crossorigin: true },
-    { href: '/fonts/ProximaNova-RegularIt.woff2', as: 'font', crossorigin: true },
-    { href: '/fonts/ProximaNova-Bold.woff2', as: 'font', crossorigin: true },
+    { href: "/fonts/ProximaNova-Regular.woff2", as: "font", crossorigin: true },
+    {
+      href: "/fonts/ProximaNova-RegularIt.woff2",
+      as: "font",
+      crossorigin: true,
+    },
+    { href: "/fonts/ProximaNova-Bold.woff2", as: "font", crossorigin: true },
   ],
-  preconnect: ['https://documentation.beam.mw', 'https://builds.beam.mw'] as URLEntry[],
-  'dns-prefetch': extractOriginsFromEnum(ExternalLinks) as URLEntry[],
-  prerender: ['https://documentation.beam.mw'] as URLEntry[],
+  preconnect: [
+    "https://documentation.beam.mw",
+    "https://builds.beam.mw",
+  ] as URLEntry[],
+  "dns-prefetch": extractOriginsFromEnum(ExternalLinks) as URLEntry[],
+  prerender: ["https://documentation.beam.mw"] as URLEntry[],
   prefetch: [] as URLEntry[],
-}
+};
 
 export const PlatformDetails: Record<
   SupportedPlatforms,

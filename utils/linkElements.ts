@@ -1,6 +1,4 @@
-import {
-  preHtml,
-} from "@/app.config";
+import { preHtml } from "@/app.config";
 
 export interface LinkElement {
   rel: string;
@@ -9,19 +7,19 @@ export interface LinkElement {
   crossorigin?: boolean;
 }
 
-export type URLEntry = string | Omit<LinkElement, 'rel'>;
+export type URLEntry = string | Omit<LinkElement, "rel">;
 
 function isString(urlOrObject: URLEntry): urlOrObject is string {
-  return typeof urlOrObject === 'string';
+  return typeof urlOrObject === "string";
 }
 
 export const linkElements: LinkElement[] = [];
 
 for (const [relType, urls] of Object.entries(preHtml)) {
   urls.forEach((urlOrObject: URLEntry) => {
-      const linkElement: LinkElement = isString(urlOrObject)
+    const linkElement: LinkElement = isString(urlOrObject)
       ? { rel: relType, href: urlOrObject }
       : { ...urlOrObject, rel: relType };
-      linkElements.push(linkElement);
+    linkElements.push(linkElement);
   });
 }

@@ -147,8 +147,9 @@ defineRobotMeta();
   }
 }
 
-body, html {
-@apply transition-colors;
+body,
+html {
+  @apply transition-colors;
 }
 </style>
 
