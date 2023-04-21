@@ -35,7 +35,7 @@ defineProps({
     >
       {{ title }}
     </h3>
-    <div class="flex flex-col mt-auto gap-4 select-none pointer-events-none">
+    <div class="mt-auto gap-4 select-none pointer-events-none">
       <LayoutExternalLink>{{
         linkText != "" ? linkText : $t("feature.learnmore")
       }}</LayoutExternalLink>

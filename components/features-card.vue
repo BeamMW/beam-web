@@ -85,7 +85,7 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
       <h3 class="block text-lg font-semibold text-white mb-3">{{ title }}</h3>
       <p class="text-white text-opacity-80">{{ text }}</p>
     </div>
-    <div class="flex flex-col mt-auto gap-4 select-none">
+    <div class="mt-auto gap-4 select-none">
       <NuxtLink v-if="link" :to="link" target="_blank">
         <LayoutExternalLink>{{
           linkName ? linkName : $t("feature.learnmore")
