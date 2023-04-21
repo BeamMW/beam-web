@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   },
   sitemap: {
     discoverImages: false,
+    siteUrl: publicWebUrl,
   },
   i18n: {
     baseUrl: publicWebUrl,
