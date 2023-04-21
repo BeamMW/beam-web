@@ -1,4 +1,5 @@
 import { URLEntry } from "@/utils/linkElements";
+import { extractOriginsFromEnum } from "@/utils/extractOriginsFromEnum";
 
 type PlatformDownloadType = {
   store: string;
@@ -96,7 +97,8 @@ export const preHtml = {
     { href: '/fonts/ProximaNova-RegularIt.woff2', as: 'font', crossorigin: true },
     { href: '/fonts/ProximaNova-Bold.woff2', as: 'font', crossorigin: true },
   ],
-  preconnect: ['https://documentation.beam.mw', 'https://builds.beam.mw', 'https://t.me'] as URLEntry[],
+  preconnect: ['https://documentation.beam.mw', 'https://builds.beam.mw'] as URLEntry[],
+  'dns-prefetch': extractOriginsFromEnum(ExternalLinks) as URLEntry[],
   prerender: ['https://documentation.beam.mw'] as URLEntry[],
   prefetch: [] as URLEntry[],
 }
