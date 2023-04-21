@@ -18,6 +18,7 @@ module.exports = {
   ],
   plugins: ["@typescript-eslint", "prettier"],
   rules: {
+    "vue/no-v-for-template-key": "off",
     "vue/multi-word-component-names": "off",
   },
 };
