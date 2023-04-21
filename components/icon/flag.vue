@@ -6,9 +6,9 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  lazy: {
-    type: Boolean,
-    default: false,
+  loading: {
+    type: String,
+    required: true,
   },
 });
 
@@ -26,7 +26,7 @@ const iconName = computed(() => `flags/${props.flag}`);
       class-parent="w-full h-full"
       class="w-full h-full !scale-[1.2] select-none pointer-events-none"
       :as-image="true"
-      :lazy="lazy"
+      loading="eager"
     />
   </div>
 </template>

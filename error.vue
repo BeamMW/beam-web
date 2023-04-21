@@ -8,7 +8,7 @@
         <Icon
           name="misc/404"
           :as-image="true"
-          :lazy="true"
+          loading="lazy"
           class="w-64 h-64 mb-2 select-none pointer-events-none"
           alt="Beam Girl"
         />

@@ -38,7 +38,7 @@
               class="inline-block w-6 h-8 select-none pointer-events-none align-middle"
               name="layout/flat-beam-animated"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
             {{ $t("hero.downloadWallet") }}
           </LayoutButton>
@@ -54,7 +54,7 @@
               name="download/appstore"
               class="h-11 w-auto select-none pointer-events-none"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
           </NuxtLink>
           <NuxtLink
@@ -66,7 +66,7 @@
               name="download/googleplay"
               class="h-11 w-auto select-none pointer-events-none"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
           </NuxtLink>
           <NuxtLink
@@ -77,7 +77,7 @@
               name="download/googlechrome"
               class="h-11 w-auto select-none pointer-events-none"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
           </NuxtLink>
         </div>

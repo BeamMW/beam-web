@@ -9,7 +9,7 @@
           name="footer/qq"
           class="rounded-md w-[256px] h-[256px] select-none pointer-events-none"
           :as-image="true"
-          :lazy="true"
+          loading="lazy"
         />
         <p class="text-center text-lg font-bold">
           <LayoutCopyToClipboard :text="'909677190'">
@@ -26,7 +26,7 @@
               name="logo"
               class="w-10 h-10 select-none pointer-events-none"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
           </div>
           <p class="mt-3 text-xs text-white/80">{{ $t("footer.copyright") }}</p>
@@ -42,7 +42,7 @@
               name="logo"
               class="w-10 h-10 select-none pointer-events-none"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
           </div>
           <p class="mt-3 text-xs text-white/80">{{ $t("footer.copyright") }}</p>
@@ -60,6 +60,7 @@
               </NuxtLink>
               <a
                 class="capitalize inline-flex gap-x-2 transition-colors text-white/50 hover:text-white/90"
+                :title="t('footer.contact')"
                 :href="`mailto:${CONTACT_EMAIL}`"
               >
                 {{ $t("footer.contact") }}
@@ -88,7 +89,7 @@
                   :name="`socials/${typedExternalLinksIcon[icon]}`"
                   class="w-[18px] h-[18px] select-none pointer-events-none"
                   :as-image="true"
-                  :lazy="true"
+                  loading="lazy"
                 />
               </NuxtLink>
             </section>

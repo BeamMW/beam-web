@@ -11,7 +11,7 @@
         :image="feature.image"
         :title="$t(feature.title)"
         :text="$t(feature.text)"
-        :lazy="true"
+        loading="lazy"
       />
     </div>
   </LayoutWrapper>

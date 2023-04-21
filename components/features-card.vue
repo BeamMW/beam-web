@@ -47,9 +47,9 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  lazy: {
-    type: Boolean,
-    default: false,
+  loading: {
+    type: String,
+    required: true,
   },
   asImage: {
     type: Boolean,
@@ -73,7 +73,7 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
       } ${wideIcon ? 'w-12' : 'w-9'}`"
       :name="image"
       :as-image="asImage"
-      :lazy="lazy"
+      :loading="props.loading"
     />
     <p
       v-if="number"

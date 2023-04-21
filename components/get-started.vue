@@ -47,6 +47,7 @@ onUnmounted(() =>
           accent-color="beam-blue"
           :wide-icon="true"
           :as-image="false"
+          loading="eager"
         >
           <LayoutButton
             accent-color="beam-blue"
@@ -58,7 +59,7 @@ onUnmounted(() =>
               class="w-[18px] h-[18px] select-none pointer-events-none"
               name="layout/flat-beam-animated"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
             {{ $t("getstarted.steps.1.button") }}
           </LayoutButton>
@@ -69,6 +70,8 @@ onUnmounted(() =>
           :text="$t('getstarted.steps.2.description')"
           accent-color="beam-green"
           :wide-icon="true"
+          :as-image="true"
+          loading="lazy"
         >
           <LayoutButton
             accent-color="beam-green"
@@ -100,6 +103,7 @@ onUnmounted(() =>
             :wide-icon="true"
             :as-image="false"
             class="bg-red"
+            loading="eager"
           >
             <LayoutButton
               accent-color="beam-pink"

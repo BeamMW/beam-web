@@ -24,7 +24,7 @@ const currentLocale = computed(() => {
       :key="currentLocale.code"
       class="w-4 h-4"
       :flag="currentLocale.code"
-      :lazy="true"
+      loading="lazy"
     />
     {{ currentLocale.name }}
   </LayoutButton>

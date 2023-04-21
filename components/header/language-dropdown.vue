@@ -24,7 +24,7 @@
               class="w-5 h-5 mr-2"
               :flag="availableLocale.code"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
             {{ availableLocale.name }}
           </span>

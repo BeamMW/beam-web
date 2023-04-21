@@ -37,7 +37,7 @@
               :as-image="true"
               :name="`medias/${item.image}`"
               class="select-none pointer-events-none h-12 text-beam-blue w-fit"
-              :lazy="true"
+              loading="lazy"
             />
           </div>
         </NuxtLink>
