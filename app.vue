@@ -130,18 +130,13 @@ defineRobotMeta();
   --beam-pink: #fe52ff;
   --beam-green: #39fff2;
   --beam-green-dark: #00e2c2;
-}
 
-html,
-body {
-  @apply transition-colors;
   /*
   * Prevent zoom / pinch on iOS that does not respect user-scale=no
   */
   touch-action: pan-x pan-y;
 
   font-family: ProximaNova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
   @apply min-h-screen
       min-w-full
       font-medium
@@ -152,6 +147,10 @@ body {
   ::selection {
     @apply bg-[#39FFF2] text-[#042548];
   }
+}
+
+body, html {
+@apply transition-colors;
 }
 </style>
 
