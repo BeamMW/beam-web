@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "nuxt-simple-sitemap",
     "nuxt-simple-robots",
     "@nuxtjs/fontaine",
+    "@nuxt/content",
   ],
   runtimeConfig: {
     public: {
@@ -20,6 +21,16 @@ export default defineNuxtConfig({
   sitemap: {
     discoverImages: false,
     siteUrl: publicWebUrl,
+  },
+  fontMetrics: {
+    fonts: [
+      { family: "ProximaNova", src: "/fonts/ProximaNova-Regular.woff2" },
+      {
+        family: "ProximaNova-Italic",
+        src: "/fonts/ProximaNova-RegularIt.woff2",
+      },
+      { family: "ProximaNova-Bold", src: "/fonts/ProximaNova-Bold.woff2" },
+    ],
   },
   i18n: {
     baseUrl: publicWebUrl,

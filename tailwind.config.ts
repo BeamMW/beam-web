@@ -1,5 +1,11 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 
+function deduplicateArray<T>(array: T[]): T[] {
+  return array.filter((value, index) => {
+    return array.indexOf(value) === index;
+  });
+}
+
 const config = {
   safelist: [
     // Modal
@@ -74,11 +80,27 @@ const config = {
       },
       fontFamily: {
         // https://github.com/nuxt-modules/fontaine/issues/145
-        sans: [
+        sans: deduplicateArray([
           "ProximaNova",
+          "-apple-system",
+          "BlinkMacSystemFont",
           "ProximaNova override",
           ...defaultTheme.fontFamily.sans,
-        ],
+        ]),
+        bold: deduplicateArray([
+          "ProximaNova-Bold",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "ProximaNova-Bold override",
+          ...defaultTheme.fontFamily.sans,
+        ]),
+        italic: deduplicateArray([
+          "ProximaNova-Italic",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "ProximaNova-Italic override",
+          ...defaultTheme.fontFamily.sans,
+        ]),
       },
       colors: {
         "beam-blue": "var(--beam-blue)", // #25C1FF

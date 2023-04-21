@@ -105,7 +105,7 @@ defineRobotMeta();
 }
 
 @font-face {
-  font-family: "ProximaNova";
+  font-family: "ProximaNova-Italic";
   src: url("/fonts/ProximaNova-RegularIt.woff2") format("woff2"),
     url("/fonts/ProximaNova-RegularIt.woff") format("woff");
   font-weight: normal;
@@ -114,7 +114,7 @@ defineRobotMeta();
 }
 
 @font-face {
-  font-family: "ProximaNova";
+  font-family: "ProximaNova-Bold";
   src: url("/fonts/ProximaNova-Bold.woff2") format("woff2"),
     url("/fonts/ProximaNova-Bold.woff") format("woff");
   font-weight: bold;
