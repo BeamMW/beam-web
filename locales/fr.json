@@ -14,7 +14,8 @@
       "home": "Accueil",
       "downloads": "Téléchargements",
       "resources": "Ressources"
-    }
+    },
+    "selectlanguage": "Sélectionnez une langue :"
   },
   "hero": {
     "title": "Confidentialité sans compromis",
@@ -199,6 +200,12 @@
       "title": "Vous avez pénétré dans la salle des miroirs de Beam !",
       "message": "La page que vous cherchez se reflète dans toutes les directions et Beam Girl ne parvient pas à trouver la bonne.\nRevenez en arrière et retracez vos pas pour trouver le bon chemin."
     }
+  },
+  "mining": {
+    "title": "Minage Beam",
+    "introduction": "Semblable à de nombreuses cryptomonnaies, Beam dépend des mineurs pour ajouter des transactions à sa blockchain. Bien que tous les nœuds du réseau Beam confirment la validité des transactions, les mineurs jouent un rôle crucial dans la protection et la sécurisation du réseau. Beam utilise **Beam Hash III**, une version modifiée de l'**algorithme de minage preuve de travail Equihash (150,5)**, pour garantir la sécurité et la stabilité du réseau.",
+    "details": "Plongez dans le monde du minage Beam et découvrez comment contribuer à la sécurité et à la croissance du réseau avec notre guide étape par étape.",
+    "button": "Guide de minage Beam (en anglais)"
   },
   "footer": {
     "join": {

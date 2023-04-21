@@ -46,10 +46,12 @@ onUnmounted(() =>
           :button-link="localePath('downloads')"
           accent-color="beam-blue"
           :wide-icon="true"
+          :as-image="false"
+          loading="eager"
         >
           <LayoutButton
             accent-color="beam-blue"
-            class="w-50"
+            class="w-full mt-5"
             :button-link="localePath('downloads')"
             :big="true"
           >
@@ -57,7 +59,7 @@ onUnmounted(() =>
               class="w-[18px] h-[18px] select-none pointer-events-none"
               name="layout/flat-beam-animated"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
             {{ $t("getstarted.steps.1.button") }}
           </LayoutButton>
@@ -68,10 +70,12 @@ onUnmounted(() =>
           :text="$t('getstarted.steps.2.description')"
           accent-color="beam-green"
           :wide-icon="true"
+          :as-image="true"
+          loading="lazy"
         >
           <LayoutButton
             accent-color="beam-green"
-            class="w-50"
+            class="w-full mt-5"
             as="button"
             :big="true"
             @click="
@@ -85,29 +89,46 @@ onUnmounted(() =>
             {{ $t("getstarted.steps.2.button") }}
           </LayoutButton>
         </FeaturesCard>
-        <FeaturesCard
-          image="hero/rocket"
-          :title="$t('getstarted.steps.3.title')"
-          :text="$t('getstarted.steps.3.description')"
-          button-name="Explore Beam"
-          accent-color="beam-pink"
-          :wide-icon="true"
+        <div
+          :class="`lg:grid-cols-1 h-full w-full${
+            !isNextStep ? ' sm-grid-col-full' : ''
+          }`"
         >
-          <LayoutButton
+          <FeaturesCard
+            image="hero/rocket"
+            :title="$t('getstarted.steps.3.title')"
+            :text="$t('getstarted.steps.3.description')"
+            button-name="Explore Beam"
             accent-color="beam-pink"
-            class="w-50"
-            :button-link="localePath('dapps')"
-            :big="true"
+            :wide-icon="true"
+            :as-image="false"
+            class="bg-red"
+            loading="eager"
           >
-            <Icon
-              class="w-[18px] h-[18px] select-none pointer-events-none"
-              name="get-started/explore"
-            />
-            {{ $t("getstarted.steps.3.button") }}
-          </LayoutButton>
-        </FeaturesCard>
+            <LayoutButton
+              accent-color="beam-pink"
+              class="w-full mt-5"
+              :button-link="localePath('dapps')"
+              :big="true"
+            >
+              <Icon
+                class="w-[18px] h-[18px] select-none pointer-events-none"
+                name="get-started/explore"
+              />
+              {{ $t("getstarted.steps.3.button") }}
+            </LayoutButton>
+          </FeaturesCard>
+        </div>
       </div>
       <FaqSection :is-next-step="isNextStep" />
     </div>
   </LayoutWrapper>
 </template>
+
+<style lang="postcss" scoped>
+@media (max-width: 1023px) {
+  .sm-grid-col-full {
+    grid-column: 1 / -1;
+  }
+}
+</style>

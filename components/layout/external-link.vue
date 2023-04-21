@@ -1,6 +1,6 @@
 <template>
   <span
-    class="inline-flex items-center text-beam-blue hover:opacity-70 transition-opacity"
+    class="inline-flex items-center hover:opacity-70 transition-opacity text-inherit"
   >
     <span class="pr-1">
       <slot></slot>

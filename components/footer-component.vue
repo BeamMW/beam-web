@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="border-t border-black border-opacity-30 shadow-[0px_1px_0px_0px_rgba(255,255,255,.05)_inset] bg-page-radial-gradient"
+    class="border-t border-black border-opacity-30 shadow-[0px_1px_0px_0px_rgba(255,255,255,.05)_inset] transition-colors"
     v-bind="$attrs"
   >
     <ClientOnly>
@@ -9,7 +9,7 @@
           name="footer/qq"
           class="rounded-md w-[256px] h-[256px] select-none pointer-events-none"
           :as-image="true"
-          :lazy="true"
+          loading="lazy"
         />
         <p class="text-center text-lg font-bold">
           <LayoutCopyToClipboard :text="'909677190'">
@@ -26,7 +26,7 @@
               name="logo"
               class="w-10 h-10 select-none pointer-events-none"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
           </div>
           <p class="mt-3 text-xs text-white/80">{{ $t("footer.copyright") }}</p>
@@ -42,7 +42,7 @@
               name="logo"
               class="w-10 h-10 select-none pointer-events-none"
               :as-image="true"
-              :lazy="true"
+              loading="lazy"
             />
           </div>
           <p class="mt-3 text-xs text-white/80">{{ $t("footer.copyright") }}</p>
@@ -60,6 +60,7 @@
               </NuxtLink>
               <a
                 class="capitalize inline-flex gap-x-2 transition-colors text-white/50 hover:text-white/90"
+                :title="t('footer.contact')"
                 :href="`mailto:${CONTACT_EMAIL}`"
               >
                 {{ $t("footer.contact") }}
@@ -88,7 +89,7 @@
                   :name="`socials/${typedExternalLinksIcon[icon]}`"
                   class="w-[18px] h-[18px] select-none pointer-events-none"
                   :as-image="true"
-                  :lazy="true"
+                  loading="lazy"
                 />
               </NuxtLink>
             </section>
@@ -105,7 +106,7 @@ import {
   ExternalLinksIcon,
   ExternalLinksTitle,
   CONTACT_EMAIL,
-} from "../app.config";
+} from "@/app.config";
 
 // Make it async
 const Icon = defineAsyncComponent(() => import("./icon.vue"));
@@ -137,7 +138,7 @@ const menus = computed(() => [
       },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
-      { text: "Newsletter", href: "https://beamprivacy.substack.com/" },
+      { text: "Newsletter", href: ExternalLinks.SUBSTACK },
     ],
   },
   {
@@ -178,8 +179,8 @@ const menus = computed(() => [
   {
     title: t("footer.miners.title"),
     links: [
-      { text: t("footer.miners.startMining"), href: "lol" },
-      { text: t("footer.miners.support"), href: "lol" },
+      { text: t("footer.miners.startMining"), href: localePath("mining") },
+      { text: t("footer.miners.support"), href: "https://t.me/BeamMiners" },
     ],
   },
 ]);

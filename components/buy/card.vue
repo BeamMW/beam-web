@@ -28,7 +28,7 @@ defineProps({
             :name="`buy/${image}`"
             :as-image="true"
             :alt="title"
-            :lazy="true"
+            loading="lazy"
           />
           <div class="ml-3">
             <h3

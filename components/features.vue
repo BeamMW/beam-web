@@ -11,13 +11,13 @@
         :image="feature.image"
         :title="$t(feature.title)"
         :text="$t(feature.text)"
-        :lazy="true"
+        loading="lazy"
       />
     </div>
   </LayoutWrapper>
 </template>
 
-<script type="ts" setup>
+<script lang="ts" setup>
 const features = [
   {
     link: "https://documentation.beam.mw/#private-transactions",

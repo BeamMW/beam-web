@@ -1,9 +1,7 @@
 <template>
-  <slot
-    :on-before-enter="beforeEnter"
-    :on-after-enter="afterEnter"
-    :language-changed="languageChanged"
-  ></slot>
+  <div>
+    <slot :on-after-enter="afterEnter" :language-changed="languageChanged" />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -30,10 +28,7 @@ const onAfterEnter = () => {
   eventBus.emit(UserInteractionEvents.PAGE_TRANSITION_FINISHED, {});
 };
 
-const onBeforeEnter = async () => {};
-
-const beforeEnter = () => onBeforeEnter();
 const afterEnter = onAfterEnter;
 
-defineExpose({ beforeEnter, afterEnter, languageChanged });
+defineExpose({ afterEnter, languageChanged });
 </script>

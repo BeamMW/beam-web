@@ -5,34 +5,40 @@
       imageLoaded ? '!opacity-100' : ''
     }`"
   >
-    <img
-      v-if="clientSide"
-      :src="src"
-      :alt="alt"
-      :class="`${props.class} opacity-100 transition-opacity`"
-      v-bind="$attrs"
-      @load="onImageLoad"
-    />
+    <picture>
+      <source
+        v-if="webp"
+        :srcset="`${removeFileExtension(src)}.webp`"
+        type="image/webp"
+      />
+      <img
+        v-if="clientSide"
+        :src="src"
+        class="opacity-100 transition-opacity"
+        v-bind="$attrs"
+        @load="onImageLoad"
+      />
+    </picture>
   </div>
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   src: {
     type: String,
     required: true,
   },
-  alt: {
-    type: String,
+  webp: {
+    type: Boolean,
     required: false,
-    default: "",
-  },
-  class: {
-    type: String,
-    required: false,
-    default: "",
+    default: false,
   },
 });
+
+function removeFileExtension(filename: string) {
+  const lastDotIndex = filename.lastIndexOf(".");
+  return lastDotIndex === -1 ? filename : filename.slice(0, lastDotIndex);
+}
 
 const imageLoaded = ref(false);
 

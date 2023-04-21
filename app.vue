@@ -1,11 +1,37 @@
 <script lang="ts" setup>
-useTitleTemplate();
+import { RouteRecordName } from "vue-router";
+import { linkElements } from "@/utils/linkElements";
+
+const windowLocked = useState("windowLocked", () => false);
+const currentRoute = useState("currentRoute", () => "");
+
 const fileVersion = 1;
+
+const router = useRoute();
+const getRouteName = (routeName?: RouteRecordName | null) =>
+  typeof routeName === "string" ? routeName.split("___")[0] : "";
+watch(
+  router,
+  (route) => {
+    currentRoute.value = getRouteName(route.name);
+  },
+  { deep: true, immediate: true }
+);
+
+defineRobotMeta();
 </script>
 
 <template>
-  <main>
+  <main :class="windowLocked ? 'locked' : ''">
     <Head>
+      <Link
+        v-for="linkElement in linkElements"
+        :key="linkElement.href"
+        :rel="linkElement.rel"
+        :href="linkElement.href"
+        :as="linkElement.as"
+        :crossorigin="linkElement.crossorigin ? 'anonymous' : undefined"
+      />
       <Link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -30,26 +56,26 @@ const fileVersion = 1;
         content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
         name="viewport"
       />
-      <Meta name="msapplication-TileColor" content="#da532c" />
-      <Meta name="theme-color" content="#ffffff" />
+      <Meta name="msapplication-TileColor" content="#042548" />
+      <Meta name="theme-color" content="#042548" />
     </Head>
-    <div>
-      <NuxtLayout>
-        <NuxtLoadingIndicator />
-        <LanguageHandler>
-          <template #default="{ onBeforeEnter, onAfterEnter, languageChanged }">
-            <NuxtPage
-              :transition="{
-                name: languageChanged ? '' : 'page',
-                mode: 'out-in',
-                onBeforeEnter,
-                onAfterEnter,
-              }"
-            />
-          </template>
-        </LanguageHandler>
-      </NuxtLayout>
-    </div>
+    <NuxtLayout>
+      <NuxtLoadingIndicator />
+      <LanguageHandler>
+        <template
+          #default="{ /*onBeforeEnter, */ onAfterEnter, languageChanged }"
+        >
+          <NuxtPage
+            :transition="{
+              name: languageChanged ? '' : 'page',
+              mode: 'out-in',
+              //onBeforeEnter,
+              onAfterEnter,
+            }"
+          />
+        </template>
+      </LanguageHandler>
+    </NuxtLayout>
   </main>
 </template>
 
@@ -111,7 +137,6 @@ const fileVersion = 1;
   touch-action: pan-x pan-y;
   @apply min-h-screen
       min-w-full
-      bg-[#042548]
       font-medium
       not-italic
       text-[#fff]
@@ -120,5 +145,20 @@ const fileVersion = 1;
   ::selection {
     @apply bg-[#39FFF2] text-[#042548];
   }
+}
+
+body,
+html {
+  @apply transition-colors;
+}
+</style>
+
+<style lang="postcss" scoped>
+main {
+  transition: opacity 225ms ease-in-out, filter 225ms ease-in-out;
+}
+main.locked {
+  @apply pointer-events-none select-none overflow-hidden h-screen blur-sm opacity-50 touch-none overscroll-none;
+  -webkit-overflow-scrolling: none;
 }
 </style>

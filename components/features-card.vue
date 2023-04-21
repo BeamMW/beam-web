@@ -47,9 +47,13 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  lazy: {
+  loading: {
+    type: String,
+    required: true,
+  },
+  asImage: {
     type: Boolean,
-    default: false,
+    default: true,
   },
 });
 
@@ -64,12 +68,12 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
   >
     <Icon
       v-if="image"
-      :class="`select-none pointer-events-none h-fit text-${
+      :class="`select-none pointer-events-none h-auto text-${
         accentColor ? accentColor : 'current'
       } ${wideIcon ? 'w-12' : 'w-9'}`"
       :name="image"
-      :as-image="true"
-      :lazy="lazy"
+      :as-image="asImage"
+      :loading="props.loading"
     />
     <p
       v-if="number"
@@ -81,8 +85,8 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
       <h3 class="block text-lg font-semibold text-white mb-3">{{ title }}</h3>
       <p class="text-white text-opacity-80">{{ text }}</p>
     </div>
-    <div class="flex flex-col mt-auto gap-4 select-none">
-      <NuxtLink v-if="link" :to="link" target="_blank">
+    <div class="mt-auto gap-4 select-none">
+      <NuxtLink v-if="link" :to="link" target="_blank" class="text-beam-blue">
         <LayoutExternalLink>{{
           linkName ? linkName : $t("feature.learnmore")
         }}</LayoutExternalLink>

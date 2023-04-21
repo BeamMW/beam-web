@@ -1,36 +1,36 @@
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <span v-if="!asImage" :class="props.class" v-html="icon" />
+  <span v-if="!asImage && iconUrl" v-bind="$attrs" v-html="iconUrl" />
   <div
     v-else-if="iconUrl"
     :class="`opacity-0 transition duration-500 ${
-      imageLoaded ? '!opacity-100' : ''
+      imageLoaded || props.loading == 'eager' ? '!opacity-100' : ''
     } ${props.classParent}`"
   >
     <img
-      v-if="clientSide"
-      loading="lazy"
+      v-if="props.loading == 'lazy' && clientSide"
       :src="iconUrl"
-      :class="props.class"
-      :alt="alt"
+      loading="lazy"
+      v-bind="$attrs"
+      data-load-type="2"
       @load="onImageLoad"
     />
-    <img v-else loading="lazy" :src="iconUrl" :class="props.class" :alt="alt" />
+    <img
+      v-else-if="props.loading == 'eager'"
+      :src="iconUrl"
+      v-bind="$attrs"
+      data-load-type="3"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from "vue";
+import { ref, computed } from "vue";
 
 const props = defineProps({
   name: {
     type: String,
     required: true,
-  },
-  class: {
-    type: String,
-    required: false,
-    default: "",
   },
   classParent: {
     type: String,
@@ -42,20 +42,13 @@ const props = defineProps({
     required: false,
     default: false,
   },
-  lazy: {
-    type: Boolean,
-    required: false,
-    default: false,
-  },
-  alt: {
+  loading: {
     type: String,
     required: false,
-    default: "",
+    default: "eager",
   },
 });
 
-const icon = ref("");
-const lazy = ref(false);
 const imageLoaded = ref(false);
 
 function onImageLoad() {
@@ -106,46 +99,28 @@ const iconsImport = import.meta.glob("assets/svg/**/**.svg", {
 const getPathToSvg = (usePublicPath = false) =>
   `${!usePublicPath ? "/assets" : ""}/svg/${props.name}.svg`;
 
-const updateIcon = () => {
+const getRawIcon = () => {
   const rawIcon = iconsImport[getPathToSvg(false)];
-
   if (!rawIcon) {
     throw new Error(
       "Invalid SVG passed, check your component or make sure if it's lazy loaded it's in /public."
     );
   }
-
-  icon.value = rawIcon;
+  return rawIcon;
 };
 
-if (!props.lazy) {
-  // Call updateIcon initially to set the icon value
-  updateIcon();
-
-  // Use watch to update the icon when the name prop changes
-  watch(
-    () => props.name,
-    () => {
-      updateIcon();
-    }
-  );
-}
+const iconUrl = computed(() => {
+  if (!props.asImage) {
+    return getRawIcon();
+  } else if (props.loading === "lazy") {
+    return getPathToSvg(true);
+  } else {
+    return `data:image/svg+xml,${encodeSvg(getRawIcon())}`;
+  }
+});
 
 const clientSide = ref(false);
-
 onMounted(() => {
   clientSide.value = true;
-});
-
-watchEffect(() => {
-  lazy.value = props.lazy;
-});
-
-const iconUrl = computed(() => {
-  if (props.lazy) {
-    return getPathToSvg(true);
-  }
-
-  return `data:image/svg+xml,${encodeSvg(icon.value)}`;
 });
 </script>

@@ -1,5 +1,8 @@
-<script type="ts" setup>
+<script lang="ts" setup>
 const { t } = useI18n();
+
+const styles =
+  "bg-[#042248]/50 hover:bg-[#042248] focus:bg-[#042248] focus:ring-offset-[#042248] focus:ring-beam-blue/75 text-beam-blue";
 </script>
 <template>
   <LayoutWrapper :center="true">
@@ -7,28 +10,32 @@ const { t } = useI18n();
     <div
       class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-6 md:gap-10"
     >
-      <DownloadResourcesLink
+      <ResourcesLink
         :title="t('downloads.resources.wallet')"
-        image="desktop"
+        image="download/resources/desktop"
         link="https://beamx.gitbook.io/desktop-wallet-user-guide/"
         :link-text="t('downloads.resources.documentation')"
+        :class="styles"
       />
-      <DownloadResourcesLink
+      <ResourcesLink
         :title="t('downloads.resources.commandlinenode')"
-        image="console"
+        image="download/resources/console"
         link="https://beamx.gitbook.io/beam-node-user-guide/"
         :link-text="t('downloads.resources.documentation')"
+        :class="styles"
       />
-      <DownloadResourcesLink
+      <ResourcesLink
         :title="t('downloads.resources.commandlinewallet')"
-        image="console"
+        image="download/resources/console"
         link="https://beamx.gitbook.io/cli-guide/"
         :link-text="t('downloads.resources.documentation')"
+        :class="styles"
       />
-      <DownloadResourcesLink
+      <ResourcesLink
         :title="t('downloads.resources.changelog')"
-        image="changelog"
+        image="download/resources/changelog"
         link="#"
+        :class="styles"
       />
     </div>
   </LayoutWrapper>

@@ -31,6 +31,7 @@ const config = {
     "focus:ring-beam-blue",
     "focus:ring-beam-green",
     "focus:ring-beam-green-dark",
+    "focus:ring-beam-green/75",
     "focus:ring-beam-purple",
     "focus:ring-beam-pink",
     {
@@ -68,9 +69,16 @@ const config = {
           "radial-gradient(ellipse at top, #072B51, #041D3C, #041D3C)",
         "page-radial-gradient-purple":
           "radial-gradient(ellipse at top, #360061, #1C002E, #1C002E)",
+        "page-radial-gradient-dark-green":
+          "radial-gradient(ellipse at top, #00331A, #00150B, #00150B)",
       },
       fontFamily: {
-        sans: ["ProximaNova", ...defaultTheme.fontFamily.sans],
+        // https://github.com/nuxt-modules/fontaine/issues/145
+        sans: [
+          "ProximaNova",
+          "ProximaNova override",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       colors: {
         "beam-blue": "var(--beam-blue)", // #25C1FF

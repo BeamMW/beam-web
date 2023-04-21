@@ -37,7 +37,7 @@
               :as-image="true"
               :name="`medias/${item.image}`"
               class="select-none pointer-events-none h-12 text-beam-blue w-fit"
-              :lazy="true"
+              loading="lazy"
             />
           </div>
         </NuxtLink>
@@ -46,11 +46,12 @@
   </div>
 </template>
 
-<script type="ts" setup>
+<script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { Navigation, Autoplay } from 'swiper/core';
+import SwiperCore, { Navigation, Autoplay } from "swiper/core";
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import { pressArticles } from '@/app.config'
+import { pressArticles } from "@/app.config";
+import { throttle } from "~/utils/throttle";
 
 SwiperCore.use([Navigation, Autoplay]);
 
@@ -71,18 +72,6 @@ const calculateSlidesToShow = () => {
   }
   return 1;
 };
-
-function throttle(func, delay) {
-  let timeout = null;
-  return function(...args) {
-    if (!timeout) {
-      timeout = setTimeout(() => {
-        func.apply(this, args);
-        timeout = null;
-      }, delay);
-    }
-  };
-}
 
 const updateSlidesToShow = throttle(() => {
   slidesToShow.value = calculateSlidesToShow();

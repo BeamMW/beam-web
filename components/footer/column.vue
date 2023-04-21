@@ -9,7 +9,7 @@ defineProps({
       Array<{
         text: string;
         href: string;
-        onClick?: Function;
+        onClick?: () => void;
         highlight?: string;
       }>
     >,
@@ -17,7 +17,7 @@ defineProps({
   },
 });
 
-const handleClick = (onClick: Function, e: MouseEvent) => {
+const handleClick = (onClick: () => void, e: MouseEvent) => {
   if (onClick) {
     e.preventDefault();
     onClick();

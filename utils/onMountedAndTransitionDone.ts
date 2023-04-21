@@ -1,4 +1,6 @@
-export const onMountedAndTransitionDone = (callback: Function) =>
+import { eventBus } from "~/utils/emitter";
+
+export const onMountedAndTransitionDone = (callback: () => void) =>
   onMounted(() => {
     const handlePageTransitionFinished = () => {
       callback();
