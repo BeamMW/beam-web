@@ -133,6 +133,8 @@ body {
   */
   touch-action: pan-x pan-y;
 
+  font-family: ProximaNova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
   @apply min-h-screen
       min-w-full
       font-medium

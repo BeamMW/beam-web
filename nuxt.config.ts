@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     "nuxt-simple-sitemap",
     "nuxt-simple-robots",
+    '@nuxtjs/fontaine'
   ],
   runtimeConfig: {
     public: {

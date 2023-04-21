@@ -72,9 +72,9 @@ const config = {
         "page-radial-gradient-dark-green":
           "radial-gradient(ellipse at top, #00331A, #00150B, #00150B)",
       },
-      fontFamily: {
+      /*fontFamily: {
         sans: ["ProximaNova", ...defaultTheme.fontFamily.sans],
-      },
+      },*/
       colors: {
         "beam-blue": "var(--beam-blue)", // #25C1FF
         "beam-blue-dark": "var(--beam-blue-dark)", // #0B76FF
