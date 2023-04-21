@@ -1,0 +1,3 @@
+[submodule "content/desktop"]
+	path = content/desktop
+	url = https://github.com/BeamMW/docs-desktop.git
