@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { RouteRecordName } from "vue-router";
+import { linkElements } from "@/utils/linkElements";
 
 const windowLocked = useState("windowLocked", () => false);
 const currentRoute = useState("currentRoute", () => "");
@@ -23,6 +24,14 @@ defineRobotMeta();
 <template>
   <main :class="windowLocked ? 'locked' : ''">
     <Head>
+      <Link
+        v-for="linkElement in linkElements"
+        :key="linkElement.href"
+        :rel="linkElement.rel"
+        :href="linkElement.href"
+        :as="linkElement.as"
+        :crossorigin="linkElement.crossorigin ? 'anonymous' : undefined"
+      />
       <Link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -50,25 +59,23 @@ defineRobotMeta();
       <Meta name="msapplication-TileColor" content="#042548" />
       <Meta name="theme-color" content="#042548" />
     </Head>
-    <div>
-      <NuxtLayout>
-        <NuxtLoadingIndicator />
-        <LanguageHandler>
-          <template
-            #default="{ /*onBeforeEnter, */ onAfterEnter, languageChanged }"
-          >
-            <NuxtPage
-              :transition="{
-                name: languageChanged ? '' : 'page',
-                mode: 'out-in',
-                //onBeforeEnter,
-                onAfterEnter,
-              }"
-            />
-          </template>
-        </LanguageHandler>
-      </NuxtLayout>
-    </div>
+    <NuxtLayout>
+      <NuxtLoadingIndicator />
+      <LanguageHandler>
+        <template
+          #default="{ /*onBeforeEnter, */ onAfterEnter, languageChanged }"
+        >
+          <NuxtPage
+            :transition="{
+              name: languageChanged ? '' : 'page',
+              mode: 'out-in',
+              //onBeforeEnter,
+              onAfterEnter,
+            }"
+          />
+        </template>
+      </LanguageHandler>
+    </NuxtLayout>
   </main>
 </template>
 
