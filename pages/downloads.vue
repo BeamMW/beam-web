@@ -4,15 +4,16 @@ import { EnvironmentType, currentEnvironment } from "~/app.config";
 const { t } = useI18n();
 
 const title = computed(() => t("head.title.downloads"));
-const description = computed(() => t("head.description"));
+const description = computed(
+  () =>
+    "Download the Beam wallet for various devices, acquire BEAM, explore private DeFi transactions, and access FAQs and resources."
+);
 
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
-  // ogImage: "https://example.com/image.png",
-  // twitterCard: "summary_large_image",
 });
 </script>
 

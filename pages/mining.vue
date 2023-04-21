@@ -2,15 +2,16 @@
 const { t } = useI18n();
 
 const title = computed(() => t("mining.title"));
-const description = computed(() => t("head.description"));
+const description = computed(
+  () =>
+    "Explore Beam mining, learn about the Beam Hash III algorithm, and find resources for mining software, rewards calculator, and support."
+);
 
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
-  // ogImage: "https://example.com/image.png",
-  // twitterCard: "summary_large_image",
 });
 
 useHead({
@@ -38,7 +39,7 @@ useHead({
       </div>
 
       <h2 class="text-xl text-white/90 pt-6">
-        <MarkdownRenderer tKey="mining.introduction" />
+        <MarkdownRenderer t-key="mining.introduction" />
       </h2>
 
       <p class="my-5 text-lg text-white/90">
@@ -86,6 +87,20 @@ useHead({
           </div>
         </div>
       </div>
+
+      <LayoutButton
+        button-link="https://beamx.gitbook.io/beam-mining/"
+        :big="true"
+        accent-color="beam-green-dark"
+      >
+        <Icon
+          name="get-started/beam-currency"
+          :as-image="true"
+          loading="lazy"
+          class="h-7 w-auto"
+        />
+        Download Wallet and Node
+      </LayoutButton>
 
       <Icon
         name="mining/amd"

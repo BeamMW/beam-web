@@ -4,7 +4,6 @@ import { RouteRecordName } from "vue-router";
 const windowLocked = useState("windowLocked", () => false);
 const currentRoute = useState("currentRoute", () => "");
 
-useTitleTemplate();
 const fileVersion = 1;
 
 const router = useRoute();
@@ -18,11 +17,7 @@ watch(
   { deep: true, immediate: true }
 );
 
-useHead({
-  bodyAttrs: {
-    class: "bg-[#041D3C]",
-  },
-});
+defineRobotMeta();
 </script>
 
 <template>

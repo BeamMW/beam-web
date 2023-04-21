@@ -1,8 +1,26 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const publicWebUrl = process.env.PUBLIC_WEB_URL || "https://beam.mw";
+
 export default defineNuxtConfig({
   ssr: true,
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "@nuxtjs/device"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/i18n",
+    "@nuxtjs/device",
+    "nuxt-simple-sitemap",
+    "nuxt-simple-robots",
+  ],
+  runtimeConfig: {
+    public: {
+      // Can be set with environment variables
+      siteUrl: publicWebUrl,
+    },
+  },
+  sitemap: {
+    discoverImages: false,
+  },
   i18n: {
+    baseUrl: publicWebUrl,
     skipSettingLocaleOnNavigate: false,
     defaultLocale: "en",
     lazy: true,
@@ -33,22 +51,26 @@ export default defineNuxtConfig({
     locales: [
       {
         code: "en",
+        iso: "en-US",
         name: "English",
         file: "en.json",
       },
       {
         code: "fr",
         name: "Français",
+        iso: "fr-FR",
         file: "fr.json",
       },
       {
         code: "zh",
         name: "中文（繁體）",
+        iso: "zh-CN",
         file: "zh.json",
       },
       {
         code: "jp",
         name: "日本語",
+        iso: "ja-JP",
         file: "jp.json",
       },
     ],

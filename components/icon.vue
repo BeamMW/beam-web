@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <span v-if="!asImage && iconUrl" v-bind="$attrs" v-html="iconUrl" data-load-type="1" />
+  <span v-if="!asImage && iconUrl" v-bind="$attrs" v-html="iconUrl" />
   <div
     v-else-if="iconUrl"
     :class="`opacity-0 transition duration-500 ${
@@ -11,16 +11,21 @@
       v-if="props.loading == 'lazy' && clientSide"
       :src="iconUrl"
       loading="lazy"
-      @load="onImageLoad"
       v-bind="$attrs"
       data-load-type="2"
+      @load="onImageLoad"
     />
-    <img v-else-if="props.loading == 'eager'" :src="iconUrl" v-bind="$attrs" data-load-type="3" />
+    <img
+      v-else-if="props.loading == 'eager'"
+      :src="iconUrl"
+      v-bind="$attrs"
+      data-load-type="3"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from "vue";
+import { ref, computed } from "vue";
 
 const props = defineProps({
   name: {
@@ -94,35 +99,20 @@ const iconsImport = import.meta.glob("assets/svg/**/**.svg", {
 const getPathToSvg = (usePublicPath = false) =>
   `${!usePublicPath ? "/assets" : ""}/svg/${props.name}.svg`;
 
-// If we want to load immediately
-/*if (props.loading == 'eager') {
-  // Call updateIcon initially to set the icon value
-  updateIcon();
-
-  // Use watch to update the icon when the name prop changes
-  watch(
-    () => props.name,
-    () => {
-      updateIcon();
-    }
-  );
-}*/
-
 const getRawIcon = () => {
   const rawIcon = iconsImport[getPathToSvg(false)];
   if (!rawIcon) {
-    console.log(getPathToSvg(false))
     throw new Error(
       "Invalid SVG passed, check your component or make sure if it's lazy loaded it's in /public."
     );
   }
-  return rawIcon
-}
+  return rawIcon;
+};
 
 const iconUrl = computed(() => {
   if (!props.asImage) {
     return getRawIcon();
-  } else if (props.loading == 'lazy') {
+  } else if (props.loading === "lazy") {
     return getPathToSvg(true);
   } else {
     return `data:image/svg+xml,${encodeSvg(getRawIcon())}`;
