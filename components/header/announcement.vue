@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+// todo: find replacement for height animation because it's slower than potential alternatives
 import { useI18n } from "vue-i18n";
 import { nextTick } from "vue";
 import { throttle } from "~/utils/throttle";
