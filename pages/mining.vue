@@ -15,7 +15,7 @@ useSeoMeta({
 
 useHead({
   bodyAttrs: {
-    class: "bg-[#00150B]",
+    class: "!bg-[#00150B]",
   },
 });
 </script>
