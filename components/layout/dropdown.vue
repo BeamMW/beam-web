@@ -48,6 +48,7 @@ const toggleDropdown = () => {
 
 const closeDropdown = () => {
   showDropdown.value = false;
+  windowLocked.value = false;
 };
 
 function destroyPopper() {
@@ -119,7 +120,7 @@ watch([showDropdown, referenceElement], async () => {
   }
 });
 
-const handleClickOutside = (event: MouseEvent) => {
+const handleClick = (event: MouseEvent) => {
   if (
     referenceElement.value &&
     popperElement.value &&
@@ -130,7 +131,17 @@ const handleClickOutside = (event: MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
     closeDropdown();
-    windowLocked.value = false;
+  } else if (popperElement.value && popperElement.value.contains(event.target as Node)) {
+    // close dropdown automatically if we click on an internal link inside
+    const targetElement = event.target as HTMLElement;
+    if (targetElement.nodeName === 'A') {
+      const hrefAttribute = targetElement.getAttribute('href')
+      if (hrefAttribute &&
+        (hrefAttribute.startsWith('/') || hrefAttribute.startsWith('#'))
+      ) {
+        closeDropdown();
+      }
+    }
   }
 };
 
@@ -146,7 +157,7 @@ onMounted(() => {
   }
 
   // Handle click outside
-  document.addEventListener("click", handleClickOutside);
+  document.addEventListener("click", handleClick);
 
   // Handle window resize
   window.addEventListener("resize", updatePlacement);
