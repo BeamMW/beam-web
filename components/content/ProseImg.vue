@@ -1,0 +1,51 @@
+<template>
+  <img
+    :src="refinedSrc"
+    :alt="alt"
+    :width="width"
+    :height="height"
+    loading="lazy"
+    class="h-auto w-auto select-none"
+  />
+</template>
+
+<script setup lang="ts">
+import { withBase } from "ufo";
+import { useRuntimeConfig, computed } from "#imports";
+
+function removeGitbook(path: string): string {
+  const searchString = ".gitbook/assets/";
+  const replaceString = "/assets/docs/desktop/"; // todo: handle with router path name
+
+  if (path.startsWith(searchString)) {
+    return path.replace(searchString, replaceString);
+  }
+
+  return path;
+}
+
+const props = defineProps({
+  src: {
+    type: String,
+    default: "",
+  },
+  alt: {
+    type: String,
+    default: "",
+  },
+  width: {
+    type: [String, Number],
+    default: undefined,
+  },
+  height: {
+    type: [String, Number],
+    default: undefined,
+  },
+});
+const refinedSrc = computed(() => {
+  if (props.src?.startsWith("/") && !props.src.startsWith("//")) {
+    return withBase(removeGitbook(props.src), useRuntimeConfig().app.baseURL);
+  }
+  return removeGitbook(props.src);
+});
+</script>

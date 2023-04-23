@@ -7,6 +7,7 @@ function deduplicateArray<T>(array: T[]): T[] {
 }
 
 const config = {
+  plugins: [require("@tailwindcss/typography")],
   safelist: [
     // Modal
     "transition-opacity",

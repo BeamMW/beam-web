@@ -13,7 +13,7 @@ const styles =
       <ResourcesLink
         :title="t('downloads.resources.wallet')"
         image="download/resources/desktop"
-        link="https://beamx.gitbook.io/desktop-wallet-user-guide/"
+        link="/docs/desktop"
         :link-text="t('downloads.resources.documentation')"
         :class="styles"
       />

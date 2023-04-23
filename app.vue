@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { RouteRecordName } from "vue-router";
 import { linkElements } from "@/utils/linkElements";
 
 const windowLocked = useState("windowLocked", () => false);
@@ -8,8 +7,7 @@ const currentRoute = useState("currentRoute", () => "");
 const fileVersion = 1;
 
 const router = useRoute();
-const getRouteName = (routeName?: RouteRecordName | null) =>
-  typeof routeName === "string" ? routeName.split("___")[0] : "";
+
 watch(
   router,
   (route) => {
@@ -65,7 +63,8 @@ defineRobotMeta();
         >
           <NuxtPage
             :transition="{
-              name: languageChanged ? '' : 'page',
+              name:
+                languageChanged || currentRoute == 'docs-slug' ? '' : 'page',
               mode: 'out-in',
               //onBeforeEnter,
               onAfterEnter,

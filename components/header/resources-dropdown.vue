@@ -27,11 +27,6 @@ import { ExternalLinks } from "@/app.config";
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-// todo: make a util for this
-const getLinkTarget = (href: string) => {
-  return href.startsWith("/") || href.startsWith("#") ? "_self" : "_blank";
-};
-
 const menus = computed(() => [
   {
     title: t("footer.join.title"),

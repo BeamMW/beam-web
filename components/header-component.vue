@@ -36,6 +36,11 @@ const localePath = useLocalePath();
               >{{ $t("header.nav.downloads") }}</HeaderNavigationItem
             >
           </li>
+          <li class="hidden md:block">
+            <HeaderNavigationItem name="docs|docs/.*" :to="localePath('docs')"
+              >Documentation</HeaderNavigationItem
+            >
+          </li>
           <li>
             <LayoutDropdown>
               <template #dropdown-button>
