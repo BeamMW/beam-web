@@ -32,7 +32,7 @@ defineProps({
           />
           <div class="ml-3">
             <h3
-              class="font-semibold text-white opacity-90 group-hover:opacity-100 group-hover:text-beam-blue transition"
+              class="font-bold text-white opacity-90 group-hover:opacity-100 group-hover:text-beam-blue transition"
             >
               {{ title }}
             </h3>

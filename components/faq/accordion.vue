@@ -3,7 +3,7 @@
     <div v-for="(item, index) in items" :key="index">
       <button
         :class="buttonClasses(index)"
-        class="hs-accordion-toggle select-none group inline-flex items-center justify-between w-full md:text-lg font-semibold text-left transition"
+        class="hs-accordion-toggle select-none group inline-flex items-center justify-between w-full md:text-lg font-bold text-left transition"
         @click="toggle(index)"
       >
         {{ $t(item.title) }}

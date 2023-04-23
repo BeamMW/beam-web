@@ -28,7 +28,7 @@
           @click.stop
         >
           <div class="flex items-start justify-between">
-            <h6 class="text-xl md:text-2xl font-semibold text-white/90">
+            <h6 class="text-xl md:text-2xl font-bold text-white/90">
               {{ title }}
             </h6>
             <button

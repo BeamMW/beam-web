@@ -13,10 +13,10 @@
           alt="Beam Girl"
         />
       </div>
-      <h1 class="text-base font-semibold text-white">
+      <h1 class="text-base font-bold text-white">
         {{ title }}
       </h1>
-      <h2 class="text-4xl font-semibold text-white !m-0">
+      <h2 class="text-4xl font-bold text-white !m-0">
         {{ $t("errors.404.title") }}
       </h2>
       <p class="text-white text-lg">
