@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
+    "build:netlify": "yarn build && yarn generate",
     "generate": "yarn lintfix && nuxi generate",
     "preview": "yarn lintfix && nuxi preview",
     "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
