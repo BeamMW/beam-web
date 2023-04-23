@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const { t } = useI18n();
 
+const localePath = useLocalePath();
+
 const title = computed(() => t("mining.title"));
 const description = computed(
   () =>
@@ -19,6 +21,51 @@ useHead({
     class: "!bg-[#00150B]",
   },
 });
+
+const gpuTypes = ref([
+  {
+    type: 'AMD',
+    miningSoftware: [
+      {
+        name: 'lolMiner',
+        link: 'https://github.com/Lolliedieb/lolMiner-releases/releases',
+      },
+      {
+        name: 'Gminer',
+        link: 'https://github.com/develsoftware/GMinerRelease/releases',
+      },
+      {
+        name: 'OpenCL',
+        link: 'https://github.com/BeamMW/opencl-miner/releases/tag/opencl-miner_1.0.82',
+      },
+    ],
+  },
+  {
+    type: 'NVIDIA',
+    miningSoftware: [
+      {
+        name: 'lolMiner',
+        link: 'https://github.com/Lolliedieb/lolMiner-releases/releases',
+      },
+      {
+        name: 'Gminer',
+        link: 'https://github.com/develsoftware/GMinerRelease/releases',
+      },
+      {
+        name: 'miniZ',
+        link: 'https://miniz.ch/download/',
+      },
+      {
+        name: 'Bminer',
+        link: 'https://www.bminer.me/releases/',
+      },
+      {
+        name: 'OpenCL',
+        link: 'https://github.com/BeamMW/opencl-miner/releases/tag/opencl-miner_1.0.82',
+      },
+    ],
+  },
+]);
 </script>
 <template>
   <div class="bg-page-radial-gradient-dark-green">
@@ -65,49 +112,56 @@ useHead({
 
     <LayoutWrapper :center="true" class="pt-10 lg:pt-12">
       <LayoutTitle title="Mining softwares" />
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="col-span-1">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
-            <div class="col-span-1 bg-green-500 p-4">
-              Inner Grid 1 - Column 1
-            </div>
-            <div class="col-span-1 bg-green-500 p-4">
-              Inner Grid 1 - Column 2
-            </div>
-          </div>
+
+        <div class="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div
+      class="col-span-1"
+      v-for="(gpuType, index) in gpuTypes"
+      :key="index"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+        <div class="col-span-1 p-4 justify-self-center">
+          <Icon
+            :name="`mining/${gpuType.type.toLowerCase()}`"
+            :as-image="true"
+            loading="lazy"
+            :alt="gpuType.type.toLowerCase()"
+            class="h-7 w-auto opacity-90 select-none pointer-events-none"
+          />
         </div>
-        <div class="col-span-1">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
-            <div class="col-span-1 bg-blue-500 p-4">
-              Inner Grid 2 - Column 1
-            </div>
-            <div class="col-span-1 bg-blue-500 p-4">
-              Inner Grid 2 - Column 2
-            </div>
-          </div>
+        <div class="col-span-1 p-4 justify-self-center">
+          <NuxtLink
+            v-for="(software, softwareIndex) in gpuType.miningSoftware"
+            :key="softwareIndex"
+            :to="software.link"
+            target="_blank"
+            class="block text-lg opacity-80 hover:opacity-100 transition-opacity"
+          >
+            {{ software.name }}
+          </NuxtLink>
         </div>
       </div>
+    </div>
+  </div>
 
+
+      <div>
       <LayoutButton
-        button-link="https://beamx.gitbook.io/beam-mining/"
-        :big="true"
-        accent-color="beam-green-dark"
-      >
-        <Icon
-          name="get-started/beam-currency"
-          :as-image="true"
-          loading="lazy"
-          class="h-7 w-auto"
-        />
-        Download Wallet and Node
-      </LayoutButton>
+            accent-color="beam-green-dark"
+            class="mt-5 w-fit mx-auto"
+            :button-link="localePath('downloads')"
+            :big="true"
+          >
+            <Icon
+              class="w-[18px] h-[18px] select-none pointer-events-none"
+              name="layout/flat-beam-animated"
+              :as-image="true"
+              loading="lazy"
+            />
+            Download Wallet and Node
+          </LayoutButton>
+      </div>
 
-      <Icon
-        name="mining/amd"
-        :as-image="true"
-        loading="lazy"
-        class="h-7 w-auto"
-      />
     </LayoutWrapper>
 
     <MiningResources class="py-10 lg:py-12" />
