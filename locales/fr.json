@@ -20,7 +20,7 @@
   "hero": {
     "title": "Confidentialité sans compromis",
     "subtitle": "Beam est la première blockchain de confidentialité Mimblewimble L1, dissimulant complètement les transactions. Téléchargez le portefeuille Beam pour l'expérience DeFi confidentielle ultime.",
-    "downloadWallet": "Télécharger le portefeuille"
+    "downloadWallet": "Télécharger le portefeuille",
   },
   "feature": {
     "title": "Fonctionnalités",
@@ -205,7 +205,9 @@
     "title": "Minage Beam",
     "introduction": "Semblable à de nombreuses cryptomonnaies, Beam dépend des mineurs pour ajouter des transactions à sa blockchain. Bien que tous les nœuds du réseau Beam confirment la validité des transactions, les mineurs jouent un rôle crucial dans la protection et la sécurisation du réseau. Beam utilise **Beam Hash III**, une version modifiée de l'**algorithme de minage preuve de travail Equihash (150,5)**, pour garantir la sécurité et la stabilité du réseau.",
     "details": "Plongez dans le monde du minage Beam et découvrez comment contribuer à la sécurité et à la croissance du réseau avec notre guide étape par étape.",
-    "button": "Guide de minage Beam (en anglais)"
+    "button": "Guide de minage Beam (en anglais)",
+    "miningSoftware": "Logiciel de minage",
+    "downloadWalletAndNode": "Télécharger le portefeuille et le nœud"
   },
   "footer": {
     "join": {

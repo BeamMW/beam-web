@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-const { t } = useI18n();
+import { miningSoftware } from "@/app.config";
 
+const { t } = useI18n();
 const localePath = useLocalePath();
 
 const title = computed(() => t("mining.title"));
@@ -21,51 +22,6 @@ useHead({
     class: "!bg-[#00150B]",
   },
 });
-
-const gpuTypes = ref([
-  {
-    type: 'AMD',
-    miningSoftware: [
-      {
-        name: 'lolMiner',
-        link: 'https://github.com/Lolliedieb/lolMiner-releases/releases',
-      },
-      {
-        name: 'Gminer',
-        link: 'https://github.com/develsoftware/GMinerRelease/releases',
-      },
-      {
-        name: 'OpenCL',
-        link: 'https://github.com/BeamMW/opencl-miner/releases/tag/opencl-miner_1.0.82',
-      },
-    ],
-  },
-  {
-    type: 'NVIDIA',
-    miningSoftware: [
-      {
-        name: 'lolMiner',
-        link: 'https://github.com/Lolliedieb/lolMiner-releases/releases',
-      },
-      {
-        name: 'Gminer',
-        link: 'https://github.com/develsoftware/GMinerRelease/releases',
-      },
-      {
-        name: 'miniZ',
-        link: 'https://miniz.ch/download/',
-      },
-      {
-        name: 'Bminer',
-        link: 'https://www.bminer.me/releases/',
-      },
-      {
-        name: 'OpenCL',
-        link: 'https://github.com/BeamMW/opencl-miner/releases/tag/opencl-miner_1.0.82',
-      },
-    ],
-  },
-]);
 </script>
 <template>
   <div class="bg-page-radial-gradient-dark-green">
@@ -111,12 +67,12 @@ const gpuTypes = ref([
     </div>
 
     <LayoutWrapper :center="true" class="pt-10 lg:pt-12">
-      <LayoutTitle title="Mining softwares" />
+      <LayoutTitle :title="t('mining.miningSoftware')" />
 
         <div class="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
     <div
       class="col-span-1"
-      v-for="(gpuType, index) in gpuTypes"
+      v-for="(gpuType, index) in miningSoftware"
       :key="index"
     >
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
@@ -144,13 +100,11 @@ const gpuTypes = ref([
     </div>
   </div>
 
-
       <div>
       <LayoutButton
             accent-color="beam-green-dark"
             class="mt-5 w-fit mx-auto"
             :button-link="localePath('downloads')"
-            :big="true"
           >
             <Icon
               class="w-[18px] h-[18px] select-none pointer-events-none"
@@ -158,7 +112,7 @@ const gpuTypes = ref([
               :as-image="true"
               loading="lazy"
             />
-            Download Wallet and Node
+            {{ $t("mining.downloadWalletAndNode") }}
           </LayoutButton>
       </div>
 

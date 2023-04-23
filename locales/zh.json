@@ -205,7 +205,9 @@
     "title": "Beam 挖矿",
     "introduction": "与许多加密货币类似，Beam 依赖矿工将交易添加到其区块链中。虽然 Beam 网络中的所有节点都会确认交易的有效性，但矿工在保护和确保网络安全方面发挥着关键作用。Beam 采用**Beam Hash III**，这是**Equihash (150,5) 工作证明挖矿算法**的修改版，以确保网络安全和稳定。",
     "details": "深入了解 Beam 挖矿的世界，并通过我们的分步指南了解如何为网络的安全和增长做出贡献。",
-    "button": "Beam 挖矿指南（英文）"
+    "button": "Beam 挖矿指南（英文）",
+    "miningSoftware": "挖矿软件",
+    "downloadWalletAndNode": "下载钱包和节点"
   },
   "footer": {
     "join": {

@@ -196,6 +196,50 @@ export const PlatformDetails: Record<
   },
 };
 
+export const miningSoftware = [
+  {
+    type: 'AMD',
+    miningSoftware: [
+      {
+        name: 'lolMiner',
+        link: 'https://github.com/Lolliedieb/lolMiner-releases/releases',
+      },
+      {
+        name: 'Gminer',
+        link: 'https://github.com/develsoftware/GMinerRelease/releases',
+      },
+      {
+        name: 'OpenCL',
+        link: 'https://github.com/BeamMW/opencl-miner/releases/tag/opencl-miner_1.0.82',
+      },
+    ],
+  },
+  {
+    type: 'NVIDIA',
+    miningSoftware: [
+      {
+        name: 'lolMiner',
+        link: 'https://github.com/Lolliedieb/lolMiner-releases/releases',
+      },
+      {
+        name: 'Gminer',
+        link: 'https://github.com/develsoftware/GMinerRelease/releases',
+      },
+      {
+        name: 'miniZ',
+        link: 'https://miniz.ch/download/',
+      },
+      {
+        name: 'Bminer',
+        link: 'https://www.bminer.me/releases/',
+      },
+      {
+        name: 'OpenCL',
+        link: 'https://github.com/BeamMW/opencl-miner/releases/tag/opencl-miner_1.0.82',
+      },
+    ],
+  },
+];
 export const pressArticles = [
   /*
   // Ethnews entirely removed the article (no wonder, the blog is shit and must have been reinstalled ever since)
