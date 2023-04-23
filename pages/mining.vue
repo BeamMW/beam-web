@@ -1,5 +1,8 @@
 <script lang="ts" setup>
+import { miningSoftware } from "@/app.config";
+
 const { t } = useI18n();
+const localePath = useLocalePath();
 
 const title = computed(() => t("mining.title"));
 const description = computed(
@@ -64,50 +67,55 @@ useHead({
     </div>
 
     <LayoutWrapper :center="true" class="pt-10 lg:pt-12">
-      <LayoutTitle title="Mining softwares" />
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="col-span-1">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
-            <div class="col-span-1 bg-green-500 p-4">
-              Inner Grid 1 - Column 1
-            </div>
-            <div class="col-span-1 bg-green-500 p-4">
-              Inner Grid 1 - Column 2
-            </div>
-          </div>
+      <LayoutTitle :title="t('mining.miningSoftware')" />
+
+        <div class="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div
+      class="col-span-1"
+      v-for="(gpuType, index) in miningSoftware"
+      :key="index"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+        <div class="col-span-1 p-4 justify-self-center">
+          <Icon
+            :name="`mining/${gpuType.type.toLowerCase()}`"
+            :as-image="true"
+            loading="lazy"
+            :alt="gpuType.type.toLowerCase()"
+            class="h-7 w-auto opacity-90 select-none pointer-events-none"
+          />
         </div>
-        <div class="col-span-1">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
-            <div class="col-span-1 bg-blue-500 p-4">
-              Inner Grid 2 - Column 1
-            </div>
-            <div class="col-span-1 bg-blue-500 p-4">
-              Inner Grid 2 - Column 2
-            </div>
-          </div>
+        <div class="col-span-1 p-4 justify-self-center">
+          <NuxtLink
+            v-for="(software, softwareIndex) in gpuType.miningSoftware"
+            :key="softwareIndex"
+            :to="software.link"
+            target="_blank"
+            class="block text-lg opacity-80 hover:opacity-100 transition-opacity"
+          >
+            {{ software.name }}
+          </NuxtLink>
         </div>
       </div>
+    </div>
+  </div>
 
+      <div>
       <LayoutButton
-        button-link="https://beamx.gitbook.io/beam-mining/"
-        :big="true"
-        accent-color="beam-green-dark"
-      >
-        <Icon
-          name="get-started/beam-currency"
-          :as-image="true"
-          loading="lazy"
-          class="h-7 w-auto"
-        />
-        Download Wallet and Node
-      </LayoutButton>
+            accent-color="beam-green-dark"
+            class="mt-5 w-fit mx-auto"
+            :button-link="localePath('downloads')"
+          >
+            <Icon
+              class="w-[18px] h-[18px] select-none pointer-events-none"
+              name="layout/flat-beam-animated"
+              :as-image="true"
+              loading="lazy"
+            />
+            {{ $t("mining.downloadWalletAndNode") }}
+          </LayoutButton>
+      </div>
 
-      <Icon
-        name="mining/amd"
-        :as-image="true"
-        loading="lazy"
-        class="h-7 w-auto"
-      />
     </LayoutWrapper>
 
     <MiningResources class="py-10 lg:py-12" />
