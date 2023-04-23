@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { join, sep } from "path";
 import { globSync } from "glob";
-import { copy } from "fs-extra";
+import fs from "fs-extra";
 
 const publicWebUrl = process.env.PUBLIC_WEB_URL || "https://beam.mw";
 
@@ -34,9 +34,14 @@ const copyDocsAssetsToPublic = async () => {
     );
     const destination = join(publicAssetsPath, destinationFolder);
 
-    // Copy the contents of the .gitbook/assets folder to the destination folder
-    await copy(source, destination);
-    console.log(`Contents of ${source} copied to ${destination}.`);
+    // Check if the destination folder exists
+    const folderExists = await fs.pathExists(destination);
+
+    // If the destination folder doesn't exist, copy the contents of the .gitbook/assets folder to the destination folder
+    if (!folderExists) {
+      await fs.copy(source, destination);
+      console.log(`Contents of ${source} copied to ${destination}.`);
+    }
   }
 };
 
