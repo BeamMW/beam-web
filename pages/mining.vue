@@ -69,53 +69,52 @@ useHead({
     <LayoutWrapper :center="true" class="pt-10 lg:pt-12">
       <LayoutTitle :title="t('mining.miningSoftware')" />
 
-        <div class="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <div
-      class="col-span-1"
-      v-for="(gpuType, index) in miningSoftware"
-      :key="index"
-    >
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
-        <div class="col-span-1 p-4 justify-self-center">
-          <Icon
-            :name="`mining/${gpuType.type.toLowerCase()}`"
-            :as-image="true"
-            loading="lazy"
-            :alt="gpuType.type.toLowerCase()"
-            class="h-7 w-auto opacity-90 select-none pointer-events-none"
-          />
-        </div>
-        <div class="col-span-1 p-4 justify-self-center">
-          <NuxtLink
-            v-for="(software, softwareIndex) in gpuType.miningSoftware"
-            :key="softwareIndex"
-            :to="software.link"
-            target="_blank"
-            class="block text-lg opacity-80 hover:opacity-100 transition-opacity"
-          >
-            {{ software.name }}
-          </NuxtLink>
+      <div class="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div
+          v-for="(gpuType, index) in miningSoftware"
+          :key="index"
+          class="col-span-1"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+            <div class="col-span-1 p-4 justify-self-center">
+              <Icon
+                :name="`mining/${gpuType.type.toLowerCase()}`"
+                :as-image="true"
+                loading="lazy"
+                :alt="gpuType.type.toLowerCase()"
+                class="h-7 w-auto opacity-90 select-none pointer-events-none"
+              />
+            </div>
+            <div class="col-span-1 p-4 justify-self-center">
+              <NuxtLink
+                v-for="(software, softwareIndex) in gpuType.miningSoftware"
+                :key="softwareIndex"
+                :to="software.link"
+                target="_blank"
+                class="block text-lg opacity-80 hover:opacity-100 transition-opacity"
+              >
+                {{ software.name }}
+              </NuxtLink>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
       <div>
-      <LayoutButton
-            accent-color="beam-green-dark"
-            class="mt-5 w-fit mx-auto"
-            :button-link="localePath('downloads')"
-          >
-            <Icon
-              class="w-[18px] h-[18px] select-none pointer-events-none"
-              name="layout/flat-beam-animated"
-              :as-image="true"
-              loading="lazy"
-            />
-            {{ $t("mining.downloadWalletAndNode") }}
-          </LayoutButton>
+        <LayoutButton
+          accent-color="beam-green-dark"
+          class="mt-5 w-fit mx-auto"
+          :button-link="localePath('downloads')"
+        >
+          <Icon
+            class="w-[18px] h-[18px] select-none pointer-events-none"
+            name="layout/flat-beam-animated"
+            :as-image="true"
+            loading="lazy"
+          />
+          {{ $t("mining.downloadWalletAndNode") }}
+        </LayoutButton>
       </div>
-
     </LayoutWrapper>
 
     <MiningResources class="py-10 lg:py-12" />
