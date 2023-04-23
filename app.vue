@@ -56,8 +56,6 @@ defineRobotMeta();
         content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
         name="viewport"
       />
-      <Meta name="msapplication-TileColor" content="#042548" />
-      <Meta name="theme-color" content="#042548" />
     </Head>
     <NuxtLayout>
       <NuxtLoadingIndicator />
