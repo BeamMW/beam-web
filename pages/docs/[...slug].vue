@@ -1,6 +1,8 @@
 <template>
   <div class="bg-page-radial-gradient overflow-visible">
-    <div class="max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible">
+    <div
+      class="max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible"
+    >
       <div class="grid grid-cols-10 gap-4 overflow-visible">
         <div class="col-span-3 sticky top-50 left-0">
           <ContentList v-slot="{ list }">
@@ -15,15 +17,40 @@
                   } `"
                   >{{ article.title }}</NuxtLink
                 >
-                <ul v-if="routeName == article._path && article.body && article.body.toc && article.body.toc.links" v-for="(link, index) in article.body.toc.links" :key="index" class="list-none ml-5">
-                  <NuxtLink class="text-base opacity-60 hover:opacity-90 mt-2" v-if="link.text != article.title" :to="processPath(article._path) + '#' + link.id">{{ link.text }}</NuxtLink>
-                  <ul v-if="link.children" class="ml-3 mt-1 text-sm">
-                    <li v-for="(childLink, childIndex) in link.children" :key="childIndex">
-                      <NuxtLink class="opacity-60 hover:opacity-90" :to="processPath(article._path) + '#' + childLink.id">{{ childLink.text }}</NuxtLink>
-                    </li>
-                  </ul>
-                </ul>
-            </template>
+                <template
+                  v-if="
+                    routeName == article._path &&
+                    article.body &&
+                    article.body.toc &&
+                    article.body.toc.links
+                  "
+                >
+                  <ul
+                    v-for="(link, index) in article.body.toc.links"
+                    :key="index"
+                    class="list-none ml-5"
+                  >
+                    <NuxtLink
+                      v-if="link.text != article.title"
+                      class="text-base opacity-60 hover:opacity-90 mt-2"
+                      :to="processPath(article._path) + '#' + link.id"
+                      >{{ link.text }}</NuxtLink
+                    >
+                    <ul v-if="link.children" class="ml-3 mt-1 text-sm">
+                      <li
+                        v-for="(childLink, childIndex) in link.children"
+                        :key="childIndex"
+                      >
+                        <NuxtLink
+                          class="opacity-60 hover:opacity-90"
+                          :to="processPath(article._path) + '#' + childLink.id"
+                          >{{ childLink.text }}</NuxtLink
+                        >
+                      </li>
+                    </ul>
+                  </ul></template
+                >
+              </template>
             </li>
           </ContentList>
         </div>
@@ -42,13 +69,6 @@
   </div>
 </template>
 
-<style lang="postcss" scoped>
-  .custom-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 10px; /* Adjust the value as needed */
-  }</style>
-
 <script lang="ts" setup>
 const route = useRoute();
 
@@ -60,25 +80,25 @@ async function handleIndex(path: string): Promise<string> {
 }
 
 const isPageBlacklisted = (path: string) => {
-  if (path.endsWith('/summary')) {
-    return true
+  if (path.endsWith("/summary")) {
+    return true;
   }
   // empty
-  if (path.endsWith('/confidential-assets')) {
-    return true
+  if (path.endsWith("/confidential-assets")) {
+    return true;
   }
-  return false
-}
+  return false;
+};
 
 // Check if a content page exist
 const pageExist = async (path: string) => {
   if (isPageBlacklisted(path)) {
-    return false
+    return false;
   }
   const contentQuery = queryContent(path);
   const query = await contentQuery.find();
   return query.length > 0;
-}
+};
 
 // Build current route name
 const routeName = await handleIndex(
@@ -90,8 +110,7 @@ const routeName = await handleIndex(
 );
 
 function processPath(path: string) {
-  return path
-    .replace("/readme", "")
+  return path.replace("/readme", "");
 }
 
 // Return 404 if the page does not exist
@@ -99,12 +118,18 @@ if (!(await pageExist(routeName))) {
   throw createError({ statusCode: 404, statusMessage: "Page not found" });
 }
 
-onMounted(() => {
-  window.addEventListener('hashchange', function(e) {
+/* onMounted(() => {
+  window.addEventListener("hashchange", function (e) {
     e.preventDefault();
-    console.log('mdsfgfdg')
     return false;
   });
-});
-
+}); */
 </script>
+
+<style lang="postcss" scoped>
+.custom-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px; /* Adjust the value as needed */
+}
+</style>

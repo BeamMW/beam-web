@@ -11,7 +11,9 @@
           <li v-for="(link, indexL) in menu.links" :key="indexL">
             <NuxtLink
               :to="link.href"
-              :class="`mb-2 inline-block capitalize transition text-white/70 hover:text-white ${link.class ? link.class : ''}`"
+              :class="`mb-2 inline-block capitalize transition text-white/70 hover:text-white ${
+                link.class ? link.class : ''
+              }`"
               :target="getLinkTarget(link.href)"
               >{{ link.text }}</NuxtLink
             >
@@ -34,12 +36,12 @@ const menus = computed(() => [
       {
         text: t("footer.join.downloadWallet"),
         href: localePath("downloads"),
-        class: 'block md:hidden'
+        class: "block md:hidden",
       },
       {
         text: t("footer.developers.documentation"),
         href: localePath("docs"),
-        class: 'block md:hidden'
+        class: "block md:hidden",
       },
       {
         text: t("footer.join.beamOutreachClub"),
