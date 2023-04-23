@@ -7,11 +7,11 @@
         >
           {{ menu.title }}
         </h6>
-        <ul class="flex flex-col gap-2 pt-2">
+        <ul class="flex flex-col pt-2">
           <li v-for="(link, indexL) in menu.links" :key="indexL">
             <NuxtLink
               :to="link.href"
-              class="inline capitalize transition text-white/70 hover:text-white"
+              :class="`mb-2 inline-block capitalize transition text-white/70 hover:text-white ${link.class ? link.class : ''}`"
               :target="getLinkTarget(link.href)"
               >{{ link.text }}</NuxtLink
             >
@@ -34,6 +34,12 @@ const menus = computed(() => [
       {
         text: t("footer.join.downloadWallet"),
         href: localePath("downloads"),
+        class: 'block md:hidden'
+      },
+      {
+        text: t("footer.developers.documentation"),
+        href: localePath("docs"),
+        class: 'block md:hidden'
       },
       {
         text: t("footer.join.beamOutreachClub"),
@@ -67,10 +73,6 @@ const menus = computed(() => [
   {
     title: t("footer.developers.title"),
     links: [
-      {
-        text: t("footer.developers.documentation"),
-        href: "https://documentation.beam.mw/",
-      },
       {
         text: t("footer.developers.blockchainExplorer"),
         href: "https://explorer.beam.mw/",
