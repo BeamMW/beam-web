@@ -24,6 +24,10 @@ const routeName = await handleIndex(
   }`
 );
 
+function replaceREADMEByIndex(path: string) {
+  return path.replace("/readme", "")
+}
+
 // Return 404 if the page does not exist
 if (!pageExist(routeName)) {
   throw createError({ statusCode: 404, statusMessage: "Page not found" });
@@ -43,13 +47,13 @@ if (!pageExist(routeName)) {
           </ul>
         </ContentNavigation>-->
 
-          <ContentList v-slot="{ list }" path="/docs/desktop">
+          <ContentList v-slot="{ list }">
             <div v-for="article in list" :key="article._path">
               <NuxtLink
-                :to="article._path"
-                :class="`text-base pl-3 text-white/60 ${
+                :to="replaceREADMEByIndex(article._path)"
+                :class="`text-base pl-3 opacity-60 hover:opacity-90 transition-opacity ${
                   routeName == article._path
-                    ? `border-l border-white font-bold !text-white/90`
+                    ? `border-l border-white font-bold !opacity-90`
                     : ''
                 } `"
                 >{{ article.title }}</NuxtLink
