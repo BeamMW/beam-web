@@ -157,7 +157,7 @@ const menus = computed(() => [
     links: [
       {
         text: t("head.title.documentation"),
-        href: "https://documentation.beam.mw/",
+        href: localePath("docs"),
       },
       {
         text: t("footer.developers.blockchainExplorer"),
