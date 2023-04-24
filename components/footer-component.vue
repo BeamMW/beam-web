@@ -68,6 +68,7 @@
               <LayoutLink
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
                 to="/assets/BEAM_Media_Kit_and_resources_v4.zip"
+                target="_blank"
                 >{{ $t("footer.mediakit") }}</LayoutLink
               >
             </div>

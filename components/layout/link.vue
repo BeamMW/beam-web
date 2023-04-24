@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="destination"
-    :target="getLinkTarget(destination as string)"
+    :target="target || getLinkTarget(destination as string)"
     v-bind="$attrs"
     @click="handleClick"
   >
