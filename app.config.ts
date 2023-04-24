@@ -64,6 +64,8 @@ export enum ExternalLinks {
   DAPPNET_DOWNLOAD = "https://old.beam.mw/downloads/dappnet-mac", // `https://dappnet.beam.mw${localePath("downloads")}`,
 }
 
+export const qqGroupId = 909677190;
+
 export enum ExternalLinksTitle {
   GITHUB = "GitHub",
   TELEGRAM = "Telegram",
@@ -75,7 +77,8 @@ export enum ExternalLinksTitle {
   ANCHOR = "Anchor",
   FORUM = "Forum",
   BITCOINTALK = "BitcoinTalk",
-  MEDIUM = "Medium Blog",
+  MEDIUM = "Medium",
+  QQ = "QQ",
   COINGECKO = "CoinGecko",
   CMC = "CoinMarketCap",
 }
@@ -399,6 +402,7 @@ export enum ExternalLinksIcon {
   FORUM = "forum",
   BITCOINTALK = "bitcointalk",
   MEDIUM = "medium",
+  QQ = "qq",
   COINGECKO = "coingecko",
   CMC = "cmc",
 }

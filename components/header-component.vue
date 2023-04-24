@@ -23,7 +23,6 @@ const localePath = useLocalePath();
           </LayoutLink>
         </div>
       </div>
-
       <div
         class="justify-self-start order-1 md:justify-self-auto md:order-2 text-base text-white font-bold"
       >
@@ -62,7 +61,6 @@ const localePath = useLocalePath();
                     name="layout/arrow-right"
                   />
                 </HeaderNavigationItem>
-
                 <button
                   type="button"
                   class="flex items-center md:hidden p-1 h-9 w-9 text-sm text-white rounded-lg focus:outline-none focus:ring-2 hover:opacity-80 transition-opacity focus:ring-white"

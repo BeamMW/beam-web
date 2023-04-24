@@ -12,8 +12,8 @@
           loading="lazy"
         />
         <p class="text-center text-lg font-bold">
-          <LayoutCopyToClipboard :text="'909677190'">
-            909677190
+          <LayoutCopyToClipboard :text="`${qqGroupId}`">
+            {{ qqGroupId }}
           </LayoutCopyToClipboard>
         </p>
       </LayoutAnimatedModal>
@@ -104,6 +104,7 @@ import {
   ExternalLinks,
   ExternalLinksIcon,
   ExternalLinksTitle,
+  qqGroupId,
 } from "@/app.config";
 
 // Make it async
