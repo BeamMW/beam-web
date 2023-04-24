@@ -24,7 +24,7 @@ const iconName = computed(() => `flags/${props.flag}`);
     <Icon
       :name="iconName"
       class-parent="w-full h-full"
-      class="w-full h-full !scale-[1.2] select-none pointer-events-none"
+      class="w-full h-full !scale-[1.25] select-none pointer-events-none"
       :as-image="true"
       loading="eager"
     />
