@@ -99,7 +99,7 @@ const leave = (el: HTMLElement) => {
                 t-key="header.announcement"
               />
             </p>
-            <div class="ml-auto">
+            <div class="rtl:mr-auto ltr:ml-auto">
               <button
                 type="button"
                 class="inline-flex rounded-md p-1.5 text-white/80 transition-colors hover:text-white/60 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#042548] focus:ring-[#042548]"

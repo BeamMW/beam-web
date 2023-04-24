@@ -1,8 +1,8 @@
 <template>
   <span
-    class="inline-flex items-center hover:opacity-70 transition-opacity text-inherit"
+    class="inline-flex items-center hover:opacity-70 transition-opacity text-inherit gap-1"
   >
-    <span class="pr-1">
+    <span>
       <slot></slot>
     </span>
     <Icon

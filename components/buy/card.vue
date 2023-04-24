@@ -21,7 +21,7 @@ defineProps({
   >
     <div class="p-4 md:p-5">
       <div class="flex justify-between items-center">
-        <div class="flex items-center">
+        <div class="flex items-center gap-3">
           <Icon
             class="h-[2.375rem] w-[2.375rem] select-none"
             :name="`buy/${image}`"
@@ -29,7 +29,7 @@ defineProps({
             :alt="title"
             loading="lazy"
           />
-          <div class="ml-3">
+          <div>
             <h3
               class="font-bold text-white opacity-90 group-hover:opacity-100 group-hover:text-beam-blue transition"
             >
@@ -37,7 +37,7 @@ defineProps({
             </h3>
           </div>
         </div>
-        <div class="pl-3">
+        <div>
           <Icon
             class="block w-3.5 h-3.5 text-white group-hover:text-beam-blue opacity-60 group-hover:opacity-100 transition"
             name="layout/arrow-right"

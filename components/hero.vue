@@ -44,7 +44,7 @@
           </LayoutButton>
         </div>
 
-        <div class="flex flex-row justify-center space-x-4">
+        <div class="flex flex-row justify-center gap-4">
           <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.IOS].links.store"
             class="select-none hover:opacity-80 transition"
@@ -81,7 +81,7 @@
         </div>
       </div>
       <div
-        class="heroImages flex justify-evenly w-full pb-12 mx-auto mb-12 md:px-12 lg:px-16 max-w-7xl pointer-events-none"
+        class="heroImages flex justify-evenly w-full pb-12 mx-auto mb-12 md:px-12 lg:px-16 max-w-7xl pointer-events-none rtl:!flex-row"
       >
         <ClientOnly>
           <div
