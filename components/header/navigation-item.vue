@@ -2,9 +2,9 @@
   <button v-if="isButton" :class="classElement" type="button" v-bind="$attrs">
     <slot />
   </button>
-  <NuxtLink v-else :to="to" :class="classElement" v-bind="$attrs">
+  <LayoutLink v-else :to="to" :class="classElement" v-bind="$attrs">
     <slot />
-  </NuxtLink>
+  </LayoutLink>
 </template>
 
 <script lang="ts" setup>

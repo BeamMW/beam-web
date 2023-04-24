@@ -45,7 +45,7 @@
         </div>
 
         <div class="flex flex-row justify-center space-x-4">
-          <NuxtLink
+          <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.IOS].links.store"
             class="select-none hover:opacity-80 transition"
             target="_blank"
@@ -56,8 +56,8 @@
               :as-image="true"
               loading="lazy"
             />
-          </NuxtLink>
-          <NuxtLink
+          </LayoutLink>
+          <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.ANDROID].links.store"
             class="select-none hover:opacity-80 transition"
             target="_blank"
@@ -68,8 +68,8 @@
               :as-image="true"
               loading="lazy"
             />
-          </NuxtLink>
-          <NuxtLink
+          </LayoutLink>
+          <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.CHROME].links.store"
             class="hidden md:block select-none hover:opacity-80 transition"
           >
@@ -79,7 +79,7 @@
               :as-image="true"
               loading="lazy"
             />
-          </NuxtLink>
+          </LayoutLink>
         </div>
       </div>
       <div

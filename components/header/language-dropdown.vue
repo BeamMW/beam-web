@@ -11,7 +11,7 @@
         :key="availableLocale.code"
         class="w-full"
       >
-        <NuxtLink
+        <LayoutLink
           :to="
             switchLocalePath(availableLocale.code) ||
             localePath('index', availableLocale.code)
@@ -28,7 +28,7 @@
             />
             {{ availableLocale.name }}
           </span>
-        </NuxtLink>
+        </LayoutLink>
       </li>
     </ul>
   </div>

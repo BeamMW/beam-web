@@ -30,7 +30,7 @@ const handleClick = (onClick: () => void, e: MouseEvent) => {
     <h4>{{ title }}</h4>
     <div class="mt-3 grid space-y-3 text-sm">
       <p v-for="(link, index) in links" :key="index">
-        <NuxtLink
+        <LayoutLink
           :to="link.href"
           class="inline capitalize transition text-white/70 hover:text-white"
           :target="getLinkTarget(link.href)"
@@ -38,7 +38,7 @@ const handleClick = (onClick: () => void, e: MouseEvent) => {
             typeof link.onClick == 'function' &&
               handleClick(link.onClick, $event)
           "
-          >{{ link.text }}</NuxtLink
+          >{{ link.text }}</LayoutLink
         >
         <span
           v-if="link.highlight"

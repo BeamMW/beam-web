@@ -10,12 +10,12 @@ const localePath = useLocalePath();
       class="grid-layout max-w-screen-xl mx-auto items-center py-4 px-3 md:px-4"
     >
       <div class="order-2 md:order-1">
-        <NuxtLink
+        <LayoutLink
           :to="localePath('index')"
           class="hover:opacity-70 transition-opacity"
         >
           <Icon name="logo" class="h-auto w-10 select-none" :as-image="true" />
-        </NuxtLink>
+        </LayoutLink>
       </div>
 
       <div

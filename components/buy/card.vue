@@ -15,7 +15,7 @@ defineProps({
 });
 </script>
 <template>
-  <NuxtLink
+  <LayoutLink
     class="group flex flex-col justify-center border rounded-xl bg-[#042248]/50 hover:bg-[#042248] focus:bg-[#042248] border-black border-opacity-30 shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset] focus:outline-none focus:ring-2 focus:ring-beam-blue/75 focus:ring-offset-2 transition focus:ring-offset-[#042248]"
     :href="link"
     target="_blank"
@@ -46,5 +46,5 @@ defineProps({
         </div>
       </div>
     </div>
-  </NuxtLink>
+  </LayoutLink>
 </template>

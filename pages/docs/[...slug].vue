@@ -8,14 +8,14 @@
           <ContentList v-slot="{ list }">
             <li v-for="article in list" :key="article._path" class="list-none">
               <template v-if="!isPageBlacklisted(article._path)">
-                <NuxtLink
+                <LayoutLink
                   :to="processPath(article._path)"
                   :class="`pl-3 text-lg opacity-60 hover:opacity-90 transition-opacity ${
                     routeName == article._path
                       ? `border-l border-white font-bold !opacity-90`
                       : ''
                   } `"
-                  >{{ article.title }}</NuxtLink
+                  >{{ article.title }}</LayoutLink
                 >
                 <template
                   v-if="
@@ -30,21 +30,21 @@
                     :key="index"
                     class="list-none ml-5"
                   >
-                    <NuxtLink
+                    <LayoutLink
                       v-if="link.text != article.title"
                       class="text-base opacity-60 hover:opacity-90 mt-2"
                       :to="processPath(article._path) + '#' + link.id"
-                      >{{ link.text }}</NuxtLink
+                      >{{ link.text }}</LayoutLink
                     >
                     <ul v-if="link.children" class="ml-3 mt-1 text-sm">
                       <li
                         v-for="(childLink, childIndex) in link.children"
                         :key="childIndex"
                       >
-                        <NuxtLink
+                        <LayoutLink
                           class="opacity-60 hover:opacity-90"
                           :to="processPath(article._path) + '#' + childLink.id"
-                          >{{ childLink.text }}</NuxtLink
+                          >{{ childLink.text }}</LayoutLink
                         >
                       </li>
                     </ul>

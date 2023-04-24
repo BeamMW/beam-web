@@ -35,7 +35,7 @@ function processPath(inputPath: string): string {
 </script>
 
 <template>
-  <NuxtLink :href="processPath(href)" :target="target">
+  <LayoutLink :href="processPath(href)" :target="target">
     <slot />
-  </NuxtLink>
+  </LayoutLink>
 </template>

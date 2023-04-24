@@ -31,7 +31,7 @@
       :autoplay="{ delay: 2500 }"
     >
       <swiper-slide v-for="(item, index) in pressArticles" :key="index">
-        <NuxtLink :to="item.href" class="carousel-item-link" target="_blank">
+        <LayoutLink :to="item.href" class="carousel-item-link" target="_blank">
           <div class="carousel-item">
             <Icon
               :as-image="true"
@@ -40,7 +40,7 @@
               loading="lazy"
             />
           </div>
-        </NuxtLink>
+        </LayoutLink>
       </swiper-slide>
     </swiper>
   </div>

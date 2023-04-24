@@ -15,7 +15,7 @@ defineProps({
 });
 </script>
 <template>
-  <NuxtLink
+  <LayoutLink
     :to="link"
     target="_blank"
     class="hover:text-white transition-colors"
@@ -28,5 +28,5 @@ defineProps({
         name="download/get-arrow-inline"
       />
     </span>
-  </NuxtLink>
+  </LayoutLink>
 </template>

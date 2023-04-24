@@ -192,7 +192,7 @@ provide("toggleDropdown", toggleDropdown);
 <style lang="postcss" scoped>
 /** Custom default dropdown container */
 .popper-container:deep(.dropdown-container) {
-  @apply h-full will-change-transform z-50 text-white relative list-none backdrop-blur-xl backdrop-brightness-75 border-black border rounded-lg border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
+  @apply h-full will-change-transform z-50 text-white relative list-none backdrop-blur-xl backdrop-brightness-75 md:bg-[#042248] border-black border rounded-lg border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
 }
 
 @keyframes animate {

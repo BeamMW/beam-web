@@ -86,7 +86,7 @@ useHead({
               />
             </div>
             <div class="col-span-1 p-4 justify-self-center">
-              <NuxtLink
+              <LayoutLink
                 v-for="(software, softwareIndex) in gpuType.miningSoftware"
                 :key="softwareIndex"
                 :to="software.link"
@@ -94,7 +94,7 @@ useHead({
                 class="block text-lg opacity-80 hover:opacity-100 transition-opacity"
               >
                 {{ software.name }}
-              </NuxtLink>
+              </LayoutLink>
             </div>
           </div>
         </div>

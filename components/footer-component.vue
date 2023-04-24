@@ -52,12 +52,12 @@
         >
           <div class="flex items-center">
             <div class="space-x-4 text-sm">
-              <NuxtLink
+              <LayoutLink
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
                 :to="localePath('privacy-policy')"
               >
                 {{ $t("privacy.title") }}
-              </NuxtLink>
+              </LayoutLink>
               <a
                 class="capitalize inline-flex gap-x-2 transition-colors text-white/50 hover:text-white/90"
                 :title="t('footer.contact')"
@@ -65,11 +65,11 @@
               >
                 {{ $t("footer.contact") }}
               </a>
-              <NuxtLink
+              <LayoutLink
                 target="_blank"
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
                 to="https://docs.beam.mw/BEAM_Media_Kit_and_resources_v4.zip"
-                >{{ $t("footer.mediakit") }}</NuxtLink
+                >{{ $t("footer.mediakit") }}</LayoutLink
               >
             </div>
           </div>
@@ -79,7 +79,7 @@
               :key="index"
               class="space-x-4"
             >
-              <NuxtLink
+              <LayoutLink
                 target="_blank"
                 v-bind="{ title: typedExternalLinksTitle[icon] }"
                 class="inline-block text-gray-200 200 opacity-60 hover:opacity-90 transition select-none"
@@ -91,7 +91,7 @@
                   :as-image="true"
                   loading="lazy"
                 />
-              </NuxtLink>
+              </LayoutLink>
             </section>
           </div>
         </div>
