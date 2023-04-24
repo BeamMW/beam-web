@@ -130,10 +130,6 @@ const menus = computed(() => [
         text: t("footer.join.downloadWallet"),
         href: localePath("downloads"),
       },
-      {
-        text: t("footer.join.beamOutreachClub"),
-        href: "https://beamoutreach.club",
-      },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
       { text: "Newsletter", href: ExternalLinks.SUBSTACK },

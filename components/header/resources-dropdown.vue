@@ -38,10 +38,6 @@ const menus = computed(() => [
         href: localePath("docs"),
         class: "block md:hidden",
       },
-      {
-        text: t("footer.join.beamOutreachClub"),
-        href: "https://beamoutreach.club",
-      },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
       { text: "Roadmap", href: "#" },
