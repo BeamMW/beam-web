@@ -83,6 +83,7 @@ export const preHtml = {
     { href: "/fonts/ProximaNova-Bold.woff2", as: "font", crossorigin: true },
   ],
   preconnect: [
+    "https://explorer.beam.mw",
     "https://builds.beam.mw",
   ] as URLEntry[],
   "dns-prefetch": extractOriginsFromEnum(ExternalLinks) as URLEntry[],
