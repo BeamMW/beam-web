@@ -13,10 +13,11 @@
 import { withBase } from "ufo";
 import { useRuntimeConfig, computed } from "#imports";
 
+const route = useRoute();
+
 function removeGitbook(path: string): string {
   const regex = /(?:\.\.\/|)\.gitbook\/assets\//g;
-  const replaceString = "/assets/docs/desktop/"; // todo: handle with router path name
-
+  const replaceString = `/assets/docs/${route.params.slug[0]}/`;
   return path.replace(regex, replaceString);
 }
 
