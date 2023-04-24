@@ -54,11 +54,11 @@ const localePath = useLocalePath();
               <template #dropdown-button>
                 <HeaderNavigationItem
                   as="button"
-                  class="hidden md:inline-flex items-center"
+                  class="hidden md:inline-flex items-center gap-2"
                 >
                   {{ $t("header.nav.resources") }}
                   <Icon
-                    class="rotate-90 block ltr:ml-2 rtl:mr-2 w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+                    class="rotate-90 block w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
                     name="layout/arrow-right"
                   />
                 </HeaderNavigationItem>

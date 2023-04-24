@@ -2,7 +2,7 @@
   <div>
     <LayoutLink
       :to="processPath(article._path)"
-      :class="`pl-3 text-lg opacity-60 hover:opacity-90 transition-opacity ${
+      :class="`pl-3 text-md opacity-60 hover:opacity-90 transition-opacity ${
         routeName == article._path
           ? `border-l border-white font-bold !opacity-90`
           : ''
