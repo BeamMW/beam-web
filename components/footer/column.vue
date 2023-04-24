@@ -27,7 +27,7 @@ const handleClick = (onClick: () => void, e: MouseEvent) => {
 
 <template>
   <div>
-    <h6>{{ title }}</h6>
+    <b>{{ title }}</b>
     <div class="mt-3 grid space-y-3 text-sm">
       <p v-for="(link, index) in links" :key="index">
         <LayoutLink

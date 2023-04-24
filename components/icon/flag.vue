@@ -27,6 +27,7 @@ const iconName = computed(() => `flags/${props.flag}`);
       class="w-full h-full !scale-[1.25] select-none pointer-events-none"
       :as-image="true"
       loading="eager"
+      alt="Flag"
     />
   </div>
 </template>
