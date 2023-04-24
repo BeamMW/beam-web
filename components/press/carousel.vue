@@ -30,18 +30,23 @@
       :loop="true"
       :autoplay="{ delay: 2500 }"
     >
-      <swiper-slide v-for="(item, index) in pressArticles" :key="index">
-        <LayoutLink :to="item.href" class="carousel-item-link">
+      <SwiperSlide v-for="(item, index) in pressArticles" :key="index">
+        <LayoutLink
+          :to="item.href"
+          class="carousel-item-link"
+          :title="item.image"
+        >
           <div class="carousel-item">
             <Icon
               :as-image="true"
               :name="`medias/${item.image}`"
               class="select-none pointer-events-none h-12 text-beam-blue w-fit"
               loading="lazy"
+              :alt="item.image"
             />
           </div>
         </LayoutLink>
-      </swiper-slide>
+      </SwiperSlide>
     </swiper>
   </div>
 </template>

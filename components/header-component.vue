@@ -14,11 +14,13 @@ const localePath = useLocalePath();
           <LayoutLink
             :to="localePath('index')"
             class="hover:opacity-70 transition-opacity"
+            title="Homepage"
           >
             <Icon
               name="logo"
               class="h-auto w-10 select-none"
               :as-image="true"
+              alt="Beam logo"
             />
           </LayoutLink>
         </div>
@@ -62,6 +64,7 @@ const localePath = useLocalePath();
                   />
                 </HeaderNavigationItem>
                 <button
+                  title="Home"
                   type="button"
                   class="flex items-center md:hidden p-1 h-9 w-9 text-sm text-white rounded-lg focus:outline-none focus:ring-2 hover:opacity-80 transition-opacity focus:ring-white"
                 >

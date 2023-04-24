@@ -31,6 +31,7 @@
   "feature": {
     "title": "Fonctionnalités",
     "learnmore": "En savoir plus",
+    "learnmoreabout": "En savoir plus sur \"{title}\"",
     "1": {
       "title": "Confidentialité ultime",
       "text": "Choisissez des transactions de confidentialité standard pour un anonymat robuste ou des transactions de confidentialité maximale avec un ensemble d'anonymat de 64k – la confidentialité est par défaut pour tous."

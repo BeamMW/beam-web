@@ -31,6 +31,7 @@
   "feature": {
     "title": "Features",
     "learnmore": "Learn more",
+    "learnmoreabout": "Learn more about \"{title}\"",
     "1": {
       "title": "Uncompromising Privacy",
       "text": "Choose standard privacy transactions for robust anonymity or maximum anonymity set transactions with a 64k anonymity set – privacy is default for all."

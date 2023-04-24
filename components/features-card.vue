@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const { t } = useI18n();
 const props = defineProps({
   title: {
     type: String,
@@ -86,7 +87,12 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
       <p class="text-white text-opacity-80">{{ text }}</p>
     </div>
     <div class="mt-auto gap-4 select-none">
-      <LayoutLink :title="title" v-if="link" :to="link" class="text-beam-blue">
+      <LayoutLink
+        :title="t('feature.learnmoreabout', { title })"
+        v-if="link"
+        :to="link"
+        class="text-beam-blue"
+      >
         <LayoutExternalLink>{{
           linkName ? linkName : $t("feature.learnmore")
         }}</LayoutExternalLink>

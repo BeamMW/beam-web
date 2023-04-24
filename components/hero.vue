@@ -53,6 +53,7 @@
               class="h-11 w-[132px] select-none pointer-events-none"
               :as-image="true"
               loading="lazy"
+              :alt="t('hero.geton.appstore')"
             />
           </LayoutLink>
           <LayoutLink
@@ -65,6 +66,7 @@
               class="h-11 w-[148.09px] select-none pointer-events-none"
               :as-image="true"
               loading="lazy"
+              :alt="t('hero.geton.playstore')"
             />
           </LayoutLink>
           <LayoutLink
@@ -77,6 +79,7 @@
               class="h-11 w-[148.26px] select-none pointer-events-none"
               :as-image="true"
               loading="lazy"
+              :alt="t('hero.geton.chromestore')"
             />
           </LayoutLink>
         </div>

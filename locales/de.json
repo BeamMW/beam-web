@@ -31,6 +31,7 @@
   "feature": {
     "title": "Funktionen",
     "learnmore": "Mehr erfahren",
+    "learnmoreabout": "Erfahren Sie mehr über \"{title}\"",
     "1": {
       "title": "Kompromisslose Privatsphäre",
       "text": "Wählen Sie standardmäßige Privatstransaktionen für starke Anonymität oder Transaktionen mit maximaler Anonymitätsmenge und einer 64k Anonymitätsmenge – Privatsphäre ist standardmäßig für alle."
