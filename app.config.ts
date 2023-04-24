@@ -31,13 +31,6 @@ export enum SupportedPlatforms {
 
 /** CONFIG HERE */
 
-export const APP_TITLE = "Beam";
-export const CONTACT_EMAIL = "{support}";
-
-export const announcementMessage: string | undefined =
-  "Hard Fork was activated on height 1,920,000. To continue using your funds please upgrade your wallets."; // set to undefined to disable
-
-// set to EnvironmentType.DAPPNET for  deployement
 export const currentEnvironment: EnvironmentType = EnvironmentType.MAINNET;
 
 export enum ExternalLinks {
