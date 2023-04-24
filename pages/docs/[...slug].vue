@@ -7,49 +7,22 @@
         <div class="col-span-3 sticky top-50 left-0">
           <ContentList v-slot="{ list }">
             <li v-for="article in list" :key="article._path" class="list-none">
-              <template v-if="!isPageBlacklisted(article._path)">
-                <LayoutLink
-                  :to="processPath(article._path)"
-                  :class="`pl-3 text-lg opacity-60 hover:opacity-90 transition-opacity ${
-                    routeName == article._path
-                      ? `border-l border-white font-bold !opacity-90`
-                      : ''
-                  } `"
-                  >{{ article.title }}</LayoutLink
-                >
-                <template
-                  v-if="
-                    routeName == article._path &&
-                    article.body &&
-                    article.body.toc &&
-                    article.body.toc.links
-                  "
-                >
-                  <ul
-                    v-for="(link, index) in article.body.toc.links"
-                    :key="index"
-                    class="list-none ml-5"
-                  >
-                    <LayoutLink
-                      v-if="link.text != article.title"
-                      class="text-base opacity-60 hover:opacity-90 mt-2"
-                      :to="processPath(article._path) + '#' + link.id"
-                      >{{ link.text }}</LayoutLink
-                    >
-                    <ul v-if="link.children" class="ml-3 mt-1 text-sm">
-                      <li
-                        v-for="(childLink, childIndex) in link.children"
-                        :key="childIndex"
-                      >
-                        <LayoutLink
-                          class="opacity-60 hover:opacity-90"
-                          :to="processPath(article._path) + '#' + childLink.id"
-                          >{{ childLink.text }}</LayoutLink
-                        >
-                      </li>
-                    </ul>
-                  </ul></template
-                >
+              <template v-if="isIndex(article._path)">
+                <DocsNavigationItem :article="article" :routeName="routeName" />
+              </template>
+            </li>
+            <div style="h-5 w-5 bg-red-500"></div>
+            <li
+              v-for="article in list"
+              :key="article._path"
+              class="list-none capitalize"
+            >
+              <template
+                v-if="
+                  !isPageBlacklisted(article._path) && !isIndex(article._path)
+                "
+              >
+                <DocsNavigationItem :article="article" :routeName="routeName" />
               </template>
             </li>
           </ContentList>
@@ -71,6 +44,8 @@
 
 <script lang="ts" setup>
 const route = useRoute();
+const localePath = useLocalePath();
+const { locale } = useI18n();
 
 // Transform index to "readme"
 async function handleIndex(path: string): Promise<string> {
@@ -88,6 +63,17 @@ const isPageBlacklisted = (path: string) => {
     return true;
   }
   return false;
+};
+
+const isIndex = (path: string) => {
+  const index = joinPath(route.fullPath, "readme");
+  // not extremely reliable but no choice
+  //if (path.endsWith(index)) {
+  console.log("found");
+  console.log(index);
+  console.log(path);
+  //}
+  return path.endsWith(index);
 };
 
 // Check if a content page exist
@@ -108,10 +94,6 @@ const routeName = await handleIndex(
       : route.params.slug.join("/")
   }`
 );
-
-function processPath(path: string) {
-  return path.replace("/readme", "");
-}
 
 // Return 404 if the page does not exist
 if (!(await pageExist(routeName))) {

@@ -37,8 +37,10 @@ const localePath = useLocalePath();
             >
           </li>
           <li class="hidden md:block">
-            <HeaderNavigationItem name="docs|docs/.*" :to="localePath('docs')"
-              >Documentation</HeaderNavigationItem
+            <HeaderNavigationItem
+              name="docs|docs/.*"
+              :to="localePath('docs')"
+              >{{ $t("head.title.documentation") }}</HeaderNavigationItem
             >
           </li>
           <li>

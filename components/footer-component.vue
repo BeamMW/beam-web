@@ -156,7 +156,7 @@ const menus = computed(() => [
     title: t("footer.developers.title"),
     links: [
       {
-        text: t("footer.developers.documentation"),
+        text: t("head.title.documentation"),
         href: "https://documentation.beam.mw/",
       },
       {

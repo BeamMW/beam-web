@@ -34,7 +34,7 @@ const menus = computed(() => [
         class: "block md:hidden",
       },
       {
-        text: t("footer.developers.documentation"),
+        text: t("head.title.documentation"),
         href: localePath("docs"),
         class: "block md:hidden",
       },
