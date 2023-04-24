@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27.5112284px" height="24.727px" viewBox="0 0 27.5112284 24.727" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-atomic_swap</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-atomic_swap" transform="translate(0.555614, 0.000000)">
+            <circle id="Oval" fill="#FE52FF" fill-rule="nonzero" cx="22.9" cy="21.227" r="3.5"></circle>
+            <circle id="Oval" fill="#FE52FF" fill-rule="nonzero" cx="3.5" cy="3.5" r="3.5"></circle>
+            <g id="Group" stroke-linecap="round" stroke-linejoin="round" transform="translate(0.858599, 10.858599)" stroke="#FFFFFF" stroke-width="2">
+                <path d="M2.53840065,0.735400646 L8.79640065,0.735400646 C12.0594006,0.735400646 14.7054006,3.38140065 14.7054006,6.64540065 L14.7054006,12.1654006" id="Path" transform="translate(8.621901, 6.450401) rotate(180.000000) translate(-8.621901, -6.450401) "></path>
+                <polyline id="Path" transform="translate(2.507401, 2.507401) rotate(135.000000) translate(-2.507401, -2.507401) " points="0.734400646 0.734400646 0.734400646 4.28040065 4.28040065 4.28040065"></polyline>
+            </g>
+            <g id="Group" stroke-linecap="round" stroke-linejoin="round" transform="translate(10.836000, 1.751000)" stroke="#FFFFFF" stroke-width="2">
+                <path d="M0,1.33226763e-15 L6.258,1.33226763e-15 C9.521,1.33226763e-15 12.167,2.646 12.167,5.91 L12.167,11.43" id="Path"></path>
+                <polyline id="Path" transform="translate(12.198000, 9.658000) rotate(-45.000000) translate(-12.198000, -9.658000) " points="10.425 7.885 10.425 11.431 13.971 11.431"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

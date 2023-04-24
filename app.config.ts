@@ -204,47 +204,47 @@ export const PlatformDetails: Record<
 export const docTypes = [
   {
     title: "Desktop Wallet (not working)",
-    image: "download/resources/desktop",
+    image: "docs/desktop",
     path: "/desktop",
   },
   {
     title: "Mobile App",
-    image: "download/resources/desktop",
+    image: "docs/mobile",
     path: "/mobile",
   },
   {
     title: "Web Wallet (not working)",
-    image: "download/resources/desktop",
+    image: "docs/desktop",
     path: "/web-wallet",
   },
   {
     title: "Mining (not working)",
-    image: "download/resources/desktop",
+    image: "docs/mining",
     path: "/mining",
   },
   {
     title: "Developers",
-    image: "download/resources/console",
+    image: "docs/console",
     path: "/dev",
   },
   {
     title: "Node (not working)",
-    image: "download/resources/desktop",
+    image: "docs/server",
     path: "/node",
   },
   {
     title: "Atomic Swaps",
-    image: "download/resources/desktop",
+    image: "docs/atomic-swaps",
     path: "/atomics-swaps",
   },
   {
     title: "Command Line Interface",
-    image: "download/resources/console",
+    image: "docs/console",
     path: "/cli",
   },
   {
     title: "Explorer (not working)",
-    image: "download/resources/desktop",
+    image: "docs/desktop",
     path: "/explorer",
   },
 ];
