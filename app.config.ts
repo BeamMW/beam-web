@@ -69,6 +69,7 @@ export enum ExternalLinksTitle {
 /**
  * Preload: Instructs the browser to download and process high-priority resources early, improving load times.
  * Preconnect: Establishes network connections to remote servers ahead of time, reducing connection setup latency.
+ * DNS-prefetch: Resolves domain names to IP addresses in advance, reducing the DNS lookup time when resources are requested from a different domain. This can speed up the overall page load time.
  * Prerender: Loads and renders an entire web page in the background, making it instantly available when needed.
  * Prefetch: Downloads and stores low-priority resources in advance, speeding up the loading of subsequent pages.
  */
