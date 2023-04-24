@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ExternalLinks } from "~/app.config";
+
 const { t } = useI18n();
 
 const title = computed(() => t("privacy.title"));
@@ -38,7 +40,7 @@ useSeoMeta({
             <MarkdownRenderer
               :t-key="`privacy.${index}.content`"
               :t-interpolation="{
-                support: '[support@beam.mw](mailto:support@beam.mw)',
+                support: `[Contact us by e-mail](${ExternalLinks.SUPPORT_EMAIL})`,
               }"
             />
           </p>
