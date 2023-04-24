@@ -2,6 +2,48 @@
 import { join, sep } from "path";
 import { globSync } from "glob";
 import { pathExists, copy } from "fs-extra";
+import { LocaleObject, Directions } from "vue-i18n-routing";
+
+// List of supported languages
+const locales: LocaleObject[] = [
+  {
+    code: "en",
+    iso: "en-US",
+    name: "English",
+    file: "en.json",
+  },
+  {
+    code: "fr",
+    name: "Français",
+    iso: "fr-FR",
+    file: "fr.json",
+  },
+  {
+    code: "ru",
+    name: "Русский",
+    iso: "ru-RU",
+    file: "ru.json",
+  },
+  {
+    code: "he",
+    name: "עִברִית",
+    iso: "he-IL",
+    file: "he.json",
+    dir: "rtl" as Directions,
+  },
+  {
+    code: "zh",
+    name: "中文（繁體）",
+    iso: "zh-CN",
+    file: "zh.json",
+  },
+  {
+    code: "jp",
+    name: "日本語",
+    iso: "ja-JP",
+    file: "jp.json",
+  },
+].sort((a, b) => a.code.localeCompare(b.code));
 
 const publicWebUrl = process.env.PUBLIC_WEB_URL || "https://beam.mw";
 
@@ -119,44 +161,6 @@ export default defineNuxtConfig({
         jp: "/マイニング",
       },
     },
-    locales: [
-      {
-        code: "en",
-        iso: "en-US",
-        name: "English",
-        file: "en.json",
-      },
-      {
-        code: "fr",
-        name: "Français",
-        iso: "fr-FR",
-        file: "fr.json",
-      },
-      {
-        code: "ru",
-        name: "Русский",
-        iso: "ru-RU",
-        file: "ru.json",
-      },
-      {
-        code: "he",
-        name: "עִברִית",
-        iso: "he-IL",
-        file: "he.json",
-        dir: "rtl",
-      },
-      {
-        code: "zh",
-        name: "中文（繁體）",
-        iso: "zh-CN",
-        file: "zh.json",
-      },
-      {
-        code: "jp",
-        name: "日本語",
-        iso: "ja-JP",
-        file: "jp.json",
-      },
-    ],
+    locales,
   },
 });
