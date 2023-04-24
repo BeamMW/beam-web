@@ -27,7 +27,7 @@ const faqs = Array.from({ length: faqEntries }, (_, i) => createFaq(i + 1));
           <h2
             class="text-xl font-bold md:text-2xl md:leading-tight text-white capitalize"
           >
-            {{ $t("faq.title") }}
+            <MarkdownRenderer t-key="faq.title" />
           </h2>
           <p class="mt-2 hidden md:block text-white/70">
             <MarkdownRenderer t-key="faq.description" />
