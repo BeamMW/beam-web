@@ -153,7 +153,7 @@
       "wallet": "Desktop Wallet Application",
       "commandlinewallet": "Command Line Wallet",
       "commandlinenode": "Command Line Node",
-      "changelog": "Changelog",
+      "changelog": "Release Notes",
       "documentation": "Documentation"
     }
   },
