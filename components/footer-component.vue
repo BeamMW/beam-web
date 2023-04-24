@@ -103,7 +103,6 @@ import {
   ExternalLinks,
   ExternalLinksIcon,
   ExternalLinksTitle,
-  CONTACT_EMAIL,
 } from "@/app.config";
 
 // Make it async
@@ -146,6 +145,8 @@ const menus = computed(() => [
         href: "https://qm.qq.com/cgi-bin/qm/qr?k=qrfLNFTLxvThCgcF0fqPc2YFtDzMiUcm&authKey=8hGDPVzLLlTvX4SCBAeYc8TlaumsgvpTIdSUs3%2FU0K8U5piBp3znAYD%2Bd9n6vfEC",
         onClick: () => openQQModal(),
       },
+      { text: ExternalLinksTitle.COINGECKO, href: ExternalLinks.COINGECKO },
+      { text: ExternalLinksTitle.CMC, href: ExternalLinks.CMC },
     ],
   },
   {
