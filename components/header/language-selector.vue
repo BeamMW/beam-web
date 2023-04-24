@@ -20,12 +20,7 @@ const currentLocale = computed(() => {
     class="!text-sm !py-1.5 !px-2 md:!px-3"
     accent-color="beam-blue"
   >
-    <IconFlag
-      :key="currentLocale.code"
-      class="w-4 h-4"
-      :flag="currentLocale.code"
-      loading="lazy"
-    />
+    <IconFlag :key="locale" class="w-4 h-4" :flag="locale" loading="eager" />
     {{ currentLocale.name }}
   </LayoutButton>
 </template>
