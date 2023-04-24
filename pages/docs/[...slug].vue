@@ -69,9 +69,9 @@ const isIndex = (path: string) => {
   const index = joinPath(route.fullPath, "readme");
   // not extremely reliable but no choice
   //if (path.endsWith(index)) {
-  console.log("found");
-  console.log(index);
-  console.log(path);
+  //console.log("found");
+  //console.log(index);
+  //console.log(path);
   //}
   return path.endsWith(index);
 };
