@@ -12,7 +12,9 @@ const localePath = useLocalePath();
 
 const targetComponentGetStarted = ref<HTMLElement | null>(null);
 
-const scrollToGetStarted = () => scrollToComponent(targetComponentGetStarted);
+const scrollToGetStarted = () => {
+  scrollToComponent(targetComponentGetStarted.value);
+};
 
 onMounted(() =>
   eventBus.on(UserInteractionEvents.SCROLL_TO_GET_STARTED, scrollToGetStarted)
