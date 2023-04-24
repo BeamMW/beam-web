@@ -75,14 +75,6 @@ export default defineNuxtConfig({
   },
   content: {
     documentDriven: false,
-    /* sources: {
-      desktop: {
-        prefix: "/docs/desktop", // All contents inside this source will be prefixed with `/fa`
-        driver: "fs",
-        // ...driverOptions
-        base: path.resolve(__dirname, "docs", "desktop"), // Path for source directory
-      },
-    }, */
   },
   sitemap: {
     discoverImages: false,
