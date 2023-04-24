@@ -48,6 +48,9 @@ export enum ExternalLinks {
   MEDIUM = "https://medium.com/beam-mw",
   COINGECKO = "https://www.coingecko.com/en/coins/beam/usd",
   CMC = "https://coinmarketcap.com/currencies/beam/",
+
+  // Other links
+  CHANGELOG = "https://github.com/BeamMW/beam/releases",
 }
 
 export enum ExternalLinksTitle {
