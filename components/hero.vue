@@ -81,7 +81,7 @@
         </div>
       </div>
       <div
-        class="heroImages flex justify-evenly w-full pb-12 mx-auto mb-12 md:px-12 lg:px-16 max-w-7xl pointer-events-none rtl:!flex-row"
+        class="heroImages flex justify-evenly w-full pb-12 mx-auto mb-12 md:px-12 lg:px-16 max-w-7xl pointer-events-none rtl:!flex-row-reverse"
       >
         <ClientOnly>
           <div
