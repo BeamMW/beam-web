@@ -168,10 +168,11 @@ export const PlatformDetails: Record<
     links: {
       store:
         "https://play.google.com/store/apps/details?id=com.mw.beam.beamwallet.mainnet",
-      wallet: "",
+      wallet: "https://builds.beam.mw/mainnet/android/mainnet-7.1.apk",
     },
     checksums: {
-      wallet: "",
+      wallet:
+        "79be44596cf66047e798f94c1ecf75f9e05734b681e854742474c651d949dc90",
     },
   },
 
