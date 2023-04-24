@@ -68,7 +68,7 @@ export enum ExternalLinksTitle {
   FORUM = "Forum",
   BITCOINTALK = "BitcoinTalk",
   MEDIUM = "Medium Blog",
-  COINGECKO = "Coingecko",
+  COINGECKO = "CoinGecko",
   CMC = "CoinMarketCap",
 }
 
