@@ -26,7 +26,7 @@ useHead({
 <template>
   <div class="bg-page-radial-gradient-dark-green">
     <div
-      class="flex max-w-2xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-16 text-center"
+      class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-16 text-center"
     >
       <div class="w-full flex flex-col md:flex-row justify-evenly items-center">
         <Icon
@@ -51,7 +51,7 @@ useHead({
 
       <div>
         <LayoutButton
-          button-link="https://beamx.gitbook.io/beam-mining/"
+          button-link="/docs/mining"
           :big="true"
           accent-color="beam-green-dark"
         >
@@ -86,15 +86,14 @@ useHead({
               />
             </div>
             <div class="col-span-1 p-4 justify-self-center">
-              <NuxtLink
+              <LayoutLink
                 v-for="(software, softwareIndex) in gpuType.miningSoftware"
                 :key="softwareIndex"
                 :to="software.link"
-                target="_blank"
                 class="block text-lg opacity-80 hover:opacity-100 transition-opacity"
               >
                 {{ software.name }}
-              </NuxtLink>
+              </LayoutLink>
             </div>
           </div>
         </div>

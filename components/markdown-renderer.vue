@@ -40,7 +40,6 @@ async function renderMarkdown(text: string) {
   const md = new MarkdownIt({ breaks: true });
 
   // Renderer rule for opening links
-
   md.renderer.rules.link_open = (tokens, idx, options, _env, self) => {
     const token = tokens[idx];
     if (token.attrs) {

@@ -33,7 +33,7 @@
             </h6>
             <button
               type="button"
-              class="transition bg-transparent text-beam-blue hover:opacity-60 rounded-full text-sm p-1.5 ml-auto inline-flex items-center"
+              class="transition bg-transparent text-beam-blue hover:opacity-60 rounded-full text-sm p-1.5 rtl:mr-auto ltr:ml-auto inline-flex items-center"
               @click="close"
             >
               <Icon class="w-5 h-5 block" name="layout/close" />

@@ -1,5 +1,50 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { join, sep } from "path";
+import { globSync } from "glob";
+import { pathExists, copy } from "fs-extra";
+
 const publicWebUrl = process.env.PUBLIC_WEB_URL || "https://beam.mw";
+
+// https://github.com/nuxt/content/issues/1551#issuecomment-1470246543
+// Added README to index replacement (as understood by the slug)
+const docsRoutes = globSync("./content/**/*.md").map((path) =>
+  path
+    .slice(7, -3)
+    .replace(/\d+\./g, "")
+    .replace(/\\/g, "/")
+    .replace("/README", "/index")
+);
+
+const copyDocsAssetsToPublic = async () => {
+  const docsPath = join(process.cwd(), "content", "docs");
+  const publicAssetsPath = join(process.cwd(), "public", "assets", "docs");
+
+  // Find all .gitbook/assets folders within the subdirectories of 'content/docs'
+  const gitbookAssetsFolders = globSync("**/.gitbook/assets", {
+    cwd: docsPath,
+  });
+
+  // Iterate over the .gitbook/assets folders and copy their contents
+  for (const gitbookAssetsFolder of gitbookAssetsFolders) {
+    const source = join(docsPath, gitbookAssetsFolder);
+    // Get the parent directory name without the '.gitbook/assets' part
+    const destinationFolder = gitbookAssetsFolder.replace(
+      `${sep}.gitbook${sep}assets`,
+      ""
+    );
+    const destination = join(publicAssetsPath, destinationFolder);
+
+    // Check if the destination folder exists
+    const folderExists = await pathExists(destination);
+
+    // If the destination folder doesn't exist, copy the contents of the .gitbook/assets folder to the destination folder
+    if (!folderExists) {
+      await copy(source, destination);
+      // eslint-disable-next-line no-console
+      console.log(`Contents of ${source} copied to ${destination}.`);
+    }
+  }
+};
 
 export default defineNuxtConfig({
   ssr: true,
@@ -12,11 +57,24 @@ export default defineNuxtConfig({
     "@nuxtjs/fontaine",
     "@nuxt/content",
   ],
+  nitro: {
+    prerender: {
+      routes: ["/sitemap.xml", ...docsRoutes],
+    },
+  },
+  hooks: {
+    "build:before": async () => {
+      await copyDocsAssetsToPublic();
+    },
+  },
   runtimeConfig: {
     public: {
       // Can be set with environment variables
       siteUrl: publicWebUrl,
     },
+  },
+  content: {
+    documentDriven: false,
   },
   sitemap: {
     discoverImages: false,
@@ -73,6 +131,19 @@ export default defineNuxtConfig({
         name: "Français",
         iso: "fr-FR",
         file: "fr.json",
+      },
+      {
+        code: "ru",
+        name: "Русский",
+        iso: "ru-RU",
+        file: "ru.json",
+      },
+      {
+        code: "he",
+        name: "עִברִית",
+        iso: "he-IL",
+        file: "he.json",
+        dir: "rtl",
       },
       {
         code: "zh",

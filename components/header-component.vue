@@ -10,19 +10,25 @@ const localePath = useLocalePath();
       class="grid-layout max-w-screen-xl mx-auto items-center py-4 px-3 md:px-4"
     >
       <div class="order-2 md:order-1">
-        <NuxtLink
-          :to="localePath('index')"
-          class="hover:opacity-70 transition-opacity"
-        >
-          <Icon name="logo" class="h-auto w-10 select-none" :as-image="true" />
-        </NuxtLink>
+        <div class="inline-block w-auto">
+          <LayoutLink
+            :to="localePath('index')"
+            class="hover:opacity-70 transition-opacity"
+          >
+            <Icon
+              name="logo"
+              class="h-auto w-10 select-none"
+              :as-image="true"
+            />
+          </LayoutLink>
+        </div>
       </div>
 
       <div
         class="justify-self-start order-1 md:justify-self-auto md:order-2 text-base text-white font-bold"
       >
         <ul
-          class="md:flex md:p-0 font-medium md:rounded-lg md:flex-row md:space-x-8 md:mt-0"
+          class="md:flex md:p-0 font-medium md:rounded-lg md:flex-row md:gap-x-8 md:mt-0"
         >
           <li class="hidden md:block">
             <HeaderNavigationItem name="index" :to="localePath('index')">{{
@@ -36,6 +42,13 @@ const localePath = useLocalePath();
               >{{ $t("header.nav.downloads") }}</HeaderNavigationItem
             >
           </li>
+          <li class="hidden md:block">
+            <HeaderNavigationItem
+              name="docs|docs/.*"
+              :to="localePath('docs')"
+              >{{ $t("head.title.documentation") }}</HeaderNavigationItem
+            >
+          </li>
           <li>
             <LayoutDropdown>
               <template #dropdown-button>
@@ -45,7 +58,7 @@ const localePath = useLocalePath();
                 >
                   {{ $t("header.nav.resources") }}
                   <Icon
-                    class="rotate-90 block ml-2 w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+                    class="rotate-90 block ltr:ml-2 rtl:mr-2 w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
                     name="layout/arrow-right"
                   />
                 </HeaderNavigationItem>

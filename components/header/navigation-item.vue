@@ -2,9 +2,9 @@
   <button v-if="isButton" :class="classElement" type="button" v-bind="$attrs">
     <slot />
   </button>
-  <NuxtLink v-else :to="to" :class="classElement" v-bind="$attrs">
+  <LayoutLink v-else :to="to" :class="classElement" v-bind="$attrs">
     <slot />
-  </NuxtLink>
+  </LayoutLink>
 </template>
 
 <script lang="ts" setup>
@@ -35,12 +35,17 @@ const classElement = ref(defaultClasses);
 const route = useRoute();
 
 watchEffect(() => {
-  const routeNameParsed =
-    typeof route.name === "string" ? route.name.split("___")[0] : "";
-  classElement.value =
-    routeNameParsed === props.name
+  if (props.name) {
+    // Create a regex pattern using props.name
+    const regexPattern = new RegExp(props.name);
+
+    // Check if routeNameParsed matches the regex pattern
+    const isMatching = regexPattern.test(getRouteName(route.name));
+
+    classElement.value = isMatching
       ? `${defaultClasses} active`
       : defaultClasses;
+  }
 });
 </script>
 

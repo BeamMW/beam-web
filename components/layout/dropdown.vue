@@ -48,6 +48,7 @@ const toggleDropdown = () => {
 
 const closeDropdown = () => {
   showDropdown.value = false;
+  windowLocked.value = false;
 };
 
 function destroyPopper() {
@@ -119,7 +120,7 @@ watch([showDropdown, referenceElement], async () => {
   }
 });
 
-const handleClickOutside = (event: MouseEvent) => {
+const handleClick = (event: MouseEvent) => {
   if (
     referenceElement.value &&
     popperElement.value &&
@@ -130,7 +131,21 @@ const handleClickOutside = (event: MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
     closeDropdown();
-    windowLocked.value = false;
+  } else if (
+    popperElement.value &&
+    popperElement.value.contains(event.target as Node)
+  ) {
+    // close dropdown automatically if we click on an internal link inside
+    const targetElement = event.target as HTMLElement;
+    if (targetElement.nodeName === "A") {
+      const hrefAttribute = targetElement.getAttribute("href");
+      if (
+        hrefAttribute &&
+        (hrefAttribute.startsWith("/") || hrefAttribute.startsWith("#"))
+      ) {
+        closeDropdown();
+      }
+    }
   }
 };
 
@@ -146,14 +161,14 @@ onMounted(() => {
   }
 
   // Handle click outside
-  document.addEventListener("click", handleClickOutside);
+  document.addEventListener("click", handleClick);
 
   // Handle window resize
   window.addEventListener("resize", updatePlacement);
 });
 
 onUnmounted(() => {
-  document.removeEventListener("click", handleClickOutside);
+  document.removeEventListener("click", handleClick);
   window.removeEventListener("resize", updatePlacement);
 
   // Detach dropdown content to body
@@ -177,7 +192,7 @@ provide("toggleDropdown", toggleDropdown);
 <style lang="postcss" scoped>
 /** Custom default dropdown container */
 .popper-container:deep(.dropdown-container) {
-  @apply h-full will-change-transform z-50 text-white relative list-none bg-[rgba(4,37,72,.6)] backdrop-blur-xl backdrop-brightness-125 border-black border rounded-lg border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
+  @apply h-full will-change-transform z-50 text-white relative list-none backdrop-blur-xl backdrop-brightness-75 md:bg-[#042248] border-black border rounded-lg border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
 }
 
 @keyframes animate {

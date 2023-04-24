@@ -23,10 +23,6 @@ const handleClick = (onClick: () => void, e: MouseEvent) => {
     onClick();
   }
 };
-
-const getLinkTarget = (href: string) => {
-  return href.startsWith("/") || href.startsWith("#") ? "_self" : "_blank";
-};
 </script>
 
 <template>
@@ -34,19 +30,18 @@ const getLinkTarget = (href: string) => {
     <h4>{{ title }}</h4>
     <div class="mt-3 grid space-y-3 text-sm">
       <p v-for="(link, index) in links" :key="index">
-        <NuxtLink
+        <LayoutLink
           :to="link.href"
           class="inline capitalize transition text-white/70 hover:text-white"
-          :target="getLinkTarget(link.href)"
           @click="
             typeof link.onClick == 'function' &&
               handleClick(link.onClick, $event)
           "
-          >{{ link.text }}</NuxtLink
+          >{{ link.text }}</LayoutLink
         >
         <span
           v-if="link.highlight"
-          class="inline font-semibold text-white text-xs bg-[#AB37E6] rounded-full py-1.5 px-2 ml-2 whitespace-nowrap"
+          class="inline font-bold text-white text-xs bg-[#AB37E6] rounded-full py-1.5 px-2 ml-2 whitespace-nowrap"
           >{{ link.highlight }}</span
         >
       </p>
@@ -56,6 +51,6 @@ const getLinkTarget = (href: string) => {
 
 <style scoped lang="postcss">
 h4 {
-  @apply font-semibold uppercase tracking-wider text-white/70;
+  @apply font-bold uppercase tracking-wider text-white/70;
 }
 </style>

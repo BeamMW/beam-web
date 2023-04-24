@@ -1,17 +1,19 @@
 <script lang="ts" setup>
-import { RouteRecordName } from "vue-router";
 import { linkElements } from "@/utils/linkElements";
+import { UserInteractionEvents, eventBus } from "~/utils/emitter";
+import { scrollToComponent } from "~/utils/scrollToComponent";
 
 const windowLocked = useState("windowLocked", () => false);
 const currentRoute = useState("currentRoute", () => "");
+const localPath = useLocalePath();
 
 const fileVersion = 1;
 
-const router = useRoute();
-const getRouteName = (routeName?: RouteRecordName | null) =>
-  typeof routeName === "string" ? routeName.split("___")[0] : "";
+const route = useRoute();
+const router = useRouter();
+
 watch(
-  router,
+  route,
   (route) => {
     currentRoute.value = getRouteName(route.name);
   },
@@ -19,6 +21,34 @@ watch(
 );
 
 defineRobotMeta();
+
+const redirectToIndex = async () => {
+  await router.push(localPath("index"));
+};
+
+// Scroll to "Where to buy" called but unable to scroll, redirect to homepage
+const whereToBuyScroll = async () => {
+  const targetComponentBuy = document.getElementById("targetComponentBuy");
+  if (!targetComponentBuy) {
+    await redirectToIndex();
+    // ToDo: find a more reliable way than a settimeout
+    setTimeout(() => {
+      const homepageBuyComponent =
+        document.getElementById("targetComponentBuy");
+      scrollToComponent(homepageBuyComponent);
+    }, 600);
+  } else {
+    scrollToComponent(targetComponentBuy);
+  }
+};
+
+onMounted(() =>
+  eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll)
+);
+
+onUnmounted(() =>
+  eventBus.off(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll)
+);
 </script>
 
 <template>
@@ -58,14 +88,18 @@ defineRobotMeta();
       />
     </Head>
     <NuxtLayout>
-      <NuxtLoadingIndicator />
+      <NuxtLoadingIndicator
+        color="repeating-linear-gradient(to right,var(--beam-green-dark) 0%,var(--beam-pink) 100%)"
+        class="will-change-auto"
+      />
       <LanguageHandler>
         <template
           #default="{ /*onBeforeEnter, */ onAfterEnter, languageChanged }"
         >
           <NuxtPage
             :transition="{
-              name: languageChanged ? '' : 'page',
+              name:
+                languageChanged || currentRoute == 'docs-slug' ? '' : 'page',
               mode: 'out-in',
               //onBeforeEnter,
               onAfterEnter,

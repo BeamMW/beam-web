@@ -11,7 +11,7 @@
         :key="availableLocale.code"
         class="w-full"
       >
-        <NuxtLink
+        <LayoutLink
           :to="
             switchLocalePath(availableLocale.code) ||
             localePath('index', availableLocale.code)
@@ -19,16 +19,16 @@
           class="hover:text-beam-blue transition-colors w-full py-5 px-6 md:px-4 md:py-2.5 hover:bg-black/20 inline-block"
           @click.prevent.stop="onLanguageClicked(availableLocale.code)"
         >
-          <span class="flex items-center">
+          <span class="flex items-center gap-2">
             <IconFlag
-              class="w-5 h-5 mr-2"
+              class="w-5 h-5"
               :flag="availableLocale.code"
               :as-image="true"
               loading="lazy"
             />
             {{ availableLocale.name }}
           </span>
-        </NuxtLink>
+        </LayoutLink>
       </li>
     </ul>
   </div>

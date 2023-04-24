@@ -3,7 +3,8 @@
     "title": {
       "main": "BEAM: Confidential DeFi & Crypto",
       "index": "Home",
-      "downloads": "Downloads"
+      "downloads": "Downloads",
+      "documentation": "Documentation"
     },
     "description": "Beam offers privacy, confidential assets, DeFi, NFTs, DEX, and a seamless user experience in a secure, decentralized environment.",
     "keywords": "Beam, cryptocurrency, privacy, anonymity, confidential assets, DeFi, NFTs, blockchain, decentralized, DEX, smart contracts, user experience, wallet, secure, financial freedom, AMM, atomic swaps, virtual machine, WASM, contract shaders, app shaders, mobile wallet, desktop wallet, transaction types, private stablecoins, wrapped assets, sidechains, oracles, lending, Uniswap-like, Beam nodes, Beam Virtual Machine, confidentiality, bridged assets, Beam blockchain, seamless trading, interactive wallet, Bitcoin-like transactions, Beam trading, financial privacy"
@@ -55,7 +56,7 @@
     "description": "Common queries answered.",
     "1": {
       "question": "When was Beam launched?",
-      "answer": "Beam's mainnet went live on **January 3rd, 2019**. Check the current status at the [Beam Blockchain Explorer](https://duckduckgo.com)."
+      "answer": "Beam's mainnet went live on **January 3rd, 2019**. Check the current status at the [Beam Blockchain Explorer](https://explorer.beam.mw)."
     },
     "2": {
       "question": "Is Beam open-source?",
@@ -158,6 +159,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
+    "lastupdate": "LAST UPDATED: 21TH OF APRIL 2023",
     "1": {
       "title": "Introduction",
       "content": "This Privacy Policy (the \"Policy\") applies to the Beam cryptocurrency digital wallet (\"Beam Wallet\", \"Software\") developed by Beam Foundation Limited (\"Beam\", \"we\", \"us\", or \"our\"). The Policy outlines how we collect, use, and protect your personal data in compliance with the General Data Protection Regulation (GDPR) when you use the Beam Wallet. By using the Beam Wallet, you consent to the collection and use of your information in accordance with this Policy."
@@ -195,6 +197,20 @@
       "content": "If you have any questions or concerns about our Privacy Policy or our privacy practices, please feel free to contact us at:\n\n**Beam Foundation Limited**\nEmail: {support}"
     }
   },
+  "docs": {
+    "types": {
+      "desktop": "Desktop Wallet",
+      "mobile": "Mobile Wallet App",
+      "web": "Web Wallet",
+      "mining": "Mining",
+      "developers": "Developers",
+      "node": "Node",
+      "atomicswaps": "Atomic Swaps",
+      "cli": "Command Line Interface",
+      "explorer": "Blockchain Explorer"
+    },
+    "explore": "Explore (English)"
+  },
   "errors": {
     "title": "Error {code}",
     "back": "Beam Me Back",
@@ -209,13 +225,16 @@
     "details": "Dive into the world of Beam mining and learn how to contribute to the network's security and growth with our step-by-step guide.",
     "button": "Beam Mining Guide",
     "miningSoftware": "Mining software",
-    "downloadWalletAndNode": "Download Wallet and Node"
+    "downloadWalletAndNode": "Download Wallet and Node",
+    "resources": {
+      "support": "Beam Mining Support",
+      "calculator": "Rewards Calculator"
+    }
   },
   "footer": {
     "join": {
-      "title": "Join",
+      "title": "Beam",
       "downloadWallet": "Download Wallet",
-      "beamOutreachClub": "Beam Outreach Club",
       "beamForum": "Beam Forum",
       "beamBlog": "Beam Blog"
     },
@@ -228,7 +247,6 @@
     },
     "developers": {
       "title": "Developers",
-      "documentation": "Documentation",
       "sourceCode": "Source Code",
       "dAppnetWallet": "DAppnet Wallet",
       "blockchainExplorer": "Blockchain Explorer",

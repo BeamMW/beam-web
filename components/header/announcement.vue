@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// todo: find replacement for height animation because it's slower than potential alternatives
 import { useI18n } from "vue-i18n";
 import { nextTick } from "vue";
 import { throttle } from "~/utils/throttle";
@@ -81,7 +80,7 @@ const leave = (el: HTMLElement) => {
     @leave="leave"
   >
     <div
-      v-show="announcementMessage && showMessage"
+      v-show="showMessage"
       ref="announcementContainer"
       class="overflow-hidden will-change-auto"
     >
@@ -95,11 +94,12 @@ const leave = (el: HTMLElement) => {
               class="font-bold text-xs md:text-sm text-white/90 flex items-center gap-3"
             >
               <MarkdownRenderer
+                :key="announcementMessage"
                 class="colorLinks"
                 t-key="header.announcement"
               />
             </p>
-            <div class="ml-auto">
+            <div class="rtl:mr-auto ltr:ml-auto">
               <button
                 type="button"
                 class="inline-flex rounded-md p-1.5 text-white/80 transition-colors hover:text-white/60 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#042548] focus:ring-[#042548]"

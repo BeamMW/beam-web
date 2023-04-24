@@ -3,7 +3,8 @@
     "title": {
       "main": "BEAM: 機密性のあるDeFi＆暗号通貨",
       "index": "ホーム",
-      "downloads": "ダウンロード"
+      "downloads": "ダウンロード",
+      "documentation": "ドキュメント"
     },
     "description": "Beamは、プライバシー、機密資産、DeFi、NFT、DEX、安全で分散された環境でのシームレスなユーザーエクスペリエンスを提供します。",
     "keywords": "Beam, 暗号通貨, プライバシー, 匿名性, 機密資産, DeFi, NFT, ブロックチェーン, 分散型, DEX, スマートコントラクト, ユーザーエクスペリエンス, ウォレット, セキュア, 財務の自由, AMM, アトミックスワップ, 仮想マシン, WASM, コントラクトシェーダー, アプリシェーダー, モバイルウォレット, デスクトップウォレット, 取引タイプ, プライベートステーブルコイン, ラップされた資産, サイドチェーン, オラクル, 貸付, Uniswapのような, Beamノード, Beam仮想マシン, 機密性, ブリッジされた資産, Beamブロックチェーン, シームレスな取引, 対話型ウォレット, Bitcoinのような取引, Beam取引, 財務プライバシー"
@@ -55,7 +56,7 @@
     "description": "一般的な問い合わせに答えます。",
     "1": {
       "question": "Beamはいつ開始されましたか？",
-      "answer": "Beamのメインネットは**2019年1月3日**に稼働を開始しました。現在のステータスは[Beam Blockchain Explorer](https://duckduckgo.com)で確認できます。"
+      "answer": "Beamのメインネットは**2019年1月3日**に稼働を開始しました。現在のステータスは[Beam Blockchain Explorer](https://explorer.beam.mw)で確認できます。"
     },
     "2": {
       "question": "Beamはオープンソースですか？",
@@ -158,6 +159,7 @@
   },
   "privacy": {
     "title": "プライバシーポリシー",
+    "lastupdate": "最終更新：2023年4月21日",
     "1": {
       "title": "イントロダクション",
       "content": "このプライバシーポリシー（以下「ポリシー」と称します）は、Beam Foundation Limited（以下「Beam」、「私たち」、「私たちの」と称します）が開発したBeam暗号通貨デジタルウォレット（以下「Beamウォレット」、「ソフトウェア」と称します）に適用されます。本ポリシーでは、Beamウォレットの使用時に、一般データ保護規則（GDPR）に準拠して、お客様の個人データをどのように収集、使用、保護するかについて説明しています。Beamウォレットを使用することにより、お客様は本ポリシーに従って情報を収集および使用することに同意したものとみなされます。"
@@ -195,6 +197,20 @@
       "content": "プライバシーポリシーまたはプライバシーに関する当社の慣行についての質問や懸念がある場合は、お気軽にお問い合わせください。\n\n**Beam Foundation Limited**\nメール：{support}"
     }
   },
+  "docs": {
+    "types": {
+      "desktop": "デスクトップウォレット",
+      "mobile": "モバイルウォレットアプリ",
+      "web": "ウェブウォレット",
+      "mining": "マイニング",
+      "developers": "開発者",
+      "node": "ノード",
+      "atomicswaps": "アトミックスワップ",
+      "cli": "コマンドラインインターフェース",
+      "explorer": "ブロックチェーンエクスプローラー"
+    },
+    "explore": "探索（英語）"
+  },
   "errors": {
     "title": "エラー {code}",
     "back": "ビームで戻る",
@@ -209,13 +225,16 @@
     "details": "Beamマイニングの世界に飛び込んで、ステップバイステップのガイドでネットワークのセキュリティと成長に貢献する方法を学びましょう。",
     "button": "Beamマイニングガイド（英語）",
     "miningSoftware": "マイニングソフトウェア",
-    "downloadWalletAndNode": "ウォレットとノードをダウンロード"
+    "downloadWalletAndNode": "ウォレットとノードをダウンロード",
+    "resources": {
+      "support": "Beam マイニング サポート",
+      "calculator": "報酬計算機"
+    }
   },
   "footer": {
     "join": {
-      "title": "参加する",
+      "title": "Beam",
       "downloadWallet": "ウォレットをダウンロード",
-      "beamOutreachClub": "Beamアウトリーチクラブ",
       "beamForum": "Beamフォーラム",
       "beamBlog": "Beamブログ"
     },
@@ -228,7 +247,6 @@
     },
     "developers": {
       "title": "開発者",
-      "documentation": "ドキュメント",
       "sourceCode": "ソースコード",
       "dAppnetWallet": "DAppnetウォレット",
       "blockchainExplorer": "ブロックチェーンエクスプローラー",

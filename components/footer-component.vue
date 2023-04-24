@@ -52,24 +52,23 @@
         >
           <div class="flex items-center">
             <div class="space-x-4 text-sm">
-              <NuxtLink
+              <LayoutLink
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
                 :to="localePath('privacy-policy')"
               >
                 {{ $t("privacy.title") }}
-              </NuxtLink>
+              </LayoutLink>
               <a
                 class="capitalize inline-flex gap-x-2 transition-colors text-white/50 hover:text-white/90"
                 :title="t('footer.contact')"
-                :href="`mailto:${CONTACT_EMAIL}`"
+                :href="ExternalLinks.SUPPORT_EMAIL"
               >
                 {{ $t("footer.contact") }}
               </a>
-              <NuxtLink
-                target="_blank"
+              <LayoutLink
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
-                to="https://docs.beam.mw/BEAM_Media_Kit_and_resources_v4.zip"
-                >{{ $t("footer.mediakit") }}</NuxtLink
+                to="/assets/BEAM_Media_Kit_and_resources_v4.zip"
+                >{{ $t("footer.mediakit") }}</LayoutLink
               >
             </div>
           </div>
@@ -79,8 +78,7 @@
               :key="index"
               class="space-x-4"
             >
-              <NuxtLink
-                target="_blank"
+              <LayoutLink
                 v-bind="{ title: typedExternalLinksTitle[icon] }"
                 class="inline-block text-gray-200 200 opacity-60 hover:opacity-90 transition select-none"
                 :to="ExternalLinks[icon]"
@@ -91,7 +89,7 @@
                   :as-image="true"
                   loading="lazy"
                 />
-              </NuxtLink>
+              </LayoutLink>
             </section>
           </div>
         </div>
@@ -105,7 +103,6 @@ import {
   ExternalLinks,
   ExternalLinksIcon,
   ExternalLinksTitle,
-  CONTACT_EMAIL,
 } from "@/app.config";
 
 // Make it async
@@ -132,10 +129,6 @@ const menus = computed(() => [
         text: t("footer.join.downloadWallet"),
         href: localePath("downloads"),
       },
-      {
-        text: t("footer.join.beamOutreachClub"),
-        href: "https://beamoutreach.club",
-      },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
       { text: "Newsletter", href: ExternalLinks.SUBSTACK },
@@ -149,30 +142,32 @@ const menus = computed(() => [
       { text: t("footer.community.reddit"), href: ExternalLinks.REDDIT },
       {
         text: t("footer.community.qq"),
-        href: "https://qm.qq.com/cgi-bin/qm/qr?k=qrfLNFTLxvThCgcF0fqPc2YFtDzMiUcm&authKey=8hGDPVzLLlTvX4SCBAeYc8TlaumsgvpTIdSUs3%2FU0K8U5piBp3znAYD%2Bd9n6vfEC",
+        href: ExternalLinks.QQ,
         onClick: () => openQQModal(),
       },
+      { text: ExternalLinksTitle.COINGECKO, href: ExternalLinks.COINGECKO },
+      { text: ExternalLinksTitle.CMC, href: ExternalLinks.CMC },
     ],
   },
   {
     title: t("footer.developers.title"),
     links: [
       {
-        text: t("footer.developers.documentation"),
-        href: "https://documentation.beam.mw/",
+        text: t("head.title.documentation"),
+        href: localePath("docs"),
       },
       {
         text: t("footer.developers.blockchainExplorer"),
-        href: "https://explorer.beam.mw/",
+        href: ExternalLinks.EXPLORER,
       },
       { text: t("footer.developers.sourceCode"), href: ExternalLinks.GITHUB },
       {
         text: t("footer.developers.dAppnetWallet"),
-        href: `https://dappnet.beam.mw${localePath("downloads")}`,
+        href: ExternalLinks.DAPPNET_DOWNLOAD,
       },
       {
         text: t("footer.developers.support"),
-        href: "https://t.me/beamdevsupport",
+        href: ExternalLinks.DEVELOPERS_SUPPORT,
       },
     ],
   },
@@ -180,7 +175,7 @@ const menus = computed(() => [
     title: t("footer.miners.title"),
     links: [
       { text: t("footer.miners.startMining"), href: localePath("mining") },
-      { text: t("footer.miners.support"), href: "https://t.me/BeamMiners" },
+      { text: t("footer.miners.support"), href: ExternalLinks.MINING_SUPPORT },
     ],
   },
 ]);

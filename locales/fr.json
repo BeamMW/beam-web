@@ -3,7 +3,8 @@
     "title": {
       "main": "BEAM: DeFi & Crypto confidentiels",
       "index": "Accueil",
-      "downloads": "Téléchargements"
+      "downloads": "Téléchargements",
+      "documentation": "Documentation"
     },
     "description": "Beam offre confidentialité, actifs confidentiels, DeFi, NFTs, DEX et une expérience utilisateur fluide dans un environnement sécurisé et décentralisé.",
     "keywords": "Beam, crypto-monnaie, confidentialité, anonymat, actifs confidentiels, DeFi, NFTs, blockchain, décentralisé, DEX, contrats intelligents, expérience utilisateur, portefeuille, sécurisé, liberté financière, AMM, swaps atomiques, machine virtuelle, WASM, shaders de contrats, shaders d'applications, portefeuille mobile, portefeuille de bureau, types de transactions, stablecoins privées, actifs encapsulés, sidechains, oracles, prêts, Uniswap-like, nœuds Beam, Beam Virtual Machine, confidentialité, actifs pontés, blockchain Beam, trading fluide, portefeuille interactif, transactions similaires à Bitcoin, trading Beam, confidentialité financière"
@@ -55,7 +56,7 @@
     "description": "Réponses aux questions courantes.",
     "1": {
       "question": "Quand Beam a-t-il été lancé ?",
-      "answer": "Le mainnet de Beam a été lancé le **3 janvier 2019**. Consultez l'état actuel sur [Beam Blockchain Explorer](https://duckduckgo.com)."
+      "answer": "Le mainnet de Beam a été lancé le **3 janvier 2019**. Consultez l'état actuel sur [Beam Blockchain Explorer](https://explorer.beam.mw)."
     },
     "2": {
       "question": "Beam est-il open-source ?",
@@ -156,6 +157,7 @@
   },
   "privacy": {
     "title": "Politique de confidentialité",
+    "lastupdate": "DERNIÈRE MISE À JOUR : 21 AVRIL 2023",
     "1": {
       "title": "Introduction",
       "content": "Cette politique de confidentialité (la «Politique») s'applique au portefeuille numérique de cryptomonnaie Beam («Beam Wallet», «Logiciel») développé par Beam Foundation Limited («Beam», «nous», «notre»). La politique décrit comment nous recueillons, utilisons et protégeons vos données personnelles conformément au Règlement général sur la protection des données (RGPD) lorsque vous utilisez le Beam Wallet. En utilisant le Beam Wallet, vous consentez à la collecte et à l'utilisation de vos informations conformément à cette politique."
@@ -193,6 +195,20 @@
       "content": "Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité ou nos pratiques en matière de confidentialité, n'hésitez pas à nous contacter à:\n\n**Beam Foundation Limited**\nE-mail : {support}"
     }
   },
+  "docs": {
+    "types": {
+      "desktop": "Portefeuille de bureau",
+      "mobile": "Application de portefeuille mobile",
+      "web": "Portefeuille Web",
+      "mining": "Minage",
+      "developers": "Développeurs",
+      "node": "Nœud",
+      "atomicswaps": "Échanges atomiques",
+      "cli": "Interface de ligne de commande",
+      "explorer": "Explorateur de blockchain"
+    },
+    "explore": "Explorer (Anglais)"
+  },
   "errors": {
     "title": "Erreur {code}",
     "back": "Ramenez-moi",
@@ -207,13 +223,16 @@
     "details": "Plongez dans le monde du minage Beam et découvrez comment contribuer à la sécurité et à la croissance du réseau avec notre guide étape par étape.",
     "button": "Guide de minage Beam (en anglais)",
     "miningSoftware": "Logiciel de minage",
-    "downloadWalletAndNode": "Télécharger le portefeuille et le nœud"
+    "downloadWalletAndNode": "Télécharger le portefeuille et le nœud",
+    "resources": {
+      "support": "Support pour le minage Beam",
+      "calculator": "Calculateur de récompenses"
+    }
   },
   "footer": {
     "join": {
-      "title": "Rejoindre",
+      "title": "Beam",
       "downloadWallet": "Télécharger le portefeuille",
-      "beamOutreachClub": "Club Beam Outreach",
       "beamForum": "Forum Beam",
       "beamBlog": "Blog Beam"
     },
@@ -226,7 +245,6 @@
     },
     "developers": {
       "title": "Développeurs",
-      "documentation": "Documentation",
       "sourceCode": "Code source",
       "dAppnetWallet": "Portefeuille DAppnet",
       "blockchainExplorer": "Explorateur de blockchain",

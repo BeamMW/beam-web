@@ -67,6 +67,7 @@ const arrowClasses = (index: number) => ({
   "!rotate-90": activeIndex.value === index,
   "!text-beam-blue": activeIndex.value === index,
   "!opacity-100": activeIndex.value === index,
+  "rtl:!rotate-180": activeIndex.value !== index,
   "opacity-60": activeIndex.value !== index,
 });
 

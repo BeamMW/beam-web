@@ -28,10 +28,9 @@ defineProps({
 
 <template>
   <div class="text-center">
-    <NuxtLink
+    <LayoutLink
       :to="link"
       :title="t('downloads.downloadButton', { platform: title })"
-      target="_blank"
       :class="`${
         highlight
           ? 'pointer-events-none select-none opacity-90'
@@ -53,7 +52,7 @@ defineProps({
           >{{ flag }}</span
         >
       </h4>
-    </NuxtLink>
+    </LayoutLink>
 
     <div v-if="highlight" class="py-4">
       <LayoutButton :big="true" :button-link="link" accent-color="beam-blue">

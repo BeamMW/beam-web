@@ -36,19 +36,14 @@ const classToSet = computed(
 </script>
 
 <template>
-  <NuxtLink
+  <LayoutLink
     v-if="as == 'link'"
     :class="classToSet"
     :to="buttonLink"
-    :target="
-      buttonLink.startsWith('/') || buttonLink.startsWith('#')
-        ? '_self'
-        : '_blank'
-    "
     v-bind="$attrs"
   >
     <slot></slot>
-  </NuxtLink>
+  </LayoutLink>
   <button v-else-if="props.as == 'button'" type="button" :class="classToSet">
     <slot></slot>
   </button>

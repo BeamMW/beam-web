@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ExternalLinks } from "~/app.config";
+
 const { t } = useI18n();
 
 const styles =
@@ -13,28 +15,28 @@ const styles =
       <ResourcesLink
         :title="t('downloads.resources.wallet')"
         image="download/resources/desktop"
-        link="https://beamx.gitbook.io/desktop-wallet-user-guide/"
+        link="/docs/desktop"
         :link-text="t('downloads.resources.documentation')"
         :class="styles"
       />
       <ResourcesLink
         :title="t('downloads.resources.commandlinenode')"
         image="download/resources/console"
-        link="https://beamx.gitbook.io/beam-node-user-guide/"
+        link="/docs/node"
         :link-text="t('downloads.resources.documentation')"
         :class="styles"
       />
       <ResourcesLink
         :title="t('downloads.resources.commandlinewallet')"
         image="download/resources/console"
-        link="https://beamx.gitbook.io/cli-guide/"
+        link="/docs/cli"
         :link-text="t('downloads.resources.documentation')"
         :class="styles"
       />
       <ResourcesLink
         :title="t('downloads.resources.changelog')"
         image="download/resources/changelog"
-        link="#"
+        :link="ExternalLinks.CHANGELOG"
         :class="styles"
       />
     </div>

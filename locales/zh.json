@@ -3,7 +3,8 @@
     "title": {
       "main": "BEAM：保密 DeFi 和加密货币",
       "index": "首页",
-      "downloads": "下载"
+      "downloads": "下载",
+      "documentation": "文档"
     },
     "description": "Beam 提供隐私、保密资产、DeFi、NFT、DEX 以及在安全、去中心化环境中的无缝用户体验。",
     "keywords": "Beam, 加密货币, 隐私, 匿名, 保密资产, DeFi, NFT, 区块链, 去中心化, DEX, 智能合约, 用户体验, 钱包, 安全, 财务自由, AMM, 原子交换, 虚拟机, WASM, 合约着色器, 应用着色器, 移动钱包, 桌面钱包, 交易类型, 私密稳定币, 封装资产, 侧链, 预言机, 借贷, Uniswap-like, Beam 节点, Beam 虚拟机, 保密性, 桥接资产, Beam 区块链, 无缝交易, 交互式钱包, 比特币式交易, Beam 交易, 财务隐私"
@@ -55,7 +56,7 @@
     "description": "解答常见问题。",
     "1": {
       "question": "Beam何时启动？",
-      "answer": "Beam 的主网于 **2019 年 1 月 3 日** 正式上线。您可以通过 [Beam 区块链浏览器](https://duckduckgo.com) 查看实时状态。"
+      "answer": "Beam 的主网于 **2019 年 1 月 3 日** 正式上线。您可以通过 [Beam 区块链浏览器](https://explorer.beam.mw) 查看实时状态。"
     },
     "2": {
       "question": "Beam 是开源的吗？",
@@ -156,6 +157,7 @@
   },
   "privacy": {
     "title": "隐私政策",
+    "lastupdate": "最后更新：2023年4月21日",
     "1": {
       "title": "简介",
       "content": "本隐私政策（以下简称“政策”）适用于Beam Foundation Limited（以下简称“Beam”、“我们”、“我们的”）开发的Beam加密货币数字钱包（以下简称“Beam Wallet”、“软件”）。本政策概述了我们在您使用Beam Wallet时，如何根据《一般数据保护条例》（GDPR）收集、使用和保护您的个人数据。通过使用Beam Wallet，您同意根据本政策收集和使用您的信息。"
@@ -193,6 +195,20 @@
       "content": "如果您对我们的隐私政策或隐私做法有任何疑问或担忧，请随时与我们联系：\n\n**Beam Foundation Limited**\n电子邮件：{support}"
     }
   },
+  "docs": {
+    "types": {
+      "desktop": "桌面钱包",
+      "mobile": "移动钱包应用",
+      "web": "网页钱包",
+      "mining": "挖矿",
+      "developers": "开发者",
+      "node": "节点",
+      "atomicswaps": "原子交换",
+      "cli": "命令行界面",
+      "explorer": "区块链浏览器"
+    },
+    "explore": "探索（英文）"
+  },
   "errors": {
     "title": "错误 {code}",
     "back": "将我带回",
@@ -207,13 +223,16 @@
     "details": "深入了解 Beam 挖矿的世界，并通过我们的分步指南了解如何为网络的安全和增长做出贡献。",
     "button": "Beam 挖矿指南（英文）",
     "miningSoftware": "挖矿软件",
-    "downloadWalletAndNode": "下载钱包和节点"
+    "downloadWalletAndNode": "下载钱包和节点",
+    "resources": {
+      "support": "Beam挖矿支持",
+      "calculator": "奖励计算器"
+    }
   },
   "footer": {
     "join": {
-      "title": "加入",
+      "title": "Beam",
       "downloadWallet": "下载钱包",
-      "beamOutreachClub": "Beam推广俱乐部",
       "beamForum": "Beam论坛",
       "beamBlog": "Beam博客"
     },
@@ -226,7 +245,6 @@
     },
     "developers": {
       "title": "开发者",
-      "documentation": "文档",
       "sourceCode": "源代码",
       "dAppnetWallet": "DAppnet钱包",
       "blockchainExplorer": "区块链浏览器",

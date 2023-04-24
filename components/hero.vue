@@ -44,11 +44,10 @@
           </LayoutButton>
         </div>
 
-        <div class="flex flex-row justify-center space-x-4">
-          <NuxtLink
+        <div class="flex flex-row justify-center gap-4">
+          <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.IOS].links.store"
             class="select-none hover:opacity-80 transition"
-            target="_blank"
           >
             <Icon
               name="download/appstore"
@@ -56,11 +55,10 @@
               :as-image="true"
               loading="lazy"
             />
-          </NuxtLink>
-          <NuxtLink
+          </LayoutLink>
+          <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.ANDROID].links.store"
             class="select-none hover:opacity-80 transition"
-            target="_blank"
           >
             <Icon
               name="download/googleplay"
@@ -68,8 +66,8 @@
               :as-image="true"
               loading="lazy"
             />
-          </NuxtLink>
-          <NuxtLink
+          </LayoutLink>
+          <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.CHROME].links.store"
             class="hidden md:block select-none hover:opacity-80 transition"
           >
@@ -79,18 +77,18 @@
               :as-image="true"
               loading="lazy"
             />
-          </NuxtLink>
+          </LayoutLink>
         </div>
       </div>
       <div
-        class="heroImages flex justify-evenly w-full pb-12 mx-auto mb-12 md:px-12 lg:px-16 max-w-7xl pointer-events-none"
+        class="heroImages flex justify-evenly w-full pb-12 mx-auto mb-12 md:px-12 lg:px-16 max-w-7xl pointer-events-none rtl:!flex-row-reverse"
       >
         <ClientOnly>
           <div
             class="relative hidden lg:block w-[937px] h-[1025px] min-w-[937px]"
           >
             <LayoutPicture
-              src="/hero/desktop.png"
+              src="/assets/hero/desktop.png"
               :alt="'Beam for Desktop'"
               class="select-none pointer-events-none"
               :webp="true"
@@ -99,7 +97,7 @@
 
           <div class="relative w-[389px] h-[966px] min-w-[389px] -right-[30px]">
             <LayoutPicture
-              src="/hero/mobile.png"
+              src="/assets/hero/mobile.png"
               alt="Beam for iOS"
               class="select-none pointer-events-none"
               :webp="true"
@@ -193,7 +191,7 @@ onBeforeUnmount(async () => {
 }
 
 .heroBackground {
-  @apply h-screen w-full bg-no-repeat bg-cover bg-[url('/hero/bg.png')] will-change-transform;
+  @apply h-screen w-full bg-no-repeat bg-cover bg-[url('/assets/hero/bg.png')] will-change-transform;
   grid-area: content;
 }
 
