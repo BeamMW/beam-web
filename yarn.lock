@@ -2507,11 +2507,11 @@ __metadata:
   linkType: hard
 
 "ansi-escapes@npm:^6.0.0":
-  version: 6.1.0
-  resolution: "ansi-escapes@npm:6.1.0"
+  version: 6.2.0
+  resolution: "ansi-escapes@npm:6.2.0"
   dependencies:
     type-fest: ^3.0.0
-  checksum: 7ce5d9cefd3d7345dc00161aea2ea9ad5fb3dd66658d4e8731ea047be838d755100f0823a05523d0e518e8e080746fc0a45d3ea3053099376bdd572efaedc7c1
+  checksum: f0bc667d5f1ededc3ea89b73c34f0cba95473525b07e1290ddfd3fc868c94614e95f3549f5c4fd0c05424af7d3fd298101fb3d9a52a597d3782508b340783bd7
   languageName: node
   linkType: hard
 
@@ -2801,7 +2801,7 @@ __metadata:
     "@types/markdown-it": ^12.2.3
     "@typescript-eslint/parser": ^5.59.0
     consola: ^3.1.0
-    eslint: ^8.38.0
+    eslint: ^8.39.0
     eslint-config-prettier: ^8.8.0
     eslint-plugin-prettier: ^4.2.1
     fs-extra: ^11.1.1
@@ -2812,7 +2812,7 @@ __metadata:
     nuxt: ^3.4.2
     nuxt-simple-robots: ^2.1.2
     nuxt-simple-sitemap: ^2.4.11
-    prettier: ^2.8.7
+    prettier: ^2.8.8
     swiper: ^9.2.2
     tailwindcss: ^3.3.1
     typescript: ^5.0.4
@@ -4741,7 +4741,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.38.0":
+"eslint@npm:^8.39.0":
   version: 8.39.0
   resolution: "eslint@npm:8.39.0"
   dependencies:
@@ -6613,9 +6613,9 @@ __metadata:
   linkType: hard
 
 "js-cookie@npm:^3.0.1":
-  version: 3.0.4
-  resolution: "js-cookie@npm:3.0.4"
-  checksum: 93678ee0d1d15db84926dcc69f453255323128c9e7182e3b43baa29c337dd304606ad3c82cb2ef0d83a165709f6612fb9566bbbadf03c381039b3a786be1d20d
+  version: 3.0.5
+  resolution: "js-cookie@npm:3.0.5"
+  checksum: 2dbd2809c6180fbcf060c6957cb82dbb47edae0ead6bd71cbeedf448aa6b6923115003b995f7d3e3077bfe2cb76295ea6b584eb7196cca8ba0a09f389f64967a
   languageName: node
   linkType: hard
 
@@ -9590,7 +9590,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.8.7":
+"prettier@npm:^2.8.8":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
