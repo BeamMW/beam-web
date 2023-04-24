@@ -9,7 +9,7 @@ const localePath = useLocalePath();
     <div
       class="grid-layout max-w-screen-xl mx-auto items-center py-4 px-3 md:px-4"
     >
-      <div class="order-2 md:order-1">
+      <div class="order-2 md:order-1 flex items-center">
         <div class="inline-block w-auto">
           <LayoutLink
             :to="localePath('index')"
