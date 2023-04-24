@@ -47,7 +47,6 @@ export enum ExternalLinks {
   SUBSTACK = "https://beamprivacy.substack.com",
   REDDIT = "https://www.reddit.com/r/beamprivacy/",
   DISCORD = "https://discord.gg/BHZvAhg",
-  // GITTER = "https://gitter.im/beamprivacy/Lobby",
   YOUTUBE = "https://www.youtube.com/@beamprivacy",
   ANCHOR = "https://anchor.fm/beam-privacy",
   FORUM = "https://forum.beam.mw",
@@ -64,7 +63,6 @@ export enum ExternalLinksTitle {
   SUBSTACK = "Substack",
   REDDIT = "Reddit",
   DISCORD = "Discord",
-  // GITTER = "Gitter",
   YOUTUBE = "Youtube",
   ANCHOR = "Anchor",
   FORUM = "Forum",
@@ -81,12 +79,13 @@ export enum ExternalLinksIcon {
   SUBSTACK = "substack",
   REDDIT = "reddit",
   DISCORD = "discord",
-  // GITTER = "gitter",
   YOUTUBE = "youtube",
   ANCHOR = "anchor",
   FORUM = "forum",
   BITCOINTALK = "bitcointalk",
   MEDIUM = "medium",
+  COINGECKO = "",
+  CMC = "",
 }
 
 /**
