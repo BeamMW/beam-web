@@ -9,5 +9,5 @@ dist
 .DS_Store
 .yarn
 *.DS_Store
-content/documentation/*
+content/docs/*
 public/assets/docs/*
