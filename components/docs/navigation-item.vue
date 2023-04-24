@@ -2,9 +2,9 @@
   <div>
     <LayoutLink
       :to="processPath(article._path)"
-      :class="`pl-3 text-md opacity-60 hover:opacity-90 transition-opacity ${
+      :class="`rtl:pr-2.5 ltr:pl-2.5 text-md opacity-60 hover:opacity-90 transition-opacity ${
         routeName == article._path
-          ? `border-l border-white font-bold !opacity-90`
+          ? `rtl:border-r ltr:border-l border-beam-pink font-bold !opacity-90`
           : ''
       } `"
       >{{ article.title }}</LayoutLink
