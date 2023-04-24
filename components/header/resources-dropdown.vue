@@ -4,16 +4,14 @@
       class="grid-container px-4 pt-4 h-full overflow-y-scroll pb-[25vh] md:!pb-1 md:shadow-2xl"
     >
       <div v-for="(menu, index) in menus" :key="index" class="grid-item">
-        <div
-          v-if="menu.menus"
-          v-for="(innermenu, indexInner) in menu.menus"
-          :key="indexInner"
-        >
-          <HeaderResourcesDropdownGridItem :menu="innermenu" />
-        </div>
-        <div v-else>
+        <template v-if="menu.menus">
+          <div v-for="(innermenu, indexInner) in menu.menus" :key="indexInner">
+            <HeaderResourcesDropdownGridItem :menu="innermenu" />
+          </div>
+        </template>
+        <template v-else>
           <HeaderResourcesDropdownGridItem :menu="menu" />
-        </div>
+        </template>
       </div>
     </div>
   </section>

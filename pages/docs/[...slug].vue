@@ -8,7 +8,10 @@
           <ContentList v-slot="{ list }">
             <li v-for="article in list" :key="article._path" class="list-none">
               <template v-if="isIndex(article._path)">
-                <DocsNavigationItem :article="article" :routeName="routeName" />
+                <DocsNavigationItem
+                  :article="article"
+                  :route-name="routeName"
+                />
               </template>
             </li>
             <div style="h-5 w-5 bg-red-500"></div>
@@ -22,7 +25,10 @@
                   !isPageBlacklisted(article._path) && !isIndex(article._path)
                 "
               >
-                <DocsNavigationItem :article="article" :routeName="routeName" />
+                <DocsNavigationItem
+                  :article="article"
+                  :route-name="routeName"
+                />
               </template>
             </li>
           </ContentList>
@@ -44,8 +50,6 @@
 
 <script lang="ts" setup>
 const route = useRoute();
-const localePath = useLocalePath();
-const { locale } = useI18n();
 
 // Transform index to "readme"
 async function handleIndex(path: string): Promise<string> {
@@ -68,11 +72,11 @@ const isPageBlacklisted = (path: string) => {
 const isIndex = (path: string) => {
   const index = joinPath(route.fullPath, "readme");
   // not extremely reliable but no choice
-  //if (path.endsWith(index)) {
-  //console.log("found");
-  //console.log(index);
-  //console.log(path);
-  //}
+  // if (path.endsWith(index)) {
+  // console.log("found");
+  // console.log(index);
+  // console.log(path);
+  // }
   return path.endsWith(index);
 };
 

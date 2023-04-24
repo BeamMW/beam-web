@@ -19,7 +19,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   menu: {
     type: Object,
     required: true,

@@ -1,9 +1,9 @@
 <template>
   <NuxtLink
     :to="destination"
-    @click.native="handleClick"
     :target="getLinkTarget(destination as string)"
     v-bind="$attrs"
+    @click="handleClick"
   >
     <slot />
   </NuxtLink>
