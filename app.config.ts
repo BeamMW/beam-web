@@ -201,6 +201,54 @@ export const PlatformDetails: Record<
   },
 };
 
+export const docTypes = [
+  {
+    title: "Desktop Wallet (not working)",
+    image: "download/resources/desktop",
+    path: "/desktop",
+  },
+  {
+    title: "Mobile App",
+    image: "download/resources/desktop",
+    path: "/mobile",
+  },
+  {
+    title: "Web Wallet (not working)",
+    image: "download/resources/desktop",
+    path: "/web-wallet",
+  },
+  {
+    title: "Mining (not working)",
+    image: "download/resources/desktop",
+    path: "/mining",
+  },
+  {
+    title: "Developers",
+    image: "download/resources/console",
+    path: "/dev",
+  },
+  {
+    title: "Node (not working)",
+    image: "download/resources/desktop",
+    path: "/node",
+  },
+  {
+    title: "Atomic Swaps",
+    image: "download/resources/desktop",
+    path: "/atomics-swaps",
+  },
+  {
+    title: "Command Line Interface",
+    image: "download/resources/console",
+    path: "/cli",
+  },
+  {
+    title: "Explorer (not working)",
+    image: "download/resources/desktop",
+    path: "/explorer",
+  },
+];
+
 export const miningSoftware = [
   {
     type: "AMD",
