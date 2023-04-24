@@ -12,8 +12,8 @@ useHead({
   },
 });
 
-const title = computed(() => t("head.title.index"));
-const description = computed(() => t("head.title.documentation"));
+const title = computed(() => t("head.title.documentation"));
+const description = computed(() => t("head.description"));
 
 useSeoMeta({
   title,
