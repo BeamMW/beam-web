@@ -71,7 +71,7 @@ export enum ExternalLinksTitle {
   SUBSTACK = "Substack",
   REDDIT = "Reddit",
   DISCORD = "Discord",
-  YOUTUBE = "Youtube",
+  YOUTUBE = "YouTube",
   ANCHOR = "Anchor",
   FORUM = "Forum",
   BITCOINTALK = "BitcoinTalk",

@@ -31,7 +31,7 @@ const whereToBuyScroll = async () => {
   const targetComponentBuy = document.getElementById("targetComponentBuy");
   if (!targetComponentBuy) {
     await redirectToIndex();
-    // todo: find a more reliable way than a settimeout
+    // ToDo: find a more reliable way than a settimeout
     setTimeout(() => {
       const homepageBuyComponent =
         document.getElementById("targetComponentBuy");
