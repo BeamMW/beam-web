@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-page-radial-gradient overflow-visible">
+  <div class="bg-page-radial-gradient-purple overflow-visible">
     <div
       class="max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible"
     >
@@ -36,7 +36,7 @@
 
         <div class="col-span-7">
           <article
-            class="prose prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-blue prose-h1:uppercase prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
+            class="prose prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-pink prose-h1:uppercase prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
           >
             <ContentDoc v-slot="{ doc }" :path="routeName">
               <CustomContentRenderer :value="doc" />
