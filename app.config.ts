@@ -34,6 +34,7 @@ export enum SupportedPlatforms {
 export const currentEnvironment: EnvironmentType = EnvironmentType.MAINNET;
 
 export enum ExternalLinks {
+  // Socials
   GITHUB = "https://github.com/BeamMW/beam",
   TELEGRAM = "https://t.me/BeamPrivacy",
   TWITTER = "https://twitter.com/beamprivacy",
@@ -65,22 +66,6 @@ export enum ExternalLinksTitle {
   CMC = "CoinMarketCap",
 }
 
-export enum ExternalLinksIcon {
-  GITHUB = "github",
-  TELEGRAM = "telegram",
-  TWITTER = "twitter",
-  SUBSTACK = "substack",
-  REDDIT = "reddit",
-  DISCORD = "discord",
-  YOUTUBE = "youtube",
-  ANCHOR = "anchor",
-  FORUM = "forum",
-  BITCOINTALK = "bitcointalk",
-  MEDIUM = "medium",
-  COINGECKO = "",
-  CMC = "",
-}
-
 /**
  * Preload: Instructs the browser to download and process high-priority resources early, improving load times.
  * Preconnect: Establishes network connections to remote servers ahead of time, reducing connection setup latency.
@@ -98,13 +83,10 @@ export const preHtml = {
     { href: "/fonts/ProximaNova-Bold.woff2", as: "font", crossorigin: true },
   ],
   preconnect: [
-    //"https://documentation.beam.mw",
     "https://builds.beam.mw",
   ] as URLEntry[],
   "dns-prefetch": extractOriginsFromEnum(ExternalLinks) as URLEntry[],
-  prerender: [
-    /*"https://documentation.beam.mw"*/
-  ] as URLEntry[],
+  prerender: [] as URLEntry[],
   prefetch: [] as URLEntry[],
 };
 
@@ -287,12 +269,6 @@ export const miningSoftware = [
   },
 ];
 export const pressArticles = [
-  /*
-  // Ethnews entirely removed the article (no wonder, the blog is shit and must have been reinstalled ever since)
-  {
-    "image": "ethnews",
-    "href": "https://www.ethnews.com/revelio-mimblewimble-based-beam-mainnet-goes-live"
-  }, */
   {
     image: "coindesk",
     href: "https://www.coindesk.com/the-first-cryptocurrency-to-use-mimblewimble-privacy-tech-is-now-live",
@@ -309,12 +285,6 @@ export const pressArticles = [
     image: "cryptocopia",
     href: "https://www.youtube.com/watch?v=NZ_EkKUkY0s",
   },
-  /*
-  // Error 500 for Bitcoin.com article
-  {
-    "image": "bitcoincom",
-    "href": "https://podcast.bitcoin.com/e653-MimbleWimble-Privacy-Protocol-of-the-Future-With-Alexander-of-Beam"
-  }, */
   {
     image: "cryptwerk",
     href: "https://cryptwerk.com/pay-with/beam/",
@@ -327,16 +297,26 @@ export const pressArticles = [
     image: "bitcoinexchangeguide",
     href: "https://bitcoinexchangeguide.com/crypto-privacy-coin-beam-ceo-tells-trade-io-why-he-is-such-a-big-believer-in-financial-privacy/",
   },
-  /*
-  // - Forbes link is broken (error 410) (was the link: https://www.forbes.com/digital-assets/assets/beam-beam/ ?)
-  {
-    "image": "forbes",
-    "href": "https://www.forbes.com/sites/geraldfenech/2019/01/24/the-privacy-coin-dilemma-what-are-the-options-on-offer/#3fcc545c707d"
-  }, */
   {
     image: "cryptonews",
     href: "https://cryptonews.com/exclusives/an-interview-the-new-hot-beam-coin-is-live-what-comes-next-3271.htm",
   },
 ];
+
+export enum ExternalLinksIcon {
+  GITHUB = "github",
+  TELEGRAM = "telegram",
+  TWITTER = "twitter",
+  SUBSTACK = "substack",
+  REDDIT = "reddit",
+  DISCORD = "discord",
+  YOUTUBE = "youtube",
+  ANCHOR = "anchor",
+  FORUM = "forum",
+  BITCOINTALK = "bitcointalk",
+  MEDIUM = "medium",
+  COINGECKO = "coingecko",
+  CMC = "cmc",
+}
 
 export default {};
