@@ -194,6 +194,20 @@
       "content": "Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité ou nos pratiques en matière de confidentialité, n'hésitez pas à nous contacter à:\n\n**Beam Foundation Limited**\nE-mail : {support}"
     }
   },
+  "docs": {
+    "types": {
+      "desktop": "Portefeuille de bureau",
+      "mobile": "Application de portefeuille mobile",
+      "web": "Portefeuille Web",
+      "mining": "Minage",
+      "developers": "Développeurs",
+      "node": "Nœud",
+      "atomicswaps": "Échanges atomiques",
+      "cli": "Interface de ligne de commande",
+      "explorer": "Explorateur de blockchain"
+    },
+    "explore": "Explorer (Anglais)"
+  },
   "errors": {
     "title": "Erreur {code}",
     "back": "Ramenez-moi",

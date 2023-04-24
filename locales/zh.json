@@ -194,6 +194,20 @@
       "content": "如果您对我们的隐私政策或隐私做法有任何疑问或担忧，请随时与我们联系：\n\n**Beam Foundation Limited**\n电子邮件：{support}"
     }
   },
+  "docs": {
+    "types": {
+      "desktop": "桌面钱包",
+      "mobile": "移动钱包应用",
+      "web": "网页钱包",
+      "mining": "挖矿",
+      "developers": "开发者",
+      "node": "节点",
+      "atomicswaps": "原子交换",
+      "cli": "命令行界面",
+      "explorer": "区块链浏览器"
+    },
+    "explore": "探索（英文）"
+  },
   "errors": {
     "title": "错误 {code}",
     "back": "将我带回",

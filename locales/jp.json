@@ -196,6 +196,20 @@
       "content": "プライバシーポリシーまたはプライバシーに関する当社の慣行についての質問や懸念がある場合は、お気軽にお問い合わせください。\n\n**Beam Foundation Limited**\nメール：{support}"
     }
   },
+  "docs": {
+    "types": {
+      "desktop": "デスクトップウォレット",
+      "mobile": "モバイルウォレットアプリ",
+      "web": "ウェブウォレット",
+      "mining": "マイニング",
+      "developers": "開発者",
+      "node": "ノード",
+      "atomicswaps": "アトミックスワップ",
+      "cli": "コマンドラインインターフェース",
+      "explorer": "ブロックチェーンエクスプローラー"
+    },
+    "explore": "探索（英語）"
+  },
   "errors": {
     "title": "エラー {code}",
     "back": "ビームで戻る",

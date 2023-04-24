@@ -2,8 +2,6 @@
 import { docTypes } from "@/app.config";
 const { t } = useI18n();
 
-const styles =
-  "bg-[#042248]/50 hover:bg-[#042248] focus:bg-[#042248] focus:ring-offset-[#042248] focus:ring-beam-blue/75 text-beam-blue";
 const localePath = useLocalePath();
 
 useHead({
@@ -32,11 +30,11 @@ useSeoMeta({
         <ResourcesLink
           v-for="(doc, index) in docTypes"
           :key="index"
-          :title="doc.title"
+          :title="t(doc.title)"
           :image="doc.image"
           :link="localePath(`/docs${doc.path}`)"
-          link-text="Explore (English)"
-          :class="styles"
+          :link-text="t('docs.explore')"
+          class="bg-[#360061]/50 hover:bg-[#360061] focus:bg-[#360061] focus:ring-offset-[#360061] focus:ring-beam-purple text-[#E9D4F2]"
         />
       </div>
     </LayoutWrapper>

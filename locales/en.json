@@ -196,6 +196,20 @@
       "content": "If you have any questions or concerns about our Privacy Policy or our privacy practices, please feel free to contact us at:\n\n**Beam Foundation Limited**\nEmail: {support}"
     }
   },
+  "docs": {
+    "types": {
+      "desktop": "Desktop Wallet",
+      "mobile": "Mobile Wallet App",
+      "web": "Web Wallet",
+      "mining": "Mining",
+      "developers": "Developers",
+      "node": "Node",
+      "atomicswaps": "Atomic Swaps",
+      "cli": "Command Line Interface",
+      "explorer": "Blockchain Explorer"
+    },
+    "explore": "Explore (English)"
+  },
   "errors": {
     "title": "Error {code}",
     "back": "Beam Me Back",
