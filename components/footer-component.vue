@@ -66,7 +66,6 @@
                 {{ $t("footer.contact") }}
               </a>
               <LayoutLink
-                target="_blank"
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
                 to="https://docs.beam.mw/BEAM_Media_Kit_and_resources_v4.zip"
                 >{{ $t("footer.mediakit") }}</LayoutLink
@@ -80,7 +79,6 @@
               class="space-x-4"
             >
               <LayoutLink
-                target="_blank"
                 v-bind="{ title: typedExternalLinksTitle[icon] }"
                 class="inline-block text-gray-200 200 opacity-60 hover:opacity-90 transition select-none"
                 :to="ExternalLinks[icon]"

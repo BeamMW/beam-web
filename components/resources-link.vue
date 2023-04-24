@@ -22,7 +22,6 @@ defineProps({
 <template>
   <LayoutLink
     :to="link"
-    :target="getLinkTarget(link)"
     class="p-4 group flex flex-col border rounded-xl border-black border-opacity-30 transition md:p-7 shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset] focus:outline-none focus:ring-2 focus:ring-offset-2 w-full h-full"
   >
     <Icon

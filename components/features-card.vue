@@ -86,7 +86,7 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
       <p class="text-white text-opacity-80">{{ text }}</p>
     </div>
     <div class="mt-auto gap-4 select-none">
-      <LayoutLink v-if="link" :to="link" target="_blank" class="text-beam-blue">
+      <LayoutLink v-if="link" :to="link" class="text-beam-blue">
         <LayoutExternalLink>{{
           linkName ? linkName : $t("feature.learnmore")
         }}</LayoutExternalLink>

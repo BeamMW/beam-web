@@ -31,7 +31,6 @@ defineProps({
     <LayoutLink
       :to="link"
       :title="t('downloads.downloadButton', { platform: title })"
-      target="_blank"
       :class="`${
         highlight
           ? 'pointer-events-none select-none opacity-90'

@@ -15,11 +15,7 @@ defineProps({
 });
 </script>
 <template>
-  <LayoutLink
-    :to="link"
-    target="_blank"
-    class="hover:text-white transition-colors"
-  >
+  <LayoutLink :to="link" class="hover:text-white transition-colors">
     <span class="inline-flex items-center"
       >{{ title }}&nbsp;
       <Icon

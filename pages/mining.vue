@@ -90,7 +90,6 @@ useHead({
                 v-for="(software, softwareIndex) in gpuType.miningSoftware"
                 :key="softwareIndex"
                 :to="software.link"
-                target="_blank"
                 class="block text-lg opacity-80 hover:opacity-100 transition-opacity"
               >
                 {{ software.name }}

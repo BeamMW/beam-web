@@ -1,5 +1,10 @@
 <template>
-  <NuxtLink :to="destination" @click.native="handleClick" v-bind="$attrs">
+  <NuxtLink
+    :to="destination"
+    @click.native="handleClick"
+    :target="getLinkTarget(destination as string)"
+    v-bind="$attrs"
+  >
     <slot />
   </NuxtLink>
 </template>
@@ -8,6 +13,7 @@
 const props = defineProps<{
   to?: string | Record<string, unknown>;
   href?: string | Record<string, unknown>;
+  target?: string;
 }>();
 
 const destination = computed(() => {

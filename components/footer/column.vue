@@ -33,7 +33,6 @@ const handleClick = (onClick: () => void, e: MouseEvent) => {
         <LayoutLink
           :to="link.href"
           class="inline capitalize transition text-white/70 hover:text-white"
-          :target="getLinkTarget(link.href)"
           @click="
             typeof link.onClick == 'function' &&
               handleClick(link.onClick, $event)

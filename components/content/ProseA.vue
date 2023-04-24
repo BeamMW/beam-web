@@ -35,7 +35,7 @@ function processPath(inputPath: string): string {
 </script>
 
 <template>
-  <LayoutLink :href="processPath(href)" :target="target">
+  <LayoutLink :href="processPath(href)">
     <slot />
   </LayoutLink>
 </template>

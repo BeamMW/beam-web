@@ -40,11 +40,6 @@ const classToSet = computed(
     v-if="as == 'link'"
     :class="classToSet"
     :to="buttonLink"
-    :target="
-      buttonLink.startsWith('/') || buttonLink.startsWith('#')
-        ? '_self'
-        : '_blank'
-    "
     v-bind="$attrs"
   >
     <slot></slot>
