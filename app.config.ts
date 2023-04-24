@@ -53,6 +53,8 @@ export enum ExternalLinks {
   FORUM = "https://forum.beam.mw",
   BITCOINTALK = "https://bitcointalk.org/index.php?topic=5052151",
   MEDIUM = "https://medium.com/beam-mw",
+  COINGECKO = "https://www.coingecko.com/en/coins/beam/usd",
+  CMC = "https://coinmarketcap.com/currencies/beam/",
 }
 
 export enum ExternalLinksTitle {
@@ -68,6 +70,8 @@ export enum ExternalLinksTitle {
   FORUM = "Forum",
   BITCOINTALK = "BitcoinTalk",
   MEDIUM = "Medium Blog",
+  COINGECKO = "Coingecko",
+  CMC = "CoinMarketCap",
 }
 
 export enum ExternalLinksIcon {
