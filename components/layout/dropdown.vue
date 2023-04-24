@@ -168,7 +168,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  document.removeEventListener("click", handleClickOutside);
+  document.removeEventListener("click", handleClick);
   window.removeEventListener("resize", updatePlacement);
 
   // Detach dropdown content to body
