@@ -1,25 +1,11 @@
 <script lang="ts" setup>
 import { exchangesBuy, instantExchangesBuy } from "~/app.config";
-import { UserInteractionEvents, eventBus } from "~/utils/emitter";
-import { scrollToComponent } from "~/utils/scrollToComponent";
 
 const { t } = useI18n();
-
-const targetComponentBuy = ref(null);
-
-const whereToBuyScroll = () => scrollToComponent(targetComponentBuy);
-
-onMounted(() =>
-  eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll)
-);
-
-onUnmounted(() =>
-  eventBus.off(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll)
-);
 </script>
 <template>
   <LayoutWrapper :center="true">
-    <div ref="targetComponentBuy">
+    <div id="targetComponentBuy">
       <LayoutTitle :title="$t('buyWhere.title')" />
 
       <BuyGrid :title="t('buyWhere.exchanges')">

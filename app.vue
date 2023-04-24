@@ -1,15 +1,19 @@
 <script lang="ts" setup>
 import { linkElements } from "@/utils/linkElements";
+import { UserInteractionEvents, eventBus } from "~/utils/emitter";
+import { scrollToComponent } from "~/utils/scrollToComponent";
 
 const windowLocked = useState("windowLocked", () => false);
 const currentRoute = useState("currentRoute", () => "");
+const localPath = useLocalePath();
 
 const fileVersion = 1;
 
-const router = useRoute();
+const route = useRoute();
+const router = useRouter();
 
 watch(
-  router,
+  route,
   (route) => {
     currentRoute.value = getRouteName(route.name);
   },
@@ -17,6 +21,34 @@ watch(
 );
 
 defineRobotMeta();
+
+const redirectToIndex = async () => {
+  await router.push(localPath("index"));
+};
+
+// Scroll to "Where to buy" called but unable to scroll, redirect to homepage
+const whereToBuyScroll = async () => {
+  const targetComponentBuy = document.getElementById("targetComponentBuy");
+  if (!targetComponentBuy) {
+    await redirectToIndex();
+    // todo: find a more reliable way than a settimeout
+    setTimeout(() => {
+      const homepageBuyComponent =
+        document.getElementById("targetComponentBuy");
+      scrollToComponent(homepageBuyComponent);
+    }, 600);
+  } else {
+    scrollToComponent(targetComponentBuy);
+  }
+};
+
+onMounted(() =>
+  eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll)
+);
+
+onUnmounted(() =>
+  eventBus.off(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll)
+);
 </script>
 
 <template>
