@@ -21,7 +21,12 @@
   "hero": {
     "title": "Kompromisslose Privatsphäre",
     "subtitle": "Beam ist die führende Mimblewimble L1-Privatsphären-Blockchain, die Transaktionen vollständig verschleiert. Laden Sie die Beam-Wallet herunter für das ultimative vertrauliche DeFi-Erlebnis.",
-    "downloadWallet": "Wallet herunterladen"
+    "downloadWallet": "Wallet herunterladen",
+    "geton": {
+      "appstore": "Im App Store herunterladen",
+      "playstore": "Bei Google Play herunterladen",
+      "chromestore": "Im Chrome Web Store herunterladen"
+    }
   },
   "feature": {
     "title": "Funktionen",

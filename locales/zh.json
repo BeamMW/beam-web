@@ -21,7 +21,12 @@
   "hero": {
     "title": "毫不妥协的隐私",
     "subtitle": "Beam 是顶级 Mimblewimble L1 隐私区块链，完全隐藏交易。下载 Beam 钱包以获得终极保密 DeFi 体验。",
-    "downloadWallet": "下载钱包"
+    "downloadWallet": "下载钱包",
+    "geton": {
+      "appstore": "在App Store下载",
+      "playstore": "在Google Play下载",
+      "chromestore": "在Chrome网上应用店下载"
+    }
   },
   "feature": {
     "title": "特点",

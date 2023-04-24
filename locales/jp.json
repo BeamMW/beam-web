@@ -21,7 +21,12 @@
   "hero": {
     "title": "妥協のないプライバシー",
     "subtitle": "Beamは、トップのMimblewimble L1プライバシーブロックチェーンで、取引を完全に隠します。究極の機密性のあるDeFi体験のためにBeamウォレットをダウンロードしてください。",
-    "downloadWallet": "ウォレットをダウンロード"
+    "downloadWallet": "ウォレットをダウンロード",
+    "geton": {
+      "appstore": "App Storeでダウンロード",
+      "playstore": "Google Playでダウンロード",
+      "chromestore": "Chromeウェブストアでダウンロード"
+    }
   },
   "feature": {
     "title": "特徴",

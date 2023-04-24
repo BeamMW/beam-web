@@ -60,8 +60,6 @@ onUnmounted(() =>
             <Icon
               class="w-[18px] h-[18px] select-none pointer-events-none"
               name="layout/flat-beam-animated"
-              :as-image="true"
-              loading="lazy"
             />
             {{ $t("getstarted.steps.1.button") }}
           </LayoutButton>
@@ -110,14 +108,14 @@ onUnmounted(() =>
             <LayoutButton
               accent-color="beam-pink"
               class="w-full mt-5"
-              :button-link="localePath('dapps')"
+              :button-link="localePath('docs')"
               :big="true"
             >
               <Icon
                 class="w-[18px] h-[18px] select-none pointer-events-none"
                 name="get-started/explore"
               />
-              {{ $t("getstarted.steps.3.button") }}
+              {{ $t("head.title.documentation") }}
             </LayoutButton>
           </FeaturesCard>
         </div>

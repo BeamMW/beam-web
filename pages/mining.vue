@@ -108,8 +108,6 @@ useHead({
           <Icon
             class="w-[18px] h-[18px] select-none pointer-events-none"
             name="layout/flat-beam-animated"
-            :as-image="true"
-            loading="lazy"
           />
           {{ $t("mining.downloadWalletAndNode") }}
         </LayoutButton>

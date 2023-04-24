@@ -21,7 +21,12 @@
   "hero": {
     "title": "Uncompromising Privacy",
     "subtitle": "Beam is the top Mimblewimble L1 privacy blockchain, completely concealing transactions. Download Beam Wallet for the ultimate confidential DeFi experience.",
-    "downloadWallet": "Download Wallet"
+    "downloadWallet": "Download Wallet",
+    "geton": {
+      "appstore": "Download on App Store",
+      "playstore": "Download on Play Store",
+      "chromestore": "Download on Chrome Web Store"
+    }
   },
   "feature": {
     "title": "Features",

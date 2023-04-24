@@ -21,7 +21,12 @@
   "hero": {
     "title": "פרטיות בלתי מתפשרת",
     "subtitle": "Beam הוא בלוקצ'יין פרטיות מספר 1 של Mimblewimble L1, המסתיר לחלוטין עסקאות. הורידו את ארנק ה-Beam עבור חווית DeFi קונפידנציאלית מרבית.",
-    "downloadWallet": "הורד ארנק"
+    "downloadWallet": "הורד ארנק",
+    "geton": {
+      "appstore": "הורד ב-App Store",
+      "playstore": "הורד ב-Google Play",
+      "chromestore": "הורד ב-Chrome Web Store"
+    }
   },
   "feature": {
     "title": "תכונות",

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="75 50 315 280">
-<polygon fill="transparent" stroke="#25c1ff" stroke-width="15" points="230 56 80 324 380 324" class="triangle">
-    <animate attributeName="points" dur="8s" repeatCount="indefinite" keyTimes="0; 0.25; 0.875; 0.876; 1" values="230,56 80,324 380,324; 230,56 80,324 380,324; 230,56 80,324 380,324; 230,56 80,324 380,324; 230,56 80,324 380,324"/>
-  </polygon>
-  <polygon fill="transparent" stroke="#25c1ff" stroke-width="15" points="230 149.3334 158 277.3334 302 277.3334">
-    <animate attributeName="points" dur="6s" repeatCount="indefinite" keyTimes="0; 0.25;  0.75; 0.76; 1" values="230,149.3334 158,277.3334 302,277.3334; 230,149.3334 158,277.3334 302,277.3334; 230,56 80,324 380,324; 230,202.333 187,270.333 273,270.333; 230,149.3334 158,277.3334 302,277.3334"/>
-    <animate attributeName="stroke-opacity" dur="6s" repeatCount="indefinite" keyTimes="0; 0.25;  0.75; 0.76; 1" values="1; 1; 0; 0; 1"/>
-  </polygon>
-</svg>

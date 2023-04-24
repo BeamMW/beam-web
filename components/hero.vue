@@ -24,7 +24,7 @@
             "
           >
             <Icon
-              class="w-[18px] h-[18px] select-none pointer-events-none"
+              class="w-6 h-6 select-none pointer-events-none"
               name="hero/rocket"
             />
             {{ $t("getstarted.title") }}
@@ -35,10 +35,8 @@
             accent-color="beam-blue"
           >
             <Icon
-              class="inline-block w-6 h-8 select-none pointer-events-none align-middle"
+              class="w-6 h-6 select-none pointer-events-none"
               name="layout/flat-beam-animated"
-              :as-image="true"
-              loading="lazy"
             />
             {{ $t("hero.downloadWallet") }}
           </LayoutButton>
@@ -48,10 +46,11 @@
           <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.IOS].links.store"
             class="select-none hover:opacity-80 transition"
+            :title="t('hero.geton.appstore')"
           >
             <Icon
               name="download/appstore"
-              class="h-11 w-auto select-none pointer-events-none"
+              class="h-11 w-[132px] select-none pointer-events-none"
               :as-image="true"
               loading="lazy"
             />
@@ -59,10 +58,11 @@
           <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.ANDROID].links.store"
             class="select-none hover:opacity-80 transition"
+            :title="t('hero.geton.playstore')"
           >
             <Icon
               name="download/googleplay"
-              class="h-11 w-auto select-none pointer-events-none"
+              class="h-11 w-[148.09px] select-none pointer-events-none"
               :as-image="true"
               loading="lazy"
             />
@@ -70,10 +70,11 @@
           <LayoutLink
             :to="PlatformDetails[SupportedPlatforms.CHROME].links.store"
             class="hidden md:block select-none hover:opacity-80 transition"
+            :title="t('hero.geton.chromestore')"
           >
             <Icon
               name="download/googlechrome"
-              class="h-11 w-auto select-none pointer-events-none"
+              class="h-11 w-[148.26px] select-none pointer-events-none"
               :as-image="true"
               loading="lazy"
             />
@@ -85,21 +86,23 @@
       >
         <ClientOnly>
           <div
-            class="relative hidden lg:block w-[937px] h-[1025px] min-w-[937px]"
+            class="relative hidden lg:block w-[937px] h-[1025px] lg:-left-[75px] xl:-left-[50px]"
           >
             <LayoutPicture
               src="/assets/hero/desktop.png"
-              :alt="'Beam for Desktop'"
-              class="select-none pointer-events-none"
+              alt="Beam Desktop"
+              class="select-none pointer-events-none w-[937px] h-[1025px]"
               :webp="true"
             />
           </div>
 
-          <div class="relative w-[319px] h-[869px] min-w-[319px] top-[90px]">
+          <div
+            class="relative w-[319px] h-[869px] top-[90px] lg:-left-[80px] xl:-left-[0]"
+          >
             <LayoutPicture
               src="/assets/hero/mobile.png"
-              alt="Beam for iOS"
-              class="select-none pointer-events-none"
+              alt="Beam iOS"
+              class="select-none pointer-events-none w-[319px] h-[869px]"
               :webp="true"
             />
           </div>
@@ -113,8 +116,8 @@
 <script lang="ts" setup>
 import { VNodeRef } from "vue";
 import { PlatformDetails, SupportedPlatforms } from "@/app.config";
-
 import { UserInteractionEvents } from "~/utils/emitter";
+const { t } = useI18n();
 
 const localePath = useLocalePath();
 

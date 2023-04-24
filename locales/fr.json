@@ -21,7 +21,12 @@
   "hero": {
     "title": "Confidentialité sans compromis",
     "subtitle": "Beam est la première blockchain de confidentialité Mimblewimble L1, dissimulant complètement les transactions. Téléchargez le portefeuille Beam pour l'expérience DeFi confidentielle ultime.",
-    "downloadWallet": "Télécharger le portefeuille"
+    "downloadWallet": "Télécharger le portefeuille",
+    "geton": {
+      "appstore": "Télécharger sur l'App Store",
+      "playstore": "Télécharger sur Google Play",
+      "chromestore": "Télécharger sur le Chrome Web Store"
+    }
   },
   "feature": {
     "title": "Fonctionnalités",

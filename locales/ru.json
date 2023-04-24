@@ -21,7 +21,12 @@
   "hero": {
     "title": "Без компромиссов в приватности",
     "subtitle": "Beam является лидирующим блокчейном Mimblewimble L1 с полной конфиденциальностью транзакций. Загрузите кошелек Beam для максимально конфиденциального опыта DeFi.",
-    "downloadWallet": "Скачать кошелек"
+    "downloadWallet": "Скачать кошелек",
+    "geton": {
+      "appstore": "Скачать в App Store",
+      "playstore": "Скачать в Google Play",
+      "chromestore": "Скачать в Chrome Web Store"
+    }
   },
   "feature": {
     "title": "Особенности",
