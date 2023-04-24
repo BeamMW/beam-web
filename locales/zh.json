@@ -222,7 +222,11 @@
     "details": "深入了解 Beam 挖矿的世界，并通过我们的分步指南了解如何为网络的安全和增长做出贡献。",
     "button": "Beam 挖矿指南（英文）",
     "miningSoftware": "挖矿软件",
-    "downloadWalletAndNode": "下载钱包和节点"
+    "downloadWalletAndNode": "下载钱包和节点",
+    "resources": {
+      "support": "Beam挖矿支持",
+      "calculator": "奖励计算器"
+    }
   },
   "footer": {
     "join": {

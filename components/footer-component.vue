@@ -163,7 +163,6 @@ const menus = computed(() => [
       { text: t("footer.developers.sourceCode"), href: ExternalLinks.GITHUB },
       {
         text: t("footer.developers.dAppnetWallet"),
-        //href: `https://dappnet.beam.mw${localePath("downloads")}`,
         href: ExternalLinks.DAPPNET_DOWNLOAD,
       },
       {

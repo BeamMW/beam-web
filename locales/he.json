@@ -224,7 +224,11 @@
     "details": "צוללו לעולם של כריית Beam ולמדו כיצד לתרום לאבטחת הרשת ולצמיחה עם המדריך שלנו צעד אחר צעד.",
     "button": "מדריך כריית Beam",
     "miningSoftware": "תוכנת כרייה",
-    "downloadWalletAndNode": "הורד ארנק וצומת"
+    "downloadWalletAndNode": "הורד ארנק וצומת",
+    "resources": {
+      "support": "תמיכה בכריית Beam",
+      "calculator": "מחשבון פרסים"
+    }
   },
   "footer": {
     "join": {

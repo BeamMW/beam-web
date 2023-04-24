@@ -224,7 +224,11 @@
     "details": "Beamマイニングの世界に飛び込んで、ステップバイステップのガイドでネットワークのセキュリティと成長に貢献する方法を学びましょう。",
     "button": "Beamマイニングガイド（英語）",
     "miningSoftware": "マイニングソフトウェア",
-    "downloadWalletAndNode": "ウォレットとノードをダウンロード"
+    "downloadWalletAndNode": "ウォレットとノードをダウンロード",
+    "resources": {
+      "support": "Beam マイニング サポート",
+      "calculator": "報酬計算機"
+    }
   },
   "footer": {
     "join": {

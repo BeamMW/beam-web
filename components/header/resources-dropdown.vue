@@ -65,7 +65,7 @@ const menus = computed(() => [
         links: [
           {
             text: t("footer.developers.blockchainExplorer"),
-            href: "https://explorer.beam.mw/",
+            href: ExternalLinks.EXPLORER,
           },
           {
             text: t("footer.developers.sourceCode"),
@@ -73,11 +73,11 @@ const menus = computed(() => [
           },
           {
             text: t("footer.developers.dAppnetWallet"),
-            href: `https://dappnet.beam.mw${localePath("downloads")}`,
+            href: ExternalLinks.DAPPNET_DOWNLOAD,
           },
           {
             text: t("footer.developers.support"),
-            href: "https://t.me/beamdevsupport",
+            href: ExternalLinks.DEVELOPERS_SUPPORT,
           },
         ],
       },
@@ -85,7 +85,10 @@ const menus = computed(() => [
         title: t("footer.miners.title"),
         links: [
           { text: t("footer.miners.startMining"), href: localePath("mining") },
-          { text: t("footer.miners.support"), href: "https://t.me/BeamMiners" },
+          {
+            text: t("footer.miners.support"),
+            href: ExternalLinks.MINING_SUPPORT,
+          },
         ],
       },
     ],

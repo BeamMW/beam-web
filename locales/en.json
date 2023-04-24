@@ -224,7 +224,11 @@
     "details": "Dive into the world of Beam mining and learn how to contribute to the network's security and growth with our step-by-step guide.",
     "button": "Beam Mining Guide",
     "miningSoftware": "Mining software",
-    "downloadWalletAndNode": "Download Wallet and Node"
+    "downloadWalletAndNode": "Download Wallet and Node",
+    "resources": {
+      "support": "Beam Mining Support",
+      "calculator": "Rewards Calculator"
+    }
   },
   "footer": {
     "join": {
