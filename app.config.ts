@@ -46,11 +46,21 @@ export enum ExternalLinks {
   FORUM = "https://forum.beam.mw",
   BITCOINTALK = "https://bitcointalk.org/index.php?topic=5052151",
   MEDIUM = "https://medium.com/beam-mw",
+  QQ = "https://qm.qq.com/cgi-bin/qm/qr?k=qrfLNFTLxvThCgcF0fqPc2YFtDzMiUcm&authKey=8hGDPVzLLlTvX4SCBAeYc8TlaumsgvpTIdSUs3%2FU0K8U5piBp3znAYD%2Bd9n6vfEC",
   COINGECKO = "https://www.coingecko.com/en/coins/beam/usd",
   CMC = "https://coinmarketcap.com/currencies/beam/",
 
   // Other links
   CHANGELOG = "https://github.com/BeamMW/beam/releases",
+  EXPLORER = "https://explorer.beam.mw",
+  MINING_SUPPORT = "https://t.me/BeamMiners",
+  DEVELOPERS_SUPPORT = "https://t.me/beamdevsupport",
+  ROADMAP = "https://old.beam.mw/#roadmap",
+  SUPPORT_EMAIL = "mailto:support@beam.mw",
+
+  // Legacy links
+  OLD_WEBSITE = "https://old.beam.mw",
+  DAPPNET_DOWNLOAD = "https://old.beam.mw/downloads/dappnet-mac",
 }
 
 export enum ExternalLinksTitle {
@@ -87,7 +97,8 @@ export const preHtml = {
     { href: "/fonts/ProximaNova-Bold.woff2", as: "font", crossorigin: true },
   ],
   preconnect: [
-    "https://explorer.beam.mw",
+    new URL(ExternalLinks.EXPLORER).origin,
+    new URL(ExternalLinks.OLD_WEBSITE).origin,
     "https://builds.beam.mw",
   ] as URLEntry[],
   "dns-prefetch": extractOriginsFromEnum(ExternalLinks) as URLEntry[],
@@ -273,6 +284,73 @@ export const miningSoftware = [
     ],
   },
 ];
+
+export const exchangesBuy = [
+  {
+    title: "Gate.io",
+    image: "exchanges/gateio",
+    link: "https://www.gate.io/trade/BEAM_USDT",
+  },
+  {
+    title: "MEXC Global",
+    image: "exchanges/mexc",
+    link: "https://www.mexc.com/exchange/BEAM_USDT?_from=market",
+  },
+  {
+    title: "Tradeogre",
+    image: "exchanges/tradeogre",
+    link: "https://tradeogre.com/exchange/BTC-BEAM",
+  },
+  {
+    title: "Hotbit",
+    image: "exchanges/hotbit",
+    link: "https://www.hotbit.io/exchange?symbol=BEAM_USDT",
+  },
+  {
+    title: "Bitforex",
+    image: "exchanges/bitforex",
+    link: "https://www.bitforex.com/en/spot/beam_usdt",
+  },
+  {
+    title: "Atomars",
+    image: "exchanges/atomars",
+    link: "https://atomars.com/trading/BEAMBTC",
+  },
+  {
+    title: "CoinEx",
+    image: "exchanges/coinex",
+    link: "https://www.coinex.com/exchange?currency=usdt&dest=beam#spot",
+  },
+  {
+    title: "Bkex",
+    image: "exchanges/bkex",
+    link: "https://www.bkex.com/trade/BEAM_USDT",
+  },
+];
+
+export const instantExchangesBuy = [
+  {
+    title: "Beam4Me",
+    image: "instant-exchanges/beam4me",
+    link: "https://beam4.me/?from_curr=ETH&from_chain=1&to_curr=BEAM&to_chain=-1",
+  },
+  {
+    title: "Simpleswap",
+    image: "instant-exchanges/simpleswap",
+    link: "https://simpleswap.io/?to=beam",
+  },
+  {
+    title: "StealthEX",
+    image: "instant-exchanges/stealthex",
+    link: "https://stealthex.io/?to=beam",
+  },
+  {
+    title: "Kriptomat",
+    image: "instant-exchanges/kriptomat",
+    link: "https://kriptomat.io/cryptocurrency-prices/beam-price/",
+  },
+];
+
 export const pressArticles = [
   {
     image: "coindesk",

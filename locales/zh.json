@@ -56,7 +56,7 @@
     "description": "解答常见问题。",
     "1": {
       "question": "Beam何时启动？",
-      "answer": "Beam 的主网于 **2019 年 1 月 3 日** 正式上线。您可以通过 [Beam 区块链浏览器](https://duckduckgo.com) 查看实时状态。"
+      "answer": "Beam 的主网于 **2019 年 1 月 3 日** 正式上线。您可以通过 [Beam 区块链浏览器](https://explorer.beam.mw) 查看实时状态。"
     },
     "2": {
       "question": "Beam 是开源的吗？",

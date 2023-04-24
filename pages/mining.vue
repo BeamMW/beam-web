@@ -51,7 +51,7 @@ useHead({
 
       <div>
         <LayoutButton
-          button-link="https://beamx.gitbook.io/beam-mining/"
+          button-link="/docs/mining"
           :big="true"
           accent-color="beam-green-dark"
         >

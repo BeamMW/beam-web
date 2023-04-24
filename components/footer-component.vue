@@ -61,13 +61,13 @@
               <a
                 class="capitalize inline-flex gap-x-2 transition-colors text-white/50 hover:text-white/90"
                 :title="t('footer.contact')"
-                :href="`mailto:${CONTACT_EMAIL}`"
+                :href="ExternalLinks.SUPPORT_EMAIL"
               >
                 {{ $t("footer.contact") }}
               </a>
               <LayoutLink
                 class="capitalize transition-colors text-white/50 hover:text-white/90"
-                to="https://docs.beam.mw/BEAM_Media_Kit_and_resources_v4.zip"
+                to="/assets/BEAM_Media_Kit_and_resources_v4.zip"
                 >{{ $t("footer.mediakit") }}</LayoutLink
               >
             </div>
@@ -142,7 +142,7 @@ const menus = computed(() => [
       { text: t("footer.community.reddit"), href: ExternalLinks.REDDIT },
       {
         text: t("footer.community.qq"),
-        href: "https://qm.qq.com/cgi-bin/qm/qr?k=qrfLNFTLxvThCgcF0fqPc2YFtDzMiUcm&authKey=8hGDPVzLLlTvX4SCBAeYc8TlaumsgvpTIdSUs3%2FU0K8U5piBp3znAYD%2Bd9n6vfEC",
+        href: ExternalLinks.QQ,
         onClick: () => openQQModal(),
       },
       { text: ExternalLinksTitle.COINGECKO, href: ExternalLinks.COINGECKO },
@@ -158,16 +158,17 @@ const menus = computed(() => [
       },
       {
         text: t("footer.developers.blockchainExplorer"),
-        href: "https://explorer.beam.mw/",
+        href: ExternalLinks.EXPLORER,
       },
       { text: t("footer.developers.sourceCode"), href: ExternalLinks.GITHUB },
       {
         text: t("footer.developers.dAppnetWallet"),
-        href: `https://dappnet.beam.mw${localePath("downloads")}`,
+        //href: `https://dappnet.beam.mw${localePath("downloads")}`,
+        href: ExternalLinks.DAPPNET_DOWNLOAD,
       },
       {
         text: t("footer.developers.support"),
-        href: "https://t.me/beamdevsupport",
+        href: ExternalLinks.DEVELOPERS_SUPPORT,
       },
     ],
   },
@@ -175,7 +176,7 @@ const menus = computed(() => [
     title: t("footer.miners.title"),
     links: [
       { text: t("footer.miners.startMining"), href: localePath("mining") },
-      { text: t("footer.miners.support"), href: "https://t.me/BeamMiners" },
+      { text: t("footer.miners.support"), href: ExternalLinks.MINING_SUPPORT },
     ],
   },
 ]);

@@ -56,7 +56,7 @@
     "description": "一般的な問い合わせに答えます。",
     "1": {
       "question": "Beamはいつ開始されましたか？",
-      "answer": "Beamのメインネットは**2019年1月3日**に稼働を開始しました。現在のステータスは[Beam Blockchain Explorer](https://duckduckgo.com)で確認できます。"
+      "answer": "Beamのメインネットは**2019年1月3日**に稼働を開始しました。現在のステータスは[Beam Blockchain Explorer](https://explorer.beam.mw)で確認できます。"
     },
     "2": {
       "question": "Beamはオープンソースですか？",

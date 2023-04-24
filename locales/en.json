@@ -56,7 +56,7 @@
     "description": "Common queries answered.",
     "1": {
       "question": "When was Beam launched?",
-      "answer": "Beam's mainnet went live on **January 3rd, 2019**. Check the current status at the [Beam Blockchain Explorer](https://duckduckgo.com)."
+      "answer": "Beam's mainnet went live on **January 3rd, 2019**. Check the current status at the [Beam Blockchain Explorer](https://explorer.beam.mw)."
     },
     "2": {
       "question": "Is Beam open-source?",

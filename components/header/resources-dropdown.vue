@@ -40,7 +40,7 @@ const menus = computed(() => [
       },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
-      { text: "Roadmap", href: "#" },
+      { text: "Roadmap", href: ExternalLinks.ROADMAP },
       { text: "Newsletter", href: ExternalLinks.SUBSTACK },
     ],
   },
@@ -52,7 +52,7 @@ const menus = computed(() => [
       { text: t("footer.community.reddit"), href: ExternalLinks.REDDIT },
       {
         text: t("footer.community.qq"),
-        href: "https://qm.qq.com/cgi-bin/qm/qr?k=qrfLNFTLxvThCgcF0fqPc2YFtDzMiUcm&authKey=8hGDPVzLLlTvX4SCBAeYc8TlaumsgvpTIdSUs3%2FU0K8U5piBp3znAYD%2Bd9n6vfEC",
+        href: ExternalLinks.QQ,
       },
       { text: ExternalLinksTitle.COINGECKO, href: ExternalLinks.COINGECKO },
       { text: ExternalLinksTitle.CMC, href: ExternalLinks.CMC },
