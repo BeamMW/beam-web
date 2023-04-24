@@ -117,13 +117,6 @@ function processPath(path: string) {
 if (!(await pageExist(routeName))) {
   throw createError({ statusCode: 404, statusMessage: "Page not found" });
 }
-
-/* onMounted(() => {
-  window.addEventListener("hashchange", function (e) {
-    e.preventDefault();
-    return false;
-  });
-}); */
 </script>
 
 <style lang="postcss" scoped>
