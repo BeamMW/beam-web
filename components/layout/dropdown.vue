@@ -189,62 +189,69 @@ const afterEnter = () => {
 
 provide("toggleDropdown", toggleDropdown);
 </script>
+
+<style lang="postcss">
+@media (max-width: 767px) {
+  .dropdown-container,
+  .dropdown-container::before {
+    @apply ltr:!rounded-r-3xl rtl:!rounded-l-3xl;
+  }
+}
+</style>
 <style lang="postcss" scoped>
 /** Custom default dropdown container */
 .popper-container:deep(.dropdown-container) {
-  @apply h-full will-change-transform z-50 text-white relative list-none backdrop-blur-xl backdrop-brightness-75 md:bg-[#042248] border-black border rounded-lg border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
+  @apply h-full will-change-transform z-50 rounded-lg text-white/90 relative list-none backdrop-blur-xl backdrop-brightness-75 md:bg-[#042248] border-black border border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
 }
 
 @keyframes animate {
   0% {
-    opacity: 0;
+    @apply opacity-0;
   }
   50% {
-    opacity: 1;
+    @apply opacity-100;
   }
   100% {
-    opacity: 0;
+    @apply opacity-0;
   }
 }
 
 .popper-container-snap-left {
-  @apply h-screen fixed top-0 left-0 overscroll-y-contain;
+  @apply h-screen fixed top-0 ltr:left-0 rtl:right-0 overscroll-y-contain;
   &:deep(.dropdown-container) {
-    @apply rounded-none !rounded-r-3xl !w-[49vw] sm:!w-[45vw] shadow-beam-pink shadow-2xl;
+    @apply !w-[49vw] sm:!w-[45vw] shadow-beam-pink shadow-2xl;
   }
   &:deep(.dropdown-container)::before {
-    @apply shadow-beam-green shadow-2xl h-full w-full;
+    @apply shadow-beam-green shadow-2xl absolute w-full h-full -z-[1];
     animation: animate 15s linear infinite;
     content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
   }
 }
 .dropdown-enter-active,
 .dropdown-leave-active {
   transition: opacity 225ms ease-in-out, transform 225ms ease-in-out;
 }
-.dropdown-enter-from,
-.dropdown-leave-to {
-  transform: translateX(-100%);
-}
-.dropdown-enter-to,
-.dropdown-leave-from {
-  transform: translateX(0%);
+
+@media (max-width: 767px) {
+  .dropdown-enter-from,
+  .dropdown-leave-to {
+    @apply ltr:-translate-x-full rtl:translate-x-full;
+  }
+  .dropdown-enter-to,
+  .dropdown-leave-from {
+    @apply ltr:-translate-x-0 rtl:translate-x-0;
+  }
 }
 
 @media (min-width: 768px) {
   .dropdown-enter-from,
   .dropdown-leave-to {
-    @apply opacity-0;
-    transform: scale(0.95);
+    @apply opacity-0 ltr:!scale-95 rtl:!scale-95;
   }
+
   .dropdown-enter-to,
   .dropdown-leave-from {
-    @apply opacity-100;
-    transform: scale(1);
+    @apply opacity-100 ltr:!scale-100 rtl:!scale-100;
   }
 }
 </style>
