@@ -4,12 +4,6 @@ const { t } = useI18n();
 
 const localePath = useLocalePath();
 
-useHead({
-  bodyAttrs: {
-    class: "!bg-[#00150B]",
-  },
-});
-
 const title = computed(() => t("head.title.documentation"));
 const description = computed(() => t("head.description"));
 
