@@ -133,6 +133,12 @@ export default defineNuxtConfig({
         file: "fr.json",
       },
       {
+        code: "ru",
+        name: "Русский",
+        iso: "ru-RU",
+        file: "ru.json",
+      },
+      {
         code: "zh",
         name: "中文（繁體）",
         iso: "zh-CN",
