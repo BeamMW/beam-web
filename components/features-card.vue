@@ -89,8 +89,8 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
     </div>
     <div class="mt-auto gap-4 select-none">
       <LayoutLink
-        :title="t('feature.learnmoreabout', { title })"
         v-if="link"
+        :title="t('feature.learnmoreabout', { title })"
         :to="link"
         class="text-beam-blue"
       >

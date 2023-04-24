@@ -21,8 +21,8 @@ const currentLocale = computed(() => {
     accent-color="beam-blue"
   >
     <IconFlag
-      :alt="currentLocale.name"
       :key="locale"
+      :alt="currentLocale.name"
       class="w-4 h-4"
       :flag="locale"
       loading="eager"
