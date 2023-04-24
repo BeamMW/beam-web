@@ -214,7 +214,7 @@ export const docTypes = [
   },
   {
     title: "docs.types.web",
-    image: "docs/desktop",
+    image: "docs/web",
     path: "/web-wallet",
   },
   {
