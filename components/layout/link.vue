@@ -20,15 +20,17 @@ const destination = computed(() => {
   return props.to || props.href || undefined;
 });
 
+const route = useRoute();
+
 function handleClick(event: MouseEvent) {
-  const targetElement = event.target;
+  const targetElement = event.currentTarget;
   if (
     targetElement &&
-    (event.target as HTMLElement).getAttribute("href") === destination.value
+    (targetElement as HTMLElement).getAttribute("href") === route.path
   ) {
-    const scrollOptions: ScrollToOptions = { top: 0, behavior: "smooth" };
     if (typeof window !== "undefined") {
-      window.scrollTo(scrollOptions);
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
 }
