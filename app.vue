@@ -83,7 +83,7 @@ onUnmounted(() =>
       <Link rel="mask-icon" :href="`/safari-pinned-tab.svg?v=${fileVersion}`" />
       <Link rel="shortcut icon" :href="`/favicon.ico?v=${fileVersion}`" />
       <Meta
-        content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+        content="width=device-width, initial-scale=1, maximum-scale=5"
         name="viewport"
       />
     </Head>

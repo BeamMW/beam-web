@@ -8,7 +8,11 @@
       >
         {{ $t(item.title) }}
         <div :class="arrowClasses(index)" class="transition">
-          <Icon class="block w-3 h-3 text-inherit" name="layout/arrow-right" />
+          <Icon
+            class="block w-3 h-3 text-inherit"
+            name="layout/arrow-right"
+            alt="Open"
+          />
         </div>
       </button>
       <div
