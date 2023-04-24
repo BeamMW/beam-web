@@ -21,7 +21,7 @@ useSeoMeta({
     <div class="max-w-prose px-4 py-10 lg:py-12 sm:px-6 lg:px-8 mx-auto">
       <b
         class="block text-base text-center text-text opacity-80 font-bold tracking-wide uppercase"
-        >LAST UPDATED: 21TH OF APRIL 2023</b
+        >{{ $t("privacy.lastupdate") }}</b
       >
       <LayoutTitle :title="t('privacy.title')" />
 
@@ -40,7 +40,10 @@ useSeoMeta({
             <MarkdownRenderer
               :t-key="`privacy.${index}.content`"
               :t-interpolation="{
-                support: `[Contact us by e-mail](${ExternalLinks.SUPPORT_EMAIL})`,
+                support: `[${ExternalLinks.SUPPORT_EMAIL.replace(
+                  'mailto:',
+                  ''
+                )}](${ExternalLinks.SUPPORT_EMAIL})`,
               }"
             />
           </p>
