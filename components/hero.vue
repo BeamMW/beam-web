@@ -95,7 +95,7 @@
             />
           </div>
 
-          <div class="relative w-[389px] h-[966px] min-w-[389px] -right-[30px]">
+          <div class="relative w-[319px] h-[869px] min-w-[319px] top-[90px]">
             <LayoutPicture
               src="/assets/hero/mobile.png"
               alt="Beam for iOS"
