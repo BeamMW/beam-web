@@ -57,7 +57,8 @@ defineRobotMeta();
     </Head>
     <NuxtLayout>
       <NuxtLoadingIndicator
-        color="repeating-linear-gradient(to right,var(--beam-blue) 0%,var(--beam-pink) 100%)"
+        color="repeating-linear-gradient(to right,var(--beam-green-dark) 0%,var(--beam-pink) 100%)"
+        class="will-change-auto"
       />
       <LanguageHandler>
         <template
