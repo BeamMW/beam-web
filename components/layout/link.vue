@@ -14,11 +14,8 @@ const destination = computed(() => {
   return props.to || props.href || undefined;
 });
 
-//const link = useLink({ to: destination });
-
 function handleClick(event: MouseEvent) {
   const targetElement = event.target;
-
   if (
     targetElement &&
     (event.target as HTMLElement).getAttribute("href") === destination.value
@@ -27,9 +24,6 @@ function handleClick(event: MouseEvent) {
     if (typeof window !== "undefined") {
       window.scrollTo(scrollOptions);
     }
-  } else {
-    // Call the original NuxtLink click handler
-    // link.navigate(event);
   }
 }
 </script>
