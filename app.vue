@@ -56,7 +56,9 @@ defineRobotMeta();
       />
     </Head>
     <NuxtLayout>
-      <NuxtLoadingIndicator />
+      <NuxtLoadingIndicator
+        color="repeating-linear-gradient(to right,var(--beam-blue) 0%,var(--beam-pink) 100%)"
+      />
       <LanguageHandler>
         <template
           #default="{ /*onBeforeEnter, */ onAfterEnter, languageChanged }"
