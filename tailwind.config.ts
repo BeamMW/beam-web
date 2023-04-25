@@ -19,6 +19,11 @@ const config = {
     "border-white",
     "text-white",
 
+    // Theme background colors
+    "bg-[#1C002E]",
+    "bg-[#00150B]",
+    "bg-[#041D3C]",
+
     "height-transition-enter-active",
     "height-transition-leave-active",
     "height-transition-enter",
