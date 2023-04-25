@@ -5,7 +5,7 @@
       :dir="head.htmlAttrs && head.htmlAttrs.dir"
     >
       <Head>
-        <Meta name="theme-color" :content="themeColor" />
+        <Meta name="theme-color" :content="bodyColor" />
         <template v-for="link in head.link" :key="link.id">
           <Link
             :id="link.id"
@@ -45,29 +45,35 @@ const head = useLocaleHead({
   addSeoAttributes: true,
 });
 
-useHead({
-  bodyAttrs: {
-    class: "bg-[#041D3C]",
-  },
-});
-
 const headerRef = ref("");
 const footerRef = ref("");
-const themeColor = ref("");
+const bodyColor = ref("");
 watch(
   currentRoute,
   () => {
     switch (currentRoute.value) {
       case "mining":
-        headerRef.value = "bg-[rgba(3,50,34,.65)]";
+        headerRef.value = "bg-[rgba(3,50,34,.6)]";
         footerRef.value = "bg-page-radial-gradient-dark-green";
-        themeColor.value = "#033222";
+        bodyColor.value = "#00150B";
+        break;
+      case "docs":
+      case "docs-slug":
+        headerRef.value = "bg-[rgba(54,0,97,.6)]";
+        footerRef.value = "bg-page-radial-gradient-purple";
+        bodyColor.value = "#1C002E";
         break;
       default:
-        headerRef.value = "bg-[rgba(4,37,72,.65)]";
+        headerRef.value = "bg-[rgba(4,37,72,.6)]";
         footerRef.value = "bg-page-radial-gradient";
-        themeColor.value = "#041D3C";
+        bodyColor.value = "#041D3C";
     }
+    useHead({
+      bodyAttrs: {
+        // Don't use tailwind or else we need to declare each bg-* as they are not detected at build time
+        style: `background-color: ${bodyColor.value} !important`,
+      },
+    });
   },
   { immediate: true }
 );

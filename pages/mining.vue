@@ -16,12 +16,6 @@ useSeoMeta({
   ogTitle: title,
   ogDescription: description,
 });
-
-useHead({
-  bodyAttrs: {
-    class: "!bg-[#00150B]",
-  },
-});
 </script>
 <template>
   <div class="bg-page-radial-gradient-dark-green">
