@@ -215,7 +215,7 @@
       "cli": "Command Line Interface",
       "explorer": "Blockchain Explorer"
     },
-    "explore": "Explore (English)"
+    "explore": "Explore"
   },
   "errors": {
     "title": "Error {code}",
