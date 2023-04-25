@@ -178,11 +178,6 @@ onUnmounted(() =>
     @apply bg-[#39FFF2] text-[#042548];
   }
 }
-
-body,
-html {
-  @apply transition-colors;
-}
 </style>
 
 <style lang="postcss" scoped>

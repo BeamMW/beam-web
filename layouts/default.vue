@@ -3,7 +3,7 @@
     <Html
       :lang="head.htmlAttrs && head.htmlAttrs.lang"
       :dir="head.htmlAttrs && head.htmlAttrs.dir"
-      :style="`background-color: ${bodyColor};`"
+      :class="`bg-[${bodyColor}]`"
     >
       <Head>
         <Meta name="theme-color" :content="bodyColor" />
@@ -23,7 +23,7 @@
           />
         </template>
       </Head>
-      <Body :style="`background-color: ${bodyColor};`">
+      <Body :class="`bg-[${bodyColor}]`">
         <main>
           <HeaderAnnouncement />
           <HeaderComponent :class="headerRef" />
@@ -46,9 +46,13 @@ const head = useLocaleHead({
   addSeoAttributes: true,
 });
 
-const headerRef = ref("");
-const footerRef = ref("");
-const bodyColor = ref("");
+const defaultColor = "#041D3C";
+const defaultHeaderColor = "bg-[rgba(4,37,72,.6)]";
+const defaultFooterColor = "bg-page-radial-gradient";
+
+const headerRef = ref(defaultHeaderColor);
+const footerRef = ref(defaultFooterColor);
+const bodyColor = ref(defaultColor);
 
 watch(
   currentRoute,
@@ -66,9 +70,9 @@ watch(
         bodyColor.value = "#1C002E";
         break;
       default:
-        headerRef.value = "bg-[rgba(4,37,72,.6)]";
-        footerRef.value = "bg-page-radial-gradient";
-        bodyColor.value = "#041D3C";
+        headerRef.value = defaultHeaderColor;
+        footerRef.value = defaultFooterColor;
+        bodyColor.value = defaultColor;
     }
   },
   { immediate: true }
