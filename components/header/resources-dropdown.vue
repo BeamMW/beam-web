@@ -56,6 +56,7 @@ const menus = computed(() => [
       },
       { text: ExternalLinksTitle.COINGECKO, href: ExternalLinks.COINGECKO },
       { text: ExternalLinksTitle.CMC, href: ExternalLinks.CMC },
+      { text: t("footer.miners.support"), href: ExternalLinks.GENERAL_SUPPORT },
     ],
   },
   {
