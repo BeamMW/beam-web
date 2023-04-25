@@ -4,6 +4,7 @@ export interface LinkElement {
   rel: string;
   href: string;
   as?: string;
+  type?: string;
   crossorigin?: boolean;
 }
 

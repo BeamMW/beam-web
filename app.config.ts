@@ -94,13 +94,11 @@ export enum ExternalLinksTitle {
  */
 export const preHtml = {
   preload: [
-    { href: "/fonts/ProximaNova-Regular.woff2", as: "font", crossorigin: true },
     {
-      href: "/fonts/ProximaNova-RegularIt.woff2",
-      as: "font",
-      crossorigin: true,
+      href: "/assets/hero/bg.png",
+      as: "image",
+      type: "image/png",
     },
-    { href: "/fonts/ProximaNova-Bold.woff2", as: "font", crossorigin: true },
   ],
   preconnect: [
     new URL(ExternalLinks.EXPLORER).origin,

@@ -60,6 +60,7 @@ onUnmounted(() =>
         :rel="linkElement.rel"
         :href="linkElement.href"
         :as="linkElement.as"
+        :type="linkElement.type"
         :crossorigin="linkElement.crossorigin ? 'anonymous' : undefined"
       />
       <Link
