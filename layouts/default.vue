@@ -5,6 +5,7 @@
       :dir="head.htmlAttrs && head.htmlAttrs.dir"
     >
       <Head>
+        <Meta name="theme-color" :content="themeColor" />
         <template v-for="link in head.link" :key="link.id">
           <Link
             :id="link.id"
@@ -52,6 +53,7 @@ useHead({
 
 const headerRef = ref("");
 const footerRef = ref("");
+const themeColor = ref("");
 watch(
   currentRoute,
   () => {
@@ -59,10 +61,12 @@ watch(
       case "mining":
         headerRef.value = "bg-[rgba(3,50,34,.65)]";
         footerRef.value = "bg-page-radial-gradient-dark-green";
+        themeColor.value = "#033222";
         break;
       default:
         headerRef.value = "bg-[rgba(4,37,72,.65)]";
         footerRef.value = "bg-page-radial-gradient";
+        themeColor.value = "#041D3C";
     }
   },
   { immediate: true }
