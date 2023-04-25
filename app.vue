@@ -5,7 +5,7 @@ import { scrollToComponent } from "~/utils/scrollToComponent";
 
 const windowLocked = useState("windowLocked", () => false);
 const currentRoute = useState("currentRoute", () => "");
-const localPath = useLocalePath();
+const localePath = useLocalePath();
 
 const fileVersion = 1;
 
@@ -23,7 +23,7 @@ watch(
 defineRobotMeta();
 
 const redirectToIndex = async () => {
-  await router.push(localPath("index"));
+  await router.push(localePath("index"));
 };
 
 // Scroll to "Where to buy" called but unable to scroll, redirect to homepage

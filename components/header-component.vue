@@ -11,18 +11,7 @@ const localePath = useLocalePath();
     >
       <div class="order-2 md:order-1 flex items-center">
         <div class="inline-block w-auto">
-          <LayoutLink
-            :to="localePath('index')"
-            class="hover:opacity-70 transition-opacity"
-            title="Homepage"
-          >
-            <Icon
-              name="logo"
-              class="h-auto w-10 select-none"
-              :as-image="true"
-              alt="Beam logo"
-            />
-          </LayoutLink>
+          <LayoutLogo />
         </div>
       </div>
       <div
