@@ -6,7 +6,9 @@
     @mouseover="hover = true"
     @mouseleave="hover = false"
   >
-    <div class="grid items-center justify-center h-10 w-10">
+    <div
+      class="grid items-center justify-center h-10 w-10 group-hover:scale-125 transition-transform duration-[600ms]"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 57 40"
@@ -55,10 +57,9 @@
           <path id="ray4" class="ray" fill="url(#d)" d="M57 14 28 26v1l29-7z" />
         </g>
       </svg>
-
       <Icon
         name="logo-bg"
-        class="h-full w-full item-container scale-125 group-hover:rotate-90 group-focus:rotate-90 transition-transform duration-300 ease-in-out z-40"
+        class="h-full w-full item-container scale-0 group-hover:scale-125 group-hover:rotate-90 transition-transform duration-[600ms] group-hover:duration-[600ms] ease-in-out z-40"
         :as-image="true"
         alt="Beam logo background"
       />
@@ -87,7 +88,7 @@ onMounted(async () => {
   animation.value = gsap.to(maskCircle.value, {
     paused: true,
     attr: { r: 30 },
-    duration: 0.3,
+    duration: 0.6,
     ease: "linear",
   });
 });
