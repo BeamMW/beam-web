@@ -39,7 +39,7 @@ const menus = computed(() => [
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
       { text: ExternalLinksTitle.TWITTER, href: ExternalLinks.TWITTER },
-      { text: "Roadmap", href: ExternalLinks.ROADMAP },
+      { text: ExternalLinksTitle.YOUTUBE, href: ExternalLinks.YOUTUBE },
       { text: "Newsletter", href: ExternalLinks.SUBSTACK },
     ],
   },

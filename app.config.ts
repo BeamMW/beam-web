@@ -41,7 +41,7 @@ export enum ExternalLinks {
   SUBSTACK = "https://beamprivacy.substack.com",
   REDDIT = "https://www.reddit.com/r/beamprivacy/",
   DISCORD = "https://discord.gg/BHZvAhg",
-  YOUTUBE = "https://www.youtube.com/@beamprivacy",
+  YOUTUBE = "https://www.youtube.com/@beamprivacy/videos",
   ANCHOR = "https://anchor.fm/beam-privacy",
   FORUM = "https://forum.beam.mw",
   BITCOINTALK = "https://bitcointalk.org/index.php?topic=5052151",

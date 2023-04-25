@@ -133,6 +133,8 @@ const menus = computed(() => [
       },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
+      { text: ExternalLinksTitle.YOUTUBE, href: ExternalLinks.YOUTUBE },
+      { text: "Roadmap", href: ExternalLinks.ROADMAP },
       { text: "Newsletter", href: ExternalLinks.SUBSTACK },
     ],
   },
