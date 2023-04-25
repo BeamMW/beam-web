@@ -3,7 +3,7 @@
     <Html
       :lang="head.htmlAttrs && head.htmlAttrs.lang"
       :dir="head.htmlAttrs && head.htmlAttrs.dir"
-      :style="`background-color: ${bodyColor} !important;`"
+      :style="`background-color: ${bodyColor};`"
     >
       <Head>
         <Meta name="theme-color" :content="bodyColor" />
@@ -23,7 +23,7 @@
           />
         </template>
       </Head>
-      <Body :style="`background-color: ${bodyColor} !important;`">
+      <Body :style="`background-color: ${bodyColor};`">
         <main>
           <HeaderAnnouncement />
           <HeaderComponent :class="headerRef" />
