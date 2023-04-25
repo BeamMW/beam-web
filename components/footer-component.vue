@@ -18,7 +18,9 @@
         </p>
       </LayoutAnimatedModal>
     </ClientOnly>
-    <div class="w-full py-12 px-4 mx-auto max-w-[85rem] sm:px-6 lg:px-8">
+    <div
+      class="w-full py-9 md:py-12 px-4 mx-auto max-w-[85rem] sm:px-6 lg:px-8"
+    >
       <div class="grid grid-cols-2 gap-6 mb-10 md:grid-cols-4 lg:grid-cols-5">
         <div class="col-span-full hidden lg:col-span-1 lg:block">
           <div class="flex pointer-events-none select-none gap-3">
@@ -48,7 +50,7 @@
           <p class="mt-3 text-xs text-white/80">{{ $t("footer.copyright") }}</p>
         </div>
         <div
-          class="flex gap-y-3 flex-col lg:flex-row lg:justify-between lg:items-center lg:gap-y-0"
+          class="flex gap-y-5 flex-col lg:flex-row lg:justify-between lg:items-center lg:gap-y-0"
         >
           <div class="flex items-center">
             <div class="space-x-4 text-sm">
@@ -73,12 +75,10 @@
               >
             </div>
           </div>
-          <div class="flex justify-between items-center gap-3">
-            <section
-              v-for="(icon, index) of socialIcons"
-              :key="index"
-              class="space-x-4"
-            >
+          <div
+            class="flex justify-between flex-wrap items-center gap-0.5 md:gap-3"
+          >
+            <div v-for="(icon, index) of socialIcons" :key="index">
               <LayoutLink
                 v-bind="{ title: typedExternalLinksTitle[icon] }"
                 class="inline-block text-gray-200 200 opacity-60 hover:opacity-90 transition select-none"
@@ -91,7 +91,7 @@
                   loading="lazy"
                 />
               </LayoutLink>
-            </section>
+            </div>
           </div>
         </div>
       </div>
