@@ -3,6 +3,7 @@
     <Html
       :lang="head.htmlAttrs && head.htmlAttrs.lang"
       :dir="head.htmlAttrs && head.htmlAttrs.dir"
+      :style="`background-color: ${bodyColor} !important;`"
     >
       <Head>
         <Meta name="theme-color" :content="bodyColor" />
@@ -22,7 +23,7 @@
           />
         </template>
       </Head>
-      <Body>
+      <Body :style="`background-color: ${bodyColor} !important;`">
         <main>
           <HeaderAnnouncement />
           <HeaderComponent :class="headerRef" />
@@ -48,6 +49,7 @@ const head = useLocaleHead({
 const headerRef = ref("");
 const footerRef = ref("");
 const bodyColor = ref("");
+
 watch(
   currentRoute,
   () => {
@@ -68,12 +70,6 @@ watch(
         footerRef.value = "bg-page-radial-gradient";
         bodyColor.value = "#041D3C";
     }
-    useHead({
-      bodyAttrs: {
-        // Don't use tailwind or else we need to declare each bg-* as they are not detected at build time
-        style: `background-color: ${bodyColor.value} !important`,
-      },
-    });
   },
   { immediate: true }
 );
