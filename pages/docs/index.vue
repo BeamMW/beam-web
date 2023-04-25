@@ -44,7 +44,7 @@ useSeoMeta({
       <div class="flex justify-center">
         <LayoutLink
           :to="ExternalLinks.DOCS_SOURCES"
-          class="opacity-70 text-beam-purple md:text-lg pt-8 md:pt-10 hover:opacity-100 flex items-center text-base underline gap-1 transition-opacity"
+          class="opacity-70 text-beam-blue md:text-lg pt-8 md:pt-10 hover:opacity-100 flex items-center text-base underline gap-1 transition-opacity"
         >
           {{ $t("docs.edit")
           }}<Icon
