@@ -204,6 +204,7 @@
     }
   },
   "docs": {
+    "warning": "The documentation is presently undergoing updates and, at the moment, is exclusively available in English.",
     "types": {
       "desktop": "Desktop Wallet",
       "mobile": "Mobile Wallet App",
@@ -215,7 +216,8 @@
       "cli": "Command Line Interface",
       "explorer": "Blockchain Explorer"
     },
-    "explore": "Explore"
+    "explore": "Explore",
+    "edit": "Edit this documentation"
   },
   "errors": {
     "title": "Error {code}",

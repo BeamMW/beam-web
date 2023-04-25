@@ -202,6 +202,7 @@
     }
   },
   "docs": {
+    "warning": "目前，文档正在更新中，暂时仅支持英语。",
     "types": {
       "desktop": "桌面钱包",
       "mobile": "移动钱包应用",
@@ -213,7 +214,8 @@
       "cli": "命令行界面",
       "explorer": "区块链浏览器"
     },
-    "explore": "探索（英文）"
+    "explore": "探索（英文）",
+    "edit": "编辑此文档"
   },
   "errors": {
     "title": "错误 {code}",

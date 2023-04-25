@@ -24,9 +24,9 @@ useSeoMeta({
         <Icon
           class="w-6 h-6 md:w-7 md:h-7 inline-block"
           name="layout/warning"
-        />The documentation is currently being updated and is only accessible in
-        English for the time being.
+        />{{ $t("docs.warning") }}
       </p>
+
       <div
         class="grid md:grid-cols-2 lg:grid-cols-3 items-center gap-6 md:gap-10 text-white"
       >
@@ -41,13 +41,18 @@ useSeoMeta({
         />
       </div>
 
-      <p
-        class="text-base text-beam-purple md:text-lg pt-8 md:pt-10 flex items-center gap-4 justify-center opacity-50 hover:opacity-90 transition-opacity"
-      >
-        <LayoutLink :to="ExternalLinks.DOCS_SOURCES">
-          Edit this documentation on GitHub</LayoutLink
+      <div class="flex justify-center">
+        <LayoutLink
+          :to="ExternalLinks.DOCS_SOURCES"
+          class="opacity-70 text-beam-purple md:text-lg pt-8 md:pt-10 hover:opacity-100 flex items-center text-base underline gap-1 transition-opacity"
         >
-      </p>
+          {{ $t("docs.edit")
+          }}<Icon
+            name="layout/external"
+            class="inline-block h-[1.32rem] w-[1.32rem]"
+          ></Icon>
+        </LayoutLink>
+      </div>
     </LayoutWrapper>
   </div>
 </template>

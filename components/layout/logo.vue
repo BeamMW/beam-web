@@ -70,7 +70,7 @@
 const localePath = useLocalePath();
 const maskCircle = ref<HTMLElement | null>(null);
 const hover = ref(false);
-let animation = ref<any>(null);
+const animation = ref<gsap.core.Tween | null>(null);
 
 watchEffect(() => {
   if (animation.value) {
@@ -84,7 +84,6 @@ watchEffect(() => {
 
 onMounted(async () => {
   const { gsap } = await import("gsap");
-  //const maskCircle = document.getElementById("maskCircle");
   animation.value = gsap.to(maskCircle.value, {
     paused: true,
     attr: { r: 30 },

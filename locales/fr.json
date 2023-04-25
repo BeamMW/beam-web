@@ -202,6 +202,7 @@
     }
   },
   "docs": {
+    "warning": "La documentation est actuellement en cours de mise à jour et n'est disponible qu'en anglais pour le moment.",
     "types": {
       "desktop": "Portefeuille de bureau",
       "mobile": "Application de portefeuille mobile",
@@ -213,7 +214,8 @@
       "cli": "Interface de ligne de commande",
       "explorer": "Explorateur de blockchain"
     },
-    "explore": "Explorer (Anglais)"
+    "explore": "Explorer (Anglais)",
+    "edit": "Modifier cette documentation"
   },
   "errors": {
     "title": "Erreur {code}",

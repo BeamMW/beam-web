@@ -203,8 +203,8 @@
       "content": "Wenn Sie Fragen oder Bedenken zu unserer Datenschutzrichtlinie oder unseren Datenschutzpraktiken haben, können Sie sich gerne an uns wenden:\n\n**Beam Foundation Limited**\nE-Mail: {support}"
     }
   },
-
   "docs": {
+    "warning": "Die Dokumentation wird derzeit aktualisiert und ist vorübergehend nur in englischer Sprache verfügbar.",
     "types": {
       "desktop": "Desktop-Wallet",
       "mobile": "Mobile Wallet-App",
@@ -216,7 +216,8 @@
       "cli": "Befehlszeilenschnittstelle",
       "explorer": "Blockchain-Explorer"
     },
-    "explore": "Erkunden (Englisch)"
+    "explore": "Erkunden (Englisch)",
+    "edit": "Bearbeiten Sie diese Dokumentation"
   },
   "errors": {
     "title": "Fehler {code}",
