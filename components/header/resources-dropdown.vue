@@ -27,6 +27,11 @@ const menus = computed(() => [
     title: t("footer.join.title"),
     links: [
       {
+        text: t("header.nav.home"),
+        href: localePath("index"),
+        class: "block md:hidden",
+      },
+      {
         text: t("footer.join.downloadWallet"),
         href: localePath("downloads"),
         class: "block md:hidden",
