@@ -9,6 +9,7 @@ export function extractOriginsFromEnum(enumObj: object): string[] {
       if (urlObject.origin && urlObject.origin !== "null") {
         return urlObject.origin;
       }
+      return undefined; // Explicitly return undefined if the condition is not met
     })
     .filter((origin) => origin !== undefined);
 
