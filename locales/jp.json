@@ -124,6 +124,7 @@
   "downloads": {
     "downloadWallet": "Beamウォレットをダウンロード",
     "downloadButton": "{platform}用にダウンロード",
+    "divider": "または",
     "detailslink": "詳細",
     "detailswindow": {
       "titles": {

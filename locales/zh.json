@@ -124,6 +124,7 @@
   "downloads": {
     "downloadWallet": "下载 Beam 钱包",
     "downloadButton": "下载适用于 {platform}",
+    "divider": "或",
     "detailslink": "查看详情",
     "detailswindow": {
       "titles": {

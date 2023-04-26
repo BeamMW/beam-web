@@ -124,6 +124,7 @@
   "downloads": {
     "downloadWallet": "Download Beam Wallet",
     "downloadButton": "Download for {platform}",
+    "divider": "or",
     "detailslink": "Details",
     "detailswindow": {
       "titles": {

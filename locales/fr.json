@@ -124,6 +124,7 @@
   "downloads": {
     "downloadWallet": "Téléchargez le portefeuille Beam",
     "downloadButton": "Télécharger pour {platform}",
+    "divider": "ou",
     "detailslink": "Détails",
     "detailswindow": {
       "titles": {

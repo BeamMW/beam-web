@@ -124,6 +124,7 @@
   "downloads": {
     "downloadWallet": "Скачать кошелек Beam",
     "downloadButton": "Скачать для {platform}",
+    "divider": "или",
     "detailslink": "Подробности",
     "detailswindow": {
       "titles": {

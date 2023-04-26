@@ -124,6 +124,7 @@
   "downloads": {
     "downloadWallet": "הורד ארנק Beam",
     "downloadButton": "הורדה עבור {platform}",
+    "divider": "או",
     "detailslink": "פרטים",
     "detailswindow": {
       "titles": {

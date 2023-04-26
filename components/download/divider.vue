@@ -4,8 +4,8 @@
       <div class="divider"></div>
       <span
         class="flex-shrink mx-7 text-white/90 uppercase text-xl tracking-widest"
-        >or</span
-      >
+        >{{ $t("downloads.divider") }}
+      </span>
       <div class="divider"></div>
     </div>
   </div>
