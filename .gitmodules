@@ -3,4 +3,4 @@
 	url = https://github.com/BeamMW/docs-gitbook
 [submodule "downloads"]
 	path = downloads
-	url = https://github.com/magicp0tato/beam-web-downloads
+	url = https://github.com/BeamMW/beam-web-downloads
