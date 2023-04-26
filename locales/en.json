@@ -6,7 +6,13 @@
       "downloads": "Downloads",
       "documentation": "Documentation"
     },
-    "description": "Beam offers privacy, confidential assets, DeFi, NFTs, DEX, and a seamless user experience in a secure, decentralized environment.",
+    "descriptions": {
+      "index": "Beam offers privacy, confidential assets, DeFi, NFTs, DEX, and a seamless user experience in a secure, decentralized environment.",
+      "downloads": "Download the Beam wallet for various devices, acquire BEAM, explore private DeFi transactions, and access FAQs and resources.",
+      "mining": "Explore Beam mining, learn about the Beam Hash III algorithm, and find resources for mining software, rewards calculator, and support.",
+      "privacy": "Review Beam Wallet's privacy policy regarding data collection, usage, security, third-party services, and GDPR compliance. Contact info provided.",
+      "docs": "Explore our comprehensive documentation on wallets, mining, atomic swaps, and more – currently available in English. Stay tuned for updates and expanded language support."
+    },
     "keywords": "Beam, cryptocurrency, privacy, anonymity, confidential assets, DeFi, NFTs, blockchain, decentralized, DEX, smart contracts, user experience, wallet, secure, financial freedom, AMM, atomic swaps, virtual machine, WASM, contract shaders, app shaders, mobile wallet, desktop wallet, transaction types, private stablecoins, wrapped assets, sidechains, oracles, lending, Uniswap-like, Beam nodes, Beam Virtual Machine, confidentiality, bridged assets, Beam blockchain, seamless trading, interactive wallet, Bitcoin-like transactions, Beam trading, financial privacy"
   },
   "header": {

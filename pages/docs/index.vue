@@ -5,7 +5,7 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 
 const title = computed(() => t("head.title.documentation"));
-const description = computed(() => t("head.description"));
+const description = computed(() => t("head.descriptions.docs"));
 
 useSeoMeta({
   title,

@@ -6,7 +6,13 @@
       "downloads": "Downloads",
       "documentation": "Dokumentation"
     },
-    "description": "Beam bietet Privatsphäre, vertrauliche Vermögenswerte, DeFi, NFTs, DEX und eine nahtlose Benutzererfahrung in einer sicheren, dezentralisierten Umgebung.",
+    "descriptions": {
+      "index": "Beam bietet Privatsphäre, vertrauliche Vermögenswerte, DeFi, NFTs, DEX und eine nahtlose Benutzererfahrung in einer sicheren, dezentralisierten Umgebung.",
+      "downloads": "Laden Sie die Beam-Wallet für verschiedene Geräte herunter, erwerben Sie BEAM, erkunden Sie private DeFi-Transaktionen und greifen Sie auf FAQs und Ressourcen zu.",
+      "mining": "Erforschen Sie das Beam-Mining, erfahren Sie mehr über den Beam Hash III-Algorithmus und finden Sie Ressourcen für Mining-Software, Belohnungsrechner und Support.",
+      "privacy": "Überprüfen Sie die Datenschutzrichtlinie der Beam-Wallet in Bezug auf Datenerfassung, -nutzung, -sicherheit, Dienste von Drittanbietern und die Einhaltung der DSGVO. Kontaktinformationen sind angegeben.",
+      "docs": "Stöbern Sie in unserer umfassenden Dokumentation zu Wallets, Mining, Atomic Swaps und vielem mehr – derzeit nur in Englisch verfügbar. Bleiben Sie dran für Updates und erweiterte Sprachunterstützung."
+    },
     "keywords": "Beam, Kryptowährung, Privatsphäre, Anonymität, vertrauliche Vermögenswerte, DeFi, NFTs, Blockchain, dezentralisiert, DEX, Smart Contracts, Benutzererfahrung, Wallet, sicher, finanzielle Freiheit, AMM, Atomic Swaps, virtuelle Maschine, WASM, Vertrags-Shader, App-Shader, mobile Wallet, Desktop-Wallet, Transaktionstypen, private Stablecoins, eingebettete Vermögenswerte, Sidechains, Oracles, Kredite, Uniswap-ähnlich, Beam-Knoten, Beam Virtual Machine, Vertraulichkeit, gebrückte Vermögenswerte, Beam-Blockchain, nahtloses Handeln, interaktive Wallet, Bitcoin-ähnliche Transaktionen, Beam-Handel, finanzielle Privatsphäre"
   },
   "header": {

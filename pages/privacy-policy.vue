@@ -4,10 +4,7 @@ import { ExternalLinks } from "~/app.config";
 const { t } = useI18n();
 
 const title = computed(() => t("privacy.title"));
-const description = computed(
-  () =>
-    "Review Beam Wallet's privacy policy regarding data collection, usage, security, third-party services, and GDPR compliance. Contact info provided."
-);
+const description = computed(() => t("head.descriptions.privacy"));
 
 useSeoMeta({
   title,

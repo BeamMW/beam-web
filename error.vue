@@ -62,7 +62,7 @@ useTitleTemplate();
 const title = computed(() =>
   t("errors.title", { code: props.error.statusCode })
 );
-const description = computed(() => t("head.description"));
+const description = computed(() => t("head.descriptions.index"));
 
 function stripHTML(html: string) {
   if (typeof DOMParser !== "undefined") {

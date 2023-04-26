@@ -5,10 +5,7 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 
 const title = computed(() => t("mining.title"));
-const description = computed(
-  () =>
-    "Explore Beam mining, learn about the Beam Hash III algorithm, and find resources for mining software, rewards calculator, and support."
-);
+const description = computed(() => t("head.descriptions.mining"));
 
 useSeoMeta({
   title,

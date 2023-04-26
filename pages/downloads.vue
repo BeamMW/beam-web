@@ -4,10 +4,7 @@ const { t } = useI18n();
 const environmentGetter = await useEnvironmentGetter();
 
 const title = computed(() => t("head.title.downloads"));
-const description = computed(
-  () =>
-    "Download the Beam wallet for various devices, acquire BEAM, explore private DeFi transactions, and access FAQs and resources."
-);
+const description = computed(() => t("head.descriptions.downloads"));
 
 useSeoMeta({
   title,
