@@ -38,6 +38,13 @@ const locales: LocaleObject[] = [
     dir: "rtl" as Directions,
   },
   {
+    code: "ar",
+    name: "العربية الفصحى",
+    iso: "ar-001",
+    file: "ar.json",
+    dir: "rtl" as Directions,
+  },
+  {
     code: "zh",
     name: "中文（繁體）",
     iso: "zh-CN",
