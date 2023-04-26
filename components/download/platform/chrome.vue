@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { PlatformDetails, SupportedPlatforms } from "@/app.config";
+import { SupportedPlatforms } from "@/app.config";
+const platformDetails = await usePlatformDetails();
 
 defineProps({
   highlight: {
@@ -10,7 +11,7 @@ defineProps({
 
 const {
   links: { store },
-} = PlatformDetails[SupportedPlatforms.CHROME];
+} = platformDetails[SupportedPlatforms.CHROME];
 </script>
 <template>
   <DownloadPlatformGet

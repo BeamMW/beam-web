@@ -1,20 +1,6 @@
 import { URLEntry } from "@/utils/linkElements";
 import { extractOriginsFromEnum } from "@/utils/extractOriginsFromEnum";
 
-type PlatformDownloadType = {
-  store: string;
-  wallet: string;
-  cli: string;
-  node: string;
-};
-
-interface PlatformDownloadDetail {
-  version?: string;
-  date?: string;
-  links: Partial<PlatformDownloadType>;
-  checksums: Partial<PlatformDownloadType>;
-}
-
 export enum SupportedPlatforms {
   IOS = "ios",
   MACOS = "macos",
@@ -28,7 +14,9 @@ export enum SupportedPlatforms {
 
 // Must be set via PUBLIC_WEB_URL CLI argument at build time
 export const dappnetUrls = ["https://dappnet.beam.mw"];
-export const productionUrls = ["https://www.beam.mw", "https://beam.mw"];
+export const productionUrls = ["https://beam.mw", "https://www.beam.mw"];
+
+export const qqGroupId = 909677190;
 
 export enum ExternalLinks {
   // Socials
@@ -61,8 +49,6 @@ export enum ExternalLinks {
   // Legacy links
   OLD_WEBSITE = "https://old.beam.mw",
 }
-
-export const qqGroupId = 909677190;
 
 export enum ExternalLinksTitle {
   GITHUB = "GitHub",
@@ -104,92 +90,6 @@ export const preHtml = {
   "dns-prefetch": extractOriginsFromEnum(ExternalLinks) as URLEntry[],
   prerender: [] as URLEntry[],
   prefetch: [] as URLEntry[],
-};
-
-export const PlatformDetails: Record<
-  SupportedPlatforms,
-  PlatformDownloadDetail
-> = {
-  [SupportedPlatforms.WINDOWS]: {
-    version: "7.3.14027",
-    date: "Apr 15, 2023",
-    links: {
-      wallet:
-        "https://builds.beam.mw/mainnet/2023.04.14/Release/win/signed/Beam-Wallet-7.3.14027.5732.exe",
-      cli: "https://builds.beam.mw/mainnet/2023.04.14/Release/win/signed/beam-wallet-cli-7.3.14027.zip",
-      node: "https://builds.beam.mw/mainnet/2023.04.14/Release/win/signed/beam-node-7.3.14027.zip",
-    },
-    checksums: {
-      wallet:
-        "bf18b5920176dd5db2f40654eef5cb7bc160328860bc0adaf512eeb612aa2142",
-      cli: "bac48d9e28e58f581121dcfd0248aa690589f17e8cd52d9a68144683e6c2af59",
-      node: "05720254a19fc24cedbe1a1096403e8cb2a09daadbcfbf57af4a2eb4b20f26d6",
-    },
-  },
-
-  [SupportedPlatforms.LINUX]: {
-    version: "7.3.14027",
-    date: "Apr 15, 2023",
-    links: {
-      wallet:
-        "https://builds.beam.mw/mainnet/2023.04.14/Release/linux/Beam-Wallet-7.3.14027.5732.zip",
-      cli: "https://builds.beam.mw/mainnet/2023.04.14/Release/linux/beam-wallet-cli-7.3.14027.zip",
-      node: "https://builds.beam.mw/mainnet/2023.04.14/Release/linux/beam-node-7.3.14027.zip",
-    },
-    checksums: {
-      wallet:
-        "ec1fac7fba8ce6e6597d01515a252f84823b6b1c06252550d04186b59d499c9a",
-      cli: "07c1fd769da0a2c5416ffe66f6cd2280bfb00ba31658c2f9a859eb1b0edd1808",
-      node: "1578368e1df2be36696a866df8e7baca7c05a08119808615c9fe04cde16fc80f",
-    },
-  },
-
-  [SupportedPlatforms.MACOS]: {
-    version: "7.3.14027",
-    date: "Apr 15, 2023",
-    links: {
-      wallet:
-        "https://builds.beam.mw/mainnet/2023.04.14/Release/mac/Beam-Wallet-7.3.14027.5732.dmg",
-      cli: "https://builds.beam.mw/mainnet/2023.04.14/Release/mac/beam-wallet-cli-7.3.14027.zip",
-      node: "https://builds.beam.mw/mainnet/2023.04.14/Release/mac/beam-node-7.3.14027.zip",
-    },
-    checksums: {
-      wallet:
-        "96740fec95d6dfb50dc9c5d75861bca9eb54707e37bfe6477bd4a24433612ba8",
-      cli: "105c619d5f35beeed305618f7524bb6497c0b4945e9e29bb798e437ae4fbae56",
-      node: "d2696a10b9f8bf7464824a4d8c499e6010c0a8748bffe7f1122def87631f15e0",
-    },
-  },
-
-  [SupportedPlatforms.ANDROID]: {
-    version: "7.1",
-    date: "Aug 23, 2022",
-    links: {
-      store:
-        "https://play.google.com/store/apps/details?id=com.mw.beam.beamwallet.mainnet",
-      wallet: "https://builds.beam.mw/mainnet/android/mainnet-7.1.apk",
-    },
-    checksums: {
-      wallet:
-        "79be44596cf66047e798f94c1ecf75f9e05734b681e854742474c651d949dc90",
-    },
-  },
-
-  // Unlikely links get updated:
-  [SupportedPlatforms.IOS]: {
-    links: {
-      store:
-        "https://apps.apple.com/us/app/beam-privacy-wallet/id1459842353?ls=1",
-    },
-    checksums: {},
-  },
-  [SupportedPlatforms.CHROME]: {
-    links: {
-      store:
-        "https://chrome.google.com/webstore/detail/beam-web-wallet/ilhaljfiglknggcoegeknjghdgampffk?hl=en&authuser=1",
-    },
-    checksums: {},
-  },
 };
 
 export const docTypes = [

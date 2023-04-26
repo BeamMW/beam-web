@@ -1,8 +1,9 @@
 import { ref } from "vue";
 import { SupportedPlatforms } from "@/app.config";
 
-export function useSelectedPlatform() {
-  const currentPlatform = ref(SupportedPlatforms.LINUX);
+export async function useSelectedPlatform() {
+  const environmentGetter = await useEnvironmentGetter();
+  const currentPlatform = ref<SupportedPlatforms | undefined>(undefined);
   const {
     isAndroid,
     isIos,
@@ -13,16 +14,20 @@ export function useSelectedPlatform() {
     isSafari,
   } = useDevice();
 
-  if (isDesktop && isChrome && !isSafari) {
-    currentPlatform.value = SupportedPlatforms.CHROME;
-  } else if (isIos) {
-    currentPlatform.value = SupportedPlatforms.IOS;
-  } else if (isMacOS) {
-    currentPlatform.value = SupportedPlatforms.MACOS;
-  } else if (isWindows) {
-    currentPlatform.value = SupportedPlatforms.WINDOWS;
-  } else if (isAndroid) {
-    currentPlatform.value = SupportedPlatforms.ANDROID;
+  if (!environmentGetter.isDappnet) {
+    if (isDesktop && isChrome && !isSafari) {
+      currentPlatform.value = SupportedPlatforms.CHROME;
+    } else if (isIos) {
+      currentPlatform.value = SupportedPlatforms.IOS;
+    } else if (isMacOS) {
+      currentPlatform.value = SupportedPlatforms.MACOS;
+    } else if (isWindows) {
+      currentPlatform.value = SupportedPlatforms.WINDOWS;
+    } else if (isAndroid) {
+      currentPlatform.value = SupportedPlatforms.ANDROID;
+    } else {
+      currentPlatform.value = SupportedPlatforms.LINUX;
+    }
   }
 
   const isSelected = (platform: SupportedPlatforms) =>

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { PlatformDetails, SupportedPlatforms } from "@/app.config";
+import { SupportedPlatforms } from "@/app.config";
+const platformDetails = await usePlatformDetails();
 
 const { t } = useI18n();
 
@@ -23,7 +24,7 @@ const {
   date,
   links: { wallet, cli, node },
   checksums: { wallet: walletChecksum, cli: cliChecksum, node: nodeChecksum },
-} = PlatformDetails[props.platform] ?? {};
+} = platformDetails[props.platform] ?? {};
 </script>
 <template>
   <DownloadPlatformGet

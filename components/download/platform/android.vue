@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { PlatformDetails, SupportedPlatforms } from "@/app.config";
+import { SupportedPlatforms } from "@/app.config";
+const platformDetails = await usePlatformDetails();
 
 const { t } = useI18n();
 defineProps({
@@ -14,7 +15,7 @@ const {
   checksums: { wallet: checksumWallet },
   version,
   date,
-} = PlatformDetails[SupportedPlatforms.ANDROID];
+} = platformDetails[SupportedPlatforms.ANDROID];
 </script>
 
 <template>

@@ -44,7 +44,8 @@
 
         <div class="flex flex-row justify-center gap-4">
           <LayoutLink
-            :to="PlatformDetails[SupportedPlatforms.IOS].links.store"
+            v-if="platformDetails[SupportedPlatforms.IOS]"
+            :to="platformDetails[SupportedPlatforms.IOS].links.store"
             class="select-none hover:opacity-80 transition"
             :title="t('hero.geton.appstore')"
           >
@@ -57,7 +58,8 @@
             />
           </LayoutLink>
           <LayoutLink
-            :to="PlatformDetails[SupportedPlatforms.ANDROID].links.store"
+            v-if="platformDetails[SupportedPlatforms.ANDROID]"
+            :to="platformDetails[SupportedPlatforms.ANDROID].links.store"
             class="select-none hover:opacity-80 transition"
             :title="t('hero.geton.playstore')"
           >
@@ -70,7 +72,8 @@
             />
           </LayoutLink>
           <LayoutLink
-            :to="PlatformDetails[SupportedPlatforms.CHROME].links.store"
+            v-if="platformDetails[SupportedPlatforms.CHROME]"
+            :to="platformDetails[SupportedPlatforms.CHROME].links.store"
             class="hidden md:block select-none hover:opacity-80 transition"
             :title="t('hero.geton.chromestore')"
           >
@@ -118,10 +121,11 @@
 
 <script lang="ts" setup>
 import { VNodeRef } from "vue";
-import { PlatformDetails, SupportedPlatforms } from "@/app.config";
+import { SupportedPlatforms } from "@/app.config";
 import { UserInteractionEvents } from "~/utils/emitter";
 const { t } = useI18n();
 
+const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();
 
 const main: VNodeRef = ref();
