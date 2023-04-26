@@ -11,6 +11,7 @@
   },
   "header": {
     "announcement": "加入DEX积累阶段，为Beam隐私为中心的去中心化交易所启动做出贡献！[了解更多...](https://beamprivacy.substack.com/p/beam-2023-week-16-dive-in)",
+    "announcementdev": "**注意！** 本网站仅适用于 dAppnet 网络，这是为开发者设计的测试网络。如果您正在寻找真正的网站，请[**点击此处**](https://beam.mw)。",
     "nav": {
       "home": "首页",
       "downloads": "下载",

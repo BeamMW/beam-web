@@ -11,6 +11,7 @@
   },
   "header": {
     "announcement": "Join the DEX Accumulation Phase and contribute to Beam's privacy-focused decentralized exchange launch! [Learn more...](https://beamprivacy.substack.com/p/beam-2023-week-16-dive-in)",
+    "announcementdev": "**Attention!** This website is exclusively for the dAppnet network, a testnet designed for developers. If you're looking for the real website, please [**click here**](https://beam.mw).",
     "nav": {
       "home": "Home",
       "downloads": "Downloads",

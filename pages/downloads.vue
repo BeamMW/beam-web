@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { EnvironmentType, currentEnvironment } from "~/app.config";
-
 const { t } = useI18n();
+
+const environmentGetter = await useEnvironmentGetter();
 
 const title = computed(() => t("head.title.downloads"));
 const description = computed(
@@ -22,9 +22,7 @@ useSeoMeta({
     <section class="pt-10 lg:pt-12 bg-page-radial-gradient">
       <LayoutTitle
         :title="`${$t('downloads.downloadWallet')}${
-          currentEnvironment !== EnvironmentType.MAINNET
-            ? ` (${currentEnvironment})`
-            : ''
+          environmentGetter.isDappnet ? ` (Dappnet)` : ''
         }`"
       />
       <ClientOnly>

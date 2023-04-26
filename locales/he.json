@@ -11,6 +11,7 @@
   },
   "header": {
     "announcement": "הצטרפו לשלב האגור של ה-DEX ותרמו להשקת החילוף המבוזר שממוקד בפרטיות של Beam! [למידע נוסף...](https://beamprivacy.substack.com/p/beam-2023-week-16-dive-in)",
+    "announcementdev": "**שימו לב!** אתר זה מיועד במיוחד לרשת dAppnet, רשת בדיקות שנוצרה עבור מפתחים. אם אתה מחפש את האתר האמיתי, אנא [**לחץ כאן**](https://beam.mw).",
     "nav": {
       "home": "בית",
       "downloads": "הורדות",

@@ -3,12 +3,13 @@ import { useI18n } from "vue-i18n";
 import { nextTick } from "vue";
 import { throttle } from "~/utils/throttle";
 
+const environmentGetter = await useEnvironmentGetter();
 const { t } = useI18n();
 
 const announcementContainer = ref();
 const announcementRef = ref<HTMLElement | null>(null);
-
 const announcementMessage = computed(() => t("header.announcement"));
+const announcementMessageDev = computed(() => t("header.announcementdev"));
 
 const props = defineProps({
   canClose: {
@@ -105,9 +106,17 @@ const leave = (el: HTMLElement) => {
               class="font-bold text-xs md:text-sm text-white/90 flex items-center gap-3"
             >
               <MarkdownRenderer
-                :key="announcementMessage"
+                :key="
+                  environmentGetter.isDappnet
+                    ? announcementMessageDev
+                    : announcementMessage
+                "
                 class="colorLinks"
-                t-key="header.announcement"
+                :t-key="
+                  environmentGetter.isDappnet
+                    ? 'header.announcementdev'
+                    : 'header.announcement'
+                "
               />
             </p>
             <div class="rtl:mr-auto ltr:ml-auto" v-if="canClose">

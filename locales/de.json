@@ -11,6 +11,7 @@
   },
   "header": {
     "announcement": "Nehmen Sie an der DEX-Akkumulationsphase teil und tragen Sie zum Start von Beams dezentralem, datenschutzfokussierten Exchange bei! [Mehr erfahren...](https://beamprivacy.substack.com/p/beam-2023-week-16-dive-in)",
+    "announcementdev": "**Achtung!** Diese Website ist ausschließlich für das dAppnet-Netzwerk bestimmt, ein Testnetz, das für Entwickler entwickelt wurde. Wenn Sie auf der Suche nach der echten Website sind, klicken Sie bitte [**hier**](https://beam.mw).",
     "nav": {
       "home": "Startseite",
       "downloads": "Downloads",

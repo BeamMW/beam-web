@@ -15,11 +15,6 @@ interface PlatformDownloadDetail {
   checksums: Partial<PlatformDownloadType>;
 }
 
-export enum EnvironmentType {
-  MAINNET = "mainnet",
-  DAPPNET = "dappnet",
-}
-
 export enum SupportedPlatforms {
   IOS = "ios",
   MACOS = "macos",
@@ -31,7 +26,9 @@ export enum SupportedPlatforms {
 
 /** CONFIG HERE */
 
-export const currentEnvironment: EnvironmentType = EnvironmentType.MAINNET;
+// Must be set via PUBLIC_WEB_URL CLI argument at build time
+export const dappnetUrls = ["https://dappnet.beam.mw"];
+export const productionUrls = ["https://www.beam.mw", "https://beam.mw"];
 
 export enum ExternalLinks {
   // Socials

@@ -117,7 +117,6 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      // Can be set with environment variables
       siteUrl: publicWebUrl,
     },
   },

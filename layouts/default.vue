@@ -25,9 +25,7 @@
       </Head>
       <Body :class="`bg-[${bodyColor}]`">
         <main>
-          <HeaderAnnouncement
-            :canClose="currentEnvironment == EnvironmentType.MAINNET"
-          />
+          <HeaderAnnouncement :canClose="environmentGetter.isDappnet" />
           <HeaderComponent :class="headerRef" />
           <slot />
           <FooterComponent :class="footerRef" />
@@ -38,8 +36,7 @@
 </template>
 
 <script lang="ts" setup>
-import { EnvironmentType, currentEnvironment } from "~/app.config";
-
+const environmentGetter = await useEnvironmentGetter();
 const currentRoute = useState("currentRoute", () => "");
 
 useTitleTemplate();

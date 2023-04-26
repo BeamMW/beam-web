@@ -11,6 +11,7 @@
   },
   "header": {
     "announcement": "DEXの蓄積フェーズに参加し、Beamのプライバシー重視の分散型取引所の立ち上げに貢献しましょう！[詳細はこちら...](https://beamprivacy.substack.com/p/beam-2023-week-16-dive-in)",
+    "announcementdev": "**注意！** このウェブサイトは、開発者向けに設計されたテストネットである dAppnet ネットワーク専用です。実際のウェブサイトをお探しの場合は、[**ここをクリック**](https://beam.mw)してください。",
     "nav": {
       "home": "ホーム",
       "downloads": "ダウンロード",
