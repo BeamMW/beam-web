@@ -25,7 +25,9 @@
       </Head>
       <Body :class="`bg-[${bodyColor}]`">
         <main>
-          <HeaderAnnouncement />
+          <HeaderAnnouncement
+            :canClose="currentEnvironment == EnvironmentType.MAINNET"
+          />
           <HeaderComponent :class="headerRef" />
           <slot />
           <FooterComponent :class="footerRef" />
@@ -36,6 +38,8 @@
 </template>
 
 <script lang="ts" setup>
+import { EnvironmentType, currentEnvironment } from "~/app.config";
+
 const currentRoute = useState("currentRoute", () => "");
 
 useTitleTemplate();

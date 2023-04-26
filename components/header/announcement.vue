@@ -10,6 +10,13 @@ const announcementRef = ref<HTMLElement | null>(null);
 
 const announcementMessage = computed(() => t("header.announcement"));
 
+const props = defineProps({
+  canClose: {
+    type: Boolean,
+    default: true,
+  },
+});
+
 const showMessage = ref(false);
 const storageKey = "announcementMessageHash";
 
@@ -29,9 +36,13 @@ const updateHeight = throttle(() => {
 }, 150);
 
 onMounted(() => {
-  const messageHash = localStorage.getItem(storageKey);
-  showMessage.value =
-    messageHash !== hashCode(announcementMessage.value).toString();
+  if (props.canClose) {
+    const messageHash = localStorage.getItem(storageKey);
+    showMessage.value =
+      messageHash !== hashCode(announcementMessage.value).toString();
+  } else {
+    showMessage.value = true;
+  }
 
   window.addEventListener("resize", updateHeight);
 });
@@ -99,7 +110,7 @@ const leave = (el: HTMLElement) => {
                 t-key="header.announcement"
               />
             </p>
-            <div class="rtl:mr-auto ltr:ml-auto">
+            <div class="rtl:mr-auto ltr:ml-auto" v-if="canClose">
               <button
                 type="button"
                 class="inline-flex rounded-md p-1.5 text-white/80 transition-colors hover:text-white/60 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#042548] focus:ring-[#042548]"
