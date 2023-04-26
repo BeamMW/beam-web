@@ -15,7 +15,9 @@ function openModal() {
 <template>
   <div class="inline">
     <LayoutAnimatedModal ref="modal" :title="title">
-      <div class="divide-solid divide-white/10 divide-y flex flex-col gap-3">
+      <div
+        class="divide-solid divide-white/10 divide-y flex flex-col gap-3 rtl:text-right ltr:text-left"
+      >
         <slot />
       </div>
     </LayoutAnimatedModal>
