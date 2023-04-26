@@ -22,6 +22,7 @@ const iconName = computed(() => `flags/${props.flag}`);
     v-bind="$attrs"
   >
     <Icon
+      :key="iconName"
       :name="iconName"
       class-parent="w-full h-full"
       class="w-full h-full !scale-[1.25]"
