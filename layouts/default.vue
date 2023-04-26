@@ -25,7 +25,7 @@
       </Head>
       <Body :class="`bg-[${bodyColor}]`">
         <main>
-          <HeaderAnnouncement :can-close="environmentGetter.isDappnet" />
+          <HeaderAnnouncement :can-close="!environmentGetter.isDappnet" />
           <HeaderComponent :class="headerRef" />
           <slot />
           <FooterComponent :class="footerRef" />
