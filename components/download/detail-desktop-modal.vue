@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { t } = useI18n();
+const { t, localeProperties } = useI18n();
 
 defineProps({
   version: {
@@ -7,7 +7,7 @@ defineProps({
     required: true,
   },
   date: {
-    type: String,
+    type: Number,
     required: true,
   },
   linkWalletFile: {
@@ -43,7 +43,9 @@ defineProps({
         {{ $t("downloads.detailswindow.latestversion") }}
       </h6>
       <p>
-        {{ version }} ({{ date }}) &middot;
+        {{ version }} ({{
+          convertUNIXTimestampToLocaleDate(date, localeProperties.iso)
+        }}) &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
             :link="linkWalletFile"
