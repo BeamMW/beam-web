@@ -1,6 +1,6 @@
 <template>
   <section class="bg-[#041d3c] pb-10 lg:pb-12">
-    <Hero />
+    <IndexHero />
     <div class="py-10 lg:py-12 gap-y-10 lg:gap-y-12 flex flex-col items-center">
       <Features />
       <GetStarted :is-next-step="false" />
