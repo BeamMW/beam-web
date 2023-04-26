@@ -27,7 +27,7 @@ const iconName = computed(() => `flags/${props.flag}`);
       class-parent="w-full h-full"
       class="w-full h-full !scale-[1.25]"
       :as-image="true"
-      loading="eager"
+      loading="lazy"
       alt="Flag"
     />
   </div>
