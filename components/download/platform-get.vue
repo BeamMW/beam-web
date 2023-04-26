@@ -39,7 +39,7 @@ defineProps({
     >
       <Icon
         :name="`download/platforms/${icon.toLowerCase()}`"
-        class="w-11 h-11 select-none pointer-events-none"
+        class="w-11 h-11"
         :as-image="true"
       />
       <h4
@@ -56,10 +56,7 @@ defineProps({
 
     <div v-if="highlight" class="py-4">
       <LayoutButton :big="true" :button-link="link" accent-color="beam-blue">
-        <Icon
-          name="download/get"
-          class="w-[18px] h-[18px] select-none pointer-events-none"
-        />
+        <Icon name="download/get" class="w-[18px] h-[24px]" />
         {{ $t("downloads.downloadButton", { platform: title }) }}
       </LayoutButton>
     </div>

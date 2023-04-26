@@ -1,9 +1,14 @@
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <span v-if="!asImage && iconUrl" v-bind="$attrs" v-html="iconUrl" />
+  <span
+    v-if="!asImage && iconUrl"
+    v-bind="$attrs"
+    v-html="iconUrl"
+    :class="`select-none pointer-events-none ${props.classParent}`"
+  />
   <div
     v-else-if="iconUrl"
-    :class="`opacity-0 transition duration-500 ${
+    :class="`select-none pointer-events-none opacity-0 transition duration-500 ${
       imageLoaded || props.loading == 'eager' ? '!opacity-100' : ''
     } ${props.classParent}`"
   >

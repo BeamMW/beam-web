@@ -49,7 +49,7 @@ const {
     <span class="border-b border-white/70 hover:border-white">
       <DownloadAlternativeLink :title="t('downloads.type.node')" :link="node" />
     </span>
-    <LayoutMiddotSeparator />
+    <span>&nbsp;&middot;&nbsp;</span>
     <DownloadDetailLink
       :title="t(`downloads.detailswindow.titles.${platform}`)"
     >

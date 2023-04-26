@@ -34,7 +34,7 @@ const {
         :link="wallet"
       />
     </span>
-    <LayoutMiddotSeparator />
+    <span>&nbsp;&middot;&nbsp;</span>
     <DownloadDetailLink
       v-if="version && date && wallet && checksumWallet"
       :title="t('downloads.detailswindow.titles.android')"

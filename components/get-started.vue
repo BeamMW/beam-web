@@ -57,10 +57,7 @@ onUnmounted(() =>
             :button-link="localePath('downloads')"
             :big="true"
           >
-            <Icon
-              class="w-[18px] h-[18px] select-none pointer-events-none"
-              name="layout/flat-beam-animated"
-            />
+            <Icon class="w-[18px] h-[18px]" name="layout/flat-beam-animated" />
             {{ $t("getstarted.steps.1.button") }}
           </LayoutButton>
         </FeaturesCard>
@@ -82,10 +79,7 @@ onUnmounted(() =>
               eventBus.emit(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, {})
             "
           >
-            <Icon
-              class="w-[18px] h-[18px] select-none pointer-events-none"
-              name="get-started/buy"
-            />
+            <Icon class="w-[18px] h-[18px]" name="get-started/buy" />
             {{ $t("getstarted.steps.2.button") }}
           </LayoutButton>
         </FeaturesCard>
@@ -111,10 +105,7 @@ onUnmounted(() =>
               :button-link="localePath('docs')"
               :big="true"
             >
-              <Icon
-                class="w-[18px] h-[18px] select-none pointer-events-none"
-                name="get-started/explore"
-              />
+              <Icon class="w-[18px] h-[18px]" name="get-started/explore" />
               {{ $t("head.title.documentation") }}
             </LayoutButton>
           </FeaturesCard>

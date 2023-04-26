@@ -26,10 +26,7 @@
               eventBus.emit(UserInteractionEvents.SCROLL_TO_GET_STARTED, {})
             "
           >
-            <Icon
-              class="w-6 h-6 select-none pointer-events-none"
-              name="hero/rocket"
-            />
+            <Icon class="w-6 h-6" name="hero/rocket" />
             {{ $t("getstarted.title") }}
           </LayoutButton>
 
@@ -38,10 +35,7 @@
             :button-link="localePath('downloads')"
             accent-color="beam-blue"
           >
-            <Icon
-              class="w-6 h-6 select-none pointer-events-none"
-              name="layout/flat-beam-animated"
-            />
+            <Icon class="w-6 h-6" name="layout/flat-beam-animated" />
             {{ $t("hero.downloadWallet") }}
           </LayoutButton>
         </div>
@@ -55,7 +49,7 @@
           >
             <Icon
               name="download/appstore"
-              class="h-11 w-[132px] select-none pointer-events-none"
+              class="h-11 w-[132px]"
               :as-image="true"
               loading="lazy"
               :alt="t('hero.geton.appstore')"
@@ -69,7 +63,7 @@
           >
             <Icon
               name="download/googleplay"
-              class="h-11 w-[148.09px] select-none pointer-events-none"
+              class="h-11 w-[148.09px]"
               :as-image="true"
               loading="lazy"
               :alt="t('hero.geton.playstore')"
@@ -83,7 +77,7 @@
           >
             <Icon
               name="download/googlechrome"
-              class="h-11 w-[148.26px] select-none pointer-events-none"
+              class="h-11 w-[148.26px]"
               :as-image="true"
               loading="lazy"
               :alt="t('hero.geton.chromestore')"
@@ -101,7 +95,7 @@
             <LayoutPicture
               src="/assets/hero/desktop.png"
               alt="Beam Desktop"
-              class="select-none pointer-events-none w-[937px] h-[1025px]"
+              class="w-[937px] h-[1025px]"
               :webp="true"
             />
           </div>
@@ -112,7 +106,7 @@
             <LayoutPicture
               src="/assets/hero/mobile.png"
               alt="Beam iOS"
-              class="select-none pointer-events-none w-[319px] h-[869px]"
+              class="w-[319px] h-[869px]"
               :webp="true"
             />
           </div>

@@ -40,7 +40,7 @@
             <Icon
               :as-image="true"
               :name="`medias/${item.image}`"
-              class="select-none pointer-events-none h-12 text-beam-blue w-auto"
+              class="h-12 text-beam-blue w-auto"
               loading="lazy"
               :alt="item.image"
             />

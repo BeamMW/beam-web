@@ -69,9 +69,9 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
   >
     <Icon
       v-if="image"
-      :class="`select-none pointer-events-none text-${
-        accentColor ? accentColor : 'current'
-      } ${wideIcon ? 'w-12 h-15' : 'w-10 h-12'}`"
+      :class="`text-${accentColor ? accentColor : 'current'} ${
+        wideIcon ? 'w-12 h-15' : 'w-10 h-12'
+      }`"
       :name="image"
       :as-image="asImage"
       :loading="props.loading"

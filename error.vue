@@ -9,7 +9,7 @@
           name="misc/404"
           :as-image="true"
           loading="lazy"
-          class="w-64 h-64 mb-2 select-none pointer-events-none"
+          class="w-64 h-64 mb-2"
           alt="Beam Girl"
         />
       </div>

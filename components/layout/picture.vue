@@ -1,7 +1,7 @@
 <template>
   <div
     ref="imageWrapper"
-    :class="`opacity-0 transition duration-500 ${
+    :class="`select-none pointer-events-none opacity-0 transition duration-500 ${
       imageLoaded ? '!opacity-100' : ''
     }`"
   >

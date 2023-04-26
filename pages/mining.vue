@@ -24,7 +24,7 @@ useSeoMeta({
           name="mining/intro"
           :as-image="true"
           loading="lazy"
-          class="w-64 h-64 mb-2 select-none pointer-events-none"
+          class="w-64 h-64 mb-2"
           alt="Beam Girl"
         />
         <h1 class="text-left text-2xl uppercase font-bold tracking-[.25em]">
@@ -73,7 +73,7 @@ useSeoMeta({
                 :as-image="true"
                 loading="lazy"
                 :alt="gpuType.type.toLowerCase()"
-                class="h-7 w-auto opacity-90 select-none pointer-events-none"
+                class="h-7 w-auto opacity-90"
               />
             </div>
             <div class="col-span-1 p-4 justify-self-center">
@@ -96,10 +96,7 @@ useSeoMeta({
           class="mt-5 w-fit mx-auto"
           :button-link="localePath('downloads')"
         >
-          <Icon
-            class="w-[18px] h-[18px] select-none pointer-events-none"
-            name="layout/flat-beam-animated"
-          />
+          <Icon class="w-[18px] h-[18px]" name="layout/flat-beam-animated" />
           {{ $t("mining.downloadWalletAndNode") }}
         </LayoutButton>
       </div>

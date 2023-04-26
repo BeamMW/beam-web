@@ -20,7 +20,7 @@ defineProps({
       >{{ title }}&nbsp;
       <Icon
         v-if="!disableArrow"
-        class="h-3 w-3 select-none pointer-events-none"
+        class="h-3 w-3"
         name="download/get-arrow-inline"
       />
     </span>

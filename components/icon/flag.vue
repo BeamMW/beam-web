@@ -18,13 +18,13 @@ const iconName = computed(() => `flags/${props.flag}`);
 <template>
   <div
     v-show="props.flag != ''"
-    class="overflow-hidden rounded-full select-none pointer-events-none"
+    class="overflow-hidden rounded-full"
     v-bind="$attrs"
   >
     <Icon
       :name="iconName"
       class-parent="w-full h-full"
-      class="w-full h-full !scale-[1.25] select-none pointer-events-none"
+      class="w-full h-full !scale-[1.25]"
       :as-image="true"
       loading="eager"
       alt="Flag"

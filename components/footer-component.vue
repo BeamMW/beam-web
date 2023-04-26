@@ -7,7 +7,7 @@
       <LayoutAnimatedModal ref="qqModal" :title="t('footer.community.qq')">
         <Icon
           name="footer/qq"
-          class="rounded-md w-[256px] h-[256px] select-none pointer-events-none"
+          class="rounded-md w-[256px] h-[256px]"
           :as-image="true"
           loading="lazy"
         />
@@ -23,10 +23,10 @@
     >
       <div class="grid grid-cols-2 gap-6 mb-10 md:grid-cols-4 lg:grid-cols-5">
         <div class="col-span-full hidden lg:col-span-1 lg:block">
-          <div class="flex pointer-events-none select-none gap-3">
+          <div class="flex gap-3">
             <Icon
               name="logo"
-              class="w-10 h-10 select-none pointer-events-none"
+              class="w-10 h-10"
               :as-image="true"
               loading="lazy"
             />
@@ -39,10 +39,10 @@
       </div>
       <div class="pt-5 mt-5 border-t border-[rgba(255,255,255,.05)]">
         <div class="mb-3 lg:hidden">
-          <div class="flex pointer-events-none select-none gap-3">
+          <div class="flex gap-3">
             <Icon
               name="logo"
-              class="w-10 h-10 select-none pointer-events-none"
+              class="w-10 h-10"
               :as-image="true"
               loading="lazy"
             />
@@ -86,7 +86,7 @@
               >
                 <Icon
                   :name="`socials/${typedExternalLinksIcon[icon]}`"
-                  class="w-[18px] h-[18px] select-none pointer-events-none"
+                  class="w-[18px] h-[18px]"
                   :as-image="true"
                   loading="lazy"
                 />
