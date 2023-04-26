@@ -12,13 +12,12 @@
 <script lang="ts" setup>
 const { t } = useI18n();
 
-const title = computed(() => t("head.title.index"));
 const description = computed(() => t("head.descriptions.index"));
 
 useSeoMeta({
-  title,
+  title: "",
   description,
-  ogTitle: title,
+  ogTitle: "",
   ogDescription: description,
 });
 </script>
