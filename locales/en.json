@@ -252,7 +252,9 @@
       "title": "Beam",
       "downloadWallet": "Download Wallet",
       "beamForum": "Beam Forum",
-      "beamBlog": "Beam Blog"
+      "beamBlog": "Beam Blog",
+      "roadmap": "Roadmap",
+      "newsletter": "Newsletter"
     },
     "community": {
       "title": "Community",

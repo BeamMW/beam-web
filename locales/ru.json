@@ -252,7 +252,9 @@
       "title": "Beam",
       "downloadWallet": "Скачать кошелек",
       "beamForum": "Форум Beam",
-      "beamBlog": "Блог Beam"
+      "beamBlog": "Блог Beam",
+      "roadmap": "Дорожная карта",
+      "newsletter": "Новостная рассылка"
     },
     "community": {
       "title": "Сообщество",
