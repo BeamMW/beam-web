@@ -104,6 +104,7 @@ import {
   ExternalLinks,
   ExternalLinksIcon,
   ExternalLinksTitle,
+  dappnetUrls,
   qqGroupId,
 } from "@/app.config";
 
@@ -168,7 +169,7 @@ const menus = computed(() => [
       { text: t("footer.developers.sourceCode"), href: ExternalLinks.GITHUB },
       {
         text: t("footer.developers.dAppnetWallet"),
-        href: ExternalLinks.DAPPNET_DOWNLOAD,
+        href: `${dappnetUrls[0]}${localePath("downloads")}`,
       },
       {
         text: t("footer.developers.support"),

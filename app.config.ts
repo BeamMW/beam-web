@@ -60,7 +60,6 @@ export enum ExternalLinks {
 
   // Legacy links
   OLD_WEBSITE = "https://old.beam.mw",
-  DAPPNET_DOWNLOAD = "https://old.beam.mw/downloads/dappnet-mac", // `https://dappnet.beam.mw${localePath("downloads")}`,
 }
 
 export const qqGroupId = 909677190;
