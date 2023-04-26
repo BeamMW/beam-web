@@ -257,6 +257,10 @@ export const pressArticles = [
     href: "https://www.coindesk.com/the-first-cryptocurrency-to-use-mimblewimble-privacy-tech-is-now-live",
   },
   {
+    image: "forbes",
+    href: "https://www.forbes.com/digital-assets/assets/beam-beam/",
+  },
+  {
     image: "benthamsgaze",
     href: "https://www.benthamsgaze.org/2019/05/22/efficient-cryptographic-arguments-and-proofs-or-how-i-became-a-fractional-monetary-unit/",
   },
