@@ -39,7 +39,7 @@ defineProps({
         </div>
         <div>
           <Icon
-            class="block w-3.5 h-3.5 text-white group-hover:text-beam-blue opacity-60 group-hover:opacity-100 transition"
+            class="block w-3.5 h-3.5 text-white group-hover:text-beam-blue opacity-60 group-hover:opacity-100 transition rtl:rotate-180"
             name="layout/arrow-right"
           />
         </div>
