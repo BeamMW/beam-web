@@ -10,13 +10,16 @@
           {{ $t("hero.title") }}
         </h1>
         <p
-          class="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 text-white"
+          class="mb-8 text-base font-normal sm:text-lg lg:text-xl sm:px-16 lg:px-48 text-white opacity-90"
         >
           {{ $t("hero.subtitle") }}
         </p>
 
-        <div class="grid lg:grid-cols-2 gap-4 max-w-xl mx-auto mb-5">
+        <div
+          class="grid md:grid-cols-2 gap-5 md:gap-6 w-fit lg:w-6/12 mx-auto mb-6"
+        >
           <LayoutButton
+            class="whitespace-nowrap"
             accent-color="beam-pink"
             as="button"
             @click="
@@ -31,6 +34,7 @@
           </LayoutButton>
 
           <LayoutButton
+            class="whitespace-nowrap"
             :button-link="localePath('downloads')"
             accent-color="beam-blue"
           >
