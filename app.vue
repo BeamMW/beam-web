@@ -164,12 +164,9 @@ onUnmounted(() =>
   --beam-green: #39fff2;
   --beam-green-dark: #00e2c2;
 
-  /*
-  * Prevent zoom / pinch on iOS that does not respect user-scale=no
-  */
-  touch-action: pan-x pan-y;
   @apply min-h-screen
       min-w-full
+      overflow-x-hidden
       font-medium
       not-italic
       text-[#fff]

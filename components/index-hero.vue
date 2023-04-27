@@ -10,7 +10,7 @@
           {{ $t("hero.title") }}
         </h1>
         <p
-          class="mb-8 text-base font-normal sm:text-lg lg:text-xl sm:px-16 lg:px-48 text-white opacity-90"
+          class="mb-5 md:mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 text-white opacity-90"
         >
           {{ $t("hero.subtitle") }}
         </p>

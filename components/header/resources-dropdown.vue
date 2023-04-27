@@ -1,7 +1,7 @@
 <template>
   <section class="dropdown-container">
     <div
-      class="grid-container px-4 pt-4 h-full overflow-y-scroll pb-[25vh] md:!pb-1 md:shadow-2xl"
+      class="grid-container px-4 pt-4 h-full overflow-y-scroll md:overflow-y-hidden pb-[30vw] md:!pb-1 md:shadow-2xl"
     >
       <div v-for="(menu, index) in menus" :key="index" class="grid-item">
         <template v-if="menu.menus">

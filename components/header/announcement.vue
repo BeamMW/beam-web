@@ -101,7 +101,7 @@ const leave = (el: HTMLElement) => {
         class="bg-transparent h-auto border-[rgba(255,255,255,.08)] border-b"
       >
         <div class="max-w-screen-xl mx-auto">
-          <div class="flex items-center md:p-4 p-2">
+          <div class="flex items-center p-3 md:p-4">
             <p
               class="font-bold text-xs md:text-sm text-white/90 flex items-center gap-3"
             >
