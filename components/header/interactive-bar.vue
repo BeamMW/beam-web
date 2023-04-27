@@ -11,29 +11,37 @@ const announcementMessageDev = computed(() => t("header.announcementdev"));
     <div class="bg-transparent border-[rgba(255,255,255,.08)] border-b">
       <div class="grid mx-auto max-w-screen-xl grid-cols-12">
         <div
-          class="p-3 md:p-4 flex items-center col-span-12 md:col-span-10 font-bold text-sm text-white/90"
+          class="min-h-[44px] md:min-h-[57px] p-3 md:p-4 flex items-center col-span-12 md:col-span-10 font-bold text-sm text-white/90"
         >
-          <Vue3Marquee
-            :clone="false"
-            :gradient="true"
-            :pause-on-hover="true"
-            :gradient-color="[4, 29, 60]"
-            :gradient-width="'80px'"
+          <transition
+            name="marquee"
+            enter-from-class="opacity-0"
+            enter-active-class="transition-opacity duration-500 ease-out"
+            leave-from-class="opacity-100"
+            leave-active-class="transition-opacity duration-500 ease-out opacity-0"
           >
-            <MarkdownRenderer
-              :key="
-                environmentGetter.isDappnet
-                  ? announcementMessageDev
-                  : announcementMessage
-              "
-              class="colorLinks"
-              :t-key="
-                environmentGetter.isDappnet
-                  ? 'header.announcementdev'
-                  : 'header.announcement'
-              "
-            />
-          </Vue3Marquee>
+            <Vue3Marquee
+              :clone="false"
+              :gradient="true"
+              :pause-on-hover="true"
+              :gradient-color="[4, 29, 60]"
+              :gradient-width="'80px'"
+            >
+              <MarkdownRenderer
+                :key="
+                  environmentGetter.isDappnet
+                    ? announcementMessageDev
+                    : announcementMessage
+                "
+                class="colorLinks"
+                :t-key="
+                  environmentGetter.isDappnet
+                    ? 'header.announcementdev'
+                    : 'header.announcement'
+                "
+              />
+            </Vue3Marquee>
+          </transition>
         </div>
         <div
           class="p-3 hidden justify-self-end md:block md:p-4 col-span-2 font-bold text-base text-beam-green-dark opacity-80 whitespace-nowrap"
