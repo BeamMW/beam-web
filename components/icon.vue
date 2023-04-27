@@ -1,11 +1,12 @@
 <template>
-  <!-- eslint-disable-next-line vue/no-v-html -->
+  <!-- eslint-disable -->
   <span
     v-if="!asImage && iconUrl"
     v-bind="$attrs"
-    v-html="iconUrl"
     :class="`select-none pointer-events-none ${props.classParent}`"
+    v-html="iconUrl"
   />
+  <!-- eslint-enable -->
   <div
     v-else-if="iconUrl"
     :class="`select-none pointer-events-none opacity-0 transition duration-500 ${

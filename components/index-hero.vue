@@ -139,7 +139,7 @@ const initAnimation = async () => {
           start: "top top",
           end: "80% top",
           scrub: true,
-          //scrub: 0.5, // Soften the link between the animation and the scrollbar
+          // scrub: 0.5, // Soften the link between the animation and the scrollbar
         },
         easing: "ease",
         invalidateOnRefresh: true,
@@ -159,10 +159,10 @@ const initAnimation = async () => {
       );
 
       // Use ScrollTrigger.matchMedia to apply the .heroContainer animation only for desktop devices
-      //const mm = gsap.matchMedia();
+      // const mm = gsap.matchMedia();
 
       // add a media query. When it matches, the associated function will run
-      //mm.add("(min-width: 768px)", () => {
+      // mm.add("(min-width: 768px)", () => {
       tl.fromTo(
         ".heroBackground",
         {
