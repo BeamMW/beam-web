@@ -25,7 +25,7 @@
       </Head>
       <Body :class="`bg-[${bodyColor}]`">
         <main>
-          <HeaderAnnouncement :can-close="!environmentGetter.isDappnet" />
+          <HeaderInteractiveBar />
           <HeaderComponent :class="headerRef" />
           <slot />
           <FooterComponent :class="footerRef" />
@@ -36,7 +36,6 @@
 </template>
 
 <script lang="ts" setup>
-const environmentGetter = await useEnvironmentGetter();
 const currentRoute = useState("currentRoute", () => "");
 
 useTitleTemplate();

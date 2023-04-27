@@ -3090,6 +3090,7 @@ __metadata:
     swiper: ^9.2.4
     tailwindcss: ^3.3.2
     typescript: ^5.0.4
+    vue3-marquee: ^3.1.2
   languageName: unknown
   linkType: soft
 
@@ -12980,6 +12981,15 @@ __metadata:
   peerDependencies:
     vue: ^3.2.0
   checksum: c7f0156ac03a9561d110f5ff778121eee7c8c154be6ec5064558ba22ab5237db36f29ffffc95cc16d692cc68a26df0c434f395401c0e3b48f782c7bed51391c6
+  languageName: node
+  linkType: hard
+
+"vue3-marquee@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "vue3-marquee@npm:3.1.2"
+  peerDependencies:
+    vue: ^3.2
+  checksum: d38e1c5289a8ca6f0af4d5c76dd9b725834a92200aa341acfea3bb8a862f1a8e5d8500890ab66c989d7b74912cb484589648fbd2494057209090b4d53a2226f7
   languageName: node
   linkType: hard
 
