@@ -226,7 +226,7 @@ onBeforeUnmount(async () => {
 }
 
 .heroImages {
-  @apply pt-[40vh] z-[3] will-change-transform flex justify-evenly mx-auto max-w-7xl rtl:!flex-row-reverse;
+  @apply pt-[50vh] z-[3] will-change-transform flex justify-evenly mx-auto max-w-7xl rtl:!flex-row-reverse;
 }
 
 .heroContent {
