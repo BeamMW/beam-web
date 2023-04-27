@@ -38,7 +38,9 @@ const announcementMessageDev = computed(() => t("header.announcementdev"));
         <div
           class="p-3 hidden justify-self-end md:block md:p-4 col-span-2 font-bold text-base text-beam-green-dark opacity-80 whitespace-nowrap"
         >
-          <HeaderPrice />
+          <ClientOnly>
+            <HeaderLivePrice />
+          </ClientOnly>
         </div>
       </div>
     </div>

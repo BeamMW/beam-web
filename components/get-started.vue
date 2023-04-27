@@ -67,8 +67,8 @@ onUnmounted(() =>
           :text="$t('getstarted.steps.2.description')"
           accent-color="beam-green"
           :wide-icon="true"
-          :as-image="true"
-          loading="lazy"
+          :as-image="false"
+          loading="eager"
         >
           <LayoutButton
             accent-color="beam-green"

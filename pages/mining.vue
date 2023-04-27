@@ -48,8 +48,8 @@ useSeoMeta({
         >
           <Icon
             name="get-started/beam-currency"
-            :as-image="true"
-            loading="lazy"
+            :as-image="false"
+            loading="eager"
             class="h-7 w-auto"
           />
           {{ $t("mining.button") }}

@@ -3,6 +3,11 @@
     <div
       class="grid-container px-4 pt-4 h-full overflow-y-scroll md:overflow-y-hidden pb-[30vw] md:!pb-1 md:shadow-2xl"
     >
+      <ClientOnly>
+        <div class="pb-4 font-bold md:hidden">
+          <HeaderLivePrice />
+        </div>
+      </ClientOnly>
       <div v-for="(menu, index) in menus" :key="index" class="grid-item">
         <template v-if="menu.menus">
           <div v-for="(innermenu, indexInner) in menu.menus" :key="indexInner">
