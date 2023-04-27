@@ -85,33 +85,30 @@
           </LayoutLink>
         </div>
       </div>
-      <div
-        class="heroImages flex justify-evenly w-full pb-12 mx-auto mb-12 md:px-12 lg:px-16 max-w-7xl pointer-events-none rtl:!flex-row-reverse"
-      >
-        <ClientOnly>
-          <div
-            class="relative hidden lg:block w-[937px] h-[1025px] lg:-left-[75px] xl:-left-[50px]"
-          >
-            <LayoutPicture
-              src="/assets/hero/desktop.png"
-              alt="Beam Desktop"
-              class="w-[937px] h-[1025px]"
-              :webp="true"
-            />
-          </div>
+    </div>
+    <div class="heroGradient"></div>
+    <div class="heroImages">
+      <ClientOnly>
+        <div
+          class="relative hidden lg:block w-[829px] h-[948px] top-[50px] -left-[30px]"
+        >
+          <LayoutPicture
+            src="/assets/hero/desktop.png"
+            alt="Beam Desktop"
+            class="w-[829px] h-[948px]"
+            :webp="true"
+          />
+        </div>
 
-          <div
-            class="relative w-[319px] h-[869px] top-[90px] lg:-left-[80px] xl:-left-[0]"
-          >
-            <LayoutPicture
-              src="/assets/hero/mobile.png"
-              alt="Beam iOS"
-              class="w-[319px] h-[869px]"
-              :webp="true"
-            />
-          </div>
-        </ClientOnly>
-      </div>
+        <div class="relative w-[319px] h-[869px] top-[90px] md:left-[30px]">
+          <LayoutPicture
+            src="/assets/hero/mobile.png"
+            alt="Beam iOS"
+            class="w-[319px] h-[869px]"
+            :webp="true"
+          />
+        </div>
+      </ClientOnly>
     </div>
     <div class="heroBackground"></div>
   </section>
@@ -141,7 +138,8 @@ const initAnimation = async () => {
           trigger: ".heroContainer",
           start: "top top",
           end: "80% top",
-          scrub: 0.5, // Soften the link between the animation and the scrollbar
+          scrub: true,
+          //scrub: 0.5, // Soften the link between the animation and the scrollbar
         },
         easing: "ease",
         invalidateOnRefresh: true,
@@ -161,22 +159,22 @@ const initAnimation = async () => {
       );
 
       // Use ScrollTrigger.matchMedia to apply the .heroContainer animation only for desktop devices
-      const mm = gsap.matchMedia();
+      //const mm = gsap.matchMedia();
 
       // add a media query. When it matches, the associated function will run
-      mm.add("(min-width: 768px)", () => {
-        tl.fromTo(
-          ".heroBackground",
-          {
-            yPercent: 0,
-          },
-          {
-            yPercent: 25,
-            duration: 1,
-          },
-          "<"
-        );
-      });
+      //mm.add("(min-width: 768px)", () => {
+      tl.fromTo(
+        ".heroBackground",
+        {
+          yPercent: 0,
+        },
+        {
+          yPercent: 25,
+          duration: 1,
+        },
+        "<"
+      );
+      // });
     }
   }, main.value);
 };
@@ -194,21 +192,44 @@ onBeforeUnmount(async () => {
 
 <style lang="postcss" scoped>
 .heroContainer {
-  @apply bg-gradient-to-b h-screen overflow-hidden from-[#041d3c] to-[#003D64] border-b border-black/40 relative grid grid-rows-1 grid-cols-1;
-  grid-template-areas: "content";
+  @apply relative h-screen overflow-hidden;
+  @apply h-screen grid grid-cols-1 grid-rows-1 gap-x-0 gap-y-0;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+}
+
+.heroBackground,
+.heroContent,
+.heroGradient,
+.heroImages {
+  @apply w-full h-screen;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+.heroBackground,
+.heroImages {
+  @apply will-change-transform;
 }
 
 .heroBackground {
-  @apply h-screen w-full bg-no-repeat bg-cover bg-[url('/assets/hero/bg.png')] will-change-transform;
-  grid-area: content;
+  @apply z-[1] bg-no-repeat bg-cover bg-[url('/assets/hero/bg.png')];
 }
 
-.heroContent {
-  @apply z-10;
-  grid-area: content;
+.heroGradient,
+.heroImages {
+  @apply pointer-events-none select-none;
+}
+
+.heroGradient {
+  @apply z-[4] bg-no-repeat bg-cover bg-gradient-to-b from-[transparent] via-[transparent] to-[#041d3c];
 }
 
 .heroImages {
-  @apply will-change-transform;
+  @apply pt-[40vh] z-[3] will-change-transform flex justify-evenly mx-auto max-w-7xl rtl:!flex-row-reverse;
+}
+
+.heroContent {
+  @apply z-[2];
 }
 </style>
