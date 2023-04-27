@@ -16,6 +16,18 @@
         class="h-full w-full item-container z-50 -mt-0.5"
       >
         <defs>
+          <linearGradient id="x" x1="0%" x2="100%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#24C1FF" />
+            <stop offset="48.99%" stop-color="#24C1FF" />
+            <stop offset="49%" stop-color="#0B76FF" />
+            <stop offset="100%" stop-color="#0B76FF" />
+          </linearGradient>
+          <linearGradient id="z" x1="0%" x2="100%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#6BFFFA" />
+            <stop offset="49.99%" stop-color="#6BFFFA" />
+            <stop offset="50%" stop-color="#00E2C2" />
+            <stop offset="100%" stop-color="#00E2C2" />
+          </linearGradient>
           <linearGradient id="a" x1="0%" x2="54.8%" y1="50.2%" y2="50.2%">
             <stop offset="0%" stop-opacity="0" />
             <stop offset="100%" stop-color="#FFF" />
@@ -34,10 +46,8 @@
           </linearGradient>
         </defs>
         <g fill="none">
-          <path fill="#0B76FF" d="M28 33h12L28 13V0l24 40H28z" />
-          <path fill="#24C1FF" d="M28 33H17l11-20V0L5 40h23z" />
-          <path fill="#39FFF2" d="M28 18v13h-7z" />
-          <path fill="#00E2C2" d="M28 18v13h8z" />
+          <path fill="url(#x)" d="M28 0L52 40H4L28 0Zm0 13L17 33h22L28 13Z" />
+          <path fill="url(#z)" d="M28 18l8 13H21z" />
           <mask id="raysMask">
             <rect width="100%" height="100%" fill="white" />
             <circle
