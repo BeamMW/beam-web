@@ -1,26 +1,27 @@
 <template>
-  <span v-show="data && data.usd" class="flex gap-1">
-    <span
-      class="text-beam-green-dark pointer-events-none select-none flex gap-1"
-      >1
-      <Icon
-        class="w-6 h-6 inline-block"
-        name="get-started/beam-currency"
-        :as-image="true"
-        loading="lazy"
-      />
-      = </span
-    ><span :class="`price transition-colors duration-1000 ${flickerClass}`"
-      >${{ data && data.usd }}</span
-    >
-  </span>
+  <ClientOnly>
+    <span v-show="data && data.usd" class="flex gap-1">
+      <span
+        class="text-beam-green-dark pointer-events-none select-none flex gap-1"
+        >1
+        <Icon
+          class="w-6 h-6 inline-block"
+          name="get-started/beam-currency"
+          :as-image="true"
+          loading="lazy"
+        />
+        = </span
+      ><span :class="`price transition-colors duration-1000 ${flickerClass}`"
+        >${{ data && data.usd }}</span
+      >
+    </span>
+  </ClientOnly>
 </template>
 <script setup lang="ts">
 import { ref, watch } from "vue";
+const price = useFetchPrice();
 
-const { data, refresh } = await useAsyncData("price", () =>
-  $fetch("/api/price")
-);
+const { data, refresh } = await useAsyncData("price", () => price);
 
 const refreshInterval = 10 * 1000; // seconds
 let intervalId: NodeJS.Timer | undefined;

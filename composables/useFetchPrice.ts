@@ -2,13 +2,14 @@ interface CoinGeckoAPIResponse {
   beam: { usd: number; usd_24h_change: number };
 }
 
-const CACHE_MAX_AGE = 20; // In seconds
-const STALE_WHILE_REVALIDATE = 10; // In seconds
+type PriceResponse = { usd: number; change: number };
 
-let cache: { usd: number; change: number } | null = null;
+const CACHE_MAX_AGE = 20; // In seconds
+
+let cache: PriceResponse | null = null;
 let lastFetchedAt: number | null = null;
 
-async function fetchPrice(): Promise<{ usd: number; change: number }> {
+async function fetchPrice(): Promise<PriceResponse> {
   const response: CoinGeckoAPIResponse = await $fetch(
     "https://api.coingecko.com/api/v3/simple/price?ids=beam&vs_currencies=usd&include_market_cap=false&include_24hr_vol=false&include_24hr_change=true&include_last_updated_at=false&precision=5"
   );
@@ -28,16 +29,8 @@ async function fetchPrice(): Promise<{ usd: number; change: number }> {
   };
 }
 
-export default defineEventHandler(async (event) => {
+export const useFetchPrice: () => Promise<PriceResponse> = async () => {
   const currentTime = Date.now();
-
-  // Server-side caching
-  if (event.node && event.node.res) {
-    event.node.res.setHeader(
-      "Cache-Control",
-      `public, max-age=${CACHE_MAX_AGE}, stale-while-revalidate=${STALE_WHILE_REVALIDATE}`
-    );
-  }
 
   if (
     !cache ||
@@ -55,4 +48,4 @@ export default defineEventHandler(async (event) => {
   }
 
   return cache;
-});
+};
