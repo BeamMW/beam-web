@@ -28,19 +28,19 @@
             <stop offset="50%" stop-color="#00E2C2" />
             <stop offset="100%" stop-color="#00E2C2" />
           </linearGradient>
-          <linearGradient id="a" x1="0%" x2="54.8%" y1="50.2%" y2="50.2%">
+          <linearGradient id="aa" x1="0%" x2="54.8%" y1="50.2%" y2="50.2%">
             <stop offset="0%" stop-opacity="0" />
             <stop offset="100%" stop-color="#FFF" />
           </linearGradient>
-          <linearGradient id="b" x1="99.4%" x2="35.8%" y1="49.8%" y2="49.8%">
+          <linearGradient id="bb" x1="99.4%" x2="35.8%" y1="49.8%" y2="49.8%">
             <stop offset="0%" stop-opacity="0" />
             <stop offset="100%" stop-color="#FF51FF" />
           </linearGradient>
-          <linearGradient id="c" x1="100.4%" x2="48.9%" y1="50.1%" y2="50.1%">
+          <linearGradient id="cc" x1="100.4%" x2="48.9%" y1="50.1%" y2="50.1%">
             <stop offset="0%" stop-opacity="0" />
             <stop offset="100%" stop-color="#A18CFF" />
           </linearGradient>
-          <linearGradient id="d" x1="99.9%" x2="41.1%" y1="50.2%" y2="50.2%">
+          <linearGradient id="dd" x1="99.9%" x2="41.1%" y1="50.2%" y2="50.2%">
             <stop offset="0%" stop-opacity="0" />
             <stop offset="100%" stop-color="#AB38E6" />
           </linearGradient>
@@ -61,10 +61,15 @@
           </mask>
         </g>
         <g fill="none" mask="url(#raysMask)">
-          <path id="ray1" class="ray" fill="url(#a)" d="m0 13 28 13v1L0 21z" />
-          <path id="ray2" class="ray" fill="url(#b)" d="M57 9 28 26l29-12z" />
-          <path id="ray3" class="ray" fill="url(#c)" d="m57 25-29 2 29-7z" />
-          <path id="ray4" class="ray" fill="url(#d)" d="M57 14 28 26v1l29-7z" />
+          <path id="ray1" class="ray" fill="url(#aa)" d="m0 13 28 13v1L0 21z" />
+          <path id="ray2" class="ray" fill="url(#bb)" d="M57 9 28 26l29-12z" />
+          <path id="ray3" class="ray" fill="url(#cc)" d="m57 25-29 2 29-7z" />
+          <path
+            id="ray4"
+            class="ray"
+            fill="url(#dd)"
+            d="M57 14 28 26v1l29-7z"
+          />
         </g>
       </svg>
       <Icon

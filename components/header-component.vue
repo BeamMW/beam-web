@@ -11,7 +11,7 @@ const localePath = useLocalePath();
     >
       <div class="order-2 md:order-1 flex items-center">
         <div class="inline-block w-auto">
-          <LayoutLogo />
+          <HeaderLogo />
         </div>
       </div>
       <div
