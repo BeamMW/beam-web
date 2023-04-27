@@ -33,7 +33,6 @@ export enum PriceStorageStructure {
 }
 
 export const useFetchPrice: () => Promise<PriceResponse> = async () => {
-  console.log("check");
   const localForage = (await import("localforage")).default;
   const lastFetchedAt = (await localForage.getItem(
     PriceStorageStructure.LAST_FETCHED_AT
@@ -42,7 +41,6 @@ export const useFetchPrice: () => Promise<PriceResponse> = async () => {
 
   if (!lastFetchedAt || currentTime - lastFetchedAt > CACHE_MAX_AGE * 1000) {
     try {
-      console.log("query");
       const { usd, change } = await fetchPrice();
       await localForage.setItem(PriceStorageStructure.USD, usd);
       await localForage.setItem(PriceStorageStructure.CHANGE, change);
