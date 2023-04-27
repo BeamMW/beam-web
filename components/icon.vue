@@ -1,9 +1,9 @@
 <template>
   <span
     v-if="!asImage && iconUrl"
-    v-html="iconUrl"
     v-bind="$attrs"
     :class="`select-none pointer-events-none ${props.classParent}`"
+    v-html="iconUrl"
   />
   <div
     v-else-if="iconUrl"

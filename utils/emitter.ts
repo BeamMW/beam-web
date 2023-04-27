@@ -4,7 +4,6 @@ export enum UserInteractionEvents {
   SCROLL_TO_WHERE_TO_BUY = "scrollToWhereToBuy",
   SCROLL_TO_GET_STARTED = "scrollToGetStarted",
   EXIT_LANGUAGE_DROPDOWN = "exitLanguageDropdown",
-  RECEIVE_PRICE = "receivePrice",
 }
 
 export interface CustomEvents {
@@ -15,9 +14,6 @@ export interface CustomEvents {
   [UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY]: unknown;
   [UserInteractionEvents.SCROLL_TO_GET_STARTED]: unknown;
   [UserInteractionEvents.EXIT_LANGUAGE_DROPDOWN]: unknown;
-  [UserInteractionEvents.RECEIVE_PRICE]: {
-    usd: string;
-  };
 }
 
 type Handler<T = unknown> = (event: T) => void;
