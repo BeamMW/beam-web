@@ -1,12 +1,10 @@
 <template>
-  <!-- eslint-disable -->
   <span
     v-if="!asImage && iconUrl"
+    v-html="iconUrl"
     v-bind="$attrs"
     :class="`select-none pointer-events-none ${props.classParent}`"
-    v-html="iconUrl"
   />
-  <!-- eslint-enable -->
   <div
     v-else-if="iconUrl"
     :class="`select-none pointer-events-none opacity-0 transition duration-500 ${
