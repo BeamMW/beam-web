@@ -1,6 +1,6 @@
 [submodule "content/docs"]
 	path = content/docs
-	url = https://github.com/magicp0tato/docs-gitbook
+	url = https://github.com/BeamMW/docs-gitbook
 [submodule "downloads"]
 	path = downloads
 	url = https://github.com/BeamMW/beam-web-downloads
