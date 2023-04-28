@@ -10,8 +10,9 @@ const announcementMessageDev = computed(() => t("header.announcementdev"));
   <div>
     <div class="bg-transparent border-[rgba(255,255,255,.08)] border-b">
       <div class="grid mx-auto max-w-screen-xl grid-cols-12">
+        <!-- Use fixed size for the interactive bar -->
         <div
-          class="min-h-[44px] md:min-h-[57px] p-3 md:p-4 flex items-center col-span-12 md:col-span-10 font-bold text-sm text-white/90"
+          class="min-h-[44px] h-[44px] md:min-h-[57px] md:h-[57px] p-3 md:p-4 flex items-center col-span-12 md:col-span-10 font-bold text-sm text-white/90"
         >
           <transition
             name="marquee"
@@ -22,6 +23,7 @@ const announcementMessageDev = computed(() => t("header.announcementdev"));
           >
             <Vue3Marquee
               :clone="false"
+              :duration="15"
               :gradient="true"
               :pause-on-hover="true"
               :gradient-color="[4, 29, 60]"
