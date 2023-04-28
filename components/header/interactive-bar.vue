@@ -39,7 +39,7 @@ const announcementMessageDev = computed(() => t("header.announcementdev"));
                     ? 'header.announcementdev'
                     : 'header.announcement'
                 "
-              />
+              />&nbsp;&nbsp;
             </Vue3Marquee>
           </transition>
         </div>
