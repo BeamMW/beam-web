@@ -192,7 +192,7 @@ export const exchangesBuy = [
     link: "https://www.gate.io/trade/BEAM_USDT",
   },
   {
-    title: "MEXC Global",
+    title: "MEXC",
     image: "exchanges/mexc",
     link: "https://www.mexc.com/exchange/BEAM_USDT?_from=market",
   },
