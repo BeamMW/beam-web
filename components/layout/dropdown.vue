@@ -235,7 +235,7 @@ provide("toggleDropdown", toggleDropdown);
 @media (max-width: 767px) {
   .dropdown-enter-from,
   .dropdown-leave-to {
-    @apply ltr:-translate-x-full rtl:translate-x-full;
+    @apply ltr:-translate-x-[calc(100%+50px)] rtl:translate-x-[calc(100%+50px)];
   }
   .dropdown-enter-to,
   .dropdown-leave-from {
