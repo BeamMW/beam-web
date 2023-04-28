@@ -6,31 +6,35 @@
       <div class="grid grid-cols-10 gap-4 overflow-visible">
         <div class="col-span-3 sticky top-50 left-0">
           <ContentList v-slot="{ list }">
-            <li v-for="article in list" :key="article._path" class="list-none">
-              <template v-if="isIndex(article._path)">
+            <template v-for="articleHead in list" :key="articleHead._path">
+              <li
+                v-if="
+                  isSameCategory(articleHead._path) &&
+                  isIndex(articleHead._path)
+                "
+                class="list-none mb-5"
+              >
                 <DocsNavigationItem
-                  :article="article"
+                  :article="articleHead"
                   :route-name="routeName"
                 />
-              </template>
-            </li>
-            <div style="h-5 w-5 bg-red-500"></div>
-            <li
-              v-for="article in list"
-              :key="article._path"
-              class="list-none capitalize"
-            >
-              <template
+              </li>
+            </template>
+            <template v-for="article in list" :key="article._path">
+              <li
+                class="list-none"
                 v-if="
-                  !isPageBlacklisted(article._path) && !isIndex(article._path)
+                  !isPageBlacklisted(article._path) &&
+                  isSameCategory(article._path) &&
+                  !isIndex(article._path)
                 "
               >
                 <DocsNavigationItem
                   :article="article"
                   :route-name="routeName"
                 />
-              </template>
-            </li>
+              </li>
+            </template>
           </ContentList>
         </div>
 
@@ -58,6 +62,17 @@ async function handleIndex(path: string): Promise<string> {
   return isIndex ? readme : path;
 }
 
+function extractCategory(path: string): string | null {
+  const regex = /^\/(?:\w{2}\/)?docs\/([^/]+)/;
+  const match = path.match(regex);
+
+  if (match && match[1]) {
+    return `/docs/${match[1]}`;
+  }
+
+  return null;
+}
+
 const isPageBlacklisted = (path: string) => {
   if (path.endsWith("/summary")) {
     return true;
@@ -69,15 +84,22 @@ const isPageBlacklisted = (path: string) => {
   return false;
 };
 
+const isSameCategory = (path: string) => {
+  const currentPathCategory = extractCategory(route.fullPath);
+  const targetPathCategory = extractCategory(path);
+  if (!currentPathCategory || !targetPathCategory) {
+    return false;
+  }
+  return currentPathCategory === targetPathCategory;
+};
+
 const isIndex = (path: string) => {
-  const index = joinPath(route.fullPath, "readme");
-  // not extremely reliable but no choice
-  // if (path.endsWith(index)) {
-  // console.log("found");
-  // console.log(index);
-  // console.log(path);
-  // }
-  return path.endsWith(index);
+  const currentPathCategory = extractCategory(route.fullPath);
+  if (currentPathCategory) {
+    const index = joinPath(currentPathCategory, "readme");
+    return index == path;
+  }
+  return false;
 };
 
 // Check if a content page exist

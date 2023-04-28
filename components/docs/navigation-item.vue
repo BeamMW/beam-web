@@ -28,7 +28,7 @@
           :to="processPath(article._path) + '#' + link.id"
           >{{ link.text }}</LayoutLink
         >
-        <ul v-if="link.children" class="ml-3 mt-1 text-sm">
+        <ul v-if="link.children" class="ml-3 text-sm">
           <li
             v-for="(childLink, childIndex) in link.children"
             :key="childIndex"
