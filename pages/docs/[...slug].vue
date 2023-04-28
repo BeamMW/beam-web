@@ -1,54 +1,42 @@
 <template>
-  <div class="bg-page-radial-gradient-purple overflow-visible">
-    <div
-      class="max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible"
-    >
-      <div class="grid grid-cols-10 gap-4 overflow-visible">
-        <div class="col-span-3 sticky top-50 left-0">
-          <ContentList v-slot="{ list }">
-            <template v-for="articleHead in list" :key="articleHead._path">
-              <li
-                v-if="
-                  isSameCategory(articleHead._path) &&
-                  isIndex(articleHead._path)
-                "
-                class="list-none mb-5"
-              >
-                <DocsNavigationItem
-                  :article="articleHead"
-                  :route-name="routeName"
-                />
-              </li>
-            </template>
-            <template v-for="article in list" :key="article._path">
-              <li
-                class="list-none"
-                v-if="
-                  !isPageBlacklisted(article._path) &&
-                  isSameCategory(article._path) &&
-                  !isIndex(article._path)
-                "
-              >
-                <DocsNavigationItem
-                  :article="article"
-                  :route-name="routeName"
-                />
-              </li>
-            </template>
-          </ContentList>
-        </div>
-
-        <div class="col-span-7">
-          <article
-            class="prose prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-blue prose-h1:uppercase prose-h2:text-2xl prose-h3:text-base prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
+  <div class="main-container">
+    <aside class="container-sticky">
+      <ContentList v-slot="{ list }">
+        <template v-for="articleHead in list" :key="articleHead._path">
+          <li
+            v-if="
+              isSameCategory(articleHead._path) && isIndex(articleHead._path)
+            "
+            class="list-none mb-5"
           >
-            <ContentDoc v-slot="{ doc }" :path="routeName">
-              <CustomContentRenderer :value="doc" />
-            </ContentDoc>
-          </article>
-        </div>
-      </div>
-    </div>
+            <DocsNavigationItem
+              :article="articleHead"
+              :route-name="routeName"
+            />
+          </li>
+        </template>
+        <template v-for="article in list" :key="article._path">
+          <li
+            class="list-none"
+            v-if="
+              !isPageBlacklisted(article._path) &&
+              isSameCategory(article._path) &&
+              !isIndex(article._path)
+            "
+          >
+            <DocsNavigationItem :article="article" :route-name="routeName" />
+          </li>
+        </template>
+      </ContentList>
+    </aside>
+
+    <article
+      class="prose prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-blue prose-h1:uppercase prose-h2:text-2xl prose-h3:text-base prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
+    >
+      <ContentDoc v-slot="{ doc }" :path="routeName">
+        <CustomContentRenderer :value="doc" />
+      </ContentDoc>
+    </article>
   </div>
 </template>
 
@@ -128,9 +116,13 @@ if (!(await pageExist(routeName))) {
 </script>
 
 <style lang="postcss" scoped>
-.custom-sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10px; /* Adjust the value as needed */
+.main-container {
+  @apply max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 1rem;
+}
+
+.container-sticky {
+  @apply sticky top-[100px] self-start;
 }
 </style>
