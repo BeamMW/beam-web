@@ -17,14 +17,16 @@
           loading="lazy"
         />
         = </span
-      ><span :class="`price transition-colors duration-1000 ${flickerClass}`"
-        >${{ data && data.usd.toFixed(5) }}</span
-      >
+      ><span :class="`price transition-colors duration-1000 ${flickerClass}`">{{
+        data && localizePrice(data.usd, localeProperties.iso)
+      }}</span>
     </span>
   </transition>
 </template>
 <script setup lang="ts">
 import { CACHE_MAX_AGE } from "@/composables/useFetchPrice";
+const { localeProperties } = useI18n();
+
 const { data, refresh } = await useLazyAsyncData("price", () =>
   useFetchPrice()
 );
