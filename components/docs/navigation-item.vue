@@ -25,8 +25,8 @@
         <a
           v-if="link.text != article.title"
           class="text-base opacity-60 hover:opacity-90 mt-2"
-          @click.stop.prevent="smoothScrollToHash(link.id)"
           :href="`${processPath(article._path)}#${link.id}`"
+          @click.stop.prevent="smoothScrollToHash(link.id)"
           >{{ link.text }}</a
         >
         <ul v-if="link.children" class="ml-3 text-sm">
@@ -36,8 +36,8 @@
           >
             <a
               class="opacity-60 hover:opacity-90"
-              @click.stop.prevent="smoothScrollToHash(childLink.id)"
               :href="`${processPath(article._path)}#${childLink.id}`"
+              @click.stop.prevent="smoothScrollToHash(childLink.id)"
               >{{ childLink.text }}</a
             >
           </li>

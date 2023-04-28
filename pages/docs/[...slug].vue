@@ -17,12 +17,12 @@
         </template>
         <template v-for="article in list" :key="article._path">
           <li
-            class="list-none"
             v-if="
               !isPageBlacklisted(article._path) &&
               isSameCategory(article._path) &&
               !isIndex(article._path)
             "
+            class="list-none"
           >
             <DocsNavigationItem :article="article" :route-name="routeName" />
           </li>
@@ -85,7 +85,7 @@ const isIndex = (path: string) => {
   const currentPathCategory = extractCategory(route.fullPath);
   if (currentPathCategory) {
     const index = joinPath(currentPathCategory, "readme");
-    return index == path;
+    return index === path;
   }
   return false;
 };
