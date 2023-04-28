@@ -4,7 +4,7 @@
       :to="processPath(article._path)"
       :class="`rtl:pr-2.5 ltr:pl-2.5 text-md opacity-60 hover:opacity-90 transition-opacity ${
         routeName == article._path
-          ? `rtl:border-r ltr:border-l border-beam-pink font-bold !opacity-90`
+          ? `rtl:border-r-2 ltr:border-l-2 border-beam-blue text-beam-blue font-bold !opacity-90`
           : ''
       } `"
       >{{ article.title }}</LayoutLink
@@ -24,19 +24,21 @@
       >
         <a
           v-if="link.text != article.title"
-          class="text-base opacity-60 hover:opacity-90 mt-2"
+          class="text-base text-white/60 hover:text-white/90 mt-2 transition-colors"
+          :id="`link-${link.id}`"
           :href="`${processPath(article._path)}#${link.id}`"
           @click.stop.prevent="smoothScrollToHash(link.id)"
           >{{ link.text }}</a
         >
-        <ul v-if="link.children" class="ml-3 text-sm">
+        <ul v-if="link.children" class="ml-3">
           <li
             v-for="(childLink, childIndex) in link.children"
             :key="childIndex"
           >
             <a
-              class="opacity-60 hover:opacity-90"
+              class="text-sm text-white/60 hover:text-white/90 transition-colors"
               :href="`${processPath(article._path)}#${childLink.id}`"
+              :id="`link-${childLink.id}`"
               @click.stop.prevent="smoothScrollToHash(childLink.id)"
               >{{ childLink.text }}</a
             >
@@ -72,3 +74,9 @@ function processPath(path: string) {
   return path.replace("/readme", "");
 }
 </script>
+
+<style lang="postcss">
+aside a.navigation-selected {
+  @apply text-beam-blue hover:text-beam-blue;
+}
+</style>

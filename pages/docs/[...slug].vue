@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="main-container" ref="scrollSpyContainer">
     <aside class="container-sticky">
       <ContentList v-slot="{ list }">
         <template v-for="articleHead in list" :key="articleHead._path">
@@ -7,7 +7,7 @@
             v-if="
               isSameCategory(articleHead._path) && isIndex(articleHead._path)
             "
-            class="list-none mb-5"
+            class="list-none mb-4 pb-4 border-b border-white/20"
           >
             <DocsNavigationItem
               :article="articleHead"
@@ -42,6 +42,7 @@
 
 <script lang="ts" setup>
 const route = useRoute();
+const scrollSpy = useScrollSpy();
 
 // Transform index to "readme"
 async function handleIndex(path: string): Promise<string> {
@@ -109,6 +110,13 @@ const routeName = await handleIndex(
   }`
 );
 
+const scrollSpyContainer = ref<HTMLElement | null>(null);
+scrollSpy({
+  target: scrollSpyContainer,
+  activeClass: "navigation-selected",
+  offset: 200,
+});
+
 // Return 404 if the page does not exist
 if (!(await pageExist(routeName))) {
   throw createError({ statusCode: 404, statusMessage: "Page not found" });
@@ -117,11 +125,9 @@ if (!(await pageExist(routeName))) {
 
 <style lang="postcss" scoped>
 .main-container {
-  @apply max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible grid;
+  @apply max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible grid gap-12;
   grid-template-columns: 25% 75%;
-  grid-gap: 1rem;
 }
-
 .container-sticky {
   @apply sticky top-[100px] self-start;
 }
