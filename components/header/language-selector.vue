@@ -17,7 +17,7 @@ const currentLocale = computed(() => {
   <LayoutButton
     v-if="currentLocale"
     as="button"
-    class="!text-sm !py-1.5 !px-2 md:!px-3"
+    class="!text-xs md:!text-sm !py-1 md:!py-1.5 !px-1.5 md:!px-2 md:!px-3"
     accent-color="beam-blue"
   >
     <IconFlag :key="locale" class="w-4 h-4" :flag="locale" loading="eager" />
