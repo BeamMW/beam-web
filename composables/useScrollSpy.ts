@@ -8,7 +8,10 @@ export const useScrollSpy =
   () =>
   ({ target, activeClass, offset = 0 }: ScrollSpyOptions) => {
     let observer: IntersectionObserver | null = null;
-    const lastIntersectingHeader: Record<string, HTMLElement | null> = {
+    const lastIntersectingHeader: Record<
+      string,
+      HTMLElement | null | undefined
+    > = {
       h1: null,
       h2: null,
       h3: null,
@@ -22,7 +25,7 @@ export const useScrollSpy =
       if (!headers) return;
 
       observer = new IntersectionObserver(
-        (entries, observer) => {
+        (entries, _observer) => {
           entries.forEach((entry) => {
             const id = (entry.target as HTMLElement).id;
             const headerTag: string = (
@@ -33,7 +36,7 @@ export const useScrollSpy =
             );
 
             if (entry.isIntersecting) {
-              if (headerTag == "h2") {
+              if (headerTag === "h2") {
                 if (lastIntersectingHeader.h3) {
                   lastIntersectingHeader.h3.classList.remove(activeClass);
                   lastIntersectingHeader.h3 = null;

@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container" ref="scrollSpyContainer">
+  <div ref="scrollSpyContainer" class="main-container">
     <aside class="container-sticky">
       <ContentList v-slot="{ list }">
         <template v-for="articleHead in list" :key="articleHead._path">

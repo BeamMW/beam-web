@@ -24,8 +24,8 @@
       >
         <a
           v-if="link.text != article.title"
-          class="text-base text-white/60 hover:text-white/90 mt-2 transition-colors"
           :id="`link-${link.id}`"
+          class="text-base text-white/60 hover:text-white/90 mt-2 transition-colors"
           :href="`${processPath(article._path)}#${link.id}`"
           @click.stop.prevent="smoothScrollToHash(link.id)"
           >{{ link.text }}</a
@@ -36,9 +36,9 @@
             :key="childIndex"
           >
             <a
+              :id="`link-${childLink.id}`"
               class="text-sm text-white/60 hover:text-white/90 transition-colors"
               :href="`${processPath(article._path)}#${childLink.id}`"
-              :id="`link-${childLink.id}`"
               @click.stop.prevent="smoothScrollToHash(childLink.id)"
               >{{ childLink.text }}</a
             >
