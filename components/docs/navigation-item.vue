@@ -22,21 +22,23 @@
         :key="index"
         class="list-none ml-5"
       >
-        <LayoutLink
+        <a
           v-if="link.text != article.title"
           class="text-base opacity-60 hover:opacity-90 mt-2"
-          :to="processPath(article._path) + '#' + link.id"
-          >{{ link.text }}</LayoutLink
+          @click.stop.prevent="smoothScrollToHash(link.id)"
+          :href="`${processPath(article._path)}#${link.id}`"
+          >{{ link.text }}</a
         >
         <ul v-if="link.children" class="ml-3 text-sm">
           <li
             v-for="(childLink, childIndex) in link.children"
             :key="childIndex"
           >
-            <LayoutLink
+            <a
               class="opacity-60 hover:opacity-90"
-              :to="processPath(article._path) + '#' + childLink.id"
-              >{{ childLink.text }}</LayoutLink
+              @click.stop.prevent="smoothScrollToHash(childLink.id)"
+              :href="`${processPath(article._path)}#${childLink.id}`"
+              >{{ childLink.text }}</a
             >
           </li>
         </ul>
@@ -55,6 +57,16 @@ defineProps({
     required: true,
   },
 });
+
+const smoothScrollToHash = (hash: string) => {
+  // Find the corresponding element on the page
+  const targetElement = document.querySelector(`#${hash}`);
+
+  // If the element exists, smoothly scroll to it
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 function processPath(path: string) {
   return path.replace("/readme", "");
