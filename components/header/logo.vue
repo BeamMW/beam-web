@@ -1,13 +1,16 @@
 <template>
   <LayoutLink
+    ref="logoParent"
     :to="localePath('index')"
-    class="group"
     title="Homepage"
     @mouseover="hover = true"
     @mouseleave="hover = false"
+    @touchend="touchRevertAnimation"
   >
     <div
-      class="grid items-center justify-center h-10 w-10 group-hover:scale-125 transition-transform duration-[600ms]"
+      :class="`grid items-center justify-center h-10 w-10 transition-transform duration-[600ms] ${
+        hover ? 'scale-125' : ''
+      }`"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +77,9 @@
       </svg>
       <Icon
         name="logo-bg"
-        class="h-full w-full item-container scale-0 group-hover:scale-125 group-hover:rotate-90 transition-transform duration-[600ms] group-hover:duration-[600ms] ease-in-out z-40"
+        :class="`h-full w-full item-container scale-0 transition-transform duration-[600ms] ease-in-out z-40 ${
+          hover ? 'scale-125 rotate-90 duration-[600ms]' : ''
+        }`"
         :as-image="true"
         alt="Beam logo background"
       />
@@ -86,6 +91,12 @@ const localePath = useLocalePath();
 const maskCircle = ref<HTMLElement | null>(null);
 const hover = ref(false);
 const animation = ref<gsap.core.Tween | null>(null);
+
+function touchRevertAnimation() {
+  setTimeout(() => {
+    hover.value = false;
+  }, 1000);
+}
 
 watchEffect(() => {
   if (animation.value) {
