@@ -6,6 +6,7 @@ interface ScrollSpyOptions {
   offset?: number;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function debounce<T extends (...args: any[]) => any, C>(
   this: C,
   func: (this: C, ...args: Parameters<T>) => ReturnType<T>,
@@ -13,13 +14,12 @@ function debounce<T extends (...args: any[]) => any, C>(
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout> | null;
 
-  return function (this: C, ...args: Parameters<T>): void {
-    const context = this;
+  return (...args: Parameters<T>): void => {
     if (timeout !== null) {
       clearTimeout(timeout);
     }
-    timeout = setTimeout(() => func.apply(context, args), wait);
-  }.bind(this);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
 }
 
 function getParentUlFirstLink(
