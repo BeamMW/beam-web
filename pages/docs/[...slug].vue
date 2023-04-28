@@ -118,7 +118,7 @@ if (!(await pageExist(routeName))) {
 <style lang="postcss" scoped>
 .main-container {
   @apply max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 25% 75%;
   grid-gap: 1rem;
 }
 
