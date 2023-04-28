@@ -64,7 +64,7 @@ const smoothScrollToHash = (hash: string) => {
 
   // If the element exists, smoothly scroll to it
   if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth" });
+    scrollToComponent(targetElement as HTMLElement);
   }
 };
 
