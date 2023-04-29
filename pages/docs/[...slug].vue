@@ -6,7 +6,7 @@
           <DocsNavigationItem :article="index" :route-name="routeName" />
         </li>
         <template v-for="article in filteredList" :key="article._path">
-          <li>
+          <li class="list-none">
             <DocsNavigationItem :article="article" :route-name="routeName" />
           </li>
         </template>
