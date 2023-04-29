@@ -25,7 +25,7 @@
       </Head>
       <Body :class="`bg-[${bodyColor}]`">
         <main>
-          <HeaderInteractiveBar />
+          <HeaderInteractiveBar :gradientColor="gradientColorRgb" />
           <HeaderComponent :class="headerRef" />
           <slot />
           <FooterComponent :class="footerRef" />
@@ -53,6 +53,9 @@ const defaultFooterColor = "bg-page-radial-gradient";
 const headerRef = ref(defaultHeaderColor);
 const footerRef = ref(defaultFooterColor);
 const bodyColor = ref(defaultColor);
+const gradientColorRgb = ref<[number, number, number]>(
+  hexToRgb(bodyColor.value) as [number, number, number]
+);
 
 watch(
   currentRoute,
@@ -74,6 +77,11 @@ watch(
         footerRef.value = defaultFooterColor;
         bodyColor.value = defaultColor;
     }
+    gradientColorRgb.value = hexToRgb(bodyColor.value) as [
+      number,
+      number,
+      number
+    ];
   },
   { immediate: true }
 );

@@ -7,6 +7,13 @@ const { t } = useI18n();
 
 const announcementMessage = computed(() => t("header.announcement"));
 const announcementMessageDev = computed(() => t("header.announcementdev"));
+
+defineProps({
+  gradientColor: {
+    type: Array,
+    required: true,
+  },
+});
 </script>
 <template>
   <div>
@@ -28,7 +35,7 @@ const announcementMessageDev = computed(() => t("header.announcementdev"));
               :duration="15"
               :gradient="true"
               :pause-on-hover="true"
-              :gradient-color="[4, 29, 60]"
+              :gradient-color="gradientColor"
               :gradient-width="'80px'"
             >
               <MarkdownRenderer
