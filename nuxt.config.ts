@@ -125,6 +125,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl: publicWebUrl,
+      baseURL: publicWebUrl,
     },
   },
   content: {
