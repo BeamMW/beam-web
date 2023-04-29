@@ -1,16 +1,14 @@
 <template>
   <div ref="scrollSpyContainer" class="main-container">
     <aside class="container-sticky">
-      <ContentList>
-        <li class="list-none mb-4 pb-4 border-b border-white/20">
-          <DocsNavigationItem :article="index" :route-name="routeName" />
+      <li class="list-none mb-4 pb-4 border-b border-white/20">
+        <DocsNavigationItem :article="index" :route-name="routeName" />
+      </li>
+      <template v-for="article in filteredList" :key="article._path">
+        <li class="list-none">
+          <DocsNavigationItem :article="article" :route-name="routeName" />
         </li>
-        <template v-for="article in filteredList" :key="article._path">
-          <li class="list-none">
-            <DocsNavigationItem :article="article" :route-name="routeName" />
-          </li>
-        </template>
-      </ContentList>
+      </template>
     </aside>
 
     <article
