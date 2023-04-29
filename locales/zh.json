@@ -218,6 +218,8 @@
       "mining": "挖矿",
       "developers": "开发者",
       "node": "节点",
+      "core": "核心",
+      "bridges": "桥梁",
       "atomicswaps": "原子交换",
       "cli": "命令行界面",
       "explorer": "区块链浏览器"

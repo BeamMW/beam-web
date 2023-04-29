@@ -94,6 +94,11 @@ export const preHtml = {
 
 export const docTypes = [
   {
+    title: "docs.types.ecosystem",
+    image: "docs/coin-beam",
+    path: "/ecosystem",
+  },
+  {
     title: "docs.types.desktop",
     image: "docs/desktop",
     path: "/desktop",
@@ -122,6 +127,16 @@ export const docTypes = [
     title: "docs.types.node",
     image: "docs/server",
     path: "/node",
+  },
+  {
+    title: "docs.types.core",
+    image: "docs/core",
+    path: "/core-tech",
+  },
+  {
+    title: "docs.types.bridges",
+    image: "docs/bridges",
+    path: "/bridges",
   },
   {
     title: "docs.types.atomicswaps",

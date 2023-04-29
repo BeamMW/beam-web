@@ -214,12 +214,15 @@
   "docs": {
     "warning": "The documentation is presently undergoing updates and, at the moment, is exclusively available in English.",
     "types": {
+      "ecosystem": "Beam & BeamX",
       "desktop": "Desktop Wallet",
       "mobile": "Mobile Wallet App",
       "web": "Web Wallet",
       "mining": "Mining",
       "developers": "Developers",
       "node": "Node",
+      "core": "Core",
+      "bridges": "Bridges",
       "atomicswaps": "Atomic Swaps",
       "cli": "Command Line Interface",
       "explorer": "Blockchain Explorer"

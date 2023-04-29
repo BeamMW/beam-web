@@ -220,6 +220,8 @@
       "mining": "マイニング",
       "developers": "開発者",
       "node": "ノード",
+      "core": "コア",
+      "bridges": "ブリッジ",
       "atomicswaps": "アトミックスワップ",
       "cli": "コマンドラインインターフェース",
       "explorer": "ブロックチェーンエクスプローラー"

@@ -220,6 +220,8 @@
       "mining": "Mining",
       "developers": "Entwickler",
       "node": "Knoten",
+      "core": "Kern",
+      "bridges": "Brücken",
       "atomicswaps": "Atomic Swaps",
       "cli": "Befehlszeilenschnittstelle",
       "explorer": "Blockchain-Explorer"

@@ -218,6 +218,8 @@
       "mining": "Minage",
       "developers": "Développeurs",
       "node": "Nœud",
+      "core": "Noyau",
+      "bridges": "Ponts",
       "atomicswaps": "Échanges atomiques",
       "cli": "Interface de ligne de commande",
       "explorer": "Explorateur de blockchain"
