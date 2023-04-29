@@ -76,11 +76,11 @@ export enum ExternalLinksTitle {
  */
 export const preHtml = {
   preload: [
-    /*{
+    /* {
       href: "/assets/hero/bg.png",
       as: "image",
       type: "image/png",
-    },*/
+    }, */
   ],
   preconnect: [
     new URL(ExternalLinks.EXPLORER).origin,

@@ -1,5 +1,5 @@
-import { joinPath } from "./joinPath";
 import { RouteLocationNormalized } from "vue-router";
+import { joinPath } from "./joinPath";
 
 export function extractCategory(path: string): string | null {
   const regex = /^\/(?:\w{2}\/)?docs\/([^/]+)/;
