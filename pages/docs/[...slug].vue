@@ -6,14 +6,7 @@
           <DocsNavigationItem :article="index" :route-name="routeName" />
         </li>
         <template v-for="article in filteredList" :key="article._path">
-          <li
-            :class="{
-              'list-none mb-4 pb-4 border-b border-white/20': isIndex(
-                article._path
-              ),
-              'list-none': !isIndex(article._path),
-            }"
-          >
+          <li>
             <DocsNavigationItem :article="article" :route-name="routeName" />
           </li>
         </template>
@@ -38,10 +31,8 @@ const route = useRoute();
 const scrollSpy = useScrollSpy();
 
 const currentCategory = extractCategory(route.fullPath) as string;
-
 const everything = ref(await queryContent(currentCategory).find());
-const docsIndex = await queryContent(`${currentCategory}/readme`);
-const index = ref(await docsIndex.findOne());
+const index = ref(await queryContent(`${currentCategory}/readme`).findOne());
 
 const routeName = await handleIndex(
   `/docs/${
