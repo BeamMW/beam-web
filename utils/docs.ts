@@ -5,9 +5,17 @@ const PAGE_BLACKLIST = ["/summary", "/confidential-assets"];
 
 export const extractCategory = (path: string): string | null => {
   const parts = path.split("/");
+
+  // Case with language code
+  if (parts.length > 3 && parts[2] === "docs") {
+    return `/docs/${parts[3]}`;
+  }
+
+  // Case without language code
   if (parts.length > 2 && parts[1] === "docs") {
     return `/docs/${parts[2]}`;
   }
+
   return null;
 };
 
