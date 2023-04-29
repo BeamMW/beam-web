@@ -128,11 +128,11 @@ export const docTypes = [
     image: "docs/server",
     path: "/node",
   },
-  {
+  /*{
     title: "docs.types.core",
     image: "docs/core",
     path: "/core-tech",
-  },
+  },*/
   {
     title: "docs.types.bridges",
     image: "docs/bridges",
