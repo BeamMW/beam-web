@@ -8,6 +8,9 @@ name: "Deploy to CloudFlare"
 
 on: [push, pull_request]
 
+env:
+  NODE_OPTIONS: --max-old-space-size=6144
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
