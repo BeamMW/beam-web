@@ -1,5 +1,15 @@
 <template>
-  <div ref="scrollSpyContainer" class="main-container">
+  <div
+    ref="scrollSpyContainer"
+    class="main-container bg-page-radial-gradient-purple"
+  >
+    <article
+      class="prose max-w-none lg:prose-lg prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-blue prose-h1:uppercase prose-h2:text-2xl prose-h3:text-base prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
+    >
+      <ContentDoc v-slot="{ doc }" :path="routeName">
+        <CustomContentRenderer :value="doc" />
+      </ContentDoc>
+    </article>
     <aside class="container-sticky">
       <li class="list-none mb-4 pb-4 border-b border-white/20">
         <DocsNavigationItem :article="index" :route-name="routeName" />
@@ -10,14 +20,6 @@
         </li>
       </template>
     </aside>
-
-    <article
-      class="prose prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-blue prose-h1:uppercase prose-h2:text-2xl prose-h3:text-base prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
-    >
-      <ContentDoc v-slot="{ doc }" :path="routeName">
-        <CustomContentRenderer :value="doc" />
-      </ContentDoc>
-    </article>
   </div>
 </template>
 
@@ -69,7 +71,7 @@ const filteredList = computed(() => {
 <style lang="postcss" scoped>
 .main-container {
   @apply max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible grid gap-12;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 75% 25%;
 }
 .container-sticky {
   @apply sticky top-[100px] self-start;
