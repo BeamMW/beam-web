@@ -18,42 +18,47 @@
 </template>
 
 <script lang="ts" setup>
-const features = [
-  {
-    link: "https://documentation.beam.mw/#private-transactions",
-    image: "features/private",
-    title: "feature.1.title",
-    text: "feature.1.text",
-  },
-  {
-    link: "https://documentation.beam.mw/#tokens-a-k-a-beam-confidential-assets",
-    image: "features/ca",
-    title: "feature.2.title",
-    text: "feature.2.text",
-  },
-  {
-    link: "https://documentation.beam.mw/overview/beamx-tokenomics",
-    image: "features/defi",
-    title: "feature.3.title",
-    text: "feature.3.text",
-  },
-  {
-    link: "https://documentation.beam.mw/#atomic-swaps",
-    image: "features/atomic-dex",
-    title: "feature.4.title",
-    text: "feature.4.text",
-  },
-  {
-    link: "https://documentation.beam.mw/#smart-contracts-a-k-a-beam-shaders",
-    image: "features/shaders",
-    title: "feature.5.title",
-    text: "feature.5.text",
-  },
-  {
-    link: "https://documentation.beam.mw/#beam-wallets",
-    image: "features/usability",
-    title: "feature.6.title",
-    text: "feature.6.text",
-  },
-];
+const localePath = useLocalePath();
+const features = computed(() => {
+  const docsLink = localePath("docs");
+  const ecosystemLink = `${docsLink}/ecosystem`;
+  return [
+    {
+      link: `${ecosystemLink}/#private-transactions`,
+      image: "features/private",
+      title: "feature.1.title",
+      text: "feature.1.text",
+    },
+    {
+      link: `${ecosystemLink}/#tokens-a-k-a-beam-confidential-assets`,
+      image: "features/ca",
+      title: "feature.2.title",
+      text: "feature.2.text",
+    },
+    {
+      link: `${ecosystemLink}/overview/beamx-tokenomics`,
+      image: "features/defi",
+      title: "feature.3.title",
+      text: "feature.3.text",
+    },
+    {
+      link: `${ecosystemLink}/#atomic-swaps`,
+      image: "features/atomic-dex",
+      title: "feature.4.title",
+      text: "feature.4.text",
+    },
+    {
+      link: `${ecosystemLink}/#smart-contracts-a-k-a-beam-shaders`,
+      image: "features/shaders",
+      title: "feature.5.title",
+      text: "feature.5.text",
+    },
+    {
+      link: `${ecosystemLink}/#beam-wallets`,
+      image: "features/usability",
+      title: "feature.6.title",
+      text: "feature.6.text",
+    },
+  ];
+});
 </script>

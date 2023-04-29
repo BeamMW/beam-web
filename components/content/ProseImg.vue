@@ -40,7 +40,7 @@ const props = defineProps({
   },
 });
 const refinedSrc = computed(() => {
-  if (props.src?.startsWith("/") && !props.src.startsWith("//")) {
+  if (linkType(props.src) == LinkTypes.INTERNAL) {
     return withBase(removeGitbook(props.src), useRuntimeConfig().app.baseURL);
   }
   return removeGitbook(props.src);

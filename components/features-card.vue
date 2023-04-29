@@ -94,7 +94,7 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
         :to="link"
         class="text-beam-blue"
       >
-        <LayoutExternalLink>{{
+        <LayoutExternalLink :to="link">{{
           linkName ? linkName : $t("feature.learnmore")
         }}</LayoutExternalLink>
       </LayoutLink>

@@ -31,7 +31,7 @@ defineProps({
       {{ title }}
     </h3>
     <div class="mt-auto gap-4">
-      <LayoutExternalLink>{{
+      <LayoutExternalLink :to="link">{{
         linkText != "" ? linkText : $t("feature.learnmore")
       }}</LayoutExternalLink>
     </div>
