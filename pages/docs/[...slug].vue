@@ -1,28 +1,18 @@
 <template>
   <div ref="scrollSpyContainer" class="main-container">
     <aside class="container-sticky">
-      <ContentList v-slot="{ list }">
-        <template v-for="articleHead in list" :key="articleHead._path">
+      <ContentList>
+        <li class="list-none mb-4 pb-4 border-b border-white/20">
+          <DocsNavigationItem :article="index" :route-name="routeName" />
+        </li>
+        <template v-for="article in filteredList" :key="article._path">
           <li
-            v-if="
-              isSameCategory(articleHead._path) && isIndex(articleHead._path)
-            "
-            class="list-none mb-4 pb-4 border-b border-white/20"
-          >
-            <DocsNavigationItem
-              :article="articleHead"
-              :route-name="routeName"
-            />
-          </li>
-        </template>
-        <template v-for="article in list" :key="article._path">
-          <li
-            v-if="
-              !isPageBlacklisted(article._path) &&
-              isSameCategory(article._path) &&
-              !isIndex(article._path)
-            "
-            class="list-none"
+            :class="{
+              'list-none mb-4 pb-4 border-b border-white/20': isIndex(
+                article._path
+              ),
+              'list-none': !isIndex(article._path),
+            }"
           >
             <DocsNavigationItem :article="article" :route-name="routeName" />
           </li>
@@ -41,67 +31,20 @@
 </template>
 
 <script lang="ts" setup>
+import { useRoute } from "vue-router";
+import { extractCategory, isIndex, handleIndex, pageExist } from "@/utils/docs";
+
 const route = useRoute();
 const scrollSpy = useScrollSpy();
 
-// Transform index to "readme"
-async function handleIndex(path: string): Promise<string> {
-  const readme = joinPath(path, "readme");
-  const isIndex = await pageExist(readme);
-  return isIndex ? readme : path;
-}
+const docs = await queryContent("docs");
 
-function extractCategory(path: string): string | null {
-  const regex = /^\/(?:\w{2}\/)?docs\/([^/]+)/;
-  const match = path.match(regex);
+const docsCategoryIndex = await queryContent(
+  `${extractCategory(route.fullPath) as string}/readme`
+);
+const index = ref<any>(await docsCategoryIndex.findOne());
+const everything = ref<any[]>(await docs.find());
 
-  if (match && match[1]) {
-    return `/docs/${match[1]}`;
-  }
-
-  return null;
-}
-
-const isPageBlacklisted = (path: string) => {
-  if (path.endsWith("/summary")) {
-    return true;
-  }
-  // empty
-  if (path.endsWith("/confidential-assets")) {
-    return true;
-  }
-  return false;
-};
-
-const isSameCategory = (path: string) => {
-  const currentPathCategory = extractCategory(route.fullPath);
-  const targetPathCategory = extractCategory(path);
-  if (!currentPathCategory || !targetPathCategory) {
-    return false;
-  }
-  return currentPathCategory === targetPathCategory;
-};
-
-const isIndex = (path: string) => {
-  const currentPathCategory = extractCategory(route.fullPath);
-  if (currentPathCategory) {
-    const index = joinPath(currentPathCategory, "readme");
-    return index === path;
-  }
-  return false;
-};
-
-// Check if a content page exist
-const pageExist = async (path: string) => {
-  if (isPageBlacklisted(path)) {
-    return false;
-  }
-  const contentQuery = queryContent(path);
-  const query = await contentQuery.find();
-  return query.length > 0;
-};
-
-// Build current route name
 const routeName = await handleIndex(
   `/docs/${
     typeof route.params.slug === "string"
@@ -117,12 +60,22 @@ scrollSpy({
   offset: 200,
 });
 
-// Return 404 if the page does not exist
 if (!(await pageExist(routeName))) {
   throw createError({ statusCode: 404, statusMessage: "Page not found" });
 }
-</script>
 
+const filteredList = computed(() => {
+  return everything.value.filter((article) => {
+    const isSameCategoryArticle = isSameCategory(article._path, route);
+    const isIndexArticle = isIndex(article._path);
+    return (
+      !isPageBlacklisted(article._path) &&
+      isSameCategoryArticle &&
+      !isIndexArticle
+    );
+  });
+});
+</script>
 <style lang="postcss" scoped>
 .main-container {
   @apply max-w-screen-xl mx-auto py-10 lg:py-12 px-3 md:px-4 overflow-x-visible overflow-y-visible grid gap-12;
