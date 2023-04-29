@@ -1,7 +1,7 @@
 <template>
   <div>
     <LayoutLink
-      :to="processPath(article._path)"
+      :to="localePath(processPath(article._path))"
       :class="`rtl:pr-2.5 ltr:pl-2.5 text-md opacity-60 hover:opacity-90 transition-opacity ${
         routeName == article._path
           ? 'rtl:border-r-2 ltr:border-l-2 border-beam-blue text-beam-blue font-bold !opacity-90'
@@ -28,6 +28,7 @@
 
 <script lang="ts" setup>
 import { defineProps } from "vue";
+const localePath = useLocalePath();
 
 const props = defineProps({
   article: {
