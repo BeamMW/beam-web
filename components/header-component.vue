@@ -72,7 +72,9 @@ const localePath = useLocalePath();
         </ul>
       </div>
 
-      <div class="justify-self-end flex items-center order-last">
+      <div
+        class="justify-self-end flex items-center order-last lrt:text-left rtl:text-right"
+      >
         <HeaderLanguage />
       </div>
     </div>

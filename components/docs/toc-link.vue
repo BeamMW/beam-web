@@ -8,7 +8,7 @@
     >
       {{ link.text }}
     </a>
-    <ul v-if="link.children" class="ml-3">
+    <ul v-if="link.children" class="ltr:ml-3 rtl:mr-3">
       <li v-for="(childLink, childIndex) in link.children" :key="childIndex">
         <a
           :id="`link-${childLink.id}`"

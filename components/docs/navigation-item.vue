@@ -2,7 +2,7 @@
   <div>
     <LayoutLink
       :to="localePath(processPath(article._path))"
-      :class="`rtl:pr-2.5 ltr:pl-2.5 text-md opacity-60 hover:opacity-90 transition-opacity ${
+      :class="`rtl:pr-5 ltr:pl-5 block text-md opacity-60 hover:opacity-90 transition-opacity ${
         routeName == article._path
           ? 'rtl:border-r-2 ltr:border-l-2 border-beam-blue text-beam-blue font-bold !opacity-90'
           : ''
@@ -14,7 +14,7 @@
       <ul
         v-for="(link, index) in article.body.toc.links"
         :key="index"
-        class="list-none ml-5"
+        class="list-none ltr:ml-8 rtl:mr-8"
       >
         <DocsTocLink
           v-if="link.text != article.title"
