@@ -31,9 +31,9 @@
         </li>
         <h6>Content</h6>
         <div
-          class="ltr:pr-4 rtl:pl-4"
           v-for="article in filteredList"
           :key="article._path"
+          class="ltr:pr-4 rtl:pl-4"
         >
           <li class="list-none">
             <DocsNavigationItem :article="article" :route-name="routeName" />

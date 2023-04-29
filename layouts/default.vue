@@ -25,7 +25,7 @@
       </Head>
       <Body :class="`bg-[${bodyColor}]`">
         <main>
-          <HeaderInteractiveBar :gradientColor="gradientColorRgb" />
+          <HeaderInteractiveBar :gradient-color="gradientColorRgb" />
           <HeaderComponent :class="headerRef" />
           <slot />
           <FooterComponent :class="footerRef" />
