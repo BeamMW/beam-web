@@ -1,6 +1,8 @@
 import { RouteLocationNormalized } from "vue-router";
 import { joinPath } from "./joinPath";
 
+const PAGE_BLACKLIST = ["/summary", "/confidential-assets"];
+
 export const extractCategory = (path: string): string | null => {
   const parts = path.split("/");
   if (parts.length > 2 && parts[1] === "docs") {
@@ -15,8 +17,6 @@ export const handleIndex = async (path: string): Promise<string> => {
   const readme = joinPath(path, "readme");
   return (await pageExist(readme)) ? readme : path;
 };
-
-const PAGE_BLACKLIST = ["/summary", "/confidential-assets"];
 
 export const isPageBlacklisted = (path: string): boolean =>
   PAGE_BLACKLIST.some((blacklisted) => path.endsWith(blacklisted));
