@@ -7,7 +7,7 @@ const windowLocked = useState("windowLocked", () => false);
 const currentRoute = useState("currentRoute", () => "");
 const localePath = useLocalePath();
 
-const fileVersion = 1;
+const fileVersion = 2;
 
 const route = useRoute();
 const router = useRouter();
