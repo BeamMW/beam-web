@@ -43,6 +43,14 @@ The generated HTML files will be located in `.output/public/`.
 - **Nuxt 3 (Vue 3):** Latest Nuxt.js version for building high-performance web apps.
 - **Open-source and transparent:** Encourages community involvement and trust through open development and contributions.
 
+#### Update Git submodules to their latest version
+
+```bash
+git submodule sync && git submodule update --remote --force
+```
+
+Then simply commit the changes.
+
 #### Website Structure
 
 1. **Homepage:** Overview and external links.
