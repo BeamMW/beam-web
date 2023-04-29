@@ -24,7 +24,7 @@
           Back to documentation
         </section></LayoutLink
       >
-      <section>
+      <section class="rtl:pl-2 ltr:pr-2">
         <h6>Summary</h6>
         <li class="list-none mb-4 pb-4 border-b border-white/20">
           <DocsNavigationItem :article="index" :route-name="routeName" />
