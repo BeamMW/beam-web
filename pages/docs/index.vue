@@ -4,6 +4,7 @@ const { t } = useI18n();
 
 const title = computed(() => t("head.title.documentation"));
 const description = computed(() => t("head.descriptions.docs"));
+const localePath = useLocalePath();
 
 useSeoMeta({
   title,
@@ -33,7 +34,7 @@ useSeoMeta({
           :key="index"
           :title="t(doc.title)"
           :image="doc.image"
-          :link="`/docs${doc.path}`"
+          :link="localePath(`/docs${doc.path}`)"
           :link-text="t('docs.explore')"
           class="bg-[#360061]/50 hover:bg-[#360061] focus:bg-[#360061] focus:ring-offset-[#360061] focus:ring-beam-purple text-[#E9D4F2]"
         />
