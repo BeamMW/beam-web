@@ -37,13 +37,11 @@ import { extractCategory, isIndex, handleIndex, pageExist } from "@/utils/docs";
 const route = useRoute();
 const scrollSpy = useScrollSpy();
 
-const docs = await queryContent("docs");
+const currentCategory = extractCategory(route.fullPath) as string;
 
-const docsCategoryIndex = await queryContent(
-  `${extractCategory(route.fullPath) as string}/readme`
-);
-const index = ref<any>(await docsCategoryIndex.findOne());
-const everything = ref<any[]>(await docs.find());
+const everything = ref(await queryContent(currentCategory).find());
+const docsIndex = await queryContent(`${currentCategory}/readme`);
+const index = ref(await docsIndex.findOne());
 
 const routeName = await handleIndex(
   `/docs/${
@@ -53,6 +51,10 @@ const routeName = await handleIndex(
   }`
 );
 
+if (!(await pageExist(routeName))) {
+  throw createError({ statusCode: 404, statusMessage: "Page not found" });
+}
+
 const scrollSpyContainer = ref<HTMLElement | null>(null);
 scrollSpy({
   target: scrollSpyContainer,
@@ -60,12 +62,11 @@ scrollSpy({
   offset: 200,
 });
 
-if (!(await pageExist(routeName))) {
-  throw createError({ statusCode: 404, statusMessage: "Page not found" });
-}
-
 const filteredList = computed(() => {
   return everything.value.filter((article) => {
+    if (!article._path) {
+      return false;
+    }
     const isSameCategoryArticle = isSameCategory(article._path, route);
     const isIndexArticle = isIndex(article._path);
     return (

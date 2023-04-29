@@ -52,7 +52,3 @@ export const pageExist = async (path: string): Promise<boolean> => {
   const query = await contentQuery.find();
   return query.length > 0;
 };
-
-export const scrollToComponent = (element: HTMLElement): void => {
-  element.scrollIntoView({ behavior: "smooth", block: "start" });
-};
