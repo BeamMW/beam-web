@@ -20,7 +20,7 @@ export const qqGroupId = 909677190;
 
 export enum ExternalLinks {
   // Socials
-  GITHUB = "https://github.com/BeamMW/beam",
+  GITHUB = "https://github.com/BeamMW",
   TELEGRAM = "https://t.me/BeamPrivacy",
   TWITTER = "https://twitter.com/beamprivacy",
   SUBSTACK = "https://beamprivacy.substack.com",
