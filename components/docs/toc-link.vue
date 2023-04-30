@@ -4,7 +4,7 @@
       :id="`link-${link.id}`"
       class="text-base text-white/60 hover:text-white/90 mt-2 transition-colors"
       :href="`${localePath(articlePath)}#${link.id}`"
-      @click.stop.prevent="smoothScrollToHash(link.id)"
+      @click.prevent="smoothScrollToHash(link.id)"
     >
       {{ link.text }}
     </a>
@@ -14,7 +14,7 @@
           :id="`link-${childLink.id}`"
           class="text-sm text-white/60 hover:text-white/90 transition-colors"
           :href="`${localePath(articlePath)}#${childLink.id}`"
-          @click.stop.prevent="smoothScrollToHash(childLink.id)"
+          @click.prevent="smoothScrollToHash(childLink.id)"
         >
           {{ childLink.text }}
         </a>

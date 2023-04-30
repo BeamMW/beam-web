@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown-container">
+  <div>
     <h6
       class="md:hidden px-6 pt-6 pb-3 font-bold text-xs sm:text-base uppercase text-gray-200"
     >

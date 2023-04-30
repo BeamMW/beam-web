@@ -4,6 +4,7 @@ import { UserInteractionEvents, eventBus } from "~/utils/emitter";
 import { scrollToComponent } from "~/utils/scrollToComponent";
 
 const windowLocked = useState("windowLocked", () => false);
+const windowBlurred = useState("windowBlurred", () => false);
 const currentRoute = useState("currentRoute", () => "");
 const localePath = useLocalePath();
 
@@ -52,7 +53,12 @@ onUnmounted(() =>
 </script>
 
 <template>
-  <main :class="windowLocked ? 'locked' : ''">
+  <main
+    :class="{
+      locked: windowLocked,
+      blurred: windowBlurred,
+    }"
+  >
     <Head>
       <Link
         v-for="linkElement in linkElements"
@@ -181,9 +187,17 @@ onUnmounted(() =>
 <style lang="postcss" scoped>
 main {
   transition: opacity 225ms ease-in-out, filter 225ms ease-in-out;
-}
-main.locked {
-  @apply pointer-events-none select-none overflow-hidden h-screen blur-sm opacity-50 touch-none overscroll-none;
-  -webkit-overflow-scrolling: none;
+
+  &.locked,
+  &.blurred {
+    @apply pointer-events-none select-none;
+  }
+  &.locked {
+    @apply overflow-hidden h-screen touch-none overscroll-none;
+    -webkit-overflow-scrolling: none;
+  }
+  &.blurred {
+    @apply blur-sm opacity-50;
+  }
 }
 </style>

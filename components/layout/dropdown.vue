@@ -16,9 +16,16 @@
         @after-leave="afterLeave"
       >
         <div v-if="showDropdown" class="h-full">
-          <slot name="dropdown-content" />
+          <section class="dropdown-container">
+            <div class="grid-container">
+              <slot name="dropdown-content" />
+            </div>
+          </section>
         </div>
       </transition>
+    </div>
+    <div v-if="alwaysShow && !showDropdown" class="hidden md:block">
+      <slot name="dropdown-content" />
     </div>
   </div>
 </template>
@@ -36,19 +43,39 @@ const referenceElement = ref<HTMLElement | null>(null);
 const popperElement = ref<HTMLElement | null>(null);
 
 const windowLocked = useState("windowLocked", () => false);
+const windowBlurred = useState("windowBlurred", () => false);
 
 let popperInstance: Instance | null = null;
+
+const props = defineProps({
+  alwaysShow: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+  lock: {
+    type: Boolean,
+    required: false,
+    default: true,
+  },
+});
 
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value;
   if (!showDropdown.value) {
-    windowLocked.value = false;
+    if (props.lock) {
+      windowLocked.value = false;
+    }
+    windowBlurred.value = false;
   }
 };
 
 const closeDropdown = () => {
   showDropdown.value = false;
-  windowLocked.value = false;
+  if (props.lock) {
+    windowLocked.value = false;
+  }
+  windowBlurred.value = false;
 };
 
 function destroyPopper() {
@@ -89,27 +116,38 @@ const updatePlacement = async () => {
   if (showDropdown.value) {
     if (viewportWidth < minWidthBreakpoint) {
       destroyPopper();
-      windowLocked.value = true;
+      if (props.lock) {
+        windowLocked.value = true;
+      }
+      windowBlurred.value = true;
       snapLeft.value = true;
     } else if (
       viewportWidth >= minWidthBreakpoint &&
       referenceElement.value &&
       !popperInstance
     ) {
-      windowLocked.value = false;
-      snapLeft.value = false;
-      await createPopperInstance(referenceElement.value, {
-        placement: "bottom",
-        strategy: "fixed",
-        modifiers: [
-          {
-            name: "offset",
-            options: {
-              offset: [0, 14],
+      if (props.lock) {
+        windowLocked.value = false;
+      }
+      windowBlurred.value = false;
+      if (props.alwaysShow) {
+        visible.value = false;
+        closeDropdown();
+      } else {
+        snapLeft.value = false;
+        await createPopperInstance(referenceElement.value, {
+          placement: "bottom",
+          strategy: "fixed",
+          modifiers: [
+            {
+              name: "offset",
+              options: {
+                offset: [0, 14],
+              },
             },
-          },
-        ],
-      });
+          ],
+        });
+      }
     }
   }
 };
@@ -121,6 +159,7 @@ watch([showDropdown, referenceElement], async () => {
 });
 
 const handleClick = (event: MouseEvent) => {
+  console.log(event);
   if (
     referenceElement.value &&
     popperElement.value &&
@@ -137,6 +176,7 @@ const handleClick = (event: MouseEvent) => {
   ) {
     // close dropdown automatically if we click on an internal link inside
     const targetElement = event.target as HTMLElement;
+    console.log(targetElement);
     if (targetElement.nodeName === "A") {
       const hrefAttribute = targetElement.getAttribute("href");
       if (
@@ -190,18 +230,24 @@ const afterEnter = () => {
 provide("toggleDropdown", toggleDropdown);
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 @media (max-width: 767px) {
   .dropdown-container,
   .dropdown-container::before {
     @apply ltr:!rounded-r-3xl rtl:!rounded-l-3xl;
   }
 }
-</style>
-<style lang="postcss" scoped>
+
 /** Custom default dropdown container */
-.popper-container:deep(.dropdown-container) {
-  @apply h-full will-change-transform z-50 rounded-lg text-white/90 relative list-none backdrop-blur-xl backdrop-brightness-75 md:bg-[#042248] border-black border border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
+.popper-container {
+  .dropdown-container {
+    @apply h-full will-change-transform z-50 rounded-lg text-white/90 relative list-none backdrop-blur-xl backdrop-brightness-75 md:bg-[#042248] border-black border border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset];
+  }
+
+  .grid-container {
+    @apply overflow-y-scroll md:overflow-y-hidden h-screen pb-[30vh] md:h-auto md:!pb-0 md:shadow-2xl;
+    -webkit-overflow-scrolling: touch !important;
+  }
 }
 
 @keyframes animate {
