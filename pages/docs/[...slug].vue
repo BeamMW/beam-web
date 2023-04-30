@@ -15,9 +15,9 @@
       <LayoutLink
         class="stick capitalize group font-bold hidden md:block mcontainer py-4 mb-4 text-white/50 hover:text-white/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#360061] h-auto focus:ring-beam-purple hover:!bg-[#360061]"
         :to="localePath('/docs')"
-        ><div class="justify-center items-center gap-4 flex">
+        ><div class="justify-center items-center gap-2 flex">
           <Icon
-            class="rotate-180 block w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+            class="ltr:rotate-180 block w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
             name="layout/arrow-right"
           />
           {{ $t("docs.back") }}
