@@ -225,7 +225,11 @@
       "explorer": "区块链浏览器"
     },
     "explore": "探索（英文）",
-    "edit": "编辑此文档"
+    "edit": "编辑此文档",
+    "back": "返回文档",
+    "summary": "摘要",
+    "content": "内容",
+    "pagecontent": "页面内容"
   },
   "errors": {
     "title": "错误 {code}",

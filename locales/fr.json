@@ -225,7 +225,11 @@
       "explorer": "Explorateur de blockchain"
     },
     "explore": "Explorer (Anglais)",
-    "edit": "Modifier cette documentation"
+    "edit": "Modifier cette documentation",
+    "back": "Retour à la documentation",
+    "summary": "Résumé",
+    "content": "Contenu",
+    "pagecontent": "Contenu de la page"
   },
   "errors": {
     "title": "Erreur {code}",

@@ -20,19 +20,18 @@
             class="rotate-180 block w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
             name="layout/arrow-right"
           />
-          Back to documentation
+          {{ $t("docs.back") }}
         </div>
       </LayoutLink>
-
       <section class="stick mcontainer">
         <LayoutDropdown :always-show="true" :lock="false">
           <template #dropdown-button>
             <button
-              title="On this page"
+              :title="t('docs.pagecontent')"
               type="button"
               class="border-b border-white border-opacity-10 md:hidden py-4 font-bold w-full justify-center items-center gap-2 uppercase flex md:mb-4 group-focus:outline-none group-focus:ring-2 group-focus:ring-offset-2 bg-[#290048] hover:bg-[#360061] focus:bg-[#360061] focus:ring-offset-[#360061] focus:ring-beam-purple text-white/50 hover:text-white/90 transition h-auto"
             >
-              On this page
+              {{ $t("docs.pagecontent") }}
               <Icon
                 class="rotate-90 block w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
                 name="layout/arrow-right"
@@ -42,7 +41,7 @@
           <template #dropdown-content>
             <div class="py-4">
               <section class="py-4 md:pt-0 rounded-xl">
-                <h6>Summary</h6>
+                <h6>{{ $t("docs.summary") }}</h6>
                 <li
                   class="list-none mb-4 pb-4 border-b border-white/20 rtl:pl-5 ltr:pr-5"
                 >
@@ -51,7 +50,7 @@
                     :route-name="routeName"
                   />
                 </li>
-                <h6>Content</h6>
+                <h6>{{ $t("docs.content") }}</h6>
                 <div
                   v-for="article in filteredList"
                   :key="article._path"
@@ -77,6 +76,7 @@
 import { useRoute } from "vue-router";
 import { extractCategory, isIndex, handleIndex, pageExist } from "@/utils/docs";
 
+const { t } = useI18n();
 const localePath = useLocalePath();
 const route = useRoute();
 const scrollSpy = useScrollSpy();

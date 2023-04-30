@@ -228,7 +228,11 @@
       "explorer": "Blockchain Explorer"
     },
     "explore": "Explore",
-    "edit": "Edit this documentation"
+    "edit": "Edit this documentation",
+    "back": "Back to documentation",
+    "summary": "Summary",
+    "content": "Content",
+    "pagecontent": "Page contents"
   },
   "errors": {
     "title": "Error {code}",

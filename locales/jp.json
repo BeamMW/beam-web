@@ -227,7 +227,11 @@
       "explorer": "ブロックチェーンエクスプローラー"
     },
     "explore": "探索（英語）",
-    "edit": "このドキュメントを編集"
+    "edit": "このドキュメントを編集",
+    "back": "ドキュメントに戻る",
+    "summary": "概要",
+    "content": "内容",
+    "pagecontent": "ページの内容"
   },
   "errors": {
     "title": "エラー {code}",

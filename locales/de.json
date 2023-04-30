@@ -227,7 +227,11 @@
       "explorer": "Blockchain-Explorer"
     },
     "explore": "Erkunden (Englisch)",
-    "edit": "Bearbeiten Sie diese Dokumentation"
+    "edit": "Bearbeiten Sie diese Dokumentation",
+    "back": "Zurück zur Dokumentation",
+    "summary": "Zusammenfassung",
+    "content": "Inhalt",
+    "pagecontent": "Seiteninhalt"
   },
   "errors": {
     "title": "Fehler {code}",
