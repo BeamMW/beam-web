@@ -8,7 +8,7 @@ const windowBlurred = useState("windowBlurred", () => false);
 const currentRoute = useState("currentRoute", () => "");
 const localePath = useLocalePath();
 
-const fileVersion = 2;
+const fileVersion = 3;
 
 const route = useRoute();
 const router = useRouter();
