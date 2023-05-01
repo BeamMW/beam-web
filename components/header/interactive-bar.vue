@@ -32,7 +32,6 @@ defineProps({
           >
             <Vue3Marquee
               :clone="false"
-              :duration="15"
               :gradient="true"
               :pause-on-hover="true"
               :gradient-color="gradientColor"
