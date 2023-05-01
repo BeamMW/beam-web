@@ -40,10 +40,8 @@ onUnmounted(() =>
       >
         <FeaturesCard
           v-if="!isNextStep"
-          link="https://documentation.beam.mw/#atomic-swaps"
           image="download/get"
           :title="$t('getstarted.steps.1.title')"
-          :link-name="$t('getstarted.steps.1.link')"
           :text="$t('getstarted.steps.1.description')"
           :button-link="localePath('downloads')"
           accent-color="beam-blue"
