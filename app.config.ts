@@ -36,7 +36,6 @@ export enum ExternalLinks {
   CMC = "https://coinmarketcap.com/currencies/beam/",
 
   // Other links
-  CHANGELOG = "https://github.com/BeamMW/beam/releases",
   DOCS_SOURCES = "https://github.com/BeamMW/docs-gitbook",
   EXPLORER = "https://explorer.beam.mw",
   MINING_SUPPORT = "https://t.me/BeamMiners",

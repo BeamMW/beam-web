@@ -74,7 +74,7 @@
 
 <script lang="ts" setup>
 import { useRoute } from "vue-router";
-import { extractCategory, isIndex, handleIndex, pageExist } from "@/utils/docs";
+import { ParsedContent, QueryBuilder } from "@nuxt/content/dist/runtime/types";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
@@ -82,16 +82,24 @@ const route = useRoute();
 const scrollSpy = useScrollSpy();
 
 const currentCategory = extractCategory(route.fullPath) as string;
-const everything = ref(await queryContent(currentCategory).find());
+let everythingQuery: QueryBuilder<ParsedContent>;
+
+switch (currentCategory) {
+  case "/docs/changelog":
+    everythingQuery = queryContent(currentCategory).sort({
+      title: -1,
+    });
+    break;
+  default:
+    everythingQuery = queryContent(currentCategory);
+    break;
+}
+
+const everything = ref(await everythingQuery.find());
 const index = ref(await queryContent(`${currentCategory}/readme`).findOne());
 
-const routeName = await handleIndex(
-  `/docs/${
-    typeof route.params.slug === "string"
-      ? route.params.slug
-      : route.params.slug.join("/")
-  }`
-);
+// use route.fullPath instead of route.params.slug
+const routeName = await handleIndex(normalizePath(route.fullPath));
 
 if (!(await pageExist(routeName))) {
   throw createError({ statusCode: 404, statusMessage: "Page not found" });

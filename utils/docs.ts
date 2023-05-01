@@ -19,6 +19,14 @@ export const extractCategory = (path: string): string | null => {
   return null;
 };
 
+export function normalizePath(path: string): string {
+  const combinedPattern = /^(?:\.\/)?(?:\/[a-z]{2})?(\/[^/]+(?:\/[^/]+)*\/?)$/;
+  const normalizedPath = path.replace(combinedPattern, (match, p1) =>
+    p1.endsWith("/") ? p1.slice(0, -1) : p1
+  );
+  return normalizedPath;
+}
+
 export const isIndex = (path: string): boolean => path.endsWith("/readme");
 
 export const handleIndex = async (path: string): Promise<string> => {

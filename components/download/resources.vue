@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import { ExternalLinks } from "~/app.config";
-
 const { t } = useI18n();
+const localePath = useLocalePath();
 
 const styles =
   "bg-[#042248]/50 hover:bg-[#042248] focus:bg-[#042248] focus:ring-offset-[#042248] focus:ring-beam-blue/75 text-beam-blue";
@@ -15,28 +14,28 @@ const styles =
       <ResourcesLink
         :title="t('downloads.resources.wallet')"
         image="download/resources/desktop"
-        link="/docs/desktop"
+        :link="`${localePath('docs')}/desktop`"
         :link-text="t('downloads.resources.documentation')"
         :class="styles"
       />
       <ResourcesLink
         :title="t('downloads.resources.commandlinenode')"
         image="download/resources/console"
-        link="/docs/node"
+        :link="`${localePath('docs')}/node`"
         :link-text="t('downloads.resources.documentation')"
         :class="styles"
       />
       <ResourcesLink
         :title="t('downloads.resources.commandlinewallet')"
         image="download/resources/console"
-        link="/docs/cli"
+        :link="`${localePath('docs')}/cli`"
         :link-text="t('downloads.resources.documentation')"
         :class="styles"
       />
       <ResourcesLink
         :title="t('downloads.resources.changelog')"
         image="download/resources/changelog"
-        :link="ExternalLinks.CHANGELOG"
+        :link="`${localePath('docs')}/changelog`"
         :class="styles"
       />
     </div>
