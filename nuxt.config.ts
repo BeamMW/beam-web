@@ -65,7 +65,7 @@ const publicWebUrl = process.env.PUBLIC_WEB_URL || "https://beam.mw";
 const docsRoutes = globSync("./content/**/*.md").map((path) =>
   path
     .slice(7, -3)
-    .replace(/\d+\./g, "")
+    .replace(/^\d+\./, "")
     .replace(/\\/g, "/")
     .replace("/README", "/index")
 );
