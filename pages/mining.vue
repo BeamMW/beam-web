@@ -50,7 +50,7 @@ useSeoMeta({
             name="get-started/beam-currency"
             :as-image="false"
             loading="eager"
-            class="h-7 w-auto"
+            class="h-7 w-7"
           />
           {{ $t("mining.button") }}
         </LayoutButton>
