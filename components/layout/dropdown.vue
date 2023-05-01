@@ -159,7 +159,6 @@ watch([showDropdown, referenceElement], async () => {
 });
 
 const handleClick = (event: MouseEvent) => {
-  console.log(event);
   if (
     referenceElement.value &&
     popperElement.value &&
@@ -176,7 +175,6 @@ const handleClick = (event: MouseEvent) => {
   ) {
     // close dropdown automatically if we click on an internal link inside
     const targetElement = event.target as HTMLElement;
-    console.log(targetElement);
     if (targetElement.nodeName === "A") {
       const hrefAttribute = targetElement.getAttribute("href");
       if (
