@@ -276,6 +276,10 @@ export const pressArticles = [
     href: "https://www.forbes.com/digital-assets/assets/beam-beam/",
   },
   {
+    image: "coingecko",
+    href: "https://www.coingecko.com/learn/introduction-to-beam-cryptocurrency",
+  },
+  {
     image: "benthamsgaze",
     href: "https://www.benthamsgaze.org/2019/05/22/efficient-cryptographic-arguments-and-proofs-or-how-i-became-a-fractional-monetary-unit/",
   },
