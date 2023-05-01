@@ -3,7 +3,7 @@ const { t, localeProperties } = useI18n();
 
 defineProps({
   version: {
-    type: String,
+    type: Number,
     required: true,
   },
   date: {
@@ -57,6 +57,9 @@ defineProps({
       <LayoutCopyToClipboard :text="checksumApk">
         {{ checksumApk }}
       </LayoutCopyToClipboard>
+    </div>
+    <div class="pt-3">
+      <DownloadChangelogLink :version="version" />
     </div>
   </section>
 </template>

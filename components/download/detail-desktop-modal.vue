@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 const { t, localeProperties } = useI18n();
+const localePath = useLocalePath();
 
 defineProps({
   version: {
-    type: String,
+    type: Number,
     required: true,
   },
   date: {
@@ -43,9 +44,9 @@ defineProps({
         {{ $t("downloads.detailswindow.latestversion") }}
       </h6>
       <p>
-        {{ version }} ({{
-          convertUNIXTimestampToLocaleDate(date, localeProperties.iso)
-        }}) &middot;
+        {{ version }}
+        ({{ convertUNIXTimestampToLocaleDate(date, localeProperties.iso) }})
+        &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
             :link="linkWalletFile"
@@ -91,6 +92,9 @@ defineProps({
       <LayoutCopyToClipboard :text="checksumNode">
         {{ checksumNode }}
       </LayoutCopyToClipboard>
+    </div>
+    <div class="pt-3">
+      <DownloadChangelogLink :version="version" />
     </div>
   </section>
 </template>
