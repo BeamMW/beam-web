@@ -73,7 +73,7 @@
     },
     "2": {
       "question": "هل Beam مفتوحة المصدر؟",
-      "answer": "نعم! إن Beam مفتوحة المصدر بالكامل ويمكن الوصول إليها على [GitHub](https://github.com/BeamMW/)."
+      "answer": "نعم! إن Beam مفتوحة المصدر بالكامل ويمكن الوصول إليها على [GitHub](https://github.com/BeamMW)."
     },
     "3": {
       "question": "كيف تضمن Beam الخصوصية؟",
@@ -85,7 +85,7 @@
     },
     "5": {
       "question": "كيف يعمل حكم Beam؟",
-      "answer": "تتحول Beam إلى حكم **BeamX DAO**، باستخدام التصويت على الشبكة. للمشاركة، ستحتاج إلى رموز BEAMX. تعرف على المزيد [هنا](https://beamx.gitbook.io/beam-mining/)."
+      "answer": "تتحول Beam إلى حكم **BeamX DAO**، باستخدام التصويت على الشبكة. للمشاركة، ستحتاج إلى رموز BEAMX. تعرف على المزيد [هنا](/docs/ecosystem/overview/beamx-dao-governance-framework)."
     },
     "6": {
       "question": "هل هناك محافظ مخصصة لـ Beam؟",
@@ -93,7 +93,7 @@
     },
     "7": {
       "question": "هل يمكنني تعدين BEAM؟",
-      "answer": "نعم. تعتبر Beam شبكة إثبات العمل باستخدام خوارزمية إجماع BeamHash III، مما يتيح تعدين فعال باستخدام وحدات معالجة الرسومات. تحقق من دليل التعدين [هنا](https://beamx.gitbook.io/beam-mining/)."
+      "answer": "نعم. تعتبر Beam شبكة إثبات العمل باستخدام خوارزمية إجماع BeamHash III، مما يتيح تعدين فعال باستخدام وحدات معالجة الرسومات. تحقق من دليل التعدين [هنا](/mining)."
     }
   },
   "getstarted": {

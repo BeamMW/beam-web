@@ -73,7 +73,7 @@
     },
     "2": {
       "question": "Beam 是开源的吗？",
-      "answer": "是的！Beam 是完全开源的，您可以在 [GitHub](https://github.com/BeamMW/) 上访问。"
+      "answer": "是的！Beam 是完全开源的，您可以在 [GitHub](https://github.com/BeamMW) 上访问。"
     },
     "3": {
       "question": "Beam 如何确保隐私？",
@@ -85,7 +85,7 @@
     },
     "5": {
       "question": "Beam 的治理机制是什么？",
-      "answer": "Beam 正在向 **BeamX DAO** 治理过渡，采用链上投票。要参与，您需要 BEAMX 代币。详细了解请点击 [此处](https://beamx.gitbook.io/beam-mining/)。"
+      "answer": "Beam 正在向 **BeamX DAO** 治理过渡，采用链上投票。要参与，您需要 BEAMX 代币。详细了解请点击 [此处](/docs/ecosystem/overview/beamx-dao-governance-framework)。"
     },
     "6": {
       "question": "有专门的 Beam 钱包吗？",
@@ -93,7 +93,7 @@
     },
     "7": {
       "question": "我可以挖矿 BEAM 吗？",
-      "answer": "是的。Beam 是一个使用 BeamHash III 共识算法的工作量证明网络，可以高效地进行 GPU 挖矿。请查看挖矿指南 [此处](https://beamx.gitbook.io/beam-mining/)。"
+      "answer": "是的。Beam 是一个使用 BeamHash III 共识算法的工作量证明网络，可以高效地进行 GPU 挖矿。请查看挖矿指南 [此处](/mining)。"
     }
   },
   "getstarted": {

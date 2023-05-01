@@ -73,7 +73,7 @@
     },
     "2": {
       "question": "האם Beam היא קוד פתוח?",
-      "answer": "כן! Beam היא קוד פתוח לחלוטין ונגישה ב-[GitHub](https://github.com/BeamMW/)."
+      "answer": "כן! Beam היא קוד פתוח לחלוטין ונגישה ב-[GitHub](https://github.com/BeamMW)."
     },
     "3": {
       "question": "איך Beam מבטיחה פרטיות?",
@@ -85,7 +85,7 @@
     },
     "5": {
       "question": "איך עובדת הממשל העצמאי של Beam?",
-      "answer": "Beam מעבירה את השליטה לממשל ה-**BeamX DAO**, באמצעות הצבעה ברשת. כדי להשתתף, תצטרך אסימוני BEAMX. קרא עוד [כאן](https://beamx.gitbook.io/beam-mining/)."
+      "answer": "Beam מעבירה את השליטה לממשל ה-**BeamX DAO**, באמצעות הצבעה ברשת. כדי להשתתף, תצטרך אסימוני BEAMX. קרא עוד [כאן](/docs/ecosystem/overview/beamx-dao-governance-framework)."
     },
     "6": {
       "question": "האם יש ארנקים מיוחדים ל-Beam?",
@@ -93,7 +93,7 @@
     },
     "7": {
       "question": "האם אפשר לכרות BEAM?",
-      "answer": "כן. Beam היא רשת מבוססת על עיקרון הוכחת עבודה באמצעות אלגוריתם ההבנה BeamHash III, מאפשר כרייה יעילה באמצעות GPU. בדוק את המדריך לכרייה [כאן](https://beamx.gitbook.io/beam-mining/)."
+      "answer": "כן. Beam היא רשת מבוססת על עיקרון הוכחת עבודה באמצעות אלגוריתם ההבנה BeamHash III, מאפשר כרייה יעילה באמצעות GPU. בדוק את המדריך לכרייה [כאן](/mining)."
     }
   },
   "getstarted": {

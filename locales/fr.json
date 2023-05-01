@@ -73,7 +73,7 @@
     },
     "2": {
       "question": "Beam est-il open-source ?",
-      "answer": "Oui ! Beam est entièrement open-source et accessible sur [GitHub](https://github.com/BeamMW/)."
+      "answer": "Oui ! Beam est entièrement open-source et accessible sur [GitHub](https://github.com/BeamMW)."
     },
     "3": {
       "question": "Comment Beam assure-t-il la confidentialité ?",
@@ -85,7 +85,7 @@
     },
     "5": {
       "question": "Comment fonctionne la gouvernance de Beam ?",
-      "answer": "Beam est en train de passer à la gouvernance **BeamX DAO**, utilisant des votes sur la chaîne. Pour participer, vous aurez besoin de jetons BEAMX. En savoir plus [ici](https://beamx.gitbook.io/beam-mining/)."
+      "answer": "Beam est en train de passer à la gouvernance **BeamX DAO**, utilisant des votes sur la chaîne. Pour participer, vous aurez besoin de jetons BEAMX. En savoir plus [ici](/docs/ecosystem/overview/beamx-dao-governance-framework)."
     },
     "6": {
       "question": "Existe-t-il des portefeuilles Beam dédiés ?",
@@ -93,7 +93,7 @@
     },
     "7": {
       "question": "Puis-je miner du BEAM ?",
-      "answer": "Oui. Beam est un réseau Proof-of-Work utilisant l'algorithme de consensus BeamHash III, permettant un minage efficace avec des GPU. Consultez le guide de minage [ici](https://beamx.gitbook.io/beam-mining/)."
+      "answer": "Oui. Beam est un réseau Proof-of-Work utilisant l'algorithme de consensus BeamHash III, permettant un minage efficace avec des GPU. Consultez le guide de minage [ici](/mining)."
     }
   },
   "getstarted": {
