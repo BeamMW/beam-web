@@ -101,14 +101,8 @@ switch (currentCategory) {
 const everything = ref(await everythingQuery.find());
 const index = ref(await queryContent(`${currentCategory}/readme`).findOne());
 
-//const routeName = await handleIndex(normalizePath(route.fullPath));
-const routeName = await handleIndex(
-  `/docs/${
-    typeof route.params.slug === "string"
-      ? route.params.slug
-      : route.params.slug.join("/")
-  }`
-);
+// use route.fullPath instead of route.params.slug
+const routeName = await handleIndex(normalizePath(route.fullPath));
 
 if (!(await pageExist(routeName))) {
   throw createError({ statusCode: 404, statusMessage: "Page not found" });
