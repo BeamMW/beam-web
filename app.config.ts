@@ -140,7 +140,7 @@ export const docTypes = [
   {
     title: "docs.types.atomicswaps",
     image: "docs/atomic-swaps",
-    path: "/atomics-swaps",
+    path: "/atomic-swaps",
   },
   {
     title: "docs.types.cli",
