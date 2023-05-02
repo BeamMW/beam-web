@@ -211,14 +211,14 @@ export const exchangesBuy = [
     link: "https://www.mexc.com/exchange/BEAM_USDT?_from=market",
   },
   {
+    title: "CoinEx",
+    image: "exchanges/coinex",
+    link: "https://www.coinex.com/exchange?currency=usdt&dest=beam#spot",
+  },
+  {
     title: "Tradeogre",
     image: "exchanges/tradeogre",
     link: "https://tradeogre.com/exchange/BTC-BEAM",
-  },
-  {
-    title: "Hotbit",
-    image: "exchanges/hotbit",
-    link: "https://www.hotbit.io/exchange?symbol=BEAM_USDT",
   },
   {
     title: "Bitforex",
@@ -226,14 +226,14 @@ export const exchangesBuy = [
     link: "https://www.bitforex.com/en/spot/beam_usdt",
   },
   {
+    title: "Hotbit",
+    image: "exchanges/hotbit",
+    link: "https://www.hotbit.io/exchange?symbol=BEAM_USDT",
+  },
+  {
     title: "Atomars",
     image: "exchanges/atomars",
     link: "https://atomars.com/trading/BEAMBTC",
-  },
-  {
-    title: "CoinEx",
-    image: "exchanges/coinex",
-    link: "https://www.coinex.com/exchange?currency=usdt&dest=beam#spot",
   },
   {
     title: "Bkex",
