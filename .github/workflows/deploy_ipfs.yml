@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PUBLIC_WEB_URL: ${{ secrets.PUBLIC_WEB_URL }}
-    name: Deploy to Cloudflare Pages
+    name: Deploy to IPFS dappnet
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -46,7 +46,7 @@ jobs:
           
   deploy_main:
     runs-on: ubuntu-latest
-    name: Deploy to Cloudflare Pages
+    name: Deploy to IPFS main
     steps:
       - name: Checkout
         uses: actions/checkout@v3
