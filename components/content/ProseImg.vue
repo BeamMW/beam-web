@@ -41,7 +41,10 @@ const props = defineProps({
 });
 const refinedSrc = computed(() => {
   if (linkType(props.src) === LinkTypes.INTERNAL) {
-    return withBase(removeGitbook(props.src), useRuntimeConfig().app.baseURL);
+    return withBase(
+      removeGitbook(props.src),
+      useRuntimeConfig().public.baseURL
+    );
   }
   return removeGitbook(props.src);
 });
