@@ -1137,7 +1137,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.4.2, @nuxt/kit@npm:^3.0.0-rc.13, @nuxt/kit@npm:^3.1.2, @nuxt/kit@npm:^3.3.3, @nuxt/kit@npm:^3.4.1, @nuxt/kit@npm:^3.4.2":
+"@nuxt/kit@npm:3.4.2, @nuxt/kit@npm:^3.0.0-rc.13, @nuxt/kit@npm:^3.1.2, @nuxt/kit@npm:^3.3.3, @nuxt/kit@npm:^3.4.2":
   version: 3.4.2
   resolution: "@nuxt/kit@npm:3.4.2"
   dependencies:
@@ -1160,6 +1160,32 @@ __metadata:
     unimport: ^3.0.6
     untyped: ^1.3.2
   checksum: 7b3923fe122f30f134b9de57647077d444718a1b60690127eccb279ff6145e5daf5474c084b3244c917e849cca1cf99ddcc521b9a76a3dab59df8ac242530e75
+  languageName: node
+  linkType: hard
+
+"@nuxt/kit@npm:^3.4.3":
+  version: 3.4.3
+  resolution: "@nuxt/kit@npm:3.4.3"
+  dependencies:
+    "@nuxt/schema": 3.4.3
+    c12: ^1.4.1
+    consola: ^3.1.0
+    defu: ^6.1.2
+    globby: ^13.1.4
+    hash-sum: ^2.0.0
+    ignore: ^5.2.4
+    jiti: ^1.18.2
+    knitwork: ^1.0.0
+    lodash.template: ^4.5.0
+    mlly: ^1.2.0
+    pathe: ^1.1.0
+    pkg-types: ^1.0.2
+    scule: ^1.0.0
+    semver: ^7.5.0
+    unctx: ^2.3.0
+    unimport: ^3.0.6
+    untyped: ^1.3.2
+  checksum: a1c6d0830aa0c048ab82c8726b5db711451a385f3b1a7974bb191e83bc28ee3d00a544a6cdcbe370508e7b07f701004ea77e10d4bee62952cf4fb43e4c0a5825
   languageName: node
   linkType: hard
 
@@ -1235,6 +1261,23 @@ __metadata:
     unimport: ^3.0.6
     untyped: ^1.3.2
   checksum: bd9bd9168304e8d17ee7012abe65b8028c2dd9ba5ff8b8811c551e8d61a98f21cae0a6b339ea448bc1914efa9a04d9d4d2e7ad5f5d4532fd7e3c02c8c91a6c40
+  languageName: node
+  linkType: hard
+
+"@nuxt/schema@npm:3.4.3":
+  version: 3.4.3
+  resolution: "@nuxt/schema@npm:3.4.3"
+  dependencies:
+    defu: ^6.1.2
+    hookable: ^5.5.3
+    pathe: ^1.1.0
+    pkg-types: ^1.0.2
+    postcss-import-resolver: ^2.0.0
+    std-env: ^3.3.2
+    ufo: ^1.1.1
+    unimport: ^3.0.6
+    untyped: ^1.3.2
+  checksum: 6d249a4cfb7dcdd36d3fd2fb72761f7103a1d769f776acf691f7f848050b23459325f94b2a5ea97b7d1be32175bb522e903aef233fc7c8674a5865fec2d34092
   languageName: node
   linkType: hard
 
@@ -3085,7 +3128,7 @@ __metadata:
     markdown-it: ^13.0.1
     npm-check-updates: ^16.10.9
     nuxt: ^3.4.2
-    nuxt-simple-robots: ^2.1.2
+    nuxt-simple-robots: ^2.2.4
     nuxt-simple-sitemap: ^2.4.11
     prettier: ^2.8.8
     swiper: ^9.2.4
@@ -9231,14 +9274,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt-simple-robots@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "nuxt-simple-robots@npm:2.1.2"
+"nuxt-simple-robots@npm:^2.2.4":
+  version: 2.2.4
+  resolution: "nuxt-simple-robots@npm:2.2.4"
   dependencies:
-    "@nuxt/kit": ^3.4.1
+    "@nuxt/kit": ^3.4.3
     pathe: ^1.1.0
     ufo: ^1.1.1
-  checksum: e67eb440285ea973c2a626b2634d9b80011822526078f7c3d9f75d4e385d56cef16a69eb7c884ed02352f49220787bc00ba7ae6b4387af5de15248bb83bd1f2d
+  checksum: 70883e8688b07ca8740102bd52f043462dfe23d72be9e5176c5d2abddccb055048d2531472f57bcb44f10f4d5cbefb655e212ad6172a6c4e091bc7787bc94631
   languageName: node
   linkType: hard
 
