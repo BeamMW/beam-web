@@ -16,7 +16,7 @@
     "keywords": "Beam, 加密货币, 隐私, 匿名, 保密资产, DeFi, NFT, 区块链, 去中心化, DEX, 智能合约, 用户体验, 钱包, 安全, 财务自由, AMM, 原子交换, 虚拟机, WASM, 合约着色器, 应用着色器, 移动钱包, 桌面钱包, 交易类型, 私密稳定币, 封装资产, 侧链, 预言机, 借贷, Uniswap-like, Beam 节点, Beam 虚拟机, 保密性, 桥接资产, Beam 区块链, 无缝交易, 交互式钱包, 比特币式交易, Beam 交易, 财务隐私"
   },
   "header": {
-    "announcement": "2023年5月2日星期二：Beam的新网站正式上线！准备好迎接Beam的隐私为中心的去中心化交易所，周四启动。[了解更多...](https://medium.com/@Beam-privacy/we-are-excited-to-announce-the-launch-of-the-newly-updated-beam-mw-website-b26167d829e7)",
+    "announcement": "2023年5月2日星期二：Beam的新网站正式上线！准备好迎接Beam的隐私为中心的去中心化交易所，周四启动。[了解更多...](https://beam.mw)",
     "announcementdev": "**注意！** 本网站仅适用于 dAppnet 网络，这是为开发者设计的测试网络。如果您正在寻找真正的网站，请[**点击此处**](https://beam.mw)。",
     "nav": {
       "home": "首页",
