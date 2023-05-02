@@ -1,0 +1,75 @@
+# Dependency Review Action
+#
+# This Action will scan dependency manifest files that change as part of a Pull Request, surfacing known-vulnerable versions of the packages declared or updated in the PR. Once installed, if the workflow run is marked as required, PRs introducing known-vulnerable packages will be blocked from merging.
+#
+# Source repository: https://github.com/actions/dependency-review-action
+# Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
+name: "Deploy to CloudFlare"
+
+on: [push, pull_request]
+
+env:
+  NODE_OPTIONS: ${{ secrets.NODE_OPTIONS }}
+
+jobs:
+  deploy_dappnet:
+    runs-on: ubuntu-latest
+    env:
+      PUBLIC_WEB_URL: ${{ secrets.PUBLIC_WEB_URL }}
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Submodule update
+        shell: bash
+        run: git submodule update --init --recursive
+
+      - name: Install packages
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Generate static
+        run: yarn generate
+
+      - name: Publish
+        uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
+        with:
+          pin-name: ${{ secrets.DAPPNET_PIN }}
+          path: '/dist'
+          pinata-api-key: ${{ secrets.IPFS_API_KEY }}
+          pinata-secret-api-key: ${{ secrets.IPFS_SECRET_KEY }}
+          verbose: true
+          remove-old: false
+          
+  deploy_main:
+    runs-on: ubuntu-latest
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Submodule update
+        shell: bash
+        run: git submodule update --init --recursive
+
+      - name: Install packages
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Generate static
+        run: yarn generate
+
+      - name: Publish
+        uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
+        with:
+          pin-name: ${{ secrets.MAIN_PIN }}
+          path: '/dist'
+          pinata-api-key: ${{ secrets.IPFS_API_KEY }}
+          pinata-secret-api-key: ${{ secrets.IPFS_SECRET_KEY }}
+          verbose: true
+          remove-old: false
