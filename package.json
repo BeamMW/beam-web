@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
-    "build:netlify": "yarn build && yarn generate",
+    "dev-run": "cd dist && python3 -m http.server 8000",
     "generate": "yarn lintfix && nuxi generate",
     "preview": "yarn lintfix && nuxi preview",
     "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 const { t, localeProperties } = useI18n();
-const localePath = useLocalePath();
 
 defineProps({
   version: {
