@@ -12,7 +12,6 @@ env:
   NODE_OPTIONS: ${{ secrets.NODE_OPTIONS }}
 
 jobs:
-
  deploy_main:
     runs-on: ubuntu-latest
     name: Deploy to IPFS main
@@ -41,11 +40,9 @@ jobs:
           pinata-api-key: ${{ secrets.IPFS_API_KEY }}
           pinata-secret-api-key: ${{ secrets.IPFS_SECRET_KEY }}
           verbose: true
-          remove-old: false
-          
+          remove-old: false        
   deploy_dappnet:
     runs-on: ubuntu-latest
-    needs: [deploy_main]
     env:
       PUBLIC_WEB_URL: ${{ secrets.PUBLIC_WEB_URL }}
     name: Deploy to IPFS dappnet
