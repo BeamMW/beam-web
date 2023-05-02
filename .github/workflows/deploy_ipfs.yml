@@ -4,7 +4,7 @@
 #
 # Source repository: https://github.com/actions/dependency-review-action
 # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
-name: "Deploy to CloudFlare"
+name: "Deploy to IPFS"
 
 on: [push, pull_request]
 
@@ -38,7 +38,7 @@ jobs:
         uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
         with:
           pin-name: ${{ secrets.DAPPNET_PIN }}
-          path: '/dist'
+          path: '.output/public/'
           pinata-api-key: ${{ secrets.IPFS_API_KEY }}
           pinata-secret-api-key: ${{ secrets.IPFS_SECRET_KEY }}
           verbose: true
@@ -68,7 +68,7 @@ jobs:
         uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
         with:
           pin-name: ${{ secrets.MAIN_PIN }}
-          path: '/dist'
+          path: '.output/public/'
           pinata-api-key: ${{ secrets.IPFS_API_KEY }}
           pinata-secret-api-key: ${{ secrets.IPFS_SECRET_KEY }}
           verbose: true
