@@ -3,6 +3,7 @@ import { linkElements } from "@/utils/linkElements";
 import { UserInteractionEvents, eventBus } from "~/utils/emitter";
 import { scrollToComponent } from "~/utils/scrollToComponent";
 import { SupportedPlatforms } from "@/app.config";
+import { ExternalLinks } from "~/app.config";
 
 const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();
@@ -12,6 +13,7 @@ const windowBlurred = useState("windowBlurred", () => false);
 const currentRoute = useState("currentRoute", () => "");
 const fileVersion = 3;
 
+const baseURL = useRuntimeConfig().public.baseURL;
 const route = useRoute();
 const router = useRouter();
 
@@ -25,15 +27,11 @@ watch(
 
 defineRobotMeta();
 
-const redirectToIndex = async () => {
-  await router.push(localePath("index"));
-};
-
 // Scroll to "Where to buy" called but unable to scroll, redirect to homepage
 const whereToBuyScroll = async () => {
   const targetComponentBuy = document.getElementById("targetComponentBuy");
   if (!targetComponentBuy) {
-    await redirectToIndex();
+    await router.push(localePath("index"));
     // ToDo: find a more reliable way than a settimeout
     setTimeout(() => {
       const homepageBuyComponent =
@@ -96,16 +94,29 @@ onUnmounted(() =>
         name="viewport"
       />
       <Meta
-        v-if="
-          platformDetails[SupportedPlatforms.IOS] &&
-          typeof platformDetails[SupportedPlatforms.IOS]?.links?.store ===
-            'string'
-        "
+        name="twitter:site"
+        :content="(extractTwitterUsername(ExternalLinks.TWITTER) as string)"
+      />
+      <Meta
         name="apple-itunes-app"
         :content="`app-id=${
           extractAppStoreAppId(platformDetails[SupportedPlatforms.IOS].links.store as string)
         }`"
       />
+      <Meta
+        name="twitter:image:src"
+        :content="`${baseURL}/card.png?v=${fileVersion}`"
+      />
+      <Meta name="twitter:card" content="summary_large_image" />
+      <Meta property="og:type" content="object" />
+      <Meta
+        property="og:image"
+        :content="`${baseURL}/card.png?v=${fileVersion}`"
+      />
+      <Meta property="og:image:type" content="image/png" />
+      <Meta property="og:image:width" content="1200" />
+      <Meta property="og:image:height" content="630" />
+      <Meta property="og:url" :content="baseURL" />
     </Head>
     <NuxtLayout>
       <NuxtLoadingIndicator
