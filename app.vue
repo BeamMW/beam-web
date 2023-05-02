@@ -2,12 +2,14 @@
 import { linkElements } from "@/utils/linkElements";
 import { UserInteractionEvents, eventBus } from "~/utils/emitter";
 import { scrollToComponent } from "~/utils/scrollToComponent";
+import { SupportedPlatforms } from "@/app.config";
+
+const platformDetails = await usePlatformDetails();
+const localePath = useLocalePath();
 
 const windowLocked = useState("windowLocked", () => false);
 const windowBlurred = useState("windowBlurred", () => false);
 const currentRoute = useState("currentRoute", () => "");
-const localePath = useLocalePath();
-
 const fileVersion = 3;
 
 const route = useRoute();
@@ -92,6 +94,17 @@ onUnmounted(() =>
       <Meta
         content="width=device-width, initial-scale=1, maximum-scale=5"
         name="viewport"
+      />
+      <Meta
+        v-if="
+          platformDetails[SupportedPlatforms.IOS] &&
+          typeof platformDetails[SupportedPlatforms.IOS]?.links?.store ===
+            'string'
+        "
+        name="apple-itunes-app"
+        :content="`app-id=${
+          extractAppStoreAppId(platformDetails[SupportedPlatforms.IOS].links.store as string)
+        }`"
       />
     </Head>
     <NuxtLayout>
