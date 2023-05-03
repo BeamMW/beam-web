@@ -37,7 +37,7 @@ jobs:
         uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
         with:
           pin-name: ${{ secrets.MAIN_PIN }}
-          path: '.output/public/'
+          path: '.output/public'
           pinata-api-key: ${{ secrets.IPFS_API_KEY }}
           pinata-secret-api-key: ${{ secrets.IPFS_SECRET_KEY }}
           verbose: true
@@ -70,7 +70,7 @@ jobs:
         uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
         with:
           pin-name: ${{ secrets.DAPPNET_PIN }}
-          path: '.output/public/'
+          path: '.output/public'
           pinata-api-key: ${{ secrets.IPFS_API_KEY }}
           pinata-secret-api-key: ${{ secrets.IPFS_SECRET_KEY }}
           verbose: true
