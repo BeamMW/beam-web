@@ -27,6 +27,11 @@ jobs:
       - name: Submodule update
         shell: bash
         run: git submodule update --init --recursive
+        
+      - name: Setup node 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
       - name: Install packages
         run: yarn install
