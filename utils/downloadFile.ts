@@ -1,4 +1,4 @@
-enum EventType {
+export enum EventType {
   DownloadProgress,
   HashVerification,
 }
@@ -150,7 +150,7 @@ export async function downloadFile(
         throw new Error("Unable to read the response body");
       }
 
-      const reader = bodyStream.getReader({ mode: "byob" });
+      const reader = bodyStream.getReader();
       let downloadedSize = 0;
       let startTime = performance.now();
 
@@ -166,7 +166,7 @@ export async function downloadFile(
       });
 
       async function read() {
-        const { done, value } = await reader.read(new Uint8Array(1024));
+        const { done, value } = await reader.read();
 
         if (done) {
           // Notify that the download is complete and hash verification has started

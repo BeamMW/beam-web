@@ -13,6 +13,8 @@ useSeoMeta({
   ogDescription: description,
 });
 
+import { EventType } from "@/utils/downloadFile";
+
 const fileUrl =
   "https://builds.beam.mw/mainnet/2023.04.14/Release/mac/Beam-Wallet-7.3.14027.5732.dmg";
 const expectedFileHash =
