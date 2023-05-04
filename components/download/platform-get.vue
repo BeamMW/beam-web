@@ -26,6 +26,7 @@ const props = defineProps({
   checksum: {
     type: String,
     required: false,
+    default: undefined,
   },
 });
 
@@ -42,13 +43,12 @@ const startDownload = (event: Event) => {
   <div class="text-center">
     <DownloadDownloader
       v-if="link && checksum"
+      ref="downloaderRef"
       :file-url="link"
       :expected-file-hash="checksum"
-      ref="downloaderRef"
     ></DownloadDownloader>
 
     <LayoutLink
-      @click="startDownload"
       :to="link"
       :title="t('downloads.downloadButton', { platform: title })"
       :class="`${
@@ -56,6 +56,7 @@ const startDownload = (event: Event) => {
           ? 'pointer-events-none select-none opacity-90'
           : 'opacity-70 hover:opacity-90'
       } flex flex-col justify-center items-center gap-1 transition-opacity pb-2`"
+      @click="startDownload"
     >
       <Icon
         :name="`download/platforms/${icon.toLowerCase()}`"
@@ -76,10 +77,10 @@ const startDownload = (event: Event) => {
 
     <div v-if="highlight" class="py-4">
       <LayoutButton
-        @click="startDownload"
         :big="true"
         :button-link="link"
         accent-color="beam-blue"
+        @click="startDownload"
       >
         <Icon name="download/get" class="w-[18px] h-[24px]" />
         {{ $t("downloads.downloadButton", { platform: title }) }}

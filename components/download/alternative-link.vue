@@ -11,6 +11,7 @@ const props = defineProps({
   checksum: {
     type: String,
     required: false,
+    default: undefined,
   },
   disableArrow: {
     type: Boolean,
@@ -27,24 +28,26 @@ const startDownload = (event: Event) => {
 };
 </script>
 <template>
-  <DownloadDownloader
-    v-if="link && checksum"
-    :file-url="link"
-    :expected-file-hash="checksum"
-    ref="downloaderRef"
-  ></DownloadDownloader>
-  <LayoutLink
-    @click="startDownload"
-    :to="link"
-    class="hover:text-white transition-colors"
-  >
-    <span class="inline-flex items-center"
-      >{{ title }}&nbsp;
-      <Icon
-        v-if="!disableArrow"
-        class="h-3 w-3"
-        name="download/get-arrow-inline"
-      />
-    </span>
-  </LayoutLink>
+  <span>
+    <DownloadDownloader
+      v-if="link && checksum"
+      ref="downloaderRef"
+      :file-url="link"
+      :expected-file-hash="checksum"
+    ></DownloadDownloader>
+    <LayoutLink
+      :to="link"
+      class="hover:text-white transition-colors"
+      @click="startDownload"
+    >
+      <span class="inline-flex items-center"
+        >{{ title }}&nbsp;
+        <Icon
+          v-if="!disableArrow"
+          class="h-3 w-3"
+          name="download/get-arrow-inline"
+        />
+      </span>
+    </LayoutLink>
+  </span>
 </template>

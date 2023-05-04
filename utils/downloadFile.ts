@@ -15,8 +15,8 @@ interface DownloadEvent {
 
 function isValidUrl(url: string): boolean {
   try {
-    new URL(url);
-    return true;
+    const check = new URL(url);
+    return typeof check.hostname === "string";
   } catch (e) {
     return false;
   }
@@ -24,10 +24,6 @@ function isValidUrl(url: string): boolean {
 
 function isValidHash(hash: string): boolean {
   return /^[a-fA-F0-9]{64}$/.test(hash);
-}
-
-function isValidFilename(filename: string): boolean {
-  return /^[^\/\\:*?"<>|]{1,255}$/.test(filename);
 }
 
 // Accumulator for Uint8Array
@@ -66,9 +62,6 @@ async function verifyAndSave(
   // Validate inputs
   if (!isValidHash(expectedHash)) {
     throw new Error("Invalid expected hash");
-  }
-  if (!isValidFilename(fileName)) {
-    throw new Error("Invalid filename");
   }
 
   // Calculate the SHA256 hash while reading the stream
@@ -159,7 +152,7 @@ export async function downloadFile(
 
       const reader = bodyStream.getReader();
       let downloadedSize = 0;
-      let startTime = performance.now();
+      const startTime = performance.now();
 
       const createProgressEvent = (downloadedSize: number) => ({
         type: EventType.DownloadProgress,

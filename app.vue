@@ -2,8 +2,7 @@
 import { linkElements } from "@/utils/linkElements";
 import { UserInteractionEvents, eventBus } from "~/utils/emitter";
 import { scrollToComponent } from "~/utils/scrollToComponent";
-import { SupportedPlatforms } from "@/app.config";
-import { ExternalLinks } from "~/app.config";
+import { SupportedPlatforms, ExternalLinks } from "@/app.config";
 
 const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();
@@ -98,12 +97,12 @@ onUnmounted(() =>
         :content="(extractTwitterUsername(ExternalLinks.TWITTER) as string)"
       />
       <Meta
-        name="apple-itunes-app"
         v-if="
           platformDetails[SupportedPlatforms.IOS] &&
           platformDetails[SupportedPlatforms.IOS].links &&
           platformDetails[SupportedPlatforms.IOS].links.store
         "
+        name="apple-itunes-app"
         :content="`app-id=${
           extractAppStoreAppId(platformDetails[SupportedPlatforms.IOS].links.store as string)
         }`"
