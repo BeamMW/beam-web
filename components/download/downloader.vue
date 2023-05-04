@@ -29,6 +29,8 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { downloadFile, EventType, DownloadEvent } from "@/utils/downloadFile";
+import { formatDistanceToNowStrict } from "date-fns";
+import { enUS } from "date-fns/locale";
 
 const downloading = ref(false);
 const hashing = ref(false);
@@ -70,12 +72,16 @@ function formatBytes(bytes: number): string {
   return numberFormatter.format(n) + " " + units[unitIndex];
 }
 
-function formatTime(seconds: number) {
-  const h = (seconds / 3600) | 0;
-  const m = ((seconds % 3600) / 60) | 0;
-  const s = seconds % 60 | 0;
+function formatTime(seconds: number): string {
+  const now = new Date();
+  const targetDate = new Date(now.getTime() + seconds * 1000);
 
-  return `${h}:${numberFormatter.format(m)}:${numberFormatter.format(s)}`;
+  const formattedTime = formatDistanceToNowStrict(targetDate, {
+    locale: enUS,
+    addSuffix: true,
+  });
+
+  return formattedTime;
 }
 
 const frameId = ref(0);
