@@ -41,7 +41,11 @@
 
           <div class="flex flex-row justify-center gap-4">
             <LayoutLink
-              v-if="platformDetails[SupportedPlatforms.IOS]"
+              v-if="
+                platformDetails[SupportedPlatforms.IOS] &&
+                platformDetails[SupportedPlatforms.IOS].links &&
+                platformDetails[SupportedPlatforms.IOS].links.store
+              "
               :to="platformDetails[SupportedPlatforms.IOS].links.store"
               class="select-none hover:opacity-80 transition"
               :title="t('hero.geton.appstore')"
@@ -55,7 +59,11 @@
               />
             </LayoutLink>
             <LayoutLink
-              v-if="platformDetails[SupportedPlatforms.ANDROID]"
+              v-if="
+                platformDetails[SupportedPlatforms.ANDROID] &&
+                platformDetails[SupportedPlatforms.ANDROID].links &&
+                platformDetails[SupportedPlatforms.ANDROID].links.store
+              "
               :to="platformDetails[SupportedPlatforms.ANDROID].links.store"
               class="select-none hover:opacity-80 transition"
               :title="t('hero.geton.playstore')"
@@ -69,7 +77,11 @@
               />
             </LayoutLink>
             <LayoutLink
-              v-if="platformDetails[SupportedPlatforms.CHROME]"
+              v-if="
+                platformDetails[SupportedPlatforms.CHROME] &&
+                platformDetails[SupportedPlatforms.CHROME].links &&
+                platformDetails[SupportedPlatforms.CHROME].links.store
+              "
               :to="platformDetails[SupportedPlatforms.CHROME].links.store"
               class="hidden md:block select-none hover:opacity-80 transition"
               :title="t('hero.geton.chromestore')"
