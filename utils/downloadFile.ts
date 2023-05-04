@@ -4,7 +4,7 @@ export enum EventType {
   HashVerified,
 }
 
-interface DownloadEvent {
+export interface DownloadEvent {
   type: EventType;
   downloadedSize?: number;
   totalSize?: number;
