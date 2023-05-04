@@ -44,10 +44,15 @@ const {
     :title="title"
     :icon="platform"
     :link="wallet"
+    :checksum="walletChecksum"
   >
     <p>{{ $t(`downloads.supportedversions.${platform}`) }}</p>
     <span class="border-b border-white/70 hover:border-white">
-      <DownloadAlternativeLink :title="t('downloads.type.node')" :link="node" />
+      <DownloadAlternativeLink
+        :title="t('downloads.type.node')"
+        :link="node"
+        :checksum="walletChecksum"
+      />
     </span>
     <span>&nbsp;&middot;&nbsp;</span>
     <DownloadDetailLink

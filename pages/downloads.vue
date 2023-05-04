@@ -12,23 +12,6 @@ useSeoMeta({
   ogTitle: title,
   ogDescription: description,
 });
-
-import { EventType } from "@/utils/downloadFile";
-
-const fileUrl =
-  "https://builds.beam.mw/mainnet/2023.04.14/Release/mac/Beam-Wallet-7.3.14027.5732.dmg";
-const expectedFileHash =
-  "96740fec95d6dfb50dc9c5d75861bca9eb54707e37bfe6477bd4a24433612ba8";
-
-downloadFile(fileUrl, expectedFileHash, (event) => {
-  if (event.type === EventType.DownloadProgress) {
-    console.log("Download progress:", event);
-  } else if (event.type === EventType.HashVerification) {
-    console.log("Hash verification started");
-  }
-}).catch((error) => {
-  console.error("Error downloading and verifying file:", error);
-});
 </script>
 
 <template>

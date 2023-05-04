@@ -45,6 +45,7 @@ defineProps({
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
             :link="linkApkFile"
+            :checksum="checksumApk"
             :title="t('downloads.type.apk')"
           />
         </span>

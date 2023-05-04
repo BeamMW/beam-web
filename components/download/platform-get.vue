@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { t } = useI18n();
 
-defineProps({
+const props = defineProps({
   title: {
     type: String,
     required: true,
@@ -23,12 +23,32 @@ defineProps({
     required: false,
     default: "",
   },
+  checksum: {
+    type: String,
+    required: false,
+  },
 });
+
+const downloaderRef = ref();
+const startDownload = (event: Event) => {
+  if (downloaderRef.value && props.checksum) {
+    event.preventDefault();
+    downloaderRef.value.startDownload();
+  }
+};
 </script>
 
 <template>
   <div class="text-center">
+    <DownloadDownloader
+      v-if="link && checksum"
+      :file-url="link"
+      :expected-file-hash="checksum"
+      ref="downloaderRef"
+    ></DownloadDownloader>
+
     <LayoutLink
+      @click="startDownload"
       :to="link"
       :title="t('downloads.downloadButton', { platform: title })"
       :class="`${
@@ -55,7 +75,12 @@ defineProps({
     </LayoutLink>
 
     <div v-if="highlight" class="py-4">
-      <LayoutButton :big="true" :button-link="link" accent-color="beam-blue">
+      <LayoutButton
+        @click="startDownload"
+        :big="true"
+        :button-link="link"
+        accent-color="beam-blue"
+      >
         <Icon name="download/get" class="w-[18px] h-[24px]" />
         {{ $t("downloads.downloadButton", { platform: title }) }}
       </LayoutButton>

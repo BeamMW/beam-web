@@ -48,21 +48,27 @@ defineProps({
         &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
+            v-if="linkWalletFile"
             :link="linkWalletFile"
+            :checksum="checksumWallet"
             :title="t('downloads.type.wallet')"
           />
         </span>
         &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
+            v-if="linkWalletCliFile"
             :link="linkWalletCliFile"
+            :checksum="checksumWalletCli"
             :title="t('downloads.type.cli')"
           />
         </span>
         &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
+            v-if="linkNodeFile"
             :link="linkNodeFile"
+            :checksum="checksumNode"
             :title="t('downloads.type.node')"
           />
         </span>

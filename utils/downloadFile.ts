@@ -1,6 +1,7 @@
 export enum EventType {
   DownloadProgress,
   HashVerification,
+  HashVerified,
 }
 
 interface DownloadEvent {
@@ -100,6 +101,11 @@ async function verifyAndSave(
     );
   }
 
+  // eslint-disable-next-line no-console
+  console.log(
+    `Hash validation success: ${expectedHash} is equal to ${calculatedHash}`
+  );
+
   // Create a Blob and save the file
   const blob = new Blob([finalArray], { type: "application/octet-stream" });
   saveFile(blob, fileName);
@@ -120,6 +126,7 @@ export async function downloadFile(
   url: string,
   expectedHash: string,
   onProgress: (event: DownloadEvent) => void,
+  abortSignal: AbortSignal, // Add this line
   fileName?: string
 ): Promise<void> {
   // Validate inputs
@@ -131,7 +138,7 @@ export async function downloadFile(
   }
 
   // Fetch the file
-  const response = await fetch(url).catch((error) => {
+  const response = await fetch(url, { signal: abortSignal }).catch((error) => {
     throw new Error(`Error fetching file: ${error.message}`);
   });
 

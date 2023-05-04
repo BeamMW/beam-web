@@ -32,6 +32,7 @@ const {
         v-if="wallet"
         :title="t('downloads.type.apk')"
         :link="wallet"
+        :checksum="checksumWallet"
       />
     </span>
     <span>&nbsp;&middot;&nbsp;</span>
