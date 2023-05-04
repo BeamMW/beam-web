@@ -99,6 +99,11 @@ onUnmounted(() =>
       />
       <Meta
         name="apple-itunes-app"
+        v-if="
+          platformDetails[SupportedPlatforms.IOS] &&
+          platformDetails[SupportedPlatforms.IOS].links &&
+          platformDetails[SupportedPlatforms.IOS].links.store
+        "
         :content="`app-id=${
           extractAppStoreAppId(platformDetails[SupportedPlatforms.IOS].links.store as string)
         }`"
