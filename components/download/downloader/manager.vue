@@ -1,5 +1,7 @@
 <template>
-  <div class="fixed right-4 bottom-4 z-[500] flex flex-col gap-3">
+  <div
+    class="fixed z-[500] w-screen md:w-auto p-4 bottom-0 right-0 flex flex-col gap-3 pointer-events-none"
+  >
     <template v-for="component in components" :key="component.id">
       <transition
         enter-active-class="animate-toast-scale-in"
@@ -8,7 +10,8 @@
       >
         <div
           v-show="component.visible"
-          class="w-full lg:w-[500px] will-change-transform mx-auto border-black border rounded-2xl p-4 bg-[#042248]/60 backdrop-blur-md border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
+          :id="component.id"
+          class="pointer-events-auto w-full md:w-1/2 lg:w-[500px] will-change-transform mx-auto border-black border rounded-2xl p-4 bg-[#042248]/60 backdrop-blur-md border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
           @click.stop
         >
           <div class="absolute right-4">
@@ -75,12 +78,20 @@ const downloadItem = (
   const { expectedFileHash, fileUrl } = event;
 
   // Ensure there isn't already the same fileUrl currently downloading / downloaded
-  const isFileAlreadyDownloading = components.value.some(
+  const existingComponent = components.value.find(
     (item) => item.fileUrl === fileUrl
   );
 
-  if (isFileAlreadyDownloading) {
+  if (existingComponent) {
     console.warn("File is already downloading or downloaded:", fileUrl);
+    // Apply scale effect to the existing component
+    const existingDomElement = document.getElementById(existingComponent.id);
+    if (existingDomElement) {
+      existingDomElement.classList.add("toast-scale-bounce");
+      setTimeout(() => {
+        existingDomElement.classList.remove("toast-scale-bounce");
+      }, 500);
+    }
     return;
   }
 
@@ -131,3 +142,19 @@ const afterLeave = (id: string) => {
   );
 };
 </script>
+
+<style lang="postcss" scoped>
+.toast-scale-bounce {
+  animation: toast-scale-bounce 250ms ease-in-out;
+}
+
+@keyframes toast-scale-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+</style>
