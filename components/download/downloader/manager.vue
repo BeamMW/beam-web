@@ -1,6 +1,6 @@
 <template>
   <div class="fixed right-4 bottom-4 z-[500] flex flex-col gap-3">
-    <section v-for="(component, index) in components" :key="component.id">
+    <section v-for="component in components" :key="component.id">
       <transition
         name="toast"
         enter-active-class="animate-toast-scale-in"
@@ -42,8 +42,8 @@
 </template>
 
 <script lang="ts" setup>
-import { eventBus, UserInteractionEvents, CustomEvents } from "~/utils/emitter";
 import { v4 as uuidv4 } from "uuid";
+import { eventBus, UserInteractionEvents, CustomEvents } from "~/utils/emitter";
 
 interface DownloadItemInterface {
   id: string;

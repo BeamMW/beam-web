@@ -83,14 +83,13 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
+import { formatDistanceToNowStrict, enUS } from "date-fns";
 import {
   downloadFile,
   EventType,
   DownloadEvent,
   extractFilenameFromUrl,
 } from "@/utils/downloadFile";
-import { formatDistanceToNowStrict } from "date-fns";
-import { enUS } from "date-fns/locale";
 
 const props = defineProps({
   fileUrl: {
