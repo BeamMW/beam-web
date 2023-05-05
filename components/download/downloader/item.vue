@@ -163,6 +163,9 @@ function onDownloadProgress(event: DownloadEvent) {
     frameId.value = requestAnimationFrame(() => {
       frameId.value = 0;
       if (event.type === EventType.DownloadProgress) {
+        if (starting.value) {
+          starting.value = false;
+        }
         downloadedSize.value = event.downloadedSize as number;
         totalSize.value = event.totalSize as number;
         percentage.value = event.percentage as number;
@@ -183,7 +186,6 @@ async function startDownload() {
 
   try {
     downloading.value = true;
-    starting.value = false;
     abortController.value = new AbortController();
     await downloadFile(
       props.fileUrl,
