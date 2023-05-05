@@ -169,6 +169,22 @@
       "commandlinenode": "Befehlszeilen-Node",
       "changelog": "Versionshinweise",
       "documentation": "Dokumentation"
+    },
+    "downloader": {
+      "close": "Download schließen",
+      "loading": "Lädt...",
+      "state": {
+        "starting": "Startet...",
+        "downloading": "Herunterladen...",
+        "integrity": "Datei-Integritätsprüfung",
+        "finished": "Datei heruntergeladen",
+        "error": "Download-Fehler"
+      },
+      "message": {
+        "integrity": "Prüfe Checksumme...",
+        "finished": "Datei authentifiziert und heruntergeladen"
+      },
+      "filename": "Dateiname:"
     }
   },
   "privacy": {

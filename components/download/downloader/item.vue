@@ -2,14 +2,18 @@
   <div class="flex flex-col rtl:text-right ltr:text-left">
     <div v-if="starting || downloading">
       <b class="text-lg font-bold text-white/90">{{
-        starting ? "Starting..." : "Downloading..."
+        starting
+          ? $t("downloads.downloader.state.starting")
+          : $t("downloads.downloader.state.downloading")
       }}</b>
       <div class="flex justify-between font-bold">
         <span class="text-base font-medium text-beam-green"
           >{{ percentage.toFixed(2) }}%</span
         >
         <span class="text-sm font-medium text-white">{{
-          remainingTime !== 0 ? formatTime(remainingTime) : ""
+          remainingTime !== 0
+            ? formatTimeRelative(remainingTime, formatLocale as Locale)
+            : ""
         }}</span>
       </div>
       <div class="w-full rounded-full h-2.5 bg-gray-700/80">
@@ -20,14 +24,16 @@
       </div>
       <div class="flex justify-between mt-1.5">
         <p>
-          {{ formatBytes(downloadedSize) }} /
-          {{ formatBytes(totalSize) }}
+          {{ formatBytes(downloadedSize, localeProperties.iso) }} /
+          {{ formatBytes(totalSize, localeProperties.iso) }}
         </p>
-        <p>{{ formatBytes(speed) }}/s</p>
+        <p>{{ formatBytes(speed, localeProperties.iso) }}/s</p>
       </div>
     </div>
     <div v-else-if="hashing">
-      <b class="text-lg font-bold text-white/90">File Integrity Check</b>
+      <b class="text-lg font-bold text-white/90">{{
+        $t("downloads.downloader.state.integrity")
+      }}</b>
       <div class="flex flex-row my-1 gap-1 items-center">
         <div role="status">
           <svg
@@ -46,14 +52,18 @@
               fill="currentFill"
             />
           </svg>
-          <span class="sr-only">Loading...</span>
+          <span class="sr-only">{{ $t("downloads.downloader.loading") }}</span>
         </div>
-        <p class="text-white/90">Verifying checksum…</p>
+        <p class="text-white/90">
+          {{ $t("downloads.downloader.message.integrity") }}
+        </p>
       </div>
     </div>
     <div v-else-if="finished">
-      <b class="text-lg font-bold text-white/90">File Downloaded</b>
-      <div class="flex flex-row my-1 gap-3 items-center">
+      <b class="text-lg font-bold text-white/90">{{
+        $t("downloads.downloader.state.finished")
+      }}</b>
+      <div class="flex flex-row my-2 gap-3 items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -68,31 +78,36 @@
             <path stroke-linecap="round" d="m6 8.8 1.7 1.7L11 7" />
           </g>
         </svg>
-        <p class="text-white/90">File authenticated and downloaded</p>
+        <p class="text-white/90">
+          {{ $t("downloads.downloader.message.finished") }}
+        </p>
       </div>
     </div>
     <div v-else-if="error">
-      <b class="text-lg font-bold text-white/90">Download Error</b>
+      <b class="text-lg font-bold text-white/90">{{
+        $t("downloads.downloader.state.error")
+      }}</b>
       <p class="text-white/90">{{ error }}</p>
     </div>
     <div class="text-xs mt-1">
-      <p>Filename: {{ extractFilenameFromUrl(fileUrl) }}</p>
+      <p>
+        {{ $t("downloads.downloader.filename") }}
+        {{ extractFilenameFromUrl(fileUrl) }}
+      </p>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from "vue";
-// eslint-disable-next-line import/no-duplicates
-import { formatDistanceToNowStrict } from "date-fns";
-// eslint-disable-next-line import/no-duplicates
-import { enUS } from "date-fns/locale";
 import {
   downloadFile,
   EventType,
   DownloadEvent,
   extractFilenameFromUrl,
 } from "@/utils/downloadFile";
+
+const { localeProperties } = useI18n();
 
 const props = defineProps({
   fileUrl: {
@@ -111,6 +126,26 @@ const closeComponent = () => {
   emitters("close");
 };
 
+// todo: maybe find a better way?
+let formatLocale = ref<Locale>();
+if (localeProperties.value.iso == "fr-FR") {
+  formatLocale.value = (await import("date-fns/locale")).fr;
+} else if (localeProperties.value.iso == "ru-RU") {
+  formatLocale.value = (await import("date-fns/locale")).ru;
+} else if (localeProperties.value.iso == "ar-001") {
+  formatLocale.value = (await import("date-fns/locale")).ar;
+} else if (localeProperties.value.iso == "de-DE") {
+  formatLocale.value = (await import("date-fns/locale")).de;
+} else if (localeProperties.value.iso == "ja-JP") {
+  formatLocale.value = (await import("date-fns/locale")).ja;
+} else if (localeProperties.value.iso == "zh-CN") {
+  formatLocale.value = (await import("date-fns/locale")).zhCN;
+} else if (localeProperties.value.iso == "he-IL") {
+  formatLocale.value = (await import("date-fns/locale")).he;
+} else {
+  formatLocale.value = (await import("date-fns/locale")).enUS;
+}
+
 const starting = ref(true);
 const downloading = ref(false);
 const hashing = ref(false);
@@ -125,37 +160,6 @@ const speed = ref(0);
 const toast = ref();
 const remainingTime = ref(0);
 const abortController = ref<AbortController | null>(null);
-
-const numberFormatter = new Intl.NumberFormat("en-US", {
-  maximumFractionDigits: 1,
-});
-
-function formatBytes(bytes: number): string {
-  const units = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
-
-  if (bytes === 0) {
-    return "0 B";
-  }
-
-  const base = 1024;
-  const logBytes = Math.log(bytes) / Math.log(base);
-  const unitIndex = Math.floor(logBytes);
-  const n = bytes / Math.pow(base, unitIndex);
-
-  return numberFormatter.format(n) + " " + units[unitIndex];
-}
-
-function formatTime(seconds: number): string {
-  const now = new Date();
-  const targetDate = new Date(now.getTime() + seconds * 1000);
-
-  const formattedTime = formatDistanceToNowStrict(targetDate, {
-    locale: enUS,
-    addSuffix: true,
-  });
-
-  return formattedTime;
-}
 
 const frameId = ref(0);
 function onDownloadProgress(event: DownloadEvent) {

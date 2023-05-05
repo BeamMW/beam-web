@@ -169,6 +169,22 @@
       "commandlinenode": "コマンドラインノード",
       "changelog": "リリースノート",
       "documentation": "ドキュメント"
+    },
+    "downloader": {
+      "close": "ダウンロードを閉じる",
+      "loading": "読み込み中...",
+      "state": {
+        "starting": "開始中…",
+        "downloading": "ダウンロード中…",
+        "integrity": "ファイル整合性チェック",
+        "finished": "ファイルダウンロード完了",
+        "error": "ダウンロードエラー"
+      },
+      "message": {
+        "integrity": "チェックサムを確認中…",
+        "finished": "ファイルが認証され、ダウンロード完了"
+      },
+      "filename": "ファイル名:"
     }
   },
   "privacy": {

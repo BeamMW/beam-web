@@ -22,9 +22,11 @@ useSeoMeta({
           environmentGetter.isDappnet ? ` (Dappnet)` : ''
         }`"
       />
-      <ClientOnly>
-        <DownloadPlatformSelector />
-      </ClientOnly>
+      <div class="min-h-[530px]">
+        <ClientOnly>
+          <DownloadPlatformSelector />
+        </ClientOnly>
+      </div>
     </section>
 
     <div class="py-10 lg:py-12">

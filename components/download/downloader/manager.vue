@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-[500] w-screen md:w-auto p-4 bottom-0 right-0 flex flex-col gap-3 pointer-events-none"
+    class="fixed z-[500] w-screen md:w-auto p-4 bottom-0 rtl:left-0 ltr:right-0 flex flex-col gap-3 pointer-events-none"
   >
     <template v-for="component in components" :key="component.id">
       <transition
@@ -14,14 +14,16 @@
           class="pointer-events-auto w-full md:w-[400px] lg:w-[500px] will-change-transform mx-auto border-black border rounded-2xl p-4 bg-[#042248]/60 backdrop-blur-md border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
           @click.stop
         >
-          <div class="absolute right-4">
+          <div class="absolute rtl:left-4 ltr:right-4">
             <button
               type="button"
               class="transition bg-transparent text-beam-green-dark hover:opacity-60 rounded-full text-sm rtl:mr-auto ltr:ml-auto inline-flex items-center"
               @click="() => removeComponent(component.id)"
             >
               <Icon class="w-5 h-5 block" name="layout/close" />
-              <span class="sr-only">Close download</span>
+              <span class="sr-only">{{
+                $t("downloads.downloader.close")
+              }}</span>
             </button>
           </div>
           <div
