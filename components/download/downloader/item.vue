@@ -83,7 +83,10 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import { formatDistanceToNowStrict, enUS } from "date-fns";
+// eslint-disable-next-line import/no-duplicates
+import { formatDistanceToNowStrict } from "date-fns";
+// eslint-disable-next-line import/no-duplicates
+import { enUS } from "date-fns/locale";
 import {
   downloadFile,
   EventType,
