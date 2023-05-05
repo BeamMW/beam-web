@@ -66,7 +66,7 @@ const downloadItem = computed(() => startDownload(props.link, props.checksum));
         :big="true"
         :button-link="link"
         accent-color="beam-blue"
-        @click="startDownload"
+        @click="downloadItem"
       >
         <Icon name="download/get" class="w-[18px] h-[24px]" />
         {{ $t("downloads.downloadButton", { platform: title }) }}
