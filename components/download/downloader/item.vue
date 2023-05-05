@@ -8,7 +8,7 @@
         <span class="text-base font-medium text-beam-green"
           >{{ percentage.toFixed(2) }}%</span
         >
-        <span class="text-sm font-medium text-blue-700 dark:text-white">{{
+        <span class="text-sm font-medium text-white">{{
           remainingTime !== 0 ? formatTime(remainingTime) : ""
         }}</span>
       </div>
