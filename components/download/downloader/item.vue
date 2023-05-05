@@ -126,21 +126,23 @@ const closeComponent = () => {
   emitters("close");
 };
 
+defineExpose({ startDownload });
+
 // todo: maybe find a better way?
-let formatLocale = ref<Locale>();
-if (localeProperties.value.iso == "fr-FR") {
+const formatLocale = ref<Locale>();
+if (localeProperties.value.iso === "fr-FR") {
   formatLocale.value = (await import("date-fns/locale")).fr;
-} else if (localeProperties.value.iso == "ru-RU") {
+} else if (localeProperties.value.iso === "ru-RU") {
   formatLocale.value = (await import("date-fns/locale")).ru;
-} else if (localeProperties.value.iso == "ar-001") {
+} else if (localeProperties.value.iso === "ar-001") {
   formatLocale.value = (await import("date-fns/locale")).ar;
-} else if (localeProperties.value.iso == "de-DE") {
+} else if (localeProperties.value.iso === "de-DE") {
   formatLocale.value = (await import("date-fns/locale")).de;
-} else if (localeProperties.value.iso == "ja-JP") {
+} else if (localeProperties.value.iso === "ja-JP") {
   formatLocale.value = (await import("date-fns/locale")).ja;
-} else if (localeProperties.value.iso == "zh-CN") {
+} else if (localeProperties.value.iso === "zh-CN") {
   formatLocale.value = (await import("date-fns/locale")).zhCN;
-} else if (localeProperties.value.iso == "he-IL") {
+} else if (localeProperties.value.iso === "he-IL") {
   formatLocale.value = (await import("date-fns/locale")).he;
 } else {
   formatLocale.value = (await import("date-fns/locale")).enUS;
@@ -225,6 +227,4 @@ onMounted(() => {
 onBeforeUnmount(() => {
   abortDownload();
 });
-
-defineExpose({ startDownload });
 </script>

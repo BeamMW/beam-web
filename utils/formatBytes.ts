@@ -120,7 +120,7 @@ function getLocalizedUnit(locale: string, unitIndex: number): string {
   return localeUnits[locale] || localeUnits["en-US"]; // Fallback to 'en-US' if the locale is not supported
 }
 
-export function formatBytes(bytes: number, locale: string = "en-US"): string {
+export function formatBytes(bytes: number, locale = "en-US"): string {
   if (bytes === 0) {
     return `0 ${getLocalizedUnit(locale, 0)}`;
   }
