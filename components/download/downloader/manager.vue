@@ -1,19 +1,20 @@
 <template>
   <div class="fixed right-4 bottom-4 z-[500] flex flex-col gap-3">
-    <section v-for="component in components" :key="component.id">
+    <template v-for="component in components" :key="component.id">
       <transition
-        name="toast"
         enter-active-class="animate-toast-scale-in"
         leave-active-class="animate-toast-scale-out"
+        @afterLeave="() => afterLeave(component.id)"
       >
         <div
-          class="w-[500px] will-change-transform mx-auto border-black border rounded-2xl p-4 bg-[#042248]/60 backdrop-blur-md border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
+          v-show="component.visible"
+          class="w-full lg:w-[500px] will-change-transform mx-auto border-black border rounded-2xl p-4 bg-[#042248]/60 backdrop-blur-md border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
           @click.stop
         >
           <div class="absolute right-4">
             <button
               type="button"
-              class="transition bg-transparent text-beam-green-dark hover:opacity-60 rounded-full text-sm p-1.5 rtl:mr-auto ltr:ml-auto inline-flex items-center"
+              class="transition bg-transparent text-beam-green-dark hover:opacity-60 rounded-full text-sm rtl:mr-auto ltr:ml-auto inline-flex items-center"
               @click="() => removeComponent(component.id)"
             >
               <Icon class="w-5 h-5 block" name="layout/close" />
@@ -37,7 +38,7 @@
           </div>
         </div>
       </transition>
-    </section>
+    </template>
   </div>
 </template>
 
@@ -51,6 +52,7 @@ interface DownloadItemInterface {
   expectedFileHash: string;
   finished: boolean;
   error: boolean;
+  visible: boolean;
 }
 
 const components = ref<DownloadItemInterface[]>([]);
@@ -103,12 +105,27 @@ const downloadItem = (
     expectedFileHash,
     finished: false,
     error: false,
+    visible: false,
+  });
+
+  requestAnimationFrame(() => {
+    const component = components.value.find((item) => item.fileUrl === fileUrl);
+    if (component) {
+      component.visible = true;
+    }
   });
 };
 
 onMounted(() => eventBus.on(UserInteractionEvents.DOWNLOAD_ITEM, downloadItem));
 
 const removeComponent = (id: string) => {
+  const component = components.value.find((item) => item.id === id);
+  if (component) {
+    component.visible = false;
+  }
+};
+
+const afterLeave = (id: string) => {
   components.value = components.value.filter(
     (component) => component.id !== id
   );

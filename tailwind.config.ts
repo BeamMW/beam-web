@@ -57,9 +57,13 @@ const config = {
           "0%": { transform: "scale(0.9)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        "toast-scale": {
-          "0%": { transform: "scale(0.9)", opacity: "0" },
-          "100%": { transform: "scale(1)", opacity: "1" },
+        toastScaleIn: {
+          "0%": { opacity: 0, transform: "scale(0.75)" },
+          "100%": { opacity: 1, transform: "scale(1)" },
+        },
+        toastScaleOut: {
+          "0%": { opacity: 1, transform: "scale(1)" },
+          "100%": { opacity: 0, transform: "scale(0.75)" },
         },
       },
       animation: {
@@ -72,7 +76,6 @@ const config = {
         "toast-scale-out":
           "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
       },
-
       backgroundImage: {
         "page-radial-gradient":
           "radial-gradient(ellipse at top, #072B51, #041D3C, #041D3C)",
