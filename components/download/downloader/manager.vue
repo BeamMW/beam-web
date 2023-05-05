@@ -11,7 +11,7 @@
         <div
           v-show="component.visible"
           :id="component.id"
-          class="pointer-events-auto w-full md:w-1/2 lg:w-[500px] will-change-transform mx-auto border-black border rounded-2xl p-4 bg-[#042248]/60 backdrop-blur-md border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
+          class="pointer-events-auto w-full md:w-[400px] lg:w-[500px] will-change-transform mx-auto border-black border rounded-2xl p-4 bg-[#042248]/60 backdrop-blur-md border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
           @click.stop
         >
           <div class="absolute right-4">
