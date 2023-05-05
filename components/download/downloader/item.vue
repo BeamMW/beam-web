@@ -201,6 +201,7 @@ async function startDownload() {
     finished.value = false;
     emitters("download-error");
   } finally {
+    starting.value = false;
     downloading.value = false;
     hashing.value = false;
   }
