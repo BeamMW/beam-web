@@ -57,23 +57,20 @@ const config = {
           "0%": { transform: "scale(0.9)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        /* text: {
-          "0%, 100%": {
-            "background-size": "200% 200%",
-            "background-position": "left center",
-          },
-          "50%": {
-            "background-size": "200% 200%",
-            "background-position": "right center",
-          },
-        }, */
+        "toast-scale": {
+          "0%": { transform: "scale(0.9)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
       },
       animation: {
         "modal-scale-in":
           "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards",
         "modal-scale-out":
           "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
-        // text: "text 10s ease infinite",
+        "toast-scale-in":
+          "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+        "toast-scale-out":
+          "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
       },
 
       backgroundImage: {

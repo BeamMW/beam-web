@@ -3,7 +3,7 @@ const { t, localeProperties } = useI18n();
 
 defineProps({
   version: {
-    type: Number,
+    type: String,
     required: true,
   },
   date: {

@@ -19,26 +19,14 @@ const props = defineProps({
   },
 });
 
-const downloaderRef = ref();
-const startDownload = (event: Event) => {
-  if (downloaderRef.value && props.checksum) {
-    event.preventDefault();
-    downloaderRef.value.startDownload();
-  }
-};
+const downloadItem = computed(() => startDownload(props.link, props.checksum));
 </script>
 <template>
   <span>
-    <DownloadDownloader
-      v-if="link && checksum"
-      ref="downloaderRef"
-      :file-url="link"
-      :expected-file-hash="checksum"
-    ></DownloadDownloader>
     <LayoutLink
       :to="link"
       class="hover:text-white transition-colors"
-      @click="startDownload"
+      @click="downloadItem"
     >
       <span class="inline-flex items-center"
         >{{ title }}&nbsp;

@@ -29,25 +29,11 @@ const props = defineProps({
     default: undefined,
   },
 });
-
-const downloaderRef = ref();
-const startDownload = (event: Event) => {
-  if (downloaderRef.value && props.checksum) {
-    event.preventDefault();
-    downloaderRef.value.startDownload();
-  }
-};
+const downloadItem = computed(() => startDownload(props.link, props.checksum));
 </script>
 
 <template>
   <div class="text-center">
-    <DownloadDownloader
-      v-if="link && checksum"
-      ref="downloaderRef"
-      :file-url="link"
-      :expected-file-hash="checksum"
-    ></DownloadDownloader>
-
     <LayoutLink
       :to="link"
       :title="t('downloads.downloadButton', { platform: title })"
@@ -56,7 +42,7 @@ const startDownload = (event: Event) => {
           ? 'pointer-events-none select-none opacity-90'
           : 'opacity-70 hover:opacity-90'
       } flex flex-col justify-center items-center gap-1 transition-opacity pb-2`"
-      @click="startDownload"
+      @click="downloadItem"
     >
       <Icon
         :name="`download/platforms/${icon.toLowerCase()}`"

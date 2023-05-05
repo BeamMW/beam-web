@@ -51,7 +51,7 @@ const {
       <DownloadAlternativeLink
         :title="t('downloads.type.node')"
         :link="node"
-        :checksum="walletChecksum"
+        :checksum="nodeChecksum"
       />
     </span>
     <span>&nbsp;&middot;&nbsp;</span>

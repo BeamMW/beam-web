@@ -49,9 +49,13 @@ class Uint8ArrayAccumulator {
   }
 }
 
-function extractFilenameFromUrl(url: string): string {
+export function extractFilenameFromUrl(url: string): string {
   const path = new URL(url).pathname;
   return path.substring(path.lastIndexOf("/") + 1);
+}
+
+function timeout(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function verifyAndSave(
@@ -129,10 +133,25 @@ export async function downloadFile(
   if (!isValidHash(expectedHash)) {
     throw new Error("Invalid hash");
   }
+  /*onProgress({ type: EventType.HashVerification });
+  await timeout(300000000);
+*/
+  // test
+  /*onProgress({
+    type: 0,
+    downloadedSize: 23790974,
+    totalSize: 87774376,
+    percentage: 27.104691692709952,
+    speed: 19020606.012877338,
+    remainingTime: 3.3638992341612006,
+  });
+  await timeout(300000000);*/
 
   // Fetch the file
-  const response = await fetch(url, { signal: abortSignal }).catch((error) => {
-    throw new Error(`Error fetching file: ${error.message}`);
+  const response = await fetch(url, {
+    signal: abortSignal,
+    mode: "cors",
+    referrerPolicy: "no-referrer",
   });
 
   if (!response.ok) {
