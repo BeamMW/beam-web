@@ -25,7 +25,9 @@
       </Head>
       <Body :class="`bg-[${bodyColor}]`">
         <main>
-          <DownloadDownloaderManager />
+          <ClientOnly>
+            <DownloadDownloaderManager />
+          </ClientOnly>
           <HeaderInteractiveBar :gradient-color="gradientColorRgb" />
           <HeaderComponent :class="headerRef" />
           <slot />
