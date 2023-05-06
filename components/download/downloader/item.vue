@@ -120,7 +120,12 @@ const props = defineProps({
   },
 });
 
-const emitters = defineEmits(["close", "download-finished", "download-error"]);
+const emitters = defineEmits([
+  "close",
+  "download-finished",
+  "download-error",
+  "mounted",
+]);
 
 const closeComponent = () => {
   emitters("close");
@@ -222,6 +227,7 @@ function abortDownload() {
 }
 
 onMounted(() => {
+  emitters("mounted");
   startDownload();
 });
 onBeforeUnmount(() => {
