@@ -9,7 +9,7 @@
         @afterLeave="() => afterLeave(component.id)"
       >
         <div
-          v-show="component.visible"
+          v-show="component.visible && component.mounted"
           :id="component.id"
           class="pointer-events-auto w-full md:w-[400px] lg:w-[500px] will-change-transform mx-auto border-black border rounded-2xl p-4 bg-[#042248]/60 backdrop-blur-md border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
           @click.stop
@@ -32,6 +32,7 @@
             <DownloadDownloaderItem
               :file-url="component.fileUrl"
               :expected-file-hash="component.expectedFileHash"
+              @mounted="() => (component.mounted = true)"
               @close="() => removeComponent(component.id)"
               @download-finished="
                 () => updateComponentStatus(component.id, true, false)
@@ -58,6 +59,7 @@ interface DownloadItemInterface {
   finished: boolean;
   error: boolean;
   visible: boolean;
+  mounted: boolean;
 }
 
 const components = ref<DownloadItemInterface[]>([]);
@@ -119,6 +121,7 @@ const downloadItem = (
     finished: false,
     error: false,
     visible: false,
+    mounted: false,
   });
 
   requestAnimationFrame(() => {
