@@ -167,6 +167,22 @@
       "commandlinenode": "Nœud en Ligne de Commande",
       "changelog": "Notes de version",
       "documentation": "Documentation"
+    },
+    "downloader": {
+      "close": "Fermer le téléchargement",
+      "loading": "Chargement...",
+      "state": {
+        "starting": "Démarrage…",
+        "downloading": "Téléchargement…",
+        "integrity": "Vérification de l'intégrité du fichier",
+        "finished": "Fichier téléchargé",
+        "error": "Erreur de téléchargement"
+      },
+      "message": {
+        "integrity": "Vérification du hachage…",
+        "finished": "Fichier authentifié et téléchargé"
+      },
+      "filename": "Nom du fichier :"
     }
   },
   "privacy": {

@@ -169,6 +169,22 @@
       "commandlinenode": "צומת ממשק שורת פקודה",
       "changelog": "הערות שחרור",
       "documentation": "תיעוד"
+    },
+    "downloader": {
+      "close": "סגירת הורדה",
+      "loading": "טוען...",
+      "state": {
+        "starting": "מתחיל...",
+        "downloading": "מוריד...",
+        "integrity": "בדיקת תקינות הקובץ",
+        "finished": "הורדת הקובץ הושלמה",
+        "error": "שגיאת הורדה"
+      },
+      "message": {
+        "integrity": "מאמת צ'קסום...",
+        "finished": "הקובץ אומת וירד"
+      },
+      "filename": "שם הקובץ:"
     }
   },
   "privacy": {

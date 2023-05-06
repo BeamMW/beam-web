@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { t } = useI18n();
 
-defineProps({
+const props = defineProps({
   title: {
     type: String,
     required: true,
@@ -23,7 +23,13 @@ defineProps({
     required: false,
     default: "",
   },
+  checksum: {
+    type: String,
+    required: false,
+    default: undefined,
+  },
 });
+const downloadItem = computed(() => startDownload(props.link, props.checksum));
 </script>
 
 <template>
@@ -36,6 +42,7 @@ defineProps({
           ? 'pointer-events-none select-none opacity-90'
           : 'opacity-70 hover:opacity-90'
       } flex flex-col justify-center items-center gap-1 transition-opacity pb-2`"
+      @click="downloadItem"
     >
       <Icon
         :name="`download/platforms/${icon.toLowerCase()}`"
@@ -55,7 +62,12 @@ defineProps({
     </LayoutLink>
 
     <div v-if="highlight" class="py-4">
-      <LayoutButton :big="true" :button-link="link" accent-color="beam-blue">
+      <LayoutButton
+        :big="true"
+        :button-link="link"
+        accent-color="beam-blue"
+        @click="downloadItem"
+      >
         <Icon name="download/get" class="w-[18px] h-[24px]" />
         {{ $t("downloads.downloadButton", { platform: title }) }}
       </LayoutButton>

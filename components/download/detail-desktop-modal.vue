@@ -3,7 +3,7 @@ const { t, localeProperties } = useI18n();
 
 defineProps({
   version: {
-    type: Number,
+    type: String,
     required: true,
   },
   date: {
@@ -48,21 +48,27 @@ defineProps({
         &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
+            v-if="linkWalletFile"
             :link="linkWalletFile"
+            :checksum="checksumWallet"
             :title="t('downloads.type.wallet')"
           />
         </span>
         &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
+            v-if="linkWalletCliFile"
             :link="linkWalletCliFile"
+            :checksum="checksumWalletCli"
             :title="t('downloads.type.cli')"
           />
         </span>
         &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
+            v-if="linkNodeFile"
             :link="linkNodeFile"
+            :checksum="checksumNode"
             :title="t('downloads.type.node')"
           />
         </span>

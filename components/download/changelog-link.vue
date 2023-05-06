@@ -17,7 +17,7 @@ const localePath = useLocalePath();
 
 const props = defineProps({
   version: {
-    type: Number,
+    type: String,
     required: true,
   },
 });

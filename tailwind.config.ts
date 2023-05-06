@@ -57,25 +57,25 @@ const config = {
           "0%": { transform: "scale(0.9)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        /* text: {
-          "0%, 100%": {
-            "background-size": "200% 200%",
-            "background-position": "left center",
-          },
-          "50%": {
-            "background-size": "200% 200%",
-            "background-position": "right center",
-          },
-        }, */
+        toastScaleIn: {
+          "0%": { opacity: 0, transform: "scale(0.75)" },
+          "100%": { opacity: 1, transform: "scale(1)" },
+        },
+        toastScaleOut: {
+          "0%": { opacity: 1, transform: "scale(1)" },
+          "100%": { opacity: 0, transform: "scale(0.75)" },
+        },
       },
       animation: {
         "modal-scale-in":
           "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards",
         "modal-scale-out":
           "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
-        // text: "text 10s ease infinite",
+        "toast-scale-in":
+          "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+        "toast-scale-out":
+          "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
       },
-
       backgroundImage: {
         "page-radial-gradient":
           "radial-gradient(ellipse at top, #072B51, #041D3C, #041D3C)",

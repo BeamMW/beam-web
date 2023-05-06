@@ -169,6 +169,22 @@
       "commandlinenode": "عقدة واجهة سطر الأوامر",
       "changelog": "ملاحظات الإصدار",
       "documentation": "التوثيق"
+    },
+    "downloader": {
+      "close": "إغلاق التحميل",
+      "loading": "جار التحميل...",
+      "state": {
+        "starting": "البدء...",
+        "downloading": "تحميل...",
+        "integrity": "فحص سلامة الملف",
+        "finished": "اكتمل تحميل الملف",
+        "error": "خطأ في التحميل"
+      },
+      "message": {
+        "integrity": "التحقق من المجموع التحققي...",
+        "finished": "تم التحقق من الملف وتم التحميل"
+      },
+      "filename": "اسم الملف:"
     }
   },
   "privacy": {

@@ -167,6 +167,22 @@
       "commandlinenode": "命令行节点",
       "changelog": "发布说明",
       "documentation": "文档资料"
+    },
+    "downloader": {
+      "close": "关闭下载",
+      "loading": "加载中...",
+      "state": {
+        "starting": "开始…",
+        "downloading": "下载中…",
+        "integrity": "文件完整性检查",
+        "finished": "文件下载完毕",
+        "error": "下载错误"
+      },
+      "message": {
+        "integrity": "校验和验证中…",
+        "finished": "文件已验证并下载"
+      },
+      "filename": "文件名："
     }
   },
   "privacy": {

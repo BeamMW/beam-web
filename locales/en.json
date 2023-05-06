@@ -169,6 +169,22 @@
       "commandlinenode": "Command Line Node",
       "changelog": "Release Notes",
       "documentation": "Documentation"
+    },
+    "downloader": {
+      "close": "Close download",
+      "loading": "Loading...",
+      "state": {
+        "starting": "Starting…",
+        "downloading": "Downloading…",
+        "integrity": "File Integrity Check",
+        "finished": "File Downloaded",
+        "error": "Download Error"
+      },
+      "message": {
+        "integrity": "Verifying checksum…",
+        "finished": "File authenticated and downloaded"
+      },
+      "filename": "Filename:"
     }
   },
   "privacy": {

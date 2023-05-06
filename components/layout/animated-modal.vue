@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, defineEmits } from "vue";
 
 defineProps({
   title: {
@@ -61,9 +61,12 @@ defineProps({
   },
 });
 
+const emitClose = defineEmits(["close"]);
+
 const visible = ref(false);
 
 function close() {
+  emitClose("close");
   visible.value = false;
 }
 

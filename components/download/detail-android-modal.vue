@@ -3,7 +3,7 @@ const { t, localeProperties } = useI18n();
 
 defineProps({
   version: {
-    type: Number,
+    type: String,
     required: true,
   },
   date: {
@@ -45,6 +45,7 @@ defineProps({
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
             :link="linkApkFile"
+            :checksum="checksumApk"
             :title="t('downloads.type.apk')"
           />
         </span>
