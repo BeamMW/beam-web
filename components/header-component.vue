@@ -7,7 +7,7 @@ const localePath = useLocalePath();
     v-bind="$attrs"
   >
     <div
-      class="grid-layout max-w-screen-xl mx-auto items-center py-4 px-3 md:px-4"
+      class="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] max-w-screen-xl mx-auto items-center py-4 px-3 md:px-4"
     >
       <div class="order-2 md:order-1 flex items-center">
         <div class="inline-block w-auto">
@@ -80,10 +80,3 @@ const localePath = useLocalePath();
     </div>
   </nav>
 </template>
-
-<style lang="postcss" scoped>
-.grid-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-}
-</style>
