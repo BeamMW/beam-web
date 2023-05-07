@@ -133,24 +133,23 @@ const closeComponent = () => {
 
 defineExpose({ startDownload });
 
-// todo: maybe find a better way?
 const formatLocale = ref<Locale>();
 if (localeProperties.value.iso === "fr-FR") {
-  formatLocale.value = (await import("date-fns/locale")).fr;
+  formatLocale.value = (await import("date-fns/locale/fr")).default;
 } else if (localeProperties.value.iso === "ru-RU") {
-  formatLocale.value = (await import("date-fns/locale")).ru;
+  formatLocale.value = (await import("date-fns/locale/ru")).default;
 } else if (localeProperties.value.iso === "ar-001") {
-  formatLocale.value = (await import("date-fns/locale")).ar;
+  formatLocale.value = (await import("date-fns/locale/ar")).default;
 } else if (localeProperties.value.iso === "de-DE") {
-  formatLocale.value = (await import("date-fns/locale")).de;
+  formatLocale.value = (await import("date-fns/locale/de")).default;
 } else if (localeProperties.value.iso === "ja-JP") {
-  formatLocale.value = (await import("date-fns/locale")).ja;
+  formatLocale.value = (await import("date-fns/locale/ja")).default;
 } else if (localeProperties.value.iso === "zh-CN") {
-  formatLocale.value = (await import("date-fns/locale")).zhCN;
+  formatLocale.value = (await import("date-fns/locale/zh-CN")).default;
 } else if (localeProperties.value.iso === "he-IL") {
-  formatLocale.value = (await import("date-fns/locale")).he;
+  formatLocale.value = (await import("date-fns/locale/he")).default;
 } else {
-  formatLocale.value = (await import("date-fns/locale")).enUS;
+  formatLocale.value = (await import("date-fns/locale/en-US")).default;
 }
 
 const starting = ref(true);
