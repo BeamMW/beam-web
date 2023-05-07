@@ -50,7 +50,6 @@
     "npm-check-updates": "^16.10.9",
     "swiper": "^9.2.4",
     "tailwindcss": "^3.3.2",
-    "uuid": "^9.0.0",
     "vue3-marquee": "^3.1.2"
   }
 }
