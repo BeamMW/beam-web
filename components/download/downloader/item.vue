@@ -135,21 +135,21 @@ defineExpose({ startDownload });
 
 const formatLocale = ref<Locale>();
 if (localeProperties.value.iso === "fr-FR") {
-  formatLocale.value = (await import("date-fns/locale/fr")).default;
+  formatLocale.value = (await import("date-fns/locale")).fr;
 } else if (localeProperties.value.iso === "ru-RU") {
-  formatLocale.value = (await import("date-fns/locale/ru")).default;
+  formatLocale.value = (await import("date-fns/locale")).ru;
 } else if (localeProperties.value.iso === "ar-001") {
-  formatLocale.value = (await import("date-fns/locale/ar")).default;
+  formatLocale.value = (await import("date-fns/locale")).ar;
 } else if (localeProperties.value.iso === "de-DE") {
-  formatLocale.value = (await import("date-fns/locale/de")).default;
+  formatLocale.value = (await import("date-fns/locale")).de;
 } else if (localeProperties.value.iso === "ja-JP") {
-  formatLocale.value = (await import("date-fns/locale/ja")).default;
+  formatLocale.value = (await import("date-fns/locale")).ja;
 } else if (localeProperties.value.iso === "zh-CN") {
-  formatLocale.value = (await import("date-fns/locale/zh-CN")).default;
+  formatLocale.value = (await import("date-fns/locale")).zhCN;
 } else if (localeProperties.value.iso === "he-IL") {
-  formatLocale.value = (await import("date-fns/locale/he")).default;
+  formatLocale.value = (await import("date-fns/locale")).he;
 } else {
-  formatLocale.value = (await import("date-fns/locale/en-US")).default;
+  formatLocale.value = (await import("date-fns/locale")).enUS;
 }
 
 const starting = ref(true);
