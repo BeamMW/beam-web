@@ -49,6 +49,7 @@
 </template>
 
 <script lang="ts" setup>
+import { v4 as uuidv4 } from "uuid";
 import { eventBus, UserInteractionEvents, CustomEvents } from "~/utils/emitter";
 
 interface DownloadItemInterface {
@@ -114,7 +115,7 @@ const downloadItem = (
   }
 
   components.value.push({
-    id: simpleUUID(),
+    id: uuidv4(),
     fileUrl,
     expectedFileHash,
     finished: false,

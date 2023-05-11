@@ -133,6 +133,7 @@ const closeComponent = () => {
 
 defineExpose({ startDownload });
 
+// todo: maybe find a better way?
 const formatLocale = ref<Locale>();
 if (localeProperties.value.iso === "fr-FR") {
   formatLocale.value = (await import("date-fns/locale")).fr;
