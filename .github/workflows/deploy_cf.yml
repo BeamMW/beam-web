@@ -27,6 +27,10 @@ jobs:
       - name: Submodule update
         shell: bash
         run: git submodule update --init --recursive
+        
+      - name: Update module 
+        shell: bash
+        run: git submodule sync && git submodule update --remote --force
 
       - name: Install packages
         run: yarn install
