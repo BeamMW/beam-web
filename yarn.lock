@@ -3147,7 +3147,7 @@ __metadata:
     npm-check-updates: ^16.10.10
     nuxt: ^3.4.3
     nuxt-simple-robots: ^2.3.0
-    nuxt-simple-sitemap: ^2.4.22
+    nuxt-simple-sitemap: ^2.5.0
     prettier: ^2.8.8
     swiper: ^9.3.0
     tailwindcss: ^3.3.2
@@ -9331,9 +9331,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt-simple-sitemap@npm:^2.4.22":
-  version: 2.4.22
-  resolution: "nuxt-simple-sitemap@npm:2.4.22"
+"nuxt-simple-sitemap@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "nuxt-simple-sitemap@npm:2.5.0"
   dependencies:
     "@nuxt/kit": 3.4.3
     chalk: ^5.2.0
@@ -9343,8 +9343,8 @@ __metadata:
     knitwork: ^1.0.0
     pathe: ^1.1.0
     radix3: ^1.0.1
-    ufo: ^1.1.1
-  checksum: dae33e1883ea9c0c3b1a58ae0989bc7897557b8700e4ba80f0a273d50e34559169e7b2e4bb2dcff3890873487b6c8005992935d3b396b26af99f127d514bf7fd
+    ufo: ^1.1.2
+  checksum: ece6025119679b22514d03d77bc24255902bff761c655ceacb806e6af340952a2e6d69b28914c34d7d44950131d85ca29b92c2c4c3550bf9a1afbba342719b0c
   languageName: node
   linkType: hard
 
@@ -12410,6 +12410,13 @@ __metadata:
   version: 1.1.1
   resolution: "ufo@npm:1.1.1"
   checksum: 6bd210ed93d8c0dedd76c456b1d1dfb0e3b08c2216ee6080e61f0f545de0bac24b3d3a5530cd6a403810855f8d8fc3922583965296142e04cfc287442635e6c7
+  languageName: node
+  linkType: hard
+
+"ufo@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "ufo@npm:1.1.2"
+  checksum: 83c940a6a23b6d4fc0cd116265bb5dcf88ab34a408ad9196e413270ca607a4781c09b547dc518f43caee128a096f20fe80b5a0e62b4bcc0a868619896106d048
   languageName: node
   linkType: hard
 
