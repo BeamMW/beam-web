@@ -4,7 +4,7 @@ import { exchangesBuy, instantExchangesBuy } from "~/app.config";
 const { t } = useI18n();
 </script>
 <template>
-  <LayoutWrapper :center="true">
+  <LayoutWrapper :center="true" id="exchanges">
     <div id="targetComponentBuy">
       <LayoutTitle :title="$t('buyWhere.title')" />
 
