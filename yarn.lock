@@ -3149,7 +3149,7 @@ __metadata:
     nuxt-simple-robots: ^2.3.0
     nuxt-simple-sitemap: ^2.4.22
     prettier: ^2.8.8
-    swiper: ^9.3.0
+    swiper: ^9.4.0
     tailwindcss: ^3.3.2
     typescript: ^5.0.4
     vue3-marquee: ^3.1.2
@@ -11963,12 +11963,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "swiper@npm:9.3.0"
+"swiper@npm:^9.4.0":
+  version: 9.4.0
+  resolution: "swiper@npm:9.4.0"
   dependencies:
     ssr-window: ^4.0.2
-  checksum: 5dd7f2ed5bb403eaabd9ee4edca41b65a01981f5d5501bdfa73bc69578aa76fed6fb9c82e37ad1562c9e05d87680a001b878570c07d39685db2bb6b77edfe687
+  checksum: 6d4865a325880b093ebf757cc626a77de0cfaba7641cb3be0ffbf759dd272ea5c50f384b86e1456cd40e33ac0b7279c4f0665c88f1042f6ee5dc9f8f7d1c9a90
   languageName: node
   linkType: hard
 
