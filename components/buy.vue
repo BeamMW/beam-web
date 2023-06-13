@@ -4,6 +4,7 @@ import { exchangesBuy, instantExchangesBuy } from "~/app.config";
 const { t } = useI18n();
 </script>
 <template>
+  <div id="exchanges"></div>
   <LayoutWrapper :center="true">
     <div id="targetComponentBuy">
       <LayoutTitle :title="$t('buyWhere.title')" />
@@ -37,3 +38,11 @@ const { t } = useI18n();
     </div>
   </LayoutWrapper>
 </template>
+<style lang="postcss" scoped>
+div#exchanges {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+</style>
