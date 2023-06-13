@@ -38,3 +38,11 @@ const { t } = useI18n();
     </div>
   </LayoutWrapper>
 </template>
+<style lang="postcss" scoped>
+div#exchanges {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+</style>
