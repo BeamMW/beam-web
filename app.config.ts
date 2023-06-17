@@ -225,21 +225,6 @@ export const exchangesBuy = [
     image: "exchanges/bitforex",
     link: "https://www.bitforex.com/en/spot/beam_usdt",
   },
-  {
-    title: "Hotbit",
-    image: "exchanges/hotbit",
-    link: "https://www.hotbit.io/exchange?symbol=BEAM_USDT",
-  },
-  {
-    title: "Atomars",
-    image: "exchanges/atomars",
-    link: "https://atomars.com/trading/BEAMBTC",
-  },
-  {
-    title: "Bkex",
-    image: "exchanges/bkex",
-    link: "https://www.bkex.com/trade/BEAM_USDT",
-  },
 ];
 
 export const instantExchangesBuy = [
