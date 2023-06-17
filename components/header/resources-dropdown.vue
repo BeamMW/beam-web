@@ -48,6 +48,7 @@ const menus = computed(() => [
       { text: t("footer.join.roadmap"), href: ExternalLinks.ROADMAP },
       { text: ExternalLinksTitle.YOUTUBE, href: ExternalLinks.YOUTUBE },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
+      { text: "DEX Explorer", href: "https://beamassets.com/" },
     ],
   },
   {
