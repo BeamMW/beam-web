@@ -1172,7 +1172,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.5.3":
+"@nuxt/kit@npm:3.5.3, @nuxt/kit@npm:^3.5.3":
   version: 3.5.3
   resolution: "@nuxt/kit@npm:3.5.3"
   dependencies:
@@ -1197,7 +1197,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:^3.0.0-rc.13, @nuxt/kit@npm:^3.3.3, @nuxt/kit@npm:^3.4.2":
+"@nuxt/kit@npm:^3.0.0-rc.13, @nuxt/kit@npm:^3.3.3":
   version: 3.4.2
   resolution: "@nuxt/kit@npm:3.4.2"
   dependencies:
@@ -1523,31 +1523,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/tailwindcss@npm:^6.6.7":
-  version: 6.6.7
-  resolution: "@nuxtjs/tailwindcss@npm:6.6.7"
+"@nuxtjs/tailwindcss@npm:^6.7.2":
+  version: 6.7.2
+  resolution: "@nuxtjs/tailwindcss@npm:6.7.2"
   dependencies:
-    "@nuxt/kit": ^3.4.2
+    "@nuxt/kit": ^3.5.3
     "@nuxt/postcss8": ^1.1.3
     autoprefixer: ^10.4.14
     chokidar: ^3.5.3
     clear-module: ^4.1.2
     colorette: ^2.0.20
-    cookie-es: ^0.5.0
+    cookie-es: ^1.0.0
     defu: ^6.1.2
-    destr: ^1.2.2
-    h3: ^1.6.4
+    destr: ^2.0.0
+    h3: ^1.6.6
     iron-webcrypto: ^0.7.0
-    pathe: ^1.1.0
-    postcss: ^8.4.23
-    postcss-custom-properties: ^13.1.5
+    micromatch: ^4.0.5
+    pathe: ^1.1.1
+    postcss: ^8.4.24
+    postcss-custom-properties: ^13.2.0
     postcss-nesting: ^11.2.2
     radix3: ^1.0.1
     tailwind-config-viewer: ^1.7.2
     tailwindcss: ~3.3.2
-    ufo: ^1.1.1
-    uncrypto: ^0.1.2
-  checksum: f4e5b5b0c24d1b0574886b858d2324b3ae3e5c84373ac5f27cc7a1221503e7a1ea126940ac7c7eb3be6704f1398136c149ea1c06664f3d1e9342909d847c9b69
+    ufo: ^1.1.2
+    uncrypto: ^0.1.3
+  checksum: 0beef3ca07ec3ba265078d1e47295e1c1c49ec380b0564733208dabd3e9447bdd44bb3826420b030b65bcd628d4447dd4c176959725e539e46f4a0df670f571a
   languageName: node
   linkType: hard
 
@@ -3167,7 +3168,7 @@ __metadata:
     "@nuxtjs/eslint-config-typescript": ^12.0.0
     "@nuxtjs/fontaine": ^0.2.5
     "@nuxtjs/i18n": ^8.0.0-beta.12
-    "@nuxtjs/tailwindcss": ^6.6.7
+    "@nuxtjs/tailwindcss": ^6.7.2
     "@popperjs/core": ^2.11.7
     "@tailwindcss/typography": ^0.5.9
     "@types/fs-extra": ^11.0.1
@@ -3973,6 +3974,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cookie-es@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "cookie-es@npm:1.0.0"
+  checksum: e8721cf4d38f3e44049c9118874b323f4f674b1c5cef84a2b888f5bf86ad720ad17b51b43150cad7535a375c24e2921da603801ad28aa6125c3d36c031b41468
+  languageName: node
+  linkType: hard
+
 "cookies@npm:~0.8.0":
   version: 0.8.0
   resolution: "cookies@npm:0.8.0"
@@ -4422,6 +4430,13 @@ __metadata:
   version: 1.2.2
   resolution: "destr@npm:1.2.2"
   checksum: 3906b49513a64d8442dacb8b798c59d66257ded4ccd2ef1d99b58644d4aa6b30ca61f9a9823d3dcbc78b4db812596e53e85e499f39a498b3b165a045b5228b2b
+  languageName: node
+  linkType: hard
+
+"destr@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "destr@npm:2.0.0"
+  checksum: 5439cfc8e4b207a4c77cce89b3490dcb68b8cbea1ea5171958b89ae1a814a8f988e54e259d9dae8ebee64cfc9d658497e96d0a8905b2d243cf49bda36e578850
   languageName: node
   linkType: hard
 
@@ -6233,6 +6248,21 @@ __metadata:
     ufo: ^1.1.1
     uncrypto: ^0.1.2
   checksum: 2a9ed16fdca191207441ba347b92f6005b8ffd27a49975c5d2244877fb6659e7c532f3ca229602b910faf6266808002112fb83302fa02dd8186dd9c6252fef63
+  languageName: node
+  linkType: hard
+
+"h3@npm:^1.6.6":
+  version: 1.6.6
+  resolution: "h3@npm:1.6.6"
+  dependencies:
+    cookie-es: ^1.0.0
+    defu: ^6.1.2
+    destr: ^1.2.2
+    iron-webcrypto: ^0.7.0
+    radix3: ^1.0.1
+    ufo: ^1.1.2
+    uncrypto: ^0.1.2
+  checksum: 58a24d0f5eeff0e36caf7299d0237c43e0e10b9fcc8f8858aec51bcac0a0ab6ed28ebff199119a62e5571c0c35e6788acb69fe63468ff04c3134598c7ee46f1a
   languageName: node
   linkType: hard
 
@@ -10096,9 +10126,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-custom-properties@npm:^13.1.5":
-  version: 13.1.5
-  resolution: "postcss-custom-properties@npm:13.1.5"
+"postcss-custom-properties@npm:^13.2.0":
+  version: 13.2.0
+  resolution: "postcss-custom-properties@npm:13.2.0"
   dependencies:
     "@csstools/cascade-layer-name-parser": ^1.0.2
     "@csstools/css-parser-algorithms": ^2.1.1
@@ -10106,7 +10136,7 @@ __metadata:
     postcss-value-parser: ^4.2.0
   peerDependencies:
     postcss: ^8.4
-  checksum: 60b62a8a6f02864264171d5d7fb43c235334f513e3f5fb4bb013f46e93e1ecb302fd19c27ce47680da85ea285e0a6ffcd7a12136204acdfd11f4bea880b8dbe1
+  checksum: b6a7563354bebb8489c54785fbefb6f1a78cfbfa691017a337ce0d446f5adba2acf30dae5efcc480c419191d165f37b9a1397a1971d77bf84b88939a1c650ff7
   languageName: node
   linkType: hard
 
@@ -10572,6 +10602,17 @@ __metadata:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: 8bb9d1b2ea6e694f8987d4f18c94617971b2b8d141602725fedcc2222fdc413b776a6e1b969a25d627d7b2681ca5aabb56f59e727ef94072e1b6ac8412105a2f
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.24":
+  version: 8.4.24
+  resolution: "postcss@npm:8.4.24"
+  dependencies:
+    nanoid: ^3.3.6
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: 814e2126dacfea313588eda09cc99a9b4c26ec55c059188aa7a916d20d26d483483106dc5ff9e560731b59f45c5bb91b945dfadc670aed875cc90ddbbf4e787d
   languageName: node
   linkType: hard
 
@@ -12557,6 +12598,13 @@ __metadata:
   version: 0.1.2
   resolution: "uncrypto@npm:0.1.2"
   checksum: a3095725a0f7ffbfada5a7df40716913aa2aba8c9924feab64ee66b45696bdaa2df4718451577bc243bef65fa9fe7a8744dec3a02c5598795a0f261f8c46adc8
+  languageName: node
+  linkType: hard
+
+"uncrypto@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "uncrypto@npm:0.1.3"
+  checksum: 07160e08806dd6cea16bb96c3fd54cd70fc801e02fc3c6f86980144d15c9ebbd1c55587f7280a207b3af6cd34901c0d0b77ada5a02c2f7081a033a05acf409e2
   languageName: node
   linkType: hard
 
