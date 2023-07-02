@@ -45,7 +45,7 @@ The generated HTML files will be located in `.output/public/`.
 
 #### Update Git submodules to their latest version
 
-```bash
+```bash 
 git submodule sync && git submodule update --remote --force
 ```
 
