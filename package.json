@@ -34,7 +34,7 @@
     "nuxt-simple-robots": "^2.3.0",
     "nuxt-simple-sitemap": "^2.7.0",
     "prettier": "^2.8.8",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "@nuxt/types": "^2.16.3",
