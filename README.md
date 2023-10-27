@@ -3,7 +3,7 @@
 
 ## Beam Web
 
-Beam is proud to unveils its revamped website, utilizing Nuxt 3 (Vue 3) and optimized for IPFS hosting with static builds. The website aims to provide an accessible platform for Beam-related information, proudly built by the dedicated Beam community. Open-source and built under MIT license.
+Beam is proud to unveil its revamped website, utilizing Nuxt 3 (Vue 3) and optimized for IPFS hosting with static builds. The website aims to provide an accessible platform for Beam-related information, proudly built by the dedicated Beam community. Open-source and built under MIT license.
 
 ### Prerequisites
 
