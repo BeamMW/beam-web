@@ -34,6 +34,15 @@ const localePath = useLocalePath();
           </li>
           <li class="hidden md:block">
             <HeaderNavigationItem
+              name="dex"
+              to="https://dex.beam.mw"
+              target="_blank"
+              rel="noopener noreferrer"
+              >DEX</HeaderNavigationItem
+            >
+          </li>
+          <li class="hidden md:block">
+            <HeaderNavigationItem
               name="docs|docs/.*"
               :to="localePath('docs')"
               >{{ $t("head.title.documentation") }}</HeaderNavigationItem
