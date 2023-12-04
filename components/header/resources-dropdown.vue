@@ -38,6 +38,11 @@ const menus = computed(() => [
         class: "block md:hidden",
       },
       {
+        text: "Beam DEX",
+        href: ExternalLinks.DEX,
+        class: "block md:hidden",
+      },
+      {
         text: t("head.title.documentation"),
         href: localePath("docs"),
         class: "block md:hidden",

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ExternalLinks } from "@/app.config";
+
 const localePath = useLocalePath();
 </script>
 <template>
@@ -30,6 +32,15 @@ const localePath = useLocalePath();
               name="downloads"
               :to="localePath('downloads')"
               >{{ $t("header.nav.downloads") }}</HeaderNavigationItem
+            >
+          </li>
+          <li class="hidden md:block">
+            <HeaderNavigationItem
+              name="dex"
+              :to="ExternalLinks.DEX"
+              target="_blank"
+              rel="noopener noreferrer"
+              >DEX</HeaderNavigationItem
             >
           </li>
           <li class="hidden md:block">
