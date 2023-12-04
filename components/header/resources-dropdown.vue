@@ -39,7 +39,7 @@ const menus = computed(() => [
       },
       {
         text: "Beam DEX",
-        href: "https://dex.beam.mw",
+        href: ExternalLinks.DEX,
         class: "block md:hidden",
       },
       {

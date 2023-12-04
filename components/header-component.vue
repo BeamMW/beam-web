@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ExternalLinks } from "@/app.config";
+
 const localePath = useLocalePath();
 </script>
 <template>
@@ -35,7 +37,7 @@ const localePath = useLocalePath();
           <li class="hidden md:block">
             <HeaderNavigationItem
               name="dex"
-              to="https://dex.beam.mw"
+              :to="ExternalLinks.DEX"
               target="_blank"
               rel="noopener noreferrer"
               >DEX</HeaderNavigationItem
