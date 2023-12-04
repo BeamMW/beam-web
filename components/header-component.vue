@@ -36,7 +36,6 @@ const localePath = useLocalePath();
           </li>
           <li class="hidden md:block">
             <HeaderNavigationItem
-              name="dex"
               :to="ExternalLinks.DEX"
               target="_blank"
               rel="noopener noreferrer"
