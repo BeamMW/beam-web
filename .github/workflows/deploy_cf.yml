@@ -32,6 +32,10 @@ jobs:
         shell: bash
         run: git submodule sync && git submodule update --remote --force
 
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
+
       - name: Install packages
         run: yarn install
 
