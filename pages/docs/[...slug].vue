@@ -1,5 +1,7 @@
 <template>
-  <DocsItem :route-name="routeName" :current-category="currentCategory" />
+  <RenderCacheable :cache-key="[routeName, currentCategory].join('--')">
+    <DocsItem :route-name="routeName" :current-category="currentCategory" />
+  </RenderCacheable>
 </template>
 
 <script lang="ts" setup>

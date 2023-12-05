@@ -111,7 +111,16 @@ export default defineNuxtConfig({
     "nuxt-simple-robots",
     "@nuxtjs/fontaine",
     "@nuxt/content",
+    "nuxt-multi-cache",
   ],
+  multiCache: {
+    component: {
+      // If true the cache is enabled.
+      // If false the cache is disabled, but the component is still added to
+      // the build.
+      enabled: true,
+    },
+  },
   nitro: {
     prerender: {
       routes: ["/sitemap.xml", ...docsRoutes],
