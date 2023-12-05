@@ -50,12 +50,14 @@ const locales: LocaleObject[] = [
     iso: "es-ES",
     file: "es.json",
   },
+  /*
   {
     code: "pt",
     name: "Português",
     iso: "pt-PT",
     file: "pt.json",
   },
+  */
   {
     code: "zh",
     name: "中文（繁體）",
