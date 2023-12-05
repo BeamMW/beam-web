@@ -42,7 +42,9 @@
             </button>
           </template>
           <template #dropdown-content>
-            <div class="py-4">
+            <div
+              class="py-4 h-[82vh] overflow-y-scroll overflow-x-hidden pb-20"
+            >
               <section class="py-4 md:pt-0 rounded-xl">
                 <h6>{{ $t("docs.summary") }}</h6>
                 <li
