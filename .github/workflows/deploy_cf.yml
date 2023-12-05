@@ -9,7 +9,7 @@ name: "Deploy to CloudFlare"
 on: [push, pull_request]
 
 env:
-  NODE_OPTIONS: ${{ secrets.NODE_OPTIONS }}
+  NODE_OPTIONS: --max-old-space-size=8096
 
 jobs:
   deploy:
