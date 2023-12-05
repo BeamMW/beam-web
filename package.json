@@ -50,6 +50,7 @@
     "localforage": "^1.10.0",
     "markdown-it": "^13.0.2",
     "npm-check-updates": "^16.14.11",
+    "nuxt-multi-cache": "^3.1.1",
     "swiper": "^11.0.5",
     "tailwindcss": "^3.3.6",
     "vue3-marquee": "^4.1.0"
