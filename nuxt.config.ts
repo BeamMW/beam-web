@@ -45,6 +45,18 @@ const locales: LocaleObject[] = [
     dir: "rtl" as Directions,
   },
   {
+    code: "es",
+    name: "Español",
+    iso: "es-ES",
+    file: "es.json",
+  },
+  {
+    code: "pt",
+    name: "Português",
+    iso: "pt-PT",
+    file: "pt.json",
+  },
+  {
     code: "zh",
     name: "中文（繁體）",
     iso: "zh-CN",
