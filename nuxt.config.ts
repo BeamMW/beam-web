@@ -19,12 +19,6 @@ const locales: LocaleObject[] = [
     file: "fr.json",
   },
   {
-    code: "es",
-    name: "Español",
-    iso: "es-ES",
-    file: "es.json",
-  },
-  {
     code: "de",
     name: "Deutsch",
     iso: "de-DE",
@@ -49,6 +43,18 @@ const locales: LocaleObject[] = [
     iso: "ar-001",
     file: "ar.json",
     dir: "rtl" as Directions,
+  },
+  {
+    code: "es",
+    name: "Español",
+    iso: "es-ES",
+    file: "es.json",
+  },
+  {
+    code: "pt",
+    name: "Português",
+    iso: "pt-PT",
+    file: "pt.json",
   },
   {
     code: "zh",
