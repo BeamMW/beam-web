@@ -1,0 +1,305 @@
+{
+  "head": {
+    "title": {
+      "main": "BEAM: DeFi y cripto confidenciales",
+      "index": "Inicio",
+      "downloads": "Descargas",
+      "documentation": "Documentación"
+    },
+    "descriptions": {
+      "index": "Beam ofrece privacidad, activos confidenciales, DeFi, NFTs, DEX y una experiencia de usuario fluida en un entorno seguro y descentralizado.",
+      "downloads": "Descarga la billetera Beam para varios dispositivos, adquiere BEAM, explora transacciones DeFi privadas y accede a las preguntas frecuentes y recursos.",
+      "mining": "Explora la minería de Beam, aprende sobre el algoritmo Beam Hash III y encuentra recursos para el software de minería, calculadora de recompensas y soporte.",
+      "privacy": "Revisa la política de privacidad de Beam Wallet sobre la recolección, uso, seguridad de datos, servicios de terceros y el cumplimiento del RGPD. Información de contacto proporcionada.",
+      "docs": "Explora nuestra documentación completa sobre billeteras, minería, intercambios atómicos y más, actualmente disponible en inglés. Estate atento para actualizaciones y soporte de idiomas expandido."
+    },
+    "keywords": "Beam, criptomoneda, privacidad, anonimato, activos confidenciales, DeFi, NFTs, blockchain, descentralizado, DEX, contratos inteligentes, experiencia de usuario, billetera, seguro, libertad financiera, AMM, intercambios atómicos, máquina virtual, WASM, shaders de contrato, shaders de aplicación, billetera móvil, billetera de escritorio, tipos de transacciones, stablecoins privadas, activos envueltos, sidechains, oráculos, préstamos, similar a Uniswap, nodos Beam, Máquina Virtual Beam, confidencialidad, activos puenteados, blockchain de Beam, trading fluido, billetera interactiva, transacciones similares a Bitcoin, trading de Beam, privacidad financiera"
+  },
+  "header": {
+    "announcement": "Martes 5 de diciembre de 2023: Wrapped BEAM (WBEAM) ahora disponible en Ethereum, billetera actualizada será lanzada para el 5to aniversario, próximo hard fork 8.0 agregará compatibilidad con EVM, próximo halving el 3 de enero de 2024, sitio web actualizado y más!",
+    "announcementdev": "**¡Atención!** Este sitio web es exclusivamente para la red dAppnet, una testnet diseñada para desarrolladores. Si buscas el sitio web real, por favor [**haz clic aquí**](https://beam.mw).",
+    "nav": {
+      "home": "Inicio",
+      "downloads": "Descargas",
+      "resources": "Recursos"
+    },
+    "selectlanguage": "Selecciona un idioma"
+  },
+  "hero": {
+    "title": "Privacidad sin concesiones",
+    "subtitle": "Beam es la principal blockchain de privacidad Mimblewimble L1, ocultando completamente las transacciones. Descarga Beam Wallet para la experiencia DeFi confidencial definitiva.",
+    "downloadWallet": "Descargar billetera",
+    "geton": {
+      "appstore": "Descargar en App Store",
+      "playstore": "Descargar en Play Store",
+      "chromestore": "Descargar en Chrome Web Store"
+    }
+  },
+  "feature": {
+    "1": {
+      "title": "Privacidad extrema",
+      "text": "Elige transacciones de privacidad estándar para anonimato robusto o transacciones de privacidad máxima con un conjunto de anonimato de 64k: la privacidad es por defecto para todos."
+    },
+    "2": {
+      "title": "Activos confidenciales",
+      "text": "Puentea, crea, transacciona e intercambia activos en la blockchain de Beam usando tu billetera. Las transacciones de activos son indistinguibles de las transacciones Beam regulares."
+    },
+    "3": {
+      "title": "DeFi y NFTs confidenciales",
+      "text": "La blockchain de Beam soporta stablecoins privadas, NFTs, AMMs y desarrollos futuros como préstamos, oráculos, sidechains, activos envueltos y más."
+    },
+    "4": {
+      "title": "DEX confidencial",
+      "text": "Un poderoso AMM similar a Uniswap para Beam y sus Activos Confidenciales y Puenteados. Intercambios confidenciales e Intercambios Atómicos para activos como BTC, LTC, QTUM, DASH y DOGE."
+    },
+    "5": {
+      "title": "Contratos inteligentes confidenciales",
+      "text": "La Máquina Virtual de Beam permite dApps confidenciales usando ejecución WASM. Los Shaders de Contrato manejan la lógica de negocio, mientras que los Shaders de Aplicación administran las capas de presentación para una fácil integración en la billetera."
+    },
+    "6": {
+      "title": "Experiencia de usuario excepcional",
+      "text": "Billeteras Beam amigables para móvil y escritorio con diseño elegante. Dos tipos de transacción: comunicación interactiva de billetera y transacciones simples de envío y olvido como Bitcoin."
+    },
+    "title": "Características",
+    "learnmore": "Aprender más",
+    "learnmoreabout": "Aprende más sobre \"{title}\""
+  },
+  "faq": {
+    "1": {
+      "question": "¿Cuándo se lanzó Beam?",
+      "answer": "El mainnet de Beam se activó el **3 de enero de 2019**. Revisa el estado actual en el [Explorador de Blockchain de Beam](https://explorer.beam.mw)."
+    },
+    "2": {
+      "question": "¿Beam es open-source?",
+      "answer": "¡Sí! Beam es completamente open-source y accesible en [GitHub](https://github.com/BeamMW)."
+    },
+    "3": {
+      "question": "¿Cómo garantiza Beam la privacidad?",
+      "answer": "Beam emplea los protocolos **Lelantus** y **Mimblewimble** para privacidad de primera por defecto: todas las transacciones en la red son **completamente confidenciales**."
+    },
+    "4": {
+      "question": "¿Cómo está estructurada la emisión de BEAM?",
+      "answer": "Beam se lanzó de manera justa, sin premineo ni ICO. Sigue un calendario de emisión deflacionario, comenzando con 100 BEAM por bloque y reduciéndose periódicamente. El suministro total está limitado a **262,800,000 BEAM**. 20% de las emisiones de bloque van al Tesoro Beam durante los primeros cinco años (finalizando el 3 de enero de 2024)."
+    },
+    "5": {
+      "question": "¿Cómo funciona el gobierno de Beam?",
+      "answer": "Beam está transitando a un gobierno **BeamX DAO**, utilizando votación on-chain. Para participar, necesitarás tokens BEAMX. Aprende más [aquí](/docs/ecosystem/overview/beamx-dao-governance-framework)."
+    },
+    "6": {
+      "question": "¿Existen billeteras dedicadas de Beam?",
+      "answer": "Sí, Beam ofrece billeteras personalizadas para Escritorio, Móvil y Web (extensión de navegador). Descárgalas [aquí](/downloads)."
+    },
+    "7": {
+      "question": "¿Puedo minar BEAM?",
+      "answer": "Sí. Beam es una red Proof-of-Work que utiliza el algoritmo de consenso BeamHash III, permitiendo minería eficiente con GPU. Revisa la guía de minería [aquí](/mining)."
+    },
+    "title": "Preguntas\nfrecuentes",
+    "description": "Consultas comunes respondidas."
+  },
+  "getstarted": {
+    "title": "Comenzar",
+    "nextsteps": "Próximos pasos",
+    "steps": {
+      "1": {
+        "title": "Instalar Beam Wallet",
+        "description": "Crea una billetera para transacciones fáciles de BEAM y Activos Confidenciales.",
+        "link": "Instrucciones de la billetera",
+        "button": "Descargar Beam Wallet"
+      },
+      "2": {
+        "title": "Obtener BEAM",
+        "description": "Mina o compra BEAM en exchanges usando criptomonedas o monedas fiduciarias.",
+        "button": "Dónde comprar"
+      },
+      "3": {
+        "title": "Descubre Beam",
+        "description": "Utiliza BEAM para transacciones DeFi privadas y pagos.",
+        "button": "dApps confidenciales"
+      }
+    }
+  },
+  "buyWhere": {
+    "title": "Dónde comprar Beam",
+    "exchanges": "Exchanges",
+    "instantexchanges": "Intercambios Instantáneos",
+    "disclaimer": "**ADVERTENCIA**: Los servicios de terceros listados no están respaldados por Beam. Ten precaución, ya que las garantías de seguridad y privacidad de Beam no aplican.",
+    "ethereumContract": "La dirección del contrato Wrapped Beam (WBEAM) es **0xE5AcBB03D73267c03349c76EaD672Ee4d941F499**. WBEAM sirve como una representación ERC-20 de las monedas Beam y puede ser puenteada bidireccionalmente entre las blockchains Ethereum y Beam. [Etherscan](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)."
+  },
+  "press": {
+    "title": "Hablan de nosotros"
+  },
+  "downloads": {
+    "downloadWallet": "Descarga Beam Wallet",
+    "downloadButton": "Descargar para {platform}",
+    "divider": "o",
+    "detailslink": "Detalles",
+    "detailswindow": {
+      "titles": {
+        "macos": "Detalles para macOS",
+        "windows": "Detalles para Windows",
+        "linux": "Detalles para Linux",
+        "android": "Detalles para Android"
+      },
+      "latestversion": "Última versión",
+      "checksums": {
+        "wallet": "Checksum de archivo de billetera (SHA256)",
+        "cli": "Checksum de archivo CLI de billetera (SHA256)",
+        "node": "Checksum de archivo de nodo (SHA256)",
+        "apk": "Checksum de archivo APK (SHA256)"
+      }
+    },
+    "type": {
+      "wallet": "Billetera",
+      "cli": "Interfaz de línea de comandos",
+      "node": "Nodo",
+      "apk": "APK",
+      "playstore": "Play Store",
+      "appstore": "App Store"
+    },
+    "supportedversions": {
+      "android": "Android 6 o posterior",
+      "ios": "iOS 12.0 o posterior",
+      "macos": "macOS 11 o posterior",
+      "windows": "Windows 7 o posterior",
+      "linux": "AppImage"
+    },
+    "resources": {
+      "title": "Recursos",
+      "wallet": "Aplicación de billetera de escritorio",
+      "commandlinewallet": "Billetera de línea de comandos",
+      "commandlinenode": "Nodo de línea de comandos",
+      "changelog": "Notas de la versión",
+      "documentation": "Documentación"
+    },
+    "downloader": {
+      "close": "Cerrar descarga",
+      "loading": "Cargando...",
+      "state": {
+        "starting": "Iniciando...",
+        "downloading": "Descargando...",
+        "integrity": "Comprobación de integridad de archivo",
+        "finished": "Archivo descargado",
+        "error": "Error de descarga"
+      },
+      "message": {
+        "integrity": "Verificando checksum...",
+        "finished": "Archivo autenticado y descargado"
+      },
+      "filename": "Nombre de archivo:"
+    }
+  },
+  "privacy": {
+    "1": {
+      "title": "Introducción",
+      "content": "Esta Política de Privacidad (la \"Política\") se aplica a la billetera digital de criptomoneda Beam (\"Beam Wallet\", \"Software\") desarrollada por Beam Foundation Limited (\"Beam\", \"nosotros\"). La Política describe cómo recopilamos, utilizamos y protegemos sus datos personales de acuerdo con el Reglamento General de Protección de Datos (RGPD) cuando utiliza Beam Wallet. Al utilizar Beam Wallet, usted acepta la recopilación y uso de su información de acuerdo con esta Política."
+    },
+    "2": {
+      "title": "Datos personales que recopilamos",
+      "content": "Beam se compromete a garantizar su privacidad. No recopilamos ningún dato personal suyo cuando utiliza Beam Wallet. Los únicos datos que pueden recopilarse son datos de uso anónimos con el único propósito de mejorar el Software. Estos datos no incluyen información personalmente identificable y no pueden rastrearse hasta usted."
+    },
+    "3": {
+      "title": "Uso de los datos recopilados",
+      "content": "Como no recopilamos ningún dato personal, no usamos, compartimos ni divulgamos ningún dato personal a terceros. Los datos de uso anónimos que recopilamos se utilizan únicamente para mejorar la funcionalidad y experiencia de usuario de Beam Wallet."
+    },
+    "4": {
+      "title": "Seguridad de los datos",
+      "content": "Tomamos muy en serio la seguridad de sus datos. Hemos implementado diversas medidas de seguridad, incluyendo cifrado y controles de acceso, para proteger la confidencialidad e integridad de cualquier dato que pueda ser recopilado."
+    },
+    "5": {
+      "title": "Servicios de terceros",
+      "content": "Beam Wallet utiliza CloudFlare para la entrega y protección de contenido. La política de privacidad de CloudFlare se puede encontrar en https://www.cloudflare.com/privacypolicy/. Aparte de CloudFlare, no utilizamos ningún servicio de terceros que recolecte o procese datos personales en nuestro nombre."
+    },
+    "6": {
+      "title": "Retención de datos",
+      "content": "Como no recopilamos ningún dato personal, no hay datos que retener o eliminar. Los datos de uso anónimos se retienen solo el tiempo necesario para mejorar el Software y luego se eliminan de forma segura."
+    },
+    "7": {
+      "title": "Sus derechos bajo el RGPD",
+      "content": "Dado que no recopilamos datos personales, los derechos del RGPD con respecto al acceso, rectificación, eliminación y portabilidad de datos no se aplican. Sin embargo, si tiene alguna pregunta o inquietud sobre nuestras prácticas de privacidad, no dude en contactarnos."
+    },
+    "8": {
+      "title": "Cambios en la Política de Privacidad",
+      "content": "Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Cualquier cambio en la Política se publicará en nuestro sitio web y entrará en vigencia diez (10) días después de la publicación de la Política actualizada. Su uso continuado de Beam Wallet después de que la Política actualizada entre en vigencia significa que acepta la Política actualizada."
+    },
+    "9": {
+      "title": "Información de contacto",
+      "content": "Si tiene alguna pregunta o inquietud sobre nuestra Política de Privacidad o nuestras prácticas de privacidad, no dude en contactarnos en:\n\n**Beam Foundation Limited**\nCorreo electrónico: {support}"
+    },
+    "title": "Política de privacidad",
+    "lastupdate": "ÚLTIMA ACTUALIZACIÓN: 21 DE ABRIL DE 2023"
+  },
+  "docs": {
+    "warning": "La documentación se encuentra actualmente en proceso de actualización y por el momento solo está disponible en inglés.",
+    "types": {
+      "desktop": "Billetera de escritorio",
+      "mobile": "Aplicación móvil de billetera",
+      "web": "Billetera web",
+      "mining": "Minería",
+      "developers": "Desarrolladores",
+      "node": "Nodo",
+      "core": "Núcleo",
+      "bridges": "Puentes",
+      "atomicswaps": "Intercambios atómicos",
+      "cli": "Interfaz de línea de comandos",
+      "explorer": "Explorador de blockchain"
+    },
+    "explore": "Explorar",
+    "edit": "Editar esta documentación",
+    "back": "Volver a la documentación",
+    "summary": "Resumen",
+    "content": "Contenido",
+    "pagecontent": "Contenido de la página"
+  },
+  "errors": {
+    "404": {
+      "title": "¡Has entrado al salón de los espejos de Beam!",
+      "message": "La página que buscas se está reflejando en todas direcciones, y Beam Girl no puede encontrar la correcta.\nRetrocede y rehace tus pasos para encontrar el camino real."
+    },
+    "title": "Error {code}",
+    "back": "Regresarme"
+  },
+  "mining": {
+    "title": "Minería Beam",
+    "introduction": "Al igual que muchas criptomonedas, Beam depende de mineros para agregar transacciones a su blockchain. Si bien todos los nodos de la red Beam confirman la validez de las transacciones, los mineros juegan un papel crucial protegiendo y asegurando la red. Beam emplea **Beam Hash III**, una versión modificada del **algoritmo de minería Equihash (150,5) proof-of-work**, para garantizar la seguridad y estabilidad de la red.",
+    "details": "Sumérgete en el mundo de la minería Beam y aprende cómo contribuir a la seguridad y crecimiento de la red con nuestra guía paso a paso.",
+    "button": "Guía de minería Beam",
+    "miningSoftware": "Software de minería",
+    "downloadWalletAndNode": "Descargar billetera y nodo",
+    "resources": {
+      "support": "Soporte de minería Beam",
+      "calculator": "Calculadora de recompensas"
+    }
+  },
+  "footer": {
+    "join": {
+      "title": "Beam",
+      "downloadWallet": "Descarga la billetera",
+      "beamForum": "Foro Beam",
+      "beamBlog": "Blog Beam",
+      "roadmap": "Hoja de ruta",
+      "newsletter": "Boletín de noticias"
+    },
+    "community": {
+      "title": "Comunidad",
+      "telegram": "Telegram",
+      "discord": "Discord",
+      "reddit": "Reddit",
+      "qq": "Grupo QQ"
+    },
+    "developers": {
+      "title": "Desarrolladores",
+      "sourceCode": "Código fuente",
+      "dAppnetWallet": "Billetera DAppnet",
+      "blockchainExplorer": "Explorador blockchain",
+      "support": "Soporte"
+    },
+    "miners": {
+      "title": "Mineros",
+      "startMining": "Comenzar minería",
+      "support": "Soporte"
+    },
+    "contact": "Contáctanos",
+    "mediakit": "Kit de medios (Zip)",
+    "copyright": "© 2023 Beam Foundation Limited. Todos los derechos reservados."
+  }
+}
