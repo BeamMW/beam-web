@@ -29,12 +29,26 @@ const { t } = useI18n();
         />
       </BuyGrid>
 
-      <p
-        class="text-sm text-left w-full opacity-70 mt-7 lg:mt-8 flex items-center gap-2"
+      <div
+        class="text-sm text-left w-full whitespace-wrap break-words opacity-70 mt-7 lg:mt-8 flex flex-col gap-4 md:gap-2"
       >
-        <Icon class="w-4 h-4 hidden lg:inline-block" name="layout/warning" />
-        <MarkdownRenderer t-key="buyWhere.disclaimer" />
-      </p>
+        <BuyNotice>
+          <template #icon>
+            <Icon class="w-4 h-4" name="layout/warning" />
+          </template>
+          <template #text>
+            <MarkdownRenderer t-key="buyWhere.disclaimer" />
+          </template>
+        </BuyNotice>
+        <BuyNotice>
+          <template #icon>
+            <Icon class="w-4 h-4" name="layout/info" />
+          </template>
+          <template #text>
+            <MarkdownRenderer t-key="buyWhere.uniswap" />
+          </template>
+        </BuyNotice>
+      </div>
     </div>
   </LayoutWrapper>
 </template>
