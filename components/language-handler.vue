@@ -13,7 +13,7 @@ const { setLocale } = useI18n();
 const languageChanged = ref(false);
 
 const changeLanguage = (
-  event: CustomEvents[UserInteractionEvents.LANGUAGE_CHANGE]
+  event: CustomEvents[UserInteractionEvents.LANGUAGE_CHANGE],
 ) => {
   languageChanged.value = true;
   setLocale(event.lang);

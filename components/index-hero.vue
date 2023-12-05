@@ -172,7 +172,7 @@ const initAnimation = async () => {
         {
           yPercent: -50,
         },
-        "<"
+        "<",
       );
       tl.fromTo(
         ".heroBackground",
@@ -183,7 +183,7 @@ const initAnimation = async () => {
           yPercent: 25,
           duration: 0.5,
         },
-        "<"
+        "<",
       );
     }
   }, main.value);

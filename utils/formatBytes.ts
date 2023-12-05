@@ -106,7 +106,7 @@ function getUnitAndIndex(bytes: number): {
 }
 
 function getLocalizedUnit(locale: string, unitIndex: number): string {
-  const localeUnits: Record<string, any> = {
+  const localeUnits: Record<string, string> = {
     "en-US": units[unitIndex].en,
     "fr-FR": units[unitIndex].fr,
     "de-DE": units[unitIndex].de,
@@ -131,6 +131,6 @@ export function formatBytes(bytes: number, locale = "en-US"): string {
 
   return `${numberFormatter.format(unitSize)} ${getLocalizedUnit(
     locale,
-    unitIndex
+    unitIndex,
   )}`;
 }

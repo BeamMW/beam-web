@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <span
     v-if="!asImage && iconUrl"
@@ -89,7 +90,7 @@ function encodeSvg(svgString: string) {
       "<svg",
       ~svgString.indexOf("xmlns")
         ? "<svg"
-        : '<svg xmlns="http://www.w3.org/2000/svg"'
+        : '<svg xmlns="http://www.w3.org/2000/svg"',
     )
     .replace(/["%#{}<>;&?@=|[\]^`]/g, (match) => encodingMap[match] || match)
     .replace(/\s+/g, " ");
@@ -107,7 +108,7 @@ const getRawIcon = () => {
   const rawIcon = iconsImport[getPathToSvg(false)];
   if (!rawIcon) {
     throw new Error(
-      "Invalid SVG passed, check your component or make sure if it's lazy loaded it's in /public."
+      "Invalid SVG passed, check your component or make sure if it's lazy loaded it's in /public.",
     );
   }
   return rawIcon;

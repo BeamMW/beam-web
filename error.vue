@@ -60,7 +60,7 @@ const handleError = () => clearError({ redirect: "/" });
 useTitleTemplate();
 
 const title = computed(() =>
-  t("errors.title", { code: props.error.statusCode })
+  t("errors.title", { code: props.error.statusCode }),
 );
 const description = computed(() => t("head.descriptions.index"));
 

@@ -201,12 +201,12 @@ async function startDownload() {
       props.fileUrl,
       props.expectedFileHash,
       onDownloadProgress,
-      abortController.value.signal
+      abortController.value.signal,
     );
     finished.value = true;
     emitters("download-finished");
   } catch (internalError) {
-    console.error("Error downloading and verifying file:", internalError);
+    // console.error("Error downloading and verifying file:", internalError);
     error.value = internalError as typeof Error;
     finished.value = false;
     emitters("download-error");
@@ -218,7 +218,7 @@ async function startDownload() {
 }
 
 function abortDownload() {
-  console.log("Download aborted");
+  // console.log("Download aborted");
   if (abortController.value) {
     abortController.value.abort(); // Abort the download
   }

@@ -28,7 +28,7 @@ import { CACHE_MAX_AGE } from "@/composables/useFetchPrice";
 const { localeProperties } = useI18n();
 
 const { data, refresh } = await useLazyAsyncData("price", () =>
-  useFetchPrice()
+  useFetchPrice(),
 );
 
 let intervalId: NodeJS.Timer | undefined;

@@ -65,12 +65,12 @@ async function renderMarkdown(text: string) {
 }
 
 const key = `${locale.value}${props.tKey}${JSON.stringify(
-  props.tInterpolation
+  props.tInterpolation,
 )}`;
 
 const { data, pending } = await useAsyncData(
   key,
-  async () => await renderMarkdown(t(props.tKey, props.tInterpolation))
+  async () => await renderMarkdown(t(props.tKey, props.tInterpolation)),
 );
 </script>
 

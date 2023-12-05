@@ -22,8 +22,8 @@ export const extractCategory = (path: string): string | null => {
 export function normalizePath(path: string): string {
   const combinedPattern = /^(?:\.\/)?(?:\/[a-z]{2})?(\/[^/]+(?:\/[^/]+)*\/?)$/;
   const withoutHash = path.split("#")[0]; // Remove any hash from the path
-  const normalizedPath = withoutHash.replace(combinedPattern, (match, p1) =>
-    p1.endsWith("/") ? p1.slice(0, -1) : p1
+  const normalizedPath = withoutHash.replace(combinedPattern, (_match, p1) =>
+    p1.endsWith("/") ? p1.slice(0, -1) : p1,
   );
   return normalizedPath;
 }
@@ -40,7 +40,7 @@ export const isPageBlacklisted = (path: string): boolean =>
 
 export const isSameCategory = (
   path: string,
-  route: RouteLocationNormalized
+  route: RouteLocationNormalized,
 ): boolean => {
   const currentPathCategory = extractCategory(route.fullPath);
   const targetPathCategory = extractCategory(path);

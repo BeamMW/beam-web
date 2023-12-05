@@ -59,9 +59,9 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import { pressArticles } from "@/app.config";
 import { throttle } from "~/utils/throttle";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 SwiperCore.use([Navigation, Autoplay]);
 
@@ -116,4 +116,3 @@ const spaceBetween = ref(20);
   @apply !opacity-100;
 }
 </style>
-

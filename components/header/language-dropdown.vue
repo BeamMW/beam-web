@@ -48,7 +48,7 @@ const localePath = useLocalePath();
 
 const availableLocales = computed(() => {
   return (locales.value as LanguageInterface[]).filter(
-    (i: LanguageInterface) => i.code !== locale.value
+    (i: LanguageInterface) => i.code !== locale.value,
   );
 });
 

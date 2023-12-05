@@ -93,7 +93,7 @@ function isHTMLElement(value: unknown): value is HTMLElement {
 const createPopperInstance = (
   newReferenceElement: HTMLElement,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  options: Partial<OptionsGeneric<Partial<Modifier<any, any>>>>
+  options: Partial<OptionsGeneric<Partial<Modifier<any, any>>>>,
 ) => {
   if (!newReferenceElement) {
     return;
@@ -104,7 +104,7 @@ const createPopperInstance = (
     popperInstance = createPopper(
       newReferenceElement,
       popperElement.value,
-      options
+      options,
     );
     popperInstance.forceUpdate();
   }
@@ -274,7 +274,9 @@ provide("toggleDropdown", toggleDropdown);
 }
 .dropdown-enter-active,
 .dropdown-leave-active {
-  transition: opacity 225ms ease-in-out, transform 225ms ease-in-out;
+  transition:
+    opacity 225ms ease-in-out,
+    transform 225ms ease-in-out;
 }
 
 @media (max-width: 767px) {

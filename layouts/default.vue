@@ -55,7 +55,7 @@ const headerRef = ref(defaultHeaderColor);
 const footerRef = ref(defaultFooterColor);
 const bodyColor = ref(defaultColor);
 const gradientColorRgb = ref<[number, number, number]>(
-  hexToRgb(bodyColor.value) as [number, number, number]
+  hexToRgb(bodyColor.value) as [number, number, number],
 );
 
 watch(
@@ -81,9 +81,9 @@ watch(
     gradientColorRgb.value = hexToRgb(bodyColor.value) as [
       number,
       number,
-      number
+      number,
     ];
   },
-  { immediate: true }
+  { immediate: true },
 );
 </script>

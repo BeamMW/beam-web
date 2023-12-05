@@ -79,7 +79,7 @@
 import { useRoute } from "vue-router";
 import type {
   ParsedContent,
-  QueryBuilder
+  QueryBuilder,
 } from "@nuxt/content/dist/runtime/types/index";
 
 const { t } = useI18n();

@@ -115,7 +115,7 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 
 const socialIcons = Object.keys(ExternalLinksIcon).filter(
-  (value) => typeof value === "string"
+  (value) => typeof value === "string",
 ) as (keyof typeof ExternalLinksIcon)[];
 
 const qqModal = ref();

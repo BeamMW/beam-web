@@ -54,14 +54,10 @@ export function extractFilenameFromUrl(url: string): string {
   return path.substring(path.lastIndexOf("/") + 1);
 }
 
-function timeout(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 async function verifyAndSave(
   stream: ReadableStream<Uint8Array>,
   expectedHash: string,
-  fileName: string
+  fileName: string,
 ): Promise<void> {
   // Validate inputs
   if (!isValidHash(expectedHash)) {
@@ -94,13 +90,13 @@ async function verifyAndSave(
   // Compare the hashes
   if (calculatedHash !== expectedHash) {
     throw new Error(
-      `Hash mismatch: expected ${expectedHash}, got ${calculatedHash}`
+      `Hash mismatch: expected ${expectedHash}, got ${calculatedHash}`,
     );
   }
 
   // eslint-disable-next-line no-console
   console.log(
-    `Hash validation success: ${expectedHash} is equal to ${calculatedHash}`
+    `Hash validation success: ${expectedHash} is equal to ${calculatedHash}`,
   );
 
   // Create a Blob and save the file
@@ -124,7 +120,7 @@ export async function downloadFile(
   expectedHash: string,
   onProgress: (event: DownloadEvent) => void,
   abortSignal: AbortSignal, // Add this line
-  fileName?: string
+  fileName?: string,
 ): Promise<void> {
   // Validate inputs
   if (!isValidUrl(url)) {
@@ -200,6 +196,6 @@ export async function downloadFile(
   await verifyAndSave(
     progressStream,
     expectedHash,
-    fileName || extractFilenameFromUrl(url)
+    fileName || extractFilenameFromUrl(url),
   );
 }

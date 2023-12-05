@@ -6,7 +6,7 @@
       <transition
         enter-active-class="animate-toast-scale-in"
         leave-active-class="animate-toast-scale-out"
-        @afterLeave="() => afterLeave(component.id)"
+        @after-leave="() => afterLeave(component.id)"
       >
         <div
           v-show="component.visible && component.mounted"
@@ -67,7 +67,7 @@ const components = ref<DownloadItemInterface[]>([]);
 const updateComponentStatus = (
   id: string,
   finished: boolean,
-  error: boolean
+  error: boolean,
 ) => {
   const component = components.value.find((component) => component.id === id);
   if (component) {
@@ -77,17 +77,17 @@ const updateComponentStatus = (
 };
 
 const downloadItem = (
-  event: CustomEvents[UserInteractionEvents.DOWNLOAD_ITEM]
+  event: CustomEvents[UserInteractionEvents.DOWNLOAD_ITEM],
 ) => {
   const { expectedFileHash, fileUrl } = event;
 
   // Ensure there isn't already the same fileUrl currently downloading / downloaded
   const existingComponent = components.value.find(
-    (item) => item.fileUrl === fileUrl
+    (item) => item.fileUrl === fileUrl,
   );
 
   if (existingComponent) {
-    console.warn("File is already downloading or downloaded:", fileUrl);
+    // console.warn("File is already downloading or downloaded:", fileUrl);
     // Apply scale effect to the existing component
     const existingDomElement = document.getElementById(existingComponent.id);
     if (existingDomElement) {
@@ -104,12 +104,12 @@ const downloadItem = (
   if (components.value.length >= maxDownloads) {
     // Remove finished or errored items
     components.value = components.value.filter(
-      (component) => !component.finished && !component.error
+      (component) => !component.finished && !component.error,
     );
 
     // Check if there's still room for a new download after removing finished or errored items
     if (components.value.length >= maxDownloads) {
-      console.warn("Reached the maximum limit of 3 downloads at the same time");
+      // console.warn("Reached the maximum limit of 3 downloads at the same time");
       return;
     }
   }
@@ -143,7 +143,7 @@ const removeComponent = (id: string) => {
 
 const afterLeave = (id: string) => {
   components.value = components.value.filter(
-    (component) => component.id !== id
+    (component) => component.id !== id,
   );
 };
 </script>
