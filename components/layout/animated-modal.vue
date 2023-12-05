@@ -1,7 +1,6 @@
 <template>
   <section class="inherit">
     <transition
-      v-show="visible"
       name="modal-bg"
       enter-from-class="opacity-0"
       enter-active-class="transition-opacity duration-500 ease-out"
@@ -9,17 +8,18 @@
       leave-active-class="transition-opacity duration-500 ease-out opacity-0"
     >
       <div
+        v-show="visible"
         class="fixed flex transition items-center backdrop-blur-md justify-center top-0 bg-[rgba(4,37,72,.65)] left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-screen max-h-full"
         @click.self="close"
       ></div>
     </transition>
     <transition
-      v-show="visible"
       name="modal"
       enter-active-class="animate-modal-scale-in"
       leave-active-class="animate-modal-scale-out"
     >
       <div
+        v-show="visible"
         class="fixed will-change-transform flex items-center justify-center top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-screen max-h-full"
         @click.self="close"
       >
