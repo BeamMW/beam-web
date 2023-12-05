@@ -45,7 +45,7 @@ const { t } = useI18n();
             <Icon class="w-4 h-4" name="layout/info" />
           </template>
           <template #text>
-            <MarkdownRenderer t-key="buyWhere.uniswap" />
+            <MarkdownRenderer t-key="buyWhere.ethereumContract" />
           </template>
         </BuyNotice>
       </div>
