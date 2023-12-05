@@ -8,7 +8,7 @@ export const CACHE_MAX_AGE = 20; // In seconds
 
 async function fetchPrice(): Promise<PriceResponse> {
   const response: CoinGeckoAPIResponse = await $fetch(
-    `https://api.coingecko.com/api/v3/simple/price?ids=beam&vs_currencies=usd&include_market_cap=false&include_24hr_vol=false&include_24hr_change=true&include_last_updated_at=false&precision=5&c=${Math.random()}`
+    `https://api.coingecko.com/api/v3/simple/price?ids=beam&vs_currencies=usd&include_market_cap=false&include_24hr_vol=false&include_24hr_change=true&include_last_updated_at=false&precision=5&c=${Math.random()}`,
   );
 
   if (
@@ -35,7 +35,7 @@ export enum PriceStorageStructure {
 export const useFetchPrice: () => Promise<PriceResponse> = async () => {
   const localForage = (await import("localforage")).default;
   const lastFetchedAt = (await localForage.getItem(
-    PriceStorageStructure.LAST_FETCHED_AT
+    PriceStorageStructure.LAST_FETCHED_AT,
   )) as number;
   const currentTime = Date.now();
 
@@ -46,7 +46,7 @@ export const useFetchPrice: () => Promise<PriceResponse> = async () => {
       await localForage.setItem(PriceStorageStructure.CHANGE, change);
       await localForage.setItem(
         PriceStorageStructure.LAST_FETCHED_AT,
-        currentTime
+        currentTime,
       );
     } catch (error) {
       // eslint-disable-next-line no-console
@@ -57,10 +57,10 @@ export const useFetchPrice: () => Promise<PriceResponse> = async () => {
 
   return {
     usd: parseFloat(
-      (await localForage.getItem(PriceStorageStructure.USD)) as string
+      (await localForage.getItem(PriceStorageStructure.USD)) as string,
     ),
     change: parseFloat(
-      (await localForage.getItem(PriceStorageStructure.CHANGE)) as string
+      (await localForage.getItem(PriceStorageStructure.CHANGE)) as string,
     ),
   };
 };

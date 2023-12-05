@@ -10,7 +10,7 @@ interface ScrollSpyOptions {
 function debounce<T extends (...args: any[]) => any, C>(
   this: C,
   func: (this: C, ...args: Parameters<T>) => ReturnType<T>,
-  wait: number
+  wait: number,
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout> | null;
 
@@ -24,7 +24,7 @@ function debounce<T extends (...args: any[]) => any, C>(
 
 function getParentUlFirstLink(
   linkInLi: HTMLAnchorElement,
-  aside: HTMLElement | null
+  aside: HTMLElement | null,
 ): HTMLAnchorElement | null {
   let currentElement: HTMLElement | null = linkInLi.parentElement;
 
@@ -34,7 +34,7 @@ function getParentUlFirstLink(
 
   if (currentElement && aside) {
     const firstLinkInParentUl = aside.querySelector(
-      `a[href="#${currentElement.id}"]`
+      `a[href="#${currentElement.id}"]`,
     ) as HTMLAnchorElement | null;
     return firstLinkInParentUl;
   }
@@ -66,7 +66,7 @@ export const useScrollSpy =
       }
       const headers =
         lastIntersectingHeader.article?.querySelectorAll<HTMLElement>(
-          "h1, h2, h3"
+          "h1, h2, h3",
         );
 
       if (!headers) return;
@@ -80,7 +80,7 @@ export const useScrollSpy =
             ).tagName.toLowerCase();
             const link =
               lastIntersectingHeader.aside?.querySelector<HTMLElement>(
-                `a[id="link-${id}"]`
+                `a[id="link-${id}"]`,
               );
 
             if (entry.isIntersecting) {
@@ -93,7 +93,7 @@ export const useScrollSpy =
                 if (lastIntersectingHeader.h2) {
                   const firstLinkInUl = getParentUlFirstLink(
                     link as HTMLAnchorElement,
-                    lastIntersectingHeader.aside as HTMLElement
+                    lastIntersectingHeader.aside as HTMLElement,
                   );
                   if (
                     firstLinkInUl &&
@@ -114,7 +114,7 @@ export const useScrollSpy =
         {
           rootMargin: `${-offset}px 0px 0px 0px`,
           threshold: 0,
-        }
+        },
       );
 
       headers.forEach((header) => observer?.observe(header));

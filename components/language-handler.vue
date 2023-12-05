@@ -5,14 +5,15 @@
 </template>
 
 <script lang="ts" setup>
-import { eventBus, UserInteractionEvents, CustomEvents } from "~/utils/emitter";
+import { eventBus, UserInteractionEvents } from "~/utils/emitter";
+import type { CustomEvents } from "~/utils/emitter";
 
 const { setLocale } = useI18n();
 
 const languageChanged = ref(false);
 
 const changeLanguage = (
-  event: CustomEvents[UserInteractionEvents.LANGUAGE_CHANGE]
+  event: CustomEvents[UserInteractionEvents.LANGUAGE_CHANGE],
 ) => {
   languageChanged.value = true;
   setLocale(event.lang);

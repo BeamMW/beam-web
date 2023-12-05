@@ -30,7 +30,7 @@ class CustomEmitter {
 
   on<Key extends keyof CustomEvents>(
     type: Key,
-    handler: Handler<CustomEvents[Key]>
+    handler: Handler<CustomEvents[Key]>,
   ): void {
     if (!this.eventHandlers[type]) {
       this.eventHandlers[type] = [];
@@ -40,16 +40,16 @@ class CustomEmitter {
 
   off<Key extends keyof CustomEvents>(
     type: Key,
-    handler: Handler<CustomEvents[Key]>
+    handler: Handler<CustomEvents[Key]>,
   ): void {
     this.eventHandlers[type] = this.eventHandlers[type]?.filter(
-      (h) => h !== handler
+      (h) => h !== handler,
     ) as unknown as any; // eslint-disable-line @typescript-eslint/no-explicit-any
   }
 
   emit<Key extends keyof CustomEvents>(
     type: Key,
-    event: CustomEvents[Key]
+    event: CustomEvents[Key],
   ): void {
     this.eventHandlers[type]?.forEach((handler) => handler(event));
   }

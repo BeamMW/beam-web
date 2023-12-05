@@ -115,7 +115,7 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 
 const socialIcons = Object.keys(ExternalLinksIcon).filter(
-  (value) => typeof value === "string"
+  (value) => typeof value === "string",
 ) as (keyof typeof ExternalLinksIcon)[];
 
 const qqModal = ref();
@@ -146,6 +146,7 @@ const menus = computed(() => [
       { text: t("footer.community.telegram"), href: ExternalLinks.TELEGRAM },
       { text: t("footer.community.discord"), href: ExternalLinks.DISCORD },
       { text: t("footer.community.reddit"), href: ExternalLinks.REDDIT },
+      { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
       {
         text: t("footer.community.qq"),
         href: ExternalLinks.QQ,

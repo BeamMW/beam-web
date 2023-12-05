@@ -67,7 +67,7 @@ const docsRoutes = globSync("./content/**/*.md").map((path) =>
     .slice(7, -3)
     .replace(/^\d+\./, "")
     .replace(/\\/g, "/")
-    .replace("/README", "/index")
+    .replace("/README", "/index"),
 );
 
 const copyDocsAssetsToPublic = async () => {
@@ -85,7 +85,7 @@ const copyDocsAssetsToPublic = async () => {
     // Get the parent directory name without the '.gitbook/assets' part
     const destinationFolder = gitbookAssetsFolder.replace(
       `${sep}.gitbook${sep}assets`,
-      ""
+      "",
     );
     const destination = join(publicAssetsPath, destinationFolder);
 
@@ -115,6 +115,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ["/sitemap.xml", ...docsRoutes],
+      // crawlLinks: true,
+      failOnError: false,
     },
   },
   hooks: {

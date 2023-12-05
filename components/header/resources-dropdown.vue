@@ -62,6 +62,7 @@ const menus = computed(() => [
       { text: t("footer.community.telegram"), href: ExternalLinks.TELEGRAM },
       { text: t("footer.community.discord"), href: ExternalLinks.DISCORD },
       { text: t("footer.community.reddit"), href: ExternalLinks.REDDIT },
+      { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
       {
         text: t("footer.community.qq"),
         href: ExternalLinks.QQ,
@@ -108,7 +109,7 @@ const menus = computed(() => [
   },
 ]);
 </script>
-<style lang="postcss" scoped>
+<style scoped>
 .grid-item {
   @apply p-1;
 }

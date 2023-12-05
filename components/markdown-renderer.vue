@@ -65,12 +65,12 @@ async function renderMarkdown(text: string) {
 }
 
 const key = `${locale.value}${props.tKey}${JSON.stringify(
-  props.tInterpolation
+  props.tInterpolation,
 )}`;
 
 const { data, pending } = await useAsyncData(
   key,
-  async () => await renderMarkdown(t(props.tKey, props.tInterpolation))
+  async () => await renderMarkdown(t(props.tKey, props.tInterpolation)),
 );
 </script>
 
@@ -79,7 +79,7 @@ const { data, pending } = await useAsyncData(
   <span v-if="!pending && data" ref="divRef" v-html="data.content"></span>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 span:deep(a) {
   @apply transition-opacity cursor-pointer text-beam-blue hover:underline underline-offset-4;
 }

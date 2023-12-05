@@ -8,7 +8,7 @@ interface LanguageInterface {
 
 const currentLocale = computed(() => {
   return (locales.value as LanguageInterface[]).find(
-    (i: LanguageInterface) => i.code === locale.value
+    (i: LanguageInterface) => i.code === locale.value,
   );
 });
 </script>

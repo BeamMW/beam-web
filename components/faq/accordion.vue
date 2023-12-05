@@ -82,7 +82,7 @@ watch(
       el.style.maxHeight = getMaxHeight(index);
     });
   },
-  { immediate: true }
+  { immediate: true },
 );
 </script>
 

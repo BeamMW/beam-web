@@ -135,7 +135,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VNodeRef } from "vue";
+import type { VNodeRef } from "vue";
 import { SupportedPlatforms } from "@/app.config";
 import { UserInteractionEvents } from "~/utils/emitter";
 const { t } = useI18n();
@@ -172,7 +172,7 @@ const initAnimation = async () => {
         {
           yPercent: -50,
         },
-        "<"
+        "<",
       );
       tl.fromTo(
         ".heroBackground",
@@ -183,7 +183,7 @@ const initAnimation = async () => {
           yPercent: 25,
           duration: 0.5,
         },
-        "<"
+        "<",
       );
     }
   }, main.value);
@@ -198,7 +198,7 @@ onBeforeUnmount(async () => {
 });
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .heroContainer {
   @apply relative h-[150vh] md:h-screen overflow-hidden grid grid-cols-1 grid-rows-1 gap-x-0 gap-y-0;
   grid-template: 1fr / 1fr;

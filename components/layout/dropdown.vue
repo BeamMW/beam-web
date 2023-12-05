@@ -34,7 +34,8 @@
 import { ref, onMounted, onUnmounted, getCurrentInstance } from "vue";
 
 // prettier-ignore
-import { createPopper, Instance, Modifier, OptionsGeneric } from "@popperjs/core"; // eslint-disable-line import/named
+import { createPopper } from "@popperjs/core";
+import type { Instance, Modifier, OptionsGeneric } from "@popperjs/core";
 
 const showDropdown = ref<boolean>(false);
 const snapLeft = ref(false);
@@ -92,7 +93,7 @@ function isHTMLElement(value: unknown): value is HTMLElement {
 const createPopperInstance = (
   newReferenceElement: HTMLElement,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  options: Partial<OptionsGeneric<Partial<Modifier<any, any>>>>
+  options: Partial<OptionsGeneric<Partial<Modifier<any, any>>>>,
 ) => {
   if (!newReferenceElement) {
     return;
@@ -103,7 +104,7 @@ const createPopperInstance = (
     popperInstance = createPopper(
       newReferenceElement,
       popperElement.value,
-      options
+      options,
     );
     popperInstance.forceUpdate();
   }
@@ -228,7 +229,7 @@ const afterEnter = () => {
 provide("toggleDropdown", toggleDropdown);
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 @media (max-width: 767px) {
   .dropdown-container,
   .dropdown-container::before {
@@ -273,7 +274,9 @@ provide("toggleDropdown", toggleDropdown);
 }
 .dropdown-enter-active,
 .dropdown-leave-active {
-  transition: opacity 225ms ease-in-out, transform 225ms ease-in-out;
+  transition:
+    opacity 225ms ease-in-out,
+    transform 225ms ease-in-out;
 }
 
 @media (max-width: 767px) {

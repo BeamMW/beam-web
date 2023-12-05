@@ -17,15 +17,15 @@ function toggleDropdownFromParent() {
 onMounted(() =>
   eventBus.on(
     UserInteractionEvents.EXIT_LANGUAGE_DROPDOWN,
-    toggleDropdownFromParent
-  )
+    toggleDropdownFromParent,
+  ),
 );
 
 onUnmounted(() =>
   eventBus.off(
     UserInteractionEvents.EXIT_LANGUAGE_DROPDOWN,
-    toggleDropdownFromParent
-  )
+    toggleDropdownFromParent,
+  ),
 );
 </script>
 <template>

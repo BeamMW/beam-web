@@ -9,7 +9,7 @@ name: "Deploy to CloudFlare"
 on: [push, pull_request]
 
 env:
-  NODE_OPTIONS: ${{ secrets.NODE_OPTIONS }}
+  NODE_OPTIONS: --max-old-space-size=16384
 
 jobs:
   deploy:
@@ -27,8 +27,8 @@ jobs:
       - name: Submodule update
         shell: bash
         run: git submodule update --init --recursive
-        
-      - name: Update module 
+
+      - name: Update module
         shell: bash
         run: git submodule sync && git submodule update --remote --force
 

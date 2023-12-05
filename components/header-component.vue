@@ -36,7 +36,6 @@ const localePath = useLocalePath();
           </li>
           <li class="hidden md:block">
             <HeaderNavigationItem
-              name="dex"
               :to="ExternalLinks.DEX"
               target="_blank"
               rel="noopener noreferrer"
@@ -47,6 +46,7 @@ const localePath = useLocalePath();
             <HeaderNavigationItem
               name="docs|docs/.*"
               :to="localePath('docs')"
+              class="active-pink"
               >{{ $t("head.title.documentation") }}</HeaderNavigationItem
             >
           </li>

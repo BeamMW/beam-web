@@ -10,7 +10,7 @@
     </div>
   </div>
 </template>
-<style lang="postcss" scoped>
+<style scoped>
 .divider {
   @apply flex-grow border-t border-white/5;
 }

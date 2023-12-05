@@ -53,10 +53,15 @@
 
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { Navigation, Autoplay } from "swiper/core";
+import SwiperCore from "swiper";
+import { Navigation, Autoplay } from "swiper/modules";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { pressArticles } from "@/app.config";
 import { throttle } from "~/utils/throttle";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 SwiperCore.use([Navigation, Autoplay]);
 
@@ -94,7 +99,7 @@ onBeforeUnmount(() => {
 const spaceBetween = ref(20);
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .carousel {
   width: 100%;
   margin: 0 auto;
@@ -110,8 +115,4 @@ const spaceBetween = ref(20);
 .carousel-item-link:hover:deep(img) {
   @apply !opacity-100;
 }
-</style>
-
-<style lang="postcss">
-@import "swiper/swiper-bundle.min.css";
 </style>

@@ -17,11 +17,11 @@ const scrollToGetStarted = () => {
 };
 
 onMounted(() =>
-  eventBus.on(UserInteractionEvents.SCROLL_TO_GET_STARTED, scrollToGetStarted)
+  eventBus.on(UserInteractionEvents.SCROLL_TO_GET_STARTED, scrollToGetStarted),
 );
 
 onUnmounted(() =>
-  eventBus.off(UserInteractionEvents.SCROLL_TO_GET_STARTED, scrollToGetStarted)
+  eventBus.off(UserInteractionEvents.SCROLL_TO_GET_STARTED, scrollToGetStarted),
 );
 </script>
 
@@ -114,7 +114,7 @@ onUnmounted(() =>
   </LayoutWrapper>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 @media (max-width: 1023px) {
   .sm-grid-col-full {
     grid-column: 1 / -1;

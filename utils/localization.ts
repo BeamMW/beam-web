@@ -1,6 +1,6 @@
 export function convertUNIXTimestampToLocaleDate(
   unixTimestamp: number,
-  iso = "en-US"
+  iso = "en-US",
 ): string {
   const date = new Date(unixTimestamp * 1000);
   return new Intl.DateTimeFormat(iso, {
@@ -14,7 +14,7 @@ export function localizePrice(
   price: number,
   iso = "en-US",
   fixed = 5,
-  currency = "usd"
+  currency = "usd",
 ): string {
   if (!Intl.NumberFormat) {
     return `$${price.toFixed(fixed)}`;

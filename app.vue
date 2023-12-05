@@ -17,11 +17,11 @@ const route = useRoute();
 const router = useRouter();
 
 watch(
-  route,
-  (route) => {
+  () => route.fullPath,
+  (_routeFullPath) => {
     currentRoute.value = getRouteName(route.name);
   },
-  { deep: true, immediate: true }
+  { immediate: true },
 );
 
 defineRobotMeta();
@@ -43,11 +43,11 @@ const whereToBuyScroll = async () => {
 };
 
 onMounted(() =>
-  eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll)
+  eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll),
 );
 
 onUnmounted(() =>
-  eventBus.off(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll)
+  eventBus.off(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll),
 );
 </script>
 
@@ -94,7 +94,7 @@ onUnmounted(() =>
       />
       <Meta
         name="twitter:site"
-        :content="(extractTwitterUsername(ExternalLinks.TWITTER) as string)"
+        :content="extractTwitterUsername(ExternalLinks.TWITTER) as string"
       />
       <Meta
         v-if="
@@ -103,9 +103,9 @@ onUnmounted(() =>
           platformDetails[SupportedPlatforms.IOS].links.store
         "
         name="apple-itunes-app"
-        :content="`app-id=${
-          extractAppStoreAppId(platformDetails[SupportedPlatforms.IOS].links.store as string)
-        }`"
+        :content="`app-id=${extractAppStoreAppId(
+          platformDetails[SupportedPlatforms.IOS].links.store as string,
+        )}`"
       />
       <Meta
         name="twitter:image:src"
@@ -146,7 +146,7 @@ onUnmounted(() =>
   </main>
 </template>
 
-<style lang="postcss">
+<style>
 .page-enter-active,
 .page-leave-active {
   transition: all 0.2s;
@@ -164,7 +164,8 @@ onUnmounted(() =>
 
 @font-face {
   font-family: "ProximaNova";
-  src: url("/fonts/ProximaNova-Regular.woff2") format("woff2"),
+  src:
+    url("/fonts/ProximaNova-Regular.woff2") format("woff2"),
     url("/fonts/ProximaNova-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -173,7 +174,8 @@ onUnmounted(() =>
 
 @font-face {
   font-family: "ProximaNova-Italic";
-  src: url("/fonts/ProximaNova-RegularIt.woff2") format("woff2"),
+  src:
+    url("/fonts/ProximaNova-RegularIt.woff2") format("woff2"),
     url("/fonts/ProximaNova-RegularIt.woff") format("woff");
   font-weight: normal;
   font-style: italic;
@@ -182,7 +184,8 @@ onUnmounted(() =>
 
 @font-face {
   font-family: "ProximaNova-Bold";
-  src: url("/fonts/ProximaNova-Bold.woff2") format("woff2"),
+  src:
+    url("/fonts/ProximaNova-Bold.woff2") format("woff2"),
     url("/fonts/ProximaNova-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -212,9 +215,11 @@ onUnmounted(() =>
 }
 </style>
 
-<style lang="postcss" scoped>
+<style scoped>
 main {
-  transition: opacity 225ms ease-in-out, filter 225ms ease-in-out;
+  transition:
+    opacity 225ms ease-in-out,
+    filter 225ms ease-in-out;
 
   &.locked,
   &.blurred {

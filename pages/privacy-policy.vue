@@ -39,7 +39,7 @@ useSeoMeta({
               :t-interpolation="{
                 support: `[${ExternalLinks.SUPPORT_EMAIL.replace(
                   'mailto:',
-                  ''
+                  '',
                 )}](${ExternalLinks.SUPPORT_EMAIL})`,
               }"
             />

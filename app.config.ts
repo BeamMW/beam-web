@@ -34,6 +34,7 @@ export enum ExternalLinks {
   QQ = "https://qm.qq.com/cgi-bin/qm/qr?k=qrfLNFTLxvThCgcF0fqPc2YFtDzMiUcm&authKey=8hGDPVzLLlTvX4SCBAeYc8TlaumsgvpTIdSUs3%2FU0K8U5piBp3znAYD%2Bd9n6vfEC",
   COINGECKO = "https://www.coingecko.com/en/coins/beam/usd",
   CMC = "https://coinmarketcap.com/currencies/beam/",
+  BEAMASSETS = "https://beamassets.com/",
 
   // Other links
   DOCS_SOURCES = "https://github.com/BeamMW/docs-gitbook",
@@ -65,6 +66,7 @@ export enum ExternalLinksTitle {
   QQ = "QQ",
   COINGECKO = "CoinGecko",
   CMC = "CoinMarketCap",
+  BEAMASSETS = "BeamAssets",
 }
 
 /**
@@ -212,6 +214,11 @@ export const exchangesBuy = [
     link: "https://www.mexc.com/exchange/BEAM_USDT?_from=market",
   },
   {
+    title: "Uniswap",
+    image: "exchanges/uniswap",
+    link: "https://app.uniswap.org/swap?outputCurrency=0xE5AcBB03D73267c03349c76EaD672Ee4d941F499&inputCurrency=ETH",
+  },
+  {
     title: "CoinEx",
     image: "exchanges/coinex",
     link: "https://www.coinex.com/exchange?currency=usdt&dest=beam#spot",
@@ -220,6 +227,11 @@ export const exchangesBuy = [
     title: "Tradeogre",
     image: "exchanges/tradeogre",
     link: "https://tradeogre.com/exchange/BTC-BEAM",
+  },
+  {
+    title: "NonKYC",
+    image: "exchanges/nonkyc",
+    link: "https://nonkyc.io/market/BEAM_USDT",
   },
   {
     title: "Bitforex",
