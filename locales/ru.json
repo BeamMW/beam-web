@@ -123,7 +123,7 @@
     "exchanges": "Биржи",
     "instantexchanges": "Мгновенные обменники",
     "disclaimer": "**ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ**: Указанные сторонние сервисы не одобрены Beam. Будьте осторожны, так как гарантии безопасности и конфиденциальности Beam не применяются.",
-    "ethereumContract": "Адрес контракта Wrapped Beam (WBEAM) - **0xE5AcBB03D73267c03349c76EaD672Ee4d941F499**. WBEAM выступает в качестве представления монет Beam в ERC-20 и может двусторонне моститься между блокчейнами Ethereum и Beam. [Etherscan](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)."
+    "ethereumContract": "Адрес контракта Wrapped Beam (WBEAM) - **[0xE5AcBB03D73267c03349c76EaD672Ee4d941F499](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)**. WBEAM выступает в качестве представления монет Beam в ERC-20 и может двусторонне моститься между блокчейнами Ethereum и Beam."
   },
   "press": {
     "title": "Они говорят о нас"
