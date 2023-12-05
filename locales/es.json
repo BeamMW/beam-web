@@ -123,7 +123,7 @@
     "exchanges": "Exchanges",
     "instantexchanges": "Intercambios Instantáneos",
     "disclaimer": "**ADVERTENCIA**: Los servicios de terceros listados no están respaldados por Beam. Ten precaución, ya que las garantías de seguridad y privacidad de Beam no aplican.",
-    "ethereumContract": "La dirección del contrato Wrapped Beam (WBEAM) es **0xE5AcBB03D73267c03349c76EaD672Ee4d941F499**. WBEAM sirve como una representación ERC-20 de las monedas Beam y puede ser puenteada bidireccionalmente entre las blockchains Ethereum y Beam. [Etherscan](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)."
+    "ethereumContract": "La dirección del contrato Wrapped Beam (WBEAM) es **[0xE5AcBB03D73267c03349c76EaD672Ee4d941F499](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)**. WBEAM sirve como una representación ERC-20 de las monedas Beam y puede ser puenteada bidireccionalmente entre las blockchains Ethereum y Beam."
   },
   "press": {
     "title": "Hablan de nosotros"

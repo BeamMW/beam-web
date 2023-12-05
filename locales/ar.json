@@ -123,7 +123,7 @@
     "exchanges": "المنصات",
     "instantexchanges": "المنصات الفورية",
     "disclaimer": "**تنويه**: لا يُعتبر الخدمات الخارجية المدرجة هنا مُقرَّة من قِبَل Beam. استخدم الحذر، حيث لا تنطبق ضمانات أمان وخصوصية Beam.",
-    "ethereumContract": "عقد تغليف الحزم الضوئية (WBEAM) هو 0xE5AcBB03D73267c03349c76EaD672Ee4d941F499. WBEAM يخدم كتمثيل ERC-20 لعملات الحزم الضوئية ويمكن ربطه ثنائي الاتجاه بين سلاسل الكتل إيثيريوم وحزم الضوء. [Etherscan](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)."
+    "ethereumContract": "عقد تغليف الحزم الضوئية (WBEAM) هو **[0xE5AcBB03D73267c03349c76EaD672Ee4d941F499](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)**. WBEAM يخدم كتمثيل ERC-20 لعملات الحزم الضوئية ويمكن ربطه ثنائي الاتجاه بين سلاسل الكتل إيثيريوم وحزم الضوء."
   },
   "press": {
     "title": "من يتحدث عنا"
