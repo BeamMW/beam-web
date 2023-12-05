@@ -164,7 +164,7 @@ export default defineNuxtConfig({
     langDir: "locales",
     vueI18n: "./i18n.config.ts",
     customRoutes: "config", // Disable custom route with page components
-    strategy: "prefix",
+    strategy: "prefix_and_default",
     pages: {
       downloads: {
         en: "/downloads",

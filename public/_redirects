@@ -1,7 +1,3 @@
-# add temporary redirect
-/  /en  302
-/index.html  /en  302
-
 /downloads/mainnet            /downloads                     301
 /downloads/mainnet-mac        /downloads                     301
 /downloads/mainnet-linux      /downloads                     301
