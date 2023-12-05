@@ -122,7 +122,8 @@
     "title": "Wo Beam kaufen",
     "exchanges": "Börsen",
     "instantexchanges": "Sofortige Börsen",
-    "disclaimer": "**HAFTUNGSAUSSCHLUSS**: Drittanbieter-Dienste, die hier aufgeführt sind, werden von Beam nicht unterstützt. Seien Sie vorsichtig, da die Sicherheits- und Datenschutzgarantien von Beam nicht gelten."
+    "disclaimer": "**HAFTUNGSAUSSCHLUSS**: Drittanbieter-Dienste, die hier aufgeführt sind, werden von Beam nicht unterstützt. Seien Sie vorsichtig, da die Sicherheits- und Datenschutzgarantien von Beam nicht gelten.",
+    "ethereumContract": "Der Wrapped Beam (WBEAM) Vertrag hat die Adresse **0xE5AcBB03D73267c03349c76EaD672Ee4d941F499**. WBEAM dient als ERC-20-Repräsentation von Beam-Coins und kann bidirektional zwischen den Ethereum- und Beam-Blockchains gebrückt werden. [Etherscan](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)."
   },
   "press": {
     "title": "Sie berichten über uns"

@@ -122,7 +122,8 @@
     "title": "Beamを購入する場所",
     "exchanges": "取引所",
     "instantexchanges": "インスタント取引所",
-    "disclaimer": "**免責事項**：リストされている第三者のサービスはBeamによって承認されていません。注意してください。Beamのセキュリティとプライバシーの保証は適用されません。"
+    "disclaimer": "**免責事項**：リストされている第三者のサービスはBeamによって承認されていません。注意してください。Beamのセキュリティとプライバシーの保証は適用されません。",
+    "ethereumContract": "Wrapped Beam(WBEAM)のコントラクトアドレスは**0xE5AcBB03D73267c03349c76EaD672Ee4d941F499**です。WBEAMはBeamコインのERC-20表現として機能し、イーサリアムとBeamのブロックチェーン間を双方向にブリッジできます。 [Etherscan](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)。"
   },
   "press": {
     "title": "彼らは私たちについて話している"
