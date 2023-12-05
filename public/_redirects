@@ -1,3 +1,7 @@
+# add temporary redirect
+/  /en  301
+/index.html  /en  301
+
 /downloads/mainnet            /downloads                     301
 /downloads/mainnet-mac        /downloads                     301
 /downloads/mainnet-linux      /downloads                     301
