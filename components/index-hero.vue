@@ -135,7 +135,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VNodeRef } from "vue";
+import type { VNodeRef } from "vue";
 import { SupportedPlatforms } from "@/app.config";
 import { UserInteractionEvents } from "~/utils/emitter";
 const { t } = useI18n();

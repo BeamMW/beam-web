@@ -103,9 +103,9 @@ import { ref } from "vue";
 import {
   downloadFile,
   EventType,
-  DownloadEvent,
   extractFilenameFromUrl,
 } from "@/utils/downloadFile";
+import type { DownloadEvent } from "@/utils/downloadFile";
 
 const { localeProperties } = useI18n();
 

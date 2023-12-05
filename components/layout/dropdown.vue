@@ -34,7 +34,8 @@
 import { ref, onMounted, onUnmounted, getCurrentInstance } from "vue";
 
 // prettier-ignore
-import { createPopper, Instance, Modifier, OptionsGeneric } from "@popperjs/core"; // eslint-disable-line import/named
+import { createPopper } from "@popperjs/core";
+import type { Instance, Modifier, OptionsGeneric } from "@popperjs/core";
 
 const showDropdown = ref<boolean>(false);
 const snapLeft = ref(false);

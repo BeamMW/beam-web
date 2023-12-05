@@ -53,10 +53,15 @@
 
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { Navigation, Autoplay } from "swiper/core";
+import SwiperCore from "swiper";
+import { Navigation, Autoplay } from "swiper/modules";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { pressArticles } from "@/app.config";
 import { throttle } from "~/utils/throttle";
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 SwiperCore.use([Navigation, Autoplay]);
 
@@ -112,6 +117,3 @@ const spaceBetween = ref(20);
 }
 </style>
 
-<style lang="postcss">
-@import "swiper/swiper-bundle.min.css";
-</style>

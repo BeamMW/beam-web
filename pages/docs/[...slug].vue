@@ -77,7 +77,10 @@
 
 <script lang="ts" setup>
 import { useRoute } from "vue-router";
-import { ParsedContent, QueryBuilder } from "@nuxt/content/dist/runtime/types";
+import type {
+  ParsedContent,
+  QueryBuilder
+} from "@nuxt/content/dist/runtime/types/index";
 
 const { t } = useI18n();
 const localePath = useLocalePath();

@@ -35,7 +35,7 @@ defineProps({
               :gradient="true"
               :pause-on-hover="true"
               :gradient-color="gradientColor"
-              :gradient-width="'80px'"
+              :gradient-length="'80px'"
             >
               <MarkdownRenderer
                 :key="
@@ -66,8 +66,6 @@ defineProps({
 </template>
 
 <style lang="postcss">
-@import "vue3-marquee/dist/style.css";
-/* Fix: ensure we can select text at the side */
 .vue3-marquee .overlay::before,
 .vue3-marquee .overlay::after {
   @apply pointer-events-none;

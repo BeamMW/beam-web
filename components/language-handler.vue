@@ -5,7 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-import { eventBus, UserInteractionEvents, CustomEvents } from "~/utils/emitter";
+import { eventBus, UserInteractionEvents } from "~/utils/emitter";
+import type { CustomEvents } from "~/utils/emitter";
 
 const { setLocale } = useI18n();
 
