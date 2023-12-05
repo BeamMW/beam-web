@@ -212,6 +212,11 @@ export const exchangesBuy = [
     link: "https://www.mexc.com/exchange/BEAM_USDT?_from=market",
   },
   {
+    title: "Uniswap",
+    image: "exchanges/uniswap",
+    link: "https://app.uniswap.org/swap?outputCurrency=0xE5AcBB03D73267c03349c76EaD672Ee4d941F499&inputCurrency=ETH",
+  },
+  {
     title: "CoinEx",
     image: "exchanges/coinex",
     link: "https://www.coinex.com/exchange?currency=usdt&dest=beam#spot",
@@ -220,6 +225,11 @@ export const exchangesBuy = [
     title: "Tradeogre",
     image: "exchanges/tradeogre",
     link: "https://tradeogre.com/exchange/BTC-BEAM",
+  },
+  {
+    title: "NonKYC",
+    image: "exchanges/nonkyc",
+    link: "https://nonkyc.io/market/BEAM_USDT",
   },
   {
     title: "Bitforex",
