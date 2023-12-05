@@ -49,8 +49,11 @@ watchEffect(() => {
 });
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .active {
   @apply text-beam-blue;
+  &.active-pink {
+    @apply text-beam-pink;
+  }
 }
 </style>

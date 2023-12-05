@@ -198,7 +198,7 @@ onBeforeUnmount(async () => {
 });
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .heroContainer {
   @apply relative h-[150vh] md:h-screen overflow-hidden grid grid-cols-1 grid-rows-1 gap-x-0 gap-y-0;
   grid-template: 1fr / 1fr;

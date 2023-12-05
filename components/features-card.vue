@@ -103,7 +103,7 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
   </section>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 section.hasAccentColor ::selection {
   @apply text-black/70;
   background: var(--selection-bg-color);

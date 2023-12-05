@@ -148,7 +148,7 @@ const afterLeave = (id: string) => {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .toast-scale-bounce {
   animation: toast-scale-bounce 250ms ease-in-out;
 }

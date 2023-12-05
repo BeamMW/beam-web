@@ -108,7 +108,7 @@ const menus = computed(() => [
   },
 ]);
 </script>
-<style lang="postcss" scoped>
+<style scoped>
 .grid-item {
   @apply p-1;
 }

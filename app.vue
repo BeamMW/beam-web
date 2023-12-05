@@ -16,12 +16,11 @@ const baseURL = useRuntimeConfig().public.baseURL;
 const route = useRoute();
 const router = useRouter();
 
-watch(
-  route,
-  (route) => {
+watch(() => route.fullPath,
+  (_routeFullPath) => {
     currentRoute.value = getRouteName(route.name);
   },
-  { deep: true, immediate: true },
+  { immediate: true },
 );
 
 defineRobotMeta();
@@ -146,7 +145,7 @@ onUnmounted(() =>
   </main>
 </template>
 
-<style lang="postcss">
+<style>
 .page-enter-active,
 .page-leave-active {
   transition: all 0.2s;
@@ -215,7 +214,7 @@ onUnmounted(() =>
 }
 </style>
 
-<style lang="postcss" scoped>
+<style scoped>
 main {
   transition:
     opacity 225ms ease-in-out,

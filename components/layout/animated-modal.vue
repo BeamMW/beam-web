@@ -78,7 +78,7 @@ function show() {
 defineExpose({ show, close });
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .inherit {
   display: inherit;
 }

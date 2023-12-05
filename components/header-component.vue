@@ -46,6 +46,7 @@ const localePath = useLocalePath();
             <HeaderNavigationItem
               name="docs|docs/.*"
               :to="localePath('docs')"
+              class="active-pink"
               >{{ $t("head.title.documentation") }}</HeaderNavigationItem
             >
           </li>

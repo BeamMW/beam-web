@@ -33,7 +33,7 @@ const copyText = async () => {
 defineExpose({ copyText });
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .copy-to-clipboard {
   @apply cursor-pointer relative inline-block;
 }

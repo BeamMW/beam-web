@@ -229,7 +229,7 @@ const afterEnter = () => {
 provide("toggleDropdown", toggleDropdown);
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 @media (max-width: 767px) {
   .dropdown-container,
   .dropdown-container::before {

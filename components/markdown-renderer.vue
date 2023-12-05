@@ -79,7 +79,7 @@ const { data, pending } = await useAsyncData(
   <span v-if="!pending && data" ref="divRef" v-html="data.content"></span>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 span:deep(a) {
   @apply transition-opacity cursor-pointer text-beam-blue hover:underline underline-offset-4;
 }

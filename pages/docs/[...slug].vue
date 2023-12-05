@@ -133,7 +133,7 @@ const filteredList = computed(() => {
   });
 });
 </script>
-<style lang="postcss" scoped>
+<style scoped>
 h6 {
   @apply font-bold text-xs sm:text-base uppercase text-gray-200 mb-2 ltr:ml-4 rtl:mr-4;
 }

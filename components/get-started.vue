@@ -114,7 +114,7 @@ onUnmounted(() =>
   </LayoutWrapper>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 @media (max-width: 1023px) {
   .sm-grid-col-full {
     grid-column: 1 / -1;

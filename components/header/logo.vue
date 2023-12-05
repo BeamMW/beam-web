@@ -118,7 +118,7 @@ onMounted(async () => {
   });
 });
 </script>
-<style lang="postcss" scoped>
+<style scoped>
 .item-container {
   @apply select-none object-cover;
   grid-row: 1;

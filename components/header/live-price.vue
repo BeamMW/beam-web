@@ -58,7 +58,7 @@ onBeforeUnmount(() => {
 });
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 span.price {
   @apply text-white;
   &.green {

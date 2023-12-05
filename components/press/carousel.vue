@@ -99,7 +99,7 @@ onBeforeUnmount(() => {
 const spaceBetween = ref(20);
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .carousel {
   width: 100%;
   margin: 0 auto;
