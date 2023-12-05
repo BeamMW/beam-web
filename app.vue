@@ -16,7 +16,8 @@ const baseURL = useRuntimeConfig().public.baseURL;
 const route = useRoute();
 const router = useRouter();
 
-watch(() => route.fullPath,
+watch(
+  () => route.fullPath,
   (_routeFullPath) => {
     currentRoute.value = getRouteName(route.name);
   },

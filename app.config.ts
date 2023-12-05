@@ -66,7 +66,7 @@ export enum ExternalLinksTitle {
   QQ = "QQ",
   COINGECKO = "CoinGecko",
   CMC = "CoinMarketCap",
-  BEAMASSETS = "BeamAssets"
+  BEAMASSETS = "BeamAssets",
 }
 
 /**
