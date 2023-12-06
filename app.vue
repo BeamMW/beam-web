@@ -232,6 +232,22 @@ onUnmounted(() => {
     @apply bg-[#39FFF2] text-[#042548];
   }
 }
+
+.custom-swipe-arrow {
+  @apply absolute z-10 cursor-pointer from-[#041D3C] h-full w-20 flex items-center transition-opacity;
+
+  &.swiper-button-disabled {
+    @apply opacity-0 pointer-events-none;
+  }
+
+  &.next-button {
+    @apply right-0 bg-gradient-to-l justify-end transition-opacity;
+  }
+
+  &.prev-button {
+    @apply left-0 bg-gradient-to-r justify-start transition-opacity;
+  }
+}
 </style>
 
 <style scoped>
