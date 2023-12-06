@@ -26,39 +26,38 @@ watch(
 
 defineRobotMeta();
 
-// Scroll to "Where to buy" called but unable to scroll, redirect to homepage
-const whereToBuyScroll = async () => {
-  const targetComponentBuy = document.getElementById("targetComponentBuy");
-  if (!targetComponentBuy) {
-    await router.push(localePath("index"));
-    // ToDo: find a more reliable way than a settimeout
-    setTimeout(() => {
-      const homepageBuyComponent =
-        document.getElementById("targetComponentBuy");
-      scrollToComponent(homepageBuyComponent);
-    }, 600);
+const scrollToIdOnPage = async (
+  pageName: string,
+  componentId: string,
+  eventToWait: UserInteractionEvents,
+) => {
+  const targetComponent = document.getElementById(componentId);
+  if (!targetComponent) {
+    const pageLoadedAndMounted = () => {
+      eventBus.off(eventToWait, pageLoadedAndMounted);
+      const targetComponent = document.getElementById(componentId);
+      scrollToComponent(targetComponent);
+    };
+    eventBus.on(eventToWait, pageLoadedAndMounted);
+    await router.push(localePath(pageName));
   } else {
-    scrollToComponent(targetComponentBuy);
+    scrollToComponent(targetComponent);
   }
 };
 
-const roadmapScroll = async () => {
-  const targetComponentRoadmap = document.getElementById(
-    "targetComponentRoadmap",
+// Scroll to "Where to buy" called but unable to scroll, redirect to homepage
+const whereToBuyScroll = async () =>
+  await scrollToIdOnPage(
+    "/",
+    "targetComponentBuy",
+    UserInteractionEvents.BUY_WHERE_COMPONENT_READY,
   );
-  if (!targetComponentRoadmap) {
-    await router.push(localePath("index"));
-    // ToDo: find a more reliable way than a settimeout
-    setTimeout(() => {
-      const homepageRoadmapComponent = document.getElementById(
-        "targetComponentRoadmap",
-      );
-      scrollToComponent(homepageRoadmapComponent);
-    }, 600);
-  } else {
-    scrollToComponent(targetComponentRoadmap);
-  }
-};
+const roadmapScroll = async () =>
+  await scrollToIdOnPage(
+    "/",
+    "targetComponentRoadmap",
+    UserInteractionEvents.ROADMAP_COMPONENT_READY,
+  );
 
 onMounted(() => {
   eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll);

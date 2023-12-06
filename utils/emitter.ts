@@ -6,6 +6,8 @@ export enum UserInteractionEvents {
   SCROLL_TO_ROADMAP = "scrollToRoadmap",
   SCROLL_TO_GET_STARTED = "scrollToGetStarted",
   EXIT_LANGUAGE_DROPDOWN = "exitLanguageDropdown",
+  ROADMAP_COMPONENT_READY = "roadmapComponentLoaded",
+  BUY_WHERE_COMPONENT_READY = "buyWhereComponentLoaded",
   DOWNLOAD_ITEM = "downloadItem",
 }
 
@@ -21,6 +23,8 @@ export interface CustomEvents {
   [UserInteractionEvents.SCROLL_TO_GET_STARTED]: unknown;
   [UserInteractionEvents.SCROLL_TO_ROADMAP]: unknown;
   [UserInteractionEvents.EXIT_LANGUAGE_DROPDOWN]: unknown;
+  [UserInteractionEvents.ROADMAP_COMPONENT_READY]: unknown;
+  [UserInteractionEvents.BUY_WHERE_COMPONENT_READY]: unknown;
   [UserInteractionEvents.DOWNLOAD_ITEM]: {
     fileUrl: string;
     expectedFileHash: string;

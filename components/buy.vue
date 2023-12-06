@@ -2,6 +2,10 @@
 import { exchangesBuy, instantExchangesBuy } from "~/app.config";
 
 const { t } = useI18n();
+
+onMounted(() => {
+  eventBus.emit(UserInteractionEvents.BUY_WHERE_COMPONENT_READY, {});
+});
 </script>
 <template>
   <LayoutWrapper :center="true">
