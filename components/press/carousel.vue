@@ -5,7 +5,7 @@
       class="custom-next-button group absolute right-0 z-10 cursor-pointer bg-gradient-to-l from-[#041D3C] h-full w-24 lg:w-20 flex items-center justify-end"
     >
       <Icon
-        class="block w-10 h-10 lg:-mr-5 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
@@ -14,7 +14,7 @@
       class="custom-prev-button group absolute left-0 z-10 cursor-pointer bg-gradient-to-r from-[#041D3C] h-full w-20 flex items-center justify-start"
     >
       <Icon
-        class="block rotate-180 w-10 h-10 lg:-ml-5 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block rotate-180 w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
@@ -26,7 +26,6 @@
         nextEl: customNextButton,
         prevEl: customPrevButton,
       }"
-      class="custom-swiper"
       :loop="true"
       :autoplay="{ delay: 2500 }"
     >
@@ -101,13 +100,12 @@ const spaceBetween = ref(20);
 
 <style scoped>
 .carousel {
-  width: 100%;
+  @apply w-full;
   margin: 0 auto;
 }
 
 .carousel-item {
-  @apply text-black flex items-center justify-center;
-  padding: 1rem;
+  @apply text-white flex items-center justify-center p-[1rem];
 }
 .carousel-item-link:deep(img) {
   @apply !opacity-60 transition-opacity;

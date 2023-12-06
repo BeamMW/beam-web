@@ -1,7 +1,9 @@
 export enum UserInteractionEvents {
   PAGE_TRANSITION_FINISHED = "pageTransitionFinished",
   LANGUAGE_CHANGE = "languageChange",
+  CLOSE_MENUS = "closeMenus",
   SCROLL_TO_WHERE_TO_BUY = "scrollToWhereToBuy",
+  SCROLL_TO_ROADMAP = "scrollToRoadmap",
   SCROLL_TO_GET_STARTED = "scrollToGetStarted",
   EXIT_LANGUAGE_DROPDOWN = "exitLanguageDropdown",
   DOWNLOAD_ITEM = "downloadItem",
@@ -12,8 +14,12 @@ export interface CustomEvents {
   [UserInteractionEvents.LANGUAGE_CHANGE]: {
     lang: string;
   };
+  [UserInteractionEvents.CLOSE_MENUS]: {
+    callback: () => void;
+  };
   [UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY]: unknown;
   [UserInteractionEvents.SCROLL_TO_GET_STARTED]: unknown;
+  [UserInteractionEvents.SCROLL_TO_ROADMAP]: unknown;
   [UserInteractionEvents.EXIT_LANGUAGE_DROPDOWN]: unknown;
   [UserInteractionEvents.DOWNLOAD_ITEM]: {
     fileUrl: string;
