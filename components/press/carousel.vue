@@ -5,7 +5,7 @@
       class="custom-next-button group absolute right-0 z-10 cursor-pointer bg-gradient-to-l from-[#041D3C] h-full w-24 lg:w-20 flex items-center justify-end"
     >
       <Icon
-        class="block w-7 h-7 lg:-mr-4 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
@@ -14,7 +14,7 @@
       class="custom-prev-button group absolute left-0 z-10 cursor-pointer bg-gradient-to-r from-[#041D3C] h-full w-20 flex items-center justify-start"
     >
       <Icon
-        class="block rotate-180 w-7 h-7 lg:-ml-4 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block rotate-180 w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
@@ -26,7 +26,6 @@
         nextEl: customNextButton,
         prevEl: customPrevButton,
       }"
-      class="custom-swiper"
       :loop="true"
       :autoplay="{ delay: 2500 }"
     >
@@ -99,7 +98,7 @@ onBeforeUnmount(() => {
 const spaceBetween = ref(20);
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .carousel {
   @apply w-full;
   margin: 0 auto;
