@@ -61,7 +61,7 @@ const menus = computed(() => [
       },
       { text: ExternalLinksTitle.YOUTUBE, href: ExternalLinks.YOUTUBE },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
-      { text: "DEX Explorer", href: "https://beamassets.com/" },
+      { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
     ],
   },
   {
