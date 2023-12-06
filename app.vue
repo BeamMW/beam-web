@@ -42,13 +42,33 @@ const whereToBuyScroll = async () => {
   }
 };
 
-onMounted(() =>
-  eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll),
-);
+const roadmapScroll = async () => {
+  const targetComponentRoadmap = document.getElementById(
+    "targetComponentRoadmap",
+  );
+  if (!targetComponentRoadmap) {
+    await router.push(localePath("index"));
+    // ToDo: find a more reliable way than a settimeout
+    setTimeout(() => {
+      const homepageRoadmapComponent = document.getElementById(
+        "targetComponentRoadmap",
+      );
+      scrollToComponent(homepageRoadmapComponent);
+    }, 600);
+  } else {
+    scrollToComponent(targetComponentRoadmap);
+  }
+};
 
-onUnmounted(() =>
-  eventBus.off(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll),
-);
+onMounted(() => {
+  eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll);
+  eventBus.on(UserInteractionEvents.SCROLL_TO_ROADMAP, roadmapScroll);
+});
+
+onUnmounted(() => {
+  eventBus.off(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll);
+  eventBus.off(UserInteractionEvents.SCROLL_TO_ROADMAP, roadmapScroll);
+});
 </script>
 
 <template>

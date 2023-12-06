@@ -37,6 +37,8 @@ import { ref, onMounted, onUnmounted, getCurrentInstance } from "vue";
 import { createPopper } from "@popperjs/core";
 import type { Instance, Modifier, OptionsGeneric } from "@popperjs/core";
 
+import { UserInteractionEvents, eventBus } from "~/utils/emitter";
+
 const showDropdown = ref<boolean>(false);
 const snapLeft = ref(false);
 const visible = ref(false);
@@ -77,6 +79,16 @@ const closeDropdown = () => {
     windowLocked.value = false;
   }
   windowBlurred.value = false;
+};
+
+const closePopper = (
+  event: CustomEvents[UserInteractionEvents.CLOSE_MENUS],
+) => {
+  const { callback } = event;
+  closeDropdown();
+  setTimeout(() => {
+    callback();
+  }, 100);
 };
 
 function destroyPopper() {
@@ -204,6 +216,9 @@ onMounted(() => {
 
   // Handle window resize
   window.addEventListener("resize", updatePlacement);
+
+  // Listen on custom events
+  eventBus.on(UserInteractionEvents.CLOSE_MENUS, closePopper);
 });
 
 onUnmounted(() => {
@@ -216,6 +231,9 @@ onUnmounted(() => {
   }
 
   destroyPopper();
+
+  // Remove custom events
+  eventBus.off(UserInteractionEvents.CLOSE_MENUS, closePopper);
 });
 
 const afterLeave = () => {

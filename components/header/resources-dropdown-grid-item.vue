@@ -12,6 +12,10 @@
           :class="`mb-1 inline-block capitalize transition text-white/70 hover:text-white ${
             link.class ? link.class : ''
           }`"
+          @click="
+            typeof link.onClick == 'function' &&
+              handleClick(link.onClick, $event)
+          "
           >{{ link.text }}</LayoutLink
         >
       </li>
@@ -25,4 +29,11 @@ defineProps({
     required: true,
   },
 });
+
+const handleClick = (onClick: () => void, e: MouseEvent) => {
+  if (onClick) {
+    e.preventDefault();
+    onClick();
+  }
+};
 </script>
