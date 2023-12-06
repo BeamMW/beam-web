@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 const { t } = useI18n();
+
+onMounted(() => {
+  eventBus.emit(UserInteractionEvents.ROADMAP_COMPONENT_READY, {});
+});
 </script>
 <template>
   <LayoutWrapper
