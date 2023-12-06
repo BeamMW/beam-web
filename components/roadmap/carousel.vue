@@ -281,6 +281,4 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener("resize", updateSlidesToShow);
 });
-
-const spaceBetween = ref(20);
 </script>
