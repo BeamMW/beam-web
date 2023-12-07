@@ -8,6 +8,12 @@ const { t } = useI18n();
 const announcementMessage = computed(() => t("header.announcement"));
 const announcementMessageDev = computed(() => t("header.announcementdev"));
 
+const isMounted = ref(false);
+
+onMounted(() => {
+  isMounted.value = true;
+});
+
 defineProps({
   gradientColor: {
     type: Array,
@@ -31,6 +37,7 @@ defineProps({
             leave-active-class="transition-opacity duration-500 ease-out opacity-0"
           >
             <Vue3Marquee
+              v-if="isMounted"
               :clone="false"
               :gradient="true"
               :pause-on-hover="true"
