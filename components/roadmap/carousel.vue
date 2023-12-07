@@ -19,6 +19,7 @@
         nextEl: customNextButton,
         prevEl: customPrevButton,
       }"
+      :auto-height="true"
     >
       <SwiperSlide v-for="(item, index) in roadmap" :key="index">
         <div class="carousel-item-link lg:px-16">
