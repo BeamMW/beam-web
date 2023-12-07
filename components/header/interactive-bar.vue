@@ -31,7 +31,7 @@ defineProps({
             leave-active-class="transition-opacity duration-500 ease-out opacity-0"
           >
             <Vue3Marquee
-              :clone="false"
+              :clone="true"
               :gradient="true"
               :pause-on-hover="true"
               :gradient-color="gradientColor"
