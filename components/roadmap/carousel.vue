@@ -1,24 +1,17 @@
 <template>
   <div class="w-full relative">
-    <div
-      ref="customNextButton"
-      class="custom-next-button group absolute right-0 z-10 cursor-pointer bg-gradient-to-l from-[#041D3C] h-full w-24 lg:w-20 flex items-center justify-end"
-    >
+    <div ref="customNextButton" class="group custom-swipe-arrow next-button">
       <Icon
-        class="block w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
-    <div
-      ref="customPrevButton"
-      class="custom-prev-button group absolute left-0 z-10 cursor-pointer bg-gradient-to-r from-[#041D3C] h-full w-20 flex items-center justify-start"
-    >
+    <div ref="customPrevButton" class="group custom-swipe-arrow prev-button">
       <Icon
-        class="block rotate-180 w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block rotate-180 w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
-
     <swiper
       :grab-cursor="true"
       :slides-per-view="slidesToShow"
@@ -46,7 +39,6 @@
               />
               <h6 class="font-bold text-xl">{{ item.name }}</h6>
             </div>
-
             <div class="flex flex-col gap-2 mt-6">
               <div
                 v-for="(type, indexT) in item.types"
