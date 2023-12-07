@@ -1,95 +1,3 @@
-<template>
-  <div class="w-full relative">
-    <div
-      ref="customNextButton"
-      class="custom-next-button group absolute right-0 z-10 cursor-pointer bg-gradient-to-l from-[#041D3C] h-full w-24 lg:w-20 flex items-center justify-end"
-    >
-      <Icon
-        class="block w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
-        name="layout/arrow-right"
-      />
-    </div>
-    <div
-      ref="customPrevButton"
-      class="custom-prev-button group absolute left-0 z-10 cursor-pointer bg-gradient-to-r from-[#041D3C] h-full w-20 flex items-center justify-start"
-    >
-      <Icon
-        class="block rotate-180 w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
-        name="layout/arrow-right"
-      />
-    </div>
-
-    <swiper
-      :grab-cursor="true"
-      :slides-per-view="slidesToShow"
-      :navigation="{
-        nextEl: customNextButton,
-        prevEl: customPrevButton,
-      }"
-    >
-      <SwiperSlide v-for="(item, index) in roadmap" :key="index">
-        <div class="carousel-item-link lg:px-16">
-          <div
-            class="flex items-center flex-col text-white lg:items-start"
-            :style="{ color: item.color }"
-          >
-            <span class="text-xs font-bold opacity-70 mb-1">{{
-              item.year
-            }}</span>
-            <div class="flex items-center gap-4">
-              <Icon
-                :as-image="true"
-                :name="`beam-releases/${item.image}`"
-                class="h-12 text-beam-blue w-auto"
-                loading="lazy"
-                :alt="item.image"
-              />
-              <h6 class="font-bold text-xl">{{ item.name }}</h6>
-            </div>
-
-            <div class="flex flex-col gap-2 mt-6">
-              <div
-                v-for="(type, indexT) in item.types"
-                :key="indexT"
-                class="flex items-center gap-2 text-sm"
-              >
-                <div
-                  class="p-1 rounded-full text-[#041D3C]"
-                  :style="{
-                    outline:
-                      type.state === PROGRESS.PLANNED
-                        ? `2px solid ${item.color}`
-                        : 'transparent',
-                    outlineOffset:
-                      type.state === PROGRESS.PLANNED ? '-2px' : '0px',
-                    background:
-                      type.state !== PROGRESS.PLANNED
-                        ? item.color
-                        : 'transparent',
-                  }"
-                >
-                  <Icon
-                    v-if="type.state === PROGRESS.BUILDING"
-                    class="block w-2.5 h-2.5 rtl:rotate-180"
-                    name="layout/arrow-right"
-                  />
-                  <Icon
-                    v-else-if="type.state === PROGRESS.COMPLETED"
-                    class="block w-2.5 h-2.5"
-                    name="layout/check"
-                  />
-                  <div v-else class="block w-2.5 h-2.5"></div>
-                </div>
-                <p class="text-white/90">{{ type.description }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-    </swiper>
-  </div>
-</template>
-
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import SwiperCore from "swiper";
@@ -254,8 +162,8 @@ const roadmap: Roadmap = [
 ].reverse();
 
 const slidesToShow = ref(1);
-const customNextButton = ref(null);
-const customPrevButton = ref(null);
+const customNextButton = ref<HTMLElement | null>(null);
+const customPrevButton = ref<HTMLElement | null>(null);
 
 const calculateSlidesToShow = () => {
   if (process.client) {
@@ -282,3 +190,89 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", updateSlidesToShow);
 });
 </script>
+
+<template>
+  <div class="w-full relative">
+    <div ref="customNextButton" class="group custom-swipe-arrow next-button">
+      <Icon
+        class="block w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        name="layout/arrow-right"
+      />
+    </div>
+    <div ref="customPrevButton" class="group custom-swipe-arrow prev-button">
+      <Icon
+        class="block rotate-180 w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        name="layout/arrow-right"
+      />
+    </div>
+
+    <swiper
+      :grab-cursor="true"
+      :slides-per-view="slidesToShow"
+      :navigation="{
+        nextEl: customNextButton,
+        prevEl: customPrevButton,
+      }"
+    >
+      <SwiperSlide v-for="(item, index) in roadmap" :key="index">
+        <div class="carousel-item-link lg:px-16">
+          <div
+            class="flex items-center flex-col text-white lg:items-start"
+            :style="{ color: item.color }"
+          >
+            <span class="text-xs font-bold opacity-70 mb-1">{{
+              item.year
+            }}</span>
+            <div class="flex items-center gap-4">
+              <Icon
+                :as-image="true"
+                :name="`beam-releases/${item.image}`"
+                class="h-12 text-beam-blue w-auto"
+                loading="lazy"
+                :alt="item.image"
+              />
+              <h6 class="font-bold text-xl">{{ item.name }}</h6>
+            </div>
+
+            <div class="flex flex-col gap-2 mt-6">
+              <div
+                v-for="(type, indexT) in item.types"
+                :key="indexT"
+                class="flex items-center gap-2 text-sm"
+              >
+                <div
+                  class="p-1 rounded-full text-[#041D3C]"
+                  :style="{
+                    outline:
+                      type.state === PROGRESS.PLANNED
+                        ? `2px solid ${item.color}`
+                        : 'transparent',
+                    outlineOffset:
+                      type.state === PROGRESS.PLANNED ? '-2px' : '0px',
+                    background:
+                      type.state !== PROGRESS.PLANNED
+                        ? item.color
+                        : 'transparent',
+                  }"
+                >
+                  <Icon
+                    v-if="type.state === PROGRESS.BUILDING"
+                    class="block w-2.5 h-2.5 rtl:rotate-180"
+                    name="layout/arrow-right"
+                  />
+                  <Icon
+                    v-else-if="type.state === PROGRESS.COMPLETED"
+                    class="block w-2.5 h-2.5"
+                    name="layout/check"
+                  />
+                  <div v-else class="block w-2.5 h-2.5"></div>
+                </div>
+                <p class="text-white/90">{{ type.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SwiperSlide>
+    </swiper>
+  </div>
+</template>

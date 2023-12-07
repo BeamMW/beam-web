@@ -38,7 +38,7 @@ onMounted(() => {
       >
         <BuyNotice>
           <template #icon>
-            <Icon class="w-4 h-4" name="layout/warning" />
+            <Icon class="inline-block w-4 h-4" name="layout/warning" />
           </template>
           <template #text>
             <MarkdownRenderer t-key="buyWhere.disclaimer" />
@@ -46,7 +46,7 @@ onMounted(() => {
         </BuyNotice>
         <BuyNotice>
           <template #icon>
-            <Icon class="w-4 h-4" name="layout/info" />
+            <Icon class="inline-block w-4 h-4" name="layout/info" />
           </template>
           <template #text>
             <MarkdownRenderer t-key="buyWhere.ethereumContract" />
