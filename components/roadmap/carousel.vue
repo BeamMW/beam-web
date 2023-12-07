@@ -353,7 +353,7 @@ const calculateSlidesToShow = () => {
     const width = window.innerWidth;
     if (width >= 1280) {
       return 3;
-    } else if (width >= 1024) {
+    } else if (width >= 768) {
       return 2;
     }
   }
