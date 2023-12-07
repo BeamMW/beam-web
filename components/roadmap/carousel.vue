@@ -195,13 +195,13 @@ onBeforeUnmount(() => {
   <div class="w-full relative">
     <div ref="customNextButton" class="group custom-swipe-arrow next-button">
       <Icon
-        class="block w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
     <div ref="customPrevButton" class="group custom-swipe-arrow prev-button">
       <Icon
-        class="block rotate-180 w-7 h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block rotate-180 w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
