@@ -11,7 +11,7 @@ onMounted(() => {
     :center="true"
     class="pt-10 lg:pt-12 pb-5"
   >
-    <LayoutTitle :title="t('footer.join.roadmap')" />
+    <LayoutTitle :title="t('roadmap.title')" />
     <RoadmapCarousel />
   </LayoutWrapper>
 </template>

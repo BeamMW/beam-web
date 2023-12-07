@@ -125,6 +125,93 @@
     "disclaimer": "**AVISO**: Os serviços de terceiros listados não são endossados ​​pelo Beam. Tome cuidado, pois as garantias de segurança e privacidade do Beam não se aplicam.",
     "ethereumContract": "O endereço do contrato Wrapped Beam (WBEAM) é **[0xE5AcBB03D73267c03349c76EaD672Ee4d941F499](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)**. O WBEAM serve como uma representação ERC-20 das moedas Beam e pode ser pontado bidirecionalmente entre as blockchains Ethereum e Beam."
   },
+  "roadmap": {
+    "title": "Roteiro de desenvolvimento",
+    "milestones": {
+      "1": {
+        "title": "Átomo Ágil",
+        "items": {
+          "1": "API de Pagamento e Troca",
+          "2": "API de Pool de Mineração",
+          "3": "Documento de Posição sobre Lightning"
+        }
+      },
+      "2": {
+        "title": "Bóson Brilhante",
+        "items": {
+          "1": "Carteiras Android e iOS",
+          "2": "Integração de Plataformas de Pagamento",
+          "3": "Sincronização Rápida de Nós",
+          "4": "Confirmação de Pagamento",
+          "5": "Prova de Conceito Beam Anywhere",
+          "6": "Carteira Fria"
+        }
+      },
+      "3": {
+        "title": "Cátodo Limpo",
+        "items": {
+          "1": "Swap Atômico Beam ↔ BTC, LTC, QTUM (Carteira Desktop)",
+          "2": "Mudança de Algoritmo PoW",
+          "3": "Prova de Conceito Lightning",
+          "4": "Prova de Conceito Lelantus-MW"
+        }
+      },
+      "4": {
+        "title": "Doppler Duplo",
+        "items": {
+          "1": "Mercado de Swaps Atômicos (Carteira Desktop) e API",
+          "2": "Laser Beam",
+          "3": "Rede de Teste Lelantus",
+          "4": "Notificações de Atualização de Carteira",
+          "5": "Indicador de Valor Fiat da Carteira"
+        }
+      },
+      "5": {
+        "title": "Elétron Ansioso",
+        "items": {
+          "1": "Ativos Confidenciais na Mainnet",
+          "2": "Algoritmo de Mineração PoW BeamHashIII",
+          "3": "Lelantus MW",
+          "4": "Pagamento Unilateral",
+          "5": "Sincronizar Saldo com a Mesma Semente",
+          "6": "Nó Móvel"
+        }
+      },
+      "6": {
+        "title": "Férmion Feroz",
+        "items": {
+          "1": "Máquina Virtual Beam na Carteira e Nó",
+          "2": "Loja de DApps Integrada à Carteira"
+        }
+      },
+      "7": {
+        "title": "Gluon Animado",
+        "items": {
+          "1": "Integração com IPFS",
+          "2": "Loja de DApps Descentralizada",
+          "3": "Transações de Alta Frequência",
+          "4": "DAO Core DApp (Governança e Votação)",
+          "5": "Mercado de Swap de Ativos",
+          "6": "Atualizações do Blockchain Explorer",
+          "7": "SDK de Shader",
+          "8": "Lançamento de Bridges",
+          "9": "Oráculos",
+          "10": "Lançamento de DEX AMM",
+          "11": "Suporte a Carteiras de Hardware (Ledger Nano S & Nano S Plus)",
+          "12": "DApp Beam Messenger na Carteira Beam"
+        }
+      },
+      "8": {
+        "title": "Hadrón Robusto e Seguintes",
+        "items": {
+          "1": "Suporte a EVM",
+          "2": "Hard Fork 8.0",
+          "3": "Suporte a Sidechains",
+          "4": "Lançamento de DApps EVM na Rede Beam"
+        }
+      }
+    }
+  },
   "press": {
     "title": "Eles falam sobre nós"
   },
