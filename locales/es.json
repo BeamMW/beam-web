@@ -125,6 +125,93 @@
     "disclaimer": "**ADVERTENCIA**: Los servicios de terceros listados no están respaldados por Beam. Ten precaución, ya que las garantías de seguridad y privacidad de Beam no aplican.",
     "ethereumContract": "La dirección del contrato Wrapped Beam (WBEAM) es **[0xE5AcBB03D73267c03349c76EaD672Ee4d941F499](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)**. WBEAM sirve como una representación ERC-20 de las monedas Beam y puede ser puenteada bidireccionalmente entre las blockchains Ethereum y Beam."
   },
+  "roadmap": {
+    "title": "Hoja de ruta de desarrollo",
+    "milestones": {
+      "1": {
+        "title": "Átomo ágil",
+        "items": {
+          "1": "API de pago y intercambio",
+          "2": "API de grupo de minería",
+          "3": "Documento de posición de Lightning"
+        }
+      },
+      "2": {
+        "title": "Bosón brillante",
+        "items": {
+          "1": "Monederos Android y iOS",
+          "2": "Integración de plataformas de pago",
+          "3": "Sincronización rápida de nodos",
+          "4": "Confirmación de pago",
+          "5": "POC de Beam Anywhere",
+          "6": "Monedero frío"
+        }
+      },
+      "3": {
+        "title": "Cátodo claro",
+        "items": {
+          "1": "Intercambio atómico Beam ↔ BTC, LTC, QTUM (monedero de escritorio)",
+          "2": "Cambio de algoritmo PoW",
+          "3": "POC de Lightning",
+          "4": "POC de Lelantus-MW"
+        }
+      },
+      "4": {
+        "title": "Doppler doble",
+        "items": {
+          "1": "Mercado de intercambios atómicos (monedero de escritorio) y API",
+          "2": "Rayo láser",
+          "3": "Red de pruebas Lelantus",
+          "4": "Notificaciones de actualización de monedero",
+          "5": "Indicador de valor fiduciario de monedero"
+        }
+      },
+      "5": {
+        "title": "Electrón ansioso",
+        "items": {
+          "1": "Activos confidenciales en la red principal",
+          "2": "Algoritmo de minería PoW BeamHashIII",
+          "3": "Lelantus MW",
+          "4": "Pago unilateral",
+          "5": "Sincronizar saldo con la misma semilla",
+          "6": "Nodo móvil"
+        }
+      },
+      "6": {
+        "title": "Fermión feroz",
+        "items": {
+          "1": "Máquina virtual Beam en monedero y nodo",
+          "2": "Tienda de DAPP integrada en el monedero"
+        }
+      },
+      "7": {
+        "title": "Gluón groovy",
+        "items": {
+          "1": "Integración con IPFS",
+          "2": "Tienda de DApp descentralizada",
+          "3": "Transacciones de alta frecuencia",
+          "4": "DApp principal de DAO (gobernanza y votación)",
+          "5": "Mercado de intercambio de activos",
+          "6": "Actualizaciones del explorador de blockchain",
+          "7": "SDK de Shader",
+          "8": "Lanzamiento de puentes",
+          "9": "Oráculos",
+          "10": "Lanzamiento de DEX AMM",
+          "11": "Soporte de monedero de hardware (Ledger Nano S y Nano S Plus)",
+          "12": "DApp Beam Messenger en monedero Beam"
+        }
+      },
+      "8": {
+        "title": "Hadrón robusto y posterior",
+        "items": {
+          "1": "Soporte EVM",
+          "2": "Bifurcación dura 8.0",
+          "3": "Soporte para sidechains",
+          "4": "Lanzamiento de DApps EVM en la cadena de Beam"
+        }
+      }
+    }
+  },
   "press": {
     "title": "Hablan de nosotros"
   },

@@ -125,6 +125,93 @@
     "disclaimer": "**AVERTISSEMENT** : Les services tiers listés ne sont pas approuvés par Beam. Faites preuve de prudence, car les garanties de sécurité et de confidentialité de Beam ne s'appliquent pas.",
     "ethereumContract": "L'adresse du contrat Wrapped Beam (WBEAM) est **[0xE5AcBB03D73267c03349c76EaD672Ee4d941F499](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)**. WBEAM sert de représentation ERC-20 des pièces Beam et peut être ponté de manière bidirectionnelle entre les blockchains Ethereum et Beam."
   },
+  "roadmap": {
+    "title": "Feuille de route de développement",
+    "milestones": {
+      "1": {
+        "title": "Atome Agile",
+        "items": {
+          "1": "API de paiement et d'échange",
+          "2": "API de pool minier",
+          "3": "Document de positionnement Lightning"
+        }
+      },
+      "2": {
+        "title": "Boson Lumineux",
+        "items": {
+          "1": "Portefeuilles Android et iOS",
+          "2": "Intégration des plateformes de paiement",
+          "3": "Synchronisation rapide des noeuds",
+          "4": "Confirmation de paiement",
+          "5": "Preuve de concept Anywhere Beam",
+          "6": "Portefeuille froid"
+        }
+      },
+      "3": {
+        "title": "Cathode Claire",
+        "items": {
+          "1": "Swap atomique Beam ↔ BTC, LTC, QTUM (portefeuille de bureau)",
+          "2": "Changement d'algorithme de PoW",
+          "3": "Preuve de concept Lightning",
+          "4": "Preuve de concept Lelantus-MW"
+        }
+      },
+      "4": {
+        "title": "Doppler Double",
+        "items": {
+          "1": "Place de marché de swaps atomiques (portefeuille de bureau) et API",
+          "2": "Laser Beam",
+          "3": "Testnet Lelantus",
+          "4": "Notifications de mise à jour du portefeuille",
+          "5": "Indicateur de valeur fiduciaire du portefeuille"
+        }
+      },
+      "5": {
+        "title": "Électron Eager",
+        "items": {
+          "1": "Actifs confidentiels sur le mainnet",
+          "2": "Algorithme de minage PoW BeamHashIII",
+          "3": "Lelantus MW",
+          "4": "Paiement à sens unique",
+          "5": "Synchronisation du solde avec la même phrase secrète",
+          "6": "Noeud mobile"
+        }
+      },
+      "6": {
+        "title": "Fermion Féroce",
+        "items": {
+          "1": "Machine virtuelle Beam dans le portefeuille et le nœud",
+          "2": "Boutique DAPP intégrée au portefeuille"
+        }
+      },
+      "7": {
+        "title": "Gluon Enjoué",
+        "items": {
+          "1": "Intégration IPFS",
+          "2": "Boutique DApp décentralisée",
+          "3": "Transactions à haute fréquence",
+          "4": "DAPP Core DAO (gouvernance et vote)",
+          "5": "Place de marché d'échange d'actifs",
+          "6": "Mises à jour de l'explorateur de blockchain",
+          "7": "SDK de shader",
+          "8": "Sortie des ponts",
+          "9": "Oracles",
+          "10": "Sortie de la DEX AMM",
+          "11": "Prise en charge du portefeuille matériel (Ledger Nano S et Nano S Plus)",
+          "12": "DApp Beam Messenger dans le portefeuille Beam"
+        }
+      },
+      "8": {
+        "title": "Hadron Robuste et plus",
+        "items": {
+          "1": "Prise en charge d'EVM",
+          "2": "Hard Fork 8.0",
+          "3": "Prise en charge des sidechains",
+          "4": "Lancement de DApps EVM sur la chaîne Beam"
+        }
+      }
+    }
+  },
   "press": {
     "title": "Ils parlent de nous"
   },

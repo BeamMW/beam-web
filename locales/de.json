@@ -125,6 +125,93 @@
     "disclaimer": "**HAFTUNGSAUSSCHLUSS**: Drittanbieter-Dienste, die hier aufgeführt sind, werden von Beam nicht unterstützt. Seien Sie vorsichtig, da die Sicherheits- und Datenschutzgarantien von Beam nicht gelten.",
     "ethereumContract": "Der Wrapped Beam (WBEAM) Vertrag hat die Adresse **[0xE5AcBB03D73267c03349c76EaD672Ee4d941F499](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)**. WBEAM dient als ERC-20-Repräsentation von Beam-Coins und kann bidirektional zwischen den Ethereum- und Beam-Blockchains gebrückt werden."
   },
+  "roadmap": {
+    "title": "Entwicklungs-Roadmap",
+    "milestones": {
+      "1": {
+        "title": "Agiler Atom",
+        "items": {
+          "1": "Zahlungs- und Austausch-API",
+          "2": "Mining-Pool-API",
+          "3": "Lightning-Positionspapier"
+        }
+      },
+      "2": {
+        "title": "Hell Boson",
+        "items": {
+          "1": "Android- und iOS-Wallets",
+          "2": "Integration von Zahlungsplattformen",
+          "3": "Schnelle Knotensynchronisation",
+          "4": "Zahlungsbestätigung",
+          "5": "Beam Anywhere PoC",
+          "6": "Cold Wallet"
+        }
+      },
+      "3": {
+        "title": "Klares Kathod",
+        "items": {
+          "1": "Beam ↔ BTC, LTC, QTUM Atomic Swap (Desktop-Wallet)",
+          "2": "Änderung des PoW-Algorithmus",
+          "3": "Lightning PoC",
+          "4": "Lelantus-MW PoC"
+        }
+      },
+      "4": {
+        "title": "Doppel-Doppler",
+        "items": {
+          "1": "Marktplatz für Atomic Swaps (Desktop-Wallet) und API",
+          "2": "Laser Beam",
+          "3": "Lelantus Testnet",
+          "4": "Wallet-Update-Benachrichtigungen",
+          "5": "Wallet-Fiatwertanzeige"
+        }
+      },
+      "5": {
+        "title": "Eifriges Elektron",
+        "items": {
+          "1": "Vertrauliche Vermögenswerte im Mainnet",
+          "2": "BeamHashIII PoW-Mining-Algorithmus",
+          "3": "Lelantus MW",
+          "4": "Einseitige Zahlung",
+          "5": "Sync-Guthaben über den gleichen Seed",
+          "6": "Mobile Node"
+        }
+      },
+      "6": {
+        "title": "Grimmiges Fermion",
+        "items": {
+          "1": "Beam Virtual Machine in Wallet und Node",
+          "2": "DApp-Store in der Wallet"
+        }
+      },
+      "7": {
+        "title": "Groovy Gluon",
+        "items": {
+          "1": "IPFS-Integration",
+          "2": "Dezentralisierter DApp-Store",
+          "3": "Hochfrequente Transaktionen",
+          "4": "DAO Core DApp (Governance und Abstimmung)",
+          "5": "Asset-Tauschbörse",
+          "6": "Updates des Blockchain Explorers",
+          "7": "Shader SDK",
+          "8": "Bridges Release",
+          "9": "Orakel",
+          "10": "AMM DEX Release",
+          "11": "HW Wallet Support (Ledger Nano S & Nano S Plus)",
+          "12": "Beam Messenger DApp in Beam Wallet"
+        }
+      },
+      "8": {
+        "title": "Kraftvolles Hadron und später",
+        "items": {
+          "1": "EVM-Unterstützung",
+          "2": "Hard Fork 8.0",
+          "3": "Sidechain-Unterstützung",
+          "4": "Starten von EVM-DApps auf der Beam-Chain"
+        }
+      }
+    }
+  },
   "press": {
     "title": "Sie berichten über uns"
   },
