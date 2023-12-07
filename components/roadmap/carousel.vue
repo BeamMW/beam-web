@@ -19,11 +19,12 @@
         nextEl: customNextButton,
         prevEl: customPrevButton,
       }"
+      :auto-height="true"
     >
       <SwiperSlide v-for="(item, index) in roadmap" :key="index">
         <div class="carousel-item-link lg:px-16">
           <div
-            class="flex items-center flex-col text-white lg:items-start"
+            class="flex items-center flex-col text-white lg:items-start px-10 md:px-0"
             :style="{ color: item.color }"
           >
             <span class="text-xs font-bold opacity-70 mb-1">{{
@@ -352,7 +353,7 @@ const calculateSlidesToShow = () => {
     const width = window.innerWidth;
     if (width >= 1280) {
       return 3;
-    } else if (width >= 1024) {
+    } else if (width >= 768) {
       return 2;
     }
   }
