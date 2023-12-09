@@ -19,11 +19,6 @@ const config = {
     "border-white",
     "text-white",
 
-    // Theme background colors
-    "bg-[#1C002E]",
-    "bg-[#00150B]",
-    "bg-[#041D3C]",
-
     "height-transition-enter-active",
     "height-transition-leave-active",
     "height-transition-enter",
@@ -116,6 +111,11 @@ const config = {
         "beam-pink": "var(--beam-pink)", // #FE52FF
         "beam-green": "var(--beam-green)", // #39FFF2
         "beam-green-dark": "var(--beam-green-dark)", // #00E2C2
+
+        // Theme background colors
+        "beam-bg-blue": "#041D3C",
+        "beam-bg-purple": "#1C002E",
+        "beam-bg-green": "#00150B",
       },
     },
   },

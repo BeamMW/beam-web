@@ -3,10 +3,10 @@
     <Html
       :lang="head.htmlAttrs && head.htmlAttrs.lang"
       :dir="head.htmlAttrs && head.htmlAttrs.dir"
-      :class="`bg-[${bodyColor}]`"
+      :class="themeColors.body"
     >
       <Head>
-        <Meta name="theme-color" :content="bodyColor" />
+        <Meta name="theme-color" :content="themeColors.body" />
         <template v-for="link in head.link" :key="link.id">
           <Link
             :id="link.id"
@@ -23,13 +23,15 @@
           />
         </template>
       </Head>
-      <Body :class="`bg-[${bodyColor}]`">
+      <Body :class="themeColors.body">
         <main>
           <DownloadDownloaderManager />
-          <HeaderInteractiveBar :gradient-color="gradientColorRgb" />
-          <HeaderComponent :class="headerRef" />
+          <HeaderInteractiveBar
+            :gradient-color="themeColors.gradientColorRgb"
+          />
+          <HeaderComponent :class="themeColors.header" />
           <slot />
-          <FooterComponent :class="footerRef" />
+          <FooterComponent :class="themeColors.footer" />
         </main>
       </Body>
     </Html>
@@ -37,7 +39,63 @@
 </template>
 
 <script lang="ts" setup>
-const currentRoute = useState("currentRoute", () => "");
+import type { RouteRecordName } from "vue-router";
+
+function getTheme(routeName: RouteRecordName): ThemeSettings {
+  let header: string, footer: string, body: string;
+  switch (getRouteName(routeName)) {
+    case "mining":
+      header = "bg-[rgba(3,50,34,.6)]";
+      footer = "bg-page-radial-gradient-dark-green";
+      body = BACKGROUND_COLORS.GREEN;
+      break;
+    case "docs":
+    case "docs-slug":
+      header = "bg-[rgba(54,0,97,.6)]";
+      footer = "bg-page-radial-gradient-purple";
+      body = BACKGROUND_COLORS.PURPLE;
+      break;
+    default:
+      header = "bg-[rgba(4,37,72,.6)]";
+      footer = "bg-page-radial-gradient";
+      body = BACKGROUND_COLORS.BLUE;
+  }
+  const gradientColorRgb = hexToRgb(body) as GradientColorRbg;
+  return { header, footer, body, gradientColorRgb };
+}
+
+enum THEME_COLORS {
+  BLUE = "blue",
+  PURPLE = "purple",
+  GREEN = "green",
+}
+
+enum BACKGROUND_COLORS {
+  BLUE = "bg-beam-bg-blue", // #041D3C
+  PURPLE = "bg-beam-bg-purple", // #1C002E
+  GREEN = "bg-beam-bg-green", // #00150B
+}
+
+type GradientColorRbg = [number, number, number];
+interface ThemeSettings {
+  header: string;
+  footer: string;
+  body: string;
+  gradientColorRgb: GradientColorRbg;
+}
+
+const route = useRoute();
+const themeColors = ref<ThemeSettings>(
+  getTheme(route.name ? route.name : "index"),
+);
+
+watch(
+  () => route.fullPath,
+  (_routeName) => {
+    themeColors.value = getTheme(route.name as string);
+  },
+  { immediate: true },
+);
 
 useTitleTemplate();
 
@@ -46,44 +104,4 @@ const head = useLocaleHead({
   identifierAttribute: "id",
   addSeoAttributes: true,
 });
-
-const defaultColor = "#041D3C";
-const defaultHeaderColor = "bg-[rgba(4,37,72,.6)]";
-const defaultFooterColor = "bg-page-radial-gradient";
-
-const headerRef = ref(defaultHeaderColor);
-const footerRef = ref(defaultFooterColor);
-const bodyColor = ref(defaultColor);
-const gradientColorRgb = ref<[number, number, number]>(
-  hexToRgb(bodyColor.value) as [number, number, number],
-);
-
-watch(
-  currentRoute,
-  () => {
-    switch (currentRoute.value) {
-      case "mining":
-        headerRef.value = "bg-[rgba(3,50,34,.6)]";
-        footerRef.value = "bg-page-radial-gradient-dark-green";
-        bodyColor.value = "#00150B";
-        break;
-      case "docs":
-      case "docs-slug":
-        headerRef.value = "bg-[rgba(54,0,97,.6)]";
-        footerRef.value = "bg-page-radial-gradient-purple";
-        bodyColor.value = "#1C002E";
-        break;
-      default:
-        headerRef.value = defaultHeaderColor;
-        footerRef.value = defaultFooterColor;
-        bodyColor.value = defaultColor;
-    }
-    gradientColorRgb.value = hexToRgb(bodyColor.value) as [
-      number,
-      number,
-      number,
-    ];
-  },
-  { immediate: true },
-);
 </script>
