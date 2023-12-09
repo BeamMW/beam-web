@@ -248,7 +248,7 @@ const roadmap: Roadmap = [
   },
   {
     name: t("roadmap.milestones.6.title"),
-    year: 2022,
+    year: 2021,
     color: "#b02fb0",
     image: "fermion",
     types: [
