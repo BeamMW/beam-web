@@ -25,37 +25,19 @@ defineProps({
         >
           <div class="flex items-center h-full">
             <div class="font-bold text-sm text-white/90">
-              <transition
-                name="marquee"
-                enter-from-class="opacity-0"
-                enter-active-class="transition-opacity duration-500 ease-out"
-                leave-from-class="opacity-100"
-                leave-active-class="transition-opacity duration-500 ease-out opacity-0"
+              <Vue3Marquee
+                :clone="false"
+                :gradient="true"
+                :pause-on-hover="true"
+                :gradient-color="gradientColor"
+                :gradient-length="'80px'"
               >
-                <ClientOnly>
-                  <Vue3Marquee
-                    :clone="false"
-                    :gradient="true"
-                    :pause-on-hover="true"
-                    :gradient-color="gradientColor"
-                    :gradient-length="'80px'"
-                  >
-                    <MarkdownRenderer
-                      :key="
-                        environmentGetter.isDappnet
-                          ? announcementMessageDev
-                          : announcementMessage
-                      "
-                      class="colorLinks"
-                      :t-key="
-                        environmentGetter.isDappnet
-                          ? 'header.announcementdev'
-                          : 'header.announcement'
-                      "
-                    />&nbsp;&nbsp;
-                  </Vue3Marquee>
-                </ClientOnly>
-              </transition>
+                {{
+                  environmentGetter.isDappnet
+                    ? announcementMessageDev
+                    : announcementMessage
+                }}&nbsp;&nbsp;
+              </Vue3Marquee>
             </div>
             <div
               class="hidden md:block font-bold text-base text-beam-green-dark opacity-80 whitespace-nowrap"
