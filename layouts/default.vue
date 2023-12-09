@@ -6,7 +6,7 @@
       :class="themeColors.body"
     >
       <Head>
-        <Meta name="theme-color" :content="themeColors.body" />
+        <Meta name="theme-color" :content="themeColors.hex" />
         <template v-for="link in head.link" :key="link.id">
           <Link
             :id="link.id"
@@ -27,7 +27,7 @@
         <main>
           <DownloadDownloaderManager />
           <HeaderInteractiveBar
-            :gradient-color="themeColors.gradientColorRgb"
+            :gradient-color="themeColors.gradientColorRgb as GradientColorRbg"
           />
           <HeaderComponent :class="themeColors.header" />
           <slot />
@@ -70,6 +70,7 @@ interface ThemeSettings {
   header: string;
   footer: string;
   body: string;
+  hex: string;
   gradientColorRgb: GradientColorRbg | null;
 }
 
@@ -78,6 +79,7 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
   let header: string,
     footer: string,
     body: string,
+    hex: string,
     gradientColorRgb: GradientColorRbg | null;
 
   switch (formatRouteName) {
@@ -85,6 +87,7 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
       header = HEADER_COLORS.GREEN;
       footer = FOOTER_COLORS.GREEN;
       body = BACKGROUND_COLORS.GREEN;
+      hex = THEME_COLORS.GREEN;
       gradientColorRgb = hexToRgb(THEME_COLORS.GREEN);
       break;
     case "docs":
@@ -92,15 +95,17 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
       header = HEADER_COLORS.PURPLE;
       footer = FOOTER_COLORS.PURPLE;
       body = BACKGROUND_COLORS.PURPLE;
+      hex = THEME_COLORS.PURPLE;
       gradientColorRgb = hexToRgb(THEME_COLORS.PURPLE);
       break;
     default:
       header = HEADER_COLORS.BLUE;
       footer = FOOTER_COLORS.BLUE;
       body = BACKGROUND_COLORS.BLUE;
+      hex = THEME_COLORS.BLUE;
       gradientColorRgb = hexToRgb(THEME_COLORS.BLUE);
   }
-  return { header, footer, body, gradientColorRgb };
+  return { header, footer, body, hex, gradientColorRgb };
 }
 
 const route = useRoute();
