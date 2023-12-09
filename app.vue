@@ -9,20 +9,10 @@ const localePath = useLocalePath();
 
 const windowLocked = useState("windowLocked", () => false);
 const windowBlurred = useState("windowBlurred", () => false);
-const currentRoute = useState("currentRoute", () => "");
 const fileVersion = 3;
 
 const baseURL = useRuntimeConfig().public.baseURL;
-const route = useRoute();
 const router = useRouter();
-
-watch(
-  () => route.fullPath,
-  (_routeFullPath) => {
-    currentRoute.value = getRouteName(route.name);
-  },
-  { immediate: true },
-);
 
 defineRobotMeta();
 
