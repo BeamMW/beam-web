@@ -19,6 +19,11 @@ const config = {
     "border-white",
     "text-white",
 
+    // Background colors
+    "beam-bg-blue",
+    "beam-bg-purple",
+    "beam-bg-green",
+
     "height-transition-enter-active",
     "height-transition-leave-active",
     "height-transition-enter",

@@ -41,39 +41,28 @@
 <script lang="ts" setup>
 import type { RouteRecordName } from "vue-router";
 
-function getTheme(routeName: RouteRecordName): ThemeSettings {
-  let header: string, footer: string, body: string;
-  switch (getRouteName(routeName)) {
-    case "mining":
-      header = "bg-[rgba(3,50,34,.6)]";
-      footer = "bg-page-radial-gradient-dark-green";
-      body = BACKGROUND_COLORS.GREEN;
-      break;
-    case "docs":
-    case "docs-slug":
-      header = "bg-[rgba(54,0,97,.6)]";
-      footer = "bg-page-radial-gradient-purple";
-      body = BACKGROUND_COLORS.PURPLE;
-      break;
-    default:
-      header = "bg-[rgba(4,37,72,.6)]";
-      footer = "bg-page-radial-gradient";
-      body = BACKGROUND_COLORS.BLUE;
-  }
-  const gradientColorRgb = hexToRgb(body) as GradientColorRbg;
-  return { header, footer, body, gradientColorRgb };
-}
-
 enum THEME_COLORS {
-  BLUE = "blue",
-  PURPLE = "purple",
-  GREEN = "green",
+  BLUE = "#041D3C",
+  PURPLE = "#1C002E",
+  GREEN = "#00150B",
 }
 
 enum BACKGROUND_COLORS {
-  BLUE = "bg-beam-bg-blue", // #041D3C
-  PURPLE = "bg-beam-bg-purple", // #1C002E
-  GREEN = "bg-beam-bg-green", // #00150B
+  BLUE = "bg-beam-bg-blue",
+  PURPLE = "bg-beam-bg-purple",
+  GREEN = "bg-beam-bg-green",
+}
+
+enum HEADER_COLORS {
+  BLUE = "bg-[rgba(4,37,72,.6)]",
+  PURPLE = "bg-[rgba(54,0,97,.6)]",
+  GREEN = "bg-[rgba(3,50,34,.6)]",
+}
+
+enum FOOTER_COLORS {
+  BLUE = "bg-page-radial-gradient",
+  PURPLE = "bg-page-radial-gradient-purple",
+  GREEN = "bg-page-radial-gradient-dark-green",
 }
 
 type GradientColorRbg = [number, number, number];
@@ -81,7 +70,37 @@ interface ThemeSettings {
   header: string;
   footer: string;
   body: string;
-  gradientColorRgb: GradientColorRbg;
+  gradientColorRgb: GradientColorRbg | null;
+}
+
+function getTheme(routeName: RouteRecordName): ThemeSettings {
+  const formatRouteName = getRouteName(routeName);
+  let header: string,
+    footer: string,
+    body: string,
+    gradientColorRgb: GradientColorRbg | null;
+
+  switch (formatRouteName) {
+    case "mining":
+      header = HEADER_COLORS.GREEN;
+      footer = FOOTER_COLORS.GREEN;
+      body = BACKGROUND_COLORS.GREEN;
+      gradientColorRgb = hexToRgb(THEME_COLORS.GREEN);
+      break;
+    case "docs":
+    case "docs-slug":
+      header = HEADER_COLORS.PURPLE;
+      footer = FOOTER_COLORS.PURPLE;
+      body = BACKGROUND_COLORS.PURPLE;
+      gradientColorRgb = hexToRgb(THEME_COLORS.PURPLE);
+      break;
+    default:
+      header = HEADER_COLORS.BLUE;
+      footer = FOOTER_COLORS.BLUE;
+      body = BACKGROUND_COLORS.BLUE;
+      gradientColorRgb = hexToRgb(THEME_COLORS.BLUE);
+  }
+  return { header, footer, body, gradientColorRgb };
 }
 
 const route = useRoute();
@@ -94,7 +113,6 @@ watch(
   (_routeName) => {
     themeColors.value = getTheme(route.name as string);
   },
-  { immediate: true },
 );
 
 useTitleTemplate();
