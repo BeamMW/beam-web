@@ -38,7 +38,7 @@ defineProps({
               </Vue3Marquee>
             </div>
             <div
-              class="hidden md:block font-bold text-base text-beam-green-dark opacity-80 whitespace-nowrap pr-4 rtl:pl-4"
+              class="hidden md:block font-bold text-base text-beam-green-dark opacity-80 whitespace-nowrap"
             >
               <ClientOnly>
                 <HeaderLivePrice />
