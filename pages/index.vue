@@ -14,6 +14,10 @@ useSeoMeta({
   ogTitle: "",
   ogDescription: description,
 });
+
+definePageMeta({
+  layout: "default",
+});
 </script>
 
 <template>
