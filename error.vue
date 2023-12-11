@@ -83,7 +83,7 @@ useSeoMeta({
 
 useHead({
   bodyAttrs: {
-    class: "bg-beam-bg-purple",
+    class: "bg-[#1C002E]",
   },
 });
 </script>
