@@ -81,7 +81,7 @@ const spaceBetween = ref(20);
             <Icon
               :as-image="true"
               :name="`medias/${item.image}`"
-              class="h-8 text-beam-blue w-auto"
+              class="h-12 text-beam-blue w-auto"
               loading="lazy"
               :alt="item.image"
             />
