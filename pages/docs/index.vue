@@ -21,14 +21,15 @@ definePageMeta({
   <div class="bg-page-radial-gradient-purple">
     <LayoutWrapper :center="true" class="py-10 lg:py-12">
       <LayoutTitle :title="t('head.title.documentation')" />
-      <p
+
+      <!--<p
         class="text-base md:text-lg pb-8 md:pb-10 flex items-center gap-4 justify-center"
       >
         <Icon
           class="w-6 h-6 md:w-7 md:h-7 inline-block"
           name="layout/warning"
         />{{ $t("docs.warning") }}
-      </p>
+      </p>-->
 
       <div
         class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-6 md:gap-10 text-white"
