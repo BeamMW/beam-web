@@ -76,7 +76,7 @@ export enum ExternalLinksTitle {
 export const preHtml = {
   preconnect: [
     new URL(ExternalLinks.EXPLORER).origin,
-    new URL(ExternalLinks.BUILDS_SERVER).origin,
+    // new URL(ExternalLinks.BUILDS_SERVER).origin,
     new URL(ExternalLinks.DEX).origin,
   ] as URLEntry[],
   "dns-prefetch": extractOriginsFromEnum(ExternalLinks) as URLEntry[],
