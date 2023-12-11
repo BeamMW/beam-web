@@ -9,7 +9,7 @@ onMounted(() => {
   <LayoutWrapper
     id="targetComponentRoadmap"
     :center="true"
-    class="pt-10 lg:pt-12"
+    class="pt-10 lg:pt-12 pb-5"
   >
     <LayoutTitle :title="t('roadmap.title')" />
     <RoadmapCarousel />
