@@ -32,9 +32,9 @@
     "eslint-plugin-prettier": "^5.0.1",
     "nuxt": "^3.8.2",
     "nuxt-simple-robots": "^3.1.9",
-    "nuxt-simple-sitemap": "^4.1.7",
-    "prettier": "^3.1.0",
-    "typescript": "^5.3.2"
+    "nuxt-simple-sitemap": "^4.1.10",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@nuxt/types": "^2.17.2",
@@ -48,7 +48,7 @@
     "globby": "^14.0.0",
     "gsap": "^3.12.3",
     "localforage": "^1.10.0",
-    "markdown-it": "^13.0.2",
+    "markdown-it": "^14.0.0",
     "npm-check-updates": "^16.14.11",
     "nuxt-multi-cache": "^3.1.1",
     "swiper": "^11.0.5",
