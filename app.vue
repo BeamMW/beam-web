@@ -12,6 +12,7 @@ const windowBlurred = useState("windowBlurred", () => false);
 const fileVersion = 3;
 
 const baseURL = useRuntimeConfig().public.baseURL;
+const route = useRoute();
 const router = useRouter();
 
 defineRobotMeta();
@@ -142,8 +143,7 @@ onUnmounted(() => {
         >
           <NuxtPage
             :transition="{
-              name:
-                languageChanged || currentRoute == 'docs-slug' ? '' : 'page',
+              name: languageChanged || route.name == 'docs-slug' ? '' : 'page',
               mode: 'out-in',
               //onBeforeEnter,
               onAfterEnter,
