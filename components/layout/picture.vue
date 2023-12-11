@@ -12,6 +12,7 @@
         type="image/webp"
       />
       <img
+        v-if="clientSide"
         :src="src"
         class="opacity-100 transition-opacity"
         v-bind="$attrs"
@@ -44,4 +45,10 @@ const imageLoaded = ref(false);
 function onImageLoad() {
   imageLoaded.value = true;
 }
+
+const clientSide = ref(false);
+
+onMounted(() => {
+  clientSide.value = true;
+});
 </script>

@@ -3,7 +3,7 @@
     <div class="flex-1 flex items-center">
       <slot name="icon" />
     </div>
-    <p class="text-xs md:text-sm w-full break-words">
+    <p class="text-xs md:text-sm w-full">
       <slot name="text" />
     </p>
   </div>
