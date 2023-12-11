@@ -9,8 +9,8 @@ name: "Deploy to CloudFlare"
 on: [push, pull_request]
 
 env:
-  NODE_OPTIONS: --max-old-space-size=16384 # 7620 is not enough
-  NODE_VERSION: 20.10.0
+  NODE_OPTIONS: --max-old-space-size=7620
+  NODE_VERSION: 20.9.0
 
 jobs:
   deploy:
