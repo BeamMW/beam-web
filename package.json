@@ -30,13 +30,11 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-prettier": "^5.0.1",
-    "nuxt": "^3.8.2",
+    "nuxt-nightly": "^3.9.0-28367346.0c832465",
     "nuxt-simple-robots": "^3.1.9",
     "nuxt-simple-sitemap": "^4.1.10",
     "prettier": "^3.1.1",
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
+    "typescript": "^5.3.3",
     "@nuxt/types": "^2.17.2",
     "@popperjs/core": "^2.11.8",
     "@tailwindcss/typography": "^0.5.10",
