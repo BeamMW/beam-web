@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/__sitemap__/style.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://beam.mw/fr</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/minage</loc>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/mining" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/minage" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/挖矿" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/マイニング" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/mining" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/mining" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/mining" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/mining" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/mining" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/mining" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/mining" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/mining" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/minage" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/mining" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/mining" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/%E3%83%9E%E3%82%A4%E3%83%8B%E3%83%B3%E3%82%B0" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/mining" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/mining" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/%E6%8C%96%E7%9F%BF" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/politique-de-confidentialite</loc>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/politique-de-confidentialite" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/隐私政策" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/プライバシーポリシー" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/politique-de-confidentialite" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/telechargements</loc>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/downloads" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/telechargements" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/下载" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/ダウンロード" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/downloads" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/downloads" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/downloads" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/downloads" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/downloads" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/downloads" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/downloads" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/downloads" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/telechargements" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/downloads" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/downloads" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/downloads" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/downloads" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/%E4%B8%8B%E8%BD%BD" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/atomic-swaps</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/atomic-swaps" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/atomic-swaps" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/bridges</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/bridges" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/bridges" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/changelog</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/changelog" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/changelog" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/cli</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/cli" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/cli" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/core-tech</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/core-tech" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/core-tech" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/desktop</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/desktop" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/desktop" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/dev</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/dev" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/dev" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/ecosystem</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/ecosystem" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/ecosystem" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/explorer</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/explorer" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/explorer" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/mining</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/mining" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/mining" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/mobile</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/mobile" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/mobile" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/node</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/node" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/node" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/node" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/node" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/node" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/node" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/node" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/node" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/node" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/node" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/node" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/node" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/node" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/node" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/node" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/node" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/node" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/node" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/node" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/web-wallet</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/web-wallet" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/web-wallet" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/ecosystem/overview/beamx-dao-governance-framework</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/ecosystem/overview/beamx-dao-governance-framework" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/ecosystem/overview/beamx-dao-governance-framework" />
+    </url>
+    <url>
+        <loc>https://beam.mw/fr/docs/ecosystem/overview/beamx-tokenomics</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://beam.mw/ar/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="ar-001" href="https://beam.mw/ar/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://beam.mw/de/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://beam.mw/de/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://beam.mw/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://beam.mw/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://beam.mw/es/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://beam.mw/es/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://beam.mw/fr/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://beam.mw/fr/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="he" href="https://beam.mw/he/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="he-IL" href="https://beam.mw/he/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://beam.mw/jp/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="ja-JP" href="https://beam.mw/jp/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://beam.mw/ru/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="ru-RU" href="https://beam.mw/ru/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://beam.mw/zh/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://beam.mw/zh/docs/ecosystem/overview/beamx-tokenomics" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://beam.mw/docs/ecosystem/overview/beamx-tokenomics" />
+    </url>
+</urlset>
+<!-- XML Sitemap generated by Nuxt Simple Sitemap v4.1.10 -->

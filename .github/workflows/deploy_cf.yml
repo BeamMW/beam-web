@@ -25,32 +25,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Submodule update
-        shell: bash
-        run: git submodule update --init --recursive
-
-      - name: Update module
-        shell: bash
-        run: git submodule sync && git submodule update --remote --force
-
-      - name: Enable Corepack
-        shell: bash
-        run: corepack enable
-
-      - name: Install packages
-        run: yarn install
-
-      - name: Build
-        run: yarn build
-
-      - name: Generate static
-        run: yarn generate
-
       - name: Publish
         uses: cloudflare/pages-action@1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: ${{ secrets.PROJECT_NAME }}
-          directory: "./dist"
+          directory: "./.output/public"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,6 @@
+# START nuxt-simple-robots (indexable)
+User-agent: *
+Disallow: 
+
+Sitemap: https://beam.mw/sitemap_index.xml
+# END nuxt-simple-robots

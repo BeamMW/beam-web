@@ -1,0 +1,1 @@
+function o(...i){const t=i.map((a,s)=>s===0?a.replace(/\/$/,""):a.replace(/^\//,"").replace(/\/$/,"")),n=t[0],e=t.slice(1).join("/");return n.endsWith(e.split("#")[0])?n+e.substring(e.indexOf("#")):[n,e].join("/")}export{o as j};

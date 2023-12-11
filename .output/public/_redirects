@@ -1,0 +1,29 @@
+/downloads/mainnet            /downloads                     301
+/downloads/mainnet-mac        /downloads                     301
+/downloads/mainnet-linux      /downloads                     301
+/downloads/mainnet-windows    /downloads                     301
+
+/downloads/testnet            https://dappnet.beam.mw/downloads   301
+/downloads/testnet-mac        https://dappnet.beam.mw/downloads   301
+/downloads/testnet-linux      https://dappnet.beam.mw/downloads   301
+/downloads/testnet-windows    https://dappnet.beam.mw/downloads   301
+
+/downloads/dappnet            https://dappnet.beam.mw/downloads   301
+/downloads/dappnet-mac        https://dappnet.beam.mw/downloads   301
+/downloads/dappnet-linux      https://dappnet.beam.mw/downloads   301
+/downloads/dappnet-windows    https://dappnet.beam.mw/downloads   301
+
+/privacy                      /privacy-policy                301
+
+/faq                          /                               301
+/get-started                  /                               301
+/investors                    /                               301
+/ambassadors                  /                               301
+/features                     /                               301
+/faq/*                        /                               301
+
+/beampedia-item/*             /                               302
+/beam-accepted-here           /                               302
+/beampedia                    /                               302
+
+/*  /404.html  404

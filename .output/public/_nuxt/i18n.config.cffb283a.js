@@ -1,0 +1,1 @@
+const e={fallbackLocale:"en",detectBrowserLanguage:{useCookie:!0,cookieKey:"i18n_redirectedE",cookieCrossOrigin:!1,cookieSecure:!1,fallbackLocale:"en",alwaysRedirect:!0,redirectOn:"root"}};export{e as default};
