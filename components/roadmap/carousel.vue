@@ -349,7 +349,7 @@ const customNextButton = ref(null);
 const customPrevButton = ref(null);
 
 const calculateSlidesToShow = () => {
-  if (typeof process !== "undefined" && process.client) {
+  if (process.client) {
     const width = window.innerWidth;
     if (width >= 1280) {
       return 3;
