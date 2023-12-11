@@ -13,4 +13,8 @@ const route = useRoute();
 // use route.fullPath instead of route.params.slug
 const routeName = await handleIndex(normalizePath(route.fullPath));
 const currentCategory = extractCategory(route.fullPath) as string;
+
+definePageMeta({
+  layout: "default",
+});
 </script>

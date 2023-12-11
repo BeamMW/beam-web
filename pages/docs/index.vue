@@ -12,6 +12,10 @@ useSeoMeta({
   ogTitle: title,
   ogDescription: description,
 });
+
+definePageMeta({
+  layout: "default",
+});
 </script>
 <template>
   <div class="bg-page-radial-gradient-purple">

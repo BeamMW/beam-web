@@ -137,19 +137,9 @@ onUnmounted(() => {
         class="will-change-auto"
       />
       <LanguageHandler>
-        <template
-          #default="{ /*onBeforeEnter, */ onAfterEnter, languageChanged }"
-        >
-          <NuxtPage
-            :transition="{
-              name:
-                languageChanged || currentRoute == 'docs-slug' ? '' : 'page',
-              mode: 'out-in',
-              //onBeforeEnter,
-              onAfterEnter,
-            }"
-          />
-        </template>
+        <div>
+          <NuxtPage :transition="false" />
+        </div>
       </LanguageHandler>
     </NuxtLayout>
   </main>
