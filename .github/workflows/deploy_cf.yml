@@ -43,8 +43,8 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Generate static with debug mode
-        run: yarn generate --devtools
+      - name: Generate static
+        run: yarn generate
 
       - name: Publish
         uses: cloudflare/pages-action@1
