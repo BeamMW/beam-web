@@ -9,8 +9,8 @@ name: "Deploy to CloudFlare"
 on: [push, pull_request]
 
 env:
-  NODE_OPTIONS: --max-old-space-size=16384 # 7620 is not enough
-  NODE_VERSION: 20.10.0
+  NODE_OPTIONS: --max-old-space-size=7620
+  NODE_VERSION: 20.9.0
 
 jobs:
   deploy:
@@ -24,14 +24,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Submodule update
-        shell: bash
-        run: git submodule update --init --recursive
-
-      - name: Update module
-        shell: bash
-        run: git submodule sync && git submodule update --remote --force
 
       - name: Enable Corepack
         shell: bash
