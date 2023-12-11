@@ -23,13 +23,17 @@ const localePath = useLocalePath();
           class="md:flex md:p-0 font-medium md:rounded-lg md:flex-row md:gap-x-8 md:mt-0"
         >
           <li class="hidden md:block">
-            <HeaderNavigationItem name="index" :to="localePath('index')">{{
-              $t("header.nav.home")
-            }}</HeaderNavigationItem>
+            <HeaderNavigationItem
+              name="index"
+              :prefetch="true"
+              :to="localePath('index')"
+              >{{ $t("header.nav.home") }}</HeaderNavigationItem
+            >
           </li>
           <li class="hidden md:block">
             <HeaderNavigationItem
               name="downloads"
+              :prefetch="true"
               :to="localePath('downloads')"
               >{{ $t("header.nav.downloads") }}</HeaderNavigationItem
             >
