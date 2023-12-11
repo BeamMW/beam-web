@@ -117,6 +117,10 @@ const copyDocsAssetsToPublic = async () => {
 
 export default defineNuxtConfig({
   ssr: true,
+  app: {
+    pageTransition: false,
+    layoutTransition: false,
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
