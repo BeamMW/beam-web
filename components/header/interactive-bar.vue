@@ -26,10 +26,9 @@ defineProps({
           <div class="flex items-center h-full">
             <div class="font-bold text-sm text-white/90">
               <Vue3Marquee
-                :clone="true"
+                :clone="false"
                 :gradient="true"
-                :pause-on-hover="false"
-                :pause-on-click="true"
+                :pause-on-hover="true"
                 :gradient-color="gradientColor"
                 :gradient-length="'80px'"
               >
