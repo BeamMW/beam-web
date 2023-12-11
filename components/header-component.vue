@@ -66,7 +66,7 @@ const localePath = useLocalePath();
                 <button
                   title="Home"
                   type="button"
-                  class="flex items-center md:hidden p-1 h-9 w-9 text-sm rounded-lg focus:outline-none focus:ring-2 hover:opacity-75 opacity-90 transition-all focus:ring-beam-blue focus:ring-offset-[#042248]"
+                  class="flex items-center md:hidden p-1 h-9 w-9 text-sm text-white rounded-lg focus:outline-none focus:ring-2 hover:opacity-80 transition-opacity focus:ring-white"
                 >
                   <Icon
                     name="layout/menus"

@@ -96,14 +96,14 @@
             </LayoutLink>
           </div>
         </div>
-        <!--<div class="gradientBlur">
+        <div class="gradientBlur">
           <div></div>
           <div></div>
           <div></div>
           <div></div>
           <div></div>
           <div></div>
-        </div>-->
+        </div>
       </div>
     </div>
     <div class="heroGradient"></div>
