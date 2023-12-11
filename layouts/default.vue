@@ -113,14 +113,12 @@ const themeColors = ref<ThemeSettings>(
   getTheme(route.name ? route.name : "index"),
 );
 
-/*
 watch(
   () => route.fullPath,
   (_routeName) => {
     themeColors.value = getTheme(route.name as string);
   },
 );
-*/
 
 useTitleTemplate();
 
