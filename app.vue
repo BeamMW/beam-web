@@ -12,7 +12,6 @@ const windowBlurred = useState("windowBlurred", () => false);
 const fileVersion = 3;
 
 const baseURL = useRuntimeConfig().public.baseURL;
-const route = useRoute();
 const router = useRouter();
 
 defineRobotMeta();
