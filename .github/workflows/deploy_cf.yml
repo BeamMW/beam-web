@@ -25,6 +25,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Submodule update
+        shell: bash
+        run: git submodule update --init --recursive
+
+      - name: Update module
+        shell: bash
+        run: git submodule sync && git submodule update --remote --force
+
       - name: Enable Corepack
         shell: bash
         run: corepack enable
