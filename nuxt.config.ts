@@ -164,6 +164,10 @@ export default defineNuxtConfig({
     discoverImages: false,
     siteUrl: publicWebUrl,
   },
+  typescript: {
+    typeCheck: true,
+    strict: true,
+  },
   fontMetrics: {
     fonts: [
       { family: "ProximaNova", src: "/fonts/ProximaNova-Regular.woff2" },
