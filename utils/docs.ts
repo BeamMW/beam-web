@@ -1,19 +1,20 @@
 import type { RouteLocationNormalized } from "vue-router";
 import { joinPath } from "./joinPath";
 
+const DOCS_FOLDER = "docs";
 const PAGE_BLACKLIST = ["/summary", "/confidential-assets"];
 
 export const extractCategory = (path: string): string | null => {
   const parts = path.split("/");
 
   // Case with language code
-  if (parts.length > 3 && parts[2] === "docs") {
-    return `/docs/${parts[3]}`;
+  if (parts.length > 3 && parts[2] === DOCS_FOLDER) {
+    return `/${DOCS_FOLDER}/${parts[3]}`;
   }
 
   // Case without language code
-  if (parts.length > 2 && parts[1] === "docs") {
-    return `/docs/${parts[2]}`;
+  if (parts.length > 2 && parts[1] === DOCS_FOLDER) {
+    return `/${DOCS_FOLDER}/${parts[2]}`;
   }
 
   return null;
