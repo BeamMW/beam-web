@@ -13,17 +13,17 @@
 /downloads/dappnet-linux      https://dappnet.beam.mw/downloads   301
 /downloads/dappnet-windows    https://dappnet.beam.mw/downloads   301
 
-/privacy                      /privacy-policy                301
+/privacy                      /privacy-policy                 301
 
 /faq                          /                               301
 /get-started                  /                               301
 /investors                    /                               301
 /ambassadors                  /                               301
-/features                     /                               301
+/features                     /docs                           301
 /faq/*                        /                               301
 
-/beampedia-item/*             /                               302
+/beampedia-item/*             /docs/beampedia                 301
 /beam-accepted-here           /                               302
-/beampedia                    /                               302
+/beampedia                    /docs/beampedia                 301
 
 /*  /404.html  404
