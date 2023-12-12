@@ -146,6 +146,7 @@ const localePath = useLocalePath();
 
 const main: VNodeRef = ref();
 const ctx: VNodeRef = ref();
+const observer = ref<IntersectionObserver | undefined>();
 
 const initAnimation = async () => {
   const { gsap } = await import("gsap");
@@ -158,9 +159,9 @@ const initAnimation = async () => {
 
   const tl = gsap.timeline({ paused: true });
   tl.fromTo(images, { yPercent: 0 }, { yPercent: -50, duration: 1 });
-  tl.fromTo(background, { yPercent: 0 }, { yPercent: 25, duration: 0.5 });
+  tl.fromTo(background, { yPercent: 0 }, { yPercent: 25, duration: 0.8 });
 
-  const observer = new IntersectionObserver((entries) => {
+  observer.value = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         gsap.ticker.add(updateProgress);
@@ -184,7 +185,7 @@ const initAnimation = async () => {
     return (scrollTop - offsetTop) / (scrollHeight + height);
   }
 
-  observer.observe(hero);
+  observer.value.observe(hero);
 };
 
 onMountedAndTransitionDone(async () => {
@@ -192,6 +193,7 @@ onMountedAndTransitionDone(async () => {
 });
 
 onBeforeUnmount(async () => {
+  observer.value?.disconnect();
   await ctx.value.kill();
 });
 </script>
