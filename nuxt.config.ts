@@ -234,9 +234,9 @@ export default defineNuxtConfig({
         zh: "/隐私政策",
         jp: "/プライバシーポリシー",
         de: "/datenschutzrichtlinie",
-        ru: "/политика конфиденциальности",
-        he: "/מדיניות פרטיות",
-        ar: "/سياسة الخصوصية",
+        ru: "/политикаконфиденциальности",
+        he: "/מדיניותפרטיות",
+        ar: "/سياسةالخصوصية",
         es: "/politica-de-privacidad",
       },
       mining: {
