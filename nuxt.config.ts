@@ -84,13 +84,6 @@ const docsRoutes = globSync("./content/**/*.md").map((path) =>
     .replace("/README", "/index"),
 );
 
-const docsRoutesWithLocales = [];
-for (const locale of locales) {
-  for (const route of docsRoutes) {
-    docsRoutesWithLocales.push(`/${locale.code}${route}`);
-  }
-}
-
 const copyDocsAssetsToPublic = async () => {
   const docsPath = join(process.cwd(), "content", "docs");
   const publicAssetsPath = join(process.cwd(), "public", "assets", "docs");
@@ -148,8 +141,8 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: [...docsRoutes, ...docsRoutesWithLocales],
-      crawlLinks: true,
+      routes: ["/sitemap.xml", ...docsRoutes],
+      // crawlLinks: true,
       failOnError: false,
     },
   },
