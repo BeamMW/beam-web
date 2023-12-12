@@ -1,4 +1,4 @@
-import { RouteLocationNormalized } from "vue-router";
+import type { RouteLocationNormalized } from "vue-router";
 import { joinPath } from "./joinPath";
 
 const PAGE_BLACKLIST = ["/summary", "/confidential-assets"];

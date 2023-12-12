@@ -1,4 +1,4 @@
-import { URLEntry } from "@/utils/linkElements";
+import type { URLEntry } from "@/utils/linkElements";
 import { extractOriginsFromEnum } from "@/utils/extractOriginsFromEnum";
 
 export enum SupportedPlatforms {
