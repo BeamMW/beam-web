@@ -11,5 +11,5 @@
   Cross-Origin-Resource-Policy: same-origin
   Origin-Agent-Cluster: ?1
   Referrer-Policy: no-referrer
-  Permissions-Policy: camera=(), display-capture=(), fullscreen=(), geolocation=(), microphone=();
+  Permissions-Policy: camera=(), display-capture=(), fullscreen=(), geolocation=(), microphone=()
 
