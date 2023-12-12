@@ -141,6 +141,17 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  // Global
+  security: {
+    rateLimiter: false,
+    sri: true,
+    removeLoggers: {
+      external: [],
+      consoleType: ["log", "debug"],
+      include: [/\.[jt]sx?$/, /\.vue\??/],
+      exclude: [/node_modules/, /\.git/],
+    },
+  },
   nitro: {
     prerender: {
       routes: [...docsRoutes],
