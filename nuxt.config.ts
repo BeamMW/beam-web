@@ -142,8 +142,8 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ["/sitemap.xml", ...docsRoutes],
-      crawlLinks: true,
+      routes: [...docsRoutes],
+      // crawlLinks: true,
       failOnError: false,
     },
   },
