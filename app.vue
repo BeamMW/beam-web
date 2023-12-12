@@ -9,9 +9,7 @@ const localePath = useLocalePath();
 
 const windowLocked = useState("windowLocked", () => false);
 const windowBlurred = useState("windowBlurred", () => false);
-const fileVersion = 3;
 
-const baseURL = useRuntimeConfig().public.baseURL;
 const router = useRouter();
 
 defineRobotMeta();
@@ -77,26 +75,6 @@ onUnmounted(() => {
         :type="linkElement.type"
         :crossorigin="linkElement.crossorigin ? 'anonymous' : undefined"
       />
-      <Link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        :href="`/apple-touch-icon.png?v=${fileVersion}`"
-      />
-      <Link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        :href="`/favicon-32x32.png?v=${fileVersion}`"
-      />
-      <Link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        :href="`/favicon-16x16.png?v=${fileVersion}`"
-      />
-      <Link rel="manifest" :href="`/site.webmanifest?v=${fileVersion}`" />
-      <Link rel="mask-icon" :href="`/safari-pinned-tab.svg?v=${fileVersion}`" />
-      <Link rel="shortcut icon" :href="`/favicon.ico?v=${fileVersion}`" />
       <Meta
         content="width=device-width, initial-scale=1, maximum-scale=5"
         name="viewport"
@@ -116,20 +94,6 @@ onUnmounted(() => {
           platformDetails[SupportedPlatforms.IOS].links.store as string,
         )}`"
       />
-      <Meta
-        name="twitter:image:src"
-        :content="`${baseURL}/card.png?v=${fileVersion}`"
-      />
-      <Meta name="twitter:card" content="summary_large_image" />
-      <Meta property="og:type" content="object" />
-      <Meta
-        property="og:image"
-        :content="`${baseURL}/card.png?v=${fileVersion}`"
-      />
-      <Meta property="og:image:type" content="image/png" />
-      <Meta property="og:image:width" content="1200" />
-      <Meta property="og:image:height" content="630" />
-      <Meta property="og:url" :content="baseURL" />
     </Head>
     <NuxtLayout>
       <NuxtLoadingIndicator

@@ -127,6 +127,7 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     "nuxt-simple-sitemap",
     "nuxt-simple-robots",
+    "nuxt-seo-experiments",
     "@nuxtjs/fontaine",
     "@nuxt/content",
     "nuxt-multi-cache",
