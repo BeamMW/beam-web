@@ -149,45 +149,42 @@ const ctx: VNodeRef = ref();
 
 const initAnimation = async () => {
   const { gsap } = await import("gsap");
-  const { ScrollTrigger } = await import("gsap/ScrollTrigger");
-  gsap.registerPlugin(ScrollTrigger);
 
-  ctx.value = gsap.context((self) => {
-    if (self) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".heroContainer",
-          start: "top top",
-          end: "bottom top",
-          scrub: 0.5,
-        },
-        easing: "ease",
-        invalidateOnRefresh: true,
-      });
-      tl.fromTo(
-        ".heroImages",
-        {
-          yPercent: 0,
-          duration: 0.1,
-        },
-        {
-          yPercent: -50,
-        },
-        "<",
-      );
-      tl.fromTo(
-        ".heroBackground",
-        {
-          yPercent: 0,
-        },
-        {
-          yPercent: 25,
-          duration: 0.5,
-        },
-        "<",
-      );
-    }
-  }, main.value);
+  const hero = document.querySelector(".heroContainer") as HTMLElement;
+  const images = document.querySelector(".heroImages");
+  const background = document.querySelector(".heroBackground");
+
+  let progress = 0;
+
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo(images, { yPercent: 0 }, { yPercent: -50, duration: 1 });
+  tl.fromTo(background, { yPercent: 0 }, { yPercent: 25, duration: 0.5 });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        gsap.ticker.add(updateProgress);
+      } else {
+        gsap.ticker.remove(updateProgress);
+      }
+    });
+  });
+
+  function updateProgress() {
+    progress = getProgress(hero);
+    tl.progress(progress);
+  }
+
+  // Calculate progress value based on scroll position
+  function getProgress(el: HTMLElement) {
+    const scrollTop = window.scrollY;
+    const height = el.offsetHeight;
+    const offsetTop = el.offsetTop;
+    const scrollHeight = document.body.scrollHeight - window.innerHeight;
+    return (scrollTop - offsetTop) / (scrollHeight + height);
+  }
+
+  observer.observe(hero);
 };
 
 onMountedAndTransitionDone(async () => {

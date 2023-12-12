@@ -51,7 +51,7 @@ defineProps({
   </div>
 </template>
 
-<style lang="postcss">
+<style>
 .vue3-marquee .overlay::before,
 .vue3-marquee .overlay::after {
   @apply pointer-events-none;

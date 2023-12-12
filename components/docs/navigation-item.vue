@@ -49,7 +49,7 @@ function processPath(path: string) {
 }
 </script>
 
-<style lang="postcss">
+<style>
 aside a.navigation-selected {
   @apply text-beam-blue hover:text-beam-blue;
 }

@@ -49,7 +49,7 @@ const handleClick = (onClick: () => void, e: MouseEvent) => {
   </div>
 </template>
 
-<style scoped lang="postcss">
+<style scoped>
 b {
   @apply font-bold uppercase tracking-wider text-white/70;
 }
