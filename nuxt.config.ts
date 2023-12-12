@@ -160,7 +160,7 @@ export default defineNuxtConfig({
   content: {
     documentDriven: false,
   },
-  sitemap: {
+  site: {
     discoverImages: false,
     siteUrl: publicWebUrl,
   },
