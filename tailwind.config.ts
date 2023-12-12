@@ -52,29 +52,8 @@ const config = {
   ],
   theme: {
     extend: {
-      keyframes: {
-        "modal-scale": {
-          "0%": { transform: "scale(0.9)", opacity: "0" },
-          "100%": { transform: "scale(1)", opacity: "1" },
-        },
-        toastScaleIn: {
-          "0%": { opacity: 0, transform: "scale(0.75)" },
-          "100%": { opacity: 1, transform: "scale(1)" },
-        },
-        toastScaleOut: {
-          "0%": { opacity: 1, transform: "scale(1)" },
-          "100%": { opacity: 0, transform: "scale(0.75)" },
-        },
-      },
-      animation: {
-        "modal-scale-in":
-          "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards",
-        "modal-scale-out":
-          "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
-        "toast-scale-in":
-          "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards",
-        "toast-scale-out":
-          "modal-scale 0.25s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
+      transitionTimingFunction: {
+        "in-out-custom": "cubic-bezier(0.25, 0.8, 0.25, 1)",
       },
       backgroundImage: {
         "page-radial-gradient":

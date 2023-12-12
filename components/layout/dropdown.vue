@@ -304,9 +304,7 @@ body.bg-beam-bg-green {
 }
 .dropdown-enter-active,
 .dropdown-leave-active {
-  transition:
-    opacity 225ms ease-in-out,
-    transform 225ms ease-in-out;
+  @apply transition-[opacity,transform] ease-in-out-custom duration-[225ms];
 }
 
 @media (max-width: 767px) {

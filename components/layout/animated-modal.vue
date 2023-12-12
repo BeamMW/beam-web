@@ -1,11 +1,39 @@
+<script lang="ts" setup>
+import { ref, defineEmits } from "vue";
+
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+});
+
+const emitClose = defineEmits(["close"]);
+
+const visible = ref(false);
+
+function close() {
+  emitClose("close");
+  visible.value = false;
+}
+
+function show() {
+  visible.value = true;
+}
+
+// Expose both 'show' and 'close' methods to the parent component
+defineExpose({ show, close });
+</script>
+
 <template>
   <section class="inherit">
     <transition
       name="modal-bg"
+      class="ease-in-out-custom duration-[200ms]"
       enter-from-class="opacity-0"
-      enter-active-class="transition-opacity duration-500 ease-out"
+      enter-active-class="transition-opacity"
       leave-from-class="opacity-100"
-      leave-active-class="transition-opacity duration-500 ease-out opacity-0"
+      leave-active-class="transition-opacity opacity-0"
     >
       <div
         v-show="visible"
@@ -15,8 +43,11 @@
     </transition>
     <transition
       name="modal"
-      enter-active-class="animate-modal-scale-in"
-      leave-active-class="animate-modal-scale-out"
+      class="ease-in-out-custom duration-[200ms]"
+      enter-from-class="opacity-0 scale-90 scale-y-75"
+      enter-active-class="opacity-1 scale-100 scale-y-100"
+      leave-from-class="opacity-1 scale-100 scale-y-100"
+      leave-active-class="opacity-0 scale-90 scale-y-90"
     >
       <div
         v-show="visible"
@@ -50,33 +81,6 @@
     </transition>
   </section>
 </template>
-
-<script lang="ts" setup>
-import { ref, defineEmits } from "vue";
-
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-});
-
-const emitClose = defineEmits(["close"]);
-
-const visible = ref(false);
-
-function close() {
-  emitClose("close");
-  visible.value = false;
-}
-
-function show() {
-  visible.value = true;
-}
-
-// Expose both 'show' and 'close' methods to the parent component
-defineExpose({ show, close });
-</script>
 
 <style scoped>
 .inherit {
