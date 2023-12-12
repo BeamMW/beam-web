@@ -9,7 +9,7 @@ const props = defineProps({
   },
   tInterpolation: {
     type: Object,
-    required: true,
+    required: false,
     default: () => {},
   },
 });
