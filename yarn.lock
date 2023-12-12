@@ -3000,6 +3000,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/canvas-confetti@npm:^1.6.4":
+  version: 1.6.4
+  resolution: "@types/canvas-confetti@npm:1.6.4"
+  checksum: 0452e1f381e5d59471578be1b83f2908f0906ba0fddfe16f941a07e070f4ad91ceaf1a68bd84d84bb5e81214c95ef00137677d9d61d81119051425ca5ce307ba
+  languageName: node
+  linkType: hard
+
 "@types/clean-css@npm:*":
   version: 4.2.6
   resolution: "@types/clean-css@npm:4.2.6"
@@ -5516,12 +5523,14 @@ __metadata:
     "@nuxtjs/tailwindcss": ^6.10.1
     "@popperjs/core": ^2.11.8
     "@tailwindcss/typography": ^0.5.10
+    "@types/canvas-confetti": ^1.6.4
     "@types/fs-extra": ^11.0.4
     "@types/lodash": ^4.14.202
     "@types/markdown-it": ^13.0.7
     "@types/uuid": ^9.0.7
     "@typescript-eslint/eslint-plugin": ^6.14.0
     "@typescript-eslint/parser": ^6.14.0
+    canvas-confetti: ^1.9.2
     date-fns: ^2.30.0
     eslint: ^8.55.0
     eslint-config-prettier: ^9.1.0
@@ -5918,6 +5927,13 @@ __metadata:
   version: 1.0.30001566
   resolution: "caniuse-lite@npm:1.0.30001566"
   checksum: 0f9084bf9f7d5c0a9ddb200c2baddb25dd2ad5a2f205f01e7b971f3e98e9a7bb23c2d86bae48237e9bc9782b682cffaaf3406d936937ab9844987dbe2a6401f2
+  languageName: node
+  linkType: hard
+
+"canvas-confetti@npm:^1.9.2":
+  version: 1.9.2
+  resolution: "canvas-confetti@npm:1.9.2"
+  checksum: e85fc0bbcd6ce7879997ccf18ba5a9747589ecf6916a06bdb3d229551e8c45c74fd5b9f8d455763db4a9e868c4c3e13b4630c26451823c9f7d1d390f0f0ab192
   languageName: node
   linkType: hard
 

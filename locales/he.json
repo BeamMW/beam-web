@@ -218,6 +218,10 @@
   "downloads": {
     "downloadWallet": "הורד ארנק Beam",
     "downloadButton": "הורדה עבור {platform}",
+    "started": {
+      "title": "🚀 ארנק הביטקוין Beam בדרך אליך!",
+      "message": "תודה שבחרת ב-Beam. בזמן המתנה להשלמת ההורדה, למה לא לחקור את המגוון העשיר של תכונות וטיפים ב[תיעוד של Beam]({documentation})?"
+    },
     "divider": "או",
     "detailslink": "פרטים",
     "detailswindow": {

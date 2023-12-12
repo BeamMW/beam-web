@@ -16,16 +16,31 @@ useSeoMeta({
 definePageMeta({
   layout: "default",
 });
+
+const pageTitle = ref<string>(
+  `${t("downloads.downloadWallet")}${
+    environmentGetter.isDappnet ? ` (Dappnet)` : ""
+  }`,
+);
+
+function downloadStarted() {
+  pageTitle.value = t("downloads.started.title");
+}
+
+onMounted(() =>
+  eventBus.on(UserInteractionEvents.DOWNLOAD_ITEM, downloadStarted),
+);
+
+onUnmounted(() =>
+  eventBus.off(UserInteractionEvents.DOWNLOAD_ITEM, downloadStarted),
+);
 </script>
 
 <template>
   <section class="bg-[#041D3C]">
     <section class="pt-10 lg:pt-12 bg-page-radial-gradient">
-      <LayoutTitle
-        :title="`${$t('downloads.downloadWallet')}${
-          environmentGetter.isDappnet ? ` (Dappnet)` : ''
-        }`"
-      />
+      <LayoutTitle :title="pageTitle" />
+      <DownloadStartedConfirmation />
       <div class="min-h-[530px]">
         <ClientOnly>
           <DownloadPlatformSelector />

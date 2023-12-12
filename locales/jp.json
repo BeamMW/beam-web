@@ -218,6 +218,10 @@
   "downloads": {
     "downloadWallet": "Beamウォレットをダウンロード",
     "downloadButton": "{platform}用にダウンロード",
+    "started": {
+      "title": "🚀 あなたのBeamウォレットのダウンロードが始まりました！",
+      "message": "Beamを選んでいただきありがとうございます。ダウンロードが完了するのを待っている間に、[Beamのドキュメント]({documentation})で豊富な機能やヒントを探索してみてはいかがでしょうか？"
+    },
     "divider": "または",
     "detailslink": "詳細",
     "detailswindow": {

@@ -158,6 +158,7 @@ export default defineNuxtConfig({
           // "'strict-dynamic'", // Use strict dynamic as outlined here: https://nuxt-security.vercel.app/documentation/advanced/strict-csp#strict-dynamic-csp-level-3
           "'self'", // Allow external scripts from self origin
         ],
+        "worker-src": "'self' blob:",
         "frame-ancestors": false, // This one doesn't work when CSP is in Meta
       },
     },
