@@ -4,7 +4,7 @@
     class="bg-page-radial-gradient-purple flex flex-col-reverse max-w-screen-xl mx-auto pb-10 md:!py-10 lg:!py-12 overflow-x-visible overflow-y-visible md:grid gap-5 md:gap-12 md:grid-cols-12"
   >
     <article
-      class="px-3 md:px-4 md:col-span-7 lg:col-span-9 prose max-w-none lg:prose-lg prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-blue prose-h1:uppercase prose-h2:text-2xl prose-h3:text-base prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
+      class="px-3 md:px-4 md:col-span-7 lg:col-span-9 prose max-w-none lg:prose-lg prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-blue prose-h1:uppercase prose-h2:text-2xl prose-h3:text-xl prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
     >
       <ContentDoc :path="routeName">
         <template #default="{ doc }"
