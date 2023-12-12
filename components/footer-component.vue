@@ -149,6 +149,7 @@ const menus = computed(() => [
       { text: t("footer.join.newsletter"), href: ExternalLinks.SUBSTACK },
       { text: ExternalLinksTitle.YOUTUBE, href: ExternalLinks.YOUTUBE },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
+      { text: "Beampedia", href: `${localePath("docs")}/beampedia` },
     ],
   },
   {
