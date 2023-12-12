@@ -3104,13 +3104,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/hash-sum@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@types/hash-sum@npm:1.0.2"
-  checksum: 190589750c9de62fb0303b45fe9320d1433c87374bdbb1091f3489dc702095ba6a34f8954683d2fe4fdc9c115ae53707a2405da5e8139eb14d2bbbad900e953d
-  languageName: node
-  linkType: hard
-
 "@types/hast@npm:^2.0.0":
   version: 2.3.4
   resolution: "@types/hast@npm:2.3.4"
@@ -5524,7 +5517,6 @@ __metadata:
     "@popperjs/core": ^2.11.8
     "@tailwindcss/typography": ^0.5.10
     "@types/fs-extra": ^11.0.4
-    "@types/hash-sum": ^1.0.2
     "@types/lodash": ^4.14.202
     "@types/markdown-it": ^13.0.7
     "@types/uuid": ^9.0.7
@@ -5539,7 +5531,6 @@ __metadata:
     glob: ^10.3.10
     globby: ^14.0.0
     gsap: ^3.12.3
-    hash-sum: ^2.0.0
     markdown-it: ^14.0.0
     npm-check-updates: ^16.14.11
     nuxt: ^3.8.2
