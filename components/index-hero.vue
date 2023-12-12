@@ -32,6 +32,7 @@
             <LayoutButton
               class="whitespace-nowrap"
               :button-link="localePath('downloads')"
+              :prefetch="true"
               accent-color="beam-blue"
             >
               <Icon class="w-6 h-6" name="layout/flat-beam-animated" />
