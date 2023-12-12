@@ -218,6 +218,10 @@
   "downloads": {
     "downloadWallet": "Téléchargez le portefeuille Beam",
     "downloadButton": "Télécharger pour {platform}",
+    "started": {
+      "title": "🚀 Votre portefeuille Beam est en route !",
+      "message": "Merci d'avoir choisi Beam. Pendant que vous attendez que le téléchargement se termine, pourquoi ne pas explorer la richesse des fonctionnalités et des astuces dans la [documentation Beam]({documentation}) ?"
+    },
     "divider": "ou",
     "detailslink": "Détails",
     "detailswindow": {

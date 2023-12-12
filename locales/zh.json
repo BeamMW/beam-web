@@ -218,6 +218,10 @@
   "downloads": {
     "downloadWallet": "下载 Beam 钱包",
     "downloadButton": "下载适用于 {platform}",
+    "started": {
+      "title": "🚀 您的Beam钱包正在下载中！",
+      "message": "感谢您选择Beam。在等待下载完成的同时，为何不浏览一下[Beam文档]({documentation})中的丰富功能和提示呢？"
+    },
     "divider": "或",
     "detailslink": "查看详情",
     "detailswindow": {

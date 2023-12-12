@@ -218,6 +218,10 @@
   "downloads": {
     "downloadWallet": "Baixar carteira Beam",
     "downloadButton": "Download para {platform}",
+    "started": {
+      "title": "🚀 O download da sua Carteira Beam está a caminho!",
+      "message": "Obrigado por escolher a Beam. Enquanto aguarda a conclusão do download, que tal explorar a riqueza de recursos e dicas na [documentação da Beam]({documentation})?"
+    },
     "divider": "ou",
     "detailslink": "Detalhes",
     "detailswindow": {

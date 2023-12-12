@@ -218,6 +218,10 @@
   "downloads": {
     "downloadWallet": "Beam Wallet herunterladen",
     "downloadButton": "Herunterladen für {platform}",
+    "started": {
+      "title": "🚀 Ihr Beam-Wallet-Download ist unterwegs!",
+      "message": "Danke, dass Sie sich für Beam entschieden haben. Während Sie auf den Abschluss des Downloads warten, warum nicht die Fülle an Funktionen und Tipps in der [Beam-Dokumentation]({documentation}) erkunden?"
+    },
     "divider": "oder",
     "detailslink": "Details",
     "detailswindow": {
