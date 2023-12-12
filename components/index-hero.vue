@@ -194,7 +194,7 @@ const initAnimation = async () => {
   }, main.value);
 };
 
-onMountedAndTransitionDone(async () => {
+onMounted(async () => {
   await initAnimation();
 });
 

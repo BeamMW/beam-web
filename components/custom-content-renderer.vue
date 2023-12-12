@@ -3,11 +3,10 @@
 </template>
 
 <script lang="ts" setup>
+import type { ParsedContent } from "@nuxt/content/dist/runtime/types/index";
+
 const props = defineProps<{
-  value: {
-    type: object;
-    required: true;
-  };
+  value: ParsedContent;
 }>();
 
 // https://github.com/nuxt/content/issues/2000
