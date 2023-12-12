@@ -4,8 +4,11 @@
   >
     <template v-for="component in components" :key="component.id">
       <transition
-        enter-active-class="animate-toast-scale-in"
-        leave-active-class="animate-toast-scale-out"
+        class="ease-in-out-custom duration-[200ms]"
+        enter-from-class="opacity-0 scale-90 scale-y-75"
+        enter-active-class="opacity-1 scale-100 scale-y-100"
+        leave-from-class="opacity-1 scale-100 scale-y-100"
+        leave-active-class="opacity-0 scale-90 scale-y-90"
         @after-leave="() => afterLeave(component.id)"
       >
         <div
