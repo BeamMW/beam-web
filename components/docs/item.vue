@@ -46,7 +46,13 @@
               class="py-4 md:h-[82vh] md:overflow-y-scroll md:overflow-x-hidden md:pb-20"
             >
               <section class="py-4 md:pt-0 rounded-xl">
-                <h6>{{ $t("docs.summary") }}</h6>
+                <h6>
+                  {{
+                    filteredList.length > 0
+                      ? $t("docs.summary")
+                      : $t("docs.content")
+                  }}
+                </h6>
                 <li class="list-none mb-4 rtl:pl-5 ltr:pr-5">
                   <DocsNavigationItem
                     :article="index"
