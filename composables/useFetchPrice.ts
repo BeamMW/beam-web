@@ -1,13 +1,29 @@
-interface CoinGeckoAPIResponse {
-  beam: { usd: number; usd_24h_change: number };
-}
-
-type PriceResponse = { usd: number; change: number };
+import { LocalStorage } from "@/utils/localStorage";
 
 export const CACHE_MAX_AGE = 20; // In seconds
+const CACHE_NAMESPACE = "beam";
+const CACHE_PRICE_NAME = "price";
+
+interface CoinGeckoResponse {
+  beam: {
+    usd: number;
+    usd_24h_change: number;
+  };
+}
+
+interface PriceResponse {
+  usd: number;
+  change: number;
+}
+
+interface StoredPrice {
+  lastFetchedAt: number;
+  usd: string;
+  change: string;
+}
 
 async function fetchPrice(): Promise<PriceResponse> {
-  const response: CoinGeckoAPIResponse = await $fetch(
+  const response: CoinGeckoResponse = await $fetch(
     `https://api.coingecko.com/api/v3/simple/price?ids=beam&vs_currencies=usd&include_market_cap=false&include_24hr_vol=false&include_24hr_change=true&include_last_updated_at=false&precision=5&c=${Math.random()}`,
   );
 
@@ -26,41 +42,38 @@ async function fetchPrice(): Promise<PriceResponse> {
   };
 }
 
-export enum PriceStorageStructure {
-  LAST_FETCHED_AT = "price.lastFetchedAt",
-  USD = "price.usd",
-  CHANGE = "price.change",
-}
+export const useFetchPrice = async (): Promise<PriceResponse> => {
+  const price = LocalStorage.getItem<StoredPrice>(
+    CACHE_PRICE_NAME,
+    CACHE_NAMESPACE,
+  );
 
-export const useFetchPrice: () => Promise<PriceResponse> = async () => {
-  const localForage = (await import("localforage")).default;
-  const lastFetchedAt = (await localForage.getItem(
-    PriceStorageStructure.LAST_FETCHED_AT,
-  )) as number;
-  const currentTime = Date.now();
-
-  if (!lastFetchedAt || currentTime - lastFetchedAt > CACHE_MAX_AGE * 1000) {
+  if (!price || Date.now() - price.lastFetchedAt > CACHE_MAX_AGE * 1000) {
     try {
       const { usd, change } = await fetchPrice();
-      await localForage.setItem(PriceStorageStructure.USD, usd);
-      await localForage.setItem(PriceStorageStructure.CHANGE, change);
-      await localForage.setItem(
-        PriceStorageStructure.LAST_FETCHED_AT,
-        currentTime,
-      );
+      const storedPrice: StoredPrice = {
+        lastFetchedAt: Date.now(),
+        usd: usd.toString(),
+        change: change.toString(),
+      };
+      LocalStorage.setItem(CACHE_PRICE_NAME, storedPrice, CACHE_NAMESPACE);
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error("Error fetching price:", error);
+      console.error(error);
       throw error;
     }
   }
 
-  return {
-    usd: parseFloat(
-      (await localForage.getItem(PriceStorageStructure.USD)) as string,
-    ),
-    change: parseFloat(
-      (await localForage.getItem(PriceStorageStructure.CHANGE)) as string,
-    ),
-  };
+  const currentPrice = LocalStorage.getItem<StoredPrice>(
+    CACHE_PRICE_NAME,
+    CACHE_NAMESPACE,
+  );
+  if (currentPrice && currentPrice.usd && currentPrice.change) {
+    return {
+      usd: parseFloat(currentPrice.usd),
+      change: parseFloat(currentPrice.change),
+    };
+  }
+
+  throw new Error("Unable to fetch data");
 };
