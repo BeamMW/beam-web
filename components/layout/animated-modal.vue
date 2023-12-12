@@ -46,8 +46,8 @@ defineExpose({ show, close });
       class="ease-in-out-custom duration-[200ms]"
       enter-from-class="opacity-0 scale-90 scale-y-75"
       enter-active-class="opacity-1 scale-100 scale-y-100"
-      leave-from-class="opacity-1 scale-100 scale-y-100"
-      leave-active-class="opacity-0 scale-90 scale-y-90"
+      leave-from-class="opacity-1 scale-100"
+      leave-active-class="opacity-0 scale-90"
     >
       <div
         v-show="visible"

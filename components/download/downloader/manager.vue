@@ -4,7 +4,7 @@
   >
     <template v-for="component in components" :key="component.id">
       <transition
-        class="ease-in-out-custom duration-[200ms]"
+        class="ease-in-out-custom duration-[250ms]"
         enter-from-class="opacity-0 scale-90 scale-y-75"
         enter-active-class="opacity-1 scale-100 scale-y-100"
         leave-from-class="opacity-1 scale-100 scale-y-100"
