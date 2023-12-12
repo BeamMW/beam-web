@@ -15,6 +15,7 @@
     <img
       v-if="props.loading == 'lazy' && clientSide"
       :src="iconUrl"
+      :alt="alt"
       loading="lazy"
       v-bind="$attrs"
       data-load-type="2"
@@ -23,6 +24,7 @@
     <img
       v-else-if="props.loading == 'eager'"
       :src="iconUrl"
+      :alt="alt"
       v-bind="$attrs"
       data-load-type="3"
     />
@@ -36,6 +38,11 @@ const props = defineProps({
   name: {
     type: String,
     required: true,
+  },
+  alt: {
+    type: String,
+    default: undefined,
+    required: false,
   },
   classParent: {
     type: String,

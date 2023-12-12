@@ -9,9 +9,7 @@ const { t } = useI18n();
 const description = computed(() => t("head.descriptions.index"));
 
 useSeoMeta({
-  title: "",
   description,
-  ogTitle: "",
   ogDescription: description,
 });
 
