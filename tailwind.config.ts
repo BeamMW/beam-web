@@ -68,13 +68,13 @@ const config = {
       },
       animation: {
         "modal-scale-in":
-          "modal-scale 0.1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+          "modal-scale 0.08s cubic-bezier(0.4, 0, 0.2, 1) forwards",
         "modal-scale-out":
-          "modal-scale 0.1s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
+          "modal-scale 0.08s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
         "toast-scale-in":
-          "modal-scale 0.1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+          "modal-scale 0.08s cubic-bezier(0.4, 0, 0.2, 1) forwards",
         "toast-scale-out":
-          "modal-scale 0.1s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
+          "modal-scale 0.08s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards",
       },
       backgroundImage: {
         "page-radial-gradient":
