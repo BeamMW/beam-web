@@ -5,7 +5,7 @@ const localePath = useLocalePath();
 
 const showDownloadStartedBanner = ref(false);
 
-const confettiCount = 500;
+const confettiCount = 250;
 const confettiDefaults = {
   origin: { x: 0.5, y: 0.8 },
   colors: ["#24C1FF", "#39FFF2", "#FF51FF"],
