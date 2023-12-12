@@ -14,6 +14,11 @@ const props = defineProps({
     required: false,
     default: false,
   },
+  prefetch: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
   as: {
     type: String,
     required: false,
@@ -38,6 +43,7 @@ const classToSet = computed(
 <template>
   <LayoutLink
     v-if="as == 'link'"
+    :prefetch="prefetch"
     :class="classToSet"
     :to="buttonLink"
     v-bind="$attrs"
@@ -49,7 +55,7 @@ const classToSet = computed(
   </button>
 </template>
 
-<style scoped lang="postcss">
+<style scoped>
 .small {
   @apply text-base py-3 px-4;
 }
