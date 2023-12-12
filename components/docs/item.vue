@@ -47,15 +47,18 @@
             >
               <section class="py-4 md:pt-0 rounded-xl">
                 <h6>{{ $t("docs.summary") }}</h6>
-                <li
-                  class="list-none mb-4 pb-4 border-b border-white/20 rtl:pl-5 ltr:pr-5"
-                >
+                <li class="list-none mb-4 rtl:pl-5 ltr:pr-5">
                   <DocsNavigationItem
                     :article="index"
                     :route-name="routeName"
                   />
                 </li>
-                <h6>{{ $t("docs.content") }}</h6>
+                <h6
+                  v-if="filteredList.length > 0"
+                  class="pt-4 border-t border-white/20"
+                >
+                  {{ $t("docs.content") }}
+                </h6>
                 <div
                   v-for="article in filteredList"
                   :key="article._path"
@@ -146,7 +149,7 @@ const filteredList = computed(() => {
 </script>
 <style scoped>
 h6 {
-  @apply font-bold text-xs sm:text-base uppercase text-gray-200 mb-2 ltr:ml-4 rtl:mr-4;
+  @apply font-bold text-xs sm:text-base uppercase text-gray-200 mb-2 ltr:pl-4 rtl:pl-4;
 }
 aside .mcontainer {
   @apply transition-colors border rounded-xl border-black border-opacity-30 transition shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset] bg-[#290048];
