@@ -1,4 +1,4 @@
-import { URLEntry } from "@/utils/linkElements";
+import type { URLEntry } from "@/utils/linkElements";
 import { extractOriginsFromEnum } from "@/utils/extractOriginsFromEnum";
 
 export enum SupportedPlatforms {
@@ -32,9 +32,9 @@ export enum ExternalLinks {
   BITCOINTALK = "https://bitcointalk.org/index.php?topic=5052151",
   MEDIUM = "https://medium.com/beam-mw",
   QQ = "https://qm.qq.com/cgi-bin/qm/qr?k=qrfLNFTLxvThCgcF0fqPc2YFtDzMiUcm&authKey=8hGDPVzLLlTvX4SCBAeYc8TlaumsgvpTIdSUs3%2FU0K8U5piBp3znAYD%2Bd9n6vfEC",
-  COINGECKO = "https://www.coingecko.com/en/coins/beam/usd",
+  COINGECKO = "https://www.coingecko.com/en/coins/beam",
   CMC = "https://coinmarketcap.com/currencies/beam/",
-  BEAMASSETS = "https://beamassets.com/",
+  BEAMASSETS = "https://beamassets.com",
 
   // Other links
   DOCS_SOURCES = "https://github.com/BeamMW/docs-gitbook",
@@ -76,12 +76,11 @@ export enum ExternalLinksTitle {
 export const preHtml = {
   preconnect: [
     new URL(ExternalLinks.EXPLORER).origin,
-    // new URL(ExternalLinks.BUILDS_SERVER).origin,
     new URL(ExternalLinks.DEX).origin,
   ] as URLEntry[],
   "dns-prefetch": extractOriginsFromEnum(ExternalLinks) as URLEntry[],
-  prerender: [] as URLEntry[],
-  prefetch: [] as URLEntry[],
+  prerender: [new URL(ExternalLinks.DEX).origin] as URLEntry[],
+  prefetch: [new URL(ExternalLinks.DEX).origin] as URLEntry[],
 };
 
 export const docTypes = [

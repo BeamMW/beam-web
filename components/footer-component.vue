@@ -26,6 +26,7 @@
           <div class="flex gap-3">
             <Icon
               name="logo"
+              alt="Beam logo"
               class="w-10 h-10"
               :as-image="true"
               loading="lazy"
@@ -42,6 +43,7 @@
           <div class="flex gap-3">
             <Icon
               name="logo"
+              alt="Beam logo"
               class="w-10 h-10"
               :as-image="true"
               loading="lazy"
@@ -86,6 +88,7 @@
               >
                 <Icon
                   :name="`socials/${typedExternalLinksIcon[icon]}`"
+                  :alt="typedExternalLinksTitle[icon]"
                   class="w-[18px] h-[18px]"
                   :as-image="true"
                   loading="lazy"

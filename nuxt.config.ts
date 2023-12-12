@@ -2,7 +2,7 @@
 import { join, sep } from "path";
 import { globSync } from "glob";
 import { pathExists, copy } from "fs-extra";
-import { LocaleObject, Directions } from "vue-i18n-routing";
+import type { LocaleObject, Directions } from "vue-i18n-routing";
 
 // List of supported languages
 const locales: LocaleObject[] = [
