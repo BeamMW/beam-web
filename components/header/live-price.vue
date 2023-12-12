@@ -54,7 +54,9 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
-  clearInterval(intervalId);
+  if (intervalId) {
+    clearInterval(intervalId as NodeJS.Timeout);
+  }
 });
 </script>
 

@@ -5,7 +5,7 @@ const DOCS_FOLDER = "docs";
 const PAGE_BLACKLIST = ["/summary", "/confidential-assets"];
 
 export const extractCategory = (path: string): string | null => {
-  const parts = path.split("/");
+  const parts = path.replace(/#.*/, "").split("/");
 
   // Case with language code
   if (parts.length > 3 && parts[2] === DOCS_FOLDER) {

@@ -15,6 +15,7 @@
         :src="src"
         class="opacity-100 transition-opacity"
         v-bind="$attrs"
+        loading="lazy"
         @load="onImageLoad"
       />
     </picture>

@@ -4,7 +4,7 @@
     class="bg-page-radial-gradient-purple flex flex-col-reverse max-w-screen-xl mx-auto pb-10 md:!py-10 lg:!py-12 overflow-x-visible overflow-y-visible md:grid gap-5 md:gap-12 md:grid-cols-12"
   >
     <article
-      class="px-3 md:px-4 md:col-span-7 lg:col-span-9 prose max-w-none lg:prose-lg prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-blue prose-h1:uppercase prose-h2:text-2xl prose-h3:text-xl prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
+      class="px-3 md:px-4 md:col-span-7 lg:col-span-9 prose max-w-none lg:prose-lg prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-blue prose-h1:uppercase prose-h3:text-xl prose-h1:text-2xl prose-h1:tracking-[.25em] prose-h1:font-bold prose-h2:text-xl prose-img:shadow-xl"
     >
       <ContentDoc :path="routeName">
         <template #default="{ doc }"
@@ -87,7 +87,6 @@
 </template>
 
 <script lang="ts" setup>
-import { useRoute } from "vue-router";
 import type {
   ParsedContent,
   QueryBuilder,
@@ -96,7 +95,6 @@ import type {
 const { t } = useI18n();
 const localePath = useLocalePath();
 const route = useRoute();
-const scrollSpy = useScrollSpy();
 
 const props = defineProps({
   routeName: {
@@ -108,6 +106,11 @@ const props = defineProps({
     required: true,
   },
 });
+
+const currentPageExist = await pageExist(props.routeName);
+if (!currentPageExist) {
+  throw createError({ statusCode: 404, statusMessage: "Page not found" });
+}
 
 let everythingQuery: QueryBuilder<ParsedContent>;
 
@@ -127,10 +130,7 @@ const index = ref(
   await queryContent(`${props.currentCategory}/readme`).findOne(),
 );
 
-if (!(await pageExist(props.routeName))) {
-  throw createError({ statusCode: 404, statusMessage: "Page not found" });
-}
-
+const scrollSpy = useScrollSpy();
 const scrollSpyContainer = ref<HTMLElement | null>(null);
 scrollSpy({
   target: scrollSpyContainer,
@@ -153,10 +153,12 @@ const filteredList = computed(() => {
   });
 });
 </script>
+
 <style scoped>
 h6 {
   @apply font-bold text-xs sm:text-base uppercase text-gray-200 mb-2 ltr:pl-4 rtl:pl-4;
 }
+
 aside .mcontainer {
   @apply transition-colors border rounded-xl border-black border-opacity-30 transition shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset] bg-[#290048];
 }

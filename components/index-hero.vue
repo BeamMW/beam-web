@@ -194,7 +194,7 @@ const initAnimation = async () => {
   }, main.value);
 };
 
-onMountedAndTransitionDone(async () => {
+onMounted(async () => {
   await initAnimation();
 });
 
@@ -233,7 +233,7 @@ onBeforeUnmount(async () => {
 }
 
 .heroImages {
-  @apply max-w-full pt-[52vh] md:pt-[45vh] z-[2] will-change-transform flex justify-evenly mx-auto max-w-7xl rtl:!flex-row-reverse;
+  @apply max-w-full pt-[45vh] md:pt-[37vh] z-[2] will-change-transform flex justify-evenly mx-auto md:max-w-7xl rtl:!flex-row-reverse;
 }
 
 .heroContent {

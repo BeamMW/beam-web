@@ -9,7 +9,7 @@ type PlatformDownloadType = {
 
 interface PlatformDownloadDetail {
   version?: string;
-  date?: string;
+  date?: number;
   links: Partial<PlatformDownloadType>;
   checksums: Partial<PlatformDownloadType>;
 }

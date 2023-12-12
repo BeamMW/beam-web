@@ -10,7 +10,7 @@ const props = defineProps({
   tInterpolation: {
     type: Object,
     required: false,
-    default: () => undefined,
+    default: () => {},
   },
 });
 
@@ -68,10 +68,9 @@ const key = `${locale.value}${props.tKey}${JSON.stringify(
   props.tInterpolation,
 )}`;
 
-const { data, pending } = await useAsyncData(
-  key,
-  async () => await renderMarkdown(t(props.tKey, props.tInterpolation)),
-);
+const { data, pending } = await useAsyncData(key, async () => {
+  return await renderMarkdown(t(props.tKey, props.tInterpolation));
+});
 </script>
 
 <template>

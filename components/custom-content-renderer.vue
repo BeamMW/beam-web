@@ -3,27 +3,24 @@
 </template>
 
 <script lang="ts" setup>
+import type { ParsedContent } from "@nuxt/content/dist/runtime/types/index";
+
 const props = defineProps<{
-  value: {
-    type: object;
-    required: true;
-  };
+  value: ParsedContent;
 }>();
 
 // https://github.com/nuxt/content/issues/2000
 function customStringToHtml(input: string): string {
-  // const contentRefPattern = /{% content-ref url="(.+?)" %}/g;
-  // const endContentRefPattern = /{% endcontent-ref %}/g;
+  const urlEmbed = /{% embed url="/g;
+  const urlEmbedEnd = /" %}/g;
   const hintPattern = /{% hint style="(.+?)" %}/g;
   const endHintPattern = /{% endhint %}/g;
 
-  return (
-    input
-      // .replace(contentRefPattern, '<a href="$1">')
-      // .replace(endContentRefPattern, '</a>')
-      .replace(hintPattern, "")
-      .replace(endHintPattern, "")
-  );
+  return input
+    .replace(urlEmbed, "")
+    .replace(urlEmbedEnd, "")
+    .replace(hintPattern, "")
+    .replace(endHintPattern, "");
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

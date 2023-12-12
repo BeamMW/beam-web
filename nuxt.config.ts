@@ -127,6 +127,7 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     "nuxt-simple-sitemap",
     "nuxt-simple-robots",
+    "nuxt-seo-experiments",
     "nuxt-security",
     "@nuxtjs/fontaine",
     "@nuxt/content",
@@ -169,8 +170,8 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ["/sitemap.xml", ...docsRoutes],
-      // crawlLinks: true,
+      routes: [...docsRoutes],
+      crawlLinks: true,
       failOnError: false,
     },
   },
@@ -188,9 +189,13 @@ export default defineNuxtConfig({
   content: {
     documentDriven: false,
   },
-  sitemap: {
+  site: {
     discoverImages: false,
     siteUrl: publicWebUrl,
+  },
+  typescript: {
+    typeCheck: true,
+    strict: true,
   },
   fontMetrics: {
     fonts: [
