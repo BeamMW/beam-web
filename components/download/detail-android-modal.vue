@@ -27,7 +27,7 @@ defineProps({
 <template>
   <section>
     <div>
-      <h6 class="text-base font-bold">
+      <h6 class="text-base font-bold text-white">
         {{ $t("downloads.detailswindow.latestversion") }}
       </h6>
       <p>

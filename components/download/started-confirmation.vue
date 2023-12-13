@@ -12,6 +12,10 @@ const confettiDefaults = {
 };
 
 async function downloadStarted() {
+  if (typeof window !== "undefined") {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
   // Show download started window
   showDownloadStartedBanner.value = true;
 
