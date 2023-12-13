@@ -5113,13 +5113,13 @@ __metadata:
     globby: ^14.0.0
     gsap: ^3.12.3
     markdown-it: ^14.0.0
-    npm-check-updates: ^16.14.11
+    npm-check-updates: ^16.14.12
     nuxt: ^3.8.2
     nuxt-multi-cache: ^3.1.1
-    nuxt-security: ^1.0.0-rc.5
+    nuxt-security: ^1.0.0
     nuxt-seo-experiments: ^3.1.9
     nuxt-simple-robots: ^3.1.10
-    nuxt-simple-sitemap: ^4.1.15
+    nuxt-simple-sitemap: ^4.1.17
     prettier: ^3.1.1
     swiper: ^11.0.5
     tailwindcss: ^3.3.6
@@ -12063,9 +12063,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^16.14.11":
-  version: 16.14.11
-  resolution: "npm-check-updates@npm:16.14.11"
+"npm-check-updates@npm:^16.14.12":
+  version: 16.14.12
+  resolution: "npm-check-updates@npm:16.14.12"
   dependencies:
     chalk: ^5.3.0
     cli-table3: ^0.6.3
@@ -12102,7 +12102,7 @@ __metadata:
   bin:
     ncu: build/src/bin/cli.js
     npm-check-updates: build/src/bin/cli.js
-  checksum: 739ffe5b180b5c1221b54e4377e3df9bcd378ec0ac16c05063d9986ede02eef5d1fb3d9d6e64fd52e28a0e604003e2b5ae98d9db0d41e4ae7a7dc69372c6bb02
+  checksum: 09f7edc55c64c5f6e6185635fb2509ffa589f0d24d582bede45597f5ba29bef8efc38827b573c5181ca95638da8aff6f3f590f113e7bb5c06a46398ba386394f
   languageName: node
   linkType: hard
 
@@ -12307,9 +12307,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt-security@npm:^1.0.0-rc.5":
-  version: 1.0.0-rc.5
-  resolution: "nuxt-security@npm:1.0.0-rc.5"
+"nuxt-security@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "nuxt-security@npm:1.0.0"
   dependencies:
     "@nuxt/kit": ^3.8.0
     basic-auth: ^2.0.1
@@ -12319,7 +12319,7 @@ __metadata:
     pathe: ^1.0.0
     unplugin-remove: ^0.1.6
     xss: ^1.0.14
-  checksum: cfccaf2ab3e156dd911a3e6fa8548f5068b1c209ad7a57dd9bf38f2665f6c30aec1dfcc67f3b987246f3a193421c91381d36bbef3bfd618c0cb0c5f0931ea5cc
+  checksum: d8f89367c4755a0f2610f282f664d2b1147df5638b47c7201f146a88fa8695ec43c2dcd78209ca59d4184a3d2051b0f3abc7e76625d2d94ba5fbdff8579ab5cd
   languageName: node
   linkType: hard
 
@@ -12355,9 +12355,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt-simple-sitemap@npm:^4.1.15":
-  version: 4.1.15
-  resolution: "nuxt-simple-sitemap@npm:4.1.15"
+"nuxt-simple-sitemap@npm:^4.1.17":
+  version: 4.1.17
+  resolution: "nuxt-simple-sitemap@npm:4.1.17"
   dependencies:
     "@nuxt/devtools-kit": ^1.0.5
     "@nuxt/devtools-ui-kit": ^1.0.5
@@ -12373,7 +12373,7 @@ __metadata:
     sirv: ^2.0.3
     site-config-stack: ^1.6.7
     ufo: ^1.3.2
-  checksum: cfc2bbbabd1aacfcf4213c6cf730c0dcfbeec742aa9cb54ed7002198295387df1db1bd279b2a3855630e80712453dfcb8e432771335fa95ee37aea7a32493339
+  checksum: 6fb1d5311a3fe5ef3388108de9f1dd84f89fa2d50b75832b1689644f24aa923ab3a948e80d4901be015b195f1a6469db3a31eb33ad48d8088c4836ab52ce099f
   languageName: node
   linkType: hard
 
