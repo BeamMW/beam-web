@@ -194,6 +194,10 @@ onUnmounted(() => {
   }
 }
 
+.background-radial-defaults {
+  @apply bg-[length:1024px_576px] md:bg-[length:1280px_720px] lg:bg-[length:1600px_900px] xl:bg-[length:1920px_1080px] bg-[center_top] bg-no-repeat;
+}
+
 @keyframes moveGradient {
   0% {
     background-position: 0% 50%;

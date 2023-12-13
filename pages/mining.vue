@@ -19,7 +19,7 @@ definePageMeta({
 });
 </script>
 <template>
-  <div class="bg-page-radial-gradient-dark-green">
+  <div class="bg-page-radial-gradient-dark-green background-radial-defaults">
     <div
       class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-16 text-center"
     >

@@ -18,7 +18,7 @@ definePageMeta({
 });
 </script>
 <template>
-  <div class="bg-page-radial-gradient-purple">
+  <div class="bg-page-radial-gradient-purple background-radial-defaults">
     <LayoutWrapper :center="true" class="py-10 lg:py-12">
       <div class="px-4 mx-auto max-w-screen-xl text-center z-[12] heroText">
         <LayoutTitle
