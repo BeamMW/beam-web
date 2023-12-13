@@ -141,7 +141,6 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  // Global
   security: {
     nonce: true,
     ssg: {
