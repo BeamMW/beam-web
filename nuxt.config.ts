@@ -191,10 +191,10 @@ export default defineNuxtConfig({
     documentDriven: false,
   },
   site: {
-    discoverImages: false,
     siteUrl: publicWebUrl,
   },
   sitemap: {
+    discoverImages: false,
     autoLastmod: true,
     credits: false,
   },
