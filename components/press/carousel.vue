@@ -6,10 +6,6 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import { pressArticles } from "@/app.config";
 import { throttle } from "~/utils/throttle";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 SwiperCore.use([Navigation, Autoplay]);
 
 const slidesToShow = ref(1);
@@ -81,7 +77,7 @@ const spaceBetween = ref(20);
             <Icon
               :as-image="true"
               :name="`medias/${item.image}`"
-              class="h-8 text-beam-blue w-auto"
+              class="w-48 h-32"
               loading="lazy"
               :alt="item.image"
             />

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h6
+    <p
       class="md:hidden px-6 pt-6 pb-3 font-bold text-xs sm:text-base uppercase text-gray-200"
     >
       {{ $t("header.selectlanguage") }}
-    </h6>
+    </p>
     <ul class="md:py-2 font-bold text-white text-sm" role="none">
       <li
         v-for="availableLocale in availableLocales"
