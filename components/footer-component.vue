@@ -136,7 +136,7 @@ const menus = computed(() => [
         href: localePath("downloads"),
       },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
-      { text: ExternalLinksTitle.TWITTER, href: ExternalLinks.TWITTER },
+      { text: ExternalLinksTitle.X, href: ExternalLinks.X },
       {
         text: t("footer.join.roadmap"),
         href: "javascript://",

@@ -12,6 +12,8 @@ const windowBlurred = useState("windowBlurred", () => false);
 
 const router = useRouter();
 
+const XUsername = extractXUsername(ExternalLinks.X) as string;
+
 defineRobotMeta();
 
 const scrollToIdOnPage = async (
@@ -79,10 +81,8 @@ onUnmounted(() => {
         content="width=device-width, initial-scale=1, maximum-scale=5"
         name="viewport"
       />
-      <Meta
-        name="twitter:site"
-        :content="extractTwitterUsername(ExternalLinks.TWITTER) as string"
-      />
+      <Meta name="twitter:site" :content="XUsername" />
+      <Meta name="twitter:creator" :content="XUsername" />
       <Meta
         v-if="
           platformDetails[SupportedPlatforms.IOS] &&
