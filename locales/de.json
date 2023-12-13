@@ -119,7 +119,7 @@
     }
   },
   "buyWhere": {
-    "title": "Wo Beam kaufen",
+    "title": "Wo BEAM kaufen",
     "exchanges": "Börsen",
     "instantexchanges": "Sofortige Börsen",
     "disclaimer": "**HAFTUNGSAUSSCHLUSS**: Drittanbieter-Dienste, die hier aufgeführt sind, werden von Beam nicht unterstützt. Seien Sie vorsichtig, da die Sicherheits- und Datenschutzgarantien von Beam nicht gelten.",
@@ -219,7 +219,7 @@
     "downloadWallet": "Beam Wallet herunterladen",
     "downloadButton": "Herunterladen für {platform}",
     "started": {
-      "title": "🚀 Ihr Beam-Wallet-Download ist unterwegs!",
+      "title": "Ihr Beam-Wallet-Download ist unterwegs!",
       "message": "Danke, dass Sie sich für Beam entschieden haben. Während Sie auf den Abschluss des Downloads warten, warum nicht die Fülle an Funktionen und Tipps in der [Beam-Dokumentation]({documentation}) erkunden?"
     },
     "divider": "oder",

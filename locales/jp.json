@@ -119,7 +119,7 @@
     }
   },
   "buyWhere": {
-    "title": "Beamを購入する場所",
+    "title": "BEAMを購入する場所",
     "exchanges": "取引所",
     "instantexchanges": "インスタント取引所",
     "disclaimer": "**免責事項**：リストされている第三者のサービスはBeamによって承認されていません。注意してください。Beamのセキュリティとプライバシーの保証は適用されません。",
@@ -219,7 +219,7 @@
     "downloadWallet": "Beamウォレットをダウンロード",
     "downloadButton": "{platform}用にダウンロード",
     "started": {
-      "title": "🚀 あなたのBeamウォレットのダウンロードが始まりました！",
+      "title": "あなたのBeamウォレットのダウンロードが始まりました！",
       "message": "Beamを選んでいただきありがとうございます。ダウンロードが完了するのを待っている間に、[Beamのドキュメント]({documentation})で豊富な機能やヒントを探索してみてはいかがでしょうか？"
     },
     "divider": "または",

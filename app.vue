@@ -110,6 +110,7 @@ onUnmounted(() => {
 </template>
 
 <style>
+/*
 .page-enter-active,
 .page-leave-active {
   transition: all 0.2s;
@@ -124,7 +125,7 @@ onUnmounted(() => {
 .page-enter-from {
   @apply origin-center scale-[.98];
 }
-
+*/
 @font-face {
   font-family: "ProximaNova";
   src:
@@ -156,11 +157,11 @@ onUnmounted(() => {
 }
 
 :root {
-  --beam-blue: #25c1ff;
+  --beam-blue: #99ecff;
   --beam-blue-dark: #0b76ff;
   --beam-purple: #9d6eff;
   --beam-purple-dark: #ab37e6;
-  --beam-pink: #fe52ff;
+  --beam-pink: #a69eff;
   --beam-green: #39fff2;
   --beam-green-dark: #00e2c2;
 
@@ -190,6 +191,55 @@ onUnmounted(() => {
 
   &.prev-button {
     @apply left-0 md:bg-gradient-to-r justify-start transition-opacity;
+  }
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.specialGradient {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: moveGradient 5s linear infinite;
+
+  &.specialGradientPurple {
+    background-image: radial-gradient(
+      129.03% 100% at 120.97% 81.45%,
+      #dfdcff 27.08%,
+      #a69eff 100%
+    );
+  }
+
+  &.specialGradientGreen {
+    background-image: radial-gradient(
+      78.77% 78.77% at 71.71% 30.77%,
+      #e9ffef 0%,
+      /* Lighter green */ #88d4ab 67.21%,
+      /* Medium green */ #62c296 76.04%,
+      /* Medium green, slightly darker */ #2da77a 84.9%,
+      /* Darker green */ #008a5e 94.79% /* Even darker green */
+    );
+  }
+
+  &.specialGradientBlue {
+    background-image: radial-gradient(
+      78.77% 78.77% at 71.71% 30.77%,
+      #f0fcff 0%,
+      #9bedff 67.21%,
+      #98ecff 76.04%,
+      #5be1ff 84.9%,
+      #00bae2 94.79%
+    );
   }
 }
 </style>

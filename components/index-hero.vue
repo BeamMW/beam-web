@@ -2,24 +2,26 @@
   <section :ref="main" class="heroContainer">
     <div class="heroContent">
       <div class="heroGrid">
-        <div class="heroText">
+        <div
+          class="py-10 px-4 mx-auto max-w-screen-xl text-center md:py-16 z-[12] heroText"
+        >
           <h1
-            class="mb-4 text-4xl tracking-tight leading-none md:text-5xl lg:text-6xl capitalize font-bold select-none"
+            class="mb-6 text-4xl tracking-tight leading-none md:text-5xl lg:text-6xl capitalize font-bold select-none specialGradient specialGradientBlue"
           >
             {{ $t("hero.title") }}
           </h1>
-          <p
-            class="mb-5 md:mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-white opacity-90"
+          <h2
+            class="mb-4 md:mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-white"
           >
             {{ $t("hero.subtitle") }}
-          </p>
+          </h2>
 
           <div
             class="grid md:grid-cols-2 gap-5 md:gap-6 w-fit lg:w-6/12 mx-auto mb-6"
           >
             <LayoutButton
               class="whitespace-nowrap"
-              accent-color="beam-pink"
+              accent-color="beam-green"
               as="button"
               @click="
                 eventBus.emit(UserInteractionEvents.SCROLL_TO_GET_STARTED, {})
@@ -97,14 +99,6 @@
             </LayoutLink>
           </div>
         </div>
-        <!--<div class="gradientBlur">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>-->
       </div>
     </div>
     <div class="heroGradient"></div>
@@ -233,7 +227,7 @@ onBeforeUnmount(async () => {
 }
 
 .heroImages {
-  @apply max-w-full pt-[45vh] md:pt-[37vh] z-[2] will-change-transform flex justify-evenly mx-auto md:max-w-7xl rtl:!flex-row-reverse;
+  @apply max-w-full pt-[50vh] md:pt-[45vh] z-[2] will-change-transform flex justify-evenly mx-auto md:max-w-7xl rtl:!flex-row-reverse;
 }
 
 .heroContent {
@@ -245,116 +239,10 @@ onBeforeUnmount(async () => {
     @apply grid grid-cols-1 grid-rows-1 gap-x-0 gap-y-0;
     grid-template: 1fr / 1fr;
 
-    .heroText,
-    .gradientBlur {
+    .heroText {
       grid-column: 1 / 1;
       grid-row: 1 / 1;
       @apply w-full;
-    }
-
-    .heroText {
-      @apply py-10 px-4 mx-auto max-w-screen-xl text-center md:py-16 z-[12];
-    }
-
-    .gradientBlur {
-      /* only blur heroImages on mobile since this function is smooth only on small areas in safari and firefox, chrome is ok */
-      @apply block lg:hidden z-[11] h-[130%];
-      inset: auto 0 0 0;
-      pointer-events: none;
-    }
-    .gradientBlur > div,
-    .gradientBlur::before,
-    .gradientBlur::after {
-      @apply z-[11] h-[130%];
-      position: absolute;
-      inset: 0;
-    }
-    .gradientBlur::before {
-      content: "";
-      z-index: 1;
-      backdrop-filter: blur(0.5px);
-      mask: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 1) 12.5%,
-        rgba(0, 0, 0, 1) 25%,
-        rgba(0, 0, 0, 0) 37.5%
-      );
-    }
-    .gradientBlur > div:nth-of-type(1) {
-      z-index: 2;
-      backdrop-filter: blur(1px);
-      mask: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0) 12.5%,
-        rgba(0, 0, 0, 1) 25%,
-        rgba(0, 0, 0, 1) 37.5%,
-        rgba(0, 0, 0, 0) 50%
-      );
-    }
-    .gradientBlur > div:nth-of-type(2) {
-      z-index: 3;
-      backdrop-filter: blur(2px);
-      mask: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0) 25%,
-        rgba(0, 0, 0, 1) 37.5%,
-        rgba(0, 0, 0, 1) 50%,
-        rgba(0, 0, 0, 0) 62.5%
-      );
-    }
-    .gradientBlur > div:nth-of-type(3) {
-      z-index: 4;
-      backdrop-filter: blur(4px);
-      mask: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0) 37.5%,
-        rgba(0, 0, 0, 1) 50%,
-        rgba(0, 0, 0, 1) 62.5%,
-        rgba(0, 0, 0, 0) 75%
-      );
-    }
-    .gradientBlur > div:nth-of-type(4) {
-      z-index: 5;
-      backdrop-filter: blur(8px);
-      mask: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0) 50%,
-        rgba(0, 0, 0, 1) 62.5%,
-        rgba(0, 0, 0, 1) 75%,
-        rgba(0, 0, 0, 0) 87.5%
-      );
-    }
-    .gradientBlur > div:nth-of-type(5) {
-      z-index: 6;
-      backdrop-filter: blur(16px);
-      mask: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0) 62.5%,
-        rgba(0, 0, 0, 1) 75%,
-        rgba(0, 0, 0, 1) 87.5%,
-        rgba(0, 0, 0, 0) 100%
-      );
-    }
-    .gradientBlur > div:nth-of-type(6) {
-      z-index: 7;
-      backdrop-filter: blur(32px);
-      mask: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0) 75%,
-        rgba(0, 0, 0, 1) 87.5%,
-        rgba(0, 0, 0, 1) 100%
-      );
-    }
-    .gradientBlur::after {
-      content: "";
-      z-index: 8;
-      backdrop-filter: blur(64px);
-      mask: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0) 87.5%,
-        rgba(0, 0, 0, 1) 100%
-      );
     }
   }
 }

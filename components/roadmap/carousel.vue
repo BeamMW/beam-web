@@ -1,14 +1,14 @@
 <template>
-  <div class="w-full relative">
+  <div class="w-full relative mb-5">
     <div ref="customNextButton" class="group custom-swipe-arrow next-button">
       <Icon
-        class="block w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block w-4 h-4 md:w-6 md:h-6 text-beam-blue group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
     <div ref="customPrevButton" class="group custom-swipe-arrow prev-button">
       <Icon
-        class="block rotate-180 w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block rotate-180 w-4 h-4 md:w-6 md:h-6 text-beam-blue group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
@@ -73,7 +73,7 @@
                   />
                   <div v-else class="block w-2.5 h-2.5"></div>
                 </div>
-                <p class="text-white/90">{{ type.description }}</p>
+                <p class="text-white">{{ type.description }}</p>
               </div>
             </div>
           </div>

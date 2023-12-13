@@ -39,8 +39,11 @@ onUnmounted(() =>
 <template>
   <section class="bg-[#041D3C]">
     <section class="pt-10 lg:pt-12 bg-page-radial-gradient">
-      <LayoutTitle :title="pageTitle" />
-      <DownloadStartedConfirmation />
+      <div class="px-4 mx-auto max-w-screen-xl text-center z-[12]">
+        <LayoutTitle :title="pageTitle" />
+        <DownloadStartedConfirmation />
+      </div>
+
       <div class="min-h-[530px]">
         <ClientOnly>
           <DownloadPlatformSelector />

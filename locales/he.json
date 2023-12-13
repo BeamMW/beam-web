@@ -119,7 +119,7 @@
     }
   },
   "buyWhere": {
-    "title": "איפה לקנות Beam",
+    "title": "איפה לקנות BEAM",
     "exchanges": "בורסות",
     "instantexchanges": "בורסות מיידיות",
     "disclaimer": "**אזהרה**: השירותים מצד שלישי המפורטים כאן אינם מאושרים על ידי Beam. השתמש בזהירות, מכיוון שאבטחת ופרטיות Beam אינן חלות.",
@@ -219,7 +219,7 @@
     "downloadWallet": "הורד ארנק Beam",
     "downloadButton": "הורדה עבור {platform}",
     "started": {
-      "title": "🚀 ארנק הביטקוין Beam בדרך אליך!",
+      "title": "ארנק הביטקוין Beam בדרך אליך!",
       "message": "תודה שבחרת ב-Beam. בזמן המתנה להשלמת ההורדה, למה לא לחקור את המגוון העשיר של תכונות וטיפים ב[תיעוד של Beam]({documentation})?"
     },
     "divider": "או",
