@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-page-radial-gradient-purple">
+  <main class="bg-page-radial-gradient-purple background-radial-defaults">
     <HeaderComponent class="bg-[rgba(28,0,46,.65)]" />
     <div
       class="flex max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 py-16 text-center"
