@@ -3,10 +3,10 @@
     <div class="heroContent">
       <div class="heroGrid">
         <div
-          class="py-10 px-4 mx-auto max-w-screen-xl text-center md:py-16 z-[12] heroText"
+          class="py-10 md:py-14 px-4 mx-auto max-w-screen-xl text-center z-[12] heroText"
         >
           <h1
-            class="mb-6 text-4xl tracking-tight leading-none md:text-5xl lg:text-6xl capitalize font-bold select-none specialGradient specialGradientBlue"
+            class="mb-6 text-4xl tracking-tight !leading-tight md:text-5xl lg:text-6xl capitalize font-bold select-none specialGradient specialGradientBlue"
           >
             {{ $t("hero.title") }}
           </h1>
