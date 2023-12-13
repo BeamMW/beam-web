@@ -196,6 +196,7 @@ export default defineNuxtConfig({
   },
   sitemap: {
     autoLastmod: true,
+    credits: false,
   },
   typescript: {
     typeCheck: true,
