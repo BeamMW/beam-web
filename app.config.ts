@@ -22,7 +22,7 @@ export enum ExternalLinks {
   // Socials
   GITHUB = "https://github.com/BeamMW",
   TELEGRAM = "https://t.me/BeamPrivacy",
-  TWITTER = "https://twitter.com/beamprivacy",
+  X = "https://x.com/beamprivacy",
   SUBSTACK = "https://beamprivacy.substack.com",
   REDDIT = "https://www.reddit.com/r/beamprivacy/",
   DISCORD = "https://discord.gg/BHZvAhg",
@@ -51,7 +51,7 @@ export enum ExternalLinks {
 export enum ExternalLinksTitle {
   GITHUB = "GitHub",
   TELEGRAM = "Telegram",
-  TWITTER = "Twitter",
+  X = "X Profile",
   SUBSTACK = "Substack",
   REDDIT = "Reddit",
   DISCORD = "Discord",
@@ -298,7 +298,7 @@ export const pressArticles = [
 export enum ExternalLinksIcon {
   GITHUB = "github",
   TELEGRAM = "telegram",
-  TWITTER = "twitter",
+  X = "x",
   SUBSTACK = "substack",
   REDDIT = "reddit",
   DISCORD = "discord",

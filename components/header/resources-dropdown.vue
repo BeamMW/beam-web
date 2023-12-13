@@ -48,7 +48,7 @@ const menus = computed(() => [
         class: "block md:hidden",
       },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
-      { text: ExternalLinksTitle.TWITTER, href: ExternalLinks.TWITTER },
+      { text: ExternalLinksTitle.X, href: ExternalLinks.X },
       { text: t("footer.join.newsletter"), href: ExternalLinks.SUBSTACK },
       {
         text: t("footer.join.roadmap"),
