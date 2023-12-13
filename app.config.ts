@@ -80,7 +80,7 @@ export const preHtml = {
   ] as URLEntry[],
   "dns-prefetch": extractOriginsFromEnum(ExternalLinks) as URLEntry[],
   prerender: [] as URLEntry[],
-  prefetch: [new URL(ExternalLinks.DEX).origin] as URLEntry[],
+  prefetch: [] as URLEntry[],
 };
 
 export const docTypes = [
