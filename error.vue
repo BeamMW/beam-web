@@ -16,7 +16,9 @@
       <h1 class="text-base font-bold text-white">
         {{ title }}
       </h1>
-      <h2 class="text-4xl font-bold text-white !m-0">
+      <h2
+        class="text-4xl font-bold text-white !m-0 px-6 specialGradient specialGradientPurple"
+      >
         {{ $t("errors.404.title") }}
       </h2>
       <p class="text-white text-lg">
@@ -26,7 +28,7 @@
         button-link="#"
         :big="true"
         as="button"
-        accent-color="white"
+        accent-color="beam-pink"
         @click.prevent="handleError"
       >
         {{ $t("errors.back") }}
