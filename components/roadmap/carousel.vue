@@ -38,7 +38,7 @@
                 loading="lazy"
                 :alt="item.image"
               />
-              <h6 class="font-bold text-xl">{{ item.name }}</h6>
+              <p class="font-bold text-xl m-0 p-0">{{ item.name }}</p>
             </div>
             <div class="flex flex-col gap-2 mt-6">
               <div
