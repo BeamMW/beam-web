@@ -194,6 +194,9 @@ export default defineNuxtConfig({
     discoverImages: false,
     siteUrl: publicWebUrl,
   },
+  sitemap: {
+    autoLastmod: true,
+  },
   typescript: {
     typeCheck: true,
     strict: true,
