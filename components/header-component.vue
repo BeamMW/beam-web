@@ -76,6 +76,7 @@ const localePath = useLocalePath();
                   <Icon
                     name="layout/menus"
                     class="w-7 h-7 select-none"
+                    alt="Menus"
                     :as-image="true"
                   />
                 </button>

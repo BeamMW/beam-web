@@ -34,7 +34,7 @@
               <Icon
                 :as-image="true"
                 :name="`beam-releases/${item.image}`"
-                class="h-12 text-beam-blue w-auto"
+                class="h-12 w-12"
                 loading="lazy"
                 :alt="item.image"
               />
