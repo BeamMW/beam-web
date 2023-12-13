@@ -8,7 +8,7 @@
   Feature-Policy: geolocation 'none'; microphone 'none'; camera 'none'
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
-  Cross-Origin-Resource-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-site
   Origin-Agent-Cluster: ?1
   Referrer-Policy: no-referrer
   Permissions-Policy: camera=(), display-capture=(), fullscreen=(), geolocation=(), microphone=()
