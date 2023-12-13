@@ -72,7 +72,7 @@ onUnmounted(() =>
   >
     <h2
       v-show="showDownloadStartedBanner"
-      class="mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-white"
+      class="pb-8 lg:pb-10 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-white"
     >
       <MarkdownRenderer
         t-key="downloads.started.message"
