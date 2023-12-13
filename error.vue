@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-page-radial-gradient-purple">
+  <main class="bg-page-radial-gradient-purple background-radial-defaults">
     <HeaderComponent class="bg-[rgba(28,0,46,.65)]" />
     <div
       class="flex max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 py-16 text-center"
@@ -16,7 +16,9 @@
       <h1 class="text-base font-bold text-white">
         {{ title }}
       </h1>
-      <h2 class="text-4xl font-bold text-white !m-0">
+      <h2
+        class="text-4xl font-bold text-white !m-0 px-6 specialGradient specialGradientPurple"
+      >
         {{ $t("errors.404.title") }}
       </h2>
       <p class="text-white text-lg">
@@ -26,7 +28,7 @@
         button-link="#"
         :big="true"
         as="button"
-        accent-color="white"
+        accent-color="beam-pink"
         @click.prevent="handleError"
       >
         {{ $t("errors.back") }}
