@@ -119,7 +119,7 @@
     }
   },
   "buyWhere": {
-    "title": "Where to buy Beam",
+    "title": "Where to buy BEAM",
     "exchanges": "Exchanges",
     "instantexchanges": "Instant Exchanges",
     "disclaimer": "**DISCLAIMER**: Third-party services listed are not endorsed by Beam. Use caution, as Beam's security and privacy guarantees don't apply.",
@@ -219,7 +219,7 @@
     "downloadWallet": "Download Beam Wallet",
     "downloadButton": "Download for {platform}",
     "started": {
-      "title": "🚀 Your Beam Wallet is on its way!",
+      "title": "Your Beam Wallet is on its way!",
       "message": "Thank you for choosing Beam. While you're waiting for the download to complete, why not explore the wealth of features and tips in the [Beam documentation]({documentation})?"
     },
     "divider": "or",

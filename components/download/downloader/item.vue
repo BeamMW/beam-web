@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col rtl:text-right ltr:text-left">
     <div v-if="starting || downloading">
-      <b class="text-lg font-bold text-white/90">{{
+      <b class="text-lg font-bold text-white">{{
         starting
           ? $t("downloads.downloader.state.starting")
           : $t("downloads.downloader.state.downloading")
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div v-else-if="hashing">
-      <b class="text-lg font-bold text-white/90">{{
+      <b class="text-lg font-bold text-white">{{
         $t("downloads.downloader.state.integrity")
       }}</b>
       <div class="flex flex-row my-1 gap-1 items-center">
@@ -54,13 +54,13 @@
           </svg>
           <span class="sr-only">{{ $t("downloads.downloader.loading") }}</span>
         </div>
-        <p class="text-white/90">
+        <p>
           {{ $t("downloads.downloader.message.integrity") }}
         </p>
       </div>
     </div>
     <div v-else-if="finished">
-      <b class="text-lg font-bold text-white/90">{{
+      <b class="text-lg font-bold text-white">{{
         $t("downloads.downloader.state.finished")
       }}</b>
       <div class="flex flex-row my-2 gap-3 items-center">
@@ -78,16 +78,16 @@
             <path stroke-linecap="round" d="m6 8.8 1.7 1.7L11 7" />
           </g>
         </svg>
-        <p class="text-white/90">
+        <p>
           {{ $t("downloads.downloader.message.finished") }}
         </p>
       </div>
     </div>
     <div v-else-if="error">
-      <b class="text-lg font-bold text-white/90">{{
+      <b class="text-lg font-bold text-white">{{
         $t("downloads.downloader.state.error")
       }}</b>
-      <p class="text-white/90">{{ error }}</p>
+      <p>{{ error }}</p>
     </div>
     <div class="text-xs mt-1">
       <p>

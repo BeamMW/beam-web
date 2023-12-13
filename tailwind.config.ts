@@ -88,11 +88,11 @@ const config = {
         ]),
       },
       colors: {
-        "beam-blue": "var(--beam-blue)", // #25C1FF
+        "beam-blue": "var(--beam-blue)", // #99ecff
         "beam-blue-dark": "var(--beam-blue-dark)", // #0B76FF
         "beam-purple": "var(--beam-purple)", // #9D6EFF
         "beam-purple-dark": "var(--beam-purple-dark)", // #AB37E6
-        "beam-pink": "var(--beam-pink)", // #FE52FF
+        "beam-pink": "var(--beam-pink)", // #a69eff
         "beam-green": "var(--beam-green)", // #39FFF2
         "beam-green-dark": "var(--beam-green-dark)", // #00E2C2
 

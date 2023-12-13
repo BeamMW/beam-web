@@ -66,14 +66,14 @@ onUnmounted(() =>
     leave-from-class="opacity-1"
     leave-active-class="opacity-0"
   >
-    <p
+    <h2
       v-show="showDownloadStartedBanner"
-      class="max-w-4xl mx-auto mb-2 px-6 md:px-0 text-center text-base font-normal lg:text-lg text-white opacity-90"
+      class="mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-white"
     >
       <MarkdownRenderer
         t-key="downloads.started.message"
         :t-interpolation="{ documentation: localePath('docs') }"
       />
-    </p>
+    </h2>
   </transition>
 </template>

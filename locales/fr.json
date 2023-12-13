@@ -119,7 +119,7 @@
     }
   },
   "buyWhere": {
-    "title": "Où acheter Beam",
+    "title": "Où acheter BEAM",
     "exchanges": "Plateformes d'échange",
     "instantexchanges": "Échanges instantanés",
     "disclaimer": "**AVERTISSEMENT** : Les services tiers listés ne sont pas approuvés par Beam. Faites preuve de prudence, car les garanties de sécurité et de confidentialité de Beam ne s'appliquent pas.",
@@ -219,7 +219,7 @@
     "downloadWallet": "Téléchargez le portefeuille Beam",
     "downloadButton": "Télécharger pour {platform}",
     "started": {
-      "title": "🚀 Votre portefeuille Beam est en route !",
+      "title": "Votre portefeuille Beam est en route !",
       "message": "Merci d'avoir choisi Beam. Pendant que vous attendez que le téléchargement se termine, pourquoi ne pas explorer la richesse des fonctionnalités et des astuces dans la [documentation Beam]({documentation}) ?"
     },
     "divider": "ou",

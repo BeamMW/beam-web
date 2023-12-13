@@ -31,9 +31,14 @@ definePageMeta({
           class="w-64 h-64 mb-2"
           alt="Beam Girl"
         />
-        <h1 class="text-left text-2xl uppercase font-bold tracking-[.25em]">
-          {{ $t("mining.title") }}
-        </h1>
+
+        <LayoutTitle
+          :title="t('mining.title')"
+          :reserve-space="false"
+          gradient-color="specialGradientGreen"
+          :large="true"
+          :small-padding="true"
+        />
       </div>
 
       <h2 class="text-xl text-white/90 pt-6">
@@ -62,7 +67,10 @@ definePageMeta({
     </div>
 
     <LayoutWrapper :center="true" class="pt-10 lg:pt-12">
-      <LayoutTitle :title="t('mining.miningSoftware')" />
+      <LayoutTitle
+        :title="t('mining.miningSoftware')"
+        gradient-color="specialGradientGreen"
+      />
 
       <div class="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div

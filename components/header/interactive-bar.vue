@@ -25,7 +25,7 @@ defineProps({
           class="min-h-[44px] h-[44px] max-h-[44px] md:min-h-[57px] md:h-[57px] md:max-h-[57px]"
         >
           <div class="flex items-center h-full">
-            <div class="font-bold text-sm text-white/90">
+            <div class="font-bold text-sm">
               <Vue3Marquee
                 :clone="true"
                 :gradient="true"

@@ -8,7 +8,10 @@ const styles =
 </script>
 <template>
   <LayoutWrapper :center="true">
-    <LayoutTitle :title="t('downloads.resources.title')" />
+    <LayoutTitle
+      :title="t('downloads.resources.title')"
+      gradient-color="specialGradientGreen"
+    />
     <div class="grid lg:grid-cols-2 items-center gap-6 md:gap-10 text-white">
       <ResourcesLink
         :title="t('mining.resources.calculator')"

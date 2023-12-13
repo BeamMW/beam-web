@@ -46,13 +46,13 @@ const spaceBetween = ref(20);
   <div class="carousel relative">
     <div ref="customNextButton" class="group custom-swipe-arrow next-button">
       <Icon
-        class="block w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block w-4 h-4 md:w-6 md:h-6 text-beam-blue group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
     <div ref="customPrevButton" class="group custom-swipe-arrow prev-button">
       <Icon
-        class="block rotate-180 w-5 h-5 md:w-7 md:h-7 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+        class="block rotate-180 w-4 h-4 md:w-6 md:h-6 text-beam-blue group-hover:opacity-100 opacity-60 transition-opacity"
         name="layout/arrow-right"
       />
     </div>
@@ -77,7 +77,7 @@ const spaceBetween = ref(20);
             <Icon
               :as-image="true"
               :name="`medias/${item.image}`"
-              class="w-48 h-32"
+              class="w-48 h-20"
               loading="lazy"
               :alt="item.image"
             />
@@ -95,7 +95,7 @@ const spaceBetween = ref(20);
 }
 
 .carousel-item {
-  @apply text-white flex items-center justify-center p-[1rem];
+  @apply text-white flex items-center justify-center;
 }
 .carousel-item-link:deep(img) {
   @apply !opacity-60 transition-opacity;
