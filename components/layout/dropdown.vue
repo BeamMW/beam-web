@@ -263,7 +263,7 @@ provide("toggleDropdown", toggleDropdown);
 /** Custom default dropdown container */
 .popper-container {
   .dropdown-container {
-    @apply h-full will-change-transform z-50 rounded-lg text-white/90 relative list-none backdrop-blur-xl backdrop-brightness-75 md:bg-[#042248] border-black border border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset] transition-colors;
+    @apply h-full will-change-transform z-50 rounded-2xl text-white/90 relative list-none backdrop-blur-xl backdrop-brightness-75 md:bg-[#042248] border-black border border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset] transition-colors;
   }
 
   .grid-container {
