@@ -130,6 +130,7 @@
     "milestones": {
       "1": {
         "title": "Átomo Ágil",
+        "year": "2019",
         "items": {
           "1": "API de Pagamento e Troca",
           "2": "API de Pool de Mineração",
@@ -138,6 +139,7 @@
       },
       "2": {
         "title": "Bóson Brilhante",
+        "year": "2019",
         "items": {
           "1": "Carteiras Android e iOS",
           "2": "Integração de Plataformas de Pagamento",
@@ -149,6 +151,7 @@
       },
       "3": {
         "title": "Cátodo Limpo",
+        "year": "2019",
         "items": {
           "1": "Swap Atômico Beam ↔ BTC, LTC, QTUM (Carteira Desktop)",
           "2": "Mudança de Algoritmo PoW",
@@ -158,6 +161,7 @@
       },
       "4": {
         "title": "Doppler Duplo",
+        "year": "2020",
         "items": {
           "1": "Mercado de Swaps Atômicos (Carteira Desktop) e API",
           "2": "Laser Beam",
@@ -168,6 +172,7 @@
       },
       "5": {
         "title": "Elétron Ansioso",
+        "year": "2020",
         "items": {
           "1": "Ativos Confidenciais na Mainnet",
           "2": "Algoritmo de Mineração PoW BeamHashIII",
@@ -179,13 +184,15 @@
       },
       "6": {
         "title": "Férmion Feroz",
+        "year": "2021",
         "items": {
           "1": "Máquina Virtual Beam na Carteira e Nó",
           "2": "Loja de DApps Integrada à Carteira"
         }
       },
       "7": {
-        "title": "Gluon Animado",
+        "title": "Gluon Animado", 
+        "year": "2022",
         "items": {
           "1": "Integração com IPFS",
           "2": "Loja de DApps Descentralizada",
@@ -194,20 +201,34 @@
           "5": "Mercado de Swap de Ativos",
           "6": "Atualizações do Blockchain Explorer",
           "7": "SDK de Shader",
-          "8": "Lançamento de Bridges",
-          "9": "Oráculos",
-          "10": "Lançamento de DEX AMM",
-          "11": "Suporte a Carteiras de Hardware (Ledger Nano S & Nano S Plus)",
-          "12": "DApp Beam Messenger na Carteira Beam"
+          "8": "Oráculos"
         }
       },
       "8": {
-        "title": "Hadrón Robusto e Seguintes",
+        "title": "Gluon Animado DeFi",
+        "year": "2023",
         "items": {
-          "1": "Suporte a EVM",
-          "2": "Hard Fork 8.0",
-          "3": "Suporte a Sidechains",
-          "4": "Lançamento de DApps EVM na Rede Beam"
+          "1": "Lançamento de DEX AMM",
+          "2": "DApp de Farming de Liquidez BeamX",
+          "3": "BEAM Envelopado no Ethereum",
+          "4": "Ponte Ethereum (ETH, USDT, WBTC, DAI)",
+          "5": "Suporte a carteiras de hardware (Ledger Nano S & Nano S Plus)",
+          "6": "DApp Beam Messenger na Carteira Beam"
+        }
+      },
+      "9": {
+        "title": "Hadrón Robusto e Seguintes",
+        "year": "2024",
+        "items": {
+          "1": "Hard Fork 8.0",
+          "2": "Suporte a EVM e DApps EVM",
+          "3": "Atualização da carteira de \"5o aniversário\"",
+          "4": "Sincronização de nó em segundo plano sem interrupções",
+          "5": "Cartões presente Beam",
+          "6": "Novo explorador estendido",
+          "7": "Reformulação da interface gráfica da DEX",
+          "8": "Suporte a sidechains",
+          "9": "Investigar integração com DAG Knight"
         }
       }
     }
