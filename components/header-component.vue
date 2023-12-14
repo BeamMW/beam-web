@@ -22,16 +22,14 @@ defineProps({
 });
 </script>
 <template>
-  <div
-    class="absolute h-full w-full px-2 xl:px-0 pt-3 z-20 pointer-events-none"
-  >
+  <div class="absolute h-full w-full px-2 xl:px-0 z-20 pointer-events-none">
     <div
       v-if="interactiveBar && gradientColor"
-      :class="['header-box mb-3 overflow-hidden', navClass]"
+      :class="['header-box mb-3 rounded-b-3xl overflow-hidden', navClass]"
     >
       <HeaderInteractiveBar :gradient-color="gradientColor" />
     </div>
-    <nav :class="['sticky header-box', navClass]">
+    <nav :class="['sticky header-box rounded-full ', navClass]">
       <div
         class="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center py-2 md:py-4 px-4 md:px-5"
       >
@@ -125,6 +123,6 @@ defineProps({
 
 <style scoped>
 .header-box {
-  @apply backdrop-blur-xl top-3 max-w-7xl rounded-full mx-auto z-20 border-white border border-opacity-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,.5)] transition-all pointer-events-auto;
+  @apply backdrop-blur-xl top-3 max-w-7xl mx-auto z-20 border-white border border-opacity-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,.5)] transition-all pointer-events-auto;
 }
 </style>
