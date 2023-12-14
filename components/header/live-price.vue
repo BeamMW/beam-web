@@ -10,9 +10,8 @@
       v-show="data && data.usd"
       class="flex gap-1 pl-3 pr-4 rtl:pl-4 rtl:pr-3"
     >
-      <span
-        class="text-beam-green-dark pointer-events-none select-none flex gap-1"
-        >1
+      <span class="pointer-events-none select-none flex gap-1"
+        ><span class="text-beam-green-dark">1</span>
         <Icon
           class="w-6 h-6 inline-block"
           name="get-started/beam-currency"
@@ -65,7 +64,6 @@ onBeforeUnmount(() => {
 
 <style scoped>
 span.price {
-  @apply text-white;
   &.green {
     @apply text-green-500;
   }

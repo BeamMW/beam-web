@@ -18,7 +18,9 @@ defineProps({
 </script>
 <template>
   <!-- Use fixed size for the interactive bar -->
-  <div class="min-h-[44px] h-[44px] max-h-[44px] flex">
+  <div
+    class="min-h-[44px] h-[44px] max-h-[44px] flex text-blue-50 opacity-60 hover:opacity-100 transition-opacity duration-1000"
+  >
     <div class="font-bold text-sm h-full">
       <Vue3Marquee
         :clone="true"
@@ -32,7 +34,7 @@ defineProps({
       </Vue3Marquee>
     </div>
     <div
-      class="hidden font-bold text-base text-beam-green-dark opacity-80 whitespace-nowrap md:flex items-center"
+      class="hidden font-bold text-base whitespace-nowrap md:flex items-center"
       :style="{ backgroundColor: `rgb(${gradientColor.join(' ')})` }"
     >
       <ClientOnly>

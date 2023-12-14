@@ -43,9 +43,9 @@ import type { RouteRecordName } from "vue-router";
 
 enum THEME_COLORS {
   BLUE = "#041D3C",
-  PURPLE = "#34005D",
-  GREEN = "#02311E",
-  BLUE_INDEX = "#03355D",
+  PURPLE = "#260043",
+  GREEN = "#022216",
+  BLUE_INDEX = "#032645",
 }
 
 enum BACKGROUND_COLORS {
