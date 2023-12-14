@@ -102,7 +102,7 @@ enum PROGRESS {
 
 interface RoadmapItem {
   name: string;
-  year: number;
+  year: string;
   color: string;
   image: string;
   types: { description: string; state: PROGRESS }[];
@@ -112,7 +112,7 @@ type Roadmap = RoadmapItem[];
 const roadmap: Roadmap = [
   {
     name: t("roadmap.milestones.1.title"),
-    year: 2019,
+    year: "2019",
     color: "#00f3d0",
     image: "atom",
     types: [
@@ -132,7 +132,7 @@ const roadmap: Roadmap = [
   },
   {
     name: t("roadmap.milestones.2.title"),
-    year: 2019,
+    year: "2019",
     color: "#00d3ff",
     image: "boson",
     types: [
@@ -164,7 +164,7 @@ const roadmap: Roadmap = [
   },
   {
     name: t("roadmap.milestones.3.title"),
-    year: 2019,
+    year: "2019",
     color: "#3d9be9",
     image: "cathode",
     types: [
@@ -188,7 +188,7 @@ const roadmap: Roadmap = [
   },
   {
     name: t("roadmap.milestones.4.title"),
-    year: 2020,
+    year: "2020",
     color: "#9d6eff",
     image: "doppler",
     types: [
@@ -216,7 +216,7 @@ const roadmap: Roadmap = [
   },
   {
     name: t("roadmap.milestones.5.title"),
-    year: 2020,
+    year: "2020",
     color: "#f86cff",
     image: "electron",
     types: [
@@ -248,7 +248,7 @@ const roadmap: Roadmap = [
   },
   {
     name: t("roadmap.milestones.6.title"),
-    year: 2021,
+    year: "2021",
     color: "#b02fb0",
     image: "fermion",
     types: [
@@ -264,7 +264,7 @@ const roadmap: Roadmap = [
   },
   {
     name: t("roadmap.milestones.7.title"),
-    year: 2022,
+    year: "2022 - 2023",
     color: "#bc1b9f",
     image: "gluon",
     types: [
@@ -320,7 +320,7 @@ const roadmap: Roadmap = [
   },
   {
     name: t("roadmap.milestones.8.title"),
-    year: 2023,
+    year: "2024",
     color: "#c8502d",
     image: "hadron",
     types: [
