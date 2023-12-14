@@ -19,13 +19,11 @@
         nextEl: customNextButton,
         prevEl: customPrevButton,
       }"
-      :parallax="true"
-      dir="rtl"
-      :rewind="true"
+      :initial-slide="roadmap.length"
       :auto-height="true"
     >
       <SwiperSlide v-for="(item, index) in roadmap" :key="index">
-        <div class="carousel-item-link lg:px-16" dir="ltr">
+        <div class="carousel-item-link lg:px-16">
           <div
             class="flex items-center flex-col text-white lg:items-start px-10 md:px-0"
             :style="{ color: item.color }"
@@ -381,7 +379,7 @@ const roadmap: Roadmap = [
       },
     ],
   },
-].reverse();
+];
 
 const slidesToShow = ref(1);
 const customNextButton = ref(null);
