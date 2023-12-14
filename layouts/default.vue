@@ -26,10 +26,10 @@
       <Body :class="themeColors.body">
         <main>
           <DownloadDownloaderManager />
-          <HeaderInteractiveBar
+          <HeaderComponent
+            :nav-class="themeColors.header"
             :gradient-color="themeColors.gradientColorRgb"
           />
-          <HeaderComponent :nav-class="themeColors.header" />
           <slot />
           <FooterComponent :class="themeColors.footer" />
         </main>
@@ -42,9 +42,9 @@
 import type { RouteRecordName } from "vue-router";
 
 enum THEME_COLORS {
-  BLUE = "#041D3C",
-  PURPLE = "#1C002E",
-  GREEN = "#00150B",
+  BLUE = "#03355D",
+  PURPLE = "#34005D",
+  GREEN = "#02311E",
 }
 
 enum BACKGROUND_COLORS {
