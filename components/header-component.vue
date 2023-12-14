@@ -9,18 +9,29 @@ defineProps({
     required: false,
     default: "",
   },
+  interactiveBar: {
+    type: Boolean,
+    required: false,
+    default: true,
+  },
+  gradientColor: {
+    type: Array,
+    required: false,
+    default: undefined,
+  },
 });
 </script>
 <template>
   <div
-    class="absolute h-full w-full px-2 xl:px-0 pt-[1.125rem] pointer-events-none"
+    class="absolute h-full w-full px-2 xl:px-0 pt-3 z-20 pointer-events-none"
   >
-    <nav
-      :class="[
-        'sticky backdrop-blur-xl top-3 max-w-7xl rounded-full mx-auto z-20 border-white border border-opacity-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,.5)] transition-all pointer-events-auto',
-        navClass,
-      ]"
+    <div
+      v-if="interactiveBar && gradientColor"
+      :class="['header-box mb-3 overflow-hidden', navClass]"
     >
+      <HeaderInteractiveBar :gradient-color="gradientColor" />
+    </div>
+    <nav :class="['sticky header-box', navClass]">
       <div
         class="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center py-2 md:py-4 px-4 md:px-5"
       >
@@ -111,3 +122,9 @@ defineProps({
     </nav>
   </div>
 </template>
+
+<style scoped>
+.header-box {
+  @apply backdrop-blur-xl top-3 max-w-7xl rounded-full mx-auto z-20 border-white border border-opacity-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,.5)] transition-all pointer-events-auto;
+}
+</style>

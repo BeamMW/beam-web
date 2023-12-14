@@ -1,6 +1,6 @@
 <template>
   <section :ref="main" class="heroContainer">
-    <div class="heroContent pt-16 md:pt-20">
+    <div class="heroContent pt-28 md:pt-[8.5rem]">
       <div class="heroGrid">
         <div
           class="py-10 px-4 mx-auto max-w-screen-xl text-center z-[12] heroText"

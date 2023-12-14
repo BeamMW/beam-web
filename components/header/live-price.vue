@@ -6,7 +6,10 @@
     leave-from-class="opacity-100"
     leave-active-class="transition-opacity duration-500 ease-out opacity-0"
   >
-    <span v-show="data && data.usd" class="flex gap-1">
+    <span
+      v-show="data && data.usd"
+      class="flex gap-1 pl-3 pr-4 rtl:pl-4 rtl:pr-3"
+    >
       <span
         class="text-beam-green-dark pointer-events-none select-none flex gap-1"
         >1
