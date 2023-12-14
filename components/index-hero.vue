@@ -3,7 +3,7 @@
     <div class="heroContent pt-16 md:pt-20">
       <div class="heroGrid">
         <div
-          class="py-8 px-4 mx-auto max-w-screen-xl text-center z-[12] heroText"
+          class="py-10 px-4 mx-auto max-w-screen-xl text-center z-[12] heroText"
         >
           <h1
             class="mb-3 text-4xl tracking-tight !leading-tight md:text-5xl lg:text-6xl capitalize font-bold select-none specialGradient specialGradientBlue"

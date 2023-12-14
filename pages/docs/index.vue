@@ -21,7 +21,7 @@ definePageMeta({
   <div
     class="bg-page-radial-gradient-purple background-radial-defaults pt-16 md:pt-24"
   >
-    <LayoutWrapper :center="true" class="py-6 lg:py-8">
+    <LayoutWrapper :center="true" class="py-8 lg:py-6">
       <div class="px-4 mx-auto max-w-screen-xl text-center z-[12] heroText">
         <LayoutTitle
           :title="t('head.title.documentation')"

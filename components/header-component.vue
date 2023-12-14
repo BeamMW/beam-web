@@ -12,7 +12,9 @@ defineProps({
 });
 </script>
 <template>
-  <div class="absolute h-full w-full px-2 xl:px-0 pt-3 pointer-events-none">
+  <div
+    class="absolute h-full w-full px-2 xl:px-0 pt-[1.125rem] pointer-events-none"
+  >
     <nav
       :class="[
         'sticky backdrop-blur-xl top-3 max-w-7xl rounded-full mx-auto z-20 border-white border-b border-opacity-5 shadow-[0px_1px_0px_0px_rgba(0,0,0,.5)] transition-all pointer-events-auto',
