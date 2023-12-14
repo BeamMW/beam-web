@@ -41,7 +41,7 @@ defineProps({
       <div
         class="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center py-2 md:py-4 px-4 md:px-5"
       >
-        <div class="order-2 md:order-1 flex items-center">
+        <div class="order-2 md:order-1 flex self-start">
           <div class="inline-block w-auto">
             <HeaderLogo />
           </div>
