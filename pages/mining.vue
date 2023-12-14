@@ -30,20 +30,22 @@ definePageMeta({
           name="mining/intro"
           :as-image="true"
           loading="lazy"
-          class="w-64 h-64 mb-2"
+          class="w-64 h-64"
           alt="Beam Girl"
         />
 
-        <LayoutTitle
-          :title="t('mining.title')"
-          :reserve-space="false"
-          gradient-color="specialGradientGreen"
-          :large="true"
-          :small-padding="true"
-        />
+        <div class="pt-10">
+          <LayoutTitle
+            :title="t('mining.title')"
+            :reserve-space="false"
+            gradient-color="specialGradientGreen"
+            :large="true"
+            :small-padding="true"
+          />
+        </div>
       </div>
 
-      <h2 class="text-base md:text-xl text-white pt-6">
+      <h2 class="text-lg md:text-xl text-white">
         <MarkdownRenderer t-key="mining.introduction" />
       </h2>
 
