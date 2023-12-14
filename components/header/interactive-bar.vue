@@ -27,6 +27,7 @@ defineProps({
         :gradient="true"
         :pause-on-hover="false"
         :pause-on-click="true"
+        :duration="34"
         :gradient-color="gradientColor"
         :gradient-length="'80px'"
       >
