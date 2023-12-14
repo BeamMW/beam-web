@@ -42,9 +42,10 @@
 import type { RouteRecordName } from "vue-router";
 
 enum THEME_COLORS {
-  BLUE = "#03355D",
+  BLUE = "#041D3C",
   PURPLE = "#34005D",
   GREEN = "#02311E",
+  BLUE_INDEX = "#03355D",
 }
 
 enum BACKGROUND_COLORS {
@@ -74,13 +75,20 @@ interface ThemeSettings {
   gradientColorRgb: GradientColorRbg;
 }
 
+const gradientColorsRgb: Record<string, GradientColorRbg> = {
+  BLUE: hexToRgb(THEME_COLORS.BLUE) as GradientColorRbg,
+  GREEN: hexToRgb(THEME_COLORS.GREEN) as GradientColorRbg,
+  PURPLE: hexToRgb(THEME_COLORS.PURPLE) as GradientColorRbg,
+  BLUE_INDEX: hexToRgb(THEME_COLORS.BLUE_INDEX) as GradientColorRbg,
+};
+
 function getTheme(routeName: RouteRecordName): ThemeSettings {
   const formatRouteName = getRouteName(routeName);
-  let header: string,
-    footer: string,
-    body: string,
-    hex: string,
-    gradientColorRgb: GradientColorRbg;
+  let header = HEADER_COLORS.BLUE;
+  let footer = FOOTER_COLORS.BLUE;
+  let body = BACKGROUND_COLORS.BLUE;
+  let hex = THEME_COLORS.BLUE;
+  let gradientColorRgb = gradientColorsRgb.BLUE;
 
   switch (formatRouteName) {
     case "mining":
@@ -88,7 +96,7 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
       footer = FOOTER_COLORS.GREEN;
       body = BACKGROUND_COLORS.GREEN;
       hex = THEME_COLORS.GREEN;
-      gradientColorRgb = hexToRgb(THEME_COLORS.GREEN) as GradientColorRbg;
+      gradientColorRgb = gradientColorsRgb.GREEN;
       break;
     case "docs":
     case "docs-slug":
@@ -96,14 +104,11 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
       footer = FOOTER_COLORS.PURPLE;
       body = BACKGROUND_COLORS.PURPLE;
       hex = THEME_COLORS.PURPLE;
-      gradientColorRgb = hexToRgb(THEME_COLORS.PURPLE) as GradientColorRbg;
+      gradientColorRgb = gradientColorsRgb.PURPLE;
       break;
-    default:
-      header = HEADER_COLORS.BLUE;
-      footer = FOOTER_COLORS.BLUE;
-      body = BACKGROUND_COLORS.BLUE;
-      hex = THEME_COLORS.BLUE;
-      gradientColorRgb = hexToRgb(THEME_COLORS.BLUE) as GradientColorRbg;
+    case "index":
+      gradientColorRgb = gradientColorsRgb.BLUE_INDEX;
+      break;
   }
   return { header, footer, body, hex, gradientColorRgb };
 }

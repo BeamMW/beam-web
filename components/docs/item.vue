@@ -1,7 +1,7 @@
 <template>
   <div
     ref="scrollSpyContainer"
-    class="bg-page-radial-gradient-purple background-radial-defaults flex flex-col-reverse max-w-screen-xl mx-auto pb-10 py-[5.5rem] md:py-32 overflow-x-visible overflow-y-visible md:grid gap-5 md:gap-12 md:grid-cols-12"
+    class="bg-page-radial-gradient-purple background-radial-defaults flex flex-col-reverse max-w-screen-xl mx-auto pb-10 pt-40 md:pt-44 overflow-x-visible overflow-y-visible md:grid gap-5 md:gap-12 md:grid-cols-12"
   >
     <article class="docs-content">
       <ContentDoc :path="routeName">
