@@ -8,7 +8,7 @@
   >
     <span
       v-show="data && data.usd"
-      class="flex gap-1 pl-3 pr-4 rtl:pl-4 rtl:pr-3"
+      class="flex gap-1 md:pl-3 md:pr-4 md:rtl:pl-4 md:rtl:pr-3"
     >
       <span class="pointer-events-none select-none flex gap-1"
         ><span class="text-beam-green-dark">1</span>
