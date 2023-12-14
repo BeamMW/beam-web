@@ -115,7 +115,9 @@
           />
         </div>
 
-        <div class="relative w-[319px] h-[869px] top-[90px] md:left-[30px]">
+        <div
+          class="relative w-[319px] h-[869px] top-[180px] lg:top-[90px] md:left-[30px]"
+        >
           <LayoutPicture
             src="/assets/hero/mobile.png"
             alt="Beam iOS"
@@ -144,20 +146,29 @@ const observer = ref<IntersectionObserver | undefined>();
 
 const initAnimation = async () => {
   const { gsap } = await import("gsap");
+  gsap.ticker.lagSmoothing(1000, 16);
 
   const hero = document.querySelector(".heroContainer") as HTMLElement;
   const images = document.querySelector(".heroImages");
   const background = document.querySelector(".heroBackground");
-
-  let progress = 0;
 
   ctx.value = gsap.context((self) => {
     if (self) {
       const tl = gsap.timeline({
         paused: true,
       });
-      tl.fromTo(images, { yPercent: 0 }, { yPercent: -50, duration: 1 });
-      tl.fromTo(background, { yPercent: 0 }, { yPercent: 50, duration: 1 });
+      tl.fromTo(
+        images,
+        { yPercent: 0 },
+        { yPercent: -100, duration: 0.6 },
+        "<",
+      );
+      tl.fromTo(
+        background,
+        { yPercent: 0 },
+        { yPercent: 50, duration: 0.2 },
+        "<",
+      );
 
       observer.value = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -170,8 +181,7 @@ const initAnimation = async () => {
       });
 
       function updateProgress() {
-        progress = getProgress(hero);
-        tl.progress(progress);
+        tl.progress(getProgress(hero));
       }
 
       // Calculate progress value based on scroll position
