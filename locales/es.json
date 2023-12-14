@@ -130,6 +130,7 @@
     "milestones": {
       "1": {
         "title": "Átomo ágil",
+        "year": "2019",
         "items": {
           "1": "API de pago y intercambio",
           "2": "API de grupo de minería",
@@ -138,6 +139,7 @@
       },
       "2": {
         "title": "Bosón brillante",
+        "year": "2019",
         "items": {
           "1": "Monederos Android y iOS",
           "2": "Integración de plataformas de pago",
@@ -149,6 +151,7 @@
       },
       "3": {
         "title": "Cátodo claro",
+        "year": "2019",
         "items": {
           "1": "Intercambio atómico Beam ↔ BTC, LTC, QTUM (monedero de escritorio)",
           "2": "Cambio de algoritmo PoW",
@@ -158,6 +161,7 @@
       },
       "4": {
         "title": "Doppler doble",
+        "year": "2020",
         "items": {
           "1": "Mercado de intercambios atómicos (monedero de escritorio) y API",
           "2": "Rayo láser",
@@ -168,6 +172,7 @@
       },
       "5": {
         "title": "Electrón ansioso",
+        "year": "2020",
         "items": {
           "1": "Activos confidenciales en la red principal",
           "2": "Algoritmo de minería PoW BeamHashIII",
@@ -179,35 +184,51 @@
       },
       "6": {
         "title": "Fermión feroz",
+        "year": "2021",
         "items": {
           "1": "Máquina virtual Beam en monedero y nodo",
           "2": "Tienda de DAPP integrada en el monedero"
         }
       },
       "7": {
-        "title": "Gluón groovy",
+        "title": "Groovy Gluon",
+        "year": "2022",
         "items": {
           "1": "Integración con IPFS",
           "2": "Tienda de DApp descentralizada",
           "3": "Transacciones de alta frecuencia",
           "4": "DApp principal de DAO (gobernanza y votación)",
           "5": "Mercado de intercambio de activos",
-          "6": "Actualizaciones del explorador de blockchain",
+          "6": "Actualizaciones del explorador blockchain",
           "7": "SDK de Shader",
-          "8": "Lanzamiento de puentes",
-          "9": "Oráculos",
-          "10": "Lanzamiento de DEX AMM",
-          "11": "Soporte de monedero de hardware (Ledger Nano S y Nano S Plus)",
-          "12": "DApp Beam Messenger en monedero Beam"
+          "8": "Oráculos"
         }
       },
       "8": {
-        "title": "Hadrón robusto y posterior",
+        "title": "Groovy Gluon DeFi",
+        "year": "2023",
         "items": {
-          "1": "Soporte EVM",
-          "2": "Bifurcación dura 8.0",
-          "3": "Soporte para sidechains",
-          "4": "Lanzamiento de DApps EVM en la cadena de Beam"
+          "1": "Lanzamiento de DEX AMM",
+          "2": "DApp de farming de liquidez BeamX",
+          "3": "BEAM envuelto en Ethereum",
+          "4": "Puente de Ethereum (ETH, USDT, WBTC, DAI)",
+          "5": "Soporte de billetera de hardware (Ledger Nano S y Nano S Plus)",
+          "6": "DApp Beam Messenger en la billetera Beam"
+        }
+      },
+      "9": {
+        "title": "Robusto hadrón y posterior",
+        "year": "2024",
+        "items": {
+          "1": "Bifurcación dura 8.0",
+          "2": "Soporte para EVM y DApps EVM",
+          "3": "Actualización de billetera del \"5o aniversario\"",
+          "4": "Sincronización de nodo en segundo plano sin interrupciones", 
+          "5": "Tarjetas de regalo Beam",
+          "6": "Nuevo explorador extendido",
+          "7": "Rediseño de la GUI de DEX",
+          "8": "Soporte para sidechains",
+          "9": "Investigar integración con DAG Knight"
         }
       }
     }

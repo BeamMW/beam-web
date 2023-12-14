@@ -130,6 +130,7 @@
     "milestones": {
       "1": {
         "title": "Agiler Atom",
+        "year": "2019",
         "items": {
           "1": "Zahlungs- und Austausch-API",
           "2": "Mining-Pool-API",
@@ -138,6 +139,7 @@
       },
       "2": {
         "title": "Hell Boson",
+        "year": "2019",
         "items": {
           "1": "Android- und iOS-Wallets",
           "2": "Integration von Zahlungsplattformen",
@@ -149,6 +151,7 @@
       },
       "3": {
         "title": "Klares Kathod",
+        "year": "2019",
         "items": {
           "1": "Beam ↔ BTC, LTC, QTUM Atomic Swap (Desktop-Wallet)",
           "2": "Änderung des PoW-Algorithmus",
@@ -158,6 +161,7 @@
       },
       "4": {
         "title": "Doppel-Doppler",
+        "year": "2020",
         "items": {
           "1": "Marktplatz für Atomic Swaps (Desktop-Wallet) und API",
           "2": "Laser Beam",
@@ -168,6 +172,7 @@
       },
       "5": {
         "title": "Eifriges Elektron",
+        "year": "2020",
         "items": {
           "1": "Vertrauliche Vermögenswerte im Mainnet",
           "2": "BeamHashIII PoW-Mining-Algorithmus",
@@ -179,6 +184,7 @@
       },
       "6": {
         "title": "Grimmiges Fermion",
+        "year": "2021",
         "items": {
           "1": "Beam Virtual Machine in Wallet und Node",
           "2": "DApp-Store in der Wallet"
@@ -186,28 +192,43 @@
       },
       "7": {
         "title": "Groovy Gluon",
+        "year": "2022",
         "items": {
-          "1": "IPFS-Integration",
-          "2": "Dezentralisierter DApp-Store",
-          "3": "Hochfrequente Transaktionen",
+          "1": "IPFS Integration",
+          "2": "Dezentralisierter DApp Store",
+          "3": "Hochfrequente Transaktionen",  
           "4": "DAO Core DApp (Governance und Abstimmung)",
-          "5": "Asset-Tauschbörse",
+          "5": "Asset Tauschbörse",
           "6": "Updates des Blockchain Explorers",
           "7": "Shader SDK",
-          "8": "Bridges Release",
-          "9": "Orakel",
-          "10": "AMM DEX Release",
-          "11": "HW Wallet Support (Ledger Nano S & Nano S Plus)",
-          "12": "Beam Messenger DApp in Beam Wallet"
+          "8": "Orakel"
         }
       },
       "8": {
-        "title": "Kraftvolles Hadron und später",
+        "title": "Groovy Gluon DeFi",
+        "year": "2023",
         "items": {
-          "1": "EVM-Unterstützung",
-          "2": "Hard Fork 8.0",
-          "3": "Sidechain-Unterstützung",
-          "4": "Starten von EVM-DApps auf der Beam-Chain"
+          "1": "AMM DEX Release",
+          "2": "BeamX Liquiditäts-Farming DApp",
+          "3": "Wrapped BEAM auf Ethereum",
+          "4": "Ethereum-Bridge (ETH, USDT, WBTC, DAI)",
+          "5": "HW Wallet Unterstützung (Ledger Nano S & Nano S Plus)",
+          "6": "Beam Messenger DApp in Beam Wallet"
+        }
+      },
+      "9": {
+        "title": "Kraftvolles Hadron und später",
+        "year": "2024", 
+        "items": {
+          "1": "Hard Fork 8.0",
+          "2": "EVM und EVM DApps Unterstützung",
+          "3": "„5-Jahres Jubiläum“ Wallet Update",
+          "4": "Nahtlose Hintergrund-Node-Synchronisation",
+          "5": "Beam Geschenkkarten",
+          "6": "Neuer erweiterter Explorer",
+          "7": "DEX GUI Überarbeitung",
+          "8": "Sidechains Unterstützung",
+          "9": "DAG Knight Integration untersuchen"
         }
       }
     }
