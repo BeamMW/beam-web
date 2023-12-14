@@ -27,15 +27,16 @@ defineProps({
 });
 </script>
 <template>
-  <h2
-    :class="[
-      'tracking-tight leading-none capitalize select-none text-center font-bold specialGradient px-4 md:px-0',
-      reserveSpace ? 'max-w-5xl mx-auto' : '',
-      gradientColor,
-      large ? 'text-3xl lg:text-5xl' : 'text-3xl md:text-4xl',
-      smallPadding ? 'pb-3 lg:pb-5' : 'pb-8 lg:pb-10',
-    ]"
-  >
-    {{ title }}
-  </h2>
+  <div :class="[reserveSpace ? 'max-w-5xl mx-auto flex justify-center' : '']">
+    <h2
+      :class="[
+        'tracking-tight leading-none capitalize select-none font-bold specialGradient px-4 md:px-0 inline',
+        gradientColor,
+        large ? 'text-3xl lg:text-5xl' : 'text-3xl md:text-4xl',
+        smallPadding ? 'mb-3 lg:mb-5' : 'mb-8 lg:mb-10',
+      ]"
+    >
+      {{ title }}
+    </h2>
+  </div>
 </template>

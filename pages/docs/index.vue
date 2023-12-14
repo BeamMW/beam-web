@@ -18,7 +18,9 @@ definePageMeta({
 });
 </script>
 <template>
-  <div class="bg-page-radial-gradient-purple background-radial-defaults">
+  <div
+    class="bg-page-radial-gradient-purple background-radial-defaults pt-14 md:pt-20"
+  >
     <LayoutWrapper :center="true" class="py-10 lg:py-12">
       <div class="px-4 mx-auto max-w-screen-xl text-center z-[12] heroText">
         <LayoutTitle
@@ -30,7 +32,7 @@ definePageMeta({
         />
 
         <h2
-          class="mb-8 md:mb-12 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-white"
+          class="mb-8 md:mb-12 text-lg font-normal sm:px-16 xl:px-48 text-white"
         >
           {{ $t("docs.warning") }}
         </h2>

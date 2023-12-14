@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="[customClass]">
     <div ref="referenceElement" @click="toggleDropdown">
       <slot name="dropdown-button" />
     </div>
@@ -60,6 +60,11 @@ const props = defineProps({
     type: Boolean,
     required: false,
     default: true,
+  },
+  customClass: {
+    type: String,
+    required: false,
+    default: "",
   },
 });
 
@@ -155,7 +160,7 @@ const updatePlacement = async () => {
             {
               name: "offset",
               options: {
-                offset: [0, 14],
+                offset: [0, 9],
               },
             },
           ],
@@ -258,7 +263,7 @@ provide("toggleDropdown", toggleDropdown);
 /** Custom default dropdown container */
 .popper-container {
   .dropdown-container {
-    @apply h-full will-change-transform z-50 rounded-lg text-white/90 relative list-none backdrop-blur-xl backdrop-brightness-75 md:bg-[#042248] border-black border border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset] transition-colors;
+    @apply h-full will-change-transform z-50 rounded-2xl text-white relative list-none backdrop-blur-xl backdrop-brightness-75 border-black border border-opacity-30 shadow-[0_10px_15px_-3px_rgba(0,0,0,.1),0_4px_6px_-4px_rgba(0,0,0,.1),0px_0px_0px_1px_rgba(255,255,255,.05)_inset] transition-colors;
   }
 
   .grid-container {
@@ -267,15 +272,21 @@ provide("toggleDropdown", toggleDropdown);
   }
 }
 
+body.bg-beam-bg-blue {
+  .popper-container .dropdown-container {
+    @apply md:!bg-[#042248]/40;
+  }
+}
+
 body.bg-beam-bg-purple {
   .popper-container .dropdown-container {
-    @apply md:!bg-[#200036];
+    @apply md:!bg-[#200036]/40;
   }
 }
 
 body.bg-beam-bg-green {
   .popper-container .dropdown-container {
-    @apply md:!bg-[#001B0E];
+    @apply md:!bg-[#001B0E]/40;
   }
 }
 
@@ -302,12 +313,12 @@ body.bg-beam-bg-green {
     content: "";
   }
 }
-.dropdown-enter-active,
-.dropdown-leave-active {
-  @apply transition-[opacity,transform] ease-in-out-custom duration-[225ms];
-}
 
 @media (max-width: 767px) {
+  .dropdown-enter-active,
+  .dropdown-leave-active {
+    @apply transition-[opacity,transform] ease-in-out-custom duration-[225ms];
+  }
   .dropdown-enter-from,
   .dropdown-leave-to {
     @apply ltr:-translate-x-[calc(100%+50px)] rtl:translate-x-[calc(100%+50px)];
@@ -317,7 +328,7 @@ body.bg-beam-bg-green {
     @apply ltr:-translate-x-0 rtl:translate-x-0;
   }
 }
-
+/*
 @media (min-width: 768px) {
   .dropdown-enter-from,
   .dropdown-leave-to {
@@ -329,4 +340,5 @@ body.bg-beam-bg-green {
     @apply opacity-100 ltr:!scale-100 rtl:!scale-100;
   }
 }
+*/
 </style>

@@ -21,27 +21,31 @@ definePageMeta({
 <template>
   <div class="bg-page-radial-gradient-dark-green background-radial-defaults">
     <div
-      class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-16 text-center"
+      class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-16 md:pt-24 text-center"
     >
-      <div class="w-full flex flex-col md:flex-row justify-evenly items-center">
+      <div
+        class="w-full flex flex-col md:flex-row justify-evenly items-center pt-8"
+      >
         <Icon
           name="mining/intro"
           :as-image="true"
           loading="lazy"
-          class="w-64 h-64 mb-2"
+          class="w-64 h-64"
           alt="Beam Girl"
         />
 
-        <LayoutTitle
-          :title="t('mining.title')"
-          :reserve-space="false"
-          gradient-color="specialGradientGreen"
-          :large="true"
-          :small-padding="true"
-        />
+        <div class="pt-10">
+          <LayoutTitle
+            :title="t('mining.title')"
+            :reserve-space="false"
+            gradient-color="specialGradientGreen"
+            :large="true"
+            :small-padding="true"
+          />
+        </div>
       </div>
 
-      <h2 class="text-xl text-white/90 pt-6">
+      <h2 class="text-lg md:text-xl text-white">
         <MarkdownRenderer t-key="mining.introduction" />
       </h2>
 

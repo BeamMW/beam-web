@@ -57,8 +57,21 @@ const props = defineProps({
     default: true,
   },
 });
-
 const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
+
+const specialGradientColor = computed(() => {
+  if (props.accentColor === "") {
+    return false;
+  }
+  switch (props.accentColor) {
+    case "beam-green":
+      return "specialGradientGreen";
+    case "beam-pink":
+      return "specialGradientPurple";
+    default:
+      return "specialGradientBlue";
+  }
+});
 </script>
 
 <template>
@@ -84,7 +97,14 @@ const hasAccentColor: string = props.accentColor ? "hasAccentColor " : "";
       {{ number }}
     </p>
     <div class="mt-3 mb-5">
-      <h3 class="block text-lg font-bold text-white mb-3">{{ title }}</h3>
+      <h3
+        :class="[
+          'block text-lg font-bold mb-3',
+          specialGradientColor ? `specialGradient ${specialGradientColor}` : '',
+        ]"
+      >
+        {{ title }}
+      </h3>
       <p class="text-white text-opacity-80">{{ text }}</p>
     </div>
     <div class="mt-auto gap-4 select-none">

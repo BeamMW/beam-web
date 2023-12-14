@@ -110,22 +110,6 @@ onUnmounted(() => {
 </template>
 
 <style>
-/*
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.2s;
-}
-.page-leave-to,
-.page-enter-from {
-  opacity: 0;
-}
-.page-leave-to {
-  @apply origin-center scale-[1.02];
-}
-.page-enter-from {
-  @apply origin-center scale-[.98];
-}
-*/
 @font-face {
   font-family: "ProximaNova";
   src:
@@ -218,20 +202,23 @@ onUnmounted(() => {
 
   &.specialGradientPurple {
     background-image: radial-gradient(
-      129.03% 100% at 120.97% 81.45%,
-      #dfdcff 27.08%,
-      #a69eff 100%
+      78.77% 78.77% at 71.71% 30.77%,
+      #f7f2ff 0%,
+      #d8bfff 67.21%,
+      #c8afff 76.04%,
+      #a789ff 84.9%,
+      #8b5dff 94.79%
     );
   }
 
   &.specialGradientGreen {
     background-image: radial-gradient(
       78.77% 78.77% at 71.71% 30.77%,
-      #e9ffef 0%,
-      /* Lighter green */ #88d4ab 67.21%,
-      /* Medium green */ #62c296 76.04%,
-      /* Medium green, slightly darker */ #2da77a 84.9%,
-      /* Darker green */ #008a5e 94.79% /* Even darker green */
+      #ffffff 0%,
+      #b9ffc9 67.21%,
+      #94e8b1 76.04%,
+      #5ae69d 84.9%,
+      #2cb277 94.79%
     );
   }
 

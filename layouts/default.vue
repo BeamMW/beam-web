@@ -27,9 +27,9 @@
         <main>
           <DownloadDownloaderManager />
           <HeaderInteractiveBar
-            :gradient-color="themeColors.gradientColorRgb as GradientColorRbg"
+            :gradient-color="themeColors.gradientColorRgb"
           />
-          <HeaderComponent :class="themeColors.header" />
+          <HeaderComponent :nav-class="themeColors.header" />
           <slot />
           <FooterComponent :class="themeColors.footer" />
         </main>
@@ -71,7 +71,7 @@ interface ThemeSettings {
   footer: string;
   body: string;
   hex: string;
-  gradientColorRgb: GradientColorRbg | null;
+  gradientColorRgb: GradientColorRbg;
 }
 
 function getTheme(routeName: RouteRecordName): ThemeSettings {
@@ -80,7 +80,7 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
     footer: string,
     body: string,
     hex: string,
-    gradientColorRgb: GradientColorRbg | null;
+    gradientColorRgb: GradientColorRbg;
 
   switch (formatRouteName) {
     case "mining":
@@ -88,7 +88,7 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
       footer = FOOTER_COLORS.GREEN;
       body = BACKGROUND_COLORS.GREEN;
       hex = THEME_COLORS.GREEN;
-      gradientColorRgb = hexToRgb(THEME_COLORS.GREEN);
+      gradientColorRgb = hexToRgb(THEME_COLORS.GREEN) as GradientColorRbg;
       break;
     case "docs":
     case "docs-slug":
@@ -96,14 +96,14 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
       footer = FOOTER_COLORS.PURPLE;
       body = BACKGROUND_COLORS.PURPLE;
       hex = THEME_COLORS.PURPLE;
-      gradientColorRgb = hexToRgb(THEME_COLORS.PURPLE);
+      gradientColorRgb = hexToRgb(THEME_COLORS.PURPLE) as GradientColorRbg;
       break;
     default:
       header = HEADER_COLORS.BLUE;
       footer = FOOTER_COLORS.BLUE;
       body = BACKGROUND_COLORS.BLUE;
       hex = THEME_COLORS.BLUE;
-      gradientColorRgb = hexToRgb(THEME_COLORS.BLUE);
+      gradientColorRgb = hexToRgb(THEME_COLORS.BLUE) as GradientColorRbg;
   }
   return { header, footer, body, hex, gradientColorRgb };
 }
