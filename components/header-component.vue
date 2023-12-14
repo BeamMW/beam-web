@@ -9,22 +9,39 @@ defineProps({
     required: false,
     default: "",
   },
+  interactiveBar: {
+    type: Boolean,
+    required: false,
+    default: true,
+  },
+  gradientColor: {
+    type: Array,
+    required: false,
+    default: undefined,
+  },
 });
 </script>
 <template>
-  <div
-    class="absolute h-full w-full px-2 xl:px-0 pt-[1.125rem] pointer-events-none"
-  >
+  <div class="absolute h-full w-full z-20 pointer-events-none">
+    <div
+      v-if="interactiveBar && gradientColor"
+      :class="[
+        'header-box mb-6 overflow-hidden backdrop-brightness-50',
+        navClass,
+      ]"
+    >
+      <HeaderInteractiveBar :gradient-color="gradientColor" />
+    </div>
     <nav
       :class="[
-        'sticky backdrop-blur-xl top-3 max-w-7xl rounded-full mx-auto z-20 border-white border border-opacity-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,.5)] transition-all pointer-events-auto',
+        'sticky header-box max-w-7xl xl:mx-auto mx-3 rounded-full',
         navClass,
       ]"
     >
       <div
         class="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center py-2 md:py-4 px-4 md:px-5"
       >
-        <div class="order-2 md:order-1 flex items-center">
+        <div class="order-2 md:order-1 flex self-start">
           <div class="inline-block w-auto">
             <HeaderLogo />
           </div>
@@ -111,3 +128,9 @@ defineProps({
     </nav>
   </div>
 </template>
+
+<style scoped>
+.header-box {
+  @apply backdrop-blur-xl top-3 z-20 border-white border border-opacity-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,.5)] transition-all pointer-events-auto;
+}
+</style>

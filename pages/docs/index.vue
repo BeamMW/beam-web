@@ -19,7 +19,7 @@ definePageMeta({
 </script>
 <template>
   <div
-    class="bg-page-radial-gradient-purple background-radial-defaults pt-14 md:pt-20"
+    class="bg-page-radial-gradient-purple background-radial-defaults pt-28 md:pt-[8.5rem]"
   >
     <LayoutWrapper :center="true" class="py-10 lg:py-12">
       <div class="px-4 mx-auto max-w-screen-xl text-center z-[12] heroText">

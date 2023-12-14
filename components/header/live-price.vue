@@ -6,10 +6,12 @@
     leave-from-class="opacity-100"
     leave-active-class="transition-opacity duration-500 ease-out opacity-0"
   >
-    <span v-show="data && data.usd" class="flex gap-1">
-      <span
-        class="text-beam-green-dark pointer-events-none select-none flex gap-1"
-        >1
+    <span
+      v-show="data && data.usd"
+      class="flex gap-1 md:pl-3 md:pr-4 md:rtl:pl-4 md:rtl:pr-3"
+    >
+      <span class="pointer-events-none select-none flex gap-1"
+        ><span class="text-beam-green-dark">1</span>
         <Icon
           class="w-6 h-6 inline-block"
           name="get-started/beam-currency"
@@ -62,7 +64,6 @@ onBeforeUnmount(() => {
 
 <style scoped>
 span.price {
-  @apply text-white;
   &.green {
     @apply text-green-500;
   }

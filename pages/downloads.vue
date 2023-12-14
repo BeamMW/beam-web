@@ -39,7 +39,7 @@ onUnmounted(() =>
 <template>
   <section class="bg-[#041D3C]">
     <section
-      class="pt-28 lg:pt-32 bg-page-radial-gradient background-radial-defaults"
+      class="bg-page-radial-gradient background-radial-defaults pt-40 md:pt-44"
     >
       <div class="px-4 mx-auto max-w-screen-xl text-center z-[12]">
         <LayoutTitle :title="pageTitle" />

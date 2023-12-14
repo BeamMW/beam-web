@@ -12,4 +12,3 @@
   Origin-Agent-Cluster: ?1
   Referrer-Policy: no-referrer
   Permissions-Policy: camera=(), display-capture=(), fullscreen=(), geolocation=(), microphone=()
-
