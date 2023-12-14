@@ -66,7 +66,7 @@
                 >
                   <Icon
                     v-if="type.state === PROGRESS.BUILDING"
-                    class="block w-2.5 h-2.5 rtl:rotate-180"
+                    class="block w-2.5 h-2.5"
                     name="layout/arrow-right"
                   />
                   <Icon
