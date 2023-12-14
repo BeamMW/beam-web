@@ -25,7 +25,7 @@ defineProps({
   <div class="absolute h-full w-full px-2 xl:px-0 z-20 pointer-events-none">
     <div
       v-if="interactiveBar && gradientColor"
-      :class="['header-box mb-3 rounded-b-3xl overflow-hidden', navClass]"
+      :class="['header-box mb-6 rounded-b-3xl overflow-hidden', navClass]"
     >
       <HeaderInteractiveBar :gradient-color="gradientColor" />
     </div>
