@@ -1,7 +1,7 @@
 <template>
   <div
     ref="scrollSpyContainer"
-    class="bg-page-radial-gradient-purple background-radial-defaults flex flex-col-reverse max-w-screen-xl mx-auto pb-10 md:!py-10 lg:!py-12 overflow-x-visible overflow-y-visible md:grid gap-5 md:gap-12 md:grid-cols-12"
+    class="bg-page-radial-gradient-purple background-radial-defaults flex flex-col-reverse max-w-screen-xl mx-auto pb-10 py-[5.5rem] md:py-32 overflow-x-visible overflow-y-visible md:grid gap-5 md:gap-12 md:grid-cols-12"
   >
     <article class="docs-content">
       <ContentDoc :path="routeName">
@@ -24,13 +24,17 @@
           {{ $t("docs.back") }}
         </div>
       </LayoutLink>
-      <section class="stick mcontainer">
-        <LayoutDropdown :always-show="true" :lock="false">
+      <section class="stick">
+        <LayoutDropdown
+          :always-show="true"
+          :lock="false"
+          custom-class="inline-block md:block"
+        >
           <template #dropdown-button>
             <button
               :title="t('docs.pagecontent')"
               type="button"
-              class="border-b border-white border-opacity-10 md:hidden py-4 font-bold w-full justify-center items-center gap-2 uppercase flex md:mb-4 group-focus:outline-none group-focus:ring-2 group-focus:ring-offset-2 bg-[#290048] hover:bg-[#360061] focus:bg-[#360061] focus:ring-offset-[#360061] focus:ring-beam-purple text-white/50 hover:text-white/90 transition h-auto"
+              class="inline-flex border-b !mx-4 rounded-full border-white px-6 border-opacity-10 md:hidden py-3 font-bold justify-center items-center gap-2 uppercase group-focus:outline-none group-focus:ring-2 group-focus:ring-offset-2 bg-[#290048] hover:bg-[#360061] focus:bg-[#360061] focus:ring-offset-[#360061] focus:ring-beam-purple text-white/50 hover:text-white/90 transition h-auto"
             >
               {{ $t("docs.pagecontent") }}
               <Icon
@@ -41,7 +45,7 @@
           </template>
           <template #dropdown-content>
             <div
-              class="py-4 md:h-[82vh] md:overflow-y-scroll md:overflow-x-hidden md:pb-16"
+              class="py-4 md:h-[82vh] md:overflow-y-scroll md:overflow-x-hidden md:pb-16 mcontainer"
             >
               <section class="py-4 md:pt-0 rounded-xl">
                 <h6>
@@ -154,7 +158,7 @@ const filteredList = computed(() => {
 
 <style>
 article.docs-content {
-  @apply px-3 md:px-4 md:col-span-7 lg:col-span-9 prose max-w-none lg:prose-lg prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-pink prose-h3:text-xl prose-h2:text-xl prose-h2:font-bold prose-img:shadow-xl;
+  @apply px-4 md:col-span-7 lg:col-span-9 prose max-w-none lg:prose-lg prose-invert prose-img:rounded-xl prose-a:!no-underline prose-a:text-beam-pink prose-h3:text-xl prose-h2:text-xl prose-h2:font-bold prose-img:shadow-xl;
 
   h1 {
     @apply text-3xl font-bold;
@@ -177,9 +181,9 @@ h6 {
 }
 
 aside .mcontainer {
-  @apply transition-colors border rounded-xl border-black border-opacity-30 transition shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset] bg-[#290048];
+  @apply border rounded-xl border-black border-opacity-30 transition shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset] bg-[#290048];
 }
 aside .stick {
-  @apply md:sticky md:h-auto md:top-[100px] md:self-start;
+  @apply md:sticky md:h-auto md:top-24 md:self-start;
 }
 </style>

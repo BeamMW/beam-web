@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="[customClass]">
     <div ref="referenceElement" @click="toggleDropdown">
       <slot name="dropdown-button" />
     </div>
@@ -60,6 +60,11 @@ const props = defineProps({
     type: Boolean,
     required: false,
     default: true,
+  },
+  customClass: {
+    type: String,
+    required: false,
+    default: "",
   },
 });
 

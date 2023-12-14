@@ -18,7 +18,9 @@ definePageMeta({
 });
 </script>
 <template>
-  <section class="bg-page-radial-gradient background-radial-defaults w-full">
+  <section
+    class="bg-page-radial-gradient background-radial-defaults w-full pt-16 md:pt-24"
+  >
     <div class="max-w-prose px-4 py-10 lg:py-12 sm:px-6 lg:px-8 mx-auto">
       <b
         class="block text-base text-center text-text opacity-80 font-bold tracking-wide uppercase"

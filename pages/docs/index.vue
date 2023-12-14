@@ -18,8 +18,10 @@ definePageMeta({
 });
 </script>
 <template>
-  <div class="bg-page-radial-gradient-purple background-radial-defaults">
-    <LayoutWrapper :center="true" class="py-10 lg:py-12">
+  <div
+    class="bg-page-radial-gradient-purple background-radial-defaults pt-16 md:pt-24"
+  >
+    <LayoutWrapper :center="true" class="py-6 lg:py-8">
       <div class="px-4 mx-auto max-w-screen-xl text-center z-[12] heroText">
         <LayoutTitle
           :title="t('head.title.documentation')"
@@ -30,7 +32,7 @@ definePageMeta({
         />
 
         <h2
-          class="mb-8 md:mb-12 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-white"
+          class="mb-8 md:mb-12 text-lg font-normal sm:px-16 xl:px-48 text-white"
         >
           {{ $t("docs.warning") }}
         </h2>

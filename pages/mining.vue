@@ -21,9 +21,11 @@ definePageMeta({
 <template>
   <div class="bg-page-radial-gradient-dark-green background-radial-defaults">
     <div
-      class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-16 text-center"
+      class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-16 md:pt-24 text-center"
     >
-      <div class="w-full flex flex-col md:flex-row justify-evenly items-center">
+      <div
+        class="w-full flex flex-col md:flex-row justify-evenly items-center pt-8"
+      >
         <Icon
           name="mining/intro"
           :as-image="true"
@@ -41,7 +43,7 @@ definePageMeta({
         />
       </div>
 
-      <h2 class="text-xl text-white/90 pt-6">
+      <h2 class="text-base md:text-xl text-white pt-6">
         <MarkdownRenderer t-key="mining.introduction" />
       </h2>
 
