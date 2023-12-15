@@ -25,8 +25,10 @@ const scrollToIdOnPage = async (
   if (!targetComponent) {
     const pageLoadedAndMounted = () => {
       eventBus.off(eventToWait, pageLoadedAndMounted);
-      const targetComponent = document.getElementById(componentId);
-      scrollToComponent(targetComponent);
+      setTimeout(() => {
+        const targetComponent = document.getElementById(componentId);
+        scrollToComponent(targetComponent);
+      }, 1);
     };
     eventBus.on(eventToWait, pageLoadedAndMounted);
     await router.push(localePath(pageName));
