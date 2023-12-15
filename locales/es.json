@@ -196,7 +196,7 @@
         "items": {
           "1": "Integración con IPFS",
           "2": "Tienda de DApp descentralizada",
-          "3": "Transacciones de alta frecuencia",
+          "3": "Servicio de Dominios Anónimos Beam (BANS)",
           "4": "DApp principal de DAO (gobernanza y votación)",
           "5": "Mercado de intercambio de activos",
           "6": "Actualizaciones del explorador blockchain",
@@ -213,7 +213,8 @@
           "3": "BEAM envuelto en Ethereum",
           "4": "Puente de Ethereum (ETH, USDT, WBTC, DAI)",
           "5": "Soporte de billetera de hardware (Ledger Nano S y Nano S Plus)",
-          "6": "DApp Beam Messenger en la billetera Beam"
+          "6": "DApp Beam Messenger en la billetera Beam",
+          "7": "Transacciones de alta frecuencia"
         }
       },
       "9": {
