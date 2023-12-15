@@ -253,13 +253,6 @@ provide("toggleDropdown", toggleDropdown);
 </script>
 
 <style scoped>
-@media (max-width: 767px) {
-  .dropdown-container,
-  .dropdown-container::before {
-    @apply ltr:!rounded-r-3xl rtl:!rounded-l-3xl;
-  }
-}
-
 /** Custom default dropdown container */
 .popper-container {
   .dropdown-container {
@@ -328,17 +321,11 @@ body.bg-beam-bg-green {
     @apply ltr:-translate-x-0 rtl:translate-x-0;
   }
 }
-/*
-@media (min-width: 768px) {
-  .dropdown-enter-from,
-  .dropdown-leave-to {
-    @apply opacity-0 ltr:!scale-95 rtl:!scale-95;
-  }
 
-  .dropdown-enter-to,
-  .dropdown-leave-from {
-    @apply opacity-100 ltr:!scale-100 rtl:!scale-100;
+@media (max-width: 767px) {
+  .dropdown-container,
+  .dropdown-container::before {
+    @apply !rounded-none ltr:!rounded-r-3xl rtl:!rounded-l-3xl;
   }
 }
-*/
 </style>
