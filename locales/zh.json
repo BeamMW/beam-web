@@ -196,7 +196,7 @@
         "items": {
           "1": "IPFS集成",
           "2": "去中心化DApp商店",
-          "3": "高频交易",
+          "3": "光束匿名域名服务(BANS)",
           "4": "DAO核心DAPP(治理和投票)",
           "5": "资产互换市场",
           "6": "区块链浏览器更新",
@@ -213,7 +213,8 @@
           "3": "以太坊上的Wrapped BEAM",
           "4": "以太坊桥(ETH, USDT, WBTC, DAI)", 
           "5": "硬件钱包支持(Ledger Nano S和Nano S Plus)",
-          "6": "Beam钱包中的Beam Messenger DApp"
+          "6": "Beam钱包中的Beam Messenger DApp",
+          "7": "高频交易"
         }
       },
       "9": {

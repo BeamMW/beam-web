@@ -333,6 +333,10 @@ const roadmap: Roadmap = [
         description: t("roadmap.milestones.8.items.6"),
         state: PROGRESS.COMPLETED,
       },
+      {
+        description: t("roadmap.milestones.8.items.7"),
+        state: PROGRESS.COMPLETED,
+      },
     ],
   },
   {
