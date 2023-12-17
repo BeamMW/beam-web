@@ -235,7 +235,7 @@ const initAnimation = async () => {
       tl.fromTo(
         images,
         { yPercent: 0 },
-        { yPercent: -100, duration: 0.6 },
+        { yPercent: -100, duration: 0.2 },
         "<",
       );
       tl.fromTo(
