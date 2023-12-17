@@ -22,7 +22,7 @@ defineProps({
 });
 </script>
 <template>
-  <div class="absolute h-full w-full z-20 pointer-events-none">
+  <div class="absolute h-full w-full z-20 pointer-events-none select-none">
     <div
       v-if="interactiveBar && gradientColor"
       :class="[
@@ -131,6 +131,11 @@ defineProps({
 
 <style scoped>
 .header-box {
-  @apply backdrop-blur-xl top-3 z-20 border-white border border-opacity-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,.5)] transition-all pointer-events-auto;
+  @apply backdrop-blur-xl top-3 z-20 border-white border border-opacity-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,.5)] transition-all pointer-events-auto select-text;
+}
+main.locked {
+  .header-box {
+    @apply pointer-events-none;
+  }
 }
 </style>
