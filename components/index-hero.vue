@@ -200,15 +200,24 @@ const localePath = useLocalePath();
 const main: VNodeRef = ref();
 const ctx: VNodeRef = ref();
 const observer = ref<IntersectionObserver | undefined>();
+const resizeObserver = ref<ResizeObserver | undefined>();
+
+let scrollHeight = 0;
 
 const initAnimation = async () => {
   const { gsap } = await import("gsap");
-  gsap.ticker.lagSmoothing(1000, 16);
 
   const hero = document.querySelector(".heroContainer") as HTMLElement;
   const images = document.querySelector(".heroImages");
   const content = document.querySelector(".heroContent");
   const bgElements = document.querySelectorAll(".bgElement");
+
+  // Only recalculate on resize
+  resizeObserver.value = new ResizeObserver((_entries) => {
+    console.log("scrollHeight updated");
+    scrollHeight = document.body.scrollHeight - window.innerHeight;
+  });
+  resizeObserver.value.observe(document.body);
 
   ctx.value = gsap.context((self) => {
     if (self) {
@@ -235,7 +244,7 @@ const initAnimation = async () => {
       tl.fromTo(
         images,
         { yPercent: 0 },
-        { yPercent: -100, duration: 0.2 },
+        { yPercent: -150, duration: 0.2 },
         "<",
       );
       tl.fromTo(
@@ -244,6 +253,17 @@ const initAnimation = async () => {
         { yPercent: -50, autoAlpha: 0, duration: 0.3 },
         "<",
       );
+
+      // This won't change so we can cache it
+      const height = hero.offsetHeight;
+      const offsetTop = hero.offsetTop;
+
+      // Calculate progress value based on scroll position
+      const getProgress = () =>
+        (window.scrollY - offsetTop) / (scrollHeight + height);
+      const updateProgress = () => {
+        tl.progress(getProgress());
+      };
 
       observer.value = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -254,20 +274,6 @@ const initAnimation = async () => {
           }
         });
       });
-
-      function updateProgress() {
-        tl.progress(getProgress(hero));
-      }
-
-      // Calculate progress value based on scroll position
-      function getProgress(el: HTMLElement) {
-        const scrollTop = window.scrollY;
-        const height = el.offsetHeight;
-        const offsetTop = el.offsetTop;
-        const scrollHeight = document.body.scrollHeight - window.innerHeight;
-        return (scrollTop - offsetTop) / (scrollHeight + height);
-      }
-
       observer.value.observe(hero);
     }
   }, main.value);
@@ -278,6 +284,7 @@ onMounted(async () => {
 });
 
 onBeforeUnmount(async () => {
+  resizeObserver.value?.disconnect();
   observer.value?.disconnect();
   await ctx.value.kill();
 });
@@ -285,7 +292,11 @@ onBeforeUnmount(async () => {
 
 <style scoped>
 .bgElement {
-  @apply absolute opacity-80;
+  @apply absolute;
+
+  /* https://angel-rs.github.io/css-color-filter-generator/ */
+  filter: brightness(0) saturate(100%) invert(39%) sepia(77%) saturate(6032%)
+    hue-rotate(185deg) brightness(98%) contrast(95%);
 }
 .heroContainer {
   @apply relative h-[150vh] md:h-screen overflow-hidden grid grid-cols-1 grid-rows-1 gap-x-0 gap-y-0;
