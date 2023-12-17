@@ -8,7 +8,7 @@
     @touchend="touchRevertAnimation"
   >
     <div
-      :class="`grid items-center justify-center h-10 w-10 transition-transform duration-[600ms] ${
+      :class="`grid items-center justify-center h-10 w-10 transition-transform duration-[600ms] hover:will-change-transform ${
         hover ? 'scale-125' : ''
       }`"
     >
@@ -77,7 +77,7 @@
       </svg>
       <Icon
         name="logo-bg"
-        :class="`h-full w-full item-container scale-0 transition-transform duration-[600ms] ease-in-out z-40 ${
+        :class="`h-full w-full item-container scale-0 transition-transform duration-[600ms] ease-in-out z-40 will-change-transform ${
           hover ? 'scale-125 rotate-90 duration-[600ms]' : ''
         }`"
         :as-image="true"
