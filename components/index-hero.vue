@@ -214,7 +214,6 @@ const initAnimation = async () => {
 
   // Only recalculate on resize
   resizeObserver.value = new ResizeObserver((_entries) => {
-    console.log("scrollHeight updated");
     scrollHeight = document.body.scrollHeight - window.innerHeight;
   });
   resizeObserver.value.observe(document.body);
@@ -293,10 +292,6 @@ onBeforeUnmount(async () => {
 <style scoped>
 .bgElement {
   @apply absolute;
-
-  /* https://angel-rs.github.io/css-color-filter-generator/ */
-  filter: brightness(0) saturate(100%) invert(39%) sepia(77%) saturate(6032%)
-    hue-rotate(185deg) brightness(98%) contrast(95%);
 }
 .heroContainer {
   @apply relative h-[150vh] md:h-screen overflow-hidden grid grid-cols-1 grid-rows-1 gap-x-0 gap-y-0;
