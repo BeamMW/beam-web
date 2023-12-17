@@ -239,9 +239,7 @@ onUnmounted(() => {
 
 <style scoped>
 main {
-  transition:
-    opacity 225ms ease-in-out,
-    filter 225ms ease-in-out;
+  @apply scale-100 transition-all duration-[225ms] origin-[50%_300px];
 
   &.locked,
   &.blurred {
@@ -252,7 +250,7 @@ main {
     -webkit-overflow-scrolling: none;
   }
   &.blurred {
-    @apply blur-sm opacity-50;
+    @apply blur-sm opacity-40 scale-90;
   }
 }
 </style>
