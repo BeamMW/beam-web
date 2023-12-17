@@ -239,7 +239,7 @@ onUnmounted(() => {
 
 <style scoped>
 main {
-  @apply scale-100 transition-all duration-[225ms] origin-[50%_300px];
+  @apply transition-transform duration-[225ms] origin-[50%_300px];
 
   &.locked,
   &.blurred {
