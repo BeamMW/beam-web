@@ -299,7 +299,7 @@ body.bg-beam-bg-green {
 }
 
 .popper-container-snap-left {
-  @apply h-screen fixed top-0 ltr:left-0 rtl:right-0 overscroll-y-contain;
+  @apply h-screen fixed top-0 ltr:left-0 rtl:right-0 overscroll-y-contain will-change-transform;
   &:deep(.dropdown-container) {
     @apply !w-[49vw] sm:!w-[45vw] shadow-beam-pink shadow-2xl;
   }

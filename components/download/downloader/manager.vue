@@ -4,7 +4,7 @@
   >
     <template v-for="component in components" :key="component.id">
       <transition
-        class="ease-in-out-custom duration-[250ms]"
+        class="ease-in-out-custom duration-[250ms] will-change-[opacity,transform]"
         enter-from-class="opacity-0 scale-90 scale-y-75"
         enter-active-class="opacity-1 scale-100 scale-y-100"
         leave-from-class="opacity-1 scale-100 scale-y-100"
@@ -153,6 +153,7 @@ const afterLeave = (id: string) => {
 
 <style scoped>
 .toast-scale-bounce {
+  @apply will-change-transform;
   animation: toast-scale-bounce 250ms ease-in-out;
 }
 
