@@ -4,7 +4,6 @@ import SwiperCore from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { pressArticles } from "@/app.config";
-import { throttle } from "~/utils/throttle";
 
 SwiperCore.use([Navigation, Autoplay]);
 
@@ -26,17 +25,19 @@ const calculateSlidesToShow = () => {
   return 1;
 };
 
-const updateSlidesToShow = throttle(() => {
+const updateSlidesToShow = () => {
   slidesToShow.value = calculateSlidesToShow();
-}, 100);
+};
+
+const resizeObserver = ref<ResizeObserver | undefined>();
 
 onMounted(() => {
-  window.addEventListener("resize", updateSlidesToShow);
-  updateSlidesToShow();
+  resizeObserver.value = new ResizeObserver((_entries) => updateSlidesToShow());
+  resizeObserver.value.observe(document.body);
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener("resize", updateSlidesToShow);
+  resizeObserver.value?.disconnect();
 });
 
 const spaceBetween = ref(20);

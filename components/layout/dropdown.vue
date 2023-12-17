@@ -15,7 +15,7 @@
         @before-enter="afterEnter"
         @after-leave="afterLeave"
       >
-        <div v-show="showDropdown" class="h-full">
+        <div v-if="showDropdown" class="h-full">
           <section class="dropdown-container">
             <div class="grid-container">
               <slot name="dropdown-content" />
@@ -205,6 +205,8 @@ const handleClick = (event: MouseEvent) => {
   }
 };
 
+const resizeObserver = ref<ResizeObserver | undefined>();
+
 onMounted(() => {
   // Attach dropdown content to body
   if (popperElement.value) {
@@ -220,15 +222,16 @@ onMounted(() => {
   document.addEventListener("click", handleClick);
 
   // Handle window resize
-  window.addEventListener("resize", updatePlacement);
+  resizeObserver.value = new ResizeObserver((_entries) => updatePlacement());
+  resizeObserver.value.observe(document.body);
 
   // Listen on custom events
   eventBus.on(UserInteractionEvents.CLOSE_MENUS, closePopper);
 });
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
+  resizeObserver.value?.disconnect();
   document.removeEventListener("click", handleClick);
-  window.removeEventListener("resize", updatePlacement);
 
   // Detach dropdown content to body
   if (popperElement.value) {
@@ -310,7 +313,7 @@ body.bg-beam-bg-green {
 @media (max-width: 767px) {
   .dropdown-enter-active,
   .dropdown-leave-active {
-    @apply transition-[opacity,transform] ease-in-out-custom duration-[400ms];
+    @apply transition-[opacity,transform] ease-in-out-custom duration-[225ms];
   }
   .dropdown-enter-from,
   .dropdown-leave-to {
