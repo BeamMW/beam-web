@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, getCurrentInstance } from "vue";
+import { ref, onMounted, getCurrentInstance } from "vue";
 
 // prettier-ignore
 import { createPopper } from "@popperjs/core";
@@ -205,6 +205,8 @@ const handleClick = (event: MouseEvent) => {
   }
 };
 
+const resizeObserver = ref<ResizeObserver | undefined>();
+
 onMounted(() => {
   // Attach dropdown content to body
   if (popperElement.value) {
@@ -220,15 +222,16 @@ onMounted(() => {
   document.addEventListener("click", handleClick);
 
   // Handle window resize
-  window.addEventListener("resize", updatePlacement);
+  resizeObserver.value = new ResizeObserver((_entries) => updatePlacement());
+  resizeObserver.value.observe(document.body);
 
   // Listen on custom events
   eventBus.on(UserInteractionEvents.CLOSE_MENUS, closePopper);
 });
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
+  resizeObserver.value?.disconnect();
   document.removeEventListener("click", handleClick);
-  window.removeEventListener("resize", updatePlacement);
 
   // Detach dropdown content to body
   if (popperElement.value) {
