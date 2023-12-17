@@ -15,7 +15,7 @@
         @before-enter="afterEnter"
         @after-leave="afterLeave"
       >
-        <div v-if="showDropdown" class="h-full">
+        <div v-show="showDropdown" class="h-full">
           <section class="dropdown-container">
             <div class="grid-container">
               <slot name="dropdown-content" />
@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, getCurrentInstance } from "vue";
+import { ref, onMounted, getCurrentInstance } from "vue";
 
 // prettier-ignore
 import { createPopper } from "@popperjs/core";
@@ -313,7 +313,7 @@ body.bg-beam-bg-green {
 @media (max-width: 767px) {
   .dropdown-enter-active,
   .dropdown-leave-active {
-    @apply transition-[opacity,transform] ease-in-out-custom duration-[225ms];
+    @apply transition-[opacity,transform] ease-in-out-custom duration-[400ms];
   }
   .dropdown-enter-from,
   .dropdown-leave-to {
