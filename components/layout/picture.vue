@@ -1,25 +1,23 @@
 <template>
-  <div
-    ref="imageWrapper"
-    :class="`select-none pointer-events-none opacity-0 transition duration-500 ${
-      imageLoaded ? '!opacity-100' : ''
-    }`"
-  >
-    <picture>
-      <source
-        v-if="webp"
-        :srcset="`${removeFileExtension(src)}.webp`"
-        type="image/webp"
-      />
-      <img
-        :src="src"
-        class="opacity-100 transition-opacity"
-        v-bind="$attrs"
-        loading="lazy"
-        @load="onImageLoad"
-      />
-    </picture>
-  </div>
+  <ClientOnly>
+    <div
+      ref="imageWrapper"
+      :class="`select-none pointer-events-none opacity-0 transition duration-500 ${
+        imageLoaded ? '!opacity-100' : ''
+      }`"
+    >
+      <picture>
+        <source v-if="webp" :srcset="`${src}.webp`" type="image/webp" />
+        <source :srcset="`${src}.png`" type="image/png" />
+        <img
+          :src="`${src}.png`"
+          v-bind="$attrs"
+          loading="lazy"
+          @load="onImageLoad"
+        />
+      </picture>
+    </div>
+  </ClientOnly>
 </template>
 
 <script lang="ts" setup>
@@ -34,11 +32,6 @@ defineProps({
     default: false,
   },
 });
-
-function removeFileExtension(filename: string) {
-  const lastDotIndex = filename.lastIndexOf(".");
-  return lastDotIndex === -1 ? filename : filename.slice(0, lastDotIndex);
-}
 
 const imageLoaded = ref(false);
 
