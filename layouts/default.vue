@@ -19,13 +19,20 @@
       </template>
     </Head>
     <Body :class="themeColors.body">
-      <DownloadDownloaderManager />
-      <HeaderComponent
-        :nav-class="themeColors.header"
-        :gradient-color="themeColors.gradientColorRgb"
-      />
-      <slot />
-      <FooterComponent :class="themeColors.footer" />
+      <main
+        :class="{
+          locked: windowLocked,
+          blurred: windowBlurred,
+        }"
+      >
+        <DownloadDownloaderManager />
+        <HeaderComponent
+          :nav-class="themeColors.header"
+          :gradient-color="themeColors.gradientColorRgb"
+        />
+        <slot />
+        <FooterComponent :class="themeColors.footer" />
+      </main>
     </Body>
   </Html>
 </template>
@@ -105,6 +112,9 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
   return { header, footer, body, hex, gradientColorRgb };
 }
 
+const windowLocked = useState("windowLocked", () => false);
+const windowBlurred = useState("windowBlurred", () => false);
+
 const route = useRoute();
 const themeColors = ref<ThemeSettings>(
   getTheme(route.name ? route.name : "index"),
@@ -125,3 +135,21 @@ const head = useLocaleHead({
   addSeoAttributes: true,
 });
 </script>
+
+<style scoped>
+main {
+  @apply transition-transform duration-[225ms] origin-[50%_300px];
+
+  &.locked,
+  &.blurred {
+    @apply pointer-events-none select-none;
+  }
+  &.locked {
+    @apply overflow-hidden h-screen touch-none overscroll-none;
+    -webkit-overflow-scrolling: none;
+  }
+  &.blurred {
+    @apply blur-sm opacity-40 scale-90;
+  }
+}
+</style>
