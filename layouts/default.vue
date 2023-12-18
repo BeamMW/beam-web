@@ -1,44 +1,86 @@
 <template>
-  <Html
-    :lang="head.htmlAttrs && head.htmlAttrs.lang"
-    :dir="head.htmlAttrs && head.htmlAttrs.dir"
-    :class="themeColors.body"
-  >
-    <Head>
-      <Meta name="theme-color" :content="themeColors.hex" />
-      <template v-for="link in head.link" :key="link.id">
+  <LanguageHandler>
+    <Html
+      :lang="head && head.htmlAttrs && head.htmlAttrs.lang"
+      :dir="head && head.htmlAttrs && head.htmlAttrs.dir"
+      :class="themeColors && themeColors.body"
+    >
+      <Head>
         <Link
-          :id="link.id"
-          :rel="link.rel"
-          :href="link.href"
-          :hreflang="link.hreflang"
+          v-for="linkElement in linkElements"
+          :key="linkElement.href"
+          :rel="linkElement.rel"
+          :href="linkElement.href"
+          :as="linkElement.as"
+          :type="linkElement.type"
+          :crossorigin="linkElement.crossorigin ? 'anonymous' : undefined"
         />
-      </template>
-      <template v-for="meta in head.meta" :key="meta.id">
-        <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
-      </template>
-    </Head>
-    <Body :class="themeColors.body">
-      <main
-        :class="{
-          locked: windowLocked,
-          blurred: windowBlurred,
-        }"
-      >
-        <DownloadDownloaderManager />
-        <HeaderComponent
-          :nav-class="themeColors.header"
-          :gradient-color="themeColors.gradientColorRgb"
+        <Meta
+          content="width=device-width, initial-scale=1, maximum-scale=5"
+          name="viewport"
         />
-        <slot />
-        <FooterComponent :class="themeColors.footer" />
-      </main>
-    </Body>
-  </Html>
+        <Meta name="twitter:site" :content="XUsername" />
+        <Meta name="twitter:creator" :content="XUsername" />
+        <Meta
+          v-if="
+            platformDetails[SupportedPlatforms.IOS] &&
+            platformDetails[SupportedPlatforms.IOS].links &&
+            platformDetails[SupportedPlatforms.IOS].links.store
+          "
+          name="apple-itunes-app"
+          :content="`app-id=${extractAppStoreAppId(
+            platformDetails[SupportedPlatforms.IOS].links.store as string,
+          )}`"
+        />
+        <Meta name="theme-color" :content="themeColors.hex" />
+        <template v-for="link in head.link" :key="link.id">
+          <Link
+            :id="link.id"
+            :rel="link.rel"
+            :href="link.href"
+            :hreflang="link.hreflang"
+          />
+        </template>
+        <template v-for="meta in head.meta" :key="meta.id">
+          <Meta
+            :id="meta.id"
+            :property="meta.property"
+            :content="meta.content"
+          />
+        </template>
+      </Head>
+      <Body :class="themeColors.body">
+        <NuxtLoadingIndicator
+          color="repeating-linear-gradient(to right,var(--beam-green-dark) 0%,var(--beam-pink) 100%)"
+          class="will-change-auto"
+        />
+        <main
+          :class="{
+            locked: windowLocked,
+            blurred: windowBlurred,
+          }"
+        >
+          <DownloadDownloaderManager />
+          <HeaderComponent
+            :nav-class="themeColors.header"
+            :gradient-color="themeColors.gradientColorRgb"
+          />
+          <slot />
+          <FooterComponent :class="themeColors.footer" />
+        </main>
+      </Body>
+    </Html>
+  </LanguageHandler>
 </template>
 
 <script lang="ts" setup>
 import type { RouteRecordName } from "vue-router";
+import { linkElements } from "@/utils/linkElements";
+import { SupportedPlatforms, ExternalLinks } from "@/app.config";
+import {
+  EnvironmentType,
+  getDownloadsFor,
+} from "~/composables/usePlatformDetails";
 
 enum THEME_COLORS {
   BLUE = "#041D3C",
@@ -115,6 +157,9 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
 const windowLocked = useState("windowLocked", () => false);
 const windowBlurred = useState("windowBlurred", () => false);
 
+const platformDetails = await getDownloadsFor(EnvironmentType.MAINNET);
+const XUsername = extractXUsername(ExternalLinks.X) as string;
+
 const route = useRoute();
 const themeColors = ref<ThemeSettings>(
   getTheme(route.name ? route.name : "index"),
@@ -139,7 +184,6 @@ const head = useLocaleHead({
 <style scoped>
 main {
   @apply transition-transform duration-[225ms] origin-[50%_300px];
-
   &.locked,
   &.blurred {
     @apply pointer-events-none select-none;

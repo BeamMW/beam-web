@@ -12,7 +12,9 @@
       </ContentDoc>
     </article>
 
-    <aside class="md:col-span-5 lg:col-span-3 md:px-4">
+    <aside
+      class="md:col-span-5 lg:col-span-3 md:ltr:pr-4 xl:ltr:pr-0 md:rtl:pl-4 xl:rtl:pl-0"
+    >
       <LayoutLink
         class="stick capitalize group font-bold hidden md:block mcontainer py-4 mb-4 text-purple-100/50 hover:text-purple-100/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#360061] h-auto focus:ring-beam-purple hover:!bg-[#360061]"
         :to="localePath('/docs')"
@@ -48,7 +50,7 @@
               class="py-4 md:h-[82vh] md:overflow-y-scroll md:overflow-x-hidden md:pb-16 mcontainer"
             >
               <section class="py-4 md:pt-0 rounded-xl">
-                <h6>
+                <h6 class="ltr:pl-2 rtl:pr-2">
                   {{
                     filteredList.length > 0
                       ? $t("docs.summary")
@@ -63,7 +65,7 @@
                 </li>
                 <h6
                   v-if="filteredList.length > 0"
-                  class="pt-4 border-t border-white/20"
+                  class="pt-4 border-t border-white/20 ltr:pl-2 rtl:pr-2"
                 >
                   {{ $t("docs.content") }}
                 </h6>

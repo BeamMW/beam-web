@@ -14,12 +14,12 @@ interface PlatformDownloadDetail {
   checksums: Partial<PlatformDownloadType>;
 }
 
-enum EnvironmentType {
+export enum EnvironmentType {
   MAINNET = "mainnet",
   DAPPNET = "dappnet",
 }
 
-const getDownloadsFor = async (environment: EnvironmentType) => {
+export const getDownloadsFor = async (environment: EnvironmentType) => {
   return (await import(`@/downloads/${environment}.json`)).default as Record<
     SupportedPlatforms,
     PlatformDownloadDetail

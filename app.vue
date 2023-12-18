@@ -1,14 +1,9 @@
 <script lang="ts" setup>
-import { linkElements } from "@/utils/linkElements";
 import { UserInteractionEvents, eventBus } from "~/utils/emitter";
 import { scrollToComponent } from "~/utils/scrollToComponent";
-import { SupportedPlatforms, ExternalLinks } from "@/app.config";
 
-const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();
 const router = useRouter();
-
-const XUsername = extractXUsername(ExternalLinks.X) as string;
 
 defineRobotMeta();
 
@@ -59,47 +54,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div>
-    <Head>
-      <Link
-        v-for="linkElement in linkElements"
-        :key="linkElement.href"
-        :rel="linkElement.rel"
-        :href="linkElement.href"
-        :as="linkElement.as"
-        :type="linkElement.type"
-        :crossorigin="linkElement.crossorigin ? 'anonymous' : undefined"
-      />
-      <Meta
-        content="width=device-width, initial-scale=1, maximum-scale=5"
-        name="viewport"
-      />
-      <Meta name="twitter:site" :content="XUsername" />
-      <Meta name="twitter:creator" :content="XUsername" />
-      <Meta
-        v-if="
-          platformDetails[SupportedPlatforms.IOS] &&
-          platformDetails[SupportedPlatforms.IOS].links &&
-          platformDetails[SupportedPlatforms.IOS].links.store
-        "
-        name="apple-itunes-app"
-        :content="`app-id=${extractAppStoreAppId(
-          platformDetails[SupportedPlatforms.IOS].links.store as string,
-        )}`"
-      />
-    </Head>
-    <NuxtLayout>
-      <NuxtLoadingIndicator
-        color="repeating-linear-gradient(to right,var(--beam-green-dark) 0%,var(--beam-pink) 100%)"
-        class="will-change-auto"
-      />
-      <LanguageHandler>
-        <div>
-          <NuxtPage :transition="false" />
-        </div>
-      </LanguageHandler>
-    </NuxtLayout>
-  </div>
+  <NuxtLayout>
+    <NuxtPage :transition="false" />
+  </NuxtLayout>
 </template>
 
 <style>
