@@ -259,8 +259,20 @@ const initAnimation = async () => {
       );
       tl.fromTo(
         content,
-        { yPercent: 0, opacity: 1, scale: 1 },
-        { yPercent: -25, opacity: 0, scale: 0.9, duration: 0.05 },
+        {
+          yPercent: 0,
+          opacity: 1,
+          scale: 1,
+          filter: "blur(0px)",
+          ease: "linear",
+        },
+        {
+          yPercent: -25,
+          opacity: 0,
+          scale: 0.85,
+          filter: "blur(4px)",
+          duration: 0.05,
+        },
         "<",
       );
 

@@ -6,7 +6,6 @@ import { SupportedPlatforms, ExternalLinks } from "@/app.config";
 
 const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();
-
 const router = useRouter();
 
 const XUsername = extractXUsername(ExternalLinks.X) as string;
