@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col rtl:text-right ltr:text-left">
     <div v-if="starting || downloading">
-      <b class="text-lg font-bold text-white">{{
+      <b class="text-lg font-bold text-blue-50">{{
         starting
           ? $t("downloads.downloader.state.starting")
           : $t("downloads.downloader.state.downloading")
@@ -10,7 +10,7 @@
         <span class="text-base font-medium text-beam-green"
           >{{ percentage.toFixed(2) }}%</span
         >
-        <span class="text-sm font-medium text-white">{{
+        <span class="text-sm font-medium text-blue-50">{{
           remainingTime !== 0
             ? formatTimeRelative(remainingTime, formatLocale as Locale)
             : ""
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div v-else-if="hashing">
-      <b class="text-lg font-bold text-white">{{
+      <b class="text-lg font-bold text-blue-50">{{
         $t("downloads.downloader.state.integrity")
       }}</b>
       <div class="flex flex-row my-1 gap-1 items-center">
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div v-else-if="finished">
-      <b class="text-lg font-bold text-white">{{
+      <b class="text-lg font-bold text-blue-50">{{
         $t("downloads.downloader.state.finished")
       }}</b>
       <div class="flex flex-row my-2 gap-3 items-center">
@@ -84,7 +84,7 @@
       </div>
     </div>
     <div v-else-if="error">
-      <b class="text-lg font-bold text-white">{{
+      <b class="text-lg font-bold text-blue-50">{{
         $t("downloads.downloader.state.error")
       }}</b>
       <p>{{ error }}</p>

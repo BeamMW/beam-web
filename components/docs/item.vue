@@ -14,11 +14,11 @@
 
     <aside class="md:col-span-5 lg:col-span-3 md:px-4">
       <LayoutLink
-        class="stick capitalize group font-bold hidden md:block mcontainer py-4 mb-4 text-white/50 hover:text-white/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#360061] h-auto focus:ring-beam-purple hover:!bg-[#360061]"
+        class="stick capitalize group font-bold hidden md:block mcontainer py-4 mb-4 text-purple-100/50 hover:text-purple-100/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#360061] h-auto focus:ring-beam-purple hover:!bg-[#360061]"
         :to="localePath('/docs')"
         ><div class="justify-center items-center gap-2 flex">
           <Icon
-            class="ltr:rotate-180 block w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+            class="ltr:rotate-180 block w-3 h-3 text-purple-100 group-hover:opacity-100 opacity-60 transition-opacity"
             name="layout/arrow-right"
           />
           {{ $t("docs.back") }}
@@ -34,11 +34,11 @@
             <button
               :title="t('docs.pagecontent')"
               type="button"
-              class="inline-flex border-b !mx-4 rounded-full border-white px-6 border-opacity-10 md:hidden py-3 font-bold justify-center items-center gap-2 uppercase group-focus:outline-none group-focus:ring-2 group-focus:ring-offset-2 bg-[#290048] hover:bg-[#360061] focus:bg-[#360061] focus:ring-offset-[#360061] focus:ring-beam-purple text-white/50 hover:text-white/90 transition h-auto"
+              class="inline-flex border-b !mx-4 rounded-full border-white px-6 border-opacity-10 md:hidden py-3 font-bold justify-center items-center gap-2 uppercase group-focus:outline-none group-focus:ring-2 group-focus:ring-offset-2 bg-[#290048] hover:bg-[#360061] focus:bg-[#360061] focus:ring-offset-[#360061] focus:ring-beam-purple text-purple-100/50 hover:text-purple-100/90 transition h-auto"
             >
               {{ $t("docs.pagecontent") }}
               <Icon
-                class="rotate-90 block w-3 h-3 text-white group-hover:opacity-100 opacity-60 transition-opacity"
+                class="rotate-90 block w-3 h-3 text-purple-100 group-hover:opacity-100 opacity-60 transition-opacity"
                 name="layout/arrow-right"
               />
             </button>

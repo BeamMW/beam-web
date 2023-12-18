@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[85rem] mx-auto px-6 lg:px-0">
+  <div class="max-w-7xl mx-auto px-6 lg:px-0">
     <div class="relative flex py-14 items-center">
       <div class="divider"></div>
       <span

@@ -10,7 +10,7 @@ onMounted(() => {
 <template>
   <LayoutWrapper :center="true">
     <div id="exchanges"></div>
-    <div id="targetComponentBuy">
+    <div id="targetComponentBuy" class="text-blue-50">
       <LayoutTitle :title="$t('buyWhere.title')" />
 
       <BuyGrid :title="t('buyWhere.exchanges')">
@@ -58,9 +58,6 @@ onMounted(() => {
 </template>
 <style scoped>
 div#exchanges {
-  display: block;
-  position: relative;
-  top: -100px;
-  visibility: hidden;
+  @apply block relative invisible top-[-80px];
 }
 </style>

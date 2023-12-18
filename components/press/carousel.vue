@@ -96,7 +96,7 @@ const spaceBetween = ref(20);
 }
 
 .carousel-item {
-  @apply text-white flex items-center justify-center;
+  @apply flex items-center justify-center;
 }
 .carousel-item-link:deep(img) {
   @apply !opacity-60 transition-opacity;

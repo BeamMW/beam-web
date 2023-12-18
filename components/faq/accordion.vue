@@ -17,7 +17,7 @@
       </button>
       <div
         ref="accordionContents"
-        class="hs-accordion-content w-full overflow-hidden transition-[height] will-change-transform duration-300 text-white/80"
+        class="hs-accordion-content w-full overflow-hidden transition-[height] will-change-transform duration-300 text-blue-50"
         :style="{ maxHeight: getMaxHeight(index) }"
       >
         <p class="pt-2">
@@ -63,8 +63,8 @@ const getMaxHeight = (index: number) => {
 
 const buttonClasses = (index: number) => ({
   "!text-beam-blue": activeIndex.value === index,
-  "text-white/80": activeIndex.value !== index,
-  "hover:text-white": activeIndex.value !== index,
+  "text-blue-50": activeIndex.value !== index,
+  "hover:text-blue-50/90": activeIndex.value !== index,
 });
 
 const arrowClasses = (index: number) => ({

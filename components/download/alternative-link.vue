@@ -25,7 +25,7 @@ const downloadItem = computed(() => startDownload(props.link, props.checksum));
   <span>
     <LayoutLink
       :to="link"
-      class="hover:text-white transition-colors"
+      class="hover:text-blue-50 transition-colors"
       @click="downloadItem"
     >
       <span class="inline-flex items-center"

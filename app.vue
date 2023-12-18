@@ -6,10 +6,6 @@ import { SupportedPlatforms, ExternalLinks } from "@/app.config";
 
 const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();
-
-const windowLocked = useState("windowLocked", () => false);
-const windowBlurred = useState("windowBlurred", () => false);
-
 const router = useRouter();
 
 const XUsername = extractXUsername(ExternalLinks.X) as string;
@@ -63,12 +59,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main
-    :class="{
-      locked: windowLocked,
-      blurred: windowBlurred,
-    }"
-  >
+  <div>
     <Head>
       <Link
         v-for="linkElement in linkElements"
@@ -108,7 +99,7 @@ onUnmounted(() => {
         </div>
       </LanguageHandler>
     </NuxtLayout>
-  </main>
+  </div>
 </template>
 
 <style>
@@ -233,24 +224,6 @@ onUnmounted(() => {
       #5be1ff 84.9%,
       #00bae2 94.79%
     );
-  }
-}
-</style>
-
-<style scoped>
-main {
-  @apply transition-transform duration-[225ms] origin-[50%_300px];
-
-  &.locked,
-  &.blurred {
-    @apply pointer-events-none select-none;
-  }
-  &.locked {
-    @apply overflow-hidden h-screen touch-none overscroll-none;
-    -webkit-overflow-scrolling: none;
-  }
-  &.blurred {
-    @apply blur-sm opacity-40 scale-90;
   }
 }
 </style>

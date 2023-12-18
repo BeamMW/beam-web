@@ -25,11 +25,11 @@ const faqs = Array.from({ length: faqEntries }, (_, i) => createFaq(i + 1));
       <div class="md:col-span-2">
         <div class="max-w-xs">
           <h2
-            class="text-xl font-bold md:text-2xl md:leading-tight text-white capitalize"
+            class="text-xl font-bold md:text-2xl md:leading-tight text-blue-50 capitalize"
           >
             <MarkdownRenderer t-key="faq.title" />
           </h2>
-          <p class="mt-2 hidden md:block text-white/70">
+          <p class="mt-2 hidden md:block text-blue-50/70">
             <MarkdownRenderer t-key="faq.description" />
           </p>
         </div>

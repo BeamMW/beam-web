@@ -21,9 +21,11 @@ definePageMeta({
   <section
     class="bg-page-radial-gradient background-radial-defaults w-full pt-28 md:pt-32"
   >
-    <div class="max-w-prose px-4 py-10 lg:py-12 sm:px-6 lg:px-8 mx-auto">
+    <div
+      class="max-w-prose px-4 py-10 lg:py-12 sm:px-6 lg:px-8 mx-auto text-blue-50"
+    >
       <b
-        class="block text-base text-center text-text opacity-80 font-bold tracking-wide uppercase specialGradient specialGradientBlue mb-2"
+        class="block text-base text-center text-text font-bold tracking-wide uppercase mb-2"
         >{{ $t("privacy.lastupdate") }}</b
       >
       <LayoutTitle :title="t('privacy.title')" />
@@ -39,7 +41,7 @@ definePageMeta({
           >
             {{ $t(`privacy.${index}.title`) }}
           </h3>
-          <p class="text-lg text-gray-200">
+          <p class="text-lg">
             <MarkdownRenderer
               :t-key="`privacy.${index}.content`"
               :t-interpolation="{

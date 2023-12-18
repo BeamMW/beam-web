@@ -29,14 +29,12 @@ onUnmounted(() =>
 );
 </script>
 <template>
-  <div>
-    <LayoutDropdown @register-toggle="registerToggle">
-      <template #dropdown-button>
-        <HeaderLanguageSelector />
-      </template>
-      <template #dropdown-content>
-        <HeaderLanguageDropdown />
-      </template>
-    </LayoutDropdown>
-  </div>
+  <LayoutDropdown @register-toggle="registerToggle">
+    <template #dropdown-button>
+      <HeaderLanguageSelector />
+    </template>
+    <template #dropdown-content>
+      <HeaderLanguageDropdown />
+    </template>
+  </LayoutDropdown>
 </template>

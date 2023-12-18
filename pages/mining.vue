@@ -21,7 +21,7 @@ definePageMeta({
 <template>
   <div class="bg-page-radial-gradient-dark-green background-radial-defaults">
     <div
-      class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-32 md:pt-36 text-center"
+      class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-8 pt-32 md:pt-36 text-center"
     >
       <div
         class="w-full flex flex-col md:flex-row justify-evenly items-center pt-8"
@@ -45,13 +45,15 @@ definePageMeta({
         </div>
       </div>
 
-      <h2 class="text-lg md:text-xl text-white">
-        <MarkdownRenderer t-key="mining.introduction" />
-      </h2>
+      <div>
+        <h2 class="text-lg md:text-xl text-green-100">
+          <MarkdownRenderer t-key="mining.introduction" />
+        </h2>
 
-      <p class="my-5 text-lg text-white/90">
-        {{ $t("mining.details") }}
-      </p>
+        <p class="my-5 text-lg text-green-50">
+          {{ $t("mining.details") }}
+        </p>
+      </div>
 
       <div>
         <LayoutButton
@@ -70,7 +72,7 @@ definePageMeta({
       </div>
     </div>
 
-    <LayoutWrapper :center="true" class="pt-10 lg:pt-12">
+    <LayoutWrapper :center="true" class="pt-10 lg:pt-12 text-green-50">
       <LayoutTitle
         :title="t('mining.miningSoftware')"
         gradient-color="specialGradientGreen"

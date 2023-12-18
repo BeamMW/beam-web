@@ -1,41 +1,40 @@
 <template>
-  <div>
-    <Html
-      :lang="head.htmlAttrs && head.htmlAttrs.lang"
-      :dir="head.htmlAttrs && head.htmlAttrs.dir"
-      :class="themeColors.body"
-    >
-      <Head>
-        <Meta name="theme-color" :content="themeColors.hex" />
-        <template v-for="link in head.link" :key="link.id">
-          <Link
-            :id="link.id"
-            :rel="link.rel"
-            :href="link.href"
-            :hreflang="link.hreflang"
-          />
-        </template>
-        <template v-for="meta in head.meta" :key="meta.id">
-          <Meta
-            :id="meta.id"
-            :property="meta.property"
-            :content="meta.content"
-          />
-        </template>
-      </Head>
-      <Body :class="themeColors.body">
-        <main>
-          <DownloadDownloaderManager />
-          <HeaderComponent
-            :nav-class="themeColors.header"
-            :gradient-color="themeColors.gradientColorRgb"
-          />
-          <slot />
-          <FooterComponent :class="themeColors.footer" />
-        </main>
-      </Body>
-    </Html>
-  </div>
+  <Html
+    :lang="head.htmlAttrs && head.htmlAttrs.lang"
+    :dir="head.htmlAttrs && head.htmlAttrs.dir"
+    :class="themeColors.body"
+  >
+    <Head>
+      <Meta name="theme-color" :content="themeColors.hex" />
+      <template v-for="link in head.link" :key="link.id">
+        <Link
+          :id="link.id"
+          :rel="link.rel"
+          :href="link.href"
+          :hreflang="link.hreflang"
+        />
+      </template>
+      <template v-for="meta in head.meta" :key="meta.id">
+        <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
+      </template>
+    </Head>
+    <Body :class="themeColors.body">
+      <main
+        :class="{
+          locked: windowLocked,
+          blurred: windowBlurred,
+        }"
+      >
+        <DownloadDownloaderManager />
+        <HeaderComponent
+          :nav-class="themeColors.header"
+          :gradient-color="themeColors.gradientColorRgb"
+        />
+        <slot />
+        <FooterComponent :class="themeColors.footer" />
+      </main>
+    </Body>
+  </Html>
 </template>
 
 <script lang="ts" setup>
@@ -113,6 +112,9 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
   return { header, footer, body, hex, gradientColorRgb };
 }
 
+const windowLocked = useState("windowLocked", () => false);
+const windowBlurred = useState("windowBlurred", () => false);
+
 const route = useRoute();
 const themeColors = ref<ThemeSettings>(
   getTheme(route.name ? route.name : "index"),
@@ -133,3 +135,21 @@ const head = useLocaleHead({
   addSeoAttributes: true,
 });
 </script>
+
+<style scoped>
+main {
+  @apply transition-transform duration-[225ms] origin-[50%_300px];
+
+  &.locked,
+  &.blurred {
+    @apply pointer-events-none select-none;
+  }
+  &.locked {
+    @apply overflow-hidden h-screen touch-none overscroll-none;
+    -webkit-overflow-scrolling: none;
+  }
+  &.blurred {
+    @apply blur-sm opacity-40 scale-90;
+  }
+}
+</style>
