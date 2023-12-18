@@ -192,11 +192,11 @@
       },
       "7": {
         "title": "Gluon Groovy",
-        "year": "2022", 
+        "year": "2022",
         "items": {
           "1": "Intégration IPFS",
           "2": "Magasin décentralisé DApp",
-          "3" : "Service de Domaines Anonymes Beam (BANS)",
+          "3": "Service de Domaines Anonymes Beam (BANS)",
           "4": "DAO core DAPP (gouvernance et vote)",
           "5": "Marché d'échange d'actifs",
           "6": "Mises à jour de l'explorateur de blockchain",
@@ -218,7 +218,7 @@
         }
       },
       "9": {
-        "title": "Hadron copieux et plus tard", 
+        "title": "Hadron copieux et plus tard",
         "year": "2024",
         "items": {
           "1": "Hard Fork 8.0",
@@ -226,7 +226,7 @@
           "3": "Mise à jour du portefeuille «5e anniversaire»",
           "4": "Synchronisation du nœud en arrière-plan transparente",
           "5": "Cartes cadeaux Beam",
-          "6": "Nouvel explorateur étendu", 
+          "6": "Nouvel explorateur étendu",
           "7": "Refonte de l'interface graphique DEX",
           "8": "Support des sidechains",
           "9": "Intégrer DAG Knight"
