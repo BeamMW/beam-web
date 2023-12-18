@@ -180,3 +180,20 @@ const head = useLocaleHead({
   addSeoAttributes: true,
 });
 </script>
+
+<style scoped>
+main {
+  @apply transition-transform duration-[225ms] origin-[50%_300px];
+  &.locked,
+  &.blurred {
+    @apply pointer-events-none select-none;
+  }
+  &.locked {
+    @apply overflow-hidden h-screen touch-none overscroll-none;
+    -webkit-overflow-scrolling: none;
+  }
+  &.blurred {
+    @apply blur-sm opacity-40 scale-90;
+  }
+}
+</style>
