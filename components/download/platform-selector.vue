@@ -9,7 +9,7 @@ const platformDetails = await usePlatformDetails();
 <template>
   <section>
     <template v-if="!environmentGetter.isDappnet">
-      <div class="max-w-[64rem] px-4 sm:px-6 lg:px-8 mx-auto w-fit">
+      <div class="px-4 sm:px-6 lg:px-8 mx-auto w-fit">
         <DownloadPlatformAndroid v-if="selected.android" :highlight="true" />
         <DownloadPlatformIos v-else-if="selected.ios" :highlight="true" />
         <DownloadPlatformDesktop

@@ -7,7 +7,7 @@ defineProps({
 });
 </script>
 <template>
-  <div class="grid md:grid-cols-5 w-full md:max-w-[85rem] gap-4 md:gap-8">
+  <div class="grid md:grid-cols-5 w-full md:max-w-7xl gap-4 md:gap-8">
     <div class="md:col-span-1">
       <div class="text-left text-lg font-bold">
         <span class="h-[2.375rem]">{{ title }}</span>

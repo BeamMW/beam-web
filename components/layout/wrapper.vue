@@ -7,7 +7,7 @@ defineProps({
 });
 </script>
 <template>
-  <div :class="`max-w-[85rem] px-4 sm:px-6 lg:px-8${center ? ' mx-auto' : ''}`">
+  <div :class="`max-w-7xl px-4 sm:px-0${center ? ' mx-auto' : ''}`">
     <slot />
   </div>
 </template>
