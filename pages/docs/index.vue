@@ -32,14 +32,14 @@ definePageMeta({
         />
 
         <h2
-          class="mb-8 md:mb-12 text-lg font-normal sm:px-16 xl:px-48 text-white"
+          class="mb-8 md:mb-12 text-lg font-normal sm:px-16 xl:px-48 text-purple-100"
         >
           {{ $t("docs.warning") }}
         </h2>
       </div>
 
       <div
-        class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-6 md:gap-10 text-white"
+        class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-6 md:gap-10 text-purple-100"
       >
         <ResourcesLink
           v-for="(doc, index) in docTypes"
@@ -48,7 +48,7 @@ definePageMeta({
           :image="doc.image"
           :link="localePath(`/docs${doc.path}`)"
           :link-text="t('docs.explore')"
-          class="bg-[#360061]/50 hover:bg-[#360061] focus:bg-[#360061] focus:ring-offset-[#360061] focus:ring-beam-purple text-[#E9D4F2]"
+          class="bg-[#360061]/50 hover:bg-[#360061] focus:bg-[#360061] focus:ring-offset-[#360061] focus:ring-beam-purple text-purple-100/80"
         />
       </div>
 

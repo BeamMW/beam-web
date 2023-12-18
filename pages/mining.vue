@@ -45,13 +45,15 @@ definePageMeta({
         </div>
       </div>
 
-      <h2 class="text-lg md:text-xl text-white">
-        <MarkdownRenderer t-key="mining.introduction" />
-      </h2>
+      <div>
+        <h2 class="text-lg md:text-xl text-green-100">
+          <MarkdownRenderer t-key="mining.introduction" />
+        </h2>
 
-      <p class="my-5 text-lg text-white/90">
-        {{ $t("mining.details") }}
-      </p>
+        <p class="my-5 text-lg text-green-50">
+          {{ $t("mining.details") }}
+        </p>
+      </div>
 
       <div>
         <LayoutButton
@@ -70,7 +72,7 @@ definePageMeta({
       </div>
     </div>
 
-    <LayoutWrapper :center="true" class="pt-10 lg:pt-12">
+    <LayoutWrapper :center="true" class="pt-10 lg:pt-12 text-green-50">
       <LayoutTitle
         :title="t('mining.miningSoftware')"
         gradient-color="specialGradientGreen"
