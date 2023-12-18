@@ -21,7 +21,7 @@ definePageMeta({
 <template>
   <div class="bg-page-radial-gradient-dark-green background-radial-defaults">
     <div
-      class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-32 md:pt-36 text-center"
+      class="flex max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-8 pt-32 md:pt-36 text-center"
     >
       <div
         class="w-full flex flex-col md:flex-row justify-evenly items-center pt-8"
