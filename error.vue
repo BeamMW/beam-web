@@ -1,58 +1,68 @@
 <template>
-  <main class="bg-page-radial-gradient-purple background-radial-defaults">
-    <HeaderComponent
-      nav-class="bg-[rgba(28,0,46,.65)]"
-      :interactive-bar="false"
-    />
-    <div
-      class="flex max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto flex-col items-center justify-center space-y-6 pt-32 pb-16 text-center"
-    >
-      <div class="avatar">
-        <Icon
-          name="misc/404"
-          :as-image="true"
-          loading="lazy"
-          class="w-64 h-64 mb-2"
-          alt="Beam Girl"
-        />
-      </div>
-      <h1 class="text-base font-bold text-white">
-        {{ title }}
-      </h1>
-      <h2
-        class="text-4xl font-bold text-white !m-0 px-6 specialGradient specialGradientPurple"
+  <main
+    :class="{
+      locked: windowLocked,
+      blurred: windowBlurred,
+    }"
+  >
+    <NuxtLayout>
+      <div
+        class="bg-page-radial-gradient background-radial-defaults text-blue-100"
       >
-        {{ $t("errors.404.title") }}
-      </h2>
-      <p class="text-white text-lg">
-        <MarkdownRenderer t-key="errors.404.message" />
-      </p>
-      <LayoutButton
-        button-link="#"
-        :big="true"
-        as="button"
-        accent-color="beam-pink"
-        @click.prevent="handleError"
-      >
-        {{ $t("errors.back") }}
-      </LayoutButton>
-      <div class="text-white text-xs opacity-70 font-mono">
-        <p>
-          {{ props.error.message }}
-        </p>
-        <p
-          v-if="props.error.stack"
-          class="mt-2"
-          v-text="stripHTML(props.error.stack)"
-        />
+        <div
+          class="flex max-w-7xl px-4 sm:px-0 mx-auto flex-col items-center justify-center space-y-6 pt-44 pb-20 text-center"
+        >
+          <LayoutPicture
+            src="/svg/misc/404"
+            alt="Beam Girl"
+            class="w-64 h-64"
+            extension="svg"
+          />
+
+          <div>
+            <h1 class="text-base font-bold">
+              {{ title }}
+            </h1>
+            <LayoutTitle
+              :title="$t('errors.404.title')"
+              :small-padding="true"
+            />
+
+            <div class="text-lg m-0 p-0">
+              <MarkdownRenderer t-key="errors.404.message" />
+            </div>
+          </div>
+
+          <LayoutButton
+            button-link="#"
+            :big="true"
+            as="button"
+            accent-color="beam-blue"
+            @click.prevent="handleError"
+          >
+            {{ $t("errors.back") }}
+          </LayoutButton>
+          <div
+            class="text-purple-100 text-xs opacity-70 font-mono flex gap-3 justify-center flex-col items-center"
+          >
+            <p>
+              {{ props.error.message }}
+            </p>
+            <p
+              v-if="props.error.stack"
+              class="break-words w-3/4"
+              v-text="stripHTML(props.error.stack)"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-    <FooterComponent class="bg-page-radial-gradient-purple" />
+    </NuxtLayout>
   </main>
 </template>
 
 <script lang="ts" setup>
 const { t } = useI18n();
+const localePath = useLocalePath();
 
 const props = defineProps({
   error: {
@@ -60,7 +70,10 @@ const props = defineProps({
     required: true,
   },
 });
-const handleError = () => clearError({ redirect: "/" });
+const handleError = () => clearError({ redirect: localePath("/") });
+
+const windowLocked = useState("windowLocked", () => false);
+const windowBlurred = useState("windowBlurred", () => false);
 
 useTitleTemplate();
 
@@ -86,9 +99,15 @@ useSeoMeta({
   ogDescription: description,
 });
 
+definePageMeta({
+  layout: "default",
+});
+
+/*
 useHead({
   bodyAttrs: {
     class: "bg-beam-bg-purple",
   },
 });
+*/
 </script>
