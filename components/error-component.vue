@@ -37,7 +37,7 @@ function stripHTML(html: string) {
     class="bg-page-radial-gradient background-radial-defaults text-blue-100"
   >
     <div
-      class="flex max-w-7xl px-4 sm:px-0 mx-auto flex-col items-center justify-center space-y-6 pt-44 pb-20 text-center"
+      class="flex max-w-7xl px-4 xl:px-0 mx-auto flex-col items-center justify-center space-y-6 pt-44 pb-20 text-center"
     >
       <LayoutPicture
         src="/svg/misc/404"
