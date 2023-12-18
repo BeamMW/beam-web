@@ -25,7 +25,7 @@
       <SwiperSlide v-for="(item, index) in roadmap" :key="index">
         <div class="carousel-item-link lg:px-16">
           <div
-            class="flex items-center flex-col text-white lg:items-start px-10 md:px-0"
+            class="flex items-center flex-col text-blue-50 lg:items-start px-10 md:px-0"
             :style="{ color: item.color }"
           >
             <span class="text-xs font-bold opacity-70 mb-1">{{
@@ -74,7 +74,7 @@
                   />
                   <div v-else class="block w-2.5 h-2.5"></div>
                 </div>
-                <p class="text-white">{{ type.description }}</p>
+                <p class="text-blue-50">{{ type.description }}</p>
               </div>
             </div>
           </div>

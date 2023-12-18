@@ -11,7 +11,7 @@
             {{ $t("hero.title") }}
           </h1>
           <h2
-            class="mb-4 md:mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-white"
+            class="mb-4 md:mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-blue-50"
           >
             {{ $t("hero.subtitle") }}
           </h2>

@@ -50,7 +50,7 @@ const downloadItem = computed(() => startDownload(props.link, props.checksum));
         :as-image="true"
       />
       <h4
-        class="mt-5 font-bold text-xl text-white flex gap-x-2 justify-center items-center"
+        class="mt-5 font-bold text-xl text-blue-50 flex gap-x-2 justify-center items-center"
       >
         <span>{{ title }}</span>
         <span
@@ -72,7 +72,7 @@ const downloadItem = computed(() => startDownload(props.link, props.checksum));
         {{ $t("downloads.downloadButton", { platform: title }) }}
       </LayoutButton>
     </div>
-    <p class="text-white/70 text-sm">
+    <p class="text-blue-50/70 text-sm">
       <slot />
     </p>
   </div>

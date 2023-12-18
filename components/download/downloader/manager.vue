@@ -30,7 +30,7 @@
             </button>
           </div>
           <div
-            class="space-y-6 leading-relaxed text-white/60 text-sm text-left"
+            class="space-y-6 leading-relaxed text-blue-50/60 text-sm text-left"
           >
             <DownloadDownloaderItem
               :file-url="component.fileUrl"
