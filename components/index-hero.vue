@@ -189,7 +189,6 @@
 </template>
 
 <script lang="ts" setup>
-import type { VNodeRef } from "vue";
 import { SupportedPlatforms } from "@/app.config";
 import { UserInteractionEvents } from "~/utils/emitter";
 const { t } = useI18n();
@@ -197,12 +196,12 @@ const { t } = useI18n();
 const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();
 
-const main: VNodeRef = ref();
-const ctx: VNodeRef = ref();
+const main = ref();
+const ctx = ref();
 const observer = ref<IntersectionObserver | undefined>();
 const resizeObserver = ref<ResizeObserver | undefined>();
 
-let scrollHeight = 0;
+const scrollHeight = ref(0);
 
 const initAnimation = async () => {
   const { gsap } = await import("gsap");
@@ -214,42 +213,54 @@ const initAnimation = async () => {
 
   // Only recalculate on resize
   resizeObserver.value = new ResizeObserver((_entries) => {
-    scrollHeight = document.body.scrollHeight - window.innerHeight;
+    scrollHeight.value = document.body.scrollHeight - window.innerHeight;
   });
   resizeObserver.value.observe(document.body);
 
   ctx.value = gsap.context((self) => {
     if (self) {
+      // Bouncing elements in the background
       const tlBounce = gsap.timeline({
         yoyo: true,
         repeat: -1,
         repeatDelay: 0,
       });
       gsap.utils.toArray(bgElements).forEach((element) => {
-        const direction =
-          Math.random() > 0.5
-            ? gsap.utils.random(-25, -30)
-            : gsap.utils.random(25, 30);
-        tlBounce.to(
+        const direction = gsap.utils.random(-30, 30);
+        const blurArr = [gsap.utils.random(0, 8), gsap.utils.random(0, 8)];
+
+        tlBounce.fromTo(
           element as HTMLElement,
-          { yPercent: direction, duration: 8 },
+          {
+            yPercent: 0,
+            filter: `blur(${blurArr[0]}px)`,
+            duration: 8,
+            yoyoEase: true,
+          },
+          {
+            yPercent: direction,
+            filter: `blur(${blurArr[1]}px)`,
+            duration: 8,
+            yoyoEase: true,
+          },
           "<",
         );
       });
 
+      // Hero scroll animation
       const tl = gsap.timeline({
         paused: true,
       });
       tl.fromTo(
         images,
-        { yPercent: 0 },
-        { yPercent: -150, duration: 0.2 },
+        { yPercent: 0, scale: 1 },
+        { yPercent: -150, scale: 1.3, duration: 0.4 },
         "<",
       );
       tl.fromTo(
         content,
-        { yPercent: 0, autoAlpha: 1 },
-        { yPercent: -50, autoAlpha: 0, duration: 0.3 },
+        { yPercent: 0, opacity: 1, scale: 1 },
+        { yPercent: -25, opacity: 0, scale: 0.9, duration: 0.05 },
         "<",
       );
 
@@ -259,7 +270,7 @@ const initAnimation = async () => {
 
       // Calculate progress value based on scroll position
       const getProgress = () =>
-        (window.scrollY - offsetTop) / (scrollHeight + height);
+        (window.scrollY - offsetTop) / (scrollHeight.value + height);
       const updateProgress = () => {
         tl.progress(getProgress());
       };
@@ -321,11 +332,11 @@ onBeforeUnmount(async () => {
 }
 
 .heroImages {
-  @apply max-w-full pt-[50vh] md:pt-[45vh] z-[2] will-change-transform flex justify-evenly mx-auto md:max-w-7xl rtl:!flex-row-reverse;
+  @apply max-w-full pt-[50vh] z-[2] will-change-transform flex justify-evenly mx-auto md:max-w-7xl rtl:!flex-row-reverse;
 }
 
 .heroContent {
-  @apply w-full h-auto self-start pt-28 md:pt-[8.5rem] z-[19];
+  @apply w-full h-auto self-start pt-32 md:pt-36 z-[19];
   grid-column: 1 / 1;
   grid-row: 1 / 1;
 
