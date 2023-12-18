@@ -235,9 +235,7 @@ onUnmounted(() => {
     );
   }
 }
-</style>
 
-<style scoped>
 main {
   @apply transition-transform duration-[225ms] origin-[50%_300px];
 

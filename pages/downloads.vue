@@ -37,7 +37,7 @@ onUnmounted(() =>
 </script>
 
 <template>
-  <section class="bg-[#041D3C]">
+  <section>
     <section
       class="bg-page-radial-gradient background-radial-defaults pt-40 md:pt-44"
     >
