@@ -3,6 +3,7 @@ defineProps({
   center: {
     type: Boolean,
     required: false,
+    default: true,
   },
 });
 </script>

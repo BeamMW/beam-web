@@ -1,44 +1,86 @@
 <template>
-  <Html
-    :lang="head.htmlAttrs && head.htmlAttrs.lang"
-    :dir="head.htmlAttrs && head.htmlAttrs.dir"
-    :class="themeColors.body"
-  >
-    <Head>
-      <Meta name="theme-color" :content="themeColors.hex" />
-      <template v-for="link in head.link" :key="link.id">
+  <LanguageHandler>
+    <Html
+      :lang="head && head.htmlAttrs && head.htmlAttrs.lang"
+      :dir="head && head.htmlAttrs && head.htmlAttrs.dir"
+      :class="themeColors && themeColors.body"
+    >
+      <Head>
         <Link
-          :id="link.id"
-          :rel="link.rel"
-          :href="link.href"
-          :hreflang="link.hreflang"
+          v-for="linkElement in linkElements"
+          :key="linkElement.href"
+          :rel="linkElement.rel"
+          :href="linkElement.href"
+          :as="linkElement.as"
+          :type="linkElement.type"
+          :crossorigin="linkElement.crossorigin ? 'anonymous' : undefined"
         />
-      </template>
-      <template v-for="meta in head.meta" :key="meta.id">
-        <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
-      </template>
-    </Head>
-    <Body :class="themeColors.body">
-      <main
-        :class="{
-          locked: windowLocked,
-          blurred: windowBlurred,
-        }"
-      >
-        <DownloadDownloaderManager />
-        <HeaderComponent
-          :nav-class="themeColors.header"
-          :gradient-color="themeColors.gradientColorRgb"
+        <Meta
+          content="width=device-width, initial-scale=1, maximum-scale=5"
+          name="viewport"
         />
-        <slot />
-        <FooterComponent :class="themeColors.footer" />
-      </main>
-    </Body>
-  </Html>
+        <Meta name="twitter:site" :content="XUsername" />
+        <Meta name="twitter:creator" :content="XUsername" />
+        <Meta
+          v-if="
+            platformDetails[SupportedPlatforms.IOS] &&
+            platformDetails[SupportedPlatforms.IOS].links &&
+            platformDetails[SupportedPlatforms.IOS].links.store
+          "
+          name="apple-itunes-app"
+          :content="`app-id=${extractAppStoreAppId(
+            platformDetails[SupportedPlatforms.IOS].links.store as string,
+          )}`"
+        />
+        <Meta name="theme-color" :content="themeColors.hex" />
+        <template v-for="link in head.link" :key="link.id">
+          <Link
+            :id="link.id"
+            :rel="link.rel"
+            :href="link.href"
+            :hreflang="link.hreflang"
+          />
+        </template>
+        <template v-for="meta in head.meta" :key="meta.id">
+          <Meta
+            :id="meta.id"
+            :property="meta.property"
+            :content="meta.content"
+          />
+        </template>
+      </Head>
+      <Body :class="themeColors.body">
+        <NuxtLoadingIndicator
+          color="repeating-linear-gradient(to right,var(--beam-green-dark) 0%,var(--beam-pink) 100%)"
+          class="will-change-auto"
+        />
+        <main
+          :class="{
+            locked: windowLocked,
+            blurred: windowBlurred,
+          }"
+        >
+          <DownloadDownloaderManager />
+          <HeaderComponent
+            :nav-class="themeColors.header"
+            :gradient-color="themeColors.gradientColorRgb"
+          />
+          <slot />
+          <FooterComponent :class="themeColors.footer" />
+        </main>
+      </Body>
+    </Html>
+  </LanguageHandler>
 </template>
 
 <script lang="ts" setup>
 import type { RouteRecordName } from "vue-router";
+import { linkElements } from "@/utils/linkElements";
+import { SupportedPlatforms, ExternalLinks } from "@/app.config";
+import {
+  EnvironmentType,
+  getDownloadsFor,
+} from "~/composables/usePlatformDetails";
 
 enum THEME_COLORS {
   BLUE = "#041D3C",
@@ -115,6 +157,9 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
 const windowLocked = useState("windowLocked", () => false);
 const windowBlurred = useState("windowBlurred", () => false);
 
+const platformDetails = await getDownloadsFor(EnvironmentType.MAINNET);
+const XUsername = extractXUsername(ExternalLinks.X) as string;
+
 const route = useRoute();
 const themeColors = ref<ThemeSettings>(
   getTheme(route.name ? route.name : "index"),
@@ -135,6 +180,132 @@ const head = useLocaleHead({
   addSeoAttributes: true,
 });
 </script>
+
+<style>
+@font-face {
+  font-family: "ProximaNova";
+  src:
+    url("/fonts/ProximaNova-Regular.woff2") format("woff2"),
+    url("/fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova-Italic";
+  src:
+    url("/fonts/ProximaNova-RegularIt.woff2") format("woff2"),
+    url("/fonts/ProximaNova-RegularIt.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova-Bold";
+  src:
+    url("/fonts/ProximaNova-Bold.woff2") format("woff2"),
+    url("/fonts/ProximaNova-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --beam-blue: #99ecff;
+  --beam-blue-dark: #0b76ff;
+  --beam-purple: #9d6eff;
+  --beam-purple-dark: #ab37e6;
+  --beam-pink: #a69eff;
+  --beam-green: #39fff2;
+  --beam-green-dark: #00e2c2;
+
+  @apply min-h-screen
+      min-w-full
+      overflow-x-hidden
+      font-medium
+      not-italic
+      text-[#fff]
+      antialiased;
+
+  ::selection {
+    @apply bg-[#39FFF2] text-[#042548];
+  }
+}
+
+.custom-swipe-arrow {
+  @apply absolute z-10 cursor-pointer md:from-[#041D3C] h-full w-7 md:w-10 flex items-center transition-opacity;
+
+  &.swiper-button-disabled {
+    @apply opacity-0 pointer-events-none;
+  }
+
+  &.next-button {
+    @apply right-0 md:bg-gradient-to-l justify-end transition-opacity;
+  }
+
+  &.prev-button {
+    @apply left-0 md:bg-gradient-to-r justify-start transition-opacity;
+  }
+}
+
+.background-radial-defaults {
+  @apply bg-[length:1024px_576px] md:bg-[length:1280px_720px] lg:bg-[length:1600px_900px] xl:bg-[length:1920px_1080px] bg-[center_top] bg-no-repeat;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.specialGradient {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: moveGradient 5s linear infinite;
+
+  &.specialGradientPurple {
+    background-image: radial-gradient(
+      78.77% 78.77% at 71.71% 30.77%,
+      #f7f2ff 0%,
+      #d8bfff 67.21%,
+      #c8afff 76.04%,
+      #a789ff 84.9%,
+      #8b5dff 94.79%
+    );
+  }
+
+  &.specialGradientGreen {
+    background-image: radial-gradient(
+      78.77% 78.77% at 71.71% 30.77%,
+      #ffffff 0%,
+      #b9ffc9 67.21%,
+      #94e8b1 76.04%,
+      #5ae69d 84.9%,
+      #2cb277 94.79%
+    );
+  }
+
+  &.specialGradientBlue {
+    background-image: radial-gradient(
+      78.77% 78.77% at 71.71% 30.77%,
+      #f0fcff 0%,
+      #9bedff 67.21%,
+      #98ecff 76.04%,
+      #5be1ff 84.9%,
+      #00bae2 94.79%
+    );
+  }
+}
+</style>
 
 <style scoped>
 main {
