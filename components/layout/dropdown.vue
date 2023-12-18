@@ -48,7 +48,7 @@ const popperElement = ref<HTMLElement | null>(null);
 const windowLocked = useState("windowLocked", () => false);
 const windowBlurred = useState("windowBlurred", () => false);
 
-let popperInstance: Instance | null = null;
+const popperInstance: Ref<Instance | null> = ref(null);
 
 const props = defineProps({
   alwaysShow: {
@@ -98,9 +98,9 @@ const closePopper = (
 
 function destroyPopper() {
   // Destroy the existing Popper.js instance if it exists
-  if (popperInstance) {
-    popperInstance.destroy();
-    popperInstance = null;
+  if (popperInstance.value) {
+    popperInstance.value.destroy();
+    popperInstance.value = null;
   }
 }
 function isHTMLElement(value: unknown): value is HTMLElement {
@@ -118,12 +118,12 @@ const createPopperInstance = (
 
   // Create a new Popper.js instance with the new reference element
   if (isHTMLElement(popperElement.value)) {
-    popperInstance = createPopper(
+    popperInstance.value = createPopper(
       newReferenceElement,
       popperElement.value,
       options,
     );
-    popperInstance.forceUpdate();
+    popperInstance.value.forceUpdate();
   }
 };
 
@@ -142,7 +142,7 @@ const updatePlacement = async () => {
     } else if (
       viewportWidth >= minWidthBreakpoint &&
       referenceElement.value &&
-      !popperInstance
+      !popperInstance.value
     ) {
       if (props.lock) {
         windowLocked.value = false;
