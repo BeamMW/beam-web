@@ -8,9 +8,9 @@
     >
       <picture>
         <source v-if="webp" :srcset="`${src}.webp`" type="image/webp" />
-        <source :srcset="`${src}.png`" type="image/png" />
+        <source :srcset="`${src}.${extension}`" :type="`image/${extension}`" />
         <img
-          :src="`${src}.png`"
+          :src="`${src}.${extension}`"
           v-bind="$attrs"
           loading="lazy"
           @load="onImageLoad"
@@ -30,6 +30,11 @@ defineProps({
     type: Boolean,
     required: false,
     default: false,
+  },
+  extension: {
+    type: String,
+    required: false,
+    default: "png",
   },
 });
 
