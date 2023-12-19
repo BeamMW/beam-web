@@ -55,7 +55,7 @@ onUnmounted(() => {
 
 <template>
   <NuxtLayout>
-    <NuxtPage :transition="false" />
+    <NuxtPage />
   </NuxtLayout>
 </template>
 
