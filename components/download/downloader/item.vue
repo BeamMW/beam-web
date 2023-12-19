@@ -100,6 +100,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
+import type { Locale } from "date-fns";
 import {
   downloadFile,
   EventType,
@@ -135,21 +136,29 @@ defineExpose({ startDownload });
 
 const formatLocale = ref<Locale>();
 if (localeProperties.value.iso === "fr-FR") {
-  formatLocale.value = (await import("date-fns/locale/fr")).default;
+  formatLocale.value = (await import("date-fns/locale/fr"))
+    .default as unknown as Locale;
 } else if (localeProperties.value.iso === "ru-RU") {
-  formatLocale.value = (await import("date-fns/locale/ru")).default;
+  formatLocale.value = (await import("date-fns/locale/ru"))
+    .default as unknown as Locale;
 } else if (localeProperties.value.iso === "ar-001") {
-  formatLocale.value = (await import("date-fns/locale/ar")).default;
+  formatLocale.value = (await import("date-fns/locale/ar"))
+    .default as unknown as Locale;
 } else if (localeProperties.value.iso === "de-DE") {
-  formatLocale.value = (await import("date-fns/locale/de")).default;
+  formatLocale.value = (await import("date-fns/locale/de"))
+    .default as unknown as Locale;
 } else if (localeProperties.value.iso === "ja-JP") {
-  formatLocale.value = (await import("date-fns/locale/ja")).default;
+  formatLocale.value = (await import("date-fns/locale/ja"))
+    .default as unknown as Locale;
 } else if (localeProperties.value.iso === "zh-CN") {
-  formatLocale.value = (await import("date-fns/locale/zh-CN")).default;
+  formatLocale.value = (await import("date-fns/locale/zh-CN"))
+    .default as unknown as Locale;
 } else if (localeProperties.value.iso === "he-IL") {
-  formatLocale.value = (await import("date-fns/locale/he")).default;
+  formatLocale.value = (await import("date-fns/locale/he"))
+    .default as unknown as Locale;
 } else {
-  formatLocale.value = (await import("date-fns/locale/en-US")).default;
+  formatLocale.value = (await import("date-fns/locale/en-US"))
+    .default as unknown as Locale;
 }
 
 const starting = ref(true);

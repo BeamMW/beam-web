@@ -1,4 +1,4 @@
-import { formatDistanceToNowStrict } from "date-fns";
+import { formatDistanceToNowStrict, type Locale } from "date-fns";
 
 export function formatTimeRelative(
   seconds: number,

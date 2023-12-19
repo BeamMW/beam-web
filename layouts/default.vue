@@ -54,20 +54,20 @@
           color="repeating-linear-gradient(to right,var(--beam-green-dark) 0%,var(--beam-pink) 100%)"
           class="will-change-auto"
         />
+        <DownloadDownloaderManager />
         <main
           :class="{
             locked: windowLocked,
             blurred: windowBlurred,
           }"
         >
-          <DownloadDownloaderManager />
           <HeaderComponent
             :nav-class="themeColors.header"
             :gradient-color="themeColors.gradientColorRgb"
           />
           <slot />
-          <FooterComponent :class="themeColors.footer" />
         </main>
+        <FooterComponent :class="themeColors.footer" />
       </Body>
     </Html>
   </LanguageHandler>
