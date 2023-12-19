@@ -150,6 +150,9 @@ if (localeProperties.value.iso === "fr-FR") {
 } else if (localeProperties.value.iso === "ja-JP") {
   formatLocale.value = (await import("date-fns/locale/ja"))
     .default as unknown as Locale;
+} else if (localeProperties.value.iso === "es-ES") {
+  formatLocale.value = (await import("date-fns/locale/es"))
+    .default as unknown as Locale;
 } else if (localeProperties.value.iso === "zh-CN") {
   formatLocale.value = (await import("date-fns/locale/zh-CN"))
     .default as unknown as Locale;
