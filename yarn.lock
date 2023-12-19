@@ -1562,6 +1562,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@miyaneee/rollup-plugin-json5@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@miyaneee/rollup-plugin-json5@npm:1.1.2"
+  dependencies:
+    "@rollup/pluginutils": ^5.0.2
+    json5: ^2.2.3
+  peerDependencies:
+    rollup: ^1.20.0 || ^2.0.0 || ^3.0.0
+  checksum: a64877421a539a952511864842bcba98b71d66740b0e29a5df6af8a015b0eb64174222d1aff899b5ff206780135ee5398a0e76c0d3eb8b8e53b1f7a4e73f9cb4
+  languageName: node
+  linkType: hard
+
 "@netlify/functions@npm:^2.4.0":
   version: 2.4.0
   resolution: "@netlify/functions@npm:2.4.0"
@@ -2137,15 +2149,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/i18n@npm:^8.0.0-rc.9":
-  version: 8.0.0-rc.9
-  resolution: "@nuxtjs/i18n@npm:8.0.0-rc.9"
+"@nuxtjs/i18n@npm:^8.0.0-rc.11":
+  version: 8.0.0-rc.11
+  resolution: "@nuxtjs/i18n@npm:8.0.0-rc.11"
   dependencies:
     "@intlify/h3": ^0.5.0
     "@intlify/shared": ^9.8.0
     "@intlify/unplugin-vue-i18n": ^1.4.0
     "@intlify/utils": ^0.12.0
+    "@miyaneee/rollup-plugin-json5": ^1.1.2
     "@nuxt/kit": ^3.7.4
+    "@rollup/plugin-yaml": ^4.1.2
     "@vue/compiler-sfc": ^3.3.4
     debug: ^4.3.4
     defu: ^6.1.2
@@ -2160,7 +2174,7 @@ __metadata:
     unplugin: ^1.5.0
     vue-i18n: ^9.8.0
     vue-i18n-routing: ^1.2.0
-  checksum: c1ca86d25484d63a52910e47f663b988721b9cc3e471ad8f2e84570f0623a96d6c11aba9bf219fa4f58e164b8c7e287c76581ffff552afa4162be69288a424f6
+  checksum: 4c66a6e08670546b8ec0ad3c54b2873a4d4e0c02bf32eb9dd49f6b26b1056eddb89430fe93d4c7e903a907724eeed945a06cbdb4142888e585ca263cf578fc7f
   languageName: node
   linkType: hard
 
@@ -2561,6 +2575,22 @@ __metadata:
     rollup:
       optional: true
   checksum: 89568161e88ea69b513dfb8c1732d901b230af59a646b43d1e8555fca231364daad8c6cb4e9322ff4bafa3b348cdcc5588f5a2d56ed26b631b50328174e7a17b
+  languageName: node
+  linkType: hard
+
+"@rollup/plugin-yaml@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "@rollup/plugin-yaml@npm:4.1.2"
+  dependencies:
+    "@rollup/pluginutils": ^5.0.1
+    js-yaml: ^4.1.0
+    tosource: ^2.0.0-alpha.3
+  peerDependencies:
+    rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+  peerDependenciesMeta:
+    rollup:
+      optional: true
+  checksum: a044bb4568a10712465553ea5f31c13a2b7bc371a7f8382014e6b8048c0a264f5645f83f4d70ce9ab46b75117b94cdc032b597e9315fd2adcd8f30637f44bbea
   languageName: node
   linkType: hard
 
@@ -5075,7 +5105,7 @@ __metadata:
     "@nuxtjs/device": ^3.1.1
     "@nuxtjs/eslint-config-typescript": ^12.1.0
     "@nuxtjs/fontaine": ^0.4.1
-    "@nuxtjs/i18n": ^8.0.0-rc.9
+    "@nuxtjs/i18n": ^8.0.0-rc.11
     "@nuxtjs/tailwindcss": ^6.10.1
     "@popperjs/core": ^2.11.8
     "@tailwindcss/typography": ^0.5.10
@@ -15593,6 +15623,13 @@ __metadata:
   version: 1.0.1
   resolution: "toidentifier@npm:1.0.1"
   checksum: 952c29e2a85d7123239b5cfdd889a0dde47ab0497f0913d70588f19c53f7e0b5327c95f4651e413c74b785147f9637b17410ac8c846d5d4a20a5a33eb6dc3a45
+  languageName: node
+  linkType: hard
+
+"tosource@npm:^2.0.0-alpha.3":
+  version: 2.0.0-alpha.3
+  resolution: "tosource@npm:2.0.0-alpha.3"
+  checksum: bc03a7571de8ed4306e6721283fa891f2adcab9dd80c46f6f177d4259b34bb192fe3a2cb3e1e2ce16f9db0bc7e534acfcb5478ab094b0ba255f98abfce6dab46
   languageName: node
   linkType: hard
 
