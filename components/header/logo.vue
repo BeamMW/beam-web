@@ -2,21 +2,25 @@
   <LayoutLink
     ref="logoParent"
     :to="localePath('index')"
-    title="Homepage"
+    :title="$t('header.nav.home')"
     @mouseover="hover = true"
     @mouseleave="hover = false"
     @touchend="touchRevertAnimation"
   >
     <div
-      :class="`grid items-center justify-center h-10 w-10 transition-transform duration-[600ms] hover:will-change-transform ${
+      :class="`grid items-center justify-center h-10 w-10 transition-transform duration-[600ms] hover:will-change-transform select-none ${
         hover ? 'scale-125' : ''
       }`"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 57 40"
-        alt="Beam logo"
-        class="h-full w-full item-container z-50 -mt-0.5"
+        alt="BEAM Logo"
+        class="h-10 w-10 item-container -mt-0.5 z-50"
+        :style="{
+          gridColumn: 1,
+          gridRow: 1,
+        }"
       >
         <defs>
           <linearGradient id="x" x1="0%" x2="100%" y1="50%" y2="50%">
@@ -77,10 +81,15 @@
       </svg>
       <Icon
         name="logo-bg"
-        :class="`h-full w-full item-container scale-0 transition-transform duration-[600ms] ease-in-out z-40 will-change-transform ${
+        :class="`h-10 w-10 z-40 item-container scale-0 transition-transform duration-[600ms] ease-in-out will-change-transform ${
           hover ? 'scale-125 rotate-90 duration-[600ms]' : ''
         }`"
+        :style="{
+          gridColumn: 1,
+          gridRow: 1,
+        }"
         :as-image="true"
+        loading="lazy"
         alt="Beam logo background"
       />
     </div>
@@ -88,6 +97,7 @@
 </template>
 <script lang="ts" setup>
 const localePath = useLocalePath();
+
 const maskCircle = ref<HTMLElement | null>(null);
 const hover = ref(false);
 const animation = ref<gsap.core.Tween | null>(null);
@@ -118,10 +128,3 @@ onMounted(async () => {
   });
 });
 </script>
-<style scoped>
-.item-container {
-  @apply select-none object-cover;
-  grid-row: 1;
-  grid-column: 1;
-}
-</style>
