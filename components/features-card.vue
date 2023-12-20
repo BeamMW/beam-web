@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-const { t } = useI18n();
 const props = defineProps({
   title: {
     type: String,
@@ -110,7 +109,7 @@ const specialGradientColor = computed(() => {
     <div class="mt-auto gap-4 select-none">
       <LayoutLink
         v-if="link"
-        :title="t('feature.learnmoreabout', { title })"
+        :title="$t('feature.learnmoreabout', { title })"
         :to="link"
         class="text-beam-blue"
       >

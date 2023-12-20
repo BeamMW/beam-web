@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-const { t } = useI18n();
-
 onMounted(() => {
   eventBus.emit(UserInteractionEvents.ROADMAP_COMPONENT_READY, {});
 });
@@ -11,7 +9,7 @@ onMounted(() => {
     :center="true"
     class="pt-10 lg:pt-12"
   >
-    <LayoutTitle :title="t('roadmap.title')" />
+    <LayoutTitle :title="$t('roadmap.title')" />
     <RoadmapCarousel />
   </LayoutWrapper>
 </template>
