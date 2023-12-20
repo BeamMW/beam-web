@@ -51,14 +51,14 @@
               "
               :to="platformDetails[SupportedPlatforms.IOS].links.store"
               class="select-none hover:opacity-80 transition"
-              :title="t('hero.geton.appstore')"
+              :title="$t('hero.geton.appstore')"
             >
               <Icon
                 name="download/appstore"
                 class="h-11 w-[132px]"
                 :as-image="true"
                 loading="lazy"
-                :alt="t('hero.geton.appstore')"
+                :alt="$t('hero.geton.appstore')"
               />
             </LayoutLink>
             <LayoutLink
@@ -69,14 +69,14 @@
               "
               :to="platformDetails[SupportedPlatforms.ANDROID].links.store"
               class="select-none hover:opacity-80 transition"
-              :title="t('hero.geton.playstore')"
+              :title="$t('hero.geton.playstore')"
             >
               <Icon
                 name="download/googleplay"
                 class="h-11 w-[148.09px]"
                 :as-image="true"
                 loading="lazy"
-                :alt="t('hero.geton.playstore')"
+                :alt="$t('hero.geton.playstore')"
               />
             </LayoutLink>
             <LayoutLink
@@ -87,14 +87,14 @@
               "
               :to="platformDetails[SupportedPlatforms.CHROME].links.store"
               class="hidden md:block select-none hover:opacity-80 transition"
-              :title="t('hero.geton.chromestore')"
+              :title="$t('hero.geton.chromestore')"
             >
               <Icon
                 name="download/googlechrome"
                 class="h-11 w-[148.26px]"
                 :as-image="true"
                 loading="lazy"
-                :alt="t('hero.geton.chromestore')"
+                :alt="$t('hero.geton.chromestore')"
               />
             </LayoutLink>
           </div>
@@ -191,7 +191,6 @@
 <script lang="ts" setup>
 import { SupportedPlatforms } from "@/app.config";
 import { UserInteractionEvents } from "~/utils/emitter";
-const { t } = useI18n();
 
 const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();

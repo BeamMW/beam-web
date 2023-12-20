@@ -2,7 +2,6 @@
 import { SupportedPlatforms } from "@/app.config";
 const platformDetails = await usePlatformDetails();
 
-const { t } = useI18n();
 defineProps({
   highlight: {
     type: Boolean,
@@ -30,7 +29,7 @@ const {
     <span class="border-b border-white/70 hover:border-white">
       <DownloadAlternativeLink
         v-if="wallet"
-        :title="t('downloads.type.apk')"
+        :title="$t('downloads.type.apk')"
         :link="wallet"
         :checksum="checksumWallet"
       />
@@ -38,7 +37,7 @@ const {
     <span>&nbsp;&middot;&nbsp;</span>
     <DownloadDetailLink
       v-if="version && date && wallet && checksumWallet"
-      :title="t('downloads.detailswindow.titles.android')"
+      :title="$t('downloads.detailswindow.titles.android')"
     >
       <DownloadDetailAndroidModal
         :version="version"

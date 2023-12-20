@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { exchangesBuy, instantExchangesBuy } from "~/app.config";
 
-const { t } = useI18n();
-
 onMounted(() => {
   eventBus.emit(UserInteractionEvents.BUY_WHERE_COMPONENT_READY, {});
 });
@@ -13,7 +11,7 @@ onMounted(() => {
     <div id="targetComponentBuy" class="text-blue-50">
       <LayoutTitle :title="$t('buyWhere.title')" />
 
-      <BuyGrid :title="t('buyWhere.exchanges')">
+      <BuyGrid :title="$t('buyWhere.exchanges')">
         <BuyCard
           v-for="exchange in exchangesBuy"
           :key="exchange.title"
@@ -23,7 +21,7 @@ onMounted(() => {
         />
       </BuyGrid>
 
-      <BuyGrid class="pt-4 md:pt-6" :title="t('buyWhere.instantexchanges')">
+      <BuyGrid class="pt-4 md:pt-6" :title="$t('buyWhere.instantexchanges')">
         <BuyCard
           v-for="exchange in instantExchangesBuy"
           :key="exchange.title"
