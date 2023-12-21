@@ -240,11 +240,13 @@ export const instantExchangesBuy = [
     image: "instant-exchanges/simpleswap",
     link: "https://simpleswap.io/?to=beam",
   },
+  /*
   {
     title: "StealthEX",
     image: "instant-exchanges/stealthex",
     link: "https://stealthex.io/?to=beam",
   },
+  */
   {
     title: "Kriptomat",
     image: "instant-exchanges/kriptomat",
