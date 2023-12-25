@@ -45,7 +45,7 @@
     "@types/markdown-it": "^13.0.7",
     "@types/uuid": "^9.0.7",
     "canvas-confetti": "^1.9.2",
-    "date-fns": "^3.0.0",
+    "date-fns": "^3.0.6",
     "fs-extra": "^11.2.0",
     "glob": "^10.3.10",
     "gsap": "^3.12.4",
