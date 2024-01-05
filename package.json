@@ -29,7 +29,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-prettier": "^5.0.1",
-    "nuxt": "^3.8.2",
+    "nuxt": "^3.9.0",
     "nuxt-seo-experiments": "^3.1.9",
     "nuxt-simple-robots": "^3.1.10",
     "nuxt-simple-sitemap": "^4.1.17",
