@@ -236,21 +236,9 @@ export const instantExchangesBuy = [
     link: "https://beam4.me/?from_curr=ETH&from_chain=1&to_curr=BEAM&to_chain=-1",
   },
   {
-    title: "Simpleswap",
-    image: "instant-exchanges/simpleswap",
-    link: "https://simpleswap.io/?to=beam",
-  },
-  /*
-  {
-    title: "StealthEX",
-    image: "instant-exchanges/stealthex",
-    link: "https://stealthex.io/?to=beam",
-  },
-  */
-  {
-    title: "Kriptomat",
-    image: "instant-exchanges/kriptomat",
-    link: "https://kriptomat.io/cryptocurrency-prices/beam-price/",
+    title: "Trocador",
+    image: "instant-exchanges/trocador",
+    link: "https://trocador.app/en/?ticker_to=beam&network_to=beam",
   },
 ];
 
