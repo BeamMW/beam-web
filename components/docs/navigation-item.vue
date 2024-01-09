@@ -27,7 +27,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from "vue";
 const localePath = useLocalePath();
 
 const props = defineProps({
