@@ -213,7 +213,7 @@
           "3": "Wrapped BEAM auf Ethereum",
           "4": "Ethereum-Bridge (ETH, USDT, WBTC, DAI)",
           "5": "HW Wallet Unterstützung (Ledger Nano S & Nano S Plus)",
-          "6": "Beam Messenger DApp in Beam Wallet",
+          "6": "Beam Messenger DApp im Beam Wallet",
           "7": "Hochfrequente Transaktionen"
         }
       },
@@ -389,7 +389,7 @@
       "downloadWallet": "Wallet herunterladen",
       "beamForum": "Beam-Forum",
       "beamBlog": "Beam-Blog",
-      "roadmap": "Fahrplan",
+      "roadmap": "Roadmap",
       "newsletter": "Newsletter"
     },
     "community": {
