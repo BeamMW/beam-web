@@ -165,7 +165,7 @@ const hardfork = ref<Hardfork>([
         link: t("hardfork.hardforks.5.links.2.link")
       }
     ],
-    image: "epsilon",
+    image: "fermion",
   }
 ]);
 

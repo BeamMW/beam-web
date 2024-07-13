@@ -239,7 +239,7 @@
     "hardforks": {
       "1": {
         "title": "First Hard-Fork",
-        "text": "Beam's first hard-fork was performed as announced in the roadmap. The PoW algorithm was updated from BeamHash I to BeamHash II, which are upgrades from the vanilla Equihash on which they are based. \n Beam's strategy with these planned changes of the mining algorithm was to give GPU miners a head start, and then allow cheap ASICs to join in without disrupting the mining ecosystem.\nAfter this hard-fork, a drop in difficulty was observed as not all miners performed a timely upgrade. However, after less than 24 hours, the hashrate had gone back to its pre-fork value.",
+        "text": "Beam's first hard-fork was performed as announced in the roadmap. The PoW algorithm was updated from BeamHash I to BeamHash II, which are upgrades from the vanilla Equihash on which they are based. \n Beam's strategy with these planned changes of the mining algorithm was to give GPU miners a head start, and then allow cheap ASICs to join in without disrupting the mining ecosystem.\nAfter this hard-fork, a drop in difficulty was observed as not all miners performed a timely upgrade. \nHowever, after less than 24 hours, the hashrate had gone back to its pre-fork value.",
         "links": {
           "1": {
             "title": "Medium post",
@@ -249,7 +249,7 @@
       },
       "2": {
         "title": "Second Hard-Fork",
-        "text": "Beam's second hard-fork was performed as announced in the roadmap. The PoW algorithm was updated from BeamHash II to BeamHash III, which is the final version in the planned strategy to balance GPU and ASIC mining. This hard-fork also saw the activation of the Confidential Assets (sometimes also called 'Privacy Tokens', and which were introduced in the first hard-fork but kept inactive) and the release of the Lelantus-MW protocol and its associated one-side payments (also known as offline transactions).",
+        "text": "Beam's second hard-fork was performed as announced in the roadmap. The PoW algorithm was updated from BeamHash II to BeamHash III, which is the final version in the planned strategy to balance GPU and ASIC mining. \nThis hard-fork also saw the activation of the Confidential Assets (sometimes also called 'Privacy Tokens', and which were introduced in the first hard-fork but kept inactive) and the release of the Lelantus-MW protocol and its associated one-side payments (also known as offline transactions).",
         "links": {
           "1": {
             "title": "Medium post",
@@ -303,7 +303,7 @@
       },
       "5": {
         "title": "Fifth Hard-Fork (and wallet v7.1)",
-        "text": "As discussed on the Beam Forum, this hard-fork reduced the issuance cost of Confidential Assets from 3000 to 10 BEAM only. The result can be seen in the CAs being created (or re-created) after the fork. The hard-fork also added smart contracts enhancements allowing them to verify fork heights (to support fork-dependent features). On the wallet side, DApp support for the BANS (Beam Anonymous Name System) was improved.",
+        "text": "As discussed on the Beam Forum, this hard-fork reduced the issuance cost of Confidential Assets from 3000 to 10 BEAM only. The result can be seen in the CAs being created (or re-created) after the fork. \nThe hard-fork also added smart contracts enhancements allowing them to verify fork heights (to support fork-dependent features). On the wallet side, DApp support for the BANS (Beam Anonymous Name System) was improved.",
         "links": {
           "1": {
             "title": "Announcement",
