@@ -27,6 +27,7 @@ definePageMeta({
     </section>
     <Buy />
     <Roadmap />
+    <Hardfork />
     <Press />
   </section>
 </template>
