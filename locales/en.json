@@ -239,7 +239,7 @@
     "hardforks": {
       "1": {
         "title": "First Hard-Fork",
-        "text": "Beam's first hard-fork was performed as announced in the roadmap. The PoW algorithm was updated from BeamHash I to BeamHash II, which are upgrades from the vanilla Equihash on which they are based. Beam's strategy with these planned changes of the mining algorithm was to give GPU miners a head start, and then allow cheap ASICs to join in without disrupting the mining ecosystem.\nAfter this hard-fork, a drop in difficulty was observed as not all miners performed a timely upgrade. However, after less than 24 hours, the hashrate had gone back to its pre-fork value.",
+        "text": "Beam's first hard-fork was performed as announced in the roadmap. The PoW algorithm was updated from BeamHash I to BeamHash II, which are upgrades from the vanilla Equihash on which they are based. \n Beam's strategy with these planned changes of the mining algorithm was to give GPU miners a head start, and then allow cheap ASICs to join in without disrupting the mining ecosystem.\nAfter this hard-fork, a drop in difficulty was observed as not all miners performed a timely upgrade. However, after less than 24 hours, the hashrate had gone back to its pre-fork value.",
         "links": {
           "1": {
             "title": "Medium post",

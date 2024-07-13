@@ -11,7 +11,7 @@
             </button>
           </div>
           <div class="text-gray-800">
-            <p>{{ text }}</p>
+            <p v-html="formattedText"></p>
           </div>
         </div>
       </div>
@@ -35,6 +35,7 @@
   const handleOverlayClick = () => {
     emit('close');
   };
+  const formattedText = props.text.replace(/\n/g, '<br>');
   </script>
   
   <style scoped>
