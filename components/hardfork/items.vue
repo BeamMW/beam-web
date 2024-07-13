@@ -35,6 +35,13 @@
         </div>
       </SwiperSlide>
     </swiper>
+    <modal
+      v-if="currentItem"
+      :title="currentItem.name"
+      :text="currentItem.text"
+      :visible="!!currentItem"
+      @close="currentItem = null"
+    />
   </div>
 </template>
 
@@ -44,6 +51,7 @@ import SwiperCore, { Swiper as SwiperInstance } from "swiper";
 import { Navigation } from "swiper/modules";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { useI18n } from 'vue-i18n';
+import Modal from './modal.vue';
 
 const { t } = useI18n();
 
