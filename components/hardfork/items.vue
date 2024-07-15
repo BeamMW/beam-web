@@ -24,7 +24,7 @@
             </div>
             <div class="flex flex-col gap-2 mt-6">
               <p class="text-blue-50">
-                {{ item.text.slice(0, 100) + '...' }}
+                {{ item.text.slice(0, 150) + '...' }}
               </p>
               <button @click="openModal(item)"
                 class="!outline-none w-fit px-4 py-1 border rounded bg-[rgb(11,31,64)]/50 hover:bg-[#042248] focus:bg-[#042248] border-black border-opacity-30 shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset] focus:outline-none focus:ring-2 focus:ring-beam-blue/75 focus:ring-offset-2 transition focus:ring-offset-[#042248]">
@@ -35,13 +35,8 @@
         </div>
       </SwiperSlide>
     </swiper>
-    <modal
-      v-if="currentItem"
-      :title="currentItem.name"
-      :text="currentItem.text"
-      :visible="!!currentItem"
-      @close="currentItem = null"
-    />
+    <modal v-if="currentItem" :title="currentItem.name" :text="currentItem.text" :visible="!!currentItem"
+      :links="currentItem.links" @close="currentItem = null" />
   </div>
 </template>
 
