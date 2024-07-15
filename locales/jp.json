@@ -234,6 +234,89 @@
       }
     }
   },
+  "hardfork": {
+    "title": "ハードフォーク",
+    "hardforks": {
+      "1": {
+        "title": "最初のハードフォーク",
+        "text": "Beamの最初のハードフォークは、ロードマップで発表された通りに実施されました。PoWアルゴリズムは、基本のEquihashからのアップグレードであるBeamHash IからBeamHash IIに更新されました。\nBeamのこのマイニングアルゴリズムの変更の戦略は、GPUマイナーに最初のスタートを提供し、その後安価なASICを参加させてマイニングエコシステムを妨害することなく進行させることでした。\nこのハードフォークの後、すべてのマイナーがタイムリーなアップグレードを実行しなかったため、難易度の低下が観察されました。\nしかし、24時間以内にハッシュレートはフォーク前の値に戻りました。",
+        "links": {
+          "1": {
+            "title": "Mediumの投稿",
+            "link": "https://medium.com/beam-mw/mimblewimble-hard-fork-first-completed-1171f9642e51"
+          }
+        }
+      },
+      "2": {
+        "title": "第二回ハードフォーク",
+        "text": "Beamの第二回ハードフォークは、ロードマップで発表された通りに実施されました。PoWアルゴリズムは、BeamHash IIからBeamHash IIIに更新され、GPUとASICマイニングのバランスを取るための計画的な戦略の最終バージョンです。\nこのハードフォークでは、Confidential Assets（時折「Privacy Tokens」とも呼ばれ、最初のハードフォークで紹介されたが非アクティブのままだったもの）のアクティブ化と、Lelantus-MWプロトコルとその関連する片側の支払い（オフライン取引としても知られる）のリリースも行われました。",
+        "links": {
+          "1": {
+            "title": "Mediumの投稿",
+            "link": "https://medium.com/beam-mw/hard-fork-completed-72e8f1edb10b"
+          },
+          "2": {
+            "title": "BeamHash IIIのプレゼンテーション",
+            "link": "https://docs.beam.mw/Beam_Hash_III_Slides.pdf"
+          },
+          "3": {
+            "title": "BeamHash IIIのビデオ",
+            "link": "https://www.youtube.com/watch?v=WC3aCWCWxB4"
+          }
+        }
+      },
+      "3": {
+        "title": "第三回ハードフォーク（およびウォレットv6.0）",
+        "text": "このハードフォークでは、Beam Virtual Machine (BVM) がインフラとして追加され、スマートコントラクト（通称「Shaders」）の作成が可能になりました。これにより、Beamはプライバシー機能を持つ最初のスマートコントラクト対応の暗号通貨となりました！\nBVMスマートコントラクトは、WebAssembly互換の任意の言語（C++、Rust、Goなど）で作成でき、ブロックチェーン側（Beamノード上で動作）とウォレット側（Beamウォレット内で動作し、DAppフロントエンドと共に）という二つの要素で構成されます。このチェーン側とクライアント側の論理の分離は、非常に強力で柔軟なアプリケーションを可能にします。\nBeamのスマートコントラクトはデフォルトで透明であり、状態と活動を見ることができますが、ユーザーのプライバシーは保護されており、スマートコントラクトとのインタラクションは通常の機密Beam取引に基づいています。このアプローチにより、BeamのDeFiは「効率的な」市場（購入と販売の内容が見えるなど）を提供しつつ、ユーザーのプライバシー（誰が購入し誰が販売しているかが見えない）を守ります。\nこのプライバシー保護のスマートコントラクト機能の実現により、このハードフォークはBeamが「Privacy DeFi」(PriFi) プラットフォームとしてだけでなく、Confidential Web3の一般目的インフラとしても機能するための扉を開きました！",
+        "links": {
+          "1": {
+            "title": "Mediumの投稿",
+            "link": "https://medium.com/beam-mw/hard-fork-completed-1608eb5ce439"
+          },
+          "2": {
+            "title": "Beamスマートコントラクトの紹介",
+            "link": "https://github.com/BeamMW/shader-sdk/wiki/Beam-Smart-Contracts"
+          },
+          "3": {
+            "title": "スマートコントラクトのドキュメント",
+            "link": "https://beamx.gitbook.io/developer-documentation/beam-shaders"
+          },
+          "4": {
+            "title": "デザインの洞察",
+            "link": "https://medium.com/beam-mw/beams-smart-contract-design-insights-from-the-lead-developer-df2aeabf02c4"
+          }
+        }
+      },
+      "4": {
+        "title": "第四回ハードフォーク（およびウォレットv7.0）",
+        "text": "このハードフォークでは、ノードおよびウォレット側で「高頻度取引」(HFTX) が導入され、ウォレット側でのIPFSストレージ統合が実施されました。HFTXは、取引の厳格な含有ルールを定義することにより、MEV、フロントランニング、サンドイッチ攻撃に対する耐性を向上させ、ユーザーを不正な結果から保護します（提出された取引は、正確な指定の順序でブロックに含まれることしかできません）。\nウォレット側では、IPFS統合により、データ（NFTなど）を分散型で効率的に保存し、ブロックチェーンの肥大化を抑制します。したがって、今日のBeamウォレットは、取引の提出とブロックの検証のためのブロックチェーンノード、ウォレット間のセキュアな通信を可能にするSBBSノード、および分散型ストレージ（DAppフロントエンドの配布を含む）を提供するIPFSノードの3つの役割を担っています。\nこのハードフォークはスムーズに進行し、難易度は比較的安定しました。",
+        "links": {
+          "1": {
+            "title": "Mediumの投稿",
+            "link": "https://medium.com/beam-mw/beam-hard-fork-completed-903ce2b15b51"
+          },
+          "2": {
+            "title": "BIP-1およびBIP-2の結果",
+            "link": "https://medium.com/beam-mw/beam-bip-1-bip-2-results-229d8289f54d"
+          }
+        }
+      },
+      "5": {
+        "title": "第五回ハードフォーク（およびウォレットv7.1）",
+        "text": "Beamフォーラムで議論されたように、このハードフォークはConfidential Assetsの発行コストを3000 BEAMから10 BEAMのみに削減しました。フォーク後に作成された（または再作成された）CAsでその結果が確認できます。\nハードフォークはまた、スマートコントラクトの強化を追加し、フォークの高さを確認できるようにしました（フォーク依存機能のサポート）。ウォレット側では、BANS（Beam Anonymous Name System）のDAppサポートが向上しました。",
+        "links": {
+          "1": {
+            "title": "アナウンス",
+            "link": "https://medium.com/beam-mw/beam-hard-fork-announcement-3e999dfba178"
+          },
+          "2": {
+            "title": "BIP-1のフォーラム投稿",
+            "link": "https://forum.beam.mw/t/bip-1-reduce-ca-minting-cost/116"
+          }
+        }
+      }
+    }
+  },
   "press": {
     "title": "彼らは私たちについて話している"
   },

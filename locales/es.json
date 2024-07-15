@@ -234,6 +234,89 @@
       }
     }
   },
+  "hardfork": {
+    "title": "Bifurcaciones Duras",
+    "hardforks": {
+      "1": {
+        "title": "Primera Bifurcación Dura",
+        "text": "La primera bifurcación dura de Beam se realizó según lo anunciado en la hoja de ruta. El algoritmo de PoW se actualizó de BeamHash I a BeamHash II, que son mejoras del Equihash estándar en el que se basan.\nLa estrategia de Beam con estos cambios planificados en el algoritmo de minería fue dar a los mineros de GPU una ventaja inicial, y luego permitir que los ASIC baratos se unieran sin interrumpir el ecosistema de minería.\nDespués de esta bifurcación dura, se observó una caída en la dificultad, ya que no todos los mineros realizaron una actualización a tiempo.\nSin embargo, después de menos de 24 horas, la tasa de hash había vuelto a su valor anterior a la bifurcación.",
+        "links": {
+          "1": {
+            "title": "Publicación en Medium",
+            "link": "https://medium.com/beam-mw/mimblewimble-hard-fork-first-completed-1171f9642e51"
+          }
+        }
+      },
+      "2": {
+        "title": "Segunda Bifurcación Dura",
+        "text": "La segunda bifurcación dura de Beam se realizó según lo anunciado en la hoja de ruta. El algoritmo de PoW se actualizó de BeamHash II a BeamHash III, que es la versión final en la estrategia planificada para equilibrar la minería de GPU y ASIC.\nEsta bifurcación dura también vio la activación de los Activos Confidenciales (a veces también llamados 'Tokens de Privacidad', que fueron introducidos en la primera bifurcación dura pero mantenidos inactivos) y el lanzamiento del protocolo Lelantus-MW y sus pagos de un solo lado asociados (también conocidos como transacciones fuera de línea).",
+        "links": {
+          "1": {
+            "title": "Publicación en Medium",
+            "link": "https://medium.com/beam-mw/hard-fork-completed-72e8f1edb10b"
+          },
+          "2": {
+            "title": "Presentación de BeamHash III",
+            "link": "https://docs.beam.mw/Beam_Hash_III_Slides.pdf"
+          },
+          "3": {
+            "title": "Vídeo de BeamHash III",
+            "link": "https://www.youtube.com/watch?v=WC3aCWCWxB4"
+          }
+        }
+      },
+      "3": {
+        "title": "Tercera Bifurcación Dura (y billetera v6.0)",
+        "text": "Esta bifurcación dura trajo la adición de la Máquina Virtual de Beam (BVM) como infraestructura para crear contratos inteligentes (también conocidos como 'Shaders'), ¡convirtiendo a Beam en la primera moneda de privacidad con capacidades de contratos inteligentes!\nLos contratos inteligentes de BVM pueden escribirse en cualquier lenguaje compatible con WebAssembly (como C++, Rust, Go, etc.) y se componen de dos elementos: el lado de la cadena de bloques (ejecutándose en los nodos de Beam) y el lado de la billetera (ejecutándose en la billetera de Beam, junto con las interfaces de aplicaciones descentralizadas). Esta separación de la lógica del lado de la cadena y del lado del cliente permite aplicaciones muy poderosas y flexibles.\nLos contratos inteligentes de Beam son transparentes por defecto, lo que significa que podemos ver su estado y su actividad. Sin embargo, los usuarios siguen siendo anónimos, ya que sus interacciones con los contratos inteligentes se basan en transacciones confidenciales normales de Beam. Con este enfoque, DeFi de Beam logra proporcionar mercados 'eficientes' (por ejemplo, donde podemos ver lo que se compra y se vende) mientras aún protege la privacidad de sus usuarios (por ejemplo, no podemos ver quién compra y vende).\nAl permitir estas capacidades de contratos inteligentes que preservan la privacidad, esta bifurcación dura abrió las puertas para que Beam se convierta no solo en una plataforma poderosa de 'Privacy DeFi' (PriFi), sino de hecho en una infraestructura de propósito general para cualquier cosa en Web3 Confidencial!",
+        "links": {
+          "1": {
+            "title": "Publicación en Medium",
+            "link": "https://medium.com/beam-mw/hard-fork-completed-1608eb5ce439"
+          },
+          "2": {
+            "title": "Introducción a los contratos inteligentes de Beam",
+            "link": "https://github.com/BeamMW/shader-sdk/wiki/Beam-Smart-Contracts"
+          },
+          "3": {
+            "title": "Documentación de contratos inteligentes",
+            "link": "https://beamx.gitbook.io/developer-documentation/beam-shaders"
+          },
+          "4": {
+            "title": "Algunas ideas sobre el diseño",
+            "link": "https://medium.com/beam-mw/beams-smart-contract-design-insights-from-the-lead-developer-df2aeabf02c4"
+          }
+        }
+      },
+      "4": {
+        "title": "Cuarta Bifurcación Dura (y billetera v7.0)",
+        "text": "Esta bifurcación dura introdujo 'Transacciones de Alta Frecuencia' (HFTX) en ambos lados del nodo y de la billetera, e integración de almacenamiento IPFS en el lado de la billetera. HFTX mejoran la resistencia a MEV, ataques de adelantamiento y ataques de sándwich al definir reglas estrictas de inclusión para las transacciones, protegiendo así a los usuarios de resultados no deseados (ya que las transacciones enviadas solo pueden ser incluidas en un bloque en su secuencia específica exacta).\nEn el lado de la billetera, la integración de IPFS permite almacenar datos (como NFTs) de manera eficiente en un modo descentralizado mientras se reduce la inflación de la cadena de bloques. Por lo tanto, cada billetera de Beam hoy es al mismo tiempo un nodo de la cadena de bloques (para enviar transacciones y verificar bloques), un nodo SBBS (para permitir una comunicación segura entre billeteras) y un nodo IPFS (para permitir almacenamiento descentralizado, incluyendo la distribución de interfaces de aplicaciones descentralizadas).\nEsta bifurcación dura se llevó a cabo sin problemas y la dificultad se mantuvo bastante estable.",
+        "links": {
+          "1": {
+            "title": "Publicación en Medium",
+            "link": "https://medium.com/beam-mw/beam-hard-fork-completed-903ce2b15b51"
+          },
+          "2": {
+            "title": "Resultados de BIP-1 y BIP-2",
+            "link": "https://medium.com/beam-mw/beam-bip-1-bip-2-results-229d8289f54d"
+          }
+        }
+      },
+      "5": {
+        "title": "Quinta Bifurcación Dura (y billetera v7.1)",
+        "text": "Como se discutió en el Foro de Beam, esta bifurcación dura redujo el costo de emisión de Activos Confidenciales de 3000 a solo 10 BEAM. El resultado se puede ver en los CAs creados (o recreados) después de la bifurcación.\nLa bifurcación dura también agregó mejoras en los contratos inteligentes que les permiten verificar alturas de bifurcación (para admitir funciones dependientes de la bifurcación). En el lado de la billetera, se mejoró el soporte de DApp para el Sistema de Nombres Anónimos de Beam (BANS).",
+        "links": {
+          "1": {
+            "title": "Anuncio",
+            "link": "https://medium.com/beam-mw/beam-hard-fork-announcement-3e999dfba178"
+          },
+          "2": {
+            "title": "Publicación del foro para BIP-1",
+            "link": "https://forum.beam.mw/t/bip-1-reduce-ca-minting-cost/116"
+          }
+        }
+      }
+    }
+  },
   "press": {
     "title": "Hablan de nosotros"
   },
