@@ -234,6 +234,89 @@
       }
     }
   },
+  "hardfork": {
+    "title": "硬分叉",
+    "hardforks": {
+      "1": {
+        "title": "第一次硬分叉",
+        "text": "Beam 的第一次硬分叉按计划在路线图中执行。PoW 算法从 BeamHash I 升级为 BeamHash II，后者是基于原始 Equihash 的升级版本。\nBeam 在这些计划中的算法更改的策略是给 GPU 挖矿者一个先发优势，然后允许便宜的 ASIC 设备加入，而不会破坏挖矿生态系统。\n在这次硬分叉之后，由于并非所有矿工都及时进行了升级，观察到了难度的下降。\n然而，不到 24 小时后，哈希率就回到了硬分叉之前的水平。",
+        "links": {
+          "1": {
+            "title": "Medium 文章",
+            "link": "https://medium.com/beam-mw/mimblewimble-hard-fork-first-completed-1171f9642e51"
+          }
+        }
+      },
+      "2": {
+        "title": "第二次硬分叉",
+        "text": "Beam 的第二次硬分叉按计划在路线图中执行。PoW 算法从 BeamHash II 升级为 BeamHash III，这是在 GPU 和 ASIC 挖矿之间进行平衡的最终版本。\n这次硬分叉还激活了机密资产（有时也称为“隐私代币”，在第一次硬分叉中引入但保持不活跃）和 Lelantus-MW 协议及其相关的单向支付（也称为离线交易）。",
+        "links": {
+          "1": {
+            "title": "Medium 文章",
+            "link": "https://medium.com/beam-mw/hard-fork-completed-72e8f1edb10b"
+          },
+          "2": {
+            "title": "BeamHash III 演示",
+            "link": "https://docs.beam.mw/Beam_Hash_III_Slides.pdf"
+          },
+          "3": {
+            "title": "BeamHash III 视频",
+            "link": "https://www.youtube.com/watch?v=WC3aCWCWxB4"
+          }
+        }
+      },
+      "3": {
+        "title": "第三次硬分叉（以及钱包 v6.0）",
+        "text": "这次硬分叉引入了 Beam 虚拟机（BVM）作为创建智能合约（也称为“Shaders”）的基础设施，使 Beam 成为首个具备智能合约功能的隐私币！\nBVM 智能合约可以使用任何兼容 WebAssembly 的语言（如 C++、Rust、Go 等）编写，由两个部分组成：区块链端（在 Beam 节点上运行）和钱包端（在 Beam 钱包中运行，与 DApp 前端一起）。这种链端和客户端逻辑的分离允许创建非常强大和灵活的应用程序。\nBeam 智能合约默认是透明的，这意味着我们可以看到它们的状态和活动。然而，用户仍然是匿名的，因为他们与智能合约的交互基于正常的 Beam 保密交易。通过这种方法，Beam 的 DeFi 成功地提供了“有效的”市场（例如我们可以看到买卖的内容），同时仍然保护用户的隐私（例如我们看不到谁在买卖）。\n通过允许这样的隐私保护智能合约功能，这次硬分叉为 Beam 不仅成为一个强大的“隐私 DeFi”（PriFi）平台，也成为 Confidential Web3 中任何事物的通用基础设施铺平了道路。",
+        "links": {
+          "1": {
+            "title": "Medium 文章",
+            "link": "https://medium.com/beam-mw/hard-fork-completed-1608eb5ce439"
+          },
+          "2": {
+            "title": "Beam 智能合约介绍",
+            "link": "https://github.com/BeamMW/shader-sdk/wiki/Beam-Smart-Contracts"
+          },
+          "3": {
+            "title": "智能合约文档",
+            "link": "https://beamx.gitbook.io/developer-documentation/beam-shaders"
+          },
+          "4": {
+            "title": "设计的一些见解",
+            "link": "https://medium.com/beam-mw/beams-smart-contract-design-insights-from-the-lead-developer-df2aeabf02c4"
+          }
+        }
+      },
+      "4": {
+        "title": "第四次硬分叉（以及钱包 v7.0）",
+        "text": "这次硬分叉在节点和钱包端引入了“高频交易”（HFTX），并在钱包端集成了 IPFS 存储。HFTX 通过定义严格的交易包含规则来提高对 MEV、前置交易和夹击攻击的抵抗力，从而保护用户免受不良结果的影响（因为提交的交易只能以其精确的特定顺序包含到区块中）。\n在钱包端，IPFS 集成允许以去中心化的方式高效地存储数据（例如 NFTs），同时减少区块链膨胀。因此，今天的每个 Beam 钱包同时是一个区块链节点（用于提交交易和验证区块）、一个 SBBS 节点（用于允许钱包之间的安全通信）和一个 IPFS 节点（用于去中心化存储，包括 DApp 前端分发）。\n这次硬分叉顺利完成，难度保持相对稳定。",
+        "links": {
+          "1": {
+            "title": "Medium 文章",
+            "link": "https://medium.com/beam-mw/beam-hard-fork-completed-903ce2b15b51"
+          },
+          "2": {
+            "title": "BIP-1 和 BIP-2 结果",
+            "link": "https://medium.com/beam-mw/beam-bip-1-bip-2-results-229d8289f54d"
+          }
+        }
+      },
+      "5": {
+        "title": "第五次硬分叉（以及钱包 v7.1）",
+        "text": "正如在 Beam 论坛中讨论的那样，这次硬分叉将机密资产的发行成本从 3000 BEAM 降低到仅 10 BEAM。可以在硬分叉之后创建（或重新创建）的 CA 中看到这一结果。\n硬分叉还增加了智能合约的增强功能，允许它们验证分叉高度（以支持依赖于分叉的功能）。在钱包端，改进了对 BANS（Beam 匿名命名系统）的 DApp 支持。",
+        "links": {
+          "1": {
+            "title": "公告",
+            "link": "https://medium.com/beam-mw/beam-hard-fork-announcement-3e999dfba178"
+          },
+          "2": {
+            "title": "BIP-1 讨论帖",
+            "link": "https://forum.beam.mw/t/bip-1-reduce-ca-minting-cost/116"
+          }
+        }
+      }
+    }
+  },
   "press": {
     "title": "他们在谈论我们"
   },
