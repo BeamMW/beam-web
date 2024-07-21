@@ -4397,7 +4397,7 @@ __metadata:
     nuxt-seo-experiments: ^3.1.9
     nuxt-simple-robots: ^3.1.10
     nuxt-simple-sitemap: ^4.4.1
-    prettier: ^3.2.2
+    prettier: ^3.3.3
     swiper: ^11.0.5
     tailwindcss: ^3.4.1
     typescript: ^5.3.3
@@ -11791,12 +11791,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "prettier@npm:3.2.2"
+"prettier@npm:^3.3.3":
+  version: 3.3.3
+  resolution: "prettier@npm:3.3.3"
   bin:
     prettier: bin/prettier.cjs
-  checksum: b416e1e4b26c351403343ebe461feda631c0eee5c3cf316c711204a08f3c639f38a8f9177c75e98a690998ff82e8ddc80c6bc027fb4ef6cedb6a4db035b4fe9a
+  checksum: bc8604354805acfdde6106852d14b045bb20827ad76a5ffc2455b71a8257f94de93f17f14e463fe844808d2ccc87248364a5691488a3304f1031326e62d9276e
   languageName: node
   linkType: hard
 
