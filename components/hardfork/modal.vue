@@ -19,7 +19,7 @@
           <div class="flex flex-col gap-3 mt-3">
             <LayoutLink
               class="group flex w-fit py-2 px-4 flex-row items-center gap-3 justify-center border rounded bg-[rgb(11,31,64)]/50 hover:bg-[#042248] focus:bg-[#042248] border-black border-opacity-30 shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset] focus:outline-none focus:ring-2 focus:ring-beam-blue/75 focus:ring-offset-2 transition focus:ring-offset-[#042248]"
-              v-for="item in links" :href="item.link">
+              v-for="item in links" :href="item.link" :key="item.link">
               <span>{{ item.title }}</span>
               <Icon
                 class="block w-5 h-5 text-white group-hover:text-beam-blue opacity-60 group-hover:opacity-100 transition rtl:rotate-180"
