@@ -2782,6 +2782,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/semver-utils@npm:^1.1.1":
+  version: 1.1.3
+  resolution: "@types/semver-utils@npm:1.1.3"
+  checksum: 37f3bacf1426569624c645bf9e6cf009735760b56dad08fcf701740ea2b4c3cf89fc3eecfbf1c3a2932f81d3b55c42647694bf732c5aeeace0592ccfd9905d50
+  languageName: node
+  linkType: hard
+
 "@types/semver@npm:^7.5.0":
   version: 7.5.6
   resolution: "@types/semver@npm:7.5.6"
@@ -4436,7 +4443,7 @@ __metadata:
     glob: ^10.3.10
     gsap: ^3.12.4
     markdown-it: ^14.0.0
-    npm-check-updates: ^16.14.12
+    npm-check-updates: ^16.14.20
     nuxt: ^3.9.1
     nuxt-multi-cache: ^3.1.1
     nuxt-security: ^1.0.0
@@ -10355,10 +10362,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^16.14.12":
-  version: 16.14.12
-  resolution: "npm-check-updates@npm:16.14.12"
+"npm-check-updates@npm:^16.14.20":
+  version: 16.14.20
+  resolution: "npm-check-updates@npm:16.14.20"
   dependencies:
+    "@types/semver-utils": ^1.1.1
     chalk: ^5.3.0
     cli-table3: ^0.6.3
     commander: ^10.0.1
@@ -10394,7 +10402,7 @@ __metadata:
   bin:
     ncu: build/src/bin/cli.js
     npm-check-updates: build/src/bin/cli.js
-  checksum: 09f7edc55c64c5f6e6185635fb2509ffa589f0d24d582bede45597f5ba29bef8efc38827b573c5181ca95638da8aff6f3f590f113e7bb5c06a46398ba386394f
+  checksum: 85c69d05aad220e4a10bf03da86441b6a721c36e1acc7943ec3f4d92f68aff177fb693aa396741d9088ee7c3773d6ce5ba158445dbe44a718e3641aa028125dd
   languageName: node
   linkType: hard
 
