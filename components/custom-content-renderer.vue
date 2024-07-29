@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types/index";
+import type { ParsedContent } from "@nuxt/content";
 
 const props = defineProps<{
   value: ParsedContent;

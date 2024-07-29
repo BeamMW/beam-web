@@ -2,7 +2,7 @@
 import { join, sep } from "path";
 import { globSync } from "glob";
 import { pathExists, copy } from "fs-extra";
-import type { LocaleObject, Directions } from "vue-i18n-routing";
+import type { LocaleObject, Directions } from "./node_modules/@nuxtjs/i18n";
 
 // List of supported languages
 const locales: LocaleObject[] = [
@@ -206,12 +206,12 @@ export default defineNuxtConfig({
   },
   fontMetrics: {
     fonts: [
-      { family: "ProximaNova", src: "/fonts/ProximaNova-Regular.woff2" },
+      { family: "ProximaNova", src: "fonts/ProximaNova-Regular.woff2" },
       {
         family: "ProximaNova-Italic",
-        src: "/fonts/ProximaNova-RegularIt.woff2",
+        src: "fonts/ProximaNova-RegularIt.woff2",
       },
-      { family: "ProximaNova-Bold", src: "/fonts/ProximaNova-Bold.woff2" },
+      { family: "ProximaNova-Bold", src: "fonts/ProximaNova-Bold.woff2" },
     ],
   },
   i18n: {
