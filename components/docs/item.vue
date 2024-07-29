@@ -94,7 +94,7 @@
 import type {
   ParsedContent,
   QueryBuilder,
-} from "@nuxt/content";
+} from "@nuxt/content/dist/runtime/types/index";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
@@ -143,7 +143,7 @@ scrollSpy({
 });
 
 const filteredList = computed(() => {
-  return everything.value.filter((article: any) => {
+  return everything.value.filter((article) => {
     if (!article._path) {
       return false;
     }
