@@ -1,6 +1,6 @@
 {
   "name": "beam-web",
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "yarn@3.5.0",
   "type": "module",
   "scripts": {
     "dev": "nuxi dev",
