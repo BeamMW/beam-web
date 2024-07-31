@@ -332,10 +332,6 @@ const roadmap: Roadmap = [
         description: t("roadmap.milestones.8.items.6"),
         state: PROGRESS.COMPLETED,
       },
-      {
-        description: t("roadmap.milestones.8.items.7"),
-        state: PROGRESS.COMPLETED,
-      },
     ],
   },
   {
@@ -378,6 +374,10 @@ const roadmap: Roadmap = [
       },
       {
         description: t("roadmap.milestones.9.items.9"),
+        state: PROGRESS.PLANNED,
+      },
+      {
+        description: t("roadmap.milestones.9.items.10"),
         state: PROGRESS.PLANNED,
       },
     ],

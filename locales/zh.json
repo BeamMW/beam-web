@@ -205,31 +205,31 @@
         }
       },
       "8": {
-        "title": "平易近人胶子DeFi",
-        "year": "二零二三年",
+        "title": "Groovy Gluon DeFi",
+        "year": "2023",
         "items": {
-          "1": "AMM DEX发布",
-          "2": "BeamX流动性挖矿DApp",
-          "3": "以太坊上的Wrapped BEAM",
-          "4": "以太坊桥(ETH, USDT, WBTC, DAI)",
-          "5": "硬件钱包支持(Ledger Nano S和Nano S Plus)",
-          "6": "Beam钱包中的Beam Messenger DApp",
-          "7": "高频交易"
+          "1": "AMM DEX 发布",
+          "2": "BeamX 流动性挖掘 DApp",
+          "3": "以太坊上的 Wrapped BEAM",
+          "4": "以太坊桥接（ETH、USDT、WBTC、DAI）",
+          "5": "硬件钱包支持（Ledger Nano S 和 Nano S Plus）",
+          "6": "高频交易"
         }
       },
       "9": {
-        "title": "强壮强子和后期",
-        "year": "二零二四年",
+        "title": "Hearty Hadron 及之后",
+        "year": "2024",
         "items": {
-          "1": "硬分叉8.0",
-          "2": "EVM和EVM DApps支持",
-          "3": "“5年周年”钱包更新",
+          "1": "Hard Fork 8.0",
+          "2": "EVM 和 EVM DApps 支持",
+          "3": "\"5周年\" 钱包更新",
           "4": "无缝后台节点同步",
-          "5": "Beam礼品卡",
-          "6": "新的扩展资源管理器",
-          "7": "DEX GUI优化",
-          "8": "侧链支持",
-          "9": "探索DAG Knight集成"
+          "5": "Beam Wallet 中的 Beam Messenger PoC",
+          "6": "Beam 礼品卡",
+          "7": "全新扩展探测器",
+          "8": "DEX 界面重设计",
+          "9": "侧链支持",
+          "10": "研究 DAG Knight 集成"
         }
       }
     }
@@ -471,6 +471,7 @@
       "beamForum": "Beam论坛",
       "beamBlog": "Beam博客",
       "roadmap": "路线图",
+      "hardfork": "硬分叉",
       "newsletter": "时事通讯"
     },
     "community": {

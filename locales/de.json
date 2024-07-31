@@ -208,28 +208,28 @@
         "title": "Groovy Gluon DeFi",
         "year": "2023",
         "items": {
-          "1": "AMM DEX Release",
+          "1": "AMM DEX Veröffentlichung",
           "2": "BeamX Liquiditäts-Farming DApp",
           "3": "Wrapped BEAM auf Ethereum",
-          "4": "Ethereum-Bridge (ETH, USDT, WBTC, DAI)",
+          "4": "Ethereum Brücke (ETH, USDT, WBTC, DAI)",
           "5": "HW Wallet Unterstützung (Ledger Nano S & Nano S Plus)",
-          "6": "Beam Messenger DApp im Beam Wallet",
-          "7": "Hochfrequente Transaktionen"
+          "6": "Hochfrequenztransaktionen"
         }
       },
       "9": {
-        "title": "Kraftvolles Hadron und später",
+        "title": "Hearty Hadron und später",
         "year": "2024",
         "items": {
           "1": "Hard Fork 8.0",
-          "2": "EVM und EVM DApps Unterstützung",
-          "3": "„5-Jahres Jubiläum“ Wallet Update",
-          "4": "Nahtlose Hintergrund-Node-Synchronisation",
-          "5": "Beam Geschenkkarten",
-          "6": "Neuer erweiterter Explorer",
-          "7": "DEX GUI Überarbeitung",
-          "8": "Sidechains Unterstützung",
-          "9": "DAG Knight Integration untersuchen"
+          "2": "EVM- und EVM DApps Unterstützung",
+          "3": "\"5-Jahres-Jubiläum\" Wallet-Update",
+          "4": "Nahtlose Hintergrundknoten-Synchronisation",
+          "5": "Beam Messenger PoC in Beam Wallet",
+          "6": "Beam Geschenkkarten",
+          "7": "Neuer erweiterter Explorer",
+          "8": "DEX GUI Überarbeitung",
+          "9": "Seitenketten Unterstützung",
+          "10": "Untersuchung der DAG Knight Integration"
         }
       }
     }
@@ -473,6 +473,7 @@
       "beamForum": "Beam-Forum",
       "beamBlog": "Beam-Blog",
       "roadmap": "Roadmap",
+      "hardfork": "Hardforks",
       "newsletter": "Newsletter"
     },
     "community": {

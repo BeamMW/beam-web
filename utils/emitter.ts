@@ -4,7 +4,7 @@ export enum UserInteractionEvents {
   CLOSE_MENUS = "closeMenus",
   SCROLL_TO_WHERE_TO_BUY = "scrollToWhereToBuy",
   SCROLL_TO_ROADMAP = "scrollToRoadmap",
-  SCROLL_TO_HARDFORK = "scrollToRoadmap",
+  SCROLL_TO_HARDFORK = "scrollToHardfork",
   SCROLL_TO_GET_STARTED = "scrollToGetStarted",
   EXIT_LANGUAGE_DROPDOWN = "exitLanguageDropdown",
   ROADMAP_COMPONENT_READY = "roadmapComponentLoaded",
