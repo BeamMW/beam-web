@@ -42,14 +42,23 @@ const roadmapScroll = async () =>
     UserInteractionEvents.ROADMAP_COMPONENT_READY,
   );
 
+const hardforkScroll = async () =>
+  await scrollToIdOnPage(
+    "/",
+    "targetComponentHardfork",
+    UserInteractionEvents.Hardfork_COMPONENT_READY,
+  );
+
 onMounted(() => {
   eventBus.on(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll);
   eventBus.on(UserInteractionEvents.SCROLL_TO_ROADMAP, roadmapScroll);
+  eventBus.on(UserInteractionEvents.SCROLL_TO_HARDFORK, hardforkScroll);
 });
 
 onUnmounted(() => {
   eventBus.off(UserInteractionEvents.SCROLL_TO_WHERE_TO_BUY, whereToBuyScroll);
   eventBus.off(UserInteractionEvents.SCROLL_TO_ROADMAP, roadmapScroll);
+  eventBus.off(UserInteractionEvents.SCROLL_TO_HARDFORK, hardforkScroll);
 });
 </script>
 

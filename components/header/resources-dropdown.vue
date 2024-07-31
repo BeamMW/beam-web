@@ -59,6 +59,15 @@ const menus = computed(() => [
               eventBus.emit(UserInteractionEvents.SCROLL_TO_ROADMAP, {}),
           }),
       },
+      {
+        text: t("footer.join.hardfork"),
+        href: "javascript://",
+        onClick: () =>
+          eventBus.emit(UserInteractionEvents.CLOSE_MENUS, {
+            callback: () =>
+              eventBus.emit(UserInteractionEvents.SCROLL_TO_HARDFORK, {}),
+          }),
+      },
       { text: ExternalLinksTitle.YOUTUBE, href: ExternalLinks.YOUTUBE },
       { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
       { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
