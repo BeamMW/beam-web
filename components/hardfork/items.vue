@@ -80,7 +80,7 @@ const hardfork = ref<Hardfork>([
         link: t("hardfork.hardforks.1.links.1.link")
       }
     ],
-    image: "atom",
+    image: "cathode",
   },
   {
     name: t("hardfork.hardforks.2.title"),
@@ -101,12 +101,12 @@ const hardfork = ref<Hardfork>([
         link: t("hardfork.hardforks.2.links.3.link")
       }
     ],
-    image: "boson",
+    image: "electron",
   },
   {
     name: t("hardfork.hardforks.3.title"),
     text: t("hardfork.hardforks.3.text"),
-    color: "#3d9be9",
+    color: "#b02fb0",
     showFullText: false,
     links: [
       {
@@ -126,12 +126,12 @@ const hardfork = ref<Hardfork>([
         link: t("hardfork.hardforks.3.links.4.link")
       }
     ],
-    image: "cathode",
+    image: "fermion",
   },
   {
     name: t("hardfork.hardforks.4.title"),
     text: t("hardfork.hardforks.4.text"),
-    color: "#3d9be9",
+    color: "#bc1b9f",
     showFullText: false,
     links: [
       {
@@ -143,12 +143,12 @@ const hardfork = ref<Hardfork>([
         link: t("hardfork.hardforks.4.links.2.link")
       }
     ],
-    image: "doppler",
+    image: "gluon",
   },
   {
     name: t("hardfork.hardforks.5.title"),
     text: t("hardfork.hardforks.5.text"),
-    color: "#3d9be9",
+    color: "#bc1b9f",
     showFullText: false,
     links: [
       {
@@ -160,7 +160,7 @@ const hardfork = ref<Hardfork>([
         link: t("hardfork.hardforks.5.links.2.link")
       }
     ],
-    image: "fermion",
+    image: "gluon",
   }
 ]);
 

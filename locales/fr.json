@@ -205,31 +205,32 @@
         }
       },
       "8": {
-        "title": "Gluon Groovy DeFi",
+        "title": "Groovy Gluon DeFi",
         "year": "2023",
         "items": {
-          "1": "Sortie du DEX AMM",
-          "2": "Farming de liquidité BeamX",
+          "1": "Lancement de l'AMM DEX",
+          "2": "DApp de farming de liquidités BeamX",
           "3": "BEAM enveloppé sur Ethereum",
           "4": "Pont Ethereum (ETH, USDT, WBTC, DAI)",
-          "5": "Support de portefeuille matériel (Ledger Nano S et Nano S Plus)",
-          "6": "Application Beam Messenger dans Beam Wallet",
+          "5": "Support pour portefeuilles HW (Ledger Nano S et Nano S Plus)",
+          "6": "DApp Beam Messenger dans Beam Wallet",
           "7": "Transactions à haute fréquence"
         }
       },
       "9": {
-        "title": "Hadron copieux et plus tard",
+        "title": "Hearty Hadron et au-delà",
         "year": "2024",
         "items": {
           "1": "Hard Fork 8.0",
-          "2": "Support EVM et DApps EVM",
-          "3": "Mise à jour du portefeuille «5e anniversaire»",
-          "4": "Synchronisation du nœud en arrière-plan transparente",
-          "5": "Cartes cadeaux Beam",
-          "6": "Nouvel explorateur étendu",
-          "7": "Refonte de l'interface graphique DEX",
-          "8": "Support des sidechains",
-          "9": "Intégrer DAG Knight"
+          "2": "Support pour EVM et DApps EVM",
+          "3": "Mise à jour du portefeuille \"anniversaire de 5 ans\"",
+          "4": "Synchronisation de nœud en arrière-plan sans couture",
+          "5": "PoC Beam Messenger dans Beam Wallet",
+          "6": "Cartes-cadeaux Beam",
+          "7": "Nouvel explorateur étendu",
+          "8": "Refonte de l'interface graphique DEX",
+          "9": "Support des chaînes latérales",
+          "10": "Étudier l'intégration de DAG Knight"
         }
       }
     }
@@ -471,6 +472,7 @@
       "beamForum": "Forum Beam",
       "beamBlog": "Blog Beam",
       "roadmap": "Feuille de route",
+      "hardfork": "Fourches dures",
       "newsletter": "Lettre d'information"
     },
     "community": {

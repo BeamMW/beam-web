@@ -205,31 +205,32 @@
         }
       },
       "8": {
-        "title": "Gluon Animado DeFi",
+        "title": "Groovy Gluon DeFi",
         "year": "2023",
         "items": {
-          "1": "Lançamento de DEX AMM",
+          "1": "Lançamento do AMM DEX",
           "2": "DApp de Farming de Liquidez BeamX",
-          "3": "BEAM Envelopado no Ethereum",
+          "3": "BEAM embrulhado no Ethereum",
           "4": "Ponte Ethereum (ETH, USDT, WBTC, DAI)",
-          "5": "Suporte a carteiras de hardware (Ledger Nano S & Nano S Plus)",
-          "6": "DApp Beam Messenger na Carteira Beam",
+          "5": "Suporte a carteiras HW (Ledger Nano S e Nano S Plus)",
+          "6": "PoC Beam Messenger na Beam Wallet",
           "7": "Transações de Alta Frequência"
         }
       },
       "9": {
-        "title": "Hadrón Robusto e Seguintes",
+        "title": "Hearty Hadron e além",
         "year": "2024",
         "items": {
           "1": "Hard Fork 8.0",
           "2": "Suporte a EVM e DApps EVM",
-          "3": "Atualização da carteira de \"5o aniversário\"",
+          "3": "Atualização de carteira \"aniversário de 5 anos\"",
           "4": "Sincronização de nó em segundo plano sem interrupções",
-          "5": "Cartões presente Beam",
-          "6": "Novo explorador estendido",
-          "7": "Reformulação da interface gráfica da DEX",
-          "8": "Suporte a sidechains",
-          "9": "Investigar integração com DAG Knight"
+          "5": "DApp Beam Messenger na Beam Wallet",
+          "6": "Cartões de Presente Beam",
+          "7": "Novo explorador estendido",
+          "8": "Renovação da GUI do DEX",
+          "9": "Suporte a sidechains",
+          "10": "Investigar integração do DAG Knight"
         }
       }
     }
@@ -471,6 +472,7 @@
       "beamForum": "Fórum Beam",
       "beamBlog": "Blog Beam",
       "roadmap": "Roteiro",
+      "hardfork": "Garfos Duros",
       "newsletter": "Newsletter"
     },
     "community": {

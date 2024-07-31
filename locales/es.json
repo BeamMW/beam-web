@@ -208,28 +208,29 @@
         "title": "Groovy Gluon DeFi",
         "year": "2023",
         "items": {
-          "1": "Lanzamiento de DEX AMM",
-          "2": "DApp de farming de liquidez BeamX",
+          "1": "Lanzamiento de AMM DEX",
+          "2": "DApp de Agricultura de Liquidez BeamX",
           "3": "BEAM envuelto en Ethereum",
           "4": "Puente de Ethereum (ETH, USDT, WBTC, DAI)",
-          "5": "Soporte de billetera de hardware (Ledger Nano S y Nano S Plus)",
-          "6": "DApp Beam Messenger en la billetera Beam",
+          "5": "Soporte para billeteras HW (Ledger Nano S y Nano S Plus)",
+          "6": "DApp de Beam Messenger en Beam Wallet",
           "7": "Transacciones de alta frecuencia"
         }
       },
       "9": {
-        "title": "Robusto hadrón y posterior",
+        "title": "Hearty Hadron y después",
         "year": "2024",
         "items": {
-          "1": "Bifurcación dura 8.0",
-          "2": "Soporte para EVM y DApps EVM",
-          "3": "Actualización de billetera del \"5o aniversario\"",
+          "1": "Hard Fork 8.0",
+          "2": "Soporte para EVM y DApps de EVM",
+          "3": "Actualización de billetera \"aniversario de 5 años\"",
           "4": "Sincronización de nodo en segundo plano sin interrupciones",
-          "5": "Tarjetas de regalo Beam",
-          "6": "Nuevo explorador extendido",
-          "7": "Rediseño de la GUI de DEX",
-          "8": "Soporte para sidechains",
-          "9": "Investigar integración con DAG Knight"
+          "5": "PoC de Beam Messenger en Beam Wallet",
+          "6": "Tarjetas de Regalo Beam",
+          "7": "Nuevo explorador extendido",
+          "8": "Reestructuración de la interfaz gráfica de DEX",
+          "9": "Soporte para cadenas laterales",
+          "10": "Investigar la integración de DAG Knight"
         }
       }
     }
@@ -473,6 +474,7 @@
       "beamForum": "Foro Beam",
       "beamBlog": "Blog Beam",
       "roadmap": "Hoja de ruta",
+      "hardfork": "Horquillas duras",
       "newsletter": "Boletín de noticias"
     },
     "community": {

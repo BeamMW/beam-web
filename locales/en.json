@@ -213,7 +213,7 @@
           "3": "Wrapped BEAM on Ethereum",
           "4": "Ethereum bridge (ETH, USDT, WBTC, DAI)",
           "5": "HW wallet support (Ledger Nano S & Nano S Plus)",
-          "6": "Beam Messenger DApp in Beam Wallet",
+          "6": "Beam Messenger PoC in Beam Wallet",
           "7": "High Frequency Transactions"
         }
       },
@@ -225,11 +225,12 @@
           "2": "EVM and EVM DApps support",
           "3": "\"5-year anniversary\" wallet update",
           "4": "Seamless background node sync",
-          "5": "Beam Gift Cards",
-          "6": "New extended explorer",
-          "7": "DEX GUI revamp",
-          "8": "Sidechains support",
-          "9": "Investigate DAG Knight integration"
+          "5": "Beam Messenger DApp in Beam Wallet",
+          "6": "Beam Gift Cards",
+          "7": "New extended explorer",
+          "8": "DEX GUI revamp",
+          "9": "Sidechains support",
+          "10": "Investigate DAG Knight integration"
         }
       }
     }
@@ -474,6 +475,7 @@
       "beamForum": "Beam Forum",
       "beamBlog": "Beam Blog",
       "roadmap": "Roadmap",
+      "hardfork": "Hardforks",
       "newsletter": "Newsletter"
     },
     "community": {
