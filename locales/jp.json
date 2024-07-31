@@ -213,7 +213,8 @@
           "3": "Ethereum上のWrapped BEAM",
           "4": "Ethereumブリッジ（ETH、USDT、WBTC、DAI）",
           "5": "ハードウェアウォレットのサポート（Ledger Nano SおよびNano S Plus）",
-          "6": "高頻度取引"
+          "6": "Beam Wallet内のBeam Messenger PoC",
+          "7": "高頻度取引"
         }
       },
       "9": {
@@ -224,7 +225,7 @@
           "2": "EVMおよびEVM DAppsのサポート",
           "3": "\"5周年\"ウォレットの更新",
           "4": "シームレスなバックグラウンドノードの同期",
-          "5": "Beam Wallet内のBeam Messenger PoC",
+          "5": "Beam Wallet内のBeam Messenger DApp",
           "6": "Beamギフトカード",
           "7": "新しい拡張型エクスプローラー",
           "8": "DEX GUIのリニューアル",

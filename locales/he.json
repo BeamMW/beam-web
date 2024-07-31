@@ -213,7 +213,8 @@
           "3": "BEAM עטוף ב-Ethereum",
           "4": "גשר Ethereum (ETH, USDT, WBTC, DAI)",
           "5": "תמיכה בארנקים HW (Ledger Nano S ו-Nano S Plus)",
-          "6": "עסקאות בתדירות גבוהה"
+          "6": "Beam Messenger PoC ב-Beam Wallet",
+          "7": "עסקאות בתדירות גבוהה"
         }
       },
       "9": {
@@ -224,7 +225,7 @@
           "2": "תמיכה ב-EVM ו-DApps של EVM",
           "3": "עדכון ארנק \"חמש שנים\"",
           "4": "סנכרון חלק של צומת רקע",
-          "5": "Beam Messenger PoC ב-Beam Wallet",
+          "5": "Beam Messenger DApp ב-Beam Wallet",
           "6": "כרטיסי מתנה של Beam",
           "7": "מגלה מורחב חדש",
           "8": "רענון GUI של DEX",

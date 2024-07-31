@@ -213,7 +213,8 @@
           "3": "BEAM envuelto en Ethereum",
           "4": "Puente de Ethereum (ETH, USDT, WBTC, DAI)",
           "5": "Soporte para billeteras HW (Ledger Nano S y Nano S Plus)",
-          "6": "Transacciones de alta frecuencia"
+          "6": "DApp de Beam Messenger en Beam Wallet",
+          "7": "Transacciones de alta frecuencia"
         }
       },
       "9": {

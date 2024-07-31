@@ -213,7 +213,8 @@
           "3": "以太坊上的 Wrapped BEAM",
           "4": "以太坊桥接（ETH、USDT、WBTC、DAI）",
           "5": "硬件钱包支持（Ledger Nano S 和 Nano S Plus）",
-          "6": "高频交易"
+          "6": "Beam Wallet 中的 Beam Messenger PoC",
+          "7": "高频交易"
         }
       },
       "9": {
@@ -224,7 +225,7 @@
           "2": "EVM 和 EVM DApps 支持",
           "3": "\"5周年\" 钱包更新",
           "4": "无缝后台节点同步",
-          "5": "Beam Wallet 中的 Beam Messenger PoC",
+          "5": "Beam Wallet 中的 Beam Messenger DApp",
           "6": "Beam 礼品卡",
           "7": "全新扩展探测器",
           "8": "DEX 界面重设计",
