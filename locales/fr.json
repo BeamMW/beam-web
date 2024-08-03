@@ -237,9 +237,11 @@
   },
   "hardfork": {
     "title": "Hard Forks",
+    "year": "2021",
     "hardforks": {
       "1": {
         "title": "Première Hard-Fork",
+        "year": "2019",
         "text": "La première hard-fork de Beam a été réalisée comme annoncé dans la feuille de route. L'algorithme PoW a été mis à jour de BeamHash I à BeamHash II, qui sont des améliorations de l'Equihash de base sur lequel ils sont basés. \n La stratégie de Beam avec ces changements prévus de l'algorithme de minage était de donner un avantage initial aux mineurs GPU, puis de permettre à des ASICs bon marché de rejoindre sans perturber l'écosystème de minage.\nAprès cette hard-fork, une baisse de la difficulté a été observée car tous les mineurs n'ont pas effectué la mise à jour à temps. \nCependant, après moins de 24 heures, le taux de hachage était revenu à sa valeur avant la fork.",
         "links": {
           "1": {
@@ -250,6 +252,7 @@
       },
       "2": {
         "title": "Deuxième Hard-Fork",
+        "year": "2020",
         "text": "La deuxième hard-fork de Beam a été réalisée comme annoncé dans la feuille de route. L'algorithme PoW a été mis à jour de BeamHash II à BeamHash III, qui est la version finale dans la stratégie prévue pour équilibrer le minage GPU et ASIC. \nCette hard-fork a également vu l'activation des Actifs Confidentiels (parfois aussi appelés 'Tokens de Confidentialité', et qui ont été introduits lors de la première hard-fork mais maintenus inactifs) et le lancement du protocole Lelantus-MW et de ses paiements unilatéraux associés (également connus sous le nom de transactions hors ligne).",
         "links": {
           "1": {
@@ -268,6 +271,7 @@
       },
       "3": {
         "title": "Troisième Hard-Fork (et portefeuille v6.0)",
+        "year": "2021",
         "text": "Cette hard-fork a introduit la Machine Virtuelle Beam (BVM) comme infrastructure pour créer des Contrats Intelligents (aussi appelés 'Shaders'), faisant de Beam la première cryptomonnaie axée sur la confidentialité avec des capacités de contrats intelligents !\nLes contrats intelligents BVM peuvent être écrits dans n'importe quel langage compatible WebAssembly (tel que C++, Rust, Go, etc.) et sont composés de deux éléments : le côté blockchain (fonctionnant sur les nœuds Beam) et le côté portefeuille (fonctionnant dans le portefeuille Beam, avec les interfaces DApp).\nCette séparation entre la logique côté chaîne et côté client permet des applications très puissantes et flexibles.\nLes contrats intelligents Beam sont transparents par défaut, ce qui signifie que nous pouvons voir leur état et leur activité. Cependant, les utilisateurs restent anonymes, car leurs interactions avec les contrats intelligents se font par le biais de transactions confidentielles normales de Beam. Avec cette approche, le DeFi de Beam parvient à fournir des marchés 'efficaces' (par exemple, où nous pouvons voir ce qui est acheté et vendu) tout en protégeant la vie privée de ses utilisateurs (par exemple, nous ne pouvons pas voir qui achète et vend !).\nEn permettant de telles capacités de contrats intelligents préservant la vie privée, cette hard-fork a ouvert la voie à Beam pour devenir non seulement une puissante plateforme 'Privacy DeFi' (PriFi) mais aussi une infrastructure polyvalente pour tout dans le Confidential Web3 !",
         "links": {
           "1": {
@@ -290,6 +294,7 @@
       },
       "4": {
         "title": "Quatrième Hard-Fork (et portefeuille v7.0)",
+        "year": "2022",
         "text": "Cette hard-fork a introduit les 'Transactions Haute Fréquence' (HFTX) sur les côtés du nœud et du portefeuille, ainsi que l'intégration du stockage IPFS du côté du portefeuille. Les HFTX améliorent la résistance aux MEV, aux attaques de front-running et aux attaques de sandwich en définissant des règles strictes d'inclusion des transactions, protégeant ainsi les utilisateurs des résultats indésirables (les transactions soumises ne peuvent être incluses dans un bloc que dans leur séquence spécifique exacte).\nDu côté du portefeuille, l'intégration IPFS permet de stocker des données (comme des NFTs) de manière décentralisée tout en réduisant le gonflement de la blockchain. Ainsi, chaque portefeuille Beam est aujourd'hui à la fois un nœud blockchain (pour soumettre des transactions et vérifier des blocs), un nœud SBBS (pour permettre une communication sécurisée entre portefeuilles) et un nœud IPFS (pour permettre le stockage décentralisé, y compris pour la distribution des interfaces DApp).\nCette Hard Fork s'est déroulée sans problème et la difficulté est restée relativement stable.",
         "links": {
           "1": {
@@ -304,6 +309,7 @@
       },
       "5": {
         "title": "Cinquième Hard-Fork (et portefeuille v7.1)",
+        "year": "2023",
         "text": "Comme discuté sur le Forum Beam, cette hard-fork a réduit le coût d'émission des Actifs Confidentiels de 3000 à seulement 10 BEAM. Le résultat peut être vu dans les CAs créés (ou recréés) après la fork. \nLa hard-fork a également ajouté des améliorations aux contrats intelligents leur permettant de vérifier les hauteurs de fork (pour supporter des fonctionnalités dépendantes des forks). Du côté du portefeuille, le support des DApps pour le Système de Noms Anonymes de Beam (BANS) a été amélioré.",
         "links": {
           "1": {
