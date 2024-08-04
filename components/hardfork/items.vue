@@ -17,6 +17,9 @@
         <div class="carousel-item-link lg:px-16">
           <div class="flex items-center flex-col text-blue-50 lg:items-start px-10 md:px-0"
             :style="{ color: item.color }">
+            <span class="text-xs font-bold opacity-70 mb-1">{{
+              item.year
+            }}</span>
             <div class="flex items-center gap-4">
               <Icon :as-image="true" :name="`beam-releases/${item.image}`" class="h-12 w-12" loading="lazy"
                 :alt="item.image" />
@@ -35,7 +38,7 @@
         </div>
       </SwiperSlide>
     </swiper>
-    <modal v-if="currentItem" :title="currentItem.name" :text="currentItem.text" :visible="!!currentItem"
+    <modal v-if="currentItem" :title="currentItem.name" :text="currentItem.text" :visible="!!currentItem" :year="currentItem.year"
       :links="currentItem.links" @close="currentItem = null" />
   </div>
 </template>
@@ -60,6 +63,7 @@ interface HardforkLink {
 interface HardforkItem {
   name: string;
   text: string;
+  year: string;
   links: HardforkLink[];
   color: string;
   image: string;
@@ -71,6 +75,7 @@ type Hardfork = HardforkItem[];
 const hardfork = ref<Hardfork>([
   {
     name: t("hardfork.hardforks.1.title"),
+    year: t("hardfork.hardforks.1.year"),
     text: t("hardfork.hardforks.1.text"),
     color: "#3d9be9",
     showFullText: false,
@@ -84,6 +89,7 @@ const hardfork = ref<Hardfork>([
   },
   {
     name: t("hardfork.hardforks.2.title"),
+    year: t("hardfork.hardforks.2.year"),
     text: t("hardfork.hardforks.2.text"),
     color: "#3d9be9",
     showFullText: false,
@@ -105,6 +111,7 @@ const hardfork = ref<Hardfork>([
   },
   {
     name: t("hardfork.hardforks.3.title"),
+    year: t("hardfork.hardforks.3.year"),
     text: t("hardfork.hardforks.3.text"),
     color: "#b02fb0",
     showFullText: false,
@@ -130,6 +137,7 @@ const hardfork = ref<Hardfork>([
   },
   {
     name: t("hardfork.hardforks.4.title"),
+    year: t("hardfork.hardforks.4.year"),
     text: t("hardfork.hardforks.4.text"),
     color: "#bc1b9f",
     showFullText: false,
@@ -147,6 +155,7 @@ const hardfork = ref<Hardfork>([
   },
   {
     name: t("hardfork.hardforks.5.title"),
+    year: t("hardfork.hardforks.5.year"),
     text: t("hardfork.hardforks.5.text"),
     color: "#bc1b9f",
     showFullText: false,

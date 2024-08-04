@@ -237,6 +237,7 @@
   },
   "hardfork": {
     "title": "Hard Forks",
+    "year": "2019",
     "hardforks": {
       "1": {
         "title": "Primeiro Hard-Fork",
@@ -250,6 +251,7 @@
       },
       "2": {
         "title": "Segundo Hard-Fork",
+        "year": "2020",
         "text": "O segundo hard-fork do Beam foi realizado conforme anunciado no roadmap. O algoritmo PoW foi atualizado de BeamHash II para BeamHash III, que é a versão final da estratégia planejada para equilibrar a mineração de GPU e ASIC. \nEsse hard-fork também viu a ativação dos Ativos Confidenciais (às vezes também chamados de 'Tokens de Privacidade', que foram introduzidos no primeiro hard-fork, mas mantidos inativos) e o lançamento do protocolo Lelantus-MW e seus pagamentos unidimensionais associados (também conhecidos como transações offline).",
         "links": {
           "1": {
@@ -268,6 +270,7 @@
       },
       "3": {
         "title": "Terceiro Hard-Fork (e carteira v6.0)",
+        "year": "2021",
         "text": "Este hard-fork trouxe a adição da Máquina Virtual Beam (BVM) como uma infraestrutura para criar Contratos Inteligentes (também conhecidos como 'Shaders'), tornando o Beam a primeira moeda de privacidade com capacidades de contratos inteligentes!\nContratos inteligentes BVM podem ser escritos em qualquer linguagem compatível com WebAssembly (como C++, Rust, Go, etc.) e são compostos por dois elementos: o lado da blockchain (executado em nós Beam) e o lado da carteira (executado na carteira Beam, juntamente com as interfaces DApp). Essa separação de lógicas de cadeia e cliente permite a criação de aplicações muito poderosas e flexíveis.\nContratos inteligentes do Beam são transparentes por padrão, o que significa que podemos ver seu estado e suas atividades. No entanto, os usuários permanecem anônimos, pois suas interações com os contratos inteligentes são baseadas em transações confidenciais normais do Beam. Com essa abordagem, o DeFi do Beam consegue fornecer mercados 'eficientes' (por exemplo, onde podemos ver o que está sendo comprado e vendido) enquanto ainda protege a privacidade dos usuários (por exemplo, não podemos ver quem está comprando e vendendo!).\nAo permitir essas capacidades de contrato inteligente que preservam a privacidade, este hard-fork abriu as portas para o Beam se tornar não apenas uma poderosa plataforma 'Privacy DeFi' (PriFi), mas realmente uma infraestrutura de propósito geral para tudo no Confidential Web3!",
         "links": {
           "1": {
@@ -290,6 +293,7 @@
       },
       "4": {
         "title": "Quarto Hard-Fork (e carteira v7.0)",
+        "year": "2022",
         "text": "Este hard-fork introduziu 'Transações de Alta Frequência' (HFTX) tanto no lado do nó quanto no lado da carteira, e a integração do armazenamento IPFS no lado da carteira. HFTX melhora a resistência a MEV, ataques de front-running e ataques de sanduíche definindo regras estritas de inclusão para transações, protegendo assim os usuários de resultados indesejados (pois as transações enviadas só podem ser incluídas em um bloco na sequência exata e específica).\nNo lado da carteira, a integração do IPFS permite o armazenamento eficiente de dados (como NFTs) de maneira descentralizada, reduzindo o inchaço da blockchain. Assim, hoje cada carteira Beam é ao mesmo tempo um nó de blockchain (para enviar transações e verificar blocos), um nó SBBS (para permitir a comunicação segura entre carteiras) e um nó IPFS (para permitir o armazenamento descentralizado, incluindo a distribuição das interfaces DApp).\nEste Hard Fork ocorreu sem problemas e a dificuldade permaneceu relativamente estável.",
         "links": {
           "1": {
@@ -304,6 +308,7 @@
       },
       "5": {
         "title": "Quinto Hard-Fork (e carteira v7.1)",
+        "year": "2023",
         "text": "Conforme discutido no Fórum do Beam, este hard-fork reduziu o custo de emissão de Ativos Confidenciais de 3000 para apenas 10 BEAM. O resultado pode ser visto na criação (ou recriação) dos CAs após o fork.\nO hard-fork também adicionou melhorias aos contratos inteligentes, permitindo que eles verifiquem as alturas dos forks (para suportar recursos dependentes de fork). No lado da carteira, o suporte para DApp para o BANS (Sistema de Nomes Anônimos Beam) foi aprimorado.",
         "links": {
           "1": {

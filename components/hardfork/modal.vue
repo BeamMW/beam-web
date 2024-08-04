@@ -42,6 +42,7 @@ interface HardforkLink {
 
 interface ModalProps {
   title: string;
+  year: string;
   text: string;
   visible: boolean;
   links: HardforkLink[]

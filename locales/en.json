@@ -240,6 +240,7 @@
     "hardforks": {
       "1": {
         "title": "First Hard-Fork",
+        "year": "2019",
         "text": "Beam's first hard-fork was performed as announced in the roadmap. The PoW algorithm was updated from BeamHash I to BeamHash II, which are upgrades from the vanilla Equihash on which they are based. \n Beam's strategy with these planned changes of the mining algorithm was to give GPU miners a head start, and then allow cheap ASICs to join in without disrupting the mining ecosystem.\nAfter this hard-fork, a drop in difficulty was observed as not all miners performed a timely upgrade. \nHowever, after less than 24 hours, the hashrate had gone back to its pre-fork value.",
         "links": {
           "1": {
@@ -250,6 +251,7 @@
       },
       "2": {
         "title": "Second Hard-Fork",
+        "year": "2020",
         "text": "Beam's second hard-fork was performed as announced in the roadmap. The PoW algorithm was updated from BeamHash II to BeamHash III, which is the final version in the planned strategy to balance GPU and ASIC mining. \nThis hard-fork also saw the activation of the Confidential Assets (sometimes also called 'Privacy Tokens', and which were introduced in the first hard-fork but kept inactive) and the release of the Lelantus-MW protocol and its associated one-side payments (also known as offline transactions).",
         "links": {
           "1": {
@@ -268,6 +270,7 @@
       },
       "3": {
         "title": "Third Hard-Fork (and wallet v6.0)",
+        "year": "2021",
         "text": "This hard-fork brought the addition of the Beam Virtual Machine (BVM) as an infrastructure to create Smart Contracts (a.k.a. 'Shaders'), thus making Beam the first privacy coin with smart contracts capabilities!\nBVM smart contracts can be written in any WebAssembly compatible language (such as C++, Rust, Go, etc.) and are composed of two elements: the blockchain side (running on Beam nodes) and the wallet side (running in Beam wallet, together with the DApp front ends). This separation of chain-side and client-side logics allows very powerful and flexible applications.\nBeam smart contracts are transparent by default, which means that we can see their state and their activity. Nevertheless, the users remain anonymous, as their interactions with the smart contracts are based on normal confidential Beam transactions. With this approach, Beam's DeFi manages to provide 'efficient' markets (e.g. where we can see what is bought and sold) while still protecting its users' privacy (e.g. we cannot see who buys and sells!).\nBy allowing such privacy-preserving smart contract capabilities, this hard-fork opened the doors to Beam becoming not only a powerful 'Privacy DeFi' (PriFi) platform but indeed a general-purpose infrastructure for anything in Confidential Web3!",
         "links": {
           "1": {
@@ -290,6 +293,7 @@
       },
       "4": {
         "title": "Fourth Hard-Fork (and wallet v7.0)",
+        "year": "2022",
         "text": "This hard-fork introduced 'High-Frequency Transactions' (HFTX) on both node and wallet sides, and IPFS storage integration on the wallet side. HFTX improve resistance to MEV, front-running and sandwich attacks by defining strict inclusion rules for transactions, thus protecting users from unwanted outcomes (as the submitted transactions can only be included into a block in their exact specific sequence).\nOn the wallet side, the IPFS integration allows storing data (such as NFTs) efficiently in a decentralized manner while reducing blockchain bloat. Thus, every Beam wallet today is at the same time a blockchain node (to submit transactions and verify blocks), an SBBS node (to allow secure communication between wallets), and an IPFS node (to allow decentralized storage, including for DApp front ends distribution).\nThis Hard Fork went smoothly and the difficulty remained fairly stable.",
         "links": {
           "1": {
@@ -304,6 +308,7 @@
       },
       "5": {
         "title": "Fifth Hard-Fork (and wallet v7.1)",
+        "year": "2023",
         "text": "As discussed on the Beam Forum, this hard-fork reduced the issuance cost of Confidential Assets from 3000 to 10 BEAM only. The result can be seen in the CAs being created (or re-created) after the fork. \nThe hard-fork also added smart contracts enhancements allowing them to verify fork heights (to support fork-dependent features). On the wallet side, DApp support for the BANS (Beam Anonymous Name System) was improved.",
         "links": {
           "1": {
