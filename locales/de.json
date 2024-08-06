@@ -237,6 +237,7 @@
   },
   "hardfork": {
     "title": "Hard Forks",
+    "year": "2019",
     "hardforks": {
       "1": {
         "title": "Erster Hard-Fork",
@@ -250,6 +251,7 @@
       },
       "2": {
         "title": "Zweiter Hard-Fork",
+        "year": "2020",
         "text": "Beams zweiter Hard-Fork wurde wie im Fahrplan angekündigt durchgeführt. Der PoW-Algorithmus wurde von BeamHash II auf BeamHash III aktualisiert, was die letzte Version in der geplanten Strategie ist, um GPU- und ASIC-Mining auszubalancieren.\nDieser Hard-Fork sah auch die Aktivierung der Confidential Assets (manchmal auch 'Privacy Tokens' genannt, die im ersten Hard-Fork eingeführt, aber inaktiv gehalten wurden) und die Veröffentlichung des Lelantus-MW-Protokolls und seiner zugehörigen Einwegzahlungen (auch bekannt als Offline-Transaktionen).",
         "links": {
           "1": {
@@ -268,6 +270,7 @@
       },
       "3": {
         "title": "Dritter Hard-Fork (und Wallet v6.0)",
+        "year": "2021",
         "text": "Dieser Hard-Fork brachte die Einführung der Beam Virtual Machine (BVM) als Infrastruktur zur Erstellung von Smart Contracts (auch 'Shaders' genannt), wodurch Beam die erste Privacy-Coin mit Smart Contracts Fähigkeiten wurde!\nBVM-Smart Contracts können in jeder WebAssembly-kompatiblen Sprache (wie C++, Rust, Go, etc.) geschrieben werden und bestehen aus zwei Elementen: der Blockchain-Seite (laufend auf Beam-Nodes) und der Wallet-Seite (laufend in Beam-Wallet, zusammen mit den DApp-Frontends). Diese Trennung von Chain-Seite und Client-Seite Logik ermöglicht sehr leistungsfähige und flexible Anwendungen.\nBeam-Smart Contracts sind standardmäßig transparent, was bedeutet, dass wir ihren Zustand und ihre Aktivität sehen können. Dennoch bleiben die Nutzer anonym, da ihre Interaktionen mit den Smart Contracts auf normalen vertraulichen Beam-Transaktionen basieren. Mit diesem Ansatz schafft es Beams DeFi, 'effiziente' Märkte zu bieten (z. B. wo wir sehen können, was gekauft und verkauft wird), während die Privatsphäre der Nutzer geschützt bleibt (z. B. wir können nicht sehen, wer kauft und verkauft).\nDurch die Ermöglichung solcher privatsphäreschützenden Smart Contract Fähigkeiten öffnete dieser Hard-Fork die Türen für Beam, nicht nur eine leistungsstarke 'Privacy DeFi' (PriFi) Plattform zu werden, sondern in der Tat eine allgemeine Infrastruktur für alles im vertraulichen Web3!",
         "links": {
           "1": {
@@ -290,6 +293,7 @@
       },
       "4": {
         "title": "Vierter Hard-Fork (und Wallet v7.0)",
+        "year": "2022",
         "text": "Dieser Hard-Fork führte 'High-Frequency Transactions' (HFTX) sowohl auf Node- als auch auf Wallet-Seite ein, und die IPFS-Speicherintegration auf der Wallet-Seite. HFTX verbessern den Widerstand gegen MEV-, Front-Running- und Sandwich-Angriffe, indem sie strenge Einschlussregeln für Transaktionen definieren und somit die Nutzer vor unerwünschten Ergebnissen schützen (da die eingereichten Transaktionen nur in ihrer genauen spezifischen Reihenfolge in einen Block aufgenommen werden können).\nAuf der Wallet-Seite ermöglicht die IPFS-Integration die effiziente Speicherung von Daten (wie NFTs) auf dezentrale Weise und reduziert gleichzeitig die Blockchain-Bloat. Somit ist heute jede Beam-Wallet gleichzeitig ein Blockchain-Node (zum Einreichen von Transaktionen und Verifizieren von Blöcken), ein SBBS-Node (zur sicheren Kommunikation zwischen Wallets) und ein IPFS-Node (zur dezentralen Speicherung, einschließlich der Verteilung von DApp-Frontends).\nDieser Hard-Fork verlief reibungslos und die Schwierigkeit blieb relativ stabil.",
         "links": {
           "1": {
@@ -304,6 +308,7 @@
       },
       "5": {
         "title": "Fünfter Hard-Fork (und Wallet v7.1)",
+        "year": "2023",
         "text": "Wie im Beam-Forum diskutiert, reduzierte dieser Hard-Fork die Ausgabekosten für vertrauliche Assets von 3000 auf nur 10 BEAM. Das Ergebnis ist in den nach dem Fork erstellten (oder neu erstellten) CAs zu sehen.\nDer Hard-Fork fügte auch Smart Contracts-Verbesserungen hinzu, die es ihnen ermöglichen, Fork-Höhen zu überprüfen (zur Unterstützung von Fork-abhängigen Funktionen). Auf der Wallet-Seite wurde die DApp-Unterstützung für das BANS (Beam Anonymous Name System) verbessert.",
         "links": {
           "1": {
