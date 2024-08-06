@@ -52,7 +52,7 @@
     "markdown-it": "^14.0.0",
     "npm-check-updates": "^16.14.12",
     "nuxt-multi-cache": "^3.1.1",
-    "nuxt-security": "^1.0.0",
+    "nuxt-security": "^1.4.3",
     "swiper": "^11.0.5",
     "tailwindcss": "^3.4.1",
     "vue3-marquee": "^4.1.0"
