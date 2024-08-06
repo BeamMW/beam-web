@@ -4709,7 +4709,7 @@ __metadata:
     "@types/uuid": ^9.0.7
     "@typescript-eslint/eslint-plugin": ^6.19.0
     "@typescript-eslint/parser": ^7.16.1
-    canvas-confetti: ^1.9.2
+    canvas-confetti: ^1.9.3
     date-fns: ^3.3.1
     eslint: ^8.56.0
     eslint-config-prettier: ^9.1.0
@@ -5106,10 +5106,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"canvas-confetti@npm:^1.9.2":
-  version: 1.9.2
-  resolution: "canvas-confetti@npm:1.9.2"
-  checksum: e85fc0bbcd6ce7879997ccf18ba5a9747589ecf6916a06bdb3d229551e8c45c74fd5b9f8d455763db4a9e868c4c3e13b4630c26451823c9f7d1d390f0f0ab192
+"canvas-confetti@npm:^1.9.3":
+  version: 1.9.3
+  resolution: "canvas-confetti@npm:1.9.3"
+  checksum: db044a9c9ca0e58eafd115f7dfc2f9ecc377be34d8a5dd75901dae0dafd4fb0b75fbbf8edd48bbefad2468653c5838348f0e768b79727a924259a9ada343ea30
   languageName: node
   linkType: hard
 

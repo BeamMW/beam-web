@@ -44,7 +44,7 @@
     "@types/canvas-confetti": "^1.6.4",
     "@types/markdown-it": "^13.0.7",
     "@types/uuid": "^9.0.7",
-    "canvas-confetti": "^1.9.2",
+    "canvas-confetti": "^1.9.3",
     "date-fns": "^3.3.1",
     "fs-extra": "^11.2.0",
     "glob": "^10.3.10",
