@@ -117,13 +117,16 @@ const copyDocsAssetsToPublic = async () => {
 
 export default defineNuxtConfig({
   ssr: true,
+
   app: {
     pageTransition: false, // Enable later
     layoutTransition: false,
   },
+
   experimental: {
     viewTransition: true,
   },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
@@ -136,6 +139,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "nuxt-multi-cache",
   ],
+
   multiCache: {
     component: {
       // If true the cache is enabled.
@@ -144,6 +148,7 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+
   security: {
     nonce: true,
     ssg: {
@@ -171,6 +176,7 @@ export default defineNuxtConfig({
       exclude: [/node_modules/, /\.git/],
     },
   },
+
   nitro: {
     prerender: {
       routes: [...docsRoutes],
@@ -178,42 +184,50 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
+
   hooks: {
     "build:before": async () => {
       await copyDocsAssetsToPublic();
     },
   },
+
   runtimeConfig: {
     public: {
       siteUrl: publicWebUrl,
       baseURL: publicWebUrl,
     },
   },
+
   content: {
     documentDriven: false,
   },
+
   site: {
     siteUrl: publicWebUrl,
   },
+
   sitemap: {
     discoverImages: false,
     autoLastmod: true,
     credits: false,
   },
+
   typescript: {
     typeCheck: true,
     strict: true,
   },
+
   fontMetrics: {
     fonts: [
-      { family: "ProximaNova", src: "/fonts/ProximaNova-Regular.woff2" },
+      { family: "ProximaNova", src: "fonts/ProximaNova-Regular.woff2" },
       {
         family: "ProximaNova-Italic",
-        src: "/fonts/ProximaNova-RegularIt.woff2",
+        src: "fonts/ProximaNova-RegularIt.woff2",
       },
-      { family: "ProximaNova-Bold", src: "/fonts/ProximaNova-Bold.woff2" },
+      { family: "ProximaNova-Bold", src: "fonts/ProximaNova-Bold.woff2" },
     ],
   },
+
   i18n: {
     baseUrl: publicWebUrl,
     skipSettingLocaleOnNavigate: false,
@@ -260,4 +274,6 @@ export default defineNuxtConfig({
     },
     locales,
   },
+
+  compatibilityDate: "2024-08-02",
 });
