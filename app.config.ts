@@ -222,11 +222,6 @@ export const exchangesBuy = [
     image: "exchanges/nonkyc",
     link: "https://nonkyc.io/market/BEAM_USDT",
   },
-  {
-    title: "Bitforex",
-    image: "exchanges/bitforex",
-    link: "https://www.bitforex.com/en/spot/beam_usdt",
-  },
 ];
 
 export const instantExchangesBuy = [
