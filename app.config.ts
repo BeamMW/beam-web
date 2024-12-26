@@ -140,9 +140,9 @@ export const docTypes = [
     path: "/cli",
   },
   {
-    title: "docs.types.explorer",
-    image: "docs/desktop",
-    path: "/explorer",
+    title: "docs.types.hww",
+    image: "docs/ledger",
+    path: "/hardware-wallet",
   },
 ];
 
