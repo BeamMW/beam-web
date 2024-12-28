@@ -21,7 +21,9 @@ definePageMeta({
 <template>
   <section class="pb-10 lg:pb-12">
     <IndexHero />
-    <section class="pb-10 lg:pb-12 gap-y-10 lg:gap-y-12 flex flex-col items-center">
+    <section
+      class="pb-10 lg:pb-12 gap-y-10 lg:gap-y-12 flex flex-col items-center"
+    >
       <Features />
       <GetStarted :is-next-step="false" />
     </section>
