@@ -31,7 +31,6 @@
     "downloadWallet": "Download Wallet",
     "geton": {
       "appstore": "Download on App Store",
-      "playstore": "Download on Play Store",
       "chromestore": "Download on Chrome Web Store"
     }
   },

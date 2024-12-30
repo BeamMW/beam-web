@@ -63,24 +63,6 @@
             </LayoutLink>
             <LayoutLink
               v-if="
-                platformDetails[SupportedPlatforms.ANDROID] &&
-                platformDetails[SupportedPlatforms.ANDROID].links &&
-                platformDetails[SupportedPlatforms.ANDROID].links.store
-              "
-              :to="platformDetails[SupportedPlatforms.ANDROID].links.store"
-              class="select-none hover:opacity-80 transition"
-              :title="$t('hero.geton.playstore')"
-            >
-              <Icon
-                name="download/googleplay"
-                class="h-11 w-[148.09px]"
-                :as-image="true"
-                loading="lazy"
-                :alt="$t('hero.geton.playstore')"
-              />
-            </LayoutLink>
-            <LayoutLink
-              v-if="
                 platformDetails[SupportedPlatforms.CHROME] &&
                 platformDetails[SupportedPlatforms.CHROME].links &&
                 platformDetails[SupportedPlatforms.CHROME].links.store
