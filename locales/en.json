@@ -354,7 +354,6 @@
       "cli": "Command Line Interface",
       "node": "Node",
       "apk": "APK",
-      "playstore": "Play Store",
       "appstore": "App Store"
     },
     "supportedversions": {
