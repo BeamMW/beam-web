@@ -31,7 +31,6 @@
     "downloadWallet": "הורד ארנק",
     "geton": {
       "appstore": "הורד ב-App Store",
-      "playstore": "הורד ב-Google Play",
       "chromestore": "הורד ב-Chrome Web Store"
     }
   },
@@ -355,7 +354,6 @@
       "cli": "ממשק שורת פקודה",
       "node": "צומת",
       "apk": "APK",
-      "playstore": "Play Store",
       "appstore": "App Store"
     },
     "supportedversions": {

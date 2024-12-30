@@ -31,7 +31,6 @@
     "downloadWallet": "ウォレットをダウンロード",
     "geton": {
       "appstore": "App Storeでダウンロード",
-      "playstore": "Google Playでダウンロード",
       "chromestore": "Chromeウェブストアでダウンロード"
     }
   },
@@ -355,7 +354,6 @@
       "cli": "コマンドラインインターフェース",
       "node": "ノード",
       "apk": "APK",
-      "playstore": "Playストア",
       "appstore": "Appストア"
     },
     "supportedversions": {

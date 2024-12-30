@@ -31,7 +31,6 @@
     "downloadWallet": "下载钱包",
     "geton": {
       "appstore": "在App Store下载",
-      "playstore": "在Google Play下载",
       "chromestore": "在Chrome网上应用店下载"
     }
   },

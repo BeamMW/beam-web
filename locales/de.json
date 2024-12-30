@@ -31,7 +31,6 @@
     "downloadWallet": "Wallet herunterladen",
     "geton": {
       "appstore": "Im App Store herunterladen",
-      "playstore": "Bei Google Play herunterladen",
       "chromestore": "Im Chrome Web Store herunterladen"
     }
   },
@@ -355,7 +354,6 @@
       "cli": "Befehlszeilenschnittstelle",
       "node": "Node",
       "apk": "APK",
-      "playstore": "Play Store",
       "appstore": "App Store"
     },
     "supportedversions": {

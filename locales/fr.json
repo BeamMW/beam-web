@@ -31,7 +31,6 @@
     "downloadWallet": "Télécharger le portefeuille",
     "geton": {
       "appstore": "Télécharger sur l'App Store",
-      "playstore": "Télécharger sur Google Play",
       "chromestore": "Télécharger sur le Chrome Web Store"
     }
   },

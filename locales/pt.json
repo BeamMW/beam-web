@@ -31,7 +31,6 @@
     "downloadWallet": "Baixar carteira",
     "geton": {
       "appstore": "Baixar na App Store",
-      "playstore": "Baixar na Play Store",
       "chromestore": "Baixar na Chrome Web Store"
     }
   },

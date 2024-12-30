@@ -31,7 +31,6 @@
     "downloadWallet": "Descargar billetera",
     "geton": {
       "appstore": "Descargar en App Store",
-      "playstore": "Descargar en Play Store",
       "chromestore": "Descargar en Chrome Web Store"
     }
   },
@@ -355,7 +354,6 @@
       "cli": "Interfaz de línea de comandos",
       "node": "Nodo",
       "apk": "APK",
-      "playstore": "Play Store",
       "appstore": "App Store"
     },
     "supportedversions": {

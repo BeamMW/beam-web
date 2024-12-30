@@ -31,7 +31,6 @@
     "downloadWallet": "تنزيل المحفظة",
     "geton": {
       "appstore": "تنزيل على متجر التطبيقات",
-      "playstore": "تنزيل على متجر Play",
       "chromestore": "تنزيل على متجر Chrome الإلكتروني"
     }
   },
@@ -355,7 +354,6 @@
       "cli": "واجهة سطر الأوامر",
       "node": "العقدة",
       "apk": "APK",
-      "playstore": "متجر التطبيقات",
       "appstore": "متجر البرامج"
     },
     "supportedversions": {

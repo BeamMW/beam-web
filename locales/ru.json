@@ -31,7 +31,6 @@
     "downloadWallet": "Скачать кошелек",
     "geton": {
       "appstore": "Скачать в App Store",
-      "playstore": "Скачать в Google Play",
       "chromestore": "Скачать в Chrome Web Store"
     }
   },
@@ -355,7 +354,6 @@
       "cli": "Интерфейс командной строки",
       "node": "Узел",
       "apk": "APK",
-      "playstore": "Play Store",
       "appstore": "App Store"
     },
     "supportedversions": {
