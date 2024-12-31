@@ -217,19 +217,36 @@
         }
       },
       "9": {
-        "title": "Hearty Hadron and Later",
+        "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "Hard Fork 8.0",
-          "2": "EVM and EVM DApps support",
-          "3": "\"5-year anniversary\" wallet update",
-          "4": "Seamless background node sync",
-          "5": "Beam Messenger DApp in Beam Wallet",
-          "6": "Beam Gift Cards",
-          "7": "New extended explorer",
-          "8": "DEX GUI revamp",
-          "9": "Sidechains support",
-          "10": "Investigate DAG Knight integration"
+          "1": "\"5-year anniversary\" wallet update",
+          "2": "Seamless background node sync"
+        }
+      },
+      "10": {
+        "title": "Hearty Hadron",
+        "year": "2025",
+        "items": {
+
+          "1": "Bridge SDK",
+          "2": "Arbitrum bridge",
+          "3": "Ledger App update",
+          "4": "Desktop wallet Qt6 framework update",
+          "5": "Beam Warp (L2) testnet",
+
+          "6": "EVM support (Hard Fork 8.0)",
+          "7": "Beam Warp (L2) mainnet",
+          "8": "DAO transition",
+          "9": "Wallet widgets",
+          
+          "10": "Beam Crowdfunding System",
+          "11": "New DEX UI",
+          "12": "New Explorer",
+
+          "13": "New address system",
+          "14": "Beam Messenger DApp",
+          "15": "Beam Gift Cards DApp"
         }
       }
     }

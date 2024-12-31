@@ -217,19 +217,36 @@
         }
       },
       "9": {
-        "title": "Hearty Hadron ואחריו",
+        "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "Hard Fork 8.0",
-          "2": "תמיכה ב-EVM ו-DApps של EVM",
-          "3": "עדכון ארנק \"חמש שנים\"",
-          "4": "סנכרון חלק של צומת רקע",
-          "5": "Beam Messenger DApp ב-Beam Wallet",
-          "6": "כרטיסי מתנה של Beam",
-          "7": "מגלה מורחב חדש",
-          "8": "רענון GUI של DEX",
-          "9": "תמיכה בצדדים צדדיים",
-          "10": "חקור אינטגרציה של DAG Knight"
+          "1": "\"5-year anniversary\" wallet update",
+          "2": "סנכרון חלק של צומת רקע"
+        }
+      },
+      "10": {
+        "title": "Hearty Hadron",
+        "year": "2025",
+        "items": {
+
+          "1": "Bridge SDK",
+          "2": "Arbitrum bridge",
+          "3": "Ledger App update",
+          "4": "עדכון המסגרת של ארנק שולחני Qt6",
+          "5": "Beam Warp (L2) testnet",
+
+          "6": "EVM support (Hard Fork 8.0)",
+          "7": "Beam Warp (L2) mainnet",
+          "8": "מעבר DAO",
+          "9": "ווידג'טים של ארנק",
+          
+          "10": "מערכת מימון המונים של Beam",
+          "11": "ממשק משתמש חדש של DEX",
+          "12": "סייר חדש",
+
+          "13": "מערכת כתובות חדשה",
+          "14": "Beam Messenger DApp",
+          "15": "כרטיסי מתנה של Beam DApp"
         }
       }
     }

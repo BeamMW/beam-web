@@ -216,20 +216,37 @@
           "7": "高频交易"
         }
       },
-      "9": {
-        "title": "Hearty Hadron 及之后",
+     "9": {
+        "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "Hard Fork 8.0",
-          "2": "EVM 和 EVM DApps 支持",
-          "3": "\"5周年\" 钱包更新",
-          "4": "无缝后台节点同步",
-          "5": "Beam Wallet 中的 Beam Messenger DApp",
-          "6": "Beam 礼品卡",
-          "7": "全新扩展探测器",
-          "8": "DEX 界面重设计",
-          "9": "侧链支持",
-          "10": "研究 DAG Knight 集成"
+          "1": "\"5-year anniversary\" wallet update",
+          "2": "无缝后台节点同步"
+        }
+      },
+      "10": {
+        "title": "Hearty Hadron",
+        "year": "2025",
+        "items": {
+
+          "1": "桥接 SDK",
+          "2": "Arbitrum 桥",
+          "3": "Ledger 应用程序更新",
+          "4": "桌面钱包Qt6框架更新",
+          "5": "Beam Warp (L2) testnet",
+
+          "6": "EVM 支持（硬分叉 8.0）",
+          "7": "Beam Warp (L2) mainnet",
+          "8": "DAO 转型",
+          "9": "钱包小工具",
+          
+          "10": "Beam 众筹系统",
+          "11": "新的 DEX 用户界面",
+          "12": "新探索者",
+
+          "13": "新的地址系统m",
+          "14": "Beam Messenger DApp",
+          "15": "Beam 礼品卡 DApp"
         }
       }
     }
