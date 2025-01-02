@@ -120,10 +120,8 @@
 </template>
 
 <script lang="ts" setup>
-import { SupportedPlatforms } from "@/app.config";
 import { UserInteractionEvents } from "~/utils/emitter";
 
-const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();
 
 const main = ref();
