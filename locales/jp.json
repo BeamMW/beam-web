@@ -31,7 +31,6 @@
     "downloadWallet": "ウォレットをダウンロード",
     "geton": {
       "appstore": "App Storeでダウンロード",
-      "playstore": "Google Playでダウンロード",
       "chromestore": "Chromeウェブストアでダウンロード"
     }
   },
@@ -218,19 +217,36 @@
         }
       },
       "9": {
-        "title": "ハーティ・ハドロンとその後",
+        "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "Hard Fork 8.0",
-          "2": "EVMおよびEVM DAppsのサポート",
-          "3": "\"5周年\"ウォレットの更新",
-          "4": "シームレスなバックグラウンドノードの同期",
-          "5": "Beam Wallet内のBeam Messenger DApp",
-          "6": "Beamギフトカード",
-          "7": "新しい拡張型エクスプローラー",
-          "8": "DEX GUIのリニューアル",
-          "9": "サイドチェーンのサポート",
-          "10": "DAG Knight統合の調査"
+          "1": "\"5-year anniversary\" wallet update",
+          "2": "シームレスなバックグラウンドノード同期"
+        }
+      },
+      "10": {
+        "title": "Hearty Hadron",
+        "year": "2025",
+        "items": {
+
+          "1": "橋 SDK",
+          "2": "Arbitrum 橋",
+          "3": "Ledger アプリのアップデート",
+          "4": "デスクトップウォレット Qt6 フレームワークのアップデート",
+          "5": "Beam Warp (L2) testnet",
+
+          "6": "EVM support (Hard Fork 8.0)",
+          "7": "Beam Warp (L2) mainnet",
+          "8": "DAO移行",
+          "9": "ウォレットウィジェット",
+          
+          "10": "ビームクラウドファンディングシステム",
+          "11": "新しいDEX UI",
+          "12": "新しいエクスプローラー",
+
+          "13": "新しい住所システム",
+          "14": "ビームメッセンジャーDApp",
+          "15": "Beam ギフトカード DApp"
         }
       }
     }
@@ -355,7 +371,6 @@
       "cli": "コマンドラインインターフェース",
       "node": "ノード",
       "apk": "APK",
-      "playstore": "Playストア",
       "appstore": "Appストア"
     },
     "supportedversions": {

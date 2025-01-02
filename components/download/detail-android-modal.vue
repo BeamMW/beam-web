@@ -10,10 +10,6 @@ defineProps({
     type: Number,
     required: true,
   },
-  linkPlayStore: {
-    type: String,
-    required: true,
-  },
   linkApkFile: {
     type: String,
     required: true,
@@ -34,14 +30,6 @@ defineProps({
         {{ version }} ({{
           convertUNIXTimestampToLocaleDate(date, localeProperties.iso)
         }}) &middot;
-        <span class="text-beam-blue font-bold">
-          <DownloadAlternativeLink
-            :link="linkPlayStore"
-            :title="t('downloads.type.playstore')"
-            :disable-arrow="true"
-          />
-        </span>
-        &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
             :link="linkApkFile"

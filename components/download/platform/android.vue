@@ -42,7 +42,6 @@ const {
       <DownloadDetailAndroidModal
         :version="version"
         :date="date"
-        :link-play-store="store"
         :link-apk-file="wallet"
         :checksum-apk="checksumWallet"
       />

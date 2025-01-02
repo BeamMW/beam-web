@@ -2,23 +2,15 @@
   <section :ref="main" class="heroContainer">
     <div class="heroContent">
       <div class="heroGrid">
-        <div
-          class="pt-6 md:pt-8 px-4 mx-auto max-w-screen-xl text-center z-[12] heroText"
-        >
-          <h1
-            class="mb-3 text-4xl tracking-tight !leading-tight md:text-5xl lg:text-6xl capitalize font-bold select-none specialGradient specialGradientBlue"
-          >
+        <div class="pt-6 md:pt-8 px-4 mx-auto max-w-screen-xl text-center z-[12] heroText">
+          <h1 class="mb-3 text-4xl tracking-tight !leading-tight md:text-5xl lg:text-6xl capitalize font-bold select-none specialGradient specialGradientBlue">
             {{ $t("hero.title") }}
           </h1>
-          <h2
-            class="mb-4 md:mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-blue-50"
-          >
+          <h2 class="mb-4 md:mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-blue-50">
             {{ $t("hero.subtitle") }}
           </h2>
 
-          <div
-            class="grid md:grid-cols-2 gap-5 md:gap-6 w-fit lg:w-6/12 mx-auto mb-6"
-          >
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6 w-fit lg:w-6/12 mx-auto mb-6">
             <LayoutButton
               class="whitespace-nowrap"
               accent-color="beam-green"
@@ -41,71 +33,12 @@
               {{ $t("hero.downloadWallet") }}
             </LayoutButton>
           </div>
-
-          <div class="flex flex-row justify-center gap-4">
-            <LayoutLink
-              v-if="
-                platformDetails[SupportedPlatforms.IOS] &&
-                platformDetails[SupportedPlatforms.IOS].links &&
-                platformDetails[SupportedPlatforms.IOS].links.store
-              "
-              :to="platformDetails[SupportedPlatforms.IOS].links.store"
-              class="select-none hover:opacity-80 transition"
-              :title="$t('hero.geton.appstore')"
-            >
-              <Icon
-                name="download/appstore"
-                class="h-11 w-[132px]"
-                :as-image="true"
-                loading="lazy"
-                :alt="$t('hero.geton.appstore')"
-              />
-            </LayoutLink>
-            <LayoutLink
-              v-if="
-                platformDetails[SupportedPlatforms.ANDROID] &&
-                platformDetails[SupportedPlatforms.ANDROID].links &&
-                platformDetails[SupportedPlatforms.ANDROID].links.store
-              "
-              :to="platformDetails[SupportedPlatforms.ANDROID].links.store"
-              class="select-none hover:opacity-80 transition"
-              :title="$t('hero.geton.playstore')"
-            >
-              <Icon
-                name="download/googleplay"
-                class="h-11 w-[148.09px]"
-                :as-image="true"
-                loading="lazy"
-                :alt="$t('hero.geton.playstore')"
-              />
-            </LayoutLink>
-            <LayoutLink
-              v-if="
-                platformDetails[SupportedPlatforms.CHROME] &&
-                platformDetails[SupportedPlatforms.CHROME].links &&
-                platformDetails[SupportedPlatforms.CHROME].links.store
-              "
-              :to="platformDetails[SupportedPlatforms.CHROME].links.store"
-              class="hidden md:block select-none hover:opacity-80 transition"
-              :title="$t('hero.geton.chromestore')"
-            >
-              <Icon
-                name="download/googlechrome"
-                class="h-11 w-[148.26px]"
-                :as-image="true"
-                loading="lazy"
-                :alt="$t('hero.geton.chromestore')"
-              />
-            </LayoutLink>
-          </div>
         </div>
       </div>
     </div>
     <div class="heroGradient"></div>
     <div class="heroImages">
-      <div
-        class="relative hidden lg:block w-[829px] h-[948px] translate-y-[50px] -translate-x-[30px]"
-      >
+      <div class="relative hidden lg:block w-[829px] h-[948px] translate-y-[50px] -translate-x-[30px]">
         <LayoutPicture
           src="/assets/hero/desktop"
           alt="Beam Desktop"
@@ -113,9 +46,7 @@
           :webp="true"
         />
       </div>
-      <div
-        class="relative w-[319px] h-[869px] translate-y-[180px] lg:translate-y-[90px] md:translate-x-[30px]"
-      >
+      <div class="relative w-[319px] h-[869px] translate-y-[180px] lg:translate-y-[90px] md:translate-x-[30px]">
         <LayoutPicture
           src="/assets/hero/mobile"
           alt="Beam iOS"
@@ -189,10 +120,8 @@
 </template>
 
 <script lang="ts" setup>
-import { SupportedPlatforms } from "@/app.config";
 import { UserInteractionEvents } from "~/utils/emitter";
 
-const platformDetails = await usePlatformDetails();
 const localePath = useLocalePath();
 
 const main = ref();

@@ -31,7 +31,6 @@
     "downloadWallet": "Descargar billetera",
     "geton": {
       "appstore": "Descargar en App Store",
-      "playstore": "Descargar en Play Store",
       "chromestore": "Descargar en Chrome Web Store"
     }
   },
@@ -218,19 +217,36 @@
         }
       },
       "9": {
-        "title": "Hearty Hadron y después",
+        "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "Hard Fork 8.0",
-          "2": "Soporte para EVM y DApps de EVM",
-          "3": "Actualización de billetera \"aniversario de 5 años\"",
-          "4": "Sincronización de nodo en segundo plano sin interrupciones",
-          "5": "PoC de Beam Messenger en Beam Wallet",
-          "6": "Tarjetas de Regalo Beam",
-          "7": "Nuevo explorador extendido",
-          "8": "Reestructuración de la interfaz gráfica de DEX",
-          "9": "Soporte para cadenas laterales",
-          "10": "Investigar la integración de DAG Knight"
+          "1": "\"5-year anniversary\" wallet update",
+          "2": "Seamless background node sync"
+        }
+      },
+      "10": {
+        "title": "Hearty Hadron",
+        "year": "2025",
+        "items": {
+
+          "1": "SDK de puente",
+          "2": "Puente de Arbitrum",
+          "3": "Actualización de la aplicación Ledger",
+          "4": "Actualización del marco de trabajo Qt6 de Desktop Wallet",
+          "5": "Beam Warp (L2) testnet",
+
+          "6": "Compatibilidad con EVM (Hard Fork 8.0)",
+          "7": "Beam Warp (L2) mainnet",
+          "8": "Transición DAO",
+          "9": "Widgets de billetera",
+          
+          "10": "Beam Crowdfunding System",
+          "11": "New DEX UI",
+          "12": "New Explorer",
+
+          "13": "New address system",
+          "14": "Beam Messenger DApp",
+          "15": "Beam Gift Cards DApp"
         }
       }
     }
@@ -355,7 +371,6 @@
       "cli": "Interfaz de línea de comandos",
       "node": "Nodo",
       "apk": "APK",
-      "playstore": "Play Store",
       "appstore": "App Store"
     },
     "supportedversions": {

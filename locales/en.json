@@ -16,7 +16,7 @@
     "keywords": "Beam, cryptocurrency, privacy, anonymity, confidential assets, DeFi, NFTs, blockchain, decentralized, DEX, smart contracts, user experience, wallet, secure, financial freedom, AMM, atomic swaps, virtual machine, WASM, contract shaders, app shaders, mobile wallet, desktop wallet, transaction types, private stablecoins, wrapped assets, sidechains, oracles, lending, Uniswap-like, Beam nodes, Beam Virtual Machine, confidentiality, bridged assets, Beam blockchain, seamless trading, interactive wallet, Bitcoin-like transactions, Beam trading, financial privacy"
   },
   "header": {
-    "announcement": "Tuesday, December 5th, 2023: Wrapped BEAM (WBEAM) now available on Ethereum, updated wallet to be released for the 5-year anniversary, upcoming 8.0 hard fork will add EVM compatibility, next halving on January 7th 2024, updated website and more!",
+    "announcement": "Friday, January 3rd, 2025: Beam's 6th birthday, 2025 roadmap released on the 6-year anniversary, upcoming 8.0 hard fork will add EVM compatibility",
     "announcementdev": "**Attention!** This website is exclusively for the dAppnet network, a testnet designed for developers. If you're looking for the real website, please [**click here**](https://beam.mw).",
     "nav": {
       "home": "Home",
@@ -31,7 +31,6 @@
     "downloadWallet": "Download Wallet",
     "geton": {
       "appstore": "Download on App Store",
-      "playstore": "Download on Play Store",
       "chromestore": "Download on Chrome Web Store"
     }
   },
@@ -218,19 +217,36 @@
         }
       },
       "9": {
-        "title": "Hearty Hadron and Later",
+        "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "Hard Fork 8.0",
-          "2": "EVM and EVM DApps support",
-          "3": "\"5-year anniversary\" wallet update",
-          "4": "Seamless background node sync",
-          "5": "Beam Messenger DApp in Beam Wallet",
-          "6": "Beam Gift Cards",
-          "7": "New extended explorer",
-          "8": "DEX GUI revamp",
-          "9": "Sidechains support",
-          "10": "Investigate DAG Knight integration"
+          "1": "\"5-year anniversary\" wallet update",
+          "2": "Seamless background node sync"
+        }
+      },
+      "10": {
+        "title": "Hearty Hadron",
+        "year": "2025",
+        "items": {
+
+          "1": "Bridge SDK",
+          "2": "Arbitrum bridge",
+          "3": "Ledger App update",
+          "4": "Desktop wallet Qt6 framework update",
+          "5": "Beam Warp (L2) testnet",
+
+          "6": "EVM support (Hard Fork 8.0)",
+          "7": "Beam Warp (L2) mainnet",
+          "8": "DAO transition",
+          "9": "Wallet widgets",
+          
+          "10": "Beam Crowdfunding System",
+          "11": "New DEX UI",
+          "12": "New Explorer",
+
+          "13": "New address system",
+          "14": "Beam Messenger DApp",
+          "15": "Beam Gift Cards DApp"
         }
       }
     }
@@ -355,7 +371,6 @@
       "cli": "Command Line Interface",
       "node": "Node",
       "apk": "APK",
-      "playstore": "Play Store",
       "appstore": "App Store"
     },
     "supportedversions": {
@@ -444,7 +459,7 @@
       "bridges": "Bridges",
       "atomicswaps": "Atomic Swaps",
       "cli": "Command Line Interface",
-      "explorer": "Blockchain Explorer"
+      "hww": "Hardware Wallet"
     },
     "explore": "Explore",
     "edit": "Edit this documentation",
