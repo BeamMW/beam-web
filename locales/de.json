@@ -31,7 +31,6 @@
     "downloadWallet": "Wallet herunterladen",
     "geton": {
       "appstore": "Im App Store herunterladen",
-      "playstore": "Bei Google Play herunterladen",
       "chromestore": "Im Chrome Web Store herunterladen"
     }
   },
@@ -213,24 +212,41 @@
           "3": "Wrapped BEAM auf Ethereum",
           "4": "Ethereum Brücke (ETH, USDT, WBTC, DAI)",
           "5": "HW Wallet Unterstützung (Ledger Nano S & Nano S Plus)",
-          "6": "Beam Messenger PoC in Beam Wallet",
+          "6": "Beam Messenger PoC im Beam Wallet",
           "7": "Hochfrequenztransaktionen"
         }
       },
       "9": {
-        "title": "Hearty Hadron und später",
+        "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "Hard Fork 8.0",
-          "2": "EVM- und EVM DApps Unterstützung",
-          "3": "\"5-Jahres-Jubiläum\" Wallet-Update",
-          "4": "Nahtlose Hintergrundknoten-Synchronisation",
-          "5": "Beam Messenger DApp in Beam Wallet",
-          "6": "Beam Geschenkkarten",
-          "7": "Neuer erweiterter Explorer",
-          "8": "DEX GUI Überarbeitung",
-          "9": "Seitenketten Unterstützung",
-          "10": "Untersuchung der DAG Knight Integration"
+          "1": "\"5-year anniversary\" wallet update",
+          "2": "Seamless background node sync"
+        }
+      },
+      "10": {
+        "title": "Hearty Hadron",
+        "year": "2025",
+        "items": {
+
+          "1": "Brücken SDK",
+          "2": "Arbitrum Brücke",
+          "3": "Ledger App Update",
+          "4": "Desktop wallet Qt6 Frameworkupdate",
+          "5": "Beam Warp (L2) Testnet",
+
+          "6": "EVM Unterstützung (Hard Fork 8.0)",
+          "7": "Beam Warp (L2) Mainnet",
+          "8": "DAO transition",
+          "9": "Wallet Widgets",
+          
+          "10": "Beam Crowdfunding System",
+          "11": "Neues DEX UI",
+          "12": "Neuer Explorer",
+
+          "13": "Neues Addresssystem",
+          "14": "Beam Messenger DApp",
+          "15": "Beam Gift Cards DApp"
         }
       }
     }
@@ -355,7 +371,6 @@
       "cli": "Befehlszeilenschnittstelle",
       "node": "Node",
       "apk": "APK",
-      "playstore": "Play Store",
       "appstore": "App Store"
     },
     "supportedversions": {

@@ -140,9 +140,9 @@ export const docTypes = [
     path: "/cli",
   },
   {
-    title: "docs.types.explorer",
-    image: "docs/desktop",
-    path: "/explorer",
+    title: "docs.types.hww",
+    image: "docs/ledger",
+    path: "/hardware-wallet",
   },
 ];
 
@@ -225,11 +225,11 @@ export const exchangesBuy = [
 ];
 
 export const instantExchangesBuy = [
-/*  {
+  /*  {
     title: "Beam4Me",
     image: "instant-exchanges/beam4me",
     link: "https://beam4.me/?from_curr=ETH&from_chain=1&to_curr=BEAM&to_chain=-1",
-  },*/
+  }, */
   {
     title: "Trocador",
     image: "instant-exchanges/trocador",
