@@ -16,7 +16,6 @@ interface PlatformDownloadDetail {
 
 export enum EnvironmentType {
   MAINNET = "mainnet",
-  DAPPNET = "dappnet",
 }
 
 export const getDownloadsFor = async (environment: EnvironmentType) => {
@@ -28,10 +27,6 @@ export const getDownloadsFor = async (environment: EnvironmentType) => {
 
 export const usePlatformDetails: () => Promise<
   Record<SupportedPlatforms, PlatformDownloadDetail>
-> = async () => {
-  const environmentGetter = await useEnvironmentGetter();
-  if (environmentGetter.isDappnet) {
-    return getDownloadsFor(EnvironmentType.DAPPNET);
-  }
+> = () => {
   return getDownloadsFor(EnvironmentType.MAINNET);
 };

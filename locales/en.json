@@ -17,7 +17,6 @@
   },
   "header": {
     "announcement": "Friday, January 3rd, 2025: Beam's 6th birthday, 2025 roadmap released on the 6-year anniversary, upcoming 8.0 hard fork will add EVM compatibility",
-    "announcementdev": "**Attention!** This website is exclusively for the dAppnet network, a testnet designed for developers. If you're looking for the real website, please [**click here**](https://beam.mw).",
     "nav": {
       "home": "Home",
       "downloads": "Downloads",
@@ -508,7 +507,6 @@
     "developers": {
       "title": "Developers",
       "sourceCode": "Source Code",
-      "dAppnetWallet": "DAppnet Wallet",
       "blockchainExplorer": "Blockchain Explorer",
       "support": "Support"
     },

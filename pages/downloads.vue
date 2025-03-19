@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
-const environmentGetter = await useEnvironmentGetter();
-
 const title = computed(() => t("head.title.downloads"));
 const description = computed(() => t("head.descriptions.downloads"));
 
@@ -18,9 +16,8 @@ definePageMeta({
 });
 
 const pageTitle = ref<string>(
-  `${t("downloads.downloadWallet")}${
-    environmentGetter.isDappnet ? ` (Dappnet)` : ""
-  }`,
+  `${t("downloads.downloadWallet")}
+  `,
 );
 
 function downloadStarted() {
