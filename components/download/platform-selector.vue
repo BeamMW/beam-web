@@ -2,44 +2,40 @@
 import { SupportedPlatforms } from "@/app.config";
 
 const { selected } = await useSelectedPlatform();
-const environmentGetter = await useEnvironmentGetter();
 const platformDetails = await usePlatformDetails();
 </script>
 
 <template>
   <section>
-    <template v-if="!environmentGetter.isDappnet">
-      <div class="px-4 sm:px-6 lg:px-8 mx-auto w-fit">
-        <DownloadPlatformAndroid v-if="selected.android" :highlight="true" />
-        <DownloadPlatformIos v-else-if="selected.ios" :highlight="true" />
-        <DownloadPlatformDesktop
-          v-else-if="selected.macos"
-          title="macOS"
-          :platform="SupportedPlatforms.MACOS"
-          :highlight="true"
-        />
-        <DownloadPlatformDesktop
-          v-else-if="selected.windows"
-          title="Windows"
-          :platform="SupportedPlatforms.WINDOWS"
-          :highlight="true"
-        />
-        <DownloadPlatformDesktop
-          v-else-if="selected.linux"
-          title="Linux"
-          :platform="SupportedPlatforms.LINUX"
-          :highlight="true"
-        />
-        <DownloadPlatformChrome v-else-if="selected.chrome" :highlight="true" />
-      </div>
+    <div class="px-4 sm:px-6 lg:px-8 mx-auto w-fit">
+      <DownloadPlatformAndroid v-if="selected.android" :highlight="true" />
+      <DownloadPlatformIos v-else-if="selected.ios" :highlight="true" />
+      <DownloadPlatformDesktop
+        v-else-if="selected.macos"
+        title="macOS"
+        :platform="SupportedPlatforms.MACOS"
+        :highlight="true"
+      />
+      <DownloadPlatformDesktop
+        v-else-if="selected.windows"
+        title="Windows"
+        :platform="SupportedPlatforms.WINDOWS"
+        :highlight="true"
+      />
+      <DownloadPlatformDesktop
+        v-else-if="selected.linux"
+        title="Linux"
+        :platform="SupportedPlatforms.LINUX"
+        :highlight="true"
+      />
+      <DownloadPlatformChrome v-else-if="selected.chrome" :highlight="true" />
+    </div>
 
-      <DownloadDivider />
-    </template>
+    <DownloadDivider />
     <LayoutWrapper :center="true">
       <div
-        :class="`grid grid-cols-2 md:grid-cols-3 ${
-          environmentGetter.isDappnet ? 'lg:grid-cols-3 py-7' : 'lg:grid-cols-5'
-        } gap-12`"
+        :class="`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 
+        gap-12`"
       >
         <DownloadPlatformAndroid
           v-if="

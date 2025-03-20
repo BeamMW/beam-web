@@ -17,7 +17,6 @@
   },
   "header": {
     "announcement": "2023年12月5日（火）: Wrapped BEAM（WBEAM）がEthereumで利用可能になりました、5周年記念の更新ウォレットがリリース予定、次回の8.0ハードフォークではEVM互換性が追加されます、次回の半分は2024年1月7日、ウェブサイトを更新し、その他多数!",
-    "announcementdev": "**注意！** このウェブサイトは、開発者向けに設計されたテストネットである dAppnet ネットワーク専用です。実際のウェブサイトをお探しの場合は、[**ここをクリック**](https://beam.mw)してください。",
     "nav": {
       "home": "ホーム",
       "downloads": "ダウンロード",
@@ -507,7 +506,6 @@
     "developers": {
       "title": "開発者",
       "sourceCode": "ソースコード",
-      "dAppnetWallet": "DAppnetウォレット",
       "blockchainExplorer": "ブロックチェーンエクスプローラー",
       "support": "サポート"
     },

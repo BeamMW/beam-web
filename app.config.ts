@@ -13,7 +13,6 @@ export enum SupportedPlatforms {
 /** CONFIG HERE */
 
 // Must be set via PUBLIC_WEB_URL CLI argument at build time
-export const dappnetUrls = ["https://dappnet.beam.mw"];
 export const productionUrls = ["https://beam.mw", "https://www.beam.mw"];
 
 export const qqGroupId = 909677190;

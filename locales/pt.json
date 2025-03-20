@@ -17,7 +17,6 @@
   },
   "header": {
     "announcement": "Terça-feira, 5 de dezembro de 2023: Wrapped BEAM (WBEAM) agora disponível no Ethereum, carteira atualizada será lançada para o aniversário de 5 anos, próximo hard fork 8.0 adicionará compatibilidade com EVM, próximo halving em 7 de janeiro de 2024, site atualizado e mais!",
-    "announcementdev": "**Atenção!** Este site é exclusivo para a rede dAppnet, uma testnet projetada para desenvolvedores. Se você está procurando o site oficial, clique [**aqui**](https://beam.mw).",
     "nav": {
       "home": "Início",
       "downloads": "Downloads",
@@ -506,7 +505,6 @@
     "developers": {
       "title": "Desenvolvedores",
       "sourceCode": "Código-fonte",
-      "dAppnetWallet": "Carteira DAppnet",
       "blockchainExplorer": "Explorador Blockchain",
       "support": "Suporte"
     },

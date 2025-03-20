@@ -18,7 +18,7 @@
   </section>
 </template>
 <script lang="ts" setup>
-import { ExternalLinks, ExternalLinksTitle, dappnetUrls } from "@/app.config";
+import { ExternalLinks, ExternalLinksTitle } from "@/app.config";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
@@ -102,10 +102,6 @@ const menus = computed(() => [
           {
             text: t("footer.developers.sourceCode"),
             href: ExternalLinks.GITHUB,
-          },
-          {
-            text: t("footer.developers.dAppnetWallet"),
-            href: `${dappnetUrls[0]}${localePath("downloads")}`,
           },
           {
             text: t("footer.developers.support"),

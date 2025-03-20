@@ -2,12 +2,9 @@
 import { useI18n } from "vue-i18n";
 import { Vue3Marquee } from "vue3-marquee";
 
-const environmentGetter = await useEnvironmentGetter();
 const { t } = useI18n();
 
-const announcementMessage = environmentGetter.isDappnet
-  ? computed(() => t("header.announcementdev"))
-  : computed(() => t("header.announcement"));
+const announcementMessage = computed(() => t("header.announcement"));
 
 defineProps({
   gradientColor: {

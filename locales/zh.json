@@ -17,7 +17,6 @@
   },
   "header": {
     "announcement": "2023年12月5日星期二：Wrapped BEAM（WBEAM）现已在以太坊上可用，将发布5周年纪念更新的钱包，即将进行的8.0硬分叉将增加EVM兼容性，下一次减半将在2024年1月7日，更新的网站等更多！",
-    "announcementdev": "**注意！** 本网站仅适用于 dAppnet 网络，这是为开发者设计的测试网络。如果您正在寻找真正的网站，请[**点击此处**](https://beam.mw)。",
     "nav": {
       "home": "首页",
       "downloads": "下载",
@@ -506,7 +505,6 @@
     "developers": {
       "title": "开发者",
       "sourceCode": "源代码",
-      "dAppnetWallet": "DAppnet钱包",
       "blockchainExplorer": "区块链浏览器",
       "support": "支持"
     },
