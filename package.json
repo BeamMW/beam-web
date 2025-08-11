@@ -47,7 +47,7 @@
     "canvas-confetti": "^1.9.2",
     "date-fns": "^3.3.1",
     "fs-extra": "^11.2.0",
-    "glob": "^10.3.10",
+    "glob": "^11.0.0",
     "gsap": "^3.12.4",
     "markdown-it": "^14.0.0",
     "npm-check-updates": "^16.14.12",
