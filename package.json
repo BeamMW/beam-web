@@ -13,7 +13,8 @@
     "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
     "check-updates": "npx npm-check-updates",
-    "apply-updates": "npx npm-check-updates -u && yarn install"
+    "apply-updates": "npx npm-check-updates -u && yarn install",
+    "update-submodules": "git submodule sync && git submodule update --remote --force"
   },
   "devDependencies": {
     "@nuxt/content": "^2.10.0",
