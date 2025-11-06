@@ -156,11 +156,7 @@ export const miningSoftware = [
       {
         name: "Gminer",
         link: "https://github.com/develsoftware/GMinerRelease/releases",
-      },
-      {
-        name: "OpenCL",
-        link: "https://github.com/BeamMW/opencl-miner/releases/tag/opencl-miner_1.0.82",
-      },
+      }
     ],
   },
   {
@@ -175,17 +171,9 @@ export const miningSoftware = [
         link: "https://github.com/develsoftware/GMinerRelease/releases",
       },
       {
-        name: "miniZ",
-        link: "https://miniz.ch/download/",
-      },
-      {
         name: "Bminer",
         link: "https://www.bminer.me/releases/",
-      },
-      {
-        name: "OpenCL",
-        link: "https://github.com/BeamMW/opencl-miner/releases/tag/opencl-miner_1.0.82",
-      },
+      }
     ],
   },
 ];
