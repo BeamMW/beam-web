@@ -215,37 +215,55 @@
           "7": "高频交易"
         }
       },
-     "9": {
+      "9": {
         "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "\"5-year anniversary\" wallet update",
+          "1": "「五周年」钱包更新",
           "2": "无缝后台节点同步"
         }
       },
       "10": {
-        "title": "Hearty Hadron",
+        "title": "Groovy Gluon Devnet",
         "year": "2025",
         "items": {
-
-          "1": "桥接 SDK",
-          "2": "Arbitrum 桥",
-          "3": "Ledger 应用程序更新",
-          "4": "桌面钱包Qt6框架更新",
-          "5": "Beam Warp (L2) testnet",
-
-          "6": "EVM 支持（硬分叉 8.0）",
-          "7": "Beam Warp (L2) mainnet",
-          "8": "DAO 转型",
-          "9": "钱包小工具",
-          
-          "10": "Beam 众筹系统",
-          "11": "新的 DEX 用户界面",
-          "12": "新探索者",
-
-          "13": "新的地址系统m",
-          "14": "Beam Messenger DApp",
-          "15": "Beam 礼品卡 DApp"
+          "1": "Beam Warp 开发网 1",
+          "2": "BeamPay Telegram 钱包（第三方）",
+          "3": "Beam 流动性头寸 dApp（第三方）",
+          "4": "Beam 区块浏览器 dApp（第三方）",
+          "5": "网站版权从 Beam Foundation 转让给 BeamX DAO",
+          "6": "Ledger 应用更新"
+        }
+      },
+      "11": {
+        "title": "Hearty Hadron",
+        "year": "2026",
+        "items": {
+          "1": "Beam Warp 开发网 3",
+          "2": "向 BeamX DAO 治理过渡",
+          "3": "Arbitrum 桥",
+          "4": "Web Wallet SDK",
+          "5": "新版 Web 钱包",
+          "6": "新版浏览器",
+          "7": "桌面钱包 Qt6 框架更新",
+          "8": "桌面钱包小部件",
+          "9": "Ledger 应用更新",
+          "10": "Beam Warp 桥 dApp",
+          "11": "Beam Warp 管理 dApp",
+          "12": "Beam Warp 测试网",
+          "13": "Beam Warp 主网"
+        }
+      },
+      "12": {
+        "title": "Icy Ion",
+        "year": "2027",
+        "items": {
+          "1": "EVM 支持（硬分叉 8.0）",
+          "2": "新地址系统",
+          "3": "Beam 众筹系统",
+          "4": "Beam Messenger DApp",
+          "5": "Beam Gift DApp",
+          "6": "新版 DEX 界面"
         }
       }
     }

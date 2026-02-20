@@ -219,33 +219,51 @@
         "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "\"5-year anniversary\" wallet update",
+          "1": "「5周年」ウォレットアップデート",
           "2": "シームレスなバックグラウンドノード同期"
         }
       },
       "10": {
-        "title": "Hearty Hadron",
+        "title": "Groovy Gluon Devnet",
         "year": "2025",
         "items": {
-
-          "1": "橋 SDK",
-          "2": "Arbitrum 橋",
-          "3": "Ledger アプリのアップデート",
-          "4": "デスクトップウォレット Qt6 フレームワークのアップデート",
-          "5": "Beam Warp (L2) testnet",
-
-          "6": "EVM support (Hard Fork 8.0)",
-          "7": "Beam Warp (L2) mainnet",
-          "8": "DAO移行",
-          "9": "ウォレットウィジェット",
-          
-          "10": "ビームクラウドファンディングシステム",
-          "11": "新しいDEX UI",
-          "12": "新しいエクスプローラー",
-
-          "13": "新しい住所システム",
-          "14": "ビームメッセンジャーDApp",
-          "15": "Beam ギフトカード DApp"
+          "1": "Beam Warp デブネット 1",
+          "2": "BeamPay Telegramウォレット（サードパーティ）",
+          "3": "Beam 流動性ポジション dApp（サードパーティ）",
+          "4": "Beam ブロックエクスプローラー dApp（サードパーティ）",
+          "5": "ウェブサイトの著作権をBeam FoundationからBeamX DAOに譲渡",
+          "6": "Ledgerアプリのアップデート"
+        }
+      },
+      "11": {
+        "title": "Hearty Hadron",
+        "year": "2026",
+        "items": {
+          "1": "Beam Warp デブネット 3",
+          "2": "BeamX DAOガバナンスへの移行",
+          "3": "Arbitrumブリッジ",
+          "4": "Web Wallet SDK",
+          "5": "新Webウォレット",
+          "6": "新エクスプローラー",
+          "7": "デスクトップウォレット Qt6 フレームワークのアップデート",
+          "8": "デスクトップウォレットウィジェット",
+          "9": "Ledgerアプリのアップデート",
+          "10": "Beam Warp ブリッジ dApp",
+          "11": "Beam Warp 管理 dApp",
+          "12": "Beam Warp テストネット",
+          "13": "Beam Warp メインネット"
+        }
+      },
+      "12": {
+        "title": "Icy Ion",
+        "year": "2027",
+        "items": {
+          "1": "EVMサポート（ハードフォーク 8.0）",
+          "2": "新アドレスシステム",
+          "3": "Beamクラウドファンディングシステム",
+          "4": "Beam Messenger DApp",
+          "5": "Beam Gift DApp",
+          "6": "新DEX UI"
         }
       }
     }

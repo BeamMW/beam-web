@@ -219,33 +219,51 @@
         "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "\"5-year anniversary\" wallet update",
-          "2": "Seamless background node sync"
+          "1": "Wallet-Update zum \"5-jährigen Jubiläum\"",
+          "2": "Nahtlose Hintergrund-Node-Synchronisation"
         }
       },
       "10": {
-        "title": "Hearty Hadron",
+        "title": "Groovy Gluon Devnet",
         "year": "2025",
         "items": {
-
-          "1": "Brücken SDK",
-          "2": "Arbitrum Brücke",
-          "3": "Ledger App Update",
-          "4": "Desktop wallet Qt6 Frameworkupdate",
-          "5": "Beam Warp (L2) Testnet",
-
-          "6": "EVM Unterstützung (Hard Fork 8.0)",
-          "7": "Beam Warp (L2) Mainnet",
-          "8": "DAO transition",
-          "9": "Wallet Widgets",
-          
-          "10": "Beam Crowdfunding System",
-          "11": "Neues DEX UI",
-          "12": "Neuer Explorer",
-
-          "13": "Neues Addresssystem",
-          "14": "Beam Messenger DApp",
-          "15": "Beam Gift Cards DApp"
+          "1": "Beam Warp Devnet 1",
+          "2": "BeamPay Telegram-Wallet (Drittanbieter)",
+          "3": "Beam Liquidity Positions dApp (Drittanbieter)",
+          "4": "Beam Block Explorer dApp (Drittanbieter)",
+          "5": "Urheberrecht der Website von Beam Foundation an BeamX DAO übertragen",
+          "6": "Ledger-App-Updates"
+        }
+      },
+      "11": {
+        "title": "Hearty Hadron",
+        "year": "2026",
+        "items": {
+          "1": "Beam Warp Devnet 3",
+          "2": "Übergang zur BeamX DAO Governance",
+          "3": "Arbitrum-Brücke",
+          "4": "Web Wallet SDK",
+          "5": "Neues Web Wallet",
+          "6": "Neuer Explorer",
+          "7": "Desktop-Wallet Qt6-Framework-Update",
+          "8": "Desktop-Wallet-Widgets",
+          "9": "Ledger-App-Update",
+          "10": "Beam Warp Bridge DApp",
+          "11": "Beam Warp Management DApp",
+          "12": "Beam Warp Testnet",
+          "13": "Beam Warp Mainnet"
+        }
+      },
+      "12": {
+        "title": "Icy Ion",
+        "year": "2027",
+        "items": {
+          "1": "EVM-Unterstützung (Hard Fork 8.0)",
+          "2": "Neues Adresssystem",
+          "3": "Beam-Crowdfunding-System",
+          "4": "Beam Messenger DApp",
+          "5": "Beam Gift DApp",
+          "6": "Neue DEX-Oberfläche"
         }
       }
     }

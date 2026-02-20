@@ -219,33 +219,51 @@
         "title": "Groovy Gluon Sync",
         "year": "2024",
         "items": {
-          "1": "\"5-year anniversary\" wallet update",
+          "1": "עדכון ארנק ל\"יום השנה החמישי\"",
           "2": "סנכרון חלק של צומת רקע"
         }
       },
       "10": {
-        "title": "Hearty Hadron",
+        "title": "Groovy Gluon Devnet",
         "year": "2025",
         "items": {
-
-          "1": "Bridge SDK",
-          "2": "Arbitrum bridge",
-          "3": "Ledger App update",
-          "4": "עדכון המסגרת של ארנק שולחני Qt6",
-          "5": "Beam Warp (L2) testnet",
-
-          "6": "EVM support (Hard Fork 8.0)",
-          "7": "Beam Warp (L2) mainnet",
-          "8": "מעבר DAO",
-          "9": "ווידג'טים של ארנק",
-          
-          "10": "מערכת מימון המונים של Beam",
-          "11": "ממשק משתמש חדש של DEX",
-          "12": "סייר חדש",
-
-          "13": "מערכת כתובות חדשה",
-          "14": "Beam Messenger DApp",
-          "15": "כרטיסי מתנה של Beam DApp"
+          "1": "Beam Warp רשת פיתוח 1",
+          "2": "ארנק BeamPay בטלגרם (צד שלישי)",
+          "3": "dApp עמדות נזילות Beam (צד שלישי)",
+          "4": "dApp סייר בלוקים Beam (צד שלישי)",
+          "5": "זכויות יוצרים של האתר הועברו מ-Beam Foundation ל-BeamX DAO",
+          "6": "עדכוני אפליקציית Ledger"
+        }
+      },
+      "11": {
+        "title": "Hearty Hadron",
+        "year": "2026",
+        "items": {
+          "1": "Beam Warp רשת פיתוח 3",
+          "2": "מעבר לממשל BeamX DAO",
+          "3": "גשר Arbitrum",
+          "4": "Web Wallet SDK",
+          "5": "ארנק אינטרנט חדש",
+          "6": "סייר חדש",
+          "7": "עדכון מסגרת Qt6 של ארנק שולחני",
+          "8": "ווידג'טים של ארנק שולחני",
+          "9": "עדכון אפליקציית Ledger",
+          "10": "dApp גשר Beam Warp",
+          "11": "dApp ניהול Beam Warp",
+          "12": "Beam Warp רשת בדיקה",
+          "13": "Beam Warp רשת ראשית"
+        }
+      },
+      "12": {
+        "title": "Icy Ion",
+        "year": "2027",
+        "items": {
+          "1": "תמיכה ב-EVM (הארד פורק 8.0)",
+          "2": "מערכת כתובות חדשה",
+          "3": "מערכת מימון המונים של Beam",
+          "4": "Beam Messenger DApp",
+          "5": "Beam Gift DApp",
+          "6": "ממשק DEX חדש"
         }
       }
     }
