@@ -224,28 +224,46 @@
         }
       },
       "10": {
-        "title": "Hearty Hadron",
+        "title": "Groovy Gluon Devnet",
         "year": "2025",
         "items": {
-
-          "1": "Bridge SDK",
-          "2": "Arbitrum bridge",
-          "3": "Ledger App update",
-          "4": "Desktop wallet Qt6 framework update",
-          "5": "Beam Warp (L2) testnet",
-
-          "6": "EVM support (Hard Fork 8.0)",
-          "7": "Beam Warp (L2) mainnet",
-          "8": "DAO transition",
-          "9": "Wallet widgets",
-          
-          "10": "Beam Crowdfunding System",
-          "11": "New DEX UI",
-          "12": "New Explorer",
-
-          "13": "New address system",
-          "14": "Beam Messenger DApp",
-          "15": "Beam Gift Cards DApp"
+          "1": "Beam Warp devnet 1",
+          "2": "BeamPay Telegram wallet (third party)",
+          "3": "Beam Liquidity Positions dApp (third party)",
+          "4": "Beam Block Explorer dApp (third party)",
+          "5": "Website copyright transfered from Beam Foundation to BeamX DAO",
+          "6": "Ledger app updates"
+        }
+      },
+      "11": {
+        "title": "Hearty Hadron",
+        "year": "2026",
+        "items": {
+          "1": "Beam Warp devnet 3",
+          "2": "Transition to BeamX DAO governance",
+          "3": "Arbitrum Bridge",
+          "4": "Web Wallet SDK",
+          "5": "New Web Wallet",
+          "6": "New Explorer",
+          "7": "Desktop wallet Qt6 framework update",
+          "8": "Desktop wallet widgets",  
+          "9": "Ledger app update",
+          "10": "Beam Warp bridge dapp",
+          "11": "Beam Warp Management dapp",
+          "12": "Beam Warp testnet",
+          "13": "Beam Warp mainnet"
+        }
+      },
+      "12": {
+        "title": "Icy Ion",
+        "year": "2027",
+        "items": {
+          "1": "EVM support (Hard Fork 8.0)",
+          "2": "New address system",
+          "3": "Beam Crowdfunding System",
+          "4": "Beam Messenger DApp",
+          "5": "Beam Gift DApp",
+          "6": "New DEX UI"
         }
       }
     }

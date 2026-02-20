@@ -305,7 +305,7 @@ const roadmap: Roadmap = [
   {
     name: t("roadmap.milestones.8.title"),
     year: t("roadmap.milestones.8.year"),
-    color: "#bc1b9f",
+    color: "#b02fb0",
     image: "gluon",
     types: [
       {
@@ -341,7 +341,7 @@ const roadmap: Roadmap = [
   {
     name: t("roadmap.milestones.9.title"),
     year: t("roadmap.milestones.9.year"),
-    color: "#bc1b9f",
+    color: "#f86cff",
     image: "gluon",
     types: [
       {
@@ -357,69 +357,113 @@ const roadmap: Roadmap = [
   {
     name: t("roadmap.milestones.10.title"),
     year: t("roadmap.milestones.10.year"),
+    color: "#bc1b9f",
+    image: "gluon",
+    types: [
+      {
+        description: t("roadmap.milestones.10.items.1"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
+        description: t("roadmap.milestones.10.items.2"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
+        description: t("roadmap.milestones.10.items.3"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
+        description: t("roadmap.milestones.10.items.4"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
+        description: t("roadmap.milestones.10.items.5"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
+        description: t("roadmap.milestones.10.items.6"),
+        state: PROGRESS.COMPLETED,
+      }
+    ],
+  },
+  {
+    name: t("roadmap.milestones.11.title"),
+    year: t("roadmap.milestones.11.year"),
     color: "#c8502d",
     image: "hadron",
     types: [
       {
-        description: t("roadmap.milestones.10.items.1"),
+        description: t("roadmap.milestones.11.items.1"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
+        description: t("roadmap.milestones.11.items.2"),
         state: PROGRESS.BUILDING,
       },
       {
-        description: t("roadmap.milestones.10.items.2"),
+        description: t("roadmap.milestones.11.items.3"),
         state: PROGRESS.BUILDING,
       },
       {
-        description: t("roadmap.milestones.10.items.3"),
+        description: t("roadmap.milestones.11.items.4"),
         state: PROGRESS.BUILDING,
       },
       {
-        description: t("roadmap.milestones.10.items.4"),
+        description: t("roadmap.milestones.11.items.5"),
         state: PROGRESS.BUILDING,
       },
       {
-        description: t("roadmap.milestones.10.items.5"),
+        description: t("roadmap.milestones.11.items.6"),
         state: PROGRESS.BUILDING,
       },
       {
-        description: t("roadmap.milestones.10.items.6"),
+        description: t("roadmap.milestones.11.items.7"),
         state: PROGRESS.BUILDING,
       },
       {
-        description: t("roadmap.milestones.10.items.7"),
+        description: t("roadmap.milestones.11.items.8"),
+        state: PROGRESS.BUILDING,
+      },
+      {
+        description: t("roadmap.milestones.11.items.9"),
+        state: PROGRESS.BUILDING,
+      },
+      {
+        description: t("roadmap.milestones.11.items.10"),
+        state: PROGRESS.PLANNED,
+      },
+    ],
+  },
+  {
+    name: t("roadmap.milestones.12.title"),
+    year: t("roadmap.milestones.12.year"),
+    color: "#c8502d",
+    image: "hadron",
+    types: [
+      {
+        description: t("roadmap.milestones.12.items.1"),
+        state: PROGRESS.BUILDING,
+      },
+      {
+        description: t("roadmap.milestones.12.items.2"),
         state: PROGRESS.PLANNED,
       },
       {
-        description: t("roadmap.milestones.10.items.8"),
-        state: PROGRESS.BUILDING,
-      },
-      {
-        description: t("roadmap.milestones.10.items.9"),
-        state: PROGRESS.BUILDING,
-      },
-      {
-        description: t("roadmap.milestones.10.items.10"),
-        state: PROGRESS.BUILDING,
-      },
-      {
-        description: t("roadmap.milestones.10.items.11"),
+        description: t("roadmap.milestones.12.items.3"),
         state: PROGRESS.PLANNED,
       },
       {
-        description: t("roadmap.milestones.10.items.12"),
-        state: PROGRESS.BUILDING,
-      },
-      {
-        description: t("roadmap.milestones.10.items.13"),
+        description: t("roadmap.milestones.12.items.4"),
         state: PROGRESS.PLANNED,
       },
       {
-        description: t("roadmap.milestones.10.items.14"),
+        description: t("roadmap.milestones.12.items.5"),
         state: PROGRESS.PLANNED,
       },
       {
-        description: t("roadmap.milestones.10.items.15"),
+        description: t("roadmap.milestones.12.items.6"),
         state: PROGRESS.PLANNED,
-      },
+      }
     ],
   },
 ];
