@@ -449,8 +449,8 @@ const roadmap: Roadmap = [
   {
     name: t("roadmap.milestones.12.title"),
     year: t("roadmap.milestones.12.year"),
-    color: "#c8502d",
-    image: "hadron",
+    color: "#00a1ff",
+    image: "icy_ion",
     types: [
       {
         description: t("roadmap.milestones.12.items.1"),
