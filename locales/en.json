@@ -4,14 +4,16 @@
       "main": "BEAM: Confidential DeFi & Crypto",
       "index": "Home",
       "downloads": "Downloads",
-      "documentation": "Documentation"
+      "documentation": "Documentation",
+      "blog": "Blog"
     },
     "descriptions": {
       "index": "Beam offers privacy, confidential assets, DeFi, NFTs, DEX, and a seamless user experience in a secure, decentralized environment.",
       "downloads": "Download the Beam wallet for various devices, acquire BEAM, explore private DeFi transactions, and access FAQs and resources.",
       "mining": "Explore Beam mining, learn about the Beam Hash III algorithm, and find resources for mining software, rewards calculator, and support.",
       "privacy": "Review Beam Wallet's privacy policy regarding data collection, usage, security, third-party services, and GDPR compliance. Contact info provided.",
-      "docs": "Explore our comprehensive documentation on wallets, mining, atomic swaps, and more – currently available in English. Stay tuned for updates and expanded language support."
+      "docs": "Explore our comprehensive documentation on wallets, mining, atomic swaps, and more – currently available in English. Stay tuned for updates and expanded language support.",
+      "blog": "Explore our blog for the latest news and technical insights and tutorials about Beam and its ecosystem."
     },
     "keywords": "Beam, cryptocurrency, privacy, anonymity, confidential assets, DeFi, NFTs, blockchain, decentralized, DEX, smart contracts, user experience, wallet, secure, financial freedom, AMM, atomic swaps, virtual machine, WASM, contract shaders, app shaders, mobile wallet, desktop wallet, transaction types, private stablecoins, wrapped assets, sidechains, oracles, lending, Uniswap-like, Beam nodes, Beam Virtual Machine, confidentiality, bridged assets, Beam blockchain, seamless trading, interactive wallet, Bitcoin-like transactions, Beam trading, financial privacy"
   },
@@ -20,7 +22,8 @@
     "nav": {
       "home": "Home",
       "downloads": "Downloads",
-      "resources": "Resources"
+      "resources": "Resources",
+      "blog": "Blog"
     },
     "selectlanguage": "Select a language"
   },
@@ -246,7 +249,7 @@
           "5": "New Web Wallet",
           "6": "New Explorer",
           "7": "Desktop wallet Qt6 framework update",
-          "8": "Desktop wallet widgets",  
+          "8": "Desktop wallet widgets",
           "9": "Ledger app update",
           "10": "Beam Warp bridge dapp",
           "11": "Beam Warp Management dapp",
@@ -476,7 +479,11 @@
       "bridges": "Bridges",
       "atomicswaps": "Atomic Swaps",
       "cli": "Command Line Interface",
-      "hww": "Hardware Wallet"
+      "hww": "Hardware Wallet",
+      "beampedia": "Beampedia",
+      "changelog": "Changelog",
+      "warp": "Warp",
+      "research": "Research"
     },
     "explore": "Explore",
     "edit": "Edit this documentation",
@@ -535,6 +542,34 @@
     },
     "contact": "Contact us",
     "mediakit": "Media Kit (Zip)",
-    "copyright": "© 2025 BeamX DAO. All Rights Reserved."
+    "copyright": "© 2026 BeamX DAO. All Rights Reserved."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Stay up to date with the latest news, updates, and insights from the Beam ecosystem.",
+    "back_to_blog": "Back to overview",
+    "backToBlog": "Back to blog",
+    "readMore": "Read more",
+    "noPosts": "No blog posts found.",
+    "tableOfContents": "Table of Contents",
+    "categories": "Categories",
+    "tags": "Tags",
+    "summary": "Summary",
+    "content": "Content",
+    "pagecontent": "Page contents",
+    "types": {
+      "news": "News",
+      "tutorials": "Tutorials",
+      "technical": "Technical"
+    },
+    "loading": "Loading...",
+    "no_posts": "No posts found",
+    "read_more": "Read more",
+    "search": {
+      "placeholder": "Search posts…",
+      "allCategories": "All categories"
+    },
+    "copyLink": "Copy link",
+    "copied": "Copied!"
   }
 }
