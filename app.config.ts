@@ -206,6 +206,11 @@ export const exchangesBuy = [
     image: "exchanges/nonkyc",
     link: "https://nonkyc.io/market/BEAM_USDT",
   },
+  {
+    title: "Nonlogs",
+    image: "exchanges/nonlogs",
+    link: "https://nonlogs.io/trade/BEAM-USDT",
+  },
 ];
 
 export const instantExchangesBuy = [

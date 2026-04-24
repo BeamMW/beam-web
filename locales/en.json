@@ -479,7 +479,11 @@
       "bridges": "Bridges",
       "atomicswaps": "Atomic Swaps",
       "cli": "Command Line Interface",
-      "hww": "Hardware Wallet"
+      "hww": "Hardware Wallet",
+      "beampedia": "Beampedia",
+      "changelog": "Changelog",
+      "warp": "Warp",
+      "research": "Research"
     },
     "explore": "Explore",
     "edit": "Edit this documentation",
@@ -538,7 +542,7 @@
     },
     "contact": "Contact us",
     "mediakit": "Media Kit (Zip)",
-    "copyright": "© 2025 BeamX DAO. All Rights Reserved."
+    "copyright": "© 2026 BeamX DAO. All Rights Reserved."
   },
   "blog": {
     "subtitle": "News, updates, tutorials, and community stories from the Beam ecosystem.",
