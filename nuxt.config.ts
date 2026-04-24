@@ -76,13 +76,21 @@ const publicWebUrl = process.env.PUBLIC_WEB_URL || "https://beam.mw";
 
 // https://github.com/nuxt/content/issues/1551#issuecomment-1470246543
 // Added README to index replacement (as understood by the slug)
-const docsRoutes = globSync("./content/**/*.md").map((path) =>
-  path
-    .slice(7, -3)
-    .replace(/^\d+\./, "")
-    .replace(/\\/g, "/")
-    .replace("/README", "/index"),
-);
+const contentRoutes = globSync("./content/**/*.md")
+  .map((path) => {
+    if (path.startsWith("./content/docs/")) {
+      return path
+        .slice(7, -3)
+        .replace(/^\d+\./, "")
+        .replace(/\\/g, "/")
+        .replace("/README", "/index");
+    }
+    if (path.startsWith("./content/blog/")) {
+      return path.slice(7, -3).replace(/\\/g, "/");
+    }
+    return null;
+  })
+  .filter(Boolean) as string[];
 
 const copyDocsAssetsToPublic = async () => {
   const docsPath = join(process.cwd(), "content", "docs");
@@ -153,8 +161,7 @@ export default defineNuxtConfig({
     sri: true,
     headers: {
       contentSecurityPolicy: {
-        "connect-src":
-          "'self' https://api.coingecko.com https://dex.beam.mw https://builds.beam.mw",
+        "connect-src": `'self' https://api.coingecko.com https://dex.beam.mw https://builds.beam.mw${process.env.NODE_ENV === "development" ? " ws://localhost:4000" : ""}`,
         "script-src": [
           "'nonce-{{nonce}}'", // Nonce placeholders in the SSR case will allow inline scripts generated on the server
           // "'strict-dynamic'", // Use strict dynamic as outlined here: https://nuxt-security.vercel.app/documentation/advanced/strict-csp#strict-dynamic-csp-level-3
@@ -173,7 +180,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: [...docsRoutes],
+      routes: [...contentRoutes],
       crawlLinks: true,
       failOnError: false,
     },
@@ -191,6 +198,19 @@ export default defineNuxtConfig({
   },
   content: {
     documentDriven: false,
+    markdown: {
+      remarkPlugins: ["remark-gfm"],
+      rehypePlugins: [],
+    },
+    highlight: { theme: "github-dark" },
+    navigation: { fields: ["navTitle"] },
+    sources: {
+      docs: {
+        prefix: "/docs",
+        driver: "fs",
+        base: join(__dirname, "content/docs"),
+      },
+    },
   },
   site: {
     siteUrl: publicWebUrl,

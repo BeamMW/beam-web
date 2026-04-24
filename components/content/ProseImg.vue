@@ -15,10 +15,11 @@ import { useRuntimeConfig, computed } from "#imports";
 
 const route = useRoute();
 
+const gitbookRegex = /(?:\.\.\/|)\.gitbook\/assets\//g;
+
 function removeGitbook(path: string): string {
-  const regex = /(?:\.\.\/|)\.gitbook\/assets\//g;
   const replaceString = `/assets/docs/${route.params.slug[0]}/`;
-  return path.replace(regex, replaceString);
+  return path.replace(gitbookRegex, replaceString);
 }
 
 const props = defineProps({
@@ -40,12 +41,15 @@ const props = defineProps({
   },
 });
 const refinedSrc = computed(() => {
-  if (linkType(props.src) === LinkTypes.INTERNAL) {
-    return withBase(
-      removeGitbook(props.src),
-      useRuntimeConfig().public.baseURL,
-    );
+  if (linkType(props.src) !== LinkTypes.INTERNAL) {
+    return props.src;
   }
-  return removeGitbook(props.src);
+  // Only gitbook-style paths need the baseURL prefix; already-absolute paths
+  // (e.g. /images/...) are served directly from public/ and would otherwise
+  // break in dev by pointing at the production domain.
+  if (props.src.includes(".gitbook/assets/")) {
+    return withBase(removeGitbook(props.src), useRuntimeConfig().public.baseURL);
+  }
+  return props.src;
 });
 </script>
