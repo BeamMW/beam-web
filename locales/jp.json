@@ -251,7 +251,8 @@
           "10": "Beam Warp ブリッジ dApp",
           "11": "Beam Warp 管理 dApp",
           "12": "Beam Warp テストネット",
-          "13": "Beam Warp メインネット"
+          "13": "Beam Warp メインネット",
+          "14": "新DEX UI"
         }
       },
       "12": {
@@ -262,8 +263,7 @@
           "2": "新アドレスシステム",
           "3": "Beamクラウドファンディングシステム",
           "4": "Beam Messenger DApp",
-          "5": "Beam Gift DApp",
-          "6": "新DEX UI"
+          "5": "Beam Gift DApp"
         }
       }
     }

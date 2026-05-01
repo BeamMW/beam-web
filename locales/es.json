@@ -251,7 +251,8 @@
           "10": "dApp de puente Beam Warp",
           "11": "dApp de gestión Beam Warp",
           "12": "Beam Warp testnet",
-          "13": "Beam Warp mainnet"
+          "13": "Beam Warp mainnet",
+          "14": "Nueva interfaz de DEX"
         }
       },
       "12": {
@@ -262,8 +263,7 @@
           "2": "Nuevo sistema de direcciones",
           "3": "Sistema de financiación colectiva Beam",
           "4": "Beam Messenger DApp",
-          "5": "Beam Gift DApp",
-          "6": "Nueva interfaz de DEX"
+          "5": "Beam Gift DApp"
         }
       }
     }
