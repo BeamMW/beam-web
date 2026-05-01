@@ -88,6 +88,14 @@ const headerBoxBase =
                 >{{ $t("head.title.documentation") }}</HeaderNavigationItem
               >
             </li>
+            <li class="hidden md:block">
+              <HeaderNavigationItem
+                name="blog|blog/.*"
+                :to="localePath('blog')"
+                :prefetch="true"
+                >{{ $t("header.nav.blog") }}</HeaderNavigationItem
+              >
+            </li>
             <li>
               <LayoutDropdown>
                 <template #dropdown-button>

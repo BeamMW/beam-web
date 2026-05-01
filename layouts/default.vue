@@ -141,6 +141,8 @@ function getTheme(routeName: RouteRecordName): ThemeSettings {
       break;
     case "docs":
     case "docs-slug":
+    case "blog":
+    case "blog-slug":
       header = HEADER_COLORS.PURPLE;
       footer = FOOTER_COLORS.PURPLE;
       body = BACKGROUND_COLORS.PURPLE;
