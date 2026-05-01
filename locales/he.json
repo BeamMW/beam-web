@@ -251,7 +251,8 @@
           "10": "dApp גשר Beam Warp",
           "11": "dApp ניהול Beam Warp",
           "12": "Beam Warp רשת בדיקה",
-          "13": "Beam Warp רשת ראשית"
+          "13": "Beam Warp רשת ראשית",
+          "14": "ממשק DEX חדש"
         }
       },
       "12": {
@@ -262,8 +263,7 @@
           "2": "מערכת כתובות חדשה",
           "3": "מערכת מימון המונים של Beam",
           "4": "Beam Messenger DApp",
-          "5": "Beam Gift DApp",
-          "6": "ממשק DEX חדש"
+          "5": "Beam Gift DApp"
         }
       }
     }

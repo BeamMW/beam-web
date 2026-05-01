@@ -156,7 +156,7 @@ export const miningSoftware = [
       {
         name: "Gminer",
         link: "https://github.com/develsoftware/GMinerRelease/releases",
-      }
+      },
     ],
   },
   {
@@ -173,7 +173,7 @@ export const miningSoftware = [
       {
         name: "Bminer",
         link: "https://www.bminer.me/releases/",
-      }
+      },
     ],
   },
 ];

@@ -254,7 +254,8 @@
           "10": "Beam Warp bridge dapp",
           "11": "Beam Warp Management dapp",
           "12": "Beam Warp testnet",
-          "13": "Beam Warp mainnet"
+          "13": "Beam Warp mainnet",
+          "14": "New DEX UI"
         }
       },
       "12": {
@@ -265,8 +266,7 @@
           "2": "New address system",
           "3": "Beam Crowdfunding System",
           "4": "Beam Messenger DApp",
-          "5": "Beam Gift DApp",
-          "6": "New DEX UI"
+          "5": "Beam Gift DApp"
         }
       }
     }
