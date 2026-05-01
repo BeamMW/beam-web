@@ -69,7 +69,7 @@ const menus = computed(() => [
           }),
       },
       { text: ExternalLinksTitle.YOUTUBE, href: ExternalLinks.YOUTUBE },
-      { text: t("footer.join.beamBlog"), href: ExternalLinks.MEDIUM },
+      { text: t("footer.join.beamBlog"), href: localePath("blog") },
       { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
       { text: "Beampedia", href: `${localePath("docs")}/beampedia` },
     ],

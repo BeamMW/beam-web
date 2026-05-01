@@ -13,12 +13,12 @@
       "mining": "Explore Beam mining, learn about the Beam Hash III algorithm, and find resources for mining software, rewards calculator, and support.",
       "privacy": "Review Beam Wallet's privacy policy regarding data collection, usage, security, third-party services, and GDPR compliance. Contact info provided.",
       "docs": "Explore our comprehensive documentation on wallets, mining, atomic swaps, and more – currently available in English. Stay tuned for updates and expanded language support.",
-      "blog": "Explore our blog for the latest news and technical insights and tutorials about Beam and its ecosystem."
+      "blog": "News, updates, tutorials, and community stories from the Beam ecosystem."
     },
     "keywords": "Beam, cryptocurrency, privacy, anonymity, confidential assets, DeFi, NFTs, blockchain, decentralized, DEX, smart contracts, user experience, wallet, secure, financial freedom, AMM, atomic swaps, virtual machine, WASM, contract shaders, app shaders, mobile wallet, desktop wallet, transaction types, private stablecoins, wrapped assets, sidechains, oracles, lending, Uniswap-like, Beam nodes, Beam Virtual Machine, confidentiality, bridged assets, Beam blockchain, seamless trading, interactive wallet, Bitcoin-like transactions, Beam trading, financial privacy"
   },
   "header": {
-    "announcement": "Friday, January 3rd, 2025: Beam's 6th birthday, 2025 roadmap released on the 6-year anniversary, upcoming 8.0 hard fork will add EVM compatibility",
+    "announcement": "Saturday, January 3rd, 2026: Beam's 7th birthday, upcoming 8.0 hard fork will add EVM compatibility",
     "nav": {
       "home": "Home",
       "downloads": "Downloads",
@@ -545,31 +545,26 @@
     "copyright": "© 2026 BeamX DAO. All Rights Reserved."
   },
   "blog": {
-    "title": "Blog",
-    "subtitle": "Stay up to date with the latest news, updates, and insights from the Beam ecosystem.",
-    "back_to_blog": "Back to overview",
-    "backToBlog": "Back to blog",
-    "readMore": "Read more",
-    "noPosts": "No blog posts found.",
-    "tableOfContents": "Table of Contents",
-    "categories": "Categories",
-    "tags": "Tags",
-    "summary": "Summary",
-    "content": "Content",
-    "pagecontent": "Page contents",
-    "types": {
-      "news": "News",
-      "tutorials": "Tutorials",
-      "technical": "Technical"
-    },
-    "loading": "Loading...",
-    "no_posts": "No posts found",
-    "read_more": "Read more",
+    "subtitle": "News, updates, tutorials, and community stories from the Beam ecosystem.",
     "search": {
       "placeholder": "Search posts…",
       "allCategories": "All categories"
     },
+    "readMore": "Read more",
+    "readingTime": "{minutes} min read",
+    "relatedPosts": "Related posts",
+    "backToBlog": "Back to blog",
+    "tableOfContents": "Table of contents",
+    "copied": "Copied!",
     "copyLink": "Copy link",
-    "copied": "Copied!"
+    "share": "Share:",
+    "noResults": "No posts match your search.",
+    "categories": {
+      "news": "News",
+      "community": "Community",
+      "technical": "Technical",
+      "tutorials": "Tutorials",
+      "updates": "Updates"
+    }
   }
 }

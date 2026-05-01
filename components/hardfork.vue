@@ -10,6 +10,6 @@ onMounted(() => {
     class="pt-10 lg:pt-12"
   >
     <LayoutTitle :title="$t('hardfork.title')" />
-    <HardforkItems/>
+    <HardforkItems />
   </LayoutWrapper>
 </template>
