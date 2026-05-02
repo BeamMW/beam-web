@@ -48,7 +48,10 @@ const refinedSrc = computed(() => {
   // (e.g. /images/...) are served directly from public/ and would otherwise
   // break in dev by pointing at the production domain.
   if (props.src.includes(".gitbook/assets/")) {
-    return withBase(removeGitbook(props.src), useRuntimeConfig().public.baseURL);
+    return withBase(
+      removeGitbook(props.src),
+      useRuntimeConfig().public.baseURL,
+    );
   }
   return props.src;
 });

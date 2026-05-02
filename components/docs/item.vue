@@ -143,17 +143,23 @@ scrollSpy({
 });
 
 const filteredList = computed(() => {
+  const seen = new Set<string>();
   return everything.value.filter((article) => {
     if (!article._path) {
       return false;
     }
     const isSameCategoryArticle = isSameCategory(article._path, route);
     const isIndexArticle = isIndex(article._path);
-    return (
-      !isPageBlacklisted(article._path) &&
-      isSameCategoryArticle &&
-      !isIndexArticle
-    );
+    if (
+      isPageBlacklisted(article._path) ||
+      !isSameCategoryArticle ||
+      isIndexArticle ||
+      seen.has(article._path)
+    ) {
+      return false;
+    }
+    seen.add(article._path);
+    return true;
   });
 });
 </script>

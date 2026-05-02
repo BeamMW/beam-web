@@ -254,6 +254,7 @@ export default defineNuxtConfig({
         he: "/הורדות",
         ar: "/تنزيلات",
         es: "/descargas",
+        pt: "/transferencias",
       },
       "privacy-policy": {
         en: "/privacy-policy",
@@ -265,6 +266,7 @@ export default defineNuxtConfig({
         he: "/מדיניותפרטיות",
         ar: "/سياسةالخصوصية",
         es: "/politica-de-privacidad",
+        pt: "/politica-de-privacidade",
       },
       mining: {
         en: "/mining",
@@ -276,6 +278,7 @@ export default defineNuxtConfig({
         he: "/כרייה",
         ar: "/تعدين",
         es: "/mineria",
+        pt: "/mineracao",
       },
     },
     locales,

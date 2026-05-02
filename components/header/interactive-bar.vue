@@ -28,7 +28,10 @@ defineProps({
         :gradient-color="gradientColor"
         :gradient-length="'80px'"
       >
-        {{ announcementMessage }}&nbsp;&nbsp;
+        {{ announcementMessage }}&nbsp;&nbsp;<span
+          class="inline-block align-middle translate-y-[0.25em]"
+          >****</span
+        >&nbsp;&nbsp;
       </Vue3Marquee>
     </div>
     <div
