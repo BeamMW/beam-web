@@ -545,6 +545,9 @@
       "startMining": "Start Mining",
       "support": "Support"
     },
+    "communityprojects": {
+      "title": "Community Projects"
+    },
     "contact": "Contact us",
     "mediakit": "Media Kit (Zip)",
     "copyright": "© 2026 BeamX DAO. All Rights Reserved."
