@@ -4,14 +4,16 @@
       "main": "BEAM：保密 DeFi 和加密货币",
       "index": "首页",
       "downloads": "下载",
-      "documentation": "文档"
+      "documentation": "文档",
+      "blog": "博客"
     },
     "descriptions": {
       "index": "Beam 提供隐私、保密资产、DeFi、NFT、DEX 以及在安全、去中心化环境中的无缝用户体验。",
       "downloads": "下载适用于各种设备的 Beam 钱包，获取 BEAM，探索私密的 DeFi 交易，并访问常见问题解答和资源。",
       "mining": "了解 Beam 挖矿，学习有关 Beam Hash III 算法的信息，并查找有关挖矿软件、奖励计算器和支持的资源。",
       "privacy": "查看 Beam 钱包关于数据收集、使用、安全、第三方服务和 GDPR 合规性的隐私政策。提供联系信息。",
-      "docs": "浏览关于钱包、挖矿、原子互换等的全面文档，目前仅提供英文版本。敬请期待更新和扩展语言支持。"
+      "docs": "浏览关于钱包、挖矿、原子互换等的全面文档，目前仅提供英文版本。敬请期待更新和扩展语言支持。",
+      "blog": "来自 Beam 生态系统的新闻、更新、教程和社区故事。"
     },
     "keywords": "Beam, 加密货币, 隐私, 匿名, 保密资产, DeFi, NFT, 区块链, 去中心化, DEX, 智能合约, 用户体验, 钱包, 安全, 财务自由, AMM, 原子交换, 虚拟机, WASM, 合约着色器, 应用着色器, 移动钱包, 桌面钱包, 交易类型, 私密稳定币, 封装资产, 侧链, 预言机, 借贷, Uniswap-like, Beam 节点, Beam 虚拟机, 保密性, 桥接资产, Beam 区块链, 无缝交易, 交互式钱包, 比特币式交易, Beam 交易, 财务隐私"
   },
@@ -20,7 +22,8 @@
     "nav": {
       "home": "首页",
       "downloads": "下载",
-      "resources": "资源"
+      "resources": "资源",
+      "blog": "博客"
     },
     "selectlanguage": "选择一种语言："
   },
@@ -270,10 +273,10 @@
   },
   "hardfork": {
     "title": "硬分叉",
-    "year": "2019",
     "hardforks": {
       "1": {
         "title": "第一次硬分叉",
+        "year": "2019",
         "text": "Beam 的第一次硬分叉按计划在路线图中执行。PoW 算法从 BeamHash I 升级为 BeamHash II，后者是基于原始 Equihash 的升级版本。\nBeam 在这些计划中的算法更改的策略是给 GPU 挖矿者一个先发优势，然后允许便宜的 ASIC 设备加入，而不会破坏挖矿生态系统。\n在这次硬分叉之后，由于并非所有矿工都及时进行了升级，观察到了难度的下降。\n然而，不到 24 小时后，哈希率就回到了硬分叉之前的水平。",
         "links": {
           "1": {
@@ -387,7 +390,8 @@
       "wallet": "钱包",
       "cli": "命令行界面",
       "node": "节点",
-      "apk": "APK"
+      "apk": "APK",
+      "appstore": "App Store"
     },
     "supportedversions": {
       "android": "Android 6 及更高版本",
@@ -464,6 +468,7 @@
   "docs": {
     "warning": "目前，文档正在更新中，暂时仅支持英语。",
     "types": {
+      "ecosystem": "Beam & BeamX",
       "desktop": "桌面钱包",
       "mobile": "移动钱包应用",
       "web": "网页钱包",
@@ -474,14 +479,23 @@
       "bridges": "桥梁",
       "atomicswaps": "原子交换",
       "cli": "命令行界面",
-      "explorer": "区块链浏览器"
+      "hww": "硬件钱包",
+      "beampedia": "Beampedia",
+      "changelog": "更新日志",
+      "warp": "Warp",
+      "research": "研究"
     },
     "explore": "探索（英文）",
     "edit": "编辑此文档",
     "back": "返回文档",
     "summary": "摘要",
     "content": "内容",
-    "pagecontent": "页面内容"
+    "pagecontent": "页面内容",
+    "search": {
+      "placeholder": "搜索文档…",
+      "allCategories": "所有分类"
+    },
+    "noResults": "没有与您的搜索匹配的文档。"
   },
   "errors": {
     "title": "错误 {code}",
@@ -534,5 +548,28 @@
     "contact": "联系我们",
     "mediakit": "媒体资源包（Zip）",
     "copyright": "© 2026 BeamX DAO. 保留所有权利。"
+  },
+  "blog": {
+    "subtitle": "来自 Beam 生态系统的新闻、更新、教程和社区故事。",
+    "search": {
+      "placeholder": "搜索文章…",
+      "allCategories": "所有分类"
+    },
+    "readMore": "阅读更多",
+    "readingTime": "{minutes} 分钟阅读",
+    "relatedPosts": "相关文章",
+    "backToBlog": "返回博客",
+    "tableOfContents": "目录",
+    "copied": "已复制！",
+    "copyLink": "复制链接",
+    "share": "分享：",
+    "noResults": "没有找到匹配的文章。",
+    "categories": {
+      "news": "新闻",
+      "community": "社区",
+      "technical": "技术",
+      "tutorials": "教程",
+      "updates": "更新"
+    }
   }
 }

@@ -490,7 +490,12 @@
     "back": "Back to documentation",
     "summary": "Summary",
     "content": "Content",
-    "pagecontent": "Page contents"
+    "pagecontent": "Page contents",
+    "search": {
+      "placeholder": "Search documentation…",
+      "allCategories": "All categories"
+    },
+    "noResults": "No documentation matches your search."
   },
   "errors": {
     "title": "Error {code}",

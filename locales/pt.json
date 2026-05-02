@@ -4,14 +4,16 @@
       "main": "BEAM: DeFi e Crypto Confidenciais",
       "index": "Início",
       "downloads": "Downloads",
-      "documentation": "Documentação"
+      "documentation": "Documentação",
+      "blog": "Blog"
     },
     "descriptions": {
       "index": "O Beam oferece privacidade, ativos confidenciais, DeFi, NFTs, DEX e uma experiência de usuário fluida em um ambiente seguro e descentralizado.",
       "downloads": "Baixe a carteira Beam para vários dispositivos, adquira BEAM, explore transações DeFi privadas e acesse as Perguntas Frequentes e recursos.",
       "mining": "Explore a mineração Beam, aprenda sobre o algoritmo Beam Hash III e encontre recursos para software de mineração, calculadora de recompensas e suporte.",
       "privacy": "Revise a política de privacidade da Carteira Beam sobre coleta, uso, segurança de dados, serviços de terceiros e conformidade com o GDPR. Informações de contato fornecidas.",
-      "docs": "Explore nossa documentação abrangente sobre carteiras, mineração, swaps atômicos e mais - atualmente disponível em inglês. Aguarde atualizações e suporte de idiomas expandido."
+      "docs": "Explore nossa documentação abrangente sobre carteiras, mineração, swaps atômicos e mais - atualmente disponível em inglês. Aguarde atualizações e suporte de idiomas expandido.",
+      "blog": "Notícias, atualizações, tutoriais e histórias da comunidade do ecossistema Beam."
     },
     "keywords": "Beam, criptomoeda, privacidade, anonimato, ativos confidenciais, DeFi, NFTs, blockchain, descentralizado, DEX, contratos inteligentes, experiência do usuário, carteira, seguro, liberdade financeira, AMM, swaps atômicos, máquina virtual, WASM, shaders de contrato, shaders de aplicativo, carteira móvel, carteira desktop, tipos de transação, stablecoins privadas, ativos encapsulados, sidechains, oráculos, empréstimo, semelhante ao Uniswap, nós Beam, Máquina Virtual Beam, confidencialidade, ativos pontados, blockchain Beam, negociação fluida, carteira interativa, transações semelhantes ao Bitcoin, negociação Beam, privacidade financeira"
   },
@@ -20,7 +22,8 @@
     "nav": {
       "home": "Início",
       "downloads": "Downloads",
-      "resources": "Recursos"
+      "resources": "Recursos",
+      "blog": "Blog"
     },
     "selectlanguage": "Selecione um idioma"
   },
@@ -270,10 +273,10 @@
   },
   "hardfork": {
     "title": "Hard Forks",
-    "year": "2019",
     "hardforks": {
       "1": {
         "title": "Primeiro Hard-Fork",
+        "year": "2019",
         "text": "O primeiro hard-fork do Beam foi realizado conforme anunciado no roadmap. O algoritmo PoW foi atualizado de BeamHash I para BeamHash II, que são aprimoramentos do Equihash vanilla no qual são baseados. \nA estratégia do Beam com essas mudanças planejadas no algoritmo de mineração foi dar uma vantagem inicial aos mineradores GPU e depois permitir que ASICs baratos se juntassem sem desestabilizar o ecossistema de mineração.\nApós esse hard-fork, foi observada uma queda na dificuldade, pois nem todos os mineradores realizaram a atualização a tempo.\nNo entanto, após menos de 24 horas, a taxa de hash voltou ao valor anterior ao hard-fork.",
         "links": {
           "1": {
@@ -387,7 +390,8 @@
       "wallet": "Carteira",
       "cli": "Interface de linha de comando",
       "node": "Nó",
-      "apk": "APK"
+      "apk": "APK",
+      "appstore": "App Store"
     },
     "supportedversions": {
       "android": "Android 6 ou superior",
@@ -464,6 +468,7 @@
   "docs": {
     "warning": "A documentação está atualmente em atualização e disponível apenas em inglês no momento.",
     "types": {
+      "ecosystem": "Beam & BeamX",
       "desktop": "Carteira para Desktop",
       "mobile": "Aplicativo Carteira para Dispositivos Móveis",
       "web": "Carteira Web",
@@ -474,14 +479,23 @@
       "bridges": "Pontes",
       "atomicswaps": "Swaps Atômicos",
       "cli": "Interface de Linha de Comando",
-      "explorer": "Explorador de Blockchain"
+      "hww": "Carteira de hardware",
+      "beampedia": "Beampedia",
+      "changelog": "Registo de alterações",
+      "warp": "Warp",
+      "research": "Investigação"
     },
     "explore": "Explorar",
     "edit": "Editar esta documentação",
     "back": "Voltar para a documentação",
     "summary": "Resumo",
     "content": "Conteúdo",
-    "pagecontent": "Conteúdo da página"
+    "pagecontent": "Conteúdo da página",
+    "search": {
+      "placeholder": "Pesquisar na documentação…",
+      "allCategories": "Todas as categorias"
+    },
+    "noResults": "Nenhuma documentação corresponde à sua pesquisa."
   },
   "errors": {
     "404": {
@@ -534,5 +548,28 @@
     "contact": "Entre em contato",
     "mediakit": "Kit de mídia (Zip)",
     "copyright": "© 2026 BeamX DAO. Todos os direitos reservados."
+  },
+  "blog": {
+    "subtitle": "Notícias, atualizações, tutoriais e histórias da comunidade do ecossistema Beam.",
+    "search": {
+      "placeholder": "Pesquisar publicações…",
+      "allCategories": "Todas as categorias"
+    },
+    "readMore": "Ler mais",
+    "readingTime": "{minutes} min de leitura",
+    "relatedPosts": "Publicações relacionadas",
+    "backToBlog": "Voltar ao blog",
+    "tableOfContents": "Índice",
+    "copied": "Copiado!",
+    "copyLink": "Copiar ligação",
+    "share": "Partilhar:",
+    "noResults": "Nenhuma publicação corresponde à sua pesquisa.",
+    "categories": {
+      "news": "Notícias",
+      "community": "Comunidade",
+      "technical": "Técnico",
+      "tutorials": "Tutoriais",
+      "updates": "Atualizações"
+    }
   }
 }

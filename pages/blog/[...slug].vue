@@ -1,7 +1,5 @@
 <template>
-  <RenderCacheable :cache-key="routeName">
-    <BlogPost :route-name="routeName" />
-  </RenderCacheable>
+  <BlogPost :route-name="routeName" />
 </template>
 
 <script lang="ts" setup>
