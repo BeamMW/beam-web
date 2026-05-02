@@ -262,6 +262,10 @@ export const pressArticles = [
     image: "cryptonews",
     href: "https://cryptonews.com/exclusives/an-interview-the-new-hot-beam-coin-is-live-what-comes-next-3271.htm",
   },
+  {
+    image: "bitcourier",
+    href: "https://bitcourier.co.uk/news/beam-interview",
+  },
 ];
 
 export enum ExternalLinksIcon {
