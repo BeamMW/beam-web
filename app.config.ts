@@ -35,6 +35,9 @@ export const ExternalLinks = {
   COINGECKO: "https://www.coingecko.com/en/coins/beam",
   CMC: "https://coinmarketcap.com/currencies/beam/",
   BEAMASSETS: "https://beamassets.com",
+  BEAMSMART: "https://beamsmart.net",
+  BEAM_LIGHT_WALLET: "https://github.com/vsnation/beam-light-wallet",
+  PRIVIMW_WALLET: "https://github.com/PriviMW/PriviMW-Wallet/",
 
   // Other links
   DOCS_SOURCES: "https://github.com/BeamMW/docs-gitbook",
@@ -47,6 +50,7 @@ export const ExternalLinks = {
   GENERAL_SUPPORT: "https://t.me/BeamSupport",
   SUPPORT_EMAIL: "mailto:support@beam.mw",
   BUILDS_SERVER: "https://builds.beam.mw",
+  BEAMX_DAO: "https://beamxdao.org",
 };
 
 export enum ExternalLinksTitle {
@@ -65,6 +69,10 @@ export enum ExternalLinksTitle {
   COINGECKO = "CoinGecko",
   CMC = "CoinMarketCap",
   BEAMASSETS = "BeamAssets",
+  BEAMSMART = "BeamSmart Explorer",
+  BEAM_LIGHT_WALLET = "Beam Light Wallet",
+  PRIVIMW_WALLET = "PriviMW Wallet",
+  BEAMX_DAO = "BeamX DAO",
 }
 
 /**

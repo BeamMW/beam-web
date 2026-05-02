@@ -43,9 +43,11 @@ onUnmounted(() =>
         <DownloadStartedConfirmation />
       </div>
 
-      <div class="min-h-[530px]">
+      <div class="min-h-[530px] grid-container">
         <ClientOnly>
-          <DownloadPlatformSelector />
+          <div class="w-full">
+            <DownloadPlatformSelector />
+          </div>
         </ClientOnly>
       </div>
     </section>
@@ -58,3 +60,7 @@ onUnmounted(() =>
     </div>
   </section>
 </template>
+
+<style scoped>
+.grid-container {}
+</style>

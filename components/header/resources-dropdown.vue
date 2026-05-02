@@ -27,26 +27,9 @@ const menus = computed(() => [
   {
     title: t("footer.join.title"),
     links: [
-      {
-        text: t("header.nav.home"),
-        href: localePath("index"),
-        class: "block md:hidden",
-      },
-      {
-        text: t("footer.join.downloadWallet"),
-        href: localePath("downloads"),
-        class: "block md:hidden",
-      },
-      {
-        text: "Beam DEX",
-        href: ExternalLinks.DEX,
-        class: "block md:hidden",
-      },
-      {
-        text: t("head.title.documentation"),
-        href: localePath("docs"),
-        class: "block md:hidden",
-      },
+      { text: t("header.nav.home"), href: localePath("index"), class: "block md:hidden"},
+      { text: "Beam DEX", href: ExternalLinks.DEX, class: "block md:hidden"},
+      { text: t("head.title.documentation"), href: localePath("docs"), class: "block md:hidden"},
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: ExternalLinksTitle.X, href: ExternalLinks.X },
       { text: t("footer.join.newsletter"), href: ExternalLinks.SUBSTACK },
@@ -70,8 +53,8 @@ const menus = computed(() => [
       },
       { text: ExternalLinksTitle.YOUTUBE, href: ExternalLinks.YOUTUBE },
       { text: t("footer.join.beamBlog"), href: localePath("blog") },
-      { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
       { text: "Beampedia", href: `${localePath("docs")}/beampedia` },
+      { text: ExternalLinksTitle.BEAMX_DAO, href: ExternalLinks.BEAMX_DAO },
     ],
   },
   {
@@ -80,11 +63,7 @@ const menus = computed(() => [
       { text: t("footer.community.telegram"), href: ExternalLinks.TELEGRAM },
       { text: t("footer.community.discord"), href: ExternalLinks.DISCORD },
       { text: t("footer.community.reddit"), href: ExternalLinks.REDDIT },
-      { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
-      {
-        text: t("footer.community.qq"),
-        href: ExternalLinks.QQ,
-      },
+      { text: t("footer.community.qq"), href: ExternalLinks.QQ },
       { text: ExternalLinksTitle.COINGECKO, href: ExternalLinks.COINGECKO },
       { text: ExternalLinksTitle.CMC, href: ExternalLinks.CMC },
       { text: t("footer.miners.support"), href: ExternalLinks.GENERAL_SUPPORT },
@@ -119,6 +98,15 @@ const menus = computed(() => [
           },
         ],
       },
+      {
+        title: t("footer.communityprojects.title"),
+        links: [
+          { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
+          { text: ExternalLinksTitle.BEAMSMART, href: ExternalLinks.BEAMSMART },
+          { text: ExternalLinksTitle.BEAM_LIGHT_WALLET, href: ExternalLinks.BEAM_LIGHT_WALLET },
+          { text: ExternalLinksTitle.PRIVIMW_WALLET, href: ExternalLinks.PRIVIMW_WALLET },
+        ]
+      }
     ],
   },
 ]);
