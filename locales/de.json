@@ -251,10 +251,11 @@
           "7": "Desktop-Wallet Qt6-Framework-Update",
           "8": "Desktop-Wallet-Widgets",
           "9": "Ledger-App-Update",
-          "10": "Beam Warp Bridge DApp",
-          "11": "Beam Warp Management DApp",
+          "10": "Beam Warp Bridge dApp",
+          "11": "Beam Warp Management dApp",
           "12": "Beam Warp Testnet",
-          "13": "Beam Warp Mainnet"
+          "13": "Beam Warp Mainnet",
+          "14": "Neue DEX dApp"
         }
       },
       "12": {
@@ -265,8 +266,7 @@
           "2": "Neues Adresssystem",
           "3": "Beam-Crowdfunding-System",
           "4": "Beam Messenger DApp",
-          "5": "Beam Gift DApp",
-          "6": "Neue DEX-Oberfläche"
+          "5": "Beam Gift DApp"
         }
       }
     }

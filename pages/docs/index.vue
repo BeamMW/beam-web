@@ -12,10 +12,17 @@ const nuxtApp = useNuxtApp();
 
 const { data: pages } = await useAsyncData<ParsedContent[]>(
   "docs-all-pages",
-  () =>
-    queryContent<ParsedContent>("/docs")
+  async () => {
+    const results = await queryContent<ParsedContent>("/docs")
       .where({ title: { $exists: true } })
-      .find(),
+      .find();
+    const seen = new Set<string>();
+    return results.filter((p) => {
+      if (!p._path || seen.has(p._path)) return false;
+      seen.add(p._path);
+      return true;
+    });
+  },
   {
     getCachedData: (key) =>
       nuxtApp.isHydrating ? nuxtApp.payload.data[key] : undefined,

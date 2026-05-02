@@ -254,7 +254,8 @@
           "10": "Beam Warp 桥 dApp",
           "11": "Beam Warp 管理 dApp",
           "12": "Beam Warp 测试网",
-          "13": "Beam Warp 主网"
+          "13": "Beam Warp 主网",
+          "14": "新版 DEX 界面"
         }
       },
       "12": {
@@ -265,8 +266,7 @@
           "2": "新地址系统",
           "3": "Beam 众筹系统",
           "4": "Beam Messenger DApp",
-          "5": "Beam Gift DApp",
-          "6": "新版 DEX 界面"
+          "5": "Beam Gift DApp"
         }
       }
     }
