@@ -36,6 +36,7 @@ export const ExternalLinks = {
   CMC: "https://coinmarketcap.com/currencies/beam/",
   BEAMASSETS: "https://beamassets.com",
   BEAMSMART: "https://beamsmart.net",
+  BEAM_TERMINAL: "https://beamterminal.0xmx.net",
   BEAM_LIGHT_WALLET: "https://github.com/vsnation/beam-light-wallet",
   PRIVIMW_WALLET: "https://github.com/PriviMW/PriviMW-Wallet/",
 
@@ -70,6 +71,7 @@ export enum ExternalLinksTitle {
   CMC = "CoinMarketCap",
   BEAMASSETS = "BeamAssets",
   BEAMSMART = "BeamSmart Explorer",
+  BEAM_TERMINAL = "BeamTerminal",
   BEAM_LIGHT_WALLET = "Beam Light Wallet",
   PRIVIMW_WALLET = "PriviMW Wallet",
   BEAMX_DAO = "BeamX DAO",
