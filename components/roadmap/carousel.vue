@@ -397,6 +397,18 @@ const roadmap: Roadmap = [
         state: PROGRESS.COMPLETED,
       },
       {
+        description: t("roadmap.milestones.11.items.7"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
+        description: t("roadmap.milestones.11.items.9"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
+        description: t("roadmap.milestones.11.items.14"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
         description: t("roadmap.milestones.11.items.2"),
         state: PROGRESS.BUILDING,
       },
@@ -417,15 +429,7 @@ const roadmap: Roadmap = [
         state: PROGRESS.BUILDING,
       },
       {
-        description: t("roadmap.milestones.11.items.7"),
-        state: PROGRESS.BUILDING,
-      },
-      {
         description: t("roadmap.milestones.11.items.8"),
-        state: PROGRESS.BUILDING,
-      },
-      {
-        description: t("roadmap.milestones.11.items.9"),
         state: PROGRESS.BUILDING,
       },
       {
@@ -443,10 +447,6 @@ const roadmap: Roadmap = [
       {
         description: t("roadmap.milestones.11.items.13"),
         state: PROGRESS.PLANNED,
-      },
-      {
-        description: t("roadmap.milestones.11.items.14"),
-        state: PROGRESS.COMPLETED,
       },
     ],
   },

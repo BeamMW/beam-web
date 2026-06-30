@@ -130,7 +130,7 @@
     "title": "Feuille de route de développement",
     "milestones": {
       "1": {
-        "title": "Atome Agile",
+        "title": "Agile Atom",
         "year": "2019",
         "items": {
           "1": "API de paiement et d'échange",
@@ -139,19 +139,19 @@
         }
       },
       "2": {
-        "title": "Boson Lumineux",
+        "title": "Bright Boson",
         "year": "2019",
         "items": {
           "1": "Portefeuilles Android et iOS",
           "2": "Intégration des plateformes de paiement",
-          "3": "Synchronisation rapide des noeuds",
+          "3": "Synchronisation rapide des nœuds",
           "4": "Confirmation de paiement",
-          "5": "Preuve de concept Anywhere Beam",
+          "5": "Preuve de concept Beam Anywhere",
           "6": "Portefeuille froid"
         }
       },
       "3": {
-        "title": "Cathode Claire",
+        "title": "Clear Cathode",
         "year": "2019",
         "items": {
           "1": "Swap atomique Beam ↔ BTC, LTC, QTUM (portefeuille de bureau)",
@@ -161,7 +161,7 @@
         }
       },
       "4": {
-        "title": "Doppler Double",
+        "title": "Double Doppler",
         "year": "2020",
         "items": {
           "1": "Place de marché de swaps atomiques (portefeuille de bureau) et API",
@@ -172,7 +172,7 @@
         }
       },
       "5": {
-        "title": "Électron Eager",
+        "title": "Eager Electron",
         "year": "2020",
         "items": {
           "1": "Actifs confidentiels sur le mainnet",
@@ -180,11 +180,11 @@
           "3": "Lelantus MW",
           "4": "Paiement à sens unique",
           "5": "Synchronisation du solde avec la même phrase secrète",
-          "6": "Noeud mobile"
+          "6": "Nœud mobile"
         }
       },
       "6": {
-        "title": "Fermion Féroce",
+        "title": "Fierce Fermion",
         "year": "2021",
         "items": {
           "1": "Machine virtuelle Beam dans le portefeuille et le nœud",
@@ -192,7 +192,7 @@
         }
       },
       "7": {
-        "title": "Gluon Groovy",
+        "title": "Groovy Gluon",
         "year": "2022",
         "items": {
           "1": "Intégration IPFS",
@@ -211,7 +211,7 @@
         "items": {
           "1": "Lancement de l'AMM DEX",
           "2": "DApp de farming de liquidités BeamX",
-          "3": "BEAM enveloppé sur Ethereum",
+          "3": "BEAM encapsulé sur Ethereum",
           "4": "Pont Ethereum (ETH, USDT, WBTC, DAI)",
           "5": "Support pour portefeuilles HW (Ledger Nano S et Nano S Plus)",
           "6": "DApp Beam Messenger dans Beam Wallet",
