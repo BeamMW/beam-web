@@ -83,8 +83,8 @@
       "answer": "Beam se lanzó de manera justa, sin premineo ni ICO. Sigue un calendario de emisión deflacionario, comenzando con 100 BEAM por bloque y reduciéndose periódicamente. El suministro total está limitado a **262,800,000 BEAM**. 20% de las emisiones de bloque van al Tesoro Beam durante los primeros cinco años (finalizando el 3 de enero de 2024)."
     },
     "5": {
-      "question": "¿Cómo funciona el gobierno de Beam?",
-      "answer": "Beam está transitando a un gobierno **BeamX DAO**, utilizando votación on-chain. Para participar, necesitarás tokens BEAMX. Aprende más [aquí](/docs/ecosystem/overview/beamx-dao-governance-framework)."
+      "question": "¿Cómo funciona la gobernanza de Beam?",
+      "answer": "Beam está transitando a una gobernanza **BeamX DAO**, utilizando votación on-chain. Para participar, necesitarás tokens BEAMX. Aprende más [aquí](/docs/ecosystem/overview/beamx-dao-governance-framework)."
     },
     "6": {
       "question": "¿Existen billeteras dedicadas de Beam?",
@@ -377,7 +377,7 @@
     "downloadWallet": "Descarga Beam Wallet",
     "downloadButton": "Descargar para {platform}",
     "started": {
-      "title": "¡Tu cartera Beam está en camino!",
+      "title": "¡Tu billetera Beam está en camino!",
       "message": "Gracias por elegir Beam. Mientras esperas a que se complete la descarga, ¿por qué no explorar la riqueza de características y consejos en la [documentación de Beam]({documentation})?"
     },
     "divider": "o",
@@ -535,7 +535,7 @@
       "beamForum": "Foro Beam",
       "beamBlog": "Blog Beam",
       "roadmap": "Hoja de ruta",
-      "hardfork": "Horquillas duras",
+      "hardfork": "Bifurcaciones duras",
       "newsletter": "Boletín de noticias"
     },
     "community": {
@@ -544,6 +544,9 @@
       "discord": "Discord",
       "reddit": "Reddit",
       "qq": "Grupo QQ"
+    },
+    "communityprojects": {
+      "title": "Proyectos de la comunidad"
     },
     "developers": {
       "title": "Desarrolladores",

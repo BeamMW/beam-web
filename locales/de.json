@@ -42,11 +42,11 @@
     "learnmoreabout": "Erfahren Sie mehr über \"{title}\"",
     "1": {
       "title": "Kompromisslose Privatsphäre",
-      "text": "Wählen Sie standardmäßige Privatstransaktionen für starke Anonymität oder Transaktionen mit maximaler Anonymitätsmenge und einer 64k Anonymitätsmenge – Privatsphäre ist standardmäßig für alle."
+      "text": "Wählen Sie standardmäßige private Transaktionen für starke Anonymität oder Transaktionen mit maximaler Anonymitätsmenge und einer 64k Anonymitätsmenge – Privatsphäre ist standardmäßig für alle."
     },
     "2": {
       "title": "Vertrauliche Vermögenswerte",
-      "text": "Verbinden, erstellen, handeln und handeln Sie Vermögenswerte auf Beams Blockchain mit Ihrer Wallet. Vermögenswerttransaktionen sind nicht von regulären Beam-Transaktionen zu unterscheiden."
+      "text": "Überbrücken, erstellen, übertragen und handeln Sie Vermögenswerte auf Beams Blockchain mit Ihrer Wallet. Vermögenswerttransaktionen sind nicht von regulären Beam-Transaktionen zu unterscheiden."
     },
     "3": {
       "title": "Vertrauliche DeFi & NFTs",
@@ -555,6 +555,9 @@
       "title": "Miner",
       "startMining": "Mining starten",
       "support": "Support"
+    },
+    "communityprojects": {
+      "title": "Community-Projekte"
     },
     "contact": "Kontaktieren Sie uns",
     "mediakit": "Medienkit (Zip)",

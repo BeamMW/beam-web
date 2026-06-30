@@ -535,7 +535,7 @@
       "beamForum": "Fórum Beam",
       "beamBlog": "Blog Beam",
       "roadmap": "Roteiro",
-      "hardfork": "Garfos Duros",
+      "hardfork": "Hard Forks",
       "newsletter": "Newsletter"
     },
     "community": {
@@ -555,6 +555,9 @@
       "title": "Mineiros",
       "startMining": "Começar a minerar",
       "support": "Suporte"
+    },
+    "communityprojects": {
+      "title": "Projetos da Comunidade"
     },
     "contact": "Entre em contato",
     "mediakit": "Kit de mídia (Zip)",

@@ -41,7 +41,7 @@
     "learnmore": "En savoir plus",
     "learnmoreabout": "En savoir plus sur \"{title}\"",
     "1": {
-      "title": "Confidentialité ultime",
+      "title": "Confidentialité sans compromis",
       "text": "Choisissez des transactions de confidentialité standard pour un anonymat robuste ou des transactions de confidentialité maximale avec un ensemble d'anonymat de 64k – la confidentialité est par défaut pour tous."
     },
     "2": {
@@ -58,11 +58,11 @@
     },
     "5": {
       "title": "Contrats intelligents confidentiels",
-      "text": "La Beam Virtual Machine permet l'exécution de dApps confidentiels en utilisant WASM. Les shaders de contrats gèrent la logique métier, tandis que les shaders d'application gèrent les couches de présentation pour une intégration facile dans le portefeuille."
+      "text": "La Beam Virtual Machine permet l'exécution de dApps confidentielles en utilisant WASM. Les shaders de contrats gèrent la logique métier, tandis que les shaders d'application gèrent les couches de présentation pour une intégration facile dans le portefeuille."
     },
     "6": {
       "title": "Expérience utilisateur exceptionnelle",
-      "text": "Portefeuilles Beam conviviaux pour mobile et bureau au design épuré. Deux types de transactions: communication de portefeuille interactive et transactions simples d'envoi et d'oubli similaires à Bitcoin."
+      "text": "Portefeuilles Beam conviviaux pour mobile et bureau au design épuré. Deux types de transactions : communication de portefeuille interactive et transactions simples d'envoi et d'oubli similaires à Bitcoin."
     }
   },
   "faq": {
@@ -399,7 +399,7 @@
     },
     "type": {
       "wallet": "Portefeuille",
-      "cli": "CLI",
+      "cli": "Interface de ligne de commande",
       "node": "Nœud",
       "apk": "APK",
       "appstore": "App Store"
@@ -473,7 +473,7 @@
     },
     "9": {
       "title": "Coordonnées",
-      "content": "Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité ou nos pratiques en matière de confidentialité, n'hésitez pas à nous contacter à:\n\n**Beam Foundation Limited**\nE-mail : {support}"
+      "content": "Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité ou nos pratiques en matière de confidentialité, n'hésitez pas à nous contacter à :\n\n**Beam Foundation Limited**\nE-mail : {support}"
     }
   },
   "docs": {
@@ -535,7 +535,7 @@
       "beamForum": "Forum Beam",
       "beamBlog": "Blog Beam",
       "roadmap": "Feuille de route",
-      "hardfork": "Fourches dures",
+      "hardfork": "Hard Forks",
       "newsletter": "Lettre d'information"
     },
     "community": {
@@ -555,6 +555,9 @@
       "title": "Mineurs",
       "startMining": "Commencer à miner",
       "support": "Support"
+    },
+    "communityprojects": {
+      "title": "Projets communautaires"
     },
     "contact": "Contactez-nous",
     "mediakit": "Kit média (Zip)",

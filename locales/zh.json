@@ -124,7 +124,7 @@
     "exchanges": "交易所",
     "instantexchanges": "即时交易所",
     "disclaimer": "**免责声明**：列出的第三方服务不受 Beam 的支持。请谨慎使用，因为 Beam 的安全和隐私保证不适用。",
-    "ethereumContract": "Wrapped Beam(WBEAM)合约地址是**[0xE5AcBB03D73267c03349c76EaD672Ee4d941F499](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)**。WBEAM充当Beam币的ERC-20表示,可以在以太坊和Beam区块链之间双向桥接。"
+    "ethereumContract": "Wrapped Beam(WBEAM)合约地址是**[0xE5AcBB03D73267c03349c76EaD672Ee4d941F499](https://etherscan.io/address/0xE5AcBB03D73267c03349c76EaD672Ee4d941F499)**。WBEAM充当Beam币的ERC-20表示，可以在以太坊和Beam区块链之间双向桥接。"
   },
   "roadmap": {
     "title": "开发路线图",
@@ -555,6 +555,9 @@
       "title": "矿工",
       "startMining": "开始挖矿",
       "support": "支持"
+    },
+    "communityprojects": {
+      "title": "社区项目"
     },
     "contact": "联系我们",
     "mediakit": "媒体资源包（Zip）",
