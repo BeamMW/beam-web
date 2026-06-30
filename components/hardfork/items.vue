@@ -197,6 +197,20 @@ const hardfork = ref<Hardfork>([
     ],
     image: "gluon",
   },
+  {
+    name: t("hardfork.hardforks.6.title"),
+    year: t("hardfork.hardforks.6.year"),
+    text: t("hardfork.hardforks.6.text"),
+    color: "#bc1b9f",
+    showFullText: false,
+    links: [
+      {
+        title: t("hardfork.hardforks.6.links.1.title"),
+        link: t("hardfork.hardforks.6.links.1.link"),
+      },
+    ],
+    image: "gluon",
+  },
 ]);
 
 const slidesToShow = ref(1);
