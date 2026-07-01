@@ -103,6 +103,7 @@ const menus = computed(() => [
         links: [
           { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
           { text: ExternalLinksTitle.BEAMSMART, href: ExternalLinks.BEAMSMART },
+          { text: ExternalLinksTitle.BEAM_TERMINAL, href: ExternalLinks.BEAM_TERMINAL },
           { text: ExternalLinksTitle.BEAM_LIGHT_WALLET, href: ExternalLinks.BEAM_LIGHT_WALLET },
           { text: ExternalLinksTitle.PRIVIMW_WALLET, href: ExternalLinks.PRIVIMW_WALLET },
         ]

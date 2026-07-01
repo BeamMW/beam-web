@@ -83,8 +83,8 @@
       "answer": "Beam se lanzó de manera justa, sin premineo ni ICO. Sigue un calendario de emisión deflacionario, comenzando con 100 BEAM por bloque y reduciéndose periódicamente. El suministro total está limitado a **262,800,000 BEAM**. 20% de las emisiones de bloque van al Tesoro Beam durante los primeros cinco años (finalizando el 3 de enero de 2024)."
     },
     "5": {
-      "question": "¿Cómo funciona el gobierno de Beam?",
-      "answer": "Beam está transitando a un gobierno **BeamX DAO**, utilizando votación on-chain. Para participar, necesitarás tokens BEAMX. Aprende más [aquí](/docs/ecosystem/overview/beamx-dao-governance-framework)."
+      "question": "¿Cómo funciona la gobernanza de Beam?",
+      "answer": "Beam está transitando a una gobernanza **BeamX DAO**, utilizando votación on-chain. Para participar, necesitarás tokens BEAMX. Aprende más [aquí](/docs/ecosystem/overview/beamx-dao-governance-framework)."
     },
     "6": {
       "question": "¿Existen billeteras dedicadas de Beam?",
@@ -130,7 +130,7 @@
     "title": "Hoja de ruta de desarrollo",
     "milestones": {
       "1": {
-        "title": "Átomo ágil",
+        "title": "Agile Atom",
         "year": "2019",
         "items": {
           "1": "API de pago y intercambio",
@@ -139,7 +139,7 @@
         }
       },
       "2": {
-        "title": "Bosón brillante",
+        "title": "Bright Boson",
         "year": "2019",
         "items": {
           "1": "Monederos Android y iOS",
@@ -151,7 +151,7 @@
         }
       },
       "3": {
-        "title": "Cátodo claro",
+        "title": "Clear Cathode",
         "year": "2019",
         "items": {
           "1": "Intercambio atómico Beam ↔ BTC, LTC, QTUM (monedero de escritorio)",
@@ -161,7 +161,7 @@
         }
       },
       "4": {
-        "title": "Doppler doble",
+        "title": "Double Doppler",
         "year": "2020",
         "items": {
           "1": "Mercado de intercambios atómicos (monedero de escritorio) y API",
@@ -172,7 +172,7 @@
         }
       },
       "5": {
-        "title": "Electrón ansioso",
+        "title": "Eager Electron",
         "year": "2020",
         "items": {
           "1": "Activos confidenciales en la red principal",
@@ -184,7 +184,7 @@
         }
       },
       "6": {
-        "title": "Fermión feroz",
+        "title": "Fierce Fermion",
         "year": "2021",
         "items": {
           "1": "Máquina virtual Beam en monedero y nodo",
@@ -276,7 +276,7 @@
     "hardforks": {
       "1": {
         "title": "Primera Bifurcación Dura",
-        "year": "2019",
+        "year": "Agosto 2019",
         "text": "La primera bifurcación dura de Beam se realizó según lo anunciado en la hoja de ruta. El algoritmo de PoW se actualizó de BeamHash I a BeamHash II, que son mejoras del Equihash estándar en el que se basan.\nLa estrategia de Beam con estos cambios planificados en el algoritmo de minería fue dar a los mineros de GPU una ventaja inicial, y luego permitir que los ASIC baratos se unieran sin interrumpir el ecosistema de minería.\nDespués de esta bifurcación dura, se observó una caída en la dificultad, ya que no todos los mineros realizaron una actualización a tiempo.\nSin embargo, después de menos de 24 horas, la tasa de hash había vuelto a su valor anterior a la bifurcación.",
         "links": {
           "1": {
@@ -287,7 +287,7 @@
       },
       "2": {
         "title": "Segunda Bifurcación Dura",
-        "year": "2020",
+        "year": "Junio 2020",
         "text": "La segunda bifurcación dura de Beam se realizó según lo anunciado en la hoja de ruta. El algoritmo de PoW se actualizó de BeamHash II a BeamHash III, que es la versión final en la estrategia planificada para equilibrar la minería de GPU y ASIC.\nEsta bifurcación dura también vio la activación de los Activos Confidenciales (a veces también llamados 'Tokens de Privacidad', que fueron introducidos en la primera bifurcación dura pero mantenidos inactivos) y el lanzamiento del protocolo Lelantus-MW y sus pagos de un solo lado asociados (también conocidos como transacciones fuera de línea).",
         "links": {
           "1": {
@@ -306,7 +306,7 @@
       },
       "3": {
         "title": "Tercera Bifurcación Dura (y billetera v6.0)",
-        "year": "2021",
+        "year": "Junio 2021",
         "text": "Esta bifurcación dura trajo la adición de la Máquina Virtual de Beam (BVM) como infraestructura para crear contratos inteligentes (también conocidos como 'Shaders'), ¡convirtiendo a Beam en la primera moneda de privacidad con capacidades de contratos inteligentes!\nLos contratos inteligentes de BVM pueden escribirse en cualquier lenguaje compatible con WebAssembly (como C++, Rust, Go, etc.) y se componen de dos elementos: el lado de la cadena de bloques (ejecutándose en los nodos de Beam) y el lado de la billetera (ejecutándose en la billetera de Beam, junto con las interfaces de aplicaciones descentralizadas). Esta separación de la lógica del lado de la cadena y del lado del cliente permite aplicaciones muy poderosas y flexibles.\nLos contratos inteligentes de Beam son transparentes por defecto, lo que significa que podemos ver su estado y su actividad. Sin embargo, los usuarios siguen siendo anónimos, ya que sus interacciones con los contratos inteligentes se basan en transacciones confidenciales normales de Beam. Con este enfoque, DeFi de Beam logra proporcionar mercados 'eficientes' (por ejemplo, donde podemos ver lo que se compra y se vende) mientras aún protege la privacidad de sus usuarios (por ejemplo, no podemos ver quién compra y vende).\nAl permitir estas capacidades de contratos inteligentes que preservan la privacidad, esta bifurcación dura abrió las puertas para que Beam se convierta no solo en una plataforma poderosa de 'Privacy DeFi' (PriFi), sino de hecho en una infraestructura de propósito general para cualquier cosa en Web3 Confidencial!",
         "links": {
           "1": {
@@ -329,7 +329,7 @@
       },
       "4": {
         "title": "Cuarta Bifurcación Dura (y billetera v7.0)",
-        "year": "2022",
+        "year": "Junio 2022",
         "text": "Esta bifurcación dura introdujo 'Transacciones de Alta Frecuencia' (HFTX) en ambos lados del nodo y de la billetera, e integración de almacenamiento IPFS en el lado de la billetera. HFTX mejoran la resistencia a MEV, ataques de adelantamiento y ataques de sándwich al definir reglas estrictas de inclusión para las transacciones, protegiendo así a los usuarios de resultados no deseados (ya que las transacciones enviadas solo pueden ser incluidas en un bloque en su secuencia específica exacta).\nEn el lado de la billetera, la integración de IPFS permite almacenar datos (como NFTs) de manera eficiente en un modo descentralizado mientras se reduce la inflación de la cadena de bloques. Por lo tanto, cada billetera de Beam hoy es al mismo tiempo un nodo de la cadena de bloques (para enviar transacciones y verificar bloques), un nodo SBBS (para permitir una comunicación segura entre billeteras) y un nodo IPFS (para permitir almacenamiento descentralizado, incluyendo la distribución de interfaces de aplicaciones descentralizadas).\nEsta bifurcación dura se llevó a cabo sin problemas y la dificultad se mantuvo bastante estable.",
         "links": {
           "1": {
@@ -344,7 +344,7 @@
       },
       "5": {
         "title": "Quinta Bifurcación Dura (y billetera v7.1)",
-        "year": "2023",
+        "year": "Septiembre 2022",
         "text": "Como se discutió en el Foro de Beam, esta bifurcación dura redujo el costo de emisión de Activos Confidenciales de 3000 a solo 10 BEAM. El resultado se puede ver en los CAs creados (o recreados) después de la bifurcación.\nLa bifurcación dura también agregó mejoras en los contratos inteligentes que les permiten verificar alturas de bifurcación (para admitir funciones dependientes de la bifurcación). En el lado de la billetera, se mejoró el soporte de DApp para el Sistema de Nombres Anónimos de Beam (BANS).",
         "links": {
           "1": {
@@ -354,6 +354,17 @@
           "2": {
             "title": "Publicación del foro para BIP-1",
             "link": "https://forum.beam.mw/t/bip-1-reduce-ca-minting-cost/116"
+          }
+        }
+      },
+      "6": {
+        "title": "Sexta Bifurcación Dura (y billetera v7.6)",
+        "year": "Julio 2026",
+        "text": "Esta bifurcación dura de emergencia corrigió una vulnerabilidad sutil en la implementación de Bulletproofs (pruebas de rango) de Beam, divulgada de forma responsable por MonclairTrades. Un error en el orden de la secuencia de desafío-respuesta de Fiat-Shamir dentro del argumento de producto interno (IPA) dejó sin fijar los puntos L/R finales, lo que -en teoría- podría utilizarse para falsificar una salida de transacción con un importe negativo.\nEl fallo había eludido múltiples auditorías de seguridad profesionales, así como agentes de IA de última generación. Se contactó directamente con los pools de minería y los exchanges para que actualizaran antes de cualquier divulgación pública, y un análisis completo del historial de la blockchain no encontró ningún patrón que indicara explotación.",
+        "links": {
+          "1": {
+            "title": "Divulgación completa",
+            "link": "/blog/news/hardfork-six"
           }
         }
       }
@@ -366,7 +377,7 @@
     "downloadWallet": "Descarga Beam Wallet",
     "downloadButton": "Descargar para {platform}",
     "started": {
-      "title": "¡Tu cartera Beam está en camino!",
+      "title": "¡Tu billetera Beam está en camino!",
       "message": "Gracias por elegir Beam. Mientras esperas a que se complete la descarga, ¿por qué no explorar la riqueza de características y consejos en la [documentación de Beam]({documentation})?"
     },
     "divider": "o",
@@ -524,7 +535,7 @@
       "beamForum": "Foro Beam",
       "beamBlog": "Blog Beam",
       "roadmap": "Hoja de ruta",
-      "hardfork": "Horquillas duras",
+      "hardfork": "Bifurcaciones duras",
       "newsletter": "Boletín de noticias"
     },
     "community": {
@@ -533,6 +544,9 @@
       "discord": "Discord",
       "reddit": "Reddit",
       "qq": "Grupo QQ"
+    },
+    "communityprojects": {
+      "title": "Proyectos de la comunidad"
     },
     "developers": {
       "title": "Desarrolladores",

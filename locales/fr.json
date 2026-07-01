@@ -41,7 +41,7 @@
     "learnmore": "En savoir plus",
     "learnmoreabout": "En savoir plus sur \"{title}\"",
     "1": {
-      "title": "Confidentialité ultime",
+      "title": "Confidentialité sans compromis",
       "text": "Choisissez des transactions de confidentialité standard pour un anonymat robuste ou des transactions de confidentialité maximale avec un ensemble d'anonymat de 64k – la confidentialité est par défaut pour tous."
     },
     "2": {
@@ -58,11 +58,11 @@
     },
     "5": {
       "title": "Contrats intelligents confidentiels",
-      "text": "La Beam Virtual Machine permet l'exécution de dApps confidentiels en utilisant WASM. Les shaders de contrats gèrent la logique métier, tandis que les shaders d'application gèrent les couches de présentation pour une intégration facile dans le portefeuille."
+      "text": "La Beam Virtual Machine permet l'exécution de dApps confidentielles en utilisant WASM. Les shaders de contrats gèrent la logique métier, tandis que les shaders d'application gèrent les couches de présentation pour une intégration facile dans le portefeuille."
     },
     "6": {
       "title": "Expérience utilisateur exceptionnelle",
-      "text": "Portefeuilles Beam conviviaux pour mobile et bureau au design épuré. Deux types de transactions: communication de portefeuille interactive et transactions simples d'envoi et d'oubli similaires à Bitcoin."
+      "text": "Portefeuilles Beam conviviaux pour mobile et bureau au design épuré. Deux types de transactions : communication de portefeuille interactive et transactions simples d'envoi et d'oubli similaires à Bitcoin."
     }
   },
   "faq": {
@@ -130,7 +130,7 @@
     "title": "Feuille de route de développement",
     "milestones": {
       "1": {
-        "title": "Atome Agile",
+        "title": "Agile Atom",
         "year": "2019",
         "items": {
           "1": "API de paiement et d'échange",
@@ -139,19 +139,19 @@
         }
       },
       "2": {
-        "title": "Boson Lumineux",
+        "title": "Bright Boson",
         "year": "2019",
         "items": {
           "1": "Portefeuilles Android et iOS",
           "2": "Intégration des plateformes de paiement",
-          "3": "Synchronisation rapide des noeuds",
+          "3": "Synchronisation rapide des nœuds",
           "4": "Confirmation de paiement",
-          "5": "Preuve de concept Anywhere Beam",
+          "5": "Preuve de concept Beam Anywhere",
           "6": "Portefeuille froid"
         }
       },
       "3": {
-        "title": "Cathode Claire",
+        "title": "Clear Cathode",
         "year": "2019",
         "items": {
           "1": "Swap atomique Beam ↔ BTC, LTC, QTUM (portefeuille de bureau)",
@@ -161,7 +161,7 @@
         }
       },
       "4": {
-        "title": "Doppler Double",
+        "title": "Double Doppler",
         "year": "2020",
         "items": {
           "1": "Place de marché de swaps atomiques (portefeuille de bureau) et API",
@@ -172,7 +172,7 @@
         }
       },
       "5": {
-        "title": "Électron Eager",
+        "title": "Eager Electron",
         "year": "2020",
         "items": {
           "1": "Actifs confidentiels sur le mainnet",
@@ -180,11 +180,11 @@
           "3": "Lelantus MW",
           "4": "Paiement à sens unique",
           "5": "Synchronisation du solde avec la même phrase secrète",
-          "6": "Noeud mobile"
+          "6": "Nœud mobile"
         }
       },
       "6": {
-        "title": "Fermion Féroce",
+        "title": "Fierce Fermion",
         "year": "2021",
         "items": {
           "1": "Machine virtuelle Beam dans le portefeuille et le nœud",
@@ -192,7 +192,7 @@
         }
       },
       "7": {
-        "title": "Gluon Groovy",
+        "title": "Groovy Gluon",
         "year": "2022",
         "items": {
           "1": "Intégration IPFS",
@@ -211,7 +211,7 @@
         "items": {
           "1": "Lancement de l'AMM DEX",
           "2": "DApp de farming de liquidités BeamX",
-          "3": "BEAM enveloppé sur Ethereum",
+          "3": "BEAM encapsulé sur Ethereum",
           "4": "Pont Ethereum (ETH, USDT, WBTC, DAI)",
           "5": "Support pour portefeuilles HW (Ledger Nano S et Nano S Plus)",
           "6": "DApp Beam Messenger dans Beam Wallet",
@@ -276,7 +276,7 @@
     "hardforks": {
       "1": {
         "title": "Première Hard-Fork",
-        "year": "2019",
+        "year": "Août 2019",
         "text": "La première hard-fork de Beam a été réalisée comme annoncé dans la feuille de route. L'algorithme PoW a été mis à jour de BeamHash I à BeamHash II, qui sont des améliorations de l'Equihash de base sur lequel ils sont basés. \n La stratégie de Beam avec ces changements prévus de l'algorithme de minage était de donner un avantage initial aux mineurs GPU, puis de permettre à des ASICs bon marché de rejoindre sans perturber l'écosystème de minage.\nAprès cette hard-fork, une baisse de la difficulté a été observée car tous les mineurs n'ont pas effectué la mise à jour à temps. \nCependant, après moins de 24 heures, le taux de hachage était revenu à sa valeur avant la fork.",
         "links": {
           "1": {
@@ -287,7 +287,7 @@
       },
       "2": {
         "title": "Deuxième Hard-Fork",
-        "year": "2020",
+        "year": "Juin 2020",
         "text": "La deuxième hard-fork de Beam a été réalisée comme annoncé dans la feuille de route. L'algorithme PoW a été mis à jour de BeamHash II à BeamHash III, qui est la version finale dans la stratégie prévue pour équilibrer le minage GPU et ASIC. \nCette hard-fork a également vu l'activation des Actifs Confidentiels (parfois aussi appelés 'Tokens de Confidentialité', et qui ont été introduits lors de la première hard-fork mais maintenus inactifs) et le lancement du protocole Lelantus-MW et de ses paiements unilatéraux associés (également connus sous le nom de transactions hors ligne).",
         "links": {
           "1": {
@@ -306,7 +306,7 @@
       },
       "3": {
         "title": "Troisième Hard-Fork (et portefeuille v6.0)",
-        "year": "2021",
+        "year": "Juin 2021",
         "text": "Cette hard-fork a introduit la Machine Virtuelle Beam (BVM) comme infrastructure pour créer des Contrats Intelligents (aussi appelés 'Shaders'), faisant de Beam la première cryptomonnaie axée sur la confidentialité avec des capacités de contrats intelligents !\nLes contrats intelligents BVM peuvent être écrits dans n'importe quel langage compatible WebAssembly (tel que C++, Rust, Go, etc.) et sont composés de deux éléments : le côté blockchain (fonctionnant sur les nœuds Beam) et le côté portefeuille (fonctionnant dans le portefeuille Beam, avec les interfaces DApp).\nCette séparation entre la logique côté chaîne et côté client permet des applications très puissantes et flexibles.\nLes contrats intelligents Beam sont transparents par défaut, ce qui signifie que nous pouvons voir leur état et leur activité. Cependant, les utilisateurs restent anonymes, car leurs interactions avec les contrats intelligents se font par le biais de transactions confidentielles normales de Beam. Avec cette approche, le DeFi de Beam parvient à fournir des marchés 'efficaces' (par exemple, où nous pouvons voir ce qui est acheté et vendu) tout en protégeant la vie privée de ses utilisateurs (par exemple, nous ne pouvons pas voir qui achète et vend !).\nEn permettant de telles capacités de contrats intelligents préservant la vie privée, cette hard-fork a ouvert la voie à Beam pour devenir non seulement une puissante plateforme 'Privacy DeFi' (PriFi) mais aussi une infrastructure polyvalente pour tout dans le Confidential Web3 !",
         "links": {
           "1": {
@@ -329,7 +329,7 @@
       },
       "4": {
         "title": "Quatrième Hard-Fork (et portefeuille v7.0)",
-        "year": "2022",
+        "year": "Juin 2022",
         "text": "Cette hard-fork a introduit les 'Transactions Haute Fréquence' (HFTX) sur les côtés du nœud et du portefeuille, ainsi que l'intégration du stockage IPFS du côté du portefeuille. Les HFTX améliorent la résistance aux MEV, aux attaques de front-running et aux attaques de sandwich en définissant des règles strictes d'inclusion des transactions, protégeant ainsi les utilisateurs des résultats indésirables (les transactions soumises ne peuvent être incluses dans un bloc que dans leur séquence spécifique exacte).\nDu côté du portefeuille, l'intégration IPFS permet de stocker des données (comme des NFTs) de manière décentralisée tout en réduisant le gonflement de la blockchain. Ainsi, chaque portefeuille Beam est aujourd'hui à la fois un nœud blockchain (pour soumettre des transactions et vérifier des blocs), un nœud SBBS (pour permettre une communication sécurisée entre portefeuilles) et un nœud IPFS (pour permettre le stockage décentralisé, y compris pour la distribution des interfaces DApp).\nCette Hard Fork s'est déroulée sans problème et la difficulté est restée relativement stable.",
         "links": {
           "1": {
@@ -344,7 +344,7 @@
       },
       "5": {
         "title": "Cinquième Hard-Fork (et portefeuille v7.1)",
-        "year": "2023",
+        "year": "Septembre 2022",
         "text": "Comme discuté sur le Forum Beam, cette hard-fork a réduit le coût d'émission des Actifs Confidentiels de 3000 à seulement 10 BEAM. Le résultat peut être vu dans les CAs créés (ou recréés) après la fork. \nLa hard-fork a également ajouté des améliorations aux contrats intelligents leur permettant de vérifier les hauteurs de fork (pour supporter des fonctionnalités dépendantes des forks). Du côté du portefeuille, le support des DApps pour le Système de Noms Anonymes de Beam (BANS) a été amélioré.",
         "links": {
           "1": {
@@ -354,6 +354,17 @@
           "2": {
             "title": "Publication du forum pour BIP-1",
             "link": "https://forum.beam.mw/t/bip-1-reduce-ca-minting-cost/116"
+          }
+        }
+      },
+      "6": {
+        "title": "Sixième Hard-Fork (et portefeuille v7.6)",
+        "year": "Juillet 2026",
+        "text": "Cette hard-fork d'urgence a corrigé une vulnérabilité subtile dans l'implémentation des Bulletproofs (preuves d'intervalle) de Beam, divulguée de manière responsable par MonclairTrades. Une erreur dans l'ordre de la séquence défi-réponse de Fiat-Shamir au sein de l'argument de produit interne (IPA) laissait les points L/R finaux non fixés, ce qui pourrait -en théorie- être utilisé pour forger une sortie de transaction détenant un montant négatif.\nLa faille avait échappé à plusieurs audits de sécurité professionnels ainsi qu'à des agents d'IA de pointe. Les pools de minage et les plateformes d'échange ont été contactés directement pour effectuer la mise à jour avant toute divulgation publique, et une analyse complète de l'historique de la blockchain n'a révélé aucun schéma indiquant une exploitation.",
+        "links": {
+          "1": {
+            "title": "Divulgation complète",
+            "link": "/blog/news/hardfork-six"
           }
         }
       }
@@ -388,7 +399,7 @@
     },
     "type": {
       "wallet": "Portefeuille",
-      "cli": "CLI",
+      "cli": "Interface de ligne de commande",
       "node": "Nœud",
       "apk": "APK",
       "appstore": "App Store"
@@ -462,7 +473,7 @@
     },
     "9": {
       "title": "Coordonnées",
-      "content": "Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité ou nos pratiques en matière de confidentialité, n'hésitez pas à nous contacter à:\n\n**Beam Foundation Limited**\nE-mail : {support}"
+      "content": "Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité ou nos pratiques en matière de confidentialité, n'hésitez pas à nous contacter à :\n\n**Beam Foundation Limited**\nE-mail : {support}"
     }
   },
   "docs": {
@@ -524,7 +535,7 @@
       "beamForum": "Forum Beam",
       "beamBlog": "Blog Beam",
       "roadmap": "Feuille de route",
-      "hardfork": "Fourches dures",
+      "hardfork": "Hard Forks",
       "newsletter": "Lettre d'information"
     },
     "community": {
@@ -544,6 +555,9 @@
       "title": "Mineurs",
       "startMining": "Commencer à miner",
       "support": "Support"
+    },
+    "communityprojects": {
+      "title": "Projets communautaires"
     },
     "contact": "Contactez-nous",
     "mediakit": "Kit média (Zip)",

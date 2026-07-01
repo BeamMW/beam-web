@@ -42,11 +42,11 @@
     "learnmoreabout": "Erfahren Sie mehr über \"{title}\"",
     "1": {
       "title": "Kompromisslose Privatsphäre",
-      "text": "Wählen Sie standardmäßige Privatstransaktionen für starke Anonymität oder Transaktionen mit maximaler Anonymitätsmenge und einer 64k Anonymitätsmenge – Privatsphäre ist standardmäßig für alle."
+      "text": "Wählen Sie standardmäßige private Transaktionen für starke Anonymität oder Transaktionen mit maximaler Anonymitätsmenge und einer 64k Anonymitätsmenge – Privatsphäre ist standardmäßig für alle."
     },
     "2": {
       "title": "Vertrauliche Vermögenswerte",
-      "text": "Verbinden, erstellen, handeln und handeln Sie Vermögenswerte auf Beams Blockchain mit Ihrer Wallet. Vermögenswerttransaktionen sind nicht von regulären Beam-Transaktionen zu unterscheiden."
+      "text": "Überbrücken, erstellen, übertragen und handeln Sie Vermögenswerte auf Beams Blockchain mit Ihrer Wallet. Vermögenswerttransaktionen sind nicht von regulären Beam-Transaktionen zu unterscheiden."
     },
     "3": {
       "title": "Vertrauliche DeFi & NFTs",
@@ -130,7 +130,7 @@
     "title": "Entwicklungs-Roadmap",
     "milestones": {
       "1": {
-        "title": "Agiler Atom",
+        "title": "Agile Atom",
         "year": "2019",
         "items": {
           "1": "Zahlungs- und Austausch-API",
@@ -139,7 +139,7 @@
         }
       },
       "2": {
-        "title": "Hell Boson",
+        "title": "Bright Boson",
         "year": "2019",
         "items": {
           "1": "Android- und iOS-Wallets",
@@ -151,7 +151,7 @@
         }
       },
       "3": {
-        "title": "Klares Kathod",
+        "title": "Clear Cathode",
         "year": "2019",
         "items": {
           "1": "Beam ↔ BTC, LTC, QTUM Atomic Swap (Desktop-Wallet)",
@@ -161,7 +161,7 @@
         }
       },
       "4": {
-        "title": "Doppel-Doppler",
+        "title": "Double Doppler",
         "year": "2020",
         "items": {
           "1": "Marktplatz für Atomic Swaps (Desktop-Wallet) und API",
@@ -172,7 +172,7 @@
         }
       },
       "5": {
-        "title": "Eifriges Elektron",
+        "title": "Eager Electron",
         "year": "2020",
         "items": {
           "1": "Vertrauliche Vermögenswerte im Mainnet",
@@ -184,7 +184,7 @@
         }
       },
       "6": {
-        "title": "Grimmiges Fermion",
+        "title": "Fierce Fermion",
         "year": "2021",
         "items": {
           "1": "Beam Virtual Machine in Wallet und Node",
@@ -276,7 +276,7 @@
     "hardforks": {
       "1": {
         "title": "Erster Hard-Fork",
-        "year": "2019",
+        "year": "August 2019",
         "text": "Beams erster Hard-Fork wurde wie im Fahrplan angekündigt durchgeführt. Der PoW-Algorithmus wurde von BeamHash I auf BeamHash II aktualisiert, was Upgrades vom ursprünglichen Equihash sind, auf dem sie basieren.\nBeams Strategie bei diesen geplanten Änderungen des Mining-Algorithmus bestand darin, GPU-Miner zu bevorzugen und dann billige ASICs hinzuzufügen, ohne das Mining-Ökosystem zu stören.\nNach diesem Hard-Fork wurde ein Rückgang der Schwierigkeit beobachtet, da nicht alle Miner rechtzeitig ein Upgrade durchgeführt haben.\nJedoch kehrte die Hashrate nach weniger als 24 Stunden zu ihrem Wert vor dem Fork zurück.",
         "links": {
           "1": {
@@ -287,7 +287,7 @@
       },
       "2": {
         "title": "Zweiter Hard-Fork",
-        "year": "2020",
+        "year": "Juni 2020",
         "text": "Beams zweiter Hard-Fork wurde wie im Fahrplan angekündigt durchgeführt. Der PoW-Algorithmus wurde von BeamHash II auf BeamHash III aktualisiert, was die letzte Version in der geplanten Strategie ist, um GPU- und ASIC-Mining auszubalancieren.\nDieser Hard-Fork sah auch die Aktivierung der Confidential Assets (manchmal auch 'Privacy Tokens' genannt, die im ersten Hard-Fork eingeführt, aber inaktiv gehalten wurden) und die Veröffentlichung des Lelantus-MW-Protokolls und seiner zugehörigen Einwegzahlungen (auch bekannt als Offline-Transaktionen).",
         "links": {
           "1": {
@@ -306,7 +306,7 @@
       },
       "3": {
         "title": "Dritter Hard-Fork (und Wallet v6.0)",
-        "year": "2021",
+        "year": "Juni 2021",
         "text": "Dieser Hard-Fork brachte die Einführung der Beam Virtual Machine (BVM) als Infrastruktur zur Erstellung von Smart Contracts (auch 'Shaders' genannt), wodurch Beam die erste Privacy-Coin mit Smart Contracts Fähigkeiten wurde!\nBVM-Smart Contracts können in jeder WebAssembly-kompatiblen Sprache (wie C++, Rust, Go, etc.) geschrieben werden und bestehen aus zwei Elementen: der Blockchain-Seite (laufend auf Beam-Nodes) und der Wallet-Seite (laufend in Beam-Wallet, zusammen mit den DApp-Frontends). Diese Trennung von Chain-Seite und Client-Seite Logik ermöglicht sehr leistungsfähige und flexible Anwendungen.\nBeam-Smart Contracts sind standardmäßig transparent, was bedeutet, dass wir ihren Zustand und ihre Aktivität sehen können. Dennoch bleiben die Nutzer anonym, da ihre Interaktionen mit den Smart Contracts auf normalen vertraulichen Beam-Transaktionen basieren. Mit diesem Ansatz schafft es Beams DeFi, 'effiziente' Märkte zu bieten (z. B. wo wir sehen können, was gekauft und verkauft wird), während die Privatsphäre der Nutzer geschützt bleibt (z. B. wir können nicht sehen, wer kauft und verkauft).\nDurch die Ermöglichung solcher privatsphäreschützenden Smart Contract Fähigkeiten öffnete dieser Hard-Fork die Türen für Beam, nicht nur eine leistungsstarke 'Privacy DeFi' (PriFi) Plattform zu werden, sondern in der Tat eine allgemeine Infrastruktur für alles im vertraulichen Web3!",
         "links": {
           "1": {
@@ -329,7 +329,7 @@
       },
       "4": {
         "title": "Vierter Hard-Fork (und Wallet v7.0)",
-        "year": "2022",
+        "year": "Juni 2022",
         "text": "Dieser Hard-Fork führte 'High-Frequency Transactions' (HFTX) sowohl auf Node- als auch auf Wallet-Seite ein, und die IPFS-Speicherintegration auf der Wallet-Seite. HFTX verbessern den Widerstand gegen MEV-, Front-Running- und Sandwich-Angriffe, indem sie strenge Einschlussregeln für Transaktionen definieren und somit die Nutzer vor unerwünschten Ergebnissen schützen (da die eingereichten Transaktionen nur in ihrer genauen spezifischen Reihenfolge in einen Block aufgenommen werden können).\nAuf der Wallet-Seite ermöglicht die IPFS-Integration die effiziente Speicherung von Daten (wie NFTs) auf dezentrale Weise und reduziert gleichzeitig die Blockchain-Bloat. Somit ist heute jede Beam-Wallet gleichzeitig ein Blockchain-Node (zum Einreichen von Transaktionen und Verifizieren von Blöcken), ein SBBS-Node (zur sicheren Kommunikation zwischen Wallets) und ein IPFS-Node (zur dezentralen Speicherung, einschließlich der Verteilung von DApp-Frontends).\nDieser Hard-Fork verlief reibungslos und die Schwierigkeit blieb relativ stabil.",
         "links": {
           "1": {
@@ -344,7 +344,7 @@
       },
       "5": {
         "title": "Fünfter Hard-Fork (und Wallet v7.1)",
-        "year": "2023",
+        "year": "September 2022",
         "text": "Wie im Beam-Forum diskutiert, reduzierte dieser Hard-Fork die Ausgabekosten für vertrauliche Assets von 3000 auf nur 10 BEAM. Das Ergebnis ist in den nach dem Fork erstellten (oder neu erstellten) CAs zu sehen.\nDer Hard-Fork fügte auch Smart Contracts-Verbesserungen hinzu, die es ihnen ermöglichen, Fork-Höhen zu überprüfen (zur Unterstützung von Fork-abhängigen Funktionen). Auf der Wallet-Seite wurde die DApp-Unterstützung für das BANS (Beam Anonymous Name System) verbessert.",
         "links": {
           "1": {
@@ -354,6 +354,17 @@
           "2": {
             "title": "Forum-Beitrag für BIP-1",
             "link": "https://forum.beam.mw/t/bip-1-reduce-ca-minting-cost/116"
+          }
+        }
+      },
+      "6": {
+        "title": "Sechster Hard-Fork (und Wallet v7.6)",
+        "year": "Juli 2026",
+        "text": "Dieser Notfall-Hard-Fork behob eine subtile Schwachstelle in Beams Bulletproofs-Rangeproof-Implementierung, die verantwortungsvoll von MonclairTrades offengelegt wurde. Ein Fehler in der Reihenfolge der Fiat-Shamir-Challenge-Response-Sequenz innerhalb des Inner-Product-Arguments (IPA) ließ die letzten L/R-Punkte ungebunden, was -theoretisch- genutzt werden könnte, um einen Transaktionsausgang mit einem negativen Betrag zu fälschen.\nDie Schwachstelle war mehreren professionellen Sicherheitsaudits sowie modernsten KI-Agenten entgangen. Mining-Pools und Börsen wurden direkt kontaktiert, um vor jeder öffentlichen Offenlegung zu aktualisieren, und ein vollständiger Scan der Blockchain-Historie ergab kein Muster, das auf eine Ausnutzung hindeutet.",
+        "links": {
+          "1": {
+            "title": "Vollständige Offenlegung",
+            "link": "/blog/news/hardfork-six"
           }
         }
       }
@@ -544,6 +555,9 @@
       "title": "Miner",
       "startMining": "Mining starten",
       "support": "Support"
+    },
+    "communityprojects": {
+      "title": "Community-Projekte"
     },
     "contact": "Kontaktieren Sie uns",
     "mediakit": "Medienkit (Zip)",

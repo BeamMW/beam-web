@@ -2,14 +2,14 @@
   <transition name="fade" @after-leave="$emit('close')">
     <div
       v-if="visible"
-      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4"
       @click="handleOverlayClick"
     >
       <div
-        class="bg-[#042148ec] border-opacity-10 border border-black rounded-lg w-full max-w-lg p-6 shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
+        class="bg-[#042148ec] border-opacity-10 border border-black rounded-lg w-full max-w-lg max-h-[90vh] flex flex-col p-6 shadow-[0px_0px_0px_1px_rgba(255,255,255,.05)_inset]"
         @click.stop
       >
-        <div class="flex justify-between items-center mb-4">
+        <div class="flex justify-between items-center mb-4 shrink-0">
           <h2 class="text-xl font-semibold">{{ title }}</h2>
           <button
             class="text-gray-600 hover:text-gray-900"
@@ -31,7 +31,7 @@
             </svg>
           </button>
         </div>
-        <div>
+        <div class="overflow-y-auto -mr-2 pr-2">
           <p v-html="formattedText"></p>
           <div class="flex flex-col gap-3 mt-3">
             <LayoutLink
