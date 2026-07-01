@@ -394,6 +394,7 @@
         "wallet": "钱包文件校验和 (SHA256)",
         "cli": "CLI 钱包文件校验和 (SHA256)",
         "node": "节点文件校验和 (SHA256)",
+        "api": "钱包 API 文件校验和 (SHA256)",
         "apk": "APK 钱包文件校验和 (SHA256)"
       }
     },
@@ -401,6 +402,7 @@
       "wallet": "钱包",
       "cli": "命令行界面",
       "node": "节点",
+      "api": "钱包 API",
       "apk": "APK",
       "appstore": "App Store"
     },

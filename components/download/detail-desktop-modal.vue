@@ -22,6 +22,11 @@ defineProps({
     type: String,
     required: true,
   },
+  linkWalletApiFile: {
+    type: String,
+    required: false,
+    default: "",
+  },
   checksumWallet: {
     type: String,
     required: true,
@@ -34,6 +39,11 @@ defineProps({
     type: String,
     required: true,
   },
+  checksumWalletApi: {
+    type: String,
+    required: false,
+    default: "",
+  },
 });
 </script>
 <template>
@@ -45,7 +55,8 @@ defineProps({
       <p class="text-white">
         {{ version }}
         ({{ convertUNIXTimestampToLocaleDate(date, localeProperties.iso) }})
-        &middot;
+      </p>
+      <p class="mt-1 text-white">
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink
             v-if="linkWalletFile"
@@ -72,6 +83,16 @@ defineProps({
             :title="t('downloads.type.node')"
           />
         </span>
+        <template v-if="linkWalletApiFile">
+          &middot;
+          <span class="text-beam-blue font-bold">
+            <DownloadAlternativeLink
+              :link="linkWalletApiFile"
+              :checksum="checksumWalletApi"
+              :title="t('downloads.type.api')"
+            />
+          </span>
+        </template>
       </p>
     </div>
     <div v-if="checksumWallet" class="pt-3">
@@ -96,6 +117,14 @@ defineProps({
       </h6>
       <LayoutCopyToClipboard :text="checksumNode">
         {{ checksumNode }}
+      </LayoutCopyToClipboard>
+    </div>
+    <div v-if="checksumWalletApi" class="pt-3">
+      <h6 class="font-bold">
+        {{ $t("downloads.detailswindow.checksums.api") }}
+      </h6>
+      <LayoutCopyToClipboard :text="checksumWalletApi">
+        {{ checksumWalletApi }}
       </LayoutCopyToClipboard>
     </div>
     <div class="pt-3">

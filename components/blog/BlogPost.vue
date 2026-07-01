@@ -404,6 +404,23 @@ useHead({
   @apply text-purple-100/90 font-mono text-sm;
 }
 
+/* Tailwind Typography adds literal backtick characters around inline
+   code via ::before/::after — remove them */
+.prose :deep(code)::before,
+.prose :deep(code)::after {
+  content: none;
+}
+
+/* Inline code (not fenced blocks) gets a subtle chip look */
+.prose :deep(:not(pre) > code) {
+  @apply bg-purple-900/40 border border-purple-100/10 rounded px-1.5 py-0.5 text-beam-green;
+}
+
+/* Inline code inside a link should read as a link, not plain code */
+.prose :deep(a > code) {
+  @apply text-beam-blue;
+}
+
 .prose :deep(table) {
   @apply w-full my-6 border-collapse;
 }

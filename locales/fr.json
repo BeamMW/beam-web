@@ -394,6 +394,7 @@
         "wallet": "Vérification du fichier portefeuille (SHA256)",
         "cli": "Vérification du fichier portefeuille CLI (SHA256)",
         "node": "Vérification du fichier de nœud (SHA256)",
+        "api": "Vérification du fichier API du portefeuille (SHA256)",
         "apk": "Vérification du fichier APK (SHA256)"
       }
     },
@@ -401,6 +402,7 @@
       "wallet": "Portefeuille",
       "cli": "Interface de ligne de commande",
       "node": "Nœud",
+      "api": "API du portefeuille",
       "apk": "APK",
       "appstore": "App Store"
     },

@@ -394,6 +394,7 @@
         "wallet": "Soma de verificação do arquivo da carteira (SHA256)",
         "cli": "Soma de verificação do arquivo da CLI da carteira (SHA256)",
         "node": "Soma de verificação do arquivo do nó (SHA256)",
+        "api": "Soma de verificação do arquivo da API da carteira (SHA256)",
         "apk": "Soma de verificação do arquivo APK (SHA256)"
       }
     },
@@ -401,6 +402,7 @@
       "wallet": "Carteira",
       "cli": "Interface de linha de comando",
       "node": "Nó",
+      "api": "API da carteira",
       "apk": "APK",
       "appstore": "App Store"
     },

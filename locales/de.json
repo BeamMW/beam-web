@@ -394,6 +394,7 @@
         "wallet": "Wallet-Datei-Prüfsumme (SHA256)",
         "cli": "CLI-Wallet-Datei-Prüfsumme (SHA256)",
         "node": "Node-Datei-Prüfsumme (SHA256)",
+        "api": "Wallet-API-Datei-Prüfsumme (SHA256)",
         "apk": "APK-Datei-Prüfsumme (SHA256)"
       }
     },
@@ -401,6 +402,7 @@
       "wallet": "Wallet",
       "cli": "Befehlszeilenschnittstelle",
       "node": "Node",
+      "api": "Wallet-API",
       "apk": "APK",
       "appstore": "App Store"
     },

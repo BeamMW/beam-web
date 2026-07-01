@@ -5,6 +5,7 @@ type PlatformDownloadType = {
   wallet: string;
   cli: string;
   node: string;
+  api: string;
 };
 
 interface PlatformDownloadDetail {
