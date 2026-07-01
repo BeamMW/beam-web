@@ -3,7 +3,6 @@ title: "Hard Fork Six"
 description: "Beam completed an emergency hard fork to patch a subtle Bulletproofs rangeproof vulnerability that eluded multiple professional audits and AI reviews. Read the technical breakdown, our risk assessment, and the proposed lustration process for verifying supply integrity."
 date: "2026-07-01"
 category: "news"
-image: "/images/blog/news/hard-fork-completed/01.jpg"
 tags:
   - "Hard Fork"
   - "Emergency"
@@ -13,7 +12,7 @@ tags:
 
 The Beam developers were contacted on June 13th 2026 with a report about a possible vulnerability in Beam core code. As the former Beam team still proposes bounties for serious vulnerabilities, many such reports have been received lately, most of them being AI slop without any real interest. However, after careful examination and testing during the next few days, that one report proved to indeed identify a well hidden, but real and important vulnerability.
 
-With the deep analysis done and the problem well identified, the core code was corrected in a non-public branch, and direct contact was made with the main mining pools and exchanges to ask them to upgrade to the new version, so that any further risk of exploitation of this vulnerability would be eliminated.
+With the deep analysis done and the problem well identified, the core code was corrected in a non-public branch, and direct contact was made with the main mining pools and exchanges to ask them to upgrade to the new version, so that any further risk of exploitation of this vulnerability would be eliminated. The hard fork took place at block 3928666.
 
 ## Technical details
 
@@ -34,13 +33,13 @@ Kudelski (kudelskisecurity.com)
 Least Authority (leastauthority.com) 
 SmartDec (now pessimistic.io)
 
-More recently, with the rise of AI, several AI agents were used to scan the Beam codebase for security vulnerabilities. Both Claude Opus 4.8 and ChatGPT Codex were used, and neither found anything serious.
+More recently, with the rise of AI, several AI agents were used to scan the Beam codebase for security vulnerabilities. Both Claude Opus 4.8 and ChatGPT Codex were used, and neither found anything serious over multiple runs.
 
 Moreover, after the above vulnerability was discovered, these AI agents were asked to specifically check again the bulletproof implementation. And, again, they didn't find any problem with it.
 
 ## Our assessment at the moment
 
-The developers currently involved with Beam consider that the probability of this vulnerability having been exploited is low.
+The Beam developers consider that the probability of this vulnerability having been exploited is low.
 
 Several aspects lead to this assessment:
 
@@ -48,7 +47,14 @@ Several aspects lead to this assessment:
 
 2. The current low market cap of Beam makes exploiting it not justified economically. Receiving a bounty for the vulnerability disclosure makes far more sense than taking the risk of exploiting the Beam blockchain.
 
-3. If done naively (for instance by asking an AI to create a working proof of concept, and then try using it) such an attack would leave a pattern that can be recognized. Since the vulnerability was reported, the entire blockchain history has been scanned, and no such pattern was identified.
+3. If done naively (for instance by asking an AI to create a working proof of concept, and then try using it) such an attack could leave a pattern that can be recognized. Since the vulnerability was reported, the entire blockchain history has been scanned, and no such pattern was identified.
+
+4. We are aware that there was a harsh Beam coin price decline recently. We analyzed the public trading data: trading volumes, possible price discrepancies between exchanges, unusual activities, etc. We believe there is no evidence that suggests the hidden inflation exploitation.
+Prior to the price drop, the first anomaly we see is the sudden trade volume drop on MEXC (used to be the biggest exchange for Beam) on 2026-06-12. We don’t know the exact reason for this, probably the Market maker was deactivated. Immediately after this the Beam price started declining.
+Then, during the following days, there was a surge in the Beam trade volume on the Non-KYC exchange. But this surge (1) albeit high for this exchange, still was much lower than normal daily volume on MEXC before the drop, (2) lasted for some period, then stopped on 2026-06-29.
+
+If the Beam price decline would’ve been due to hidden inflation, we’d expect to see an overall increase in market volume, not decline. The spike in trading volume on NonKYC probably indicates big holders (whales) cashing-out.
+
 
 ## The next steps
 
@@ -67,5 +73,3 @@ If and when the community chooses to do this, an additional network upgrade will
 The Beam developers would like to thank MonclairTrades for the responsible disclosure of this vulnerability.
 
 This discovery underscores the enduring value of careful cryptographic review, which allowed identifying such a subtle flaw that eluded multiple professional audits as well as state-of-the-art AI agents. The strength of Beam’s privacy guarantees depends on the robustness of its underlying cryptography, and that robustness is, in the end, upheld by the vigilance of the people who read and challenge the code.
-
-
