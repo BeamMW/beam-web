@@ -22,8 +22,13 @@ const props = defineProps({
 const {
   version,
   date,
-  links: { wallet, cli, node },
-  checksums: { wallet: walletChecksum, cli: cliChecksum, node: nodeChecksum },
+  links: { wallet, cli, node, api },
+  checksums: {
+    wallet: walletChecksum,
+    cli: cliChecksum,
+    node: nodeChecksum,
+    api: apiChecksum,
+  },
 } = platformDetails[props.platform] ?? {};
 </script>
 <template>
@@ -64,9 +69,11 @@ const {
         :link-wallet-file="wallet"
         :link-wallet-cli-file="cli"
         :link-node-file="node"
+        :link-wallet-api-file="api"
         :checksum-wallet="walletChecksum"
         :checksum-wallet-cli="cliChecksum"
         :checksum-node="nodeChecksum"
+        :checksum-wallet-api="apiChecksum"
       />
     </DownloadDetailLink>
   </DownloadPlatformGet>

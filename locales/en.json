@@ -394,6 +394,7 @@
         "wallet": "Wallet File Checksum (SHA256)",
         "cli": "CLI Wallet File Checksum (SHA256)",
         "node": "Node File Checksum (SHA256)",
+        "api": "Wallet API File Checksum (SHA256)",
         "apk": "APK File Checksum (SHA256)"
       }
     },
@@ -401,6 +402,7 @@
       "wallet": "Wallet",
       "cli": "Command Line Interface",
       "node": "Node",
+      "api": "Wallet API",
       "apk": "APK",
       "appstore": "App Store"
     },

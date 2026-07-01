@@ -394,6 +394,7 @@
         "wallet": "Checksum de archivo de billetera (SHA256)",
         "cli": "Checksum de archivo CLI de billetera (SHA256)",
         "node": "Checksum de archivo de nodo (SHA256)",
+        "api": "Checksum de archivo de API de billetera (SHA256)",
         "apk": "Checksum de archivo APK (SHA256)"
       }
     },
@@ -401,6 +402,7 @@
       "wallet": "Billetera",
       "cli": "Interfaz de línea de comandos",
       "node": "Nodo",
+      "api": "API de billetera",
       "apk": "APK",
       "appstore": "App Store"
     },
