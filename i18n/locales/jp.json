@@ -479,6 +479,10 @@
     }
   },
   "docs": {
+    "pager": {
+      "previous": "前へ",
+      "next": "次へ"
+    },
     "warning": "現在、ドキュメントが更新されており、しばらくの間、英語でのみアクセス可能です。",
     "types": {
       "ecosystem": "Beam & BeamX",

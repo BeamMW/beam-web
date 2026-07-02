@@ -479,6 +479,10 @@
     }
   },
   "docs": {
+    "pager": {
+      "previous": "上一頁",
+      "next": "下一頁"
+    },
     "warning": "目前，文档正在更新中，暂时仅支持英语。",
     "types": {
       "ecosystem": "Beam & BeamX",

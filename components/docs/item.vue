@@ -6,6 +6,50 @@
     <article class="docs-content">
       <CustomContentRenderer v-if="doc" :value="doc" />
       <h1 v-else>404 Not Found</h1>
+
+      <nav
+        v-if="previousPage || nextPage"
+        class="not-prose mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-4"
+      >
+        <LayoutLink
+          v-if="previousPage"
+          :to="pagerPath(previousPage.path)"
+          class="group flex flex-col gap-1 rounded-xl border border-purple-100/10 bg-[#360061]/40 hover:bg-[#360061] p-4 transition-colors sm:col-start-1"
+        >
+          <span
+            class="flex items-center gap-1.5 text-xs uppercase tracking-wide text-purple-100/50"
+          >
+            <Icon
+              name="layout/arrow-right"
+              class="w-3 h-3 rotate-180 rtl:rotate-0"
+            />
+            {{ $t("docs.pager.previous") }}
+          </span>
+          <span
+            class="font-bold text-purple-100 group-hover:text-beam-blue transition-colors line-clamp-1"
+          >
+            {{ previousPage.title }}
+          </span>
+        </LayoutLink>
+
+        <LayoutLink
+          v-if="nextPage"
+          :to="pagerPath(nextPage.path)"
+          class="group flex flex-col gap-1 rounded-xl border border-purple-100/10 bg-[#360061]/40 hover:bg-[#360061] p-4 transition-colors text-right sm:col-start-2 rtl:text-left"
+        >
+          <span
+            class="flex items-center justify-end gap-1.5 text-xs uppercase tracking-wide text-purple-100/50"
+          >
+            {{ $t("docs.pager.next") }}
+            <Icon name="layout/arrow-right" class="w-3 h-3 rtl:rotate-180" />
+          </span>
+          <span
+            class="font-bold text-purple-100 group-hover:text-beam-blue transition-colors line-clamp-1"
+          >
+            {{ nextPage.title }}
+          </span>
+        </LayoutLink>
+      </nav>
     </article>
 
     <aside
@@ -110,6 +154,29 @@ if (!currentPageExist) {
 const { data: doc } = await useAsyncData(`docs-${props.routeName}`, () =>
   queryCollection("docs").path(props.routeName).first(),
 );
+
+// Previous / next page navigation (issue #358). Content v3 returns the
+// surrounding pages in the collection's natural (file) order as [prev, next].
+const { data: surround } = await useAsyncData(
+  `docs-surround-${props.routeName}`,
+  () =>
+    queryCollectionItemSurroundings("docs", props.routeName, {
+      fields: ["title", "path", "description"],
+    }),
+);
+// Keep the pager within the current category only — a surrounding page that
+// belongs to another docs section (e.g. changelog → cli) is treated as a
+// boundary (no button) rather than followed.
+const inCurrentCategory = <T extends { path?: string }>(
+  page: T | null | undefined,
+): T | null =>
+  page?.path?.startsWith(`${props.currentCategory}/`) ? page : null;
+const previousPage = computed(() => inCurrentCategory(surround.value?.[0]));
+const nextPage = computed(() => inCurrentCategory(surround.value?.[1]));
+
+// A category README is served at `/docs/<category>/readme`; link to the clean
+// category path instead.
+const pagerPath = (path: string) => localePath(path.replace(/\/readme$/, ""));
 
 // All pages within the current category (prefix match on the path).
 const categoryQuery = queryCollection("docs").where(

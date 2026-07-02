@@ -479,6 +479,10 @@
     }
   },
   "docs": {
+    "pager": {
+      "previous": "Previous",
+      "next": "Next"
+    },
     "warning": "The documentation is presently undergoing updates and, at the moment, is exclusively available in English.",
     "types": {
       "ecosystem": "Beam & BeamX",

@@ -479,6 +479,10 @@
     }
   },
   "docs": {
+    "pager": {
+      "previous": "הקודם",
+      "next": "הבא"
+    },
     "warning": "התיעוד כרגע בתהליך עדכון וזמין רק באנגלית לשעת עתה.",
     "types": {
       "ecosystem": "Beam & BeamX",
