@@ -54,7 +54,9 @@ defineProps({
       </h6>
       <p class="text-white">
         {{ version }}
-        ({{ convertUNIXTimestampToLocaleDate(date, localeProperties.iso) }})
+        ({{
+          convertUNIXTimestampToLocaleDate(date, localeProperties.language)
+        }})
       </p>
       <p class="mt-1 text-white">
         <span class="text-beam-blue font-bold">

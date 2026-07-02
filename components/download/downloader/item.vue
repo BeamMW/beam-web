@@ -24,10 +24,10 @@
       </div>
       <div class="flex justify-between mt-1.5">
         <p>
-          {{ formatBytes(downloadedSize, localeProperties.iso) }} /
-          {{ formatBytes(totalSize, localeProperties.iso) }}
+          {{ formatBytes(downloadedSize, localeProperties.language) }} /
+          {{ formatBytes(totalSize, localeProperties.language) }}
         </p>
-        <p>{{ formatBytes(speed, localeProperties.iso) }}/s</p>
+        <p>{{ formatBytes(speed, localeProperties.language) }}/s</p>
       </div>
     </div>
     <div v-else-if="hashing">
@@ -135,33 +135,33 @@ const closeComponent = () => {
 defineExpose({ startDownload });
 
 const formatLocale = ref<Locale>();
-if (localeProperties.value.iso === "fr-FR") {
+if (localeProperties.value.language === "fr-FR") {
   formatLocale.value = (await import("date-fns/locale/fr"))
-    .default as unknown as Locale;
-} else if (localeProperties.value.iso === "ru-RU") {
+    .fr as unknown as Locale;
+} else if (localeProperties.value.language === "ru-RU") {
   formatLocale.value = (await import("date-fns/locale/ru"))
-    .default as unknown as Locale;
-} else if (localeProperties.value.iso === "ar-001") {
+    .ru as unknown as Locale;
+} else if (localeProperties.value.language === "ar-001") {
   formatLocale.value = (await import("date-fns/locale/ar"))
-    .default as unknown as Locale;
-} else if (localeProperties.value.iso === "de-DE") {
+    .ar as unknown as Locale;
+} else if (localeProperties.value.language === "de-DE") {
   formatLocale.value = (await import("date-fns/locale/de"))
-    .default as unknown as Locale;
-} else if (localeProperties.value.iso === "ja-JP") {
+    .de as unknown as Locale;
+} else if (localeProperties.value.language === "ja-JP") {
   formatLocale.value = (await import("date-fns/locale/ja"))
-    .default as unknown as Locale;
-} else if (localeProperties.value.iso === "es-ES") {
+    .ja as unknown as Locale;
+} else if (localeProperties.value.language === "es-ES") {
   formatLocale.value = (await import("date-fns/locale/es"))
-    .default as unknown as Locale;
-} else if (localeProperties.value.iso === "zh-CN") {
+    .es as unknown as Locale;
+} else if (localeProperties.value.language === "zh-CN") {
   formatLocale.value = (await import("date-fns/locale/zh-CN"))
-    .default as unknown as Locale;
-} else if (localeProperties.value.iso === "he-IL") {
+    .zhCN as unknown as Locale;
+} else if (localeProperties.value.language === "he-IL") {
   formatLocale.value = (await import("date-fns/locale/he"))
-    .default as unknown as Locale;
+    .he as unknown as Locale;
 } else {
   formatLocale.value = (await import("date-fns/locale/en-US"))
-    .default as unknown as Locale;
+    .enUS as unknown as Locale;
 }
 
 const starting = ref(true);

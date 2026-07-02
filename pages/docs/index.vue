@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types/index";
 import { ExternalLinks, docTypes } from "@/app.config";
 
 const localePath = useLocalePath();
@@ -10,16 +9,16 @@ const description = computed(() => t("head.descriptions.docs"));
 
 const nuxtApp = useNuxtApp();
 
-const { data: pages } = await useAsyncData<ParsedContent[]>(
+const { data: pages } = await useAsyncData(
   "docs-all-pages",
   async () => {
-    const results = await queryContent<ParsedContent>("/docs")
-      .where({ title: { $exists: true } })
-      .find();
+    const results = await queryCollection("docs")
+      .where("title", "IS NOT NULL")
+      .all();
     const seen = new Set<string>();
     return results.filter((p) => {
-      if (!p._path || seen.has(p._path)) return false;
-      seen.add(p._path);
+      if (!p.path || seen.has(p.path)) return false;
+      seen.add(p.path);
       return true;
     });
   },
@@ -60,10 +59,10 @@ const filteredPages = computed(() => {
   if (!pages.value) return [];
   const q = debouncedSearch.value.trim().toLowerCase();
   return pages.value.filter((p) => {
-    if (!p._path || isPageBlacklisted(p._path) || isIndex(p._path)) {
+    if (!p.path || isPageBlacklisted(p.path) || isIndex(p.path)) {
       return false;
     }
-    const category = categoryFor(p._path);
+    const category = categoryFor(p.path);
     if (!category) return false;
     if (selectedCategory.value && category.path !== selectedCategory.value) {
       return false;
@@ -146,12 +145,12 @@ definePageMeta({
       <div v-else class="grid gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
         <NuxtLink
           v-for="page in filteredPages"
-          :key="page._path"
-          :to="localePath(page._path ?? '/docs')"
+          :key="page.path"
+          :to="localePath(page.path ?? '/docs')"
           class="group block h-full bg-[#360061]/50 hover:bg-[#360061] rounded-xl p-5 transition-all duration-300 border border-purple-100/10 hover:border-purple-100/20"
         >
           <div class="text-xs uppercase tracking-wide text-purple-100/50 mb-2">
-            {{ t(categoryFor(page._path)?.title ?? "") }}
+            {{ t(categoryFor(page.path)?.title ?? "") }}
           </div>
           <h3
             class="text-lg font-bold text-white mb-2 group-hover:text-beam-blue transition-colors line-clamp-2"

@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts" setup>
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types/index";
+import type { Collections } from "@nuxt/content";
 
 const props = defineProps<{
-  value: ParsedContent;
+  value: Collections["docs"];
 }>();
 
 // https://github.com/nuxt/content/issues/2000

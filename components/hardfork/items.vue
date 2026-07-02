@@ -14,6 +14,7 @@
     </div>
     <swiper
       ref="swiperRef"
+      :modules="modules"
       :grab-cursor="true"
       :slides-per-view="slidesToShow"
       :navigation="{
@@ -71,7 +72,7 @@
 
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { Swiper as SwiperInstance } from "swiper";
+import type { Swiper as SwiperInstance } from "swiper";
 import { Navigation } from "swiper/modules";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { useI18n } from "vue-i18n";
@@ -79,7 +80,7 @@ import Modal from "./modal.vue";
 
 const { t } = useI18n();
 
-SwiperCore.use([Navigation]);
+const modules = [Navigation];
 
 interface HardforkLink {
   title: string;

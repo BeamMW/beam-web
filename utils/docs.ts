@@ -49,4 +49,5 @@ export const isSameCategory = (
 };
 
 export const pageExist = async (path: string): Promise<boolean> =>
-  !isPageBlacklisted(path) && (await queryContent(path).find()).length > 0;
+  !isPageBlacklisted(path) &&
+  (await queryCollection("docs").path(path).first()) !== null;

@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="localePath(post._path ?? '/blog')"
+    :to="localePath(post.path ?? '/blog')"
     class="group block h-full bg-[#1A0A2A] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1"
   >
     <div class="aspect-w-16 aspect-h-9 overflow-hidden">
@@ -49,11 +49,11 @@
 </template>
 
 <script lang="ts" setup>
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types/index";
+import type { Collections } from "@nuxt/content";
 import { readingTimeMinutes } from "~/utils/readingTime";
 
 const props = defineProps<{
-  post: ParsedContent;
+  post: Collections["blog"];
 }>();
 
 const localePath = useLocalePath();
@@ -61,7 +61,7 @@ const { locale } = useI18n();
 
 const minutes = computed(() => readingTimeMinutes(props.post.body));
 
-const formatDate = (date: string) => {
+const formatDate = (date: string | undefined) => {
   if (!date) return "";
   return new Date(date).toLocaleDateString(locale.value, {
     year: "numeric",

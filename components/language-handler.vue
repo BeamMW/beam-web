@@ -16,7 +16,7 @@ const changeLanguage = (
   event: CustomEvents[UserInteractionEvents.LANGUAGE_CHANGE],
 ) => {
   languageChanged.value = true;
-  setLocale(event.lang);
+  setLocale(event.lang as Parameters<typeof setLocale>[0]);
 };
 
 // Listen for the changeLanguage event

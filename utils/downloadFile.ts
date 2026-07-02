@@ -36,7 +36,7 @@ class Uint8ArrayAccumulator {
     this.totalLength += chunk.length;
   }
 
-  toUint8Array(): Uint8Array {
+  toUint8Array(): Uint8Array<ArrayBuffer> {
     const result = new Uint8Array(this.totalLength);
     let offset = 0;
 

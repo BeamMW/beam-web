@@ -1,16 +1,16 @@
 <template>
   <div>
     <LayoutLink
-      :to="localePath(processPath(article._path))"
+      :to="localePath(processPath(article.path))"
       :class="`rtl:pr-5 ltr:pl-5 block text-md opacity-60 hover:opacity-90 transition-opacity ${
-        routeName == article._path
+        routeName == article.path
           ? 'rtl:border-r-2 ltr:border-l-2 border-beam-blue text-beam-blue font-bold !opacity-90'
           : ''
       } `"
     >
       {{ article.title }}
     </LayoutLink>
-    <template v-if="routeName == article._path && hasTocLinks">
+    <template v-if="routeName == article.path && hasTocLinks">
       <ul
         v-for="(link, index) in article.body.toc.links"
         :key="index"
@@ -19,7 +19,7 @@
         <DocsTocLink
           v-if="link.text != article.title"
           :link="link"
-          :article-path="processPath(article._path)"
+          :article-path="processPath(article.path)"
         />
       </ul>
     </template>
