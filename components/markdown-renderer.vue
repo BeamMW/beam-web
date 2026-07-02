@@ -15,24 +15,27 @@ const props = defineProps({
 });
 
 const divRef: Ref<HTMLElement | null> = ref(null);
+const router = useRouter();
+
+const handleLinkClick = (event: MouseEvent) => {
+  const target: HTMLElement | undefined = event.target as HTMLElement;
+  if (target && target.tagName === "A") {
+    const href = target.getAttribute("href");
+    const targetAttr = target.getAttribute("target");
+
+    if (href && href[0] === "/" && targetAttr !== "_blank") {
+      event.preventDefault();
+      router.push(href);
+    }
+  }
+};
 
 onMounted(() => {
-  const el = divRef.value;
-  if (el) {
-    el.addEventListener("click", (event) => {
-      const target: HTMLElement | undefined = event.target as HTMLElement;
-      if (target && target.tagName === "A") {
-        const href = target.getAttribute("href");
-        const targetAttr = target.getAttribute("target");
-        const router = useRouter();
+  divRef.value?.addEventListener("click", handleLinkClick);
+});
 
-        if (href && href[0] === "/" && targetAttr !== "_blank") {
-          event.preventDefault();
-          router.push(href);
-        }
-      }
-    });
-  }
+onBeforeUnmount(() => {
+  divRef.value?.removeEventListener("click", handleLinkClick);
 });
 
 async function renderMarkdown(text: string) {
