@@ -83,6 +83,10 @@
     "launch-editor": "2.14.1",
     "@babel/core": "7.29.7",
     "@babel/helpers": "7.29.7",
-    "esbuild@^0.27.0": "0.28.1"
+    "esbuild@^0.27.0": "0.28.1",
+    "lodash": "4.18.1",
+    "cross-spawn": "7.0.6",
+    "path-to-regexp@^6.2.1": "6.3.0",
+    "micromatch": "4.0.8"
   }
 }
