@@ -14,14 +14,13 @@ The Beam developers were contacted on June 13th 2026 with a report about a possi
 
 With the deep analysis done and the problem well identified, the core code was corrected in a non-public branch, and direct contact was made with the main mining pools and exchanges to ask them to upgrade to the new version, so that any further risk of exploitation of this vulnerability would be eliminated. The hard fork took place at block 3928666.
 
-
 The latest corrected builds (wallets, nodes, etc.) can be downloaded from [beam.mw/downloads](https://beam.mw/downloads) or from [github.com/BeamMW/beam/releases](https://github.com/BeamMW/beam/releases) and [github.com/BeamMW/beam-ui/releases](https://github.com/BeamMW/beam-ui/releases).
 
 ## Technical details
 
 The discovered vulnerability was in Beam’s implementation of Bulletproofs, a popular variant of rangeproofs with exponential compression (excellent for scalability). A rangeproof is the zero-knowledge cryptographic scheme which proves that the transaction output (TXO) is a well-formed Pedersen commitment, and holds a non-negative amount.
 
-While the algebra behind Beam’s implementation was correct, there was an error in the transcript, i.e. in the order of challenge-response sequence for the challenges derived via the Fiat-Shamir heuristic. Specifically, the error was in the IPA (inner-product argument) part where the order of challenge-response was inverted: the sequence where the prover gets the challenge and then emits the LR pair should happen the other way around. 
+While the algebra behind Beam’s implementation was correct, there was an error in the transcript, i.e. in the order of challenge-response sequence for the challenges derived via the Fiat-Shamir heuristic. Specifically, the error was in the IPA (inner-product argument) part where the order of challenge-response was inverted: the sequence where the prover gets the challenge and then emits the LR pair should happen the other way around.
 
 In [`ecc_bulletproof.cpp#L453`](https://github.com/BeamMW/beam/blob/ebc40098938197bea689b853a7f51fb507c843d5/core/ecc_bulletproof.cpp#L453), `CycleStart()` is where challenges are obtained.
 
@@ -55,7 +54,6 @@ Several aspects lead to this assessment:
    Prior to the price drop, the first anomaly we see is the sudden trade volume drop on MEXC (used to be the biggest exchange for Beam) on June 12th 2026. We don’t know the exact reason for this, probably a Market Maker was deactivated. Immediately after this, the Beam price started declining. Then, during the following days, there was a surge in the Beam trade volume on the NonKYC exchange. But this surge (1) albeit high for this exchange, still was much lower than normal daily volume on MEXC before the drop, (2) lasted for some period, then stopped on June 29th 2026.
 
    If the Beam price decline would’ve been due to hidden inflation, we’d expect to see an overall increase in market volume, not decline. The spike in trading volume on NonKYC probably indicates big holders (whales) anonymously cashing-out.
-
 
 ## The next steps
 

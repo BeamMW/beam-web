@@ -14,7 +14,7 @@
           }`"
           @click="
             typeof link.onClick == 'function' &&
-              handleClick(link.onClick, $event)
+            handleClick(link.onClick, $event)
           "
           >{{ link.text }}</LayoutLink
         >

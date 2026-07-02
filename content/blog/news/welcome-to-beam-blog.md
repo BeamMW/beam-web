@@ -3,7 +3,7 @@ title: "Welcome to the Beam Blog!"
 description: "Discover the latest updates, news, and insights from the Beam ecosystem."
 date: "2025-06-18"
 category: "news"
-image: "svg/logo.svg"
+image: "/svg/logo.svg"
 tags:
   - Announcement
   - Updates

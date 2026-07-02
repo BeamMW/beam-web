@@ -27,9 +27,17 @@ const menus = computed(() => [
   {
     title: t("footer.join.title"),
     links: [
-      { text: t("header.nav.home"), href: localePath("index"), class: "block md:hidden"},
-      { text: "Beam DEX", href: ExternalLinks.DEX, class: "block md:hidden"},
-      { text: t("head.title.documentation"), href: localePath("docs"), class: "block md:hidden"},
+      {
+        text: t("header.nav.home"),
+        href: localePath("index"),
+        class: "block md:hidden",
+      },
+      { text: "Beam DEX", href: ExternalLinks.DEX, class: "block md:hidden" },
+      {
+        text: t("head.title.documentation"),
+        href: localePath("docs"),
+        class: "block md:hidden",
+      },
       { text: t("footer.join.beamForum"), href: ExternalLinks.FORUM },
       { text: ExternalLinksTitle.X, href: ExternalLinks.X },
       { text: t("footer.join.newsletter"), href: ExternalLinks.SUBSTACK },
@@ -101,13 +109,25 @@ const menus = computed(() => [
       {
         title: t("footer.communityprojects.title"),
         links: [
-          { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
+          {
+            text: ExternalLinksTitle.BEAMASSETS,
+            href: ExternalLinks.BEAMASSETS,
+          },
           { text: ExternalLinksTitle.BEAMSMART, href: ExternalLinks.BEAMSMART },
-          { text: ExternalLinksTitle.BEAM_TERMINAL, href: ExternalLinks.BEAM_TERMINAL },
-          { text: ExternalLinksTitle.BEAM_LIGHT_WALLET, href: ExternalLinks.BEAM_LIGHT_WALLET },
-          { text: ExternalLinksTitle.PRIVIMW_WALLET, href: ExternalLinks.PRIVIMW_WALLET },
-        ]
-      }
+          {
+            text: ExternalLinksTitle.BEAM_TERMINAL,
+            href: ExternalLinks.BEAM_TERMINAL,
+          },
+          {
+            text: ExternalLinksTitle.BEAM_LIGHT_WALLET,
+            href: ExternalLinks.BEAM_LIGHT_WALLET,
+          },
+          {
+            text: ExternalLinksTitle.PRIVIMW_WALLET,
+            href: ExternalLinks.PRIVIMW_WALLET,
+          },
+        ],
+      },
     ],
   },
 ]);
