@@ -82,6 +82,7 @@
     "shell-quote": "1.9.0",
     "launch-editor": "2.14.1",
     "@babel/core": "7.29.7",
-    "@babel/helpers": "7.29.7"
+    "@babel/helpers": "7.29.7",
+    "esbuild@^0.27.0": "0.28.1"
   }
 }
