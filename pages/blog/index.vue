@@ -15,7 +15,7 @@ const { data: posts } = await useAsyncData(
       .all(),
   {
     getCachedData: (key) =>
-      nuxtApp.isHydrating ? nuxtApp.payload.data[key] : undefined,
+      nuxtApp.payload.data[key] ?? nuxtApp.static.data[key],
   },
 );
 

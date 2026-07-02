@@ -146,16 +146,7 @@ export default defineNuxtConfig({
     "nuxt-security",
     "@nuxtjs/fontaine",
     "@nuxt/content",
-    "nuxt-multi-cache",
   ],
-  multiCache: {
-    component: {
-      // If true the cache is enabled.
-      // If false the cache is disabled, but the component is still added to
-      // the build.
-      enabled: true,
-    },
-  },
   security: {
     nonce: true,
     ssg: {
@@ -170,9 +161,14 @@ export default defineNuxtConfig({
           "'nonce-{{nonce}}'", // Nonce placeholders in the SSR case will allow inline scripts generated on the server
           // "'strict-dynamic'", // Use strict dynamic as outlined here: https://nuxt-security.vercel.app/documentation/advanced/strict-csp#strict-dynamic-csp-level-3
           "'self'", // Allow external scripts from self origin
-          "'wasm-unsafe-eval'", // Nuxt Content v3 compiles a client-side SQLite WASM module for queries
+          // No 'wasm-unsafe-eval': every @nuxt/content query is payload-served
+          // (all queryCollection calls run inside useAsyncData, and no page wraps
+          // its content component in <RenderCacheable>), so the client-side
+          // SQLite-WASM engine is never instantiated in the browser. Keep it that
+          // way — a client-only query (e.g. a live useSearchCollection) would
+          // reintroduce the WASM boot and require this directive again.
         ],
-        "worker-src": "'self' blob:",
+        "worker-src": "'self'",
         "frame-ancestors": false, // This one doesn't work when CSP is in Meta
       },
     },

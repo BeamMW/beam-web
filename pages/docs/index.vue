@@ -14,6 +14,7 @@ const { data: pages } = await useAsyncData(
   async () => {
     const results = await queryCollection("docs")
       .where("title", "IS NOT NULL")
+      .select("path", "title", "description")
       .all();
     const seen = new Set<string>();
     return results.filter((p) => {
@@ -24,7 +25,7 @@ const { data: pages } = await useAsyncData(
   },
   {
     getCachedData: (key) =>
-      nuxtApp.isHydrating ? nuxtApp.payload.data[key] : undefined,
+      nuxtApp.payload.data[key] ?? nuxtApp.static.data[key],
   },
 );
 

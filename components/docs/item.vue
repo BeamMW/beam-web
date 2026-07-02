@@ -146,14 +146,16 @@ const props = defineProps({
   },
 });
 
-const currentPageExist = await pageExist(props.routeName);
-if (!currentPageExist) {
-  throw createError({ statusCode: 404, statusMessage: "Page not found" });
-}
-
 const { data: doc } = await useAsyncData(`docs-${props.routeName}`, () =>
   queryCollection("docs").path(props.routeName).first(),
 );
+
+// A page "exists" only if it resolves and isn't blacklisted (mirrors
+// `pageExist`, but reuses the payload-cached `doc` query above instead of a
+// second, un-cached lookup that would boot the SQLite-WASM engine client-side).
+if (!doc.value || isPageBlacklisted(props.routeName)) {
+  throw createError({ statusCode: 404, statusMessage: "Page not found" });
+}
 
 // Previous / next page navigation (issue #358). Content v3 returns the
 // surrounding pages in the collection's natural (file) order as [prev, next].
@@ -179,19 +181,24 @@ const nextPage = computed(() => inCurrentCategory(surround.value?.[1]));
 const pagerPath = (path: string) => localePath(path.replace(/\/readme$/, ""));
 
 // All pages within the current category (prefix match on the path).
-const categoryQuery = queryCollection("docs").where(
-  "path",
-  "LIKE",
-  `${props.currentCategory}%`,
+const { data: everything } = await useAsyncData(
+  `docs-category-${props.currentCategory}`,
+  () => {
+    const categoryQuery = queryCollection("docs").where(
+      "path",
+      "LIKE",
+      `${props.currentCategory}%`,
+    );
+    // Changelog entries read newest-first; other categories keep file order.
+    // Ordering stays inside the handler so `filteredList` sees the sorted list.
+    return props.currentCategory === "/docs/changelog"
+      ? categoryQuery.order("title", "DESC").all()
+      : categoryQuery.all();
+  },
 );
-const everythingQuery =
-  props.currentCategory === "/docs/changelog"
-    ? categoryQuery.order("title", "DESC")
-    : categoryQuery;
-
-const everything = ref(await everythingQuery.all());
-const index = ref(
-  await queryCollection("docs").path(`${props.currentCategory}/readme`).first(),
+const { data: index } = await useAsyncData(
+  `docs-index-${props.currentCategory}`,
+  () => queryCollection("docs").path(`${props.currentCategory}/readme`).first(),
 );
 
 const scrollSpy = useScrollSpy();
@@ -206,7 +213,7 @@ const filteredList = computed(() => {
   const seen = new Set<string>();
   // Cast to a shallow shape: the full collection item type is deeply recursive
   // (body AST) and trips TS's "excessively deep" instantiation limit here.
-  const articles = everything.value as Array<{ path?: string }>;
+  const articles = (everything.value ?? []) as Array<{ path?: string }>;
   return articles.filter((article) => {
     if (!article.path) {
       return false;
