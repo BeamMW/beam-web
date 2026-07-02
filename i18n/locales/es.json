@@ -479,6 +479,10 @@
     "lastupdate": "ÚLTIMA ACTUALIZACIÓN: 21 DE ABRIL DE 2023"
   },
   "docs": {
+    "pager": {
+      "previous": "Anterior",
+      "next": "Siguiente"
+    },
     "warning": "La documentación se encuentra actualmente en proceso de actualización y por el momento solo está disponible en inglés.",
     "types": {
       "ecosystem": "Beam & BeamX",

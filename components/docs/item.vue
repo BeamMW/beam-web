@@ -4,12 +4,52 @@
     class="bg-page-radial-gradient-purple background-radial-defaults flex flex-col-reverse max-w-screen-xl mx-auto pb-10 pt-40 md:pt-44 overflow-x-visible overflow-y-visible md:grid gap-5 md:gap-12 md:grid-cols-12"
   >
     <article class="docs-content">
-      <ContentDoc :path="routeName">
-        <template #default="{ doc }"
-          ><CustomContentRenderer :value="doc"
-        /></template>
-        <template #not-found><h1>404 Not Found</h1></template>
-      </ContentDoc>
+      <CustomContentRenderer v-if="doc" :value="doc" />
+      <h1 v-else>404 Not Found</h1>
+
+      <nav
+        v-if="previousPage || nextPage"
+        class="not-prose mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-4"
+      >
+        <LayoutLink
+          v-if="previousPage"
+          :to="pagerPath(previousPage.path)"
+          class="group flex flex-col gap-1 rounded-xl border border-purple-100/10 bg-[#360061]/40 hover:bg-[#360061] p-4 transition-colors sm:col-start-1"
+        >
+          <span
+            class="flex items-center gap-1.5 text-xs uppercase tracking-wide text-purple-100/50"
+          >
+            <Icon
+              name="layout/arrow-right"
+              class="w-3 h-3 rotate-180 rtl:rotate-0"
+            />
+            {{ $t("docs.pager.previous") }}
+          </span>
+          <span
+            class="font-bold text-purple-100 group-hover:text-beam-blue transition-colors line-clamp-1"
+          >
+            {{ previousPage.title }}
+          </span>
+        </LayoutLink>
+
+        <LayoutLink
+          v-if="nextPage"
+          :to="pagerPath(nextPage.path)"
+          class="group flex flex-col gap-1 rounded-xl border border-purple-100/10 bg-[#360061]/40 hover:bg-[#360061] p-4 transition-colors text-right sm:col-start-2 rtl:text-left"
+        >
+          <span
+            class="flex items-center justify-end gap-1.5 text-xs uppercase tracking-wide text-purple-100/50"
+          >
+            {{ $t("docs.pager.next") }}
+            <Icon name="layout/arrow-right" class="w-3 h-3 rtl:rotate-180" />
+          </span>
+          <span
+            class="font-bold text-purple-100 group-hover:text-beam-blue transition-colors line-clamp-1"
+          >
+            {{ nextPage.title }}
+          </span>
+        </LayoutLink>
+      </nav>
     </article>
 
     <aside
@@ -57,7 +97,7 @@
                       : $t("docs.content")
                   }}
                 </h6>
-                <li class="list-none mb-4 rtl:pl-5 ltr:pr-5">
+                <li v-if="index" class="list-none mb-4 rtl:pl-5 ltr:pr-5">
                   <DocsNavigationItem
                     :article="index"
                     :route-name="routeName"
@@ -71,7 +111,7 @@
                 </h6>
                 <div
                   v-for="article in filteredList"
-                  :key="article._path"
+                  :key="article.path"
                   class="rtl:pl-5 ltr:pr-5"
                 >
                   <li class="list-none">
@@ -91,11 +131,6 @@
 </template>
 
 <script lang="ts" setup>
-import type {
-  ParsedContent,
-  QueryBuilder,
-} from "@nuxt/content/dist/runtime/types/index";
-
 const { t } = useI18n();
 const localePath = useLocalePath();
 const route = useRoute();
@@ -116,22 +151,47 @@ if (!currentPageExist) {
   throw createError({ statusCode: 404, statusMessage: "Page not found" });
 }
 
-let everythingQuery: QueryBuilder<ParsedContent>;
+const { data: doc } = await useAsyncData(`docs-${props.routeName}`, () =>
+  queryCollection("docs").path(props.routeName).first(),
+);
 
-switch (props.currentCategory) {
-  case "/docs/changelog":
-    everythingQuery = queryContent(props.currentCategory).sort({
-      title: -1,
-    });
-    break;
-  default:
-    everythingQuery = queryContent(props.currentCategory);
-    break;
-}
+// Previous / next page navigation (issue #358). Content v3 returns the
+// surrounding pages in the collection's natural (file) order as [prev, next].
+const { data: surround } = await useAsyncData(
+  `docs-surround-${props.routeName}`,
+  () =>
+    queryCollectionItemSurroundings("docs", props.routeName, {
+      fields: ["title", "path", "description"],
+    }),
+);
+// Keep the pager within the current category only — a surrounding page that
+// belongs to another docs section (e.g. changelog → cli) is treated as a
+// boundary (no button) rather than followed.
+const inCurrentCategory = <T extends { path?: string }>(
+  page: T | null | undefined,
+): T | null =>
+  page?.path?.startsWith(`${props.currentCategory}/`) ? page : null;
+const previousPage = computed(() => inCurrentCategory(surround.value?.[0]));
+const nextPage = computed(() => inCurrentCategory(surround.value?.[1]));
 
-const everything = ref(await everythingQuery.find());
+// A category README is served at `/docs/<category>/readme`; link to the clean
+// category path instead.
+const pagerPath = (path: string) => localePath(path.replace(/\/readme$/, ""));
+
+// All pages within the current category (prefix match on the path).
+const categoryQuery = queryCollection("docs").where(
+  "path",
+  "LIKE",
+  `${props.currentCategory}%`,
+);
+const everythingQuery =
+  props.currentCategory === "/docs/changelog"
+    ? categoryQuery.order("title", "DESC")
+    : categoryQuery;
+
+const everything = ref(await everythingQuery.all());
 const index = ref(
-  await queryContent(`${props.currentCategory}/readme`).findOne(),
+  await queryCollection("docs").path(`${props.currentCategory}/readme`).first(),
 );
 
 const scrollSpy = useScrollSpy();
@@ -144,21 +204,24 @@ scrollSpy({
 
 const filteredList = computed(() => {
   const seen = new Set<string>();
-  return everything.value.filter((article) => {
-    if (!article._path) {
+  // Cast to a shallow shape: the full collection item type is deeply recursive
+  // (body AST) and trips TS's "excessively deep" instantiation limit here.
+  const articles = everything.value as Array<{ path?: string }>;
+  return articles.filter((article) => {
+    if (!article.path) {
       return false;
     }
-    const isSameCategoryArticle = isSameCategory(article._path, route);
-    const isIndexArticle = isIndex(article._path);
+    const isSameCategoryArticle = isSameCategory(article.path, route);
+    const isIndexArticle = isIndex(article.path);
     if (
-      isPageBlacklisted(article._path) ||
+      isPageBlacklisted(article.path) ||
       !isSameCategoryArticle ||
       isIndexArticle ||
-      seen.has(article._path)
+      seen.has(article.path)
     ) {
       return false;
     }
-    seen.add(article._path);
+    seen.add(article.path);
     return true;
   });
 });

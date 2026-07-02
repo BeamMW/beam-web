@@ -35,7 +35,7 @@ const handleClick = (onClick: () => void, e: MouseEvent) => {
           class="inline capitalize transition text-white/70 hover:text-white"
           @click="
             typeof link.onClick == 'function' &&
-              handleClick(link.onClick, $event)
+            handleClick(link.onClick, $event)
           "
           >{{ link.text }}</LayoutLink
         >

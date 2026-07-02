@@ -37,19 +37,12 @@
 <script lang="ts" setup>
 import { eventBus } from "~/utils/emitter";
 
-interface LanguageInterface {
-  code: string;
-  name: string;
-}
-
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
 
 const availableLocales = computed(() => {
-  return (locales.value as LanguageInterface[]).filter(
-    (i: LanguageInterface) => i.code !== locale.value,
-  );
+  return locales.value.filter((i) => i.code !== locale.value);
 });
 
 const onLanguageClicked = (lang: string) => {

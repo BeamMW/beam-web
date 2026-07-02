@@ -2,75 +2,81 @@
 import { join, sep } from "path";
 import { globSync } from "glob";
 import { pathExists, copy } from "fs-extra";
-import type { LocaleObject, Directions } from "vue-i18n-routing";
+import type { LocaleObject, Directions } from "@nuxtjs/i18n";
+
+// Locale codes enabled in the app (keep in sync with the `locales` array and
+// the per-page custom route slugs below). `pt` is currently disabled.
+type AppLocale = "ar" | "de" | "en" | "es" | "fr" | "he" | "jp" | "ru" | "zh";
 
 // List of supported languages
-const locales: LocaleObject[] = [
+const localeDefinitions: LocaleObject<AppLocale>[] = [
   {
     code: "en",
-    iso: "en-US",
+    language: "en-US",
     name: "English",
     file: "en.json",
   },
   {
     code: "fr",
     name: "Français",
-    iso: "fr-FR",
+    language: "fr-FR",
     file: "fr.json",
   },
   {
     code: "de",
     name: "Deutsch",
-    iso: "de-DE",
+    language: "de-DE",
     file: "de.json",
   },
   {
     code: "ru",
     name: "Русский",
-    iso: "ru-RU",
+    language: "ru-RU",
     file: "ru.json",
   },
   {
     code: "he",
     name: "עִברִית",
-    iso: "he-IL",
+    language: "he-IL",
     file: "he.json",
     dir: "rtl" as Directions,
   },
   {
     code: "ar",
     name: "العربية الفصحى",
-    iso: "ar-001",
+    language: "ar-001",
     file: "ar.json",
     dir: "rtl" as Directions,
   },
   {
     code: "es",
     name: "Español",
-    iso: "es-ES",
+    language: "es-ES",
     file: "es.json",
   },
   /*
   {
     code: "pt",
     name: "Português",
-    iso: "pt-PT",
+    language: "pt-PT",
     file: "pt.json",
   },
   */
   {
     code: "zh",
     name: "中文（繁體）",
-    iso: "zh-CN",
+    language: "zh-CN",
     file: "zh.json",
   },
   {
     code: "jp",
     name: "日本語",
-    iso: "ja-JP",
+    language: "ja-JP",
     file: "jp.json",
   },
-].sort((a, b) => a.code.localeCompare(b.code));
+];
+
+const locales = localeDefinitions.sort((a, b) => a.code.localeCompare(b.code));
 
 const publicWebUrl = process.env.PUBLIC_WEB_URL || "https://beam.mw";
 
@@ -125,10 +131,8 @@ const copyDocsAssetsToPublic = async () => {
 
 export default defineNuxtConfig({
   ssr: true,
-  app: {
-    pageTransition: false, // Enable later
-    layoutTransition: false,
-  },
+  // pageTransition and layoutTransition both default to false in Nuxt 3,
+  // so no explicit `app` transition config is needed while they stay disabled.
   experimental: {
     viewTransition: true,
   },
@@ -136,9 +140,9 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
     "@nuxtjs/device",
-    "nuxt-simple-sitemap",
-    "nuxt-simple-robots",
-    "nuxt-seo-experiments",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
+    "nuxt-seo-utils",
     "nuxt-security",
     "@nuxtjs/fontaine",
     "@nuxt/content",
@@ -166,6 +170,7 @@ export default defineNuxtConfig({
           "'nonce-{{nonce}}'", // Nonce placeholders in the SSR case will allow inline scripts generated on the server
           // "'strict-dynamic'", // Use strict dynamic as outlined here: https://nuxt-security.vercel.app/documentation/advanced/strict-csp#strict-dynamic-csp-level-3
           "'self'", // Allow external scripts from self origin
+          "'wasm-unsafe-eval'", // Nuxt Content v3 compiles a client-side SQLite WASM module for queries
         ],
         "worker-src": "'self' blob:",
         "frame-ancestors": false, // This one doesn't work when CSP is in Meta
@@ -197,18 +202,12 @@ export default defineNuxtConfig({
     },
   },
   content: {
-    documentDriven: false,
-    markdown: {
-      remarkPlugins: ["remark-gfm"],
-      rehypePlugins: [],
-    },
-    highlight: { theme: "github-dark" },
-    navigation: { fields: ["navTitle"] },
-    sources: {
-      docs: {
-        prefix: "/docs",
-        driver: "fs",
-        base: join(__dirname, "content/docs"),
+    // Collections, sources and per-collection schema are defined in
+    // content.config.ts (Content v3). Global build options live here.
+    build: {
+      markdown: {
+        remarkPlugins: { "remark-gfm": {} },
+        highlight: { theme: "github-dark" },
       },
     },
   },
@@ -225,20 +224,22 @@ export default defineNuxtConfig({
     strict: true,
   },
   fontMetrics: {
+    // Paths are resolved relative to the public dir by @nuxtjs/fontaine, so
+    // they must not start with a leading slash (which would be treated as an
+    // absolute filesystem path).
     fonts: [
-      { family: "ProximaNova", src: "/fonts/ProximaNova-Regular.woff2" },
+      { family: "ProximaNova", src: "fonts/ProximaNova-Regular.woff2" },
       {
         family: "ProximaNova-Italic",
-        src: "/fonts/ProximaNova-RegularIt.woff2",
+        src: "fonts/ProximaNova-RegularIt.woff2",
       },
-      { family: "ProximaNova-Bold", src: "/fonts/ProximaNova-Bold.woff2" },
+      { family: "ProximaNova-Bold", src: "fonts/ProximaNova-Bold.woff2" },
     ],
   },
   i18n: {
     baseUrl: publicWebUrl,
     skipSettingLocaleOnNavigate: false,
     defaultLocale: "en",
-    lazy: true,
     langDir: "locales",
     vueI18n: "./i18n.config.ts",
     customRoutes: "config", // Disable custom route with page components
@@ -254,7 +255,6 @@ export default defineNuxtConfig({
         he: "/הורדות",
         ar: "/تنزيلات",
         es: "/descargas",
-        pt: "/transferencias",
       },
       "privacy-policy": {
         en: "/privacy-policy",
@@ -266,7 +266,6 @@ export default defineNuxtConfig({
         he: "/מדיניותפרטיות",
         ar: "/سياسةالخصوصية",
         es: "/politica-de-privacidad",
-        pt: "/politica-de-privacidade",
       },
       mining: {
         en: "/mining",
@@ -278,7 +277,6 @@ export default defineNuxtConfig({
         he: "/כרייה",
         ar: "/تعدين",
         es: "/mineria",
-        pt: "/mineracao",
       },
     },
     locales,

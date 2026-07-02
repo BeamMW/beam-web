@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types/index";
-
 const { t, te } = useI18n();
 
 const title = computed(() => t("head.title.blog"));
@@ -8,13 +6,13 @@ const description = computed(() => t("head.descriptions.blog"));
 
 const nuxtApp = useNuxtApp();
 
-const { data: posts } = await useAsyncData<ParsedContent[]>(
+const { data: posts } = await useAsyncData(
   "blog-all-posts",
   () =>
-    queryContent<ParsedContent>("/blog")
-      .where({ date: { $exists: true } })
-      .sort({ date: -1 })
-      .find(),
+    queryCollection("blog")
+      .where("date", "IS NOT NULL")
+      .order("date", "DESC")
+      .all(),
   {
     getCachedData: (key) =>
       nuxtApp.isHydrating ? nuxtApp.payload.data[key] : undefined,
@@ -116,7 +114,7 @@ definePageMeta({
       </ClientOnly>
 
       <div class="grid gap-6 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
-        <div v-for="post in filteredPosts" :key="post._path" class="mb-8">
+        <div v-for="post in filteredPosts" :key="post.path" class="mb-8">
           <BlogPostCard :post="post" />
         </div>
       </div>

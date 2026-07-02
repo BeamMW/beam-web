@@ -123,7 +123,7 @@
         <div class="grid gap-6 md:grid-cols-2">
           <BlogPostCard
             v-for="relatedPost in relatedPosts"
-            :key="relatedPost._path"
+            :key="relatedPost.path"
             :post="relatedPost"
           />
         </div>
@@ -175,7 +175,7 @@
                 >
                   <DocsTocLink
                     :link="link"
-                    :article-path="localePath(post._path ?? '')"
+                    :article-path="localePath(post.path ?? '')"
                   />
                 </ul>
               </section>
@@ -189,7 +189,7 @@
 
 <script lang="ts" setup>
 import type { Ref } from "vue";
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types/index";
+import type { Collections } from "@nuxt/content";
 import { readingTimeMinutes } from "~/utils/readingTime";
 
 const localePath = useLocalePath();
@@ -208,7 +208,7 @@ const props = defineProps({
 const nuxtApp = useNuxtApp();
 const { data: postData } = await useAsyncData(
   `blog-${props.routeName}`,
-  () => queryContent(props.routeName).findOne(),
+  () => queryCollection("blog").path(props.routeName).first(),
   {
     getCachedData: (key) =>
       nuxtApp.isHydrating ? nuxtApp.payload.data[key] : undefined,
@@ -219,7 +219,7 @@ if (!postData.value) {
   throw createError({ statusCode: 404, statusMessage: "Post not found" });
 }
 
-const post = postData as Ref<ParsedContent>;
+const post = postData as Ref<Collections["blog"]>;
 
 const minutes = computed(() => readingTimeMinutes(post.value?.body));
 
@@ -232,10 +232,11 @@ const categoryLabel = (slug: string) => {
 const { data: allPosts } = await useAsyncData(
   `blog-posts-${props.routeName}`,
   () => {
-    return queryContent("/blog")
-      .where({ _path: { $ne: props.routeName }, date: { $exists: true } })
-      .sort({ date: -1 })
-      .find();
+    return queryCollection("blog")
+      .where("path", "<>", props.routeName)
+      .where("date", "IS NOT NULL")
+      .order("date", "DESC")
+      .all();
   },
   {
     getCachedData: (key) =>
@@ -247,13 +248,13 @@ const { data: allPosts } = await useAsyncData(
 const relatedPosts = computed(() => {
   if (!post.value?.category || !allPosts.value) return [];
   return allPosts.value
-    .filter((p: ParsedContent) => p.category === post.value!.category)
+    .filter((p) => p.category === post.value!.category)
     .slice(0, 2);
 });
 
 // Generate share URL
 const shareUrl = computed(() => {
-  return `${config.public.siteUrl}${post.value?._path}`;
+  return `${config.public.siteUrl}${post.value?.path}`;
 });
 
 // Scroll spy
@@ -294,7 +295,7 @@ useSeoMeta({
 });
 
 // Helper function to format dates
-const formatDate = (date: string) => {
+const formatDate = (date: string | undefined) => {
   if (!date) return "";
   return new Date(date).toLocaleDateString(locale.value, {
     year: "numeric",
@@ -315,7 +316,7 @@ useHead({
         description: post.value?.description,
         image: [post.value?.image],
         datePublished: post.value?.date,
-        dateModified: post.value?.updatedAt || post.value?.date,
+        dateModified: post.value?.date,
         author: {
           "@type": "Organization",
           name: "Beam",

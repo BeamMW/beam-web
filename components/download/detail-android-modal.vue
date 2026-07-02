@@ -28,7 +28,7 @@ defineProps({
       </h6>
       <p>
         {{ version }} ({{
-          convertUNIXTimestampToLocaleDate(date, localeProperties.iso)
+          convertUNIXTimestampToLocaleDate(date, localeProperties.language)
         }}) &middot;
         <span class="text-beam-blue font-bold">
           <DownloadAlternativeLink

@@ -5,8 +5,6 @@ import { scrollToComponent } from "~/utils/scrollToComponent";
 const localePath = useLocalePath();
 const router = useRouter();
 
-defineRobotMeta();
-
 const scrollToIdOnPage = async (
   pageName: string,
   componentId: string,

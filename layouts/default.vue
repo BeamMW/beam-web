@@ -177,9 +177,8 @@ watch(
 useTitleTemplate();
 
 const head = useLocaleHead({
-  addDirAttribute: true,
-  identifierAttribute: "id",
-  addSeoAttributes: true,
+  dir: true,
+  seo: true,
 });
 </script>
 

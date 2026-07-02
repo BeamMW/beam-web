@@ -34,7 +34,17 @@ const platformDetails = await usePlatformDetails();
     <DownloadDivider />
     <LayoutWrapper :center="true" class="w-full">
       <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 3rem; justify-items: center; align-items: center; width: 100%; max-width: 1280px; margin: 0 auto !important; text-align: center;"
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 3rem;
+          justify-items: center;
+          align-items: center;
+          width: 100%;
+          max-width: 1280px;
+          margin: 0 auto !important;
+          text-align: center;
+        "
         class="grid-container"
       >
         <DownloadPlatformAndroid

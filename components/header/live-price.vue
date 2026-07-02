@@ -20,7 +20,7 @@
         />
         = </span
       ><span :class="`price transition-colors duration-1000 ${flickerClass}`">{{
-        data && localizePrice(data.usd, localeProperties.iso)
+        data && localizePrice(data.usd, localeProperties.language)
       }}</span>
     </span>
   </transition>

@@ -13,6 +13,7 @@
       />
     </div>
     <swiper
+      :modules="modules"
       :grab-cursor="true"
       :slides-per-view="slidesToShow"
       :navigation="{
@@ -86,13 +87,12 @@
 
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore from "swiper";
 import { Navigation } from "swiper/modules";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const { t } = useI18n();
 
-SwiperCore.use([Navigation]);
+const modules = [Navigation];
 
 enum PROGRESS {
   PLANNED = "planned",

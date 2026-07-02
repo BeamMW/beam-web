@@ -62,5 +62,6 @@ onUnmounted(() =>
 </template>
 
 <style scoped>
-.grid-container {}
+.grid-container {
+}
 </style>

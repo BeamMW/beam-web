@@ -46,5 +46,3 @@ Looking Ahead
 The devs are discussing the optimal parameters for the next devnet, specifically the minimum stake, and the target number of validators to balance decentralization with speed. Preliminary analysis suggests a minimum stake of ~150,000 BEAMX could support up to 100 validators while maintaining performance.
 With the Beam Warp implementation feature-complete and already showing exceptional speed, further testing and optimization now continue in areas like SBBS communications and wallet data management.
 More news to come as we approach the next milestone!
-
-

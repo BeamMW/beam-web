@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { pressArticles } from "@/app.config";
 
-SwiperCore.use([Navigation, Autoplay]);
+const modules = [Navigation, Autoplay];
 
 const slidesToShow = ref(1);
 const customNextButton = ref(null);
@@ -59,6 +58,7 @@ const spaceBetween = ref(20);
     </div>
 
     <swiper
+      :modules="modules"
       :slides-per-view="slidesToShow"
       :space-between="spaceBetween"
       :navigation="{
