@@ -184,6 +184,12 @@ export default defineNuxtConfig({
       routes: [...contentRoutes],
       crawlLinks: true,
       failOnError: false,
+      // Emit flat "foo.html" files instead of "foo/index.html". Cloudflare
+      // Pages then treats the no-trailing-slash URL as canonical (and 301s
+      // "/foo/" -> "/foo" at the edge), instead of canonicalizing to the
+      // trailing-slash form. That keeps the canonical URL aligned with the
+      // sitemap and the trailing-slash middleware — no redirect churn.
+      autoSubfolderIndex: false,
     },
   },
   hooks: {
