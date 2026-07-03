@@ -19,8 +19,13 @@ const changeLanguage = (
   setLocale(event.lang as Parameters<typeof setLocale>[0]);
 };
 
-// Listen for the changeLanguage event
-eventBus.on(UserInteractionEvents.LANGUAGE_CHANGE, changeLanguage);
+// Listen for the changeLanguage event (client-only; register after mount)
+onMounted(() =>
+  eventBus.on(UserInteractionEvents.LANGUAGE_CHANGE, changeLanguage),
+);
+onUnmounted(() =>
+  eventBus.off(UserInteractionEvents.LANGUAGE_CHANGE, changeLanguage),
+);
 
 const onAfterEnter = () => {
   if (languageChanged.value) {

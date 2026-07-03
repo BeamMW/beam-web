@@ -5139,13 +5139,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tusbar/cache-control@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@tusbar/cache-control@npm:1.0.2"
-  checksum: e464b174fdc42aded3aae9ff4a4dc6963e3b1c861671cb6abf8f2558d5f00f2068280a1f9b10625987f2c8b13be6486f485e8322d95faa717be30ecb615fa878
-  languageName: node
-  linkType: hard
-
 "@tybys/wasm-util@npm:^0.10.2, @tybys/wasm-util@npm:^0.10.3":
   version: 0.10.3
   resolution: "@tybys/wasm-util@npm:0.10.3"
@@ -7065,7 +7058,6 @@ __metadata:
     node-html-parser: ^7.1.0
     npm-check-updates: ^16.14.20
     nuxt: ^3.21.8
-    nuxt-multi-cache: ^3.4.0
     nuxt-security: ^1.4.3
     nuxt-seo-utils: ^8.3.1
     prettier: ^3.9.4
@@ -14568,16 +14560,6 @@ __metadata:
   version: 1.0.0
   resolution: "nuxt-define@npm:1.0.0"
   checksum: fecda32862d77a90dc659e864597785a91a5a2e64de423aec1a2e1912bc2b0bf678d98f51fe3d740bcff2e83d20092439a436ae6ab6b8946dfa8cc20359ca578
-  languageName: node
-  linkType: hard
-
-"nuxt-multi-cache@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "nuxt-multi-cache@npm:3.4.0"
-  dependencies:
-    "@nuxt/kit": ^3.13.2
-    "@tusbar/cache-control": ^1.0.2
-  checksum: d751de4fcae727056fd5bfc69001fcf83f0b1f5763c9dcb8c5db6b1bc0f7ac26e2aa003ec11604396569887eb443ab1117389b40a2402656964102e8287e8b01
   languageName: node
   linkType: hard
 

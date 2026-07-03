@@ -101,9 +101,11 @@ const localePath = useLocalePath();
 const maskCircle = ref<HTMLElement | null>(null);
 const hover = ref(false);
 const animation = ref<gsap.core.Tween | null>(null);
+const revertTimer = ref<ReturnType<typeof setTimeout> | null>(null);
 
 function touchRevertAnimation() {
-  setTimeout(() => {
+  if (revertTimer.value) clearTimeout(revertTimer.value);
+  revertTimer.value = setTimeout(() => {
     hover.value = false;
   }, 1000);
 }
@@ -126,5 +128,10 @@ onMounted(async () => {
     duration: 0.6,
     ease: "linear",
   });
+});
+
+onBeforeUnmount(() => {
+  if (revertTimer.value) clearTimeout(revertTimer.value);
+  animation.value?.kill();
 });
 </script>

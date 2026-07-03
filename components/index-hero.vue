@@ -231,8 +231,10 @@ const initAnimation = async () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             gsap.ticker.add(updateProgress);
+            tlBounce.play();
           } else {
             gsap.ticker.remove(updateProgress);
+            tlBounce.pause();
           }
         });
       });

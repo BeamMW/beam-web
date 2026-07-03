@@ -211,7 +211,7 @@ const { data: postData } = await useAsyncData(
   () => queryCollection("blog").path(props.routeName).first(),
   {
     getCachedData: (key) =>
-      nuxtApp.isHydrating ? nuxtApp.payload.data[key] : undefined,
+      nuxtApp.payload.data[key] ?? nuxtApp.static.data[key],
   },
 );
 
@@ -240,7 +240,7 @@ const { data: allPosts } = await useAsyncData(
   },
   {
     getCachedData: (key) =>
-      nuxtApp.isHydrating ? nuxtApp.payload.data[key] : undefined,
+      nuxtApp.payload.data[key] ?? nuxtApp.static.data[key],
   },
 );
 

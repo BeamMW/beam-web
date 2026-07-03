@@ -136,6 +136,9 @@ const downloadItem = (
 };
 
 onMounted(() => eventBus.on(UserInteractionEvents.DOWNLOAD_ITEM, downloadItem));
+onUnmounted(() =>
+  eventBus.off(UserInteractionEvents.DOWNLOAD_ITEM, downloadItem),
+);
 
 const removeComponent = (id: string) => {
   const component = components.value.find((item) => item.id === id);
