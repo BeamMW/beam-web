@@ -161,14 +161,23 @@ export default defineNuxtConfig({
           "'nonce-{{nonce}}'", // Nonce placeholders in the SSR case will allow inline scripts generated on the server
           // "'strict-dynamic'", // Use strict dynamic as outlined here: https://nuxt-security.vercel.app/documentation/advanced/strict-csp#strict-dynamic-csp-level-3
           "'self'", // Allow external scripts from self origin
-          // No 'wasm-unsafe-eval': every @nuxt/content query is payload-served
-          // (all queryCollection calls run inside useAsyncData, and no page wraps
-          // its content component in <RenderCacheable>), so the client-side
-          // SQLite-WASM engine is never instantiated in the browser. Keep it that
-          // way — a client-only query (e.g. a live useSearchCollection) would
-          // reintroduce the WASM boot and require this directive again.
+          // Production omits 'wasm-unsafe-eval': in the static build every
+          // @nuxt/content query is payload-served (all queryCollection calls run
+          // inside useAsyncData, and no page wraps its content component in
+          // <RenderCacheable>), so the client-side SQLite-WASM engine is never
+          // instantiated. Keep it that way — a client-only query (e.g. a live
+          // useSearchCollection) would reintroduce the WASM boot in production.
+          //
+          // Dev has no prerendered _payload.json, so client-side navigation runs
+          // content queries against the SQLite-WASM engine and needs this
+          // directive; scope it to development only (like the connect-src ws
+          // above) so it never loosens the production CSP.
+          ...(process.env.NODE_ENV === "development"
+            ? ["'wasm-unsafe-eval'"]
+            : []),
         ],
-        "worker-src": "'self'",
+        "worker-src":
+          process.env.NODE_ENV === "development" ? "'self' blob:" : "'self'",
         "frame-ancestors": false, // This one doesn't work when CSP is in Meta
       },
     },
