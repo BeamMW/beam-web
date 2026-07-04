@@ -3,6 +3,7 @@ title: "Hard Fork Six"
 description: "Beam has completed a necessary security hard fork to address a subtle Bulletproofs rangeproof vulnerability discovered in the Beam core code. The issue was responsibly disclosed, reviewed by the developers, patched in a non-public branch, and resolved through a coordinated network upgrade. This post explains the technical background, our current risk assessment, and a proposed lustration process that would allow the community to verify supply integrity with a one-time, limited disclosure of legacy outputs."
 date: "2026-07-01"
 category: "news"
+image: "/images/blog/news/hardfork-six/01.png"
 tags:
   - "Hard Fork"
   - "Emergency"
@@ -18,7 +19,7 @@ The latest corrected builds (wallets, nodes, etc.) can be downloaded from [beam.
 
 The discovered vulnerability was in Beam’s implementation of Bulletproofs, a popular variant of rangeproofs with exponential compression (excellent for scalability). A rangeproof is the zero-knowledge cryptographic scheme which proves that the transaction output (TXO) is a well-formed Pedersen commitment, and holds a non-negative amount.
 
-While the algebra behind Beam’s implementation was correct, there was an error in the transcript, i.e. in the order of challenge-response sequence for the challenges derived via the Fiat-Shamir heuristic. Specifically, the error was in the IPA (inner-product argument) part where the order of challenge-response was inverted: the sequence where the prover gets the challenge and then emits the LR pair should happen the other way around. 
+While the algebra behind Beam’s implementation was correct, there was an error in the transcript, i.e. in the order of challenge-response sequence for the challenges derived via the Fiat-Shamir heuristic. Specifically, the error was in the IPA (inner-product argument) part where the order of challenge-response was inverted: the sequence where the prover gets the challenge and then emits the LR pair should happen the other way around.
 
 In [`ecc_bulletproof.cpp#L453`](https://github.com/BeamMW/beam/blob/ebc40098938197bea689b853a7f51fb507c843d5/core/ecc_bulletproof.cpp#L453), `CycleStart()` is where challenges are obtained.
 
