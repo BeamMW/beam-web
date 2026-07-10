@@ -39,6 +39,7 @@ export const ExternalLinks = {
   BEAM_TERMINAL: "https://beamterminal.0xmx.net",
   BEAM_LIGHT_WALLET: "https://github.com/vsnation/beam-light-wallet",
   PRIVIMW_WALLET: "https://github.com/PriviMW/PriviMW-Wallet/",
+  BUYBEAM: "https://buybeam.my",
 
   // Other links
   DOCS_SOURCES: "https://github.com/BeamMW/docs-gitbook",
@@ -74,6 +75,7 @@ export enum ExternalLinksTitle {
   BEAM_TERMINAL = "BeamTerminal",
   BEAM_LIGHT_WALLET = "Beam Light Wallet",
   PRIVIMW_WALLET = "PriviMW Wallet",
+  BUYBEAM = "BuyBeam",
   BEAMX_DAO = "BeamX DAO",
 }
 
@@ -228,6 +230,11 @@ export const instantExchangesBuy = [
     title: "Trocador",
     image: "instant-exchanges/trocador",
     link: "https://trocador.app/en/?ticker_to=beam&network_to=beam",
+  },
+  {
+    title: ExternalLinksTitle.BUYBEAM,
+    image: "instant-exchanges/buybeam",
+    link: ExternalLinks.BUYBEAM,
   },
 ];
 
