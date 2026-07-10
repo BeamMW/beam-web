@@ -553,7 +553,7 @@
     },
     "developers": {
       "title": "Разработчики",
-      "sourceCode": "Исходный код",
+      "sourceCode": "GitHub",
       "blockchainExplorer": "Обозреватель блокчейна",
       "support": "Поддержка"
     },
