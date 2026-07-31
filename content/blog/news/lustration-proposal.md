@@ -103,8 +103,10 @@ This is an important section to understand, because this is where privacy concer
 
 **Cut-through:**
 
-- Mimblewimble's *cut-through* feature means that once a TXO is spent, it can be pruned from the blockchain (this is the reason why the Beam blockchain is so lightweight).
-- Since the lustration process only exposes amounts at the moment the TXO is *spent* (and hence soon pruned), no exposed amount remains active in the blockchain long-term. All *active* UTXOs always remain concealed.
+- Mimblewimble's *cut-through* feature means that once a TXO is spent, it can normally be pruned from the blockchain (this is one of the reasons why the Beam blockchain is so lightweight).
+- However, the lustration process has a subtle implication here: When a legacy TXO is spent and its amount and asset type are revealed, this information must stay in the blockchain. It cannot be completely forgotten since new nodes joining the network after the lustration must have the means to verify it too.
+- Hence, when an old legacy TXO is spent, the blockchain will have to keep its commitment and the cryptographic "revealing" signature, so that the lustration can be independently verified by anyone, at any time.
+- This permanent footprint will have a small but real cost on the blockchain's lightweight property.
 
 ![Screenshot of current explorer block view](/images/blog/news/lustration-proposal/screenshot-explorer-before-lustration.jpeg)
 *Screenshot of current explorer block view. All amounts and exact Asset ids are concealed.*
