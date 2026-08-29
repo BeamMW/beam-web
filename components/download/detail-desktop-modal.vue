@@ -44,6 +44,11 @@ defineProps({
     required: false,
     default: "",
   },
+  releaseNotesLink: {
+    type: String,
+    required: false,
+    default: "",
+  },
 });
 </script>
 <template>
@@ -130,7 +135,10 @@ defineProps({
       </LayoutCopyToClipboard>
     </div>
     <div class="pt-3">
-      <DownloadChangelogLink :version="version" />
+      <DownloadChangelogLink
+        :version="version"
+        :release-notes-link="releaseNotesLink"
+      />
     </div>
   </section>
 </template>

@@ -18,6 +18,21 @@ defineProps({
     type: String,
     required: true,
   },
+  linkApkUniversalFile: {
+    type: String,
+    required: false,
+    default: "",
+  },
+  checksumApkUniversal: {
+    type: String,
+    required: false,
+    default: "",
+  },
+  releaseNotesLink: {
+    type: String,
+    required: false,
+    default: "",
+  },
 });
 </script>
 <template>
@@ -37,6 +52,16 @@ defineProps({
             :title="t('downloads.type.apk')"
           />
         </span>
+        <template v-if="linkApkUniversalFile">
+          &middot;
+          <span class="text-beam-blue font-bold">
+            <DownloadAlternativeLink
+              :link="linkApkUniversalFile"
+              :checksum="checksumApkUniversal"
+              :title="t('downloads.type.apkUniversal')"
+            />
+          </span>
+        </template>
       </p>
     </div>
     <div v-if="checksumApk" class="pt-3">
@@ -47,8 +72,19 @@ defineProps({
         {{ checksumApk }}
       </LayoutCopyToClipboard>
     </div>
+    <div v-if="checksumApkUniversal" class="pt-3">
+      <h6 class="font-bold">
+        {{ $t("downloads.detailswindow.checksums.apkUniversal") }}
+      </h6>
+      <LayoutCopyToClipboard :text="checksumApkUniversal">
+        {{ checksumApkUniversal }}
+      </LayoutCopyToClipboard>
+    </div>
     <div class="pt-3">
-      <DownloadChangelogLink :version="version" />
+      <DownloadChangelogLink
+        :version="version"
+        :release-notes-link="releaseNotesLink"
+      />
     </div>
   </section>
 </template>

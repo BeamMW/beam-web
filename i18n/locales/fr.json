@@ -396,7 +396,8 @@
         "cli": "Vérification du fichier portefeuille CLI (SHA256)",
         "node": "Vérification du fichier de nœud (SHA256)",
         "api": "Vérification du fichier API du portefeuille (SHA256)",
-        "apk": "Vérification du fichier APK (SHA256)"
+        "apk": "Vérification du fichier APK (SHA256)",
+        "apkUniversal": "Somme de contrôle du fichier APK universel (SHA256)"
       }
     },
     "type": {
@@ -405,6 +406,7 @@
       "node": "Nœud",
       "api": "API du portefeuille",
       "apk": "APK",
+      "apkUniversal": "APK (tous les appareils)",
       "appstore": "App Store"
     },
     "supportedversions": {
@@ -414,6 +416,7 @@
       "windows": "Windows 7 ou ultérieure",
       "linux": "AppImage"
     },
+    "iosEuNotice": "Non disponible au téléchargement dans l'UE.",
     "resources": {
       "title": "Ressources",
       "wallet": "Application Portefeuille pour Ordinateur",

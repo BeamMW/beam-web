@@ -3,9 +3,11 @@ import { SupportedPlatforms } from "~/app.config";
 type PlatformDownloadType = {
   store: string;
   wallet: string;
+  walletUniversal: string;
   cli: string;
   node: string;
   api: string;
+  changelog: string;
 };
 
 interface PlatformDownloadDetail {
