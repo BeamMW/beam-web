@@ -255,7 +255,8 @@
           "11": "Beam Warp Management dApp",
           "12": "Beam Warp Testnet",
           "13": "Beam Warp Mainnet",
-          "14": "Neue DEX dApp"
+          "14": "Neue DEX dApp",
+          "17": "Slatepack-Transaktionen"
         }
       },
       "12": {
@@ -395,7 +396,8 @@
         "cli": "CLI-Wallet-Datei-Prüfsumme (SHA256)",
         "node": "Node-Datei-Prüfsumme (SHA256)",
         "api": "Wallet-API-Datei-Prüfsumme (SHA256)",
-        "apk": "APK-Datei-Prüfsumme (SHA256)"
+        "apk": "APK-Datei-Prüfsumme (SHA256)",
+        "apkUniversal": "Prüfsumme der universellen APK-Datei (SHA256)"
       }
     },
     "type": {
@@ -404,6 +406,7 @@
       "node": "Node",
       "api": "Wallet-API",
       "apk": "APK",
+      "apkUniversal": "APK (alle Geräte)",
       "appstore": "App Store"
     },
     "supportedversions": {
@@ -413,6 +416,7 @@
       "windows": "Windows 7 oder höher",
       "linux": "AppImage"
     },
+    "iosEuNotice": "In der EU nicht zum Download verfügbar.",
     "resources": {
       "title": "Ressourcen",
       "wallet": "Desktop-Wallet-Anwendung",

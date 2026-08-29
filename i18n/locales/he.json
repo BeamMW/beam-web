@@ -255,7 +255,8 @@
           "11": "dApp ניהול Beam Warp",
           "12": "Beam Warp רשת בדיקה",
           "13": "Beam Warp רשת ראשית",
-          "14": "ממשק DEX חדש"
+          "14": "ממשק DEX חדש",
+          "17": "עסקאות Slatepack"
         }
       },
       "12": {
@@ -395,7 +396,8 @@
         "cli": "צ'קסום קובץ הארנק ממשק שורת פקודה (SHA256)",
         "node": "צ'קסום קובץ הצומת (SHA256)",
         "api": "צ'קסום קובץ ה-API של הארנק (SHA256)",
-        "apk": "צ'קסום קובץ ה-APK (SHA256)"
+        "apk": "צ'קסום קובץ ה-APK (SHA256)",
+        "apkUniversal": "סכום ביקורת של קובץ APK אוניברסלי (SHA256)"
       }
     },
     "type": {
@@ -404,6 +406,7 @@
       "node": "צומת",
       "api": "API של הארנק",
       "apk": "APK",
+      "apkUniversal": "APK (כל המכשירים)",
       "appstore": "App Store"
     },
     "supportedversions": {
@@ -413,6 +416,7 @@
       "windows": "Windows 7 או גרסה מאוחרת יותר",
       "linux": "AppImage"
     },
+    "iosEuNotice": "לא זמין להורדה באיחוד האירופי.",
     "resources": {
       "title": "משאבים",
       "wallet": "אפליקציית ארנק לשולחן העבודה",

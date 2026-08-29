@@ -255,7 +255,8 @@
           "11": "dApp de gestión Beam Warp",
           "12": "Beam Warp testnet",
           "13": "Beam Warp mainnet",
-          "14": "Nueva interfaz de DEX"
+          "14": "Nueva interfaz de DEX",
+          "17": "Transacciones Slatepack"
         }
       },
       "12": {
@@ -395,7 +396,8 @@
         "cli": "Checksum de archivo CLI de billetera (SHA256)",
         "node": "Checksum de archivo de nodo (SHA256)",
         "api": "Checksum de archivo de API de billetera (SHA256)",
-        "apk": "Checksum de archivo APK (SHA256)"
+        "apk": "Checksum de archivo APK (SHA256)",
+        "apkUniversal": "Suma de verificación del archivo APK universal (SHA256)"
       }
     },
     "type": {
@@ -404,6 +406,7 @@
       "node": "Nodo",
       "api": "API de billetera",
       "apk": "APK",
+      "apkUniversal": "APK (todos los dispositivos)",
       "appstore": "App Store"
     },
     "supportedversions": {
@@ -413,6 +416,7 @@
       "windows": "Windows 7 o posterior",
       "linux": "AppImage"
     },
+    "iosEuNotice": "No disponible para descargar en la UE.",
     "resources": {
       "title": "Recursos",
       "wallet": "Aplicación de billetera de escritorio",

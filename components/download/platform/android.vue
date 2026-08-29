@@ -10,8 +10,11 @@ defineProps({
 });
 
 const {
-  links: { wallet, store },
-  checksums: { wallet: checksumWallet },
+  links: { wallet, store, walletUniversal, changelog },
+  checksums: {
+    wallet: checksumWallet,
+    walletUniversal: checksumWalletUniversal,
+  },
   version,
   date,
 } = platformDetails[SupportedPlatforms.ANDROID];
@@ -34,6 +37,17 @@ const {
         :checksum="checksumWallet"
       />
     </span>
+    <span v-if="walletUniversal">&nbsp;&middot;&nbsp;</span>
+    <span
+      v-if="walletUniversal"
+      class="border-b border-white/70 hover:border-white"
+    >
+      <DownloadAlternativeLink
+        :title="$t('downloads.type.apkUniversal')"
+        :link="walletUniversal"
+        :checksum="checksumWalletUniversal"
+      />
+    </span>
     <span>&nbsp;&middot;&nbsp;</span>
     <DownloadDetailLink
       v-if="version && date && wallet && checksumWallet"
@@ -44,6 +58,9 @@ const {
         :date="date"
         :link-apk-file="wallet"
         :checksum-apk="checksumWallet"
+        :link-apk-universal-file="walletUniversal"
+        :checksum-apk-universal="checksumWalletUniversal"
+        :release-notes-link="changelog"
       />
     </DownloadDetailLink>
   </DownloadPlatformGet>

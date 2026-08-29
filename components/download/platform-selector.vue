@@ -52,6 +52,9 @@ const platformDetails = await usePlatformDetails();
             platformDetails[SupportedPlatforms.ANDROID] && !selected.android
           "
         />
+        <DownloadPlatformIos
+          v-if="platformDetails[SupportedPlatforms.IOS] && !selected.ios"
+        />
         <DownloadPlatformDesktop
           v-if="platformDetails[SupportedPlatforms.MACOS] && !selected.macos"
           title="macOS"

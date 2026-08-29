@@ -199,19 +199,9 @@ export const exchangesBuy = [
     link: "https://www.mexc.com/exchange/BEAM_USDT?_from=market",
   },
   {
-    title: "Gate.io",
-    image: "exchanges/gateio",
-    link: "https://www.gate.io/trade/BEAM_USDT",
-  },
-  {
     title: "Uniswap",
     image: "exchanges/uniswap",
     link: "https://app.uniswap.org/swap?outputCurrency=0xE5AcBB03D73267c03349c76EaD672Ee4d941F499&inputCurrency=ETH",
-  },
-  {
-    title: "CoinEx",
-    image: "exchanges/coinex",
-    link: "https://www.coinex.com/exchange?currency=usdt&dest=beam#spot",
   },
   {
     title: "NonKYC",

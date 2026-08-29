@@ -255,7 +255,8 @@
           "11": "dApp de gestão Beam Warp",
           "12": "Beam Warp testnet",
           "13": "Beam Warp mainnet",
-          "14": "Nova interface DEX"
+          "14": "Nova interface DEX",
+          "17": "Transações Slatepack"
         }
       },
       "12": {
@@ -395,7 +396,8 @@
         "cli": "Soma de verificação do arquivo da CLI da carteira (SHA256)",
         "node": "Soma de verificação do arquivo do nó (SHA256)",
         "api": "Soma de verificação do arquivo da API da carteira (SHA256)",
-        "apk": "Soma de verificação do arquivo APK (SHA256)"
+        "apk": "Soma de verificação do arquivo APK (SHA256)",
+        "apkUniversal": "Checksum do arquivo APK universal (SHA256)"
       }
     },
     "type": {
@@ -404,6 +406,7 @@
       "node": "Nó",
       "api": "API da carteira",
       "apk": "APK",
+      "apkUniversal": "APK (todos os dispositivos)",
       "appstore": "App Store"
     },
     "supportedversions": {
@@ -413,6 +416,7 @@
       "windows": "Windows 7 ou superior",
       "linux": "AppImage"
     },
+    "iosEuNotice": "Não disponível para download na UE.",
     "resources": {
       "title": "Recursos",
       "wallet": "Aplicativo de Carteira para Desktop",

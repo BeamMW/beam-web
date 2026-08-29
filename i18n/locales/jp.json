@@ -255,7 +255,8 @@
           "11": "Beam Warp 管理 dApp",
           "12": "Beam Warp テストネット",
           "13": "Beam Warp メインネット",
-          "14": "新DEX UI"
+          "14": "新DEX UI",
+          "17": "Slatepack トランザクション"
         }
       },
       "12": {
@@ -395,7 +396,8 @@
         "cli": "CLIウォレットファイルのチェックサム（SHA256）",
         "node": "ノードファイルのチェックサム（SHA256）",
         "api": "ウォレットAPIファイルのチェックサム（SHA256）",
-        "apk": "APKファイルのチェックサム（SHA256）"
+        "apk": "APKファイルのチェックサム（SHA256）",
+        "apkUniversal": "ユニバーサルAPKファイルのチェックサム (SHA256)"
       }
     },
     "type": {
@@ -404,6 +406,7 @@
       "node": "ノード",
       "api": "ウォレットAPI",
       "apk": "APK",
+      "apkUniversal": "APK（全デバイス）",
       "appstore": "Appストア"
     },
     "supportedversions": {
@@ -413,6 +416,7 @@
       "windows": "Windows 7以降",
       "linux": "AppImage"
     },
+    "iosEuNotice": "EU圏ではダウンロードできません。",
     "resources": {
       "title": "リソース",
       "wallet": "デスクトップウォレットアプリケーション",

@@ -255,7 +255,8 @@
           "11": "Beam Warp 管理 dApp",
           "12": "Beam Warp 测试网",
           "13": "Beam Warp 主网",
-          "14": "新版 DEX 界面"
+          "14": "新版 DEX 界面",
+          "17": "Slatepack 交易"
         }
       },
       "12": {
@@ -395,7 +396,8 @@
         "cli": "CLI 钱包文件校验和 (SHA256)",
         "node": "节点文件校验和 (SHA256)",
         "api": "钱包 API 文件校验和 (SHA256)",
-        "apk": "APK 钱包文件校验和 (SHA256)"
+        "apk": "APK 钱包文件校验和 (SHA256)",
+        "apkUniversal": "通用 APK 文件校验和 (SHA256)"
       }
     },
     "type": {
@@ -404,6 +406,7 @@
       "node": "节点",
       "api": "钱包 API",
       "apk": "APK",
+      "apkUniversal": "APK（所有设备）",
       "appstore": "App Store"
     },
     "supportedversions": {
@@ -413,6 +416,7 @@
       "windows": "Windows 7 及更高版本",
       "linux": "AppImage"
     },
+    "iosEuNotice": "在欧盟地区无法下载。",
     "resources": {
       "title": "资源",
       "wallet": "桌面钱包应用程序",

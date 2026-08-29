@@ -19,7 +19,18 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  releaseNotesLink: {
+    type: String,
+    required: false,
+    default: "",
+  },
 });
 
-const link = computed(() => `${localePath("docs")}/changelog/${props.version}`);
+// Platforms that publish their own release notes (e.g. a GitHub release) provide
+// the link in downloads/*.json; everything else falls back to the docs changelog.
+const link = computed(
+  () =>
+    props.releaseNotesLink ||
+    `${localePath("docs")}/changelog/${props.version}`,
+);
 </script>

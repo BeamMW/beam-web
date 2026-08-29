@@ -22,7 +22,7 @@ const props = defineProps({
 const {
   version,
   date,
-  links: { wallet, cli, node, api },
+  links: { wallet, cli, node, api, changelog },
   checksums: {
     wallet: walletChecksum,
     cli: cliChecksum,
@@ -74,6 +74,7 @@ const {
         :checksum-wallet-cli="cliChecksum"
         :checksum-node="nodeChecksum"
         :checksum-wallet-api="apiChecksum"
+        :release-notes-link="changelog"
       />
     </DownloadDetailLink>
   </DownloadPlatformGet>
