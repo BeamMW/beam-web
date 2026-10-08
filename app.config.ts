@@ -173,6 +173,10 @@ export const miningSoftware = [
         name: "Gminer",
         link: "https://github.com/develsoftware/GMinerRelease/releases",
       },
+      {
+        name: "MXBM",
+        link: "https://git.maxnflaxl.dev/maxnflaxl/MXBM",
+      },
     ],
   },
   {
@@ -189,6 +193,10 @@ export const miningSoftware = [
       {
         name: "Bminer",
         link: "https://www.bminer.me/releases/",
+      },
+      {
+        name: "MXBM",
+        link: "https://git.maxnflaxl.dev/maxnflaxl/MXBM",
       },
     ],
   },
