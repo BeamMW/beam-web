@@ -535,7 +535,8 @@
     "downloadWalletAndNode": "Télécharger le portefeuille et le nœud",
     "resources": {
       "support": "Support pour le minage Beam",
-      "calculator": "Calculateur de récompenses"
+      "calculator": "Calculateur de récompenses",
+      "pools": "Pools de minage"
     }
   },
   "footer": {

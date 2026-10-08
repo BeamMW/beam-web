@@ -535,7 +535,8 @@
     "downloadWalletAndNode": "Descargar billetera y nodo",
     "resources": {
       "support": "Soporte de minería Beam",
-      "calculator": "Calculadora de recompensas"
+      "calculator": "Calculadora de recompensas",
+      "pools": "Pools de minería"
     }
   },
   "footer": {

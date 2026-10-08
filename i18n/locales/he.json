@@ -535,7 +535,8 @@
     "downloadWalletAndNode": "הורד ארנק וצומת",
     "resources": {
       "support": "תמיכה בכריית Beam",
-      "calculator": "מחשבון פרסים"
+      "calculator": "מחשבון פרסים",
+      "pools": "מאגרי כרייה"
     }
   },
   "footer": {

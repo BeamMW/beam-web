@@ -535,7 +535,8 @@
     "downloadWalletAndNode": "تنزيل المحفظة والعقدة",
     "resources": {
       "support": "دعم تعدين Beam",
-      "calculator": "حاسبة المكافآت"
+      "calculator": "حاسبة المكافآت",
+      "pools": "مجمعات التعدين"
     }
   },
   "footer": {
