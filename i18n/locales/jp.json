@@ -535,7 +535,8 @@
     "downloadWalletAndNode": "ウォレットとノードをダウンロード",
     "resources": {
       "support": "Beam マイニング サポート",
-      "calculator": "報酬計算機"
+      "calculator": "報酬計算機",
+      "pools": "マイニングプール"
     }
   },
   "footer": {

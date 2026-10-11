@@ -535,7 +535,8 @@
     "downloadWalletAndNode": "Wallet und Knoten herunterladen",
     "resources": {
       "support": "Beam Mining Support",
-      "calculator": "Belohnungsrechner"
+      "calculator": "Belohnungsrechner",
+      "pools": "Mining-Pools"
     }
   },
   "footer": {

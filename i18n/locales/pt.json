@@ -531,7 +531,8 @@
     "downloadWalletAndNode": "Baixe a Carteira e o Nó",
     "resources": {
       "support": "Suporte à Mineração Beam",
-      "calculator": "Calculadora de Recompensas"
+      "calculator": "Calculadora de Recompensas",
+      "pools": "Pools de Mineração"
     }
   },
   "footer": {

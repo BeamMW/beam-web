@@ -535,7 +535,8 @@
     "downloadWalletAndNode": "Скачать кошелек и узел",
     "resources": {
       "support": "Поддержка майнинга Beam",
-      "calculator": "Калькулятор вознаграждений"
+      "calculator": "Калькулятор вознаграждений",
+      "pools": "Майнинг-пулы"
     }
   },
   "footer": {

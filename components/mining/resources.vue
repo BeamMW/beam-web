@@ -16,6 +16,13 @@ import { ExternalLinks, ExternalLinksTitle } from "~/app.config";
         class="link-resources"
       />
       <ResourcesLink
+        :title="$t('mining.resources.pools')"
+        image="mining/resources/mining"
+        :link="ExternalLinks.MINING_POOLS"
+        :link-text="ExternalLinksTitle.BEAM_EXPLORER"
+        class="link-resources"
+      />
+      <ResourcesLink
         :title="$t('mining.resources.support')"
         image="mining/resources/help"
         :link="ExternalLinks.MINING_SUPPORT"

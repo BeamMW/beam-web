@@ -535,7 +535,8 @@
     "downloadWalletAndNode": "下载钱包和节点",
     "resources": {
       "support": "Beam挖矿支持",
-      "calculator": "奖励计算器"
+      "calculator": "奖励计算器",
+      "pools": "矿池"
     }
   },
   "footer": {

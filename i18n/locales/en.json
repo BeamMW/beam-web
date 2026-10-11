@@ -535,7 +535,8 @@
     "downloadWalletAndNode": "Download Wallet and Node",
     "resources": {
       "support": "Beam Mining Support",
-      "calculator": "Rewards Calculator"
+      "calculator": "Rewards Calculator",
+      "pools": "Mining Pools"
     }
   },
   "footer": {
