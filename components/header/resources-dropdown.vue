@@ -91,7 +91,6 @@ const menus = computed(() => {
   ];
 
   const communityProjectsLinks = [
-    { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
     { text: ExternalLinksTitle.BEAMSMART, href: ExternalLinks.BEAMSMART },
     {
       text: ExternalLinksTitle.BEAM_TERMINAL,
