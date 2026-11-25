@@ -9,7 +9,7 @@ Beam is proud to unveil its revamped website, utilizing Nuxt 3 (Vue 3) and optim
 
 To run or generate a static version, you need:
 
-- Node.js 20+
+- Node.js 22 (see `.nvmrc`)
 - Yarn 3.x
 
 Windows users should also install Python, Visual Studio Code Build Tools, and "Desktop Development option C++" from [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/). For ARM64 machines, install "MSVC v143 - VS 2022 C++" for ARM.
