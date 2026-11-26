@@ -19,7 +19,7 @@
       </LayoutAnimatedModal>
     </ClientOnly>
     <div class="w-full py-9 md:py-12 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 gap-6 mb-10 md:grid-cols-4 lg:grid-cols-5">
+      <div class="grid grid-cols-2 gap-6 mb-10 md:grid-cols-4 lg:grid-cols-6">
         <div class="col-span-full hidden lg:col-span-1 lg:block">
           <div class="flex gap-3">
             <Icon
@@ -164,7 +164,6 @@ const menus = computed(() => [
       { text: t("footer.community.telegram"), href: ExternalLinks.TELEGRAM },
       { text: t("footer.community.discord"), href: ExternalLinks.DISCORD },
       { text: t("footer.community.reddit"), href: ExternalLinks.REDDIT },
-      { text: ExternalLinksTitle.BEAMASSETS, href: ExternalLinks.BEAMASSETS },
       {
         text: t("footer.community.qq"),
         href: ExternalLinks.QQ,
@@ -198,6 +197,25 @@ const menus = computed(() => [
     links: [
       { text: t("footer.miners.startMining"), href: localePath("mining") },
       { text: t("footer.miners.support"), href: ExternalLinks.MINING_SUPPORT },
+    ],
+  },
+  {
+    title: t("footer.communityprojects.title"),
+    links: [
+      { text: ExternalLinksTitle.BEAMSMART, href: ExternalLinks.BEAMSMART },
+      {
+        text: ExternalLinksTitle.BEAM_TERMINAL,
+        href: ExternalLinks.BEAM_TERMINAL,
+      },
+      {
+        text: ExternalLinksTitle.BEAM_LIGHT_WALLET,
+        href: ExternalLinks.BEAM_LIGHT_WALLET,
+      },
+      {
+        text: ExternalLinksTitle.PRIVIMW_WALLET,
+        href: ExternalLinks.PRIVIMW_WALLET,
+      },
+      { text: ExternalLinksTitle.BUYBEAM, href: ExternalLinks.BUYBEAM },
     ],
   },
 ]);

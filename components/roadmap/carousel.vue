@@ -20,7 +20,7 @@
         nextEl: customNextButton,
         prevEl: customPrevButton,
       }"
-      :initial-slide="roadmap.length"
+      :initial-slide="currentMilestoneIndex"
       :auto-height="true"
     >
       <SwiperSlide v-for="(item, index) in roadmap" :key="index">
@@ -409,11 +409,15 @@ const roadmap: Roadmap = [
         state: PROGRESS.COMPLETED,
       },
       {
-        description: t("roadmap.milestones.11.items.2"),
-        state: PROGRESS.BUILDING,
+        description: t("roadmap.milestones.11.items.3"),
+        state: PROGRESS.COMPLETED,
       },
       {
-        description: t("roadmap.milestones.11.items.3"),
+        description: t("roadmap.milestones.11.items.17"),
+        state: PROGRESS.COMPLETED,
+      },
+      {
+        description: t("roadmap.milestones.11.items.2"),
         state: PROGRESS.BUILDING,
       },
       {
@@ -433,7 +437,7 @@ const roadmap: Roadmap = [
         state: PROGRESS.BUILDING,
       },
       {
-        description: t("roadmap.milestones.11.items.17"),
+        description: t("roadmap.milestones.11.items.15"),
         state: PROGRESS.BUILDING,
       },
       {
@@ -483,6 +487,12 @@ const roadmap: Roadmap = [
     ],
   },
 ];
+
+// Hebrew uses Hebrew-calendar years for older milestones; those parse to NaN and are skipped.
+const currentYear = new Date().getFullYear();
+const currentMilestoneIndex = roadmap.findLastIndex(
+  (item) => parseInt(item.year, 10) <= currentYear,
+);
 
 const slidesToShow = ref(1);
 const customNextButton = ref(null);
